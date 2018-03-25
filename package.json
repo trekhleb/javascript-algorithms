@@ -1,0 +1,25 @@
+{
+  "name": "data-structures",
+  "version": "1.0.0",
+  "description": "Data structures on JavaScript",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src -d build",
+    "babel-node": "babel-node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trekhleb/data-structures.git"
+  },
+  "keywords": [],
+  "author": "Oleksii Trekhleb (https://www.linkedin.com/in/trekhleb/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trekhleb/data-structures/issues"
+  },
+  "homepage": "https://github.com/trekhleb/data-structures#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
