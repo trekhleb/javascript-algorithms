@@ -1,5 +1,9 @@
 # JavaScript Algorithms and Data Structures
 
+## Data Structures
+
+- [Linked List](Linked List)
+
 ### Running Tests
 
 **Run all tests**
