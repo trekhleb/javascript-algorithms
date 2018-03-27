@@ -2,7 +2,7 @@
 
 ## Data Structures
 
-- [Linked List](Linked List)
+- [Linked List](/tree/master/src/data-structures/linked-list)
 
 ### Running Tests
 
