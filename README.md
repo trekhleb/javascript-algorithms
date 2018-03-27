@@ -4,7 +4,7 @@
 
 - [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
 
-### Running Tests
+## Running Tests
 
 **Run all tests**
 ```
