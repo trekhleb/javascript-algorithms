@@ -4,8 +4,8 @@
   "description": "Data structures on JavaScript",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d build",
-    "babel-node": "babel-node"
+    "lint": "eslint ./src/*",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -19,7 +19,15 @@
   },
   "homepage": "https://github.com/trekhleb/data-structures#readme",
   "devDependencies": {
+    "@types/jest": "^22.2.2",
     "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.6.1"
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jest": "^21.15.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.3"
   }
 }
