@@ -28,7 +28,35 @@ export default class LinkedList {
   }
 
   prepend(value) {
+    const newNode = new Node(value);
     this.head = new Node(value, this.head);
+
+    return newNode;
+  }
+
+  delete(value) {
+    if (!this.head) {
+      return null;
+    }
+
+    let deletedNode = null;
+
+    if (this.head.value === value) {
+      deletedNode = this.head;
+      this.head = this.head.next;
+    }
+
+    let currentNode = this.head;
+
+    while (currentNode.next) {
+      if (currentNode.next.value === value) {
+        deletedNode = currentNode.next;
+        currentNode.next = currentNode.next.next;
+      }
+      currentNode = currentNode.next;
+    }
+
+    return deletedNode;
   }
 
   toArray() {
