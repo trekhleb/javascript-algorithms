@@ -1,6 +1,6 @@
 # Linked List
 
-|Operation                  |Complaxity         |
+|Operation                  |Complexity         |
 |---------------------------|-------------------|
 |Indexing                   |O(n)               |
 |Insert/delete at beginning |O(1)               |
