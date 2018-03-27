@@ -1,4 +1,4 @@
-import Node from './Node';
+import LinkedListNode from './LinkedListNode';
 
 export default class LinkedList {
   constructor() {
@@ -6,7 +6,7 @@ export default class LinkedList {
   }
 
   append(value) {
-    const newNode = new Node(value);
+    const newNode = new LinkedListNode(value);
 
     // If there is no head yet let's make new node a head.
     if (!this.head) {
@@ -28,8 +28,8 @@ export default class LinkedList {
   }
 
   prepend(value) {
-    const newNode = new Node(value);
-    this.head = new Node(value, this.head);
+    const newNode = new LinkedListNode(value, this.head);
+    this.head = newNode;
 
     return newNode;
   }

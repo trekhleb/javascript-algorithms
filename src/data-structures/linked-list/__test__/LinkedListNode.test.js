@@ -1,8 +1,8 @@
-import Node from '../Node';
+import LinkedListNode from '../LinkedListNode';
 
-describe('Node', () => {
+describe('LinkedListNode', () => {
   it('should create list node with value', () => {
-    const node = new Node(1);
+    const node = new LinkedListNode(1);
     expect(node.value).toBe(1);
     expect(node.next).toBeNull();
   });
