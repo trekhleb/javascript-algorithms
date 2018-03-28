@@ -7,11 +7,11 @@ describe('Queue', () => {
     expect(queue.linkedList).not.toBeNull();
   });
 
-  it('should add data to queue', () => {
+  it('should enqueue data to queue', () => {
     const queue = new Queue();
 
-    queue.add(1);
-    queue.add(2);
+    queue.enqueue(1);
+    queue.enqueue(2);
 
     expect(queue.linkedList.toString()).toBe('1,2');
   });
@@ -21,11 +21,11 @@ describe('Queue', () => {
 
     expect(queue.peek()).toBeNull();
 
-    queue.add(1);
-    queue.add(2);
+    queue.enqueue(1);
+    queue.enqueue(2);
 
-    expect(queue.peek()).toBe(2);
-    expect(queue.peek()).toBe(2);
+    expect(queue.peek()).toBe(1);
+    expect(queue.peek()).toBe(1);
   });
 
   it('should check if queue is empty', () => {
@@ -33,19 +33,19 @@ describe('Queue', () => {
 
     expect(queue.isEmpty()).toBeTruthy();
 
-    queue.add(1);
+    queue.enqueue(1);
 
     expect(queue.isEmpty()).toBeFalsy();
   });
 
-  it('should remove from empty', () => {
+  it('should dequeue from queue in FIFO order', () => {
     const queue = new Queue();
 
-    queue.add(1);
-    queue.add(2);
+    queue.enqueue(1);
+    queue.enqueue(2);
 
-    expect(queue.remove()).toBe(2);
-    expect(queue.remove()).toBe(1);
+    expect(queue.dequeue()).toBe(1);
+    expect(queue.dequeue()).toBe(2);
     expect(queue.isEmpty()).toBeTruthy();
   });
 });

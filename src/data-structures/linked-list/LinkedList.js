@@ -160,6 +160,23 @@ export default class LinkedList {
     return deletedTail;
   }
 
+  deleteHead() {
+    if (!this.head) {
+      return null;
+    }
+
+    const deletedHead = this.head;
+
+    if (this.head.next) {
+      this.head = this.head.next;
+    } else {
+      this.head = null;
+      this.tail = null;
+    }
+
+    return deletedHead;
+  }
+
   findByKey(key) {
     let currentNode = this.head;
 
