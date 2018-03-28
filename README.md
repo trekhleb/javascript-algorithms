@@ -18,8 +18,3 @@ npm test
 ```
 npm test -- -t 'LinkedList'
 ```
-
-**Run tests from specific file**
-```
-npm test -- ./src/data-structures/linked-list/__test__/LinkedList.test.js
-```
