@@ -3,28 +3,7 @@ import LinkedListNode from './LinkedListNode';
 export default class LinkedList {
   constructor() {
     this.head = null;
-  }
-
-  append({ value, key = null }) {
-    const newNode = new LinkedListNode({ value, key });
-
-    // If there is no head yet let's make new node a head.
-    if (!this.head) {
-      this.head = newNode;
-
-      return newNode;
-    }
-
-    // Rewind to last node.
-    let currentNode = this.head;
-    while (currentNode.next !== null) {
-      currentNode = currentNode.next;
-    }
-
-    // Attach new node to the end of linked list.
-    currentNode.next = newNode;
-
-    return newNode;
+    this.tail = null;
   }
 
   prepend({ value, key = null }) {
@@ -36,12 +15,31 @@ export default class LinkedList {
     return newNode;
   }
 
+  append({ value, key = null }) {
+    const newNode = new LinkedListNode({ value, key });
+
+    // If there is no head yet let's make new node a head.
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+
+      return newNode;
+    }
+
+    // Attach new node to the end of linked list.
+    this.tail.next = newNode;
+    this.tail = newNode;
+
+    return newNode;
+  }
+
   appendUnique({ value, key = null }) {
     const newNode = new LinkedListNode({ value, key });
 
     // If there is no head yet let's make new node a head.
     if (!this.head) {
       this.head = newNode;
+      this.tail = newNode;
 
       return newNode;
     }
@@ -66,6 +64,7 @@ export default class LinkedList {
 
     // Attach new node to the end of linked list.
     currentNode.next = newNode;
+    this.tail = newNode;
 
     return newNode;
   }
@@ -90,8 +89,14 @@ export default class LinkedList {
       if (currentNode.next.value === value) {
         deletedNode = currentNode.next;
         currentNode.next = currentNode.next.next;
+      } else {
+        currentNode = currentNode.next;
       }
-      currentNode = currentNode.next;
+    }
+
+    // Check if tail must be deleted.
+    if (this.tail.value === value) {
+      this.tail = currentNode;
     }
 
     return deletedNode;
@@ -117,11 +122,42 @@ export default class LinkedList {
       if (currentNode.next.key === key) {
         deletedNode = currentNode.next;
         currentNode.next = currentNode.next.next;
+      } else {
+        currentNode = currentNode.next;
       }
-      currentNode = currentNode.next;
+    }
+
+    // Check if tail must be deleted.
+    if (this.tail.key === key) {
+      this.tail = currentNode;
     }
 
     return deletedNode;
+  }
+
+  deleteTail() {
+    if (this.head === this.tail) {
+      const deletedTail = this.tail;
+      this.head = null;
+      this.tail = null;
+
+      return deletedTail;
+    }
+
+    const deletedTail = this.tail;
+
+    // Rewind to the last node and delete "next" link for the node before the last one.
+    let currentNode = this.head;
+    while (currentNode.next) {
+      if (!currentNode.next.next) {
+        currentNode.next = null;
+      } else {
+        currentNode = currentNode.next;
+      }
+    }
+
+    this.tail = currentNode;
+    return deletedTail;
   }
 
   findByKey(key) {

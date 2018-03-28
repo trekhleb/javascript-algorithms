@@ -6,6 +6,7 @@
 
 - [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
 - [Hash Table](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/hash-table)
+- [Queue](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/queue)
 
 ## Running Tests
 
