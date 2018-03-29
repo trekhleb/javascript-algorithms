@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
 
-## Data Structures
+## [Data Structures](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures)
 
 1. [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
 2. [Queue](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/queue)
