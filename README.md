@@ -11,6 +11,8 @@
 
 ## [Algorithms](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms)
 
+1. [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/fibonacci)
+
 ## Running Tests
 
 **Run all tests**
