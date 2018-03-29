@@ -9,6 +9,8 @@
 3. [Stack](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/stack)
 4. [Hash Table](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/hash-table)
 
+## Algorithms
+
 ## Running Tests
 
 **Run all tests**
