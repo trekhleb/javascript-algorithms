@@ -8,4 +8,4 @@
 
 ## Big O Notation
 
-![Big O graphs](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![Big O graphs](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-O-graph.jpeg)
