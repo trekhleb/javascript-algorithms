@@ -8,6 +8,7 @@
 2. [Queue](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/queue)
 3. [Stack](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/stack)
 4. [Hash Table](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/hash-table)
+5. [Heap](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/heap)
 
 ## [Algorithms](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms)
 
