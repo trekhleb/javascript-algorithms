@@ -8,7 +8,7 @@
 
 ## Big O Notation
 
-Order of growth of algorithms specified in Big-O notation. Source: [Big-O Cheat Sheet](http://bigocheatsheet.com/).
+Order of growth of algorithms specified in Big O notation. Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
 ![Big O graphs](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-O-graph.png)
 
