@@ -8,7 +8,11 @@
 
 ## Big O Notation
 
-![Big O graphs](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-O-graph.jpeg)
+Order of growth of algorithms specified in Big-O notation. Source: [Big-O Cheat Sheet](http://bigocheatsheet.com/).
+
+![Big O graphs](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-O-graph.png)
+
+Below is the list of some of the most used Big O notations and their performance comparisons against different sizes of the input data.
 
 | Big O Notation | Computations for 10 elements | Computations for 100 elements | Computations for 10 elements  |
 | -------------- | ---------------------------- | ----------------------------- | ----------------------------- |
