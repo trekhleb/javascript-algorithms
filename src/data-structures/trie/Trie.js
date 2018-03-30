@@ -26,7 +26,7 @@ export default class Trie {
     return lastCharacter.suggestChildren();
   }
 
-  doesWordExists(word) {
+  doesWordExist(word) {
     return !!this.getLastCharacterNode(word);
   }
 

@@ -44,8 +44,8 @@ describe('Trie', () => {
     trie.addWord('car');
     trie.addWord('caption');
 
-    expect(trie.doesWordExists('cat')).toBeTruthy();
-    expect(trie.doesWordExists('cap')).toBeTruthy();
-    expect(trie.doesWordExists('call')).toBeFalsy();
+    expect(trie.doesWordExist('cat')).toBeTruthy();
+    expect(trie.doesWordExist('cap')).toBeTruthy();
+    expect(trie.doesWordExist('call')).toBeFalsy();
   });
 });
