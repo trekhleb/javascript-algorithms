@@ -15,23 +15,26 @@ export default class BinaryTreeNode {
     return this;
   }
 
-  hasLeft() {
-    return !!this.left;
-  }
-
-  hasRight() {
-    return !!this.right;
-  }
-
   traverseInOrder() {
-    return Array.prototype.concat(
-      this.left ? this.left.traverseInOrder() : [null],
-      [this.value],
-      this.right ? this.right.traverseInOrder() : [null],
-    );
+    let traverse = [];
+
+    // Add left node.
+    if (this.left) {
+      traverse = traverse.concat(this.left.traverseInOrder());
+    }
+
+    // Add root.
+    traverse.push(this.value);
+
+    // Add right node.
+    if (this.right) {
+      traverse = traverse.concat(this.right.traverseInOrder());
+    }
+
+    return traverse;
   }
 
   toString() {
-    return this.traverseInOrder().filter(value => !!value).toString();
+    return this.traverseInOrder().toString();
   }
 }
