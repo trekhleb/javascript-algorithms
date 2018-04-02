@@ -28,8 +28,10 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
     }
 
     if (value < this.value && this.left) {
+      // Check left nodes.
       return this.left.contains(value);
     } else if (this.right) {
+      // Check right nodes.
       return this.right.contains(value);
     }
 
