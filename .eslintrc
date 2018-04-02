@@ -4,5 +4,8 @@
   "plugins": ["jest"],
   "env": {
     "jest/globals": true
+  },
+  "rules": {
+    "no-bitwise": "off"
   }
 }
