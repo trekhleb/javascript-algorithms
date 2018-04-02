@@ -5,4 +5,6 @@ In set theory a Cartesian product is a mathematical operation that returns a set
 the Cartesian product A × B is the set of all ordered pairs (a, b)
 where a ∈ A and b ∈ B. 
 
-![Cartesian Product of Two Sets](https://en.wikipedia.org/wiki/Cartesian_product#/media/File:Cartesian_Product_qtl1.svg)
+![Cartesian Product of Two Sets](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/cartesian-product.png)
+
+Image from [Wikipedia](https://en.wikipedia.org/wiki/Cartesian_product)
