@@ -13,7 +13,8 @@
 
 ## [Algorithms](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms)
 
-1. [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/fibonacci)
+* Math
+  * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
 
 ## Running Tests
 
