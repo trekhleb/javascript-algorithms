@@ -18,6 +18,38 @@ export default class BinaryTreeNode {
     return this;
   }
 
+  removeChild(nodeToRemove) {
+    if (this.left && this.left === nodeToRemove) {
+      this.left = null;
+      return true;
+    }
+
+    if (this.right && this.right === nodeToRemove) {
+      this.right = null;
+      return true;
+    }
+
+    return false;
+  }
+
+  replaceChild(nodeToReplace, replacementNode) {
+    if (!nodeToReplace || !replacementNode) {
+      return false;
+    }
+
+    if (this.left && this.left === nodeToReplace) {
+      this.left = replacementNode;
+      return true;
+    }
+
+    if (this.right && this.right === nodeToReplace) {
+      this.right = replacementNode;
+      return true;
+    }
+
+    return false;
+  }
+
   traverseInOrder() {
     let traverse = [];
 
