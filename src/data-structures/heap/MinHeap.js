@@ -85,7 +85,7 @@ export default class MinHeap {
 
     while (
       MinHeap.hasParent(currentIndex) &&
-      MinHeap.lessThen(this.heapContainer[currentIndex], this.parent(currentIndex))
+      this.lessThen(this.heapContainer[currentIndex], this.parent(currentIndex))
     ) {
       this.swap(currentIndex, MinHeap.getParentIndex(currentIndex));
       currentIndex = MinHeap.getParentIndex(currentIndex);
@@ -101,14 +101,14 @@ export default class MinHeap {
     while (this.hasLeftChild(currentIndex)) {
       if (
         this.hasRightChild(currentIndex) &&
-        MinHeap.lessThen(this.rightChild(currentIndex), this.leftChild(currentIndex))
+        this.lessThen(this.rightChild(currentIndex), this.leftChild(currentIndex))
       ) {
         nextIndex = MinHeap.getRightChildIndex(currentIndex);
       } else {
         nextIndex = MinHeap.getLeftChildIndex(currentIndex);
       }
 
-      if (MinHeap.lessThen(this.heapContainer[currentIndex], this.heapContainer[nextIndex])) {
+      if (this.lessThen(this.heapContainer[currentIndex], this.heapContainer[nextIndex])) {
         break;
       }
 
@@ -121,7 +121,7 @@ export default class MinHeap {
     return this.heapContainer.toString();
   }
 
-  static compare(a, b) {
+  compare(a, b) {
     if (a === b) {
       return 0;
     }
@@ -129,7 +129,7 @@ export default class MinHeap {
     return a < b ? -1 : 1;
   }
 
-  static lessThen(a, b) {
-    return MinHeap.compare(a, b) === -1;
+  lessThen(a, b) {
+    return this.compare(a, b) === -1;
   }
 }

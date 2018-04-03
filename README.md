@@ -9,8 +9,9 @@
 3. [Stack](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/stack)
 4. [Hash Table](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/hash-table)
 5. [Heap](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/heap)
-5. [Trie](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/trie)
-6. [Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
+6. [Priority Queue](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/priority-queue)
+7. [Trie](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/trie)
+8. [Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
     * [Binary Search Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
 
 ## [Algorithms](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms)

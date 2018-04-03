@@ -7,6 +7,7 @@
   },
   "rules": {
     "no-bitwise": "off",
-    "no-lonely-if": "off"
+    "no-lonely-if": "off",
+    "class-methods-use-this": "warn"
   }
 }
