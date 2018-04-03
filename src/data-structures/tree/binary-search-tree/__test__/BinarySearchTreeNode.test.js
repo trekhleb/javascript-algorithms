@@ -9,6 +9,15 @@ describe('BinarySearchTreeNode', () => {
     expect(bstNode.right).toBeNull();
   });
 
+  it('should insert in itself if it is empty', () => {
+    const bstNode = new BinarySearchTreeNode();
+    bstNode.insert(1);
+
+    expect(bstNode.value).toBe(1);
+    expect(bstNode.left).toBeNull();
+    expect(bstNode.right).toBeNull();
+  });
+
   it('should insert nodes in correct order', () => {
     const bstNode = new BinarySearchTreeNode(2);
     bstNode.insert(1);

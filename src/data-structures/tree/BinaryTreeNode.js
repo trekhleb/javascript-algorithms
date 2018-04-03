@@ -5,12 +5,12 @@ export default class BinaryTreeNode {
     this.value = value;
   }
 
-  addLeft(node) {
+  setLeft(node) {
     this.left = node;
     return this;
   }
 
-  addRight(node) {
+  setRight(node) {
     this.right = node;
     return this;
   }

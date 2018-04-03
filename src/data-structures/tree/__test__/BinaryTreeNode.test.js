@@ -15,8 +15,8 @@ describe('BinaryTreeNode', () => {
     const rootNode = new BinaryTreeNode(2);
 
     rootNode
-      .addLeft(leftNode)
-      .addRight(rightNode);
+      .setLeft(leftNode)
+      .setRight(rightNode);
 
     expect(rootNode.value).toBe(2);
     expect(rootNode.left.value).toBe(1);
@@ -29,8 +29,8 @@ describe('BinaryTreeNode', () => {
     const rootNode = new BinaryTreeNode(2);
 
     rootNode
-      .addLeft(leftNode)
-      .addRight(rightNode);
+      .setLeft(leftNode)
+      .setRight(rightNode);
 
     expect(rootNode.traverseInOrder()).toEqual([1, 2, 3]);
 

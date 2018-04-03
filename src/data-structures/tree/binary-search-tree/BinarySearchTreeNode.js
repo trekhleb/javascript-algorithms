@@ -2,6 +2,11 @@ import BinaryTreeNode from '../BinaryTreeNode';
 
 export default class BinarySearchTreeNode extends BinaryTreeNode {
   insert(value) {
+    if (this.value === null) {
+      this.value = value;
+      return this;
+    }
+
     if (value < this.value) {
       // Insert to the left.
       if (this.left) {
