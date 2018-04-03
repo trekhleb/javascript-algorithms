@@ -20,6 +20,10 @@
   * [Cartesian Product](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/cartesian-product)
   * [Power Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/power-set)
 
+## Useful Links
+
+- [Data Structures and Algorithms on YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+
 ## Running Tests
 
 **Run all tests**
@@ -31,8 +35,3 @@ npm test
 ```
 npm test -- -t 'LinkedList'
 ```
-
-## Useful Links
-
-- [Data Structures and Algorithms on YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
-
