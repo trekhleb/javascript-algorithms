@@ -41,4 +41,19 @@ describe('BinarySearchTreeNode', () => {
     expect(bstNode.contains(6)).toBeTruthy();
     expect(bstNode.contains(8)).toBeFalsy();
   });
+
+  it('should not insert duplicates', () => {
+    const bstNode = new BinarySearchTreeNode(2);
+    bstNode.insert(1);
+
+    expect(bstNode.toString()).toBe('1,2');
+    expect(bstNode.contains(1)).toBeTruthy();
+    expect(bstNode.contains(3)).toBeFalsy();
+
+    bstNode.insert(1);
+
+    expect(bstNode.toString()).toBe('1,2');
+    expect(bstNode.contains(1)).toBeTruthy();
+    expect(bstNode.contains(3)).toBeFalsy();
+  });
 });

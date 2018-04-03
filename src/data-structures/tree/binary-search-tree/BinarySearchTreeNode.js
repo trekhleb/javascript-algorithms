@@ -9,7 +9,7 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
       } else {
         this.left = new BinarySearchTreeNode(value);
       }
-    } else {
+    } else if (value > this.value) {
       // Insert to the right.
       if (this.right) {
         this.right.insert(value);
@@ -30,7 +30,7 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
     if (value < this.value && this.left) {
       // Check left nodes.
       return this.left.contains(value);
-    } else if (this.right) {
+    } else if (value > this.value && this.right) {
       // Check right nodes.
       return this.right.contains(value);
     }
