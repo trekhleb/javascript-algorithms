@@ -14,7 +14,7 @@ export default class BinarySearchTree {
   }
 
   remove(value) {
-    const nodeToRemove = this.findNode(value);
+    const nodeToRemove = this.root.find(value);
 
     if (!nodeToRemove) {
       throw new Error('Item not found in the tree');

@@ -12,14 +12,14 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
       if (this.left) {
         this.left.insert(value);
       } else {
-        this.left = new BinarySearchTreeNode(value);
+        this.setLeft(new BinarySearchTreeNode(value));
       }
     } else if (value > this.value) {
       // Insert to the right.
       if (this.right) {
         this.right.insert(value);
       } else {
-        this.right = new BinarySearchTreeNode(value);
+        this.setRight(new BinarySearchTreeNode(value));
       }
     }
 

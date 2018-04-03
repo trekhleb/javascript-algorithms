@@ -23,6 +23,21 @@ describe('BinaryTreeNode', () => {
     expect(rootNode.right.value).toBe(3);
   });
 
+  it('should set parent', () => {
+    const leftNode = new BinaryTreeNode(1);
+    const rightNode = new BinaryTreeNode(3);
+    const rootNode = new BinaryTreeNode(2);
+
+    rootNode
+      .setLeft(leftNode)
+      .setRight(rightNode);
+
+    expect(rootNode.parent).toBeNull();
+    expect(rootNode.left.parent.value).toBe(2);
+    expect(rootNode.right.parent.value).toBe(2);
+    expect(rootNode.right.parent).toEqual(rootNode);
+  });
+
   it('should traverse node', () => {
     const leftNode = new BinaryTreeNode(1);
     const rightNode = new BinaryTreeNode(3);

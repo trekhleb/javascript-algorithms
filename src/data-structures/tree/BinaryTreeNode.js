@@ -1,17 +1,20 @@
 export default class BinaryTreeNode {
-  constructor(value = null) {
+  constructor(value = null, parent = null) {
     this.left = null;
     this.right = null;
+    this.parent = parent;
     this.value = value;
   }
 
   setLeft(node) {
     this.left = node;
+    this.left.parent = this;
     return this;
   }
 
   setRight(node) {
     this.right = node;
+    this.right.parent = this;
     return this;
   }
 
