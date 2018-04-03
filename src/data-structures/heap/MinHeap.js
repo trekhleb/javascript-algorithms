@@ -78,6 +78,9 @@ export default class MinHeap {
   }
 
   heapifyUp() {
+    // Take last element (last in array or the bottom left in a tree) in
+    // a heap container and lift him up until we find the parent element
+    // that is less then the current new one.
     let currentIndex = this.heapContainer.length - 1;
 
     while (
@@ -90,6 +93,8 @@ export default class MinHeap {
   }
 
   heapifyDown() {
+    // Compare the root element to its children and swap root with the smallest
+    // of children. Do the same for next children after swap.
     let currentIndex = 0;
     let nextIndex = 0;
 
