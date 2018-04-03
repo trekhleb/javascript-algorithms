@@ -56,4 +56,31 @@ describe('BinarySearchTreeNode', () => {
     expect(bstNode.contains(1)).toBeTruthy();
     expect(bstNode.contains(3)).toBeFalsy();
   });
+
+  it('should find min node', () => {
+    const node = new BinarySearchTreeNode(10);
+
+    node.insert(20);
+    node.insert(30);
+    node.insert(5);
+    node.insert(40);
+    node.insert(1);
+
+    expect(node.findMin()).not.toBeNull();
+    expect(node.findMin().value).toBe(1);
+  });
+
+  it('should find node', () => {
+    const node = new BinarySearchTreeNode(10);
+
+    node.insert(20);
+    node.insert(30);
+    node.insert(5);
+    node.insert(40);
+    node.insert(1);
+
+    expect(node.find(6)).toBeNull();
+    expect(node.find(5)).not.toBeNull();
+    expect(node.find(5).value).toBe(5);
+  });
 });

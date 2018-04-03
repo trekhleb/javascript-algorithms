@@ -21,20 +21,32 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
     return this;
   }
 
-  contains(value) {
+  find(value) {
     // Check the root.
     if (this.value === value) {
-      return true;
+      return this;
     }
 
     if (value < this.value && this.left) {
       // Check left nodes.
-      return this.left.contains(value);
+      return this.left.find(value);
     } else if (value > this.value && this.right) {
       // Check right nodes.
-      return this.right.contains(value);
+      return this.right.find(value);
     }
 
-    return false;
+    return null;
+  }
+
+  contains(value) {
+    return !!this.find(value);
+  }
+
+  findMin() {
+    if (!this.left) {
+      return this;
+    }
+
+    return this.left.findMin();
   }
 }

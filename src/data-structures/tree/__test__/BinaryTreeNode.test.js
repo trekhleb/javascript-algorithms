@@ -26,7 +26,11 @@ describe('BinaryTreeNode', () => {
   it('should traverse node', () => {
     const leftNode = new BinaryTreeNode(1);
     const rightNode = new BinaryTreeNode(3);
-    const rootNode = new BinaryTreeNode(2, leftNode, rightNode);
+    const rootNode = new BinaryTreeNode(2);
+
+    rootNode
+      .addLeft(leftNode)
+      .addRight(rightNode);
 
     expect(rootNode.traverseInOrder()).toEqual([1, 2, 3]);
 
