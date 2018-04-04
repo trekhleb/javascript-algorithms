@@ -3,7 +3,10 @@ dist: trusty
 language: node_js
 node_js:
   - node
+install:
+  - npm install -g codecov
 script:
   - npm run ci
+  - codecov
 notifications:
   email: false
