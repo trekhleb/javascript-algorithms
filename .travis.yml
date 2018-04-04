@@ -4,7 +4,7 @@ language: node_js
 node_js:
   - node
 install:
-  - npm install -g codecov
+  - npm i -g eslint codecov
 script:
   - npm run ci
   - codecov
