@@ -46,6 +46,7 @@ describe('Queue', () => {
 
     expect(queue.dequeue()).toBe(1);
     expect(queue.dequeue()).toBe(2);
+    expect(queue.dequeue()).toBeNull();
     expect(queue.isEmpty()).toBeTruthy();
   });
 });

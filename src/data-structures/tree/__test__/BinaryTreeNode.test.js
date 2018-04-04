@@ -99,5 +99,7 @@ describe('BinaryTreeNode', () => {
 
     expect(rootNode.replaceChild(rootNode.right, replacementNode)).toBeTruthy();
     expect(rootNode.traverseInOrder()).toEqual([1, 2, 5]);
+
+    expect(rootNode.replaceChild(new BinaryTreeNode(), new BinaryTreeNode())).toBeFalsy();
   });
 });

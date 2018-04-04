@@ -46,6 +46,7 @@ describe('Stack', () => {
 
     expect(stack.pop()).toBe(2);
     expect(stack.pop()).toBe(1);
+    expect(stack.pop()).toBeNull();
     expect(stack.isEmpty()).toBeTruthy();
   });
 });
