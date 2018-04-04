@@ -126,6 +126,8 @@ export default class MinHeap {
       return 0;
     }
 
+    // Min heap may be converted to max heap by simply changing this line to:
+    // a > b ? -1 : 1
     return a < b ? -1 : 1;
   }
 
