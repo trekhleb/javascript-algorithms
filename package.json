@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint ./src/*",
     "test": "jest",
-    "ci": "npm run lint && npm run test"
+    "ci": "npm run lint && npm run test",
+    "codecov": "codecov"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "@types/jest": "^22.2.2",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
+    "codecov": "^3.0.0",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.9.0",

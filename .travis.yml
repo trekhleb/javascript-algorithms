@@ -3,10 +3,8 @@ dist: trusty
 language: node_js
 node_js:
   - node
-install:
-  - npm i -g eslint codecov
 script:
   - npm run ci
-  - codecov
+  - npm run codecov
 notifications:
   email: false
