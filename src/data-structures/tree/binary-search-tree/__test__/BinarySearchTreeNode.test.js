@@ -92,4 +92,83 @@ describe('BinarySearchTreeNode', () => {
     expect(node.find(5)).not.toBeNull();
     expect(node.find(5).value).toBe(5);
   });
+
+  it('should remove leaf nodes', () => {
+    const bstRootNode = new BinarySearchTreeNode();
+
+    bstRootNode.insert(10);
+    bstRootNode.insert(20);
+    bstRootNode.insert(5);
+
+    expect(bstRootNode.toString()).toBe('5,10,20');
+
+    bstRootNode.remove(5);
+    expect(bstRootNode.toString()).toBe('10,20');
+    bstRootNode.remove(20);
+    expect(bstRootNode.toString()).toBe('10');
+  });
+
+  it('should remove nodes with one child', () => {
+    const bstRootNode = new BinarySearchTreeNode();
+
+    bstRootNode.insert(10);
+    bstRootNode.insert(20);
+    bstRootNode.insert(5);
+    bstRootNode.insert(30);
+
+    expect(bstRootNode.toString()).toBe('5,10,20,30');
+
+    bstRootNode.remove(20);
+    expect(bstRootNode.toString()).toBe('5,10,30');
+
+    bstRootNode.insert(1);
+    expect(bstRootNode.toString()).toBe('1,5,10,30');
+
+    bstRootNode.remove(5);
+    expect(bstRootNode.toString()).toBe('1,10,30');
+  });
+
+  it('should remove nodes with two children', () => {
+    const bstRootNode = new BinarySearchTreeNode();
+
+    bstRootNode.insert(10);
+    bstRootNode.insert(20);
+    bstRootNode.insert(5);
+    bstRootNode.insert(30);
+    bstRootNode.insert(15);
+    bstRootNode.insert(25);
+
+    expect(bstRootNode.toString()).toBe('5,10,15,20,25,30');
+    expect(bstRootNode.find(20).left.value).toBe(15);
+    expect(bstRootNode.find(20).right.value).toBe(30);
+
+    bstRootNode.remove(20);
+    expect(bstRootNode.toString()).toBe('5,10,15,25,30');
+
+    bstRootNode.remove(15);
+    expect(bstRootNode.toString()).toBe('5,10,25,30');
+
+    bstRootNode.remove(10);
+    expect(bstRootNode.toString()).toBe('5,25,30');
+    expect(bstRootNode.value).toBe(25);
+
+    bstRootNode.remove(25);
+    expect(bstRootNode.toString()).toBe('5,30');
+
+    bstRootNode.remove(5);
+    expect(bstRootNode.toString()).toBe('30');
+  });
+
+  it('should throw error when trying to remove not existing node', () => {
+    const bstRootNode = new BinarySearchTreeNode();
+
+    bstRootNode.insert(10);
+    bstRootNode.insert(20);
+
+    function removeNotExistingElementFromTree() {
+      bstRootNode.remove(30);
+    }
+
+    expect(removeNotExistingElementFromTree).toThrow();
+  });
 });
