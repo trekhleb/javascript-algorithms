@@ -6,6 +6,17 @@ export default class BinaryTreeNode {
     this.value = value;
   }
 
+  get height() {
+    if (!this.left && !this.left) {
+      return 0;
+    }
+
+    const leftHeight = this.left ? this.left.height : 0;
+    const rightHeight = this.right ? this.right.height : 0;
+
+    return Math.max(leftHeight, rightHeight) + 1;
+  }
+
   setLeft(node) {
     this.left = node;
     this.left.parent = this;

@@ -100,6 +100,44 @@ describe('BinaryTreeNode', () => {
     expect(rootNode.replaceChild(rootNode.right, replacementNode)).toBeTruthy();
     expect(rootNode.traverseInOrder()).toEqual([1, 2, 5]);
 
+    expect(rootNode.replaceChild(rootNode.left, replacementNode)).toBeTruthy();
+    expect(rootNode.traverseInOrder()).toEqual([5, 2, 5]);
+
     expect(rootNode.replaceChild(new BinaryTreeNode(), new BinaryTreeNode())).toBeFalsy();
+  });
+
+  it('should calculate node height', () => {
+    const root = new BinaryTreeNode(1);
+    const left = new BinaryTreeNode(3);
+    const right = new BinaryTreeNode(2);
+    const grandLeft = new BinaryTreeNode(5);
+    const grandRight = new BinaryTreeNode(6);
+    const grandGrandLeft = new BinaryTreeNode(7);
+
+    expect(root.height).toBe(0);
+
+    root
+      .setLeft(left)
+      .setRight(right);
+
+    expect(root.height).toBe(1);
+    expect(left.height).toBe(0);
+
+    left
+      .setLeft(grandLeft)
+      .setRight(grandRight);
+
+    expect(root.height).toBe(2);
+    expect(left.height).toBe(1);
+    expect(grandLeft.height).toBe(0);
+    expect(grandRight.height).toBe(0);
+
+    grandLeft.setLeft(grandGrandLeft);
+
+    expect(root.height).toBe(3);
+    expect(left.height).toBe(2);
+    expect(grandLeft.height).toBe(1);
+    expect(grandRight.height).toBe(0);
+    expect(grandGrandLeft.height).toBe(0);
   });
 });
