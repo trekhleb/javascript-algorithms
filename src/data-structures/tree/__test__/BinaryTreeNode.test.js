@@ -140,4 +140,14 @@ describe('BinaryTreeNode', () => {
     expect(grandRight.height).toBe(0);
     expect(grandGrandLeft.height).toBe(0);
   });
+
+  it('should calculate node height for right nodes as well', () => {
+    const root = new BinaryTreeNode(1);
+    const right = new BinaryTreeNode(2);
+
+    root.setRight(right);
+
+    expect(root.height).toBe(1);
+    expect(right.height).toBe(0);
+  });
 });

@@ -7,7 +7,7 @@ export default class BinaryTreeNode {
   }
 
   get height() {
-    if (!this.left && !this.left) {
+    if (!this.left && !this.right) {
       return 0;
     }
 
