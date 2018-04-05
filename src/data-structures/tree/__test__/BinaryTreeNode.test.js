@@ -115,6 +115,7 @@ describe('BinaryTreeNode', () => {
     const grandGrandLeft = new BinaryTreeNode(7);
 
     expect(root.height).toBe(0);
+    expect(root.balanceFactor).toBe(0);
 
     root
       .setLeft(left)
@@ -122,6 +123,7 @@ describe('BinaryTreeNode', () => {
 
     expect(root.height).toBe(1);
     expect(left.height).toBe(0);
+    expect(root.balanceFactor).toBe(0);
 
     left
       .setLeft(grandLeft)
@@ -131,6 +133,7 @@ describe('BinaryTreeNode', () => {
     expect(left.height).toBe(1);
     expect(grandLeft.height).toBe(0);
     expect(grandRight.height).toBe(0);
+    expect(root.balanceFactor).toBe(1);
 
     grandLeft.setLeft(grandGrandLeft);
 
@@ -139,6 +142,7 @@ describe('BinaryTreeNode', () => {
     expect(grandLeft.height).toBe(1);
     expect(grandRight.height).toBe(0);
     expect(grandGrandLeft.height).toBe(0);
+    expect(root.balanceFactor).toBe(2);
   });
 
   it('should calculate node height for right nodes as well', () => {
@@ -149,5 +153,6 @@ describe('BinaryTreeNode', () => {
 
     expect(root.height).toBe(1);
     expect(right.height).toBe(0);
+    expect(root.balanceFactor).toBe(-1);
   });
 });

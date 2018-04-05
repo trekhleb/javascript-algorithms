@@ -26,6 +26,10 @@ export default class BinaryTreeNode {
     return Math.max(this.leftHeight, this.rightHeight);
   }
 
+  get balanceFactor() {
+    return this.leftHeight - this.rightHeight;
+  }
+
   setLeft(node) {
     this.left = node;
     this.left.parent = this;
