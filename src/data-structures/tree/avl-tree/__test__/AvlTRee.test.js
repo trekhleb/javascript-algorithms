@@ -122,6 +122,7 @@ describe('AvlTree', () => {
   });
 
   it('should create balanced tree: case #1', () => {
+    // @see: https://www.youtube.com/watch?v=rbg7Qf8GkQ4&t=839s
     const tree = new AvlTree();
 
     tree.insert(1);
@@ -161,5 +162,27 @@ describe('AvlTree', () => {
     expect(tree.root.value).toBe(2);
     expect(tree.root.height).toBe(3);
     expect(tree.toString()).toBe('-8,-5,-2,1,2,3,6,15');
+  });
+
+  it('should create balanced tree: case #2', () => {
+    // @see https://www.youtube.com/watch?v=7m94k2Qhg68
+    const tree = new AvlTree();
+
+    tree.insert(43);
+    tree.insert(18);
+    tree.insert(22);
+    tree.insert(9);
+    tree.insert(21);
+    tree.insert(6);
+
+    expect(tree.root.value).toBe(18);
+    expect(tree.root.height).toBe(2);
+    expect(tree.toString()).toBe('6,9,18,21,22,43');
+
+    tree.insert(8);
+
+    expect(tree.root.value).toBe(18);
+    expect(tree.root.height).toBe(2);
+    expect(tree.toString()).toBe('6,8,9,18,21,22,43');
   });
 });
