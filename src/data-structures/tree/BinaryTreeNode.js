@@ -32,13 +32,17 @@ export default class BinaryTreeNode {
 
   setLeft(node) {
     this.left = node;
-    this.left.parent = this;
+    if (node) {
+      this.left.parent = this;
+    }
     return this;
   }
 
   setRight(node) {
     this.right = node;
-    this.right.parent = this;
+    if (node) {
+      this.right.parent = this;
+    }
     return this;
   }
 

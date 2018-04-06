@@ -155,4 +155,22 @@ describe('BinaryTreeNode', () => {
     expect(right.height).toBe(0);
     expect(root.balanceFactor).toBe(-1);
   });
+
+  it('should set null for left and right node', () => {
+    const root = new BinaryTreeNode(2);
+    const left = new BinaryTreeNode(1);
+    const right = new BinaryTreeNode(3);
+
+    root.setLeft(left);
+    root.setRight(right);
+
+    expect(root.left.value).toBe(1);
+    expect(root.right.value).toBe(3);
+
+    root.setLeft(null);
+    root.setRight(null);
+
+    expect(root.left).toBeNull();
+    expect(root.right).toBeNull();
+  });
 });
