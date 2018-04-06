@@ -13,7 +13,12 @@
     "type": "git",
     "url": "git+https://github.com/trekhleb/data-structures.git"
   },
-  "keywords": [],
+  "keywords": [
+    "computer science",
+    "cs",
+    "algorithms",
+    "data structures"
+  ],
   "author": "Oleksii Trekhleb (https://www.linkedin.com/in/trekhleb/)",
   "license": "ISC",
   "bugs": {
