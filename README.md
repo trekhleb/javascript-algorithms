@@ -22,6 +22,8 @@
   * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
   * [Cartesian Product](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/cartesian-product)
   * [Power Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/power-set)
+* String
+  * [String Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/permutations)
 
 ## Useful Links
 
