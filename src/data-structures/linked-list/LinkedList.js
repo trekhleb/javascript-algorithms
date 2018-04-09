@@ -133,15 +133,19 @@ export default class LinkedList {
     return deletedHead;
   }
 
-  toString(callback) {
-    const nodeStrings = [];
+  toArray() {
+    const nodes = [];
 
     let currentNode = this.head;
     while (currentNode) {
-      nodeStrings.push(currentNode.toString(callback));
+      nodes.push(currentNode);
       currentNode = currentNode.next;
     }
 
-    return nodeStrings.toString();
+    return nodes;
+  }
+
+  toString(callback) {
+    return this.toArray().map(node => node.toString(callback)).toString();
   }
 }
