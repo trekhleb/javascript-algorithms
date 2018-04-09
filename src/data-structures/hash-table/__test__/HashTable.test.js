@@ -31,19 +31,34 @@ describe('HashTable', () => {
     hashTable.insert('c', 'earth');
     hashTable.insert('d', 'ocean');
 
-    expect(hashTable.buckets[0].toString()).toBe('c:earth');
-    expect(hashTable.buckets[1].toString()).toBe('a:sky,d:ocean');
-    expect(hashTable.buckets[2].toString()).toBe('b:sea');
+    const stringifier = value => `${value.key}:${value.value}`;
 
-    expect(hashTable.get('a').value).toBe('sky');
-    expect(hashTable.get('d').value).toBe('ocean');
+    expect(hashTable.buckets[0].toString(stringifier)).toBe('c:earth');
+    expect(hashTable.buckets[1].toString(stringifier)).toBe('a:sky,d:ocean');
+    expect(hashTable.buckets[2].toString(stringifier)).toBe('b:sea');
+
+    expect(hashTable.get('a')).toBe('sky');
+    expect(hashTable.get('d')).toBe('ocean');
 
     hashTable.delete('a');
 
+    expect(hashTable.delete('not-existing')).toBeNull();
+
     expect(hashTable.get('a')).toBeNull();
-    expect(hashTable.get('d').value).toBe('ocean');
+    expect(hashTable.get('d')).toBe('ocean');
 
     hashTable.insert('d', 'ocean-new');
-    expect(hashTable.get('d').value).toBe('ocean-new');
+    expect(hashTable.get('d')).toBe('ocean-new');
+  });
+
+  it('should be possible to add objects to hash table', () => {
+    const hashTable = new HashTable();
+
+    hashTable.insert('objectKey', { prop1: 'a', prop2: 'b' });
+
+    const object = hashTable.get('objectKey');
+    expect(object).toBeDefined();
+    expect(object.prop1).toBe('a');
+    expect(object.prop2).toBe('b');
   });
 });

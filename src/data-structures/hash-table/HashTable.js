@@ -21,16 +21,32 @@ export default class HashTable {
 
   insert(key, value) {
     const bucketLinkedList = this.buckets[this.hash(key)];
-    bucketLinkedList.appendUnique({ key, value });
+    const node = bucketLinkedList.find({ callback: nodeValue => nodeValue.key === key });
+
+    if (!node) {
+      // Insert new node.
+      bucketLinkedList.append({ key, value });
+    } else {
+      // Update value of existing node.
+      node.value.value = value;
+    }
   }
 
   delete(key) {
     const bucketLinkedList = this.buckets[this.hash(key)];
-    return bucketLinkedList.deleteByKey(key);
+    const node = bucketLinkedList.find({ callback: nodeValue => nodeValue.key === key });
+
+    if (node) {
+      return bucketLinkedList.delete(node.value);
+    }
+
+    return null;
   }
 
   get(key) {
     const bucketLinkedList = this.buckets[this.hash(key)];
-    return bucketLinkedList.findByKey(key);
+    const node = bucketLinkedList.find({ callback: nodeValue => nodeValue.key === key });
+
+    return node ? node.value.value : null;
   }
 }

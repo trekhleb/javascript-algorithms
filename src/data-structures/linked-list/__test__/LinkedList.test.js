@@ -12,30 +12,17 @@ describe('LinkedList', () => {
     expect(linkedList.head).toBeNull();
     expect(linkedList.tail).toBeNull();
 
-    const node1 = linkedList.append({ value: 1 });
-    const node2 = linkedList.append({ value: 2, key: 'test' });
+    linkedList.append(1);
+    linkedList.append(2);
 
-    expect(node1.value).toBe(1);
-    expect(node2.value).toBe(2);
-    expect(node2.key).toBe('test');
-
-    expect(linkedList.head.toString()).toBe('1');
-    expect(linkedList.tail.toString()).toBe('test:2');
-
-    expect(linkedList.toString()).toBe('1,test:2');
+    expect(linkedList.toString()).toBe('1,2');
   });
 
   it('should prepend node to linked list', () => {
     const linkedList = new LinkedList();
 
-    const node1 = linkedList.append({ value: 1 });
-    const node2 = linkedList.prepend({ value: 2 });
-
-    expect(node1.value).toBe(1);
-    expect(node2.value).toBe(2);
-
-    expect(linkedList.head.toString()).toBe('2');
-    expect(linkedList.tail.toString()).toBe('1');
+    linkedList.append(1);
+    linkedList.prepend(2);
 
     expect(linkedList.toString()).toBe('2,1');
   });
@@ -43,74 +30,51 @@ describe('LinkedList', () => {
   it('should delete node by value from linked list', () => {
     const linkedList = new LinkedList();
 
-    expect(linkedList.deleteByValue(5)).toBeNull();
+    expect(linkedList.delete(5)).toBeNull();
 
-    linkedList.append({ value: 1 });
-    linkedList.append({ value: 2 });
-    linkedList.append({ value: 3 });
-    linkedList.append({ value: 3 });
-    linkedList.append({ value: 3 });
-    linkedList.append({ value: 4 });
-    linkedList.append({ value: 5 });
+    linkedList.append(1);
+    linkedList.append(2);
+    linkedList.append(3);
+    linkedList.append(3);
+    linkedList.append(3);
+    linkedList.append(4);
+    linkedList.append(5);
 
     expect(linkedList.head.toString()).toBe('1');
     expect(linkedList.tail.toString()).toBe('5');
 
-    const deletedNode = linkedList.deleteByValue(3);
+    const deletedNode = linkedList.delete(3);
     expect(deletedNode.value).toBe(3);
     expect(linkedList.toString()).toBe('1,2,4,5');
 
-    linkedList.deleteByValue(3);
+    linkedList.delete(3);
     expect(linkedList.toString()).toBe('1,2,4,5');
 
-    linkedList.deleteByValue(1);
+    linkedList.delete(1);
     expect(linkedList.toString()).toBe('2,4,5');
 
     expect(linkedList.head.toString()).toBe('2');
     expect(linkedList.tail.toString()).toBe('5');
 
-    linkedList.deleteByValue(5);
+    linkedList.delete(5);
     expect(linkedList.toString()).toBe('2,4');
 
     expect(linkedList.head.toString()).toBe('2');
     expect(linkedList.tail.toString()).toBe('4');
 
-    linkedList.deleteByValue(4);
+    linkedList.delete(4);
     expect(linkedList.toString()).toBe('2');
 
     expect(linkedList.head.toString()).toBe('2');
     expect(linkedList.tail.toString()).toBe('2');
   });
 
-  it('should delete node by key from linked list', () => {
-    const linkedList = new LinkedList();
-
-    expect(linkedList.deleteByKey('key')).toBeNull();
-
-    linkedList.append({ value: 1, key: 'test1' });
-    linkedList.append({ value: 2, key: 'test2' });
-    linkedList.append({ value: 3, key: 'test3' });
-    linkedList.append({ value: 4, key: 'test4' });
-
-    const deletedNode1 = linkedList.deleteByKey('test2');
-    expect(deletedNode1.key).toBe('test2');
-    expect(linkedList.toString()).toBe('test1:1,test3:3,test4:4');
-
-    const deletedNode2 = linkedList.deleteByKey('test1');
-    expect(deletedNode2.key).toBe('test1');
-    expect(linkedList.toString()).toBe('test3:3,test4:4');
-
-    const deletedNode3 = linkedList.deleteByKey('test4');
-    expect(deletedNode3.key).toBe('test4');
-    expect(linkedList.toString()).toBe('test3:3');
-  });
-
   it('should delete linked list tail', () => {
     const linkedList = new LinkedList();
 
-    linkedList.append({ value: 1 });
-    linkedList.append({ value: 2 });
-    linkedList.append({ value: 3 });
+    linkedList.append(1);
+    linkedList.append(2);
+    linkedList.append(3);
 
     expect(linkedList.head.toString()).toBe('1');
     expect(linkedList.tail.toString()).toBe('3');
@@ -142,8 +106,8 @@ describe('LinkedList', () => {
 
     expect(linkedList.deleteHead()).toBeNull();
 
-    linkedList.append({ value: 1 });
-    linkedList.append({ value: 2 });
+    linkedList.append(1);
+    linkedList.append(2);
 
     expect(linkedList.head.toString()).toBe('1');
     expect(linkedList.tail.toString()).toBe('2');
@@ -163,26 +127,52 @@ describe('LinkedList', () => {
     expect(linkedList.tail).toBeNull();
   });
 
-  it('should append unique nodes', () => {
+  it('should be possible to store objects in the list and to print them out', () => {
     const linkedList = new LinkedList();
 
-    linkedList.appendUnique({ value: 1, key: 'test1' });
-    linkedList.appendUnique({ value: 2, key: 'test2' });
-    linkedList.appendUnique({ value: 3, key: 'test2' });
-    linkedList.appendUnique({ value: 5, key: 'test1' });
+    const nodeValue1 = { value: 1, key: 'key1' };
+    const nodeValue2 = { value: 2, key: 'key2' };
 
-    expect(linkedList.toString()).toBe('test1:5,test2:3');
+    linkedList
+      .append(nodeValue1)
+      .prepend(nodeValue2);
+
+    const nodeStringifier = value => `${value.key}:${value.value}`;
+
+    expect(linkedList.toString(nodeStringifier)).toBe('key2:2,key1:1');
   });
 
-  it('should find node by its key', () => {
+  it('should find node by value', () => {
     const linkedList = new LinkedList();
 
-    expect(linkedList.findByKey('test')).toBeNull();
+    expect(linkedList.find({ value: 5 })).toBeNull();
 
-    linkedList.appendUnique({ value: 1, key: 'test1' });
-    linkedList.appendUnique({ value: 2, key: 'test2' });
-    linkedList.appendUnique({ value: 3, key: 'test3' });
+    linkedList.append(1);
+    expect(linkedList.find({ value: 1 })).toBeDefined();
 
-    expect(linkedList.findByKey('test3').toString()).toBe('test3:3');
+    linkedList
+      .append(2)
+      .append(3);
+
+    const node = linkedList.find({ value: 2 });
+
+    expect(node.value).toBe(2);
+    expect(linkedList.find({ value: 5 })).toBeNull();
+  });
+
+  it('should find node by callback', () => {
+    const linkedList = new LinkedList();
+
+    linkedList
+      .append({ value: 1, key: 'test1' })
+      .append({ value: 2, key: 'test2' })
+      .append({ value: 3, key: 'test3' });
+
+    const node = linkedList.find({ callback: value => value.key === 'test2' });
+
+    expect(node).toBeDefined();
+    expect(node.value.value).toBe(2);
+    expect(node.value.key).toBe('test2');
+    expect(linkedList.find({ callback: value => value.key === 'test5' })).toBeNull();
   });
 });

@@ -18,11 +18,15 @@ export default class Queue {
   }
 
   enqueue(value) {
-    this.linkedList.append({ value });
+    this.linkedList.append(value);
   }
 
   dequeue() {
     const removedHead = this.linkedList.deleteHead();
     return removedHead ? removedHead.value : null;
+  }
+
+  toString(callback) {
+    return this.linkedList.toString(callback);
   }
 }

@@ -18,11 +18,15 @@ export default class Stack {
   }
 
   push(value) {
-    this.linkedList.append({ value });
+    this.linkedList.append(value);
   }
 
   pop() {
     const removedTail = this.linkedList.deleteTail();
     return removedTail ? removedTail.value : null;
+  }
+
+  toString(callback) {
+    return this.linkedList.toString(callback);
   }
 }
