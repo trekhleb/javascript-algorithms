@@ -5,3 +5,12 @@ searching tree or graph data structures. One starts at
 the root (selecting some arbitrary node as the root in 
 the case of a graph) and explores as far as possible 
 along each branch before backtracking.
+
+## Complexity
+
+* Time: O(|V| + |E|)
+* Space: O(|V|)
+
+## References
+
+[Wikipedia](https://en.wikipedia.org/wiki/Depth-first_search)
