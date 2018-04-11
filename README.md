@@ -27,6 +27,7 @@
   * [String Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/permutations)
 * Graph
   * [Depth-First Search (DFS)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search)
+  * [Breadth-First Search (BFS)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/breadth-first-search)
 
 ## Useful Links
 
