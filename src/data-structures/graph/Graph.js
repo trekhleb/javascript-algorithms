@@ -1,6 +1,6 @@
 export default class Graph {
   /**
-   * @param isDirected {boolean}
+   * @param {boolean} isDirected
    */
   constructor(isDirected = false) {
     this.vertices = {};
@@ -8,7 +8,7 @@ export default class Graph {
   }
 
   /**
-   * @param newVertex {GraphVertex}
+   * @param {GraphVertex} newVertex
    * @returns {Graph}
    */
   addVertex(newVertex) {
@@ -18,7 +18,7 @@ export default class Graph {
   }
 
   /**
-   * @param vertexKey {string}
+   * @param {string} vertexKey
    * @returns GraphVertex
    */
   getVertexByKey(vertexKey) {
@@ -26,7 +26,7 @@ export default class Graph {
   }
 
   /**
-   * @param edge {GraphEdge}
+   * @param {GraphEdge} edge
    * @returns {Graph}
    */
   addEdge(edge) {
@@ -62,8 +62,8 @@ export default class Graph {
   }
 
   /**
-   * @param startVertex {GraphVertex}
-   * @param endVertex {GraphVertex}
+   * @param {GraphVertex} startVertex
+   * @param {GraphVertex} endVertex
    */
   findEdge(startVertex, endVertex) {
     const vertex = this.getVertexByKey(startVertex.getKey());
@@ -71,7 +71,7 @@ export default class Graph {
   }
 
   /**
-   * @param vertexKey {string}
+   * @param {string} vertexKey
    * @returns {GraphVertex}
    */
   findVertexByKey(vertexKey) {

@@ -1,8 +1,8 @@
 export default class GraphEdge {
   /**
-   * @param startVertex {GraphVertex}
-   * @param endVertex {GraphVertex}
-   * @param weight {number}
+   * @param {GraphVertex} startVertex
+   * @param {GraphVertex} endVertex
+   * @param {number} [weight=1]
    */
   constructor(startVertex, endVertex, weight = 1) {
     this.startVertex = startVertex;
