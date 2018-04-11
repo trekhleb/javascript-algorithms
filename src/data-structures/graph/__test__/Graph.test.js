@@ -111,4 +111,25 @@ describe('Graph', () => {
     expect(graphEdgeAB).toEqual(edgeAB);
     expect(graphEdgeAB.weight).toBe(10);
   });
+
+  it('should return vertex neighbors', () => {
+    const graph = new Graph(true);
+
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeAC = new GraphEdge(vertexA, vertexC);
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeAC);
+
+    const neighbors = graph.getNeighbors(vertexA);
+
+    expect(neighbors.length).toBe(2);
+    expect(neighbors[0]).toEqual(vertexB);
+    expect(neighbors[1]).toEqual(vertexC);
+  });
 });

@@ -26,6 +26,13 @@ export default class Graph {
   }
 
   /**
+   * @param {GraphVertex} vertex
+   */
+  getNeighbors(vertex) {
+    return vertex.getNeighbors();
+  }
+
+  /**
    * @param {GraphEdge} edge
    * @returns {Graph}
    */
