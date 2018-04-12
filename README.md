@@ -54,14 +54,14 @@ Then just simply run the following command to test if your playground code works
 npm test -- -t 'playground'
 ```
 
-## Useful Information
-
-### Useful links
+## Useful links
 
 * [Data Structures and Algorithms on YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 * Algorithms
   * Dynamic Programming
     * [Introduction to Dynamic Programming 1](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/tutorial/)
+
+## Useful Information
 
 ### Big O Notation
     
