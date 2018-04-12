@@ -3,7 +3,9 @@
 [![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
-## [Data Structures](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures)
+## Code Examples
+
+### Data Structures
 
 1. [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
 2. [Queue](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/queue)
@@ -17,7 +19,7 @@
     * [AVL Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/avl-tree)
 9. [Graph](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph)
 
-## [Algorithms](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms)
+### Algorithms
 
 * Math
   * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
@@ -28,10 +30,6 @@
 * Graph
   * [Depth-First Search (DFS)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search)
   * [Breadth-First Search (BFS)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/breadth-first-search)
-
-## Useful Links
-
-- [Data Structures and Algorithms on YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 
 ## Running Tests
 
@@ -44,3 +42,47 @@ npm test
 ```
 npm test -- -t 'LinkedList'
 ```
+
+## Playground
+
+You may play with data-structures and algorithms in `./src/playground/playground.js` file and write
+tests for it in `./src/playground/__test__/playground.test.js`.
+
+Then just simply run the following command to test if your playground code works as expected:
+
+```
+npm test -- -t 'playground'
+```
+
+## Useful Information
+
+### Useful links
+
+* [Data Structures and Algorithms on YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+* Algorithms
+  * Dynamic Programming
+    * [Introduction to Dynamic Programming 1](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/tutorial/)
+
+### Big O Notation
+    
+Order of growth of algorithms specified in Big O notation.
+    
+![Big O graphs](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-graph.png)
+Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+    
+Below is the list of some of the most used Big O notations and their performance comparisons against different sizes of the input data.
+
+| Big O Notation | Computations for 10 elements | Computations for 100 elements | Computations for 1000 elements  |
+| -------------- | ---------------------------- | ----------------------------- | ------------------------------- |
+| **O(1)**       | 1                            | 1                             | 1                               |
+| **O(log N)**   | 3                            | 6                             | 9                               |
+| **O(N)**       | 10                           | 100                           | 1000                            |
+| **O(N log N)** | 30                           | 60                            | 9000                            |
+| **O(N^2)**     | 100                          | 10000                         | 1000000                         |
+| **O(2^N)**     | 1024                         | 1.26e+29                      | 1.07e+301                       |
+| **O(N!)**      | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
+
+### Common Data Structure Operations
+    
+![Common Data Structure Operations](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-data-structures.png)
+Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
