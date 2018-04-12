@@ -16,51 +16,43 @@ describe('BubbleSort', () => {
     SortTester.testSortWithCustomComparator(BubbleSort);
   });
 
-  it('should visit sorted array element specified number of times', () => {
-    const visitingCallback = jest.fn();
+  it('should visit EQUAL array element specified number of times', () => {
+    const expectedNumberOfVisits = 19;
 
-    const callbacks = { visitingCallback };
-    const sorter = new BubbleSort(callbacks);
-
-    const arrayAfterSorting = sorter.sort(sortedArr);
-
-    expect(arrayAfterSorting).toEqual(sortedArr);
-    expect(visitingCallback).toHaveBeenCalledTimes(19);
+    SortTester.testAlgorithmTimeComplexity(
+      BubbleSort,
+      equalArr,
+      expectedNumberOfVisits,
+    );
   });
 
-  it('should visit not-sorted array element specified number of times', () => {
-    const visitingCallback = jest.fn();
+  it('should visit SORTED array element specified number of times', () => {
+    const expectedNumberOfVisits = 19;
 
-    const callbacks = { visitingCallback };
-    const sorter = new BubbleSort(callbacks);
-
-    const arrayAfterSorting = sorter.sort(notSortedArr);
-
-    expect(arrayAfterSorting).toEqual(sortedArr);
-    expect(visitingCallback).toHaveBeenCalledTimes(19);
+    SortTester.testAlgorithmTimeComplexity(
+      BubbleSort,
+      sortedArr,
+      expectedNumberOfVisits,
+    );
   });
 
-  it('should visit equal array element specified number of times', () => {
-    const visitingCallback = jest.fn();
+  it('should visit NOT SORTED array element specified number of times', () => {
+    const expectedNumberOfVisits = 266;
 
-    const callbacks = { visitingCallback };
-    const sorter = new BubbleSort(callbacks);
-
-    const arrayAfterSorting = sorter.sort(equalArr);
-
-    expect(arrayAfterSorting).toEqual(equalArr);
-    expect(visitingCallback).toHaveBeenCalledTimes(19);
+    SortTester.testAlgorithmTimeComplexity(
+      BubbleSort,
+      notSortedArr,
+      expectedNumberOfVisits,
+    );
   });
 
-  it('should visit reverse sorted array element specified number of times', () => {
-    const visitingCallback = jest.fn();
+  it('should visit REVERSE SORTED array element specified number of times', () => {
+    const expectedNumberOfVisits = 380;
 
-    const callbacks = { visitingCallback };
-    const sorter = new BubbleSort(callbacks);
-
-    const arrayAfterSorting = sorter.sort(reverseArr);
-
-    expect(arrayAfterSorting).toEqual(sortedArr);
-    expect(visitingCallback).toHaveBeenCalledTimes(19);
+    SortTester.testAlgorithmTimeComplexity(
+      BubbleSort,
+      reverseArr,
+      expectedNumberOfVisits,
+    );
   });
 });

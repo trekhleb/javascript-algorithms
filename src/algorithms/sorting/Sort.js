@@ -9,17 +9,17 @@ import Comparator from '../../utils/comparator/Comparator';
  */
 
 export default class Sort {
-  constructor(rawCallbacks) {
-    this.callbacks = Sort.initSortingCallbacks(rawCallbacks);
+  constructor(originalCallbacks) {
+    this.callbacks = Sort.initSortingCallbacks(originalCallbacks);
     this.comparator = new Comparator(this.callbacks.compareCallback);
   }
 
   /**
-   * @param {SorterCallbacks} rawCallbacks
+   * @param {SorterCallbacks} originalCallbacks
    * @returns {SorterCallbacks}
    */
-  static initSortingCallbacks(rawCallbacks) {
-    const callbacks = rawCallbacks || {};
+  static initSortingCallbacks(originalCallbacks) {
+    const callbacks = originalCallbacks || {};
     const stubCallback = () => {};
 
     callbacks.compareCallback = callbacks.compareCallback || undefined;

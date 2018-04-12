@@ -4,7 +4,8 @@ export default class BubbleSort extends Sort {
   sort(initialArray) {
     // Flag that holds info about whether the swap has occur or not.
     let swapped = false;
-    const array = initialArray;
+    // Clone original array to prevent its modification.
+    const array = initialArray.slice(0);
 
     for (let i = 0; i < array.length; i += 1) {
       swapped = false;

@@ -41,10 +41,10 @@ function initCallbacks(callbacks = {}) {
 /**
  * @param {Graph} graph
  * @param {GraphVertex} startVertex
- * @param {Callbacks} [rawCallbacks]
+ * @param {Callbacks} [originalCallbacks]
  */
-export default function breadthFirstSearch(graph, startVertex, rawCallbacks) {
-  const callbacks = initCallbacks(rawCallbacks);
+export default function breadthFirstSearch(graph, startVertex, originalCallbacks) {
+  const callbacks = initCallbacks(originalCallbacks);
   const vertexQueue = new Queue();
 
   // Do initial queue setup.

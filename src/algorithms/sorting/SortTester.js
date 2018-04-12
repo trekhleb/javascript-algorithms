@@ -24,7 +24,6 @@ export class SortTester {
         if (a.length === b.length) {
           return 0;
         }
-
         return a.length < b.length ? -1 : 1;
       },
     };
@@ -35,5 +34,15 @@ export class SortTester {
     expect(sorter.sort(['a'])).toEqual(['a']);
     expect(sorter.sort(['aa', 'a'])).toEqual(['a', 'aa']);
     expect(sorter.sort(['bb', 'aa', 'c'])).toEqual(['c', 'bb', 'aa']);
+  }
+
+  static testAlgorithmTimeComplexity(SortingClass, arrayToBeSorted, numberOfVisits) {
+    const visitingCallback = jest.fn();
+    const callbacks = { visitingCallback };
+    const sorter = new SortingClass(callbacks);
+
+    sorter.sort(arrayToBeSorted);
+
+    expect(visitingCallback).toHaveBeenCalledTimes(numberOfVisits);
   }
 }
