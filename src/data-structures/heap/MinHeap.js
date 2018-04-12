@@ -1,7 +1,10 @@
+import Comparator from '../../utils/comparator/Comparator';
+
 export default class MinHeap {
   constructor() {
     // Array representation of the heap.
     this.heapContainer = [];
+    this.compare = new Comparator();
   }
 
   static getLeftChildIndex(parentIndex) {
@@ -85,7 +88,7 @@ export default class MinHeap {
 
     while (
       MinHeap.hasParent(currentIndex) &&
-      this.lessThen(this.heapContainer[currentIndex], this.parent(currentIndex))
+      this.compare.lessThen(this.heapContainer[currentIndex], this.parent(currentIndex))
     ) {
       this.swap(currentIndex, MinHeap.getParentIndex(currentIndex));
       currentIndex = MinHeap.getParentIndex(currentIndex);
@@ -101,14 +104,14 @@ export default class MinHeap {
     while (this.hasLeftChild(currentIndex)) {
       if (
         this.hasRightChild(currentIndex) &&
-        this.lessThen(this.rightChild(currentIndex), this.leftChild(currentIndex))
+        this.compare.lessThen(this.rightChild(currentIndex), this.leftChild(currentIndex))
       ) {
         nextIndex = MinHeap.getRightChildIndex(currentIndex);
       } else {
         nextIndex = MinHeap.getLeftChildIndex(currentIndex);
       }
 
-      if (this.lessThen(this.heapContainer[currentIndex], this.heapContainer[nextIndex])) {
+      if (this.compare.lessThen(this.heapContainer[currentIndex], this.heapContainer[nextIndex])) {
         break;
       }
 
@@ -119,19 +122,5 @@ export default class MinHeap {
 
   toString() {
     return this.heapContainer.toString();
-  }
-
-  compare(a, b) {
-    if (a === b) {
-      return 0;
-    }
-
-    // Min heap may be converted to max heap by simply changing this line to:
-    // a > b ? -1 : 1
-    return a < b ? -1 : 1;
-  }
-
-  lessThen(a, b) {
-    return this.compare(a, b) === -1;
   }
 }
