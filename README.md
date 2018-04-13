@@ -88,3 +88,8 @@ Below is the list of some of the most used Big O notations and their performance
     
 ![Common Data Structure Operations](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-data-structures.png)
 Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+
+### Array Sorting Algorithms
+
+![Big O graphs](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-sorting-algorithms.png)
+Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
