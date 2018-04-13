@@ -32,6 +32,9 @@
   * [Breadth-First Search (BFS)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/breadth-first-search)
 * Sorting
   * [Bubble Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/bubble-sort)
+  * [Selection Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/selection-sort)
+
+<span style="color:blue">test</span>
 
 ## Running Tests
 
