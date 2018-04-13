@@ -93,12 +93,13 @@ Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
 ### Array Sorting Algorithms Complexity
 
-![Big O of sorting algoritms](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-sorting-algorithms.png)
-Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
-
-| Name                  | Best      | Average   | Worst     | Memory    | Stable    | Method        |
-| --------------------- | :-------: | :-------: | :-------: | :-------: | :-------: | :------------ |
-| **Bubble sort**       | n         | n^2       | n^2       | 1         | Yes       | Exchanging    |
-| **Insertion sort**    | n         | n^2       | n^2       | 1         | Yes       | Insertion     |
-| **Selection sort**    | n^2       | n^2       | n^2       | 1         | No        | Selection     |
-| **Heap sort**         | n log(n)  | n log(n)  | n log(n)  | 1         | No        | Selection     |
+| Name                  | Best      | Average   | Worst     | Memory    | Stable    |
+| --------------------- | :-------: | :-------: | :-------: | :-------: | :-------: |
+| **Bubble sort**       | n         | n^2       | n^2       | 1         | Yes       |
+| **Insertion sort**    | n         | n^2       | n^2       | 1         | Yes       |
+| **Selection sort**    | n^2       | n^2       | n^2       | 1         | No        |
+| **Heap sort**         | n log(n)  | n log(n)  | n log(n)  | 1         | No        |
+| **Merge sort**        | n log(n)  | n log(n)  | n log(n)  | n         | Yes       |
+| **Quick sort**        | n log(n)  | n log(n)  | n^2       | log(n)    | No        |
+| **Radix sort**        | nk        | nk        | nk        | n + k     |           |
+| **Bucket sort**       | n + k     | n + k     | n^2       | n         |           |
