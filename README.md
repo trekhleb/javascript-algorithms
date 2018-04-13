@@ -90,11 +90,12 @@ Below is the list of some of the most used Big O notations and their performance
 ![Common Data Structure Operations](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-data-structures.png)
 Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
-### Array Sorting Algorithms
+### Array Sorting Algorithms Complexity
 
 ![Big O of sorting algoritms](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-sorting-algorithms.png)
 Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
-| Name              | Best    | Average   | Worst   | Memory    | Stable    | Method        | Notes           |
-| ------------------| :-----: | :-------: | :-----: | :-------: | :-------: | :------------ | :-------------- |
-| **Bubble sort**   | n       | n^2       | n^2     | 1         | Yes       | Exchanging    | Tiny code size. |
+| Name                  | Best    | Average   | Worst   | Memory    | Stable    | Method        | Notes           |
+| --------------------- | :-----: | :-------: | :-----: | :-------: | :-------: | :------------ | :-------------- |
+| **Bubble sort**       | n       | n^2       | n^2     | 1         | Yes       | Exchanging    | Tiny code size  |
+| **Selection sort**    | n^2     | n^2       | n^2     | 1         | No        | Selection     | Stable with O(n) extra space, for example using lists |
