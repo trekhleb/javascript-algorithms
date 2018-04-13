@@ -34,8 +34,6 @@
   * [Bubble Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/bubble-sort)
   * [Selection Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/selection-sort)
 
-<span style="color:blue">test</span>
-
 ## Running Tests
 
 **Run all tests**
@@ -96,3 +94,9 @@ Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
 ![Big O of sorting algoritms](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-sorting-algorithms.png)
 Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+
+| Name              | Best    | Average   | Worst   | Memory    | Stable    | Method        | Notes           |
+| ------------------| ------- | --------- | ------- | --------- | --------- | ------------- | --------------- |
+| **Bubble sort**   | _n_     | _n^2_     | _n^2_   | _1_       | _Yes_     | _Exchanging_  | Tiny code size. |
+
+<span color="red">test</span>
