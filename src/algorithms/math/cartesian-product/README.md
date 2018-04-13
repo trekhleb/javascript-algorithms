@@ -7,7 +7,7 @@ where a ∈ A and b ∈ B.
 
 Cartesian product `AxB` of two sets `A={x,y,z}` and `B={1,2,3}`
 
-![Cartesian Product of Two Sets](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/cartesian-product.png)
+![Cartesian Product of Two Sets](https://upload.wikimedia.org/wikipedia/commons/4/4e/Cartesian_Product_qtl1.svg)
 
 ## References
 
