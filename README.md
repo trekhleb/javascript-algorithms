@@ -96,9 +96,9 @@ Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 ![Big O of sorting algoritms](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-sorting-algorithms.png)
 Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
-| Name                  | Best      | Average   | Worst     | Memory    | Stable    | Method        | Notes           |
-| --------------------- | :-------: | :-------: | :-------: | :-------: | :-------: | :------------ | :-------------- |
-| **Bubble sort**       | n         | n^2       | n^2       | 1         | Yes       | Exchanging    | Tiny code size  |
-| **Insertion sort**    | n         | n^2       | n^2       | 1         | Yes       | Insertion     | O(n + d), in the worst case over sequences that have d inversions |
-| **Selection sort**    | n^2       | n^2       | n^2       | 1         | No        | Selection     | Stable with O(n) extra space, for example using lists |
-| **Heap sort**         | n log(n)  | n log(n)  | n log(n)  | 1         | No        | Selection     |                 |
+| Name                  | Best      | Average   | Worst     | Memory    | Stable    | Method        |
+| --------------------- | :-------: | :-------: | :-------: | :-------: | :-------: | :------------ |
+| **Bubble sort**       | n         | n^2       | n^2       | 1         | Yes       | Exchanging    |
+| **Insertion sort**    | n         | n^2       | n^2       | 1         | Yes       | Insertion     |
+| **Selection sort**    | n^2       | n^2       | n^2       | 1         | No        | Selection     |
+| **Heap sort**         | n log(n)  | n log(n)  | n log(n)  | 1         | No        | Selection     |
