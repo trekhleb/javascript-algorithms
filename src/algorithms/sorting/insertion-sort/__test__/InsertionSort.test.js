@@ -1,4 +1,4 @@
-import BubbleSort from '../BubbleSort';
+import InsertionSort from '../InsertionSort';
 import {
   equalArr,
   notSortedArr,
@@ -7,24 +7,24 @@ import {
   SortTester,
 } from '../../SortTester';
 
-describe('BubbleSort', () => {
+describe('InsertionSort', () => {
   it('should sort array', () => {
-    SortTester.testSort(BubbleSort);
+    SortTester.testSort(InsertionSort);
   });
 
   it('should sort array with custom comparator', () => {
-    SortTester.testSortWithCustomComparator(BubbleSort);
+    SortTester.testSortWithCustomComparator(InsertionSort);
   });
 
   it('should do stable sorting', () => {
-    SortTester.testSortStability(BubbleSort);
+    SortTester.testSortStability(InsertionSort);
   });
 
   it('should visit EQUAL array element specified number of times', () => {
     const expectedNumberOfVisits = 20;
 
     SortTester.testAlgorithmTimeComplexity(
-      BubbleSort,
+      InsertionSort,
       equalArr,
       expectedNumberOfVisits,
     );
@@ -34,27 +34,27 @@ describe('BubbleSort', () => {
     const expectedNumberOfVisits = 20;
 
     SortTester.testAlgorithmTimeComplexity(
-      BubbleSort,
+      InsertionSort,
       sortedArr,
       expectedNumberOfVisits,
     );
   });
 
   it('should visit NOT SORTED array element specified number of times', () => {
-    const expectedNumberOfVisits = 280;
+    const expectedNumberOfVisits = 101;
 
     SortTester.testAlgorithmTimeComplexity(
-      BubbleSort,
+      InsertionSort,
       notSortedArr,
       expectedNumberOfVisits,
     );
   });
 
   it('should visit REVERSE SORTED array element specified number of times', () => {
-    const expectedNumberOfVisits = 400;
+    const expectedNumberOfVisits = 210;
 
     SortTester.testAlgorithmTimeComplexity(
-      BubbleSort,
+      InsertionSort,
       reverseArr,
       expectedNumberOfVisits,
     );

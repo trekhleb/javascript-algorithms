@@ -17,7 +17,7 @@ describe('SelectionSort', () => {
   });
 
   it('should visit EQUAL array element specified number of times', () => {
-    const expectedNumberOfVisits = 190;
+    const expectedNumberOfVisits = 209;
 
     SortTester.testAlgorithmTimeComplexity(
       SelectionSort,
@@ -27,7 +27,7 @@ describe('SelectionSort', () => {
   });
 
   it('should visit SORTED array element specified number of times', () => {
-    const expectedNumberOfVisits = 190;
+    const expectedNumberOfVisits = 209;
 
     SortTester.testAlgorithmTimeComplexity(
       SelectionSort,
@@ -37,7 +37,7 @@ describe('SelectionSort', () => {
   });
 
   it('should visit NOT SORTED array element specified number of times', () => {
-    const expectedNumberOfVisits = 190;
+    const expectedNumberOfVisits = 209;
 
     SortTester.testAlgorithmTimeComplexity(
       SelectionSort,
@@ -47,7 +47,7 @@ describe('SelectionSort', () => {
   });
 
   it('should visit REVERSE SORTED array element specified number of times', () => {
-    const expectedNumberOfVisits = 190;
+    const expectedNumberOfVisits = 209;
 
     SortTester.testAlgorithmTimeComplexity(
       SelectionSort,

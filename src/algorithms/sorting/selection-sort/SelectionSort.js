@@ -8,6 +8,9 @@ export default class SelectionSort extends Sort {
     for (let i = 0; i < array.length - 1; i += 1) {
       let minIndex = i;
 
+      // Call visiting callback.
+      this.callbacks.visitingCallback(array[i]);
+
       // Find minimum element in the rest of array.
       for (let j = i + 1; j < array.length; j += 1) {
         // Call visiting callback.

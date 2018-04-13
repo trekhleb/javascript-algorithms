@@ -33,6 +33,7 @@
 * Sorting
   * [Bubble Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/bubble-sort)
   * [Selection Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/selection-sort)
+  * [Insertion Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/insertion-sort)
 
 ## Running Tests
 
@@ -98,4 +99,5 @@ Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 | Name                  | Best    | Average   | Worst   | Memory    | Stable    | Method        | Notes           |
 | --------------------- | :-----: | :-------: | :-----: | :-------: | :-------: | :------------ | :-------------- |
 | **Bubble sort**       | n       | n^2       | n^2     | 1         | Yes       | Exchanging    | Tiny code size  |
+| **Insertion sort**    | n       | n^2       | n^2     | 1         | Yes       | Insertion     | O(n + d), in the worst case over sequences that have d inversions |
 | **Selection sort**    | n^2     | n^2       | n^2     | 1         | No        | Selection     | Stable with O(n) extra space, for example using lists |

@@ -10,6 +10,9 @@ export default class BubbleSort extends Sort {
     for (let i = 0; i < array.length; i += 1) {
       swapped = false;
 
+      // Call visiting callback.
+      this.callbacks.visitingCallback(array[i]);
+
       for (let j = 0; j < array.length - 1; j += 1) {
         // Call visiting callback.
         this.callbacks.visitingCallback(array[j]);
