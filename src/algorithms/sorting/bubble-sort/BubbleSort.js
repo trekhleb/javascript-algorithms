@@ -1,11 +1,11 @@
 import Sort from '../Sort';
 
 export default class BubbleSort extends Sort {
-  sort(initialArray) {
+  sort(originalArray) {
     // Flag that holds info about whether the swap has occur or not.
     let swapped = false;
     // Clone original array to prevent its modification.
-    const array = initialArray.slice(0);
+    const array = originalArray.slice(0);
 
     for (let i = 0; i < array.length; i += 1) {
       swapped = false;

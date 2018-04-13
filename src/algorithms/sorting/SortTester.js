@@ -11,7 +11,6 @@ export class SortTester {
     expect(sorter.sort([1])).toEqual([1]);
     expect(sorter.sort([1, 2])).toEqual([1, 2]);
     expect(sorter.sort([2, 1])).toEqual([1, 2]);
-    expect(sorter.sort([1, 1, 1])).toEqual([1, 1, 1]);
     expect(sorter.sort(sortedArr)).toEqual(sortedArr);
     expect(sorter.sort(reverseArr)).toEqual(sortedArr);
     expect(sorter.sort(notSortedArr)).toEqual(sortedArr);
@@ -33,6 +32,21 @@ export class SortTester {
     expect(sorter.sort([''])).toEqual(['']);
     expect(sorter.sort(['a'])).toEqual(['a']);
     expect(sorter.sort(['aa', 'a'])).toEqual(['a', 'aa']);
+    expect(sorter.sort(['aa', 'aa'])).toEqual(['aa', 'aa']);
+  }
+
+  static testSortStability(SortingClass) {
+    const callbacks = {
+      compareCallback: (a, b) => {
+        if (a.length === b.length) {
+          return 0;
+        }
+        return a.length < b.length ? -1 : 1;
+      },
+    };
+
+    const sorter = new SortingClass(callbacks);
+
     expect(sorter.sort(['bb', 'aa', 'c'])).toEqual(['c', 'bb', 'aa']);
   }
 
