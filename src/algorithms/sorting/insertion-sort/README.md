@@ -10,3 +10,6 @@ sort.
 
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/0/0f/Insertion-sort-example-300px.gif)
 
+## References
+
+[Wikipedia](https://en.wikipedia.org/wiki/Insertion_sort)

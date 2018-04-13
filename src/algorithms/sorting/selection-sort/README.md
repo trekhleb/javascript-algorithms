@@ -12,3 +12,7 @@ memory is limited.
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/b/b0/Selection_sort_animation.gif)
 
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/9/94/Selection-Sort-Animation.gif)
+
+## References
+
+[Wikipedia](https://en.wikipedia.org/wiki/Selection_sort)
