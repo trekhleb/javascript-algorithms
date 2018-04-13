@@ -96,7 +96,5 @@ Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
 | Name              | Best    | Average   | Worst   | Memory    | Stable    | Method        | Notes           |
-| ------------------| ------- | --------- | ------- | --------- | --------- | ------------- | --------------- |
-| **Bubble sort**   | _n_     | _n^2_     | _n^2_   | _1_       | _Yes_     | _Exchanging_  | Tiny code size. |
-
-<span color="red">test</span>
+| ------------------| :-----: | :-------: | :-----: | :-------: | :-------: | :------------ | :-------------- |
+| **Bubble sort**   | n       | n^2       | n^2     | 1         | Yes       | Exchanging    | Tiny code size. |
