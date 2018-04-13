@@ -91,5 +91,5 @@ Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
 ### Array Sorting Algorithms
 
-![Big O of sorting algoritms](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-sorting-algorithms.png =100x)
+![Big O of sorting algoritms](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-sorting-algorithms.png)
 Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
