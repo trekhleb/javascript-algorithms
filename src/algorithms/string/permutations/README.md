@@ -14,6 +14,8 @@ When the order **does** matter it is a **Permutation**.
 
 ![Permutation Lock](https://www.mathsisfun.com/combinatorics/images/combination-lock.jpg)
 
+![Permutation With Repetitions](https://upload.wikimedia.org/wikipedia/commons/6/69/Permutations-With-Repetition.gif)
+
 ## References
 
 [Math Is Fun](https://www.mathsisfun.com/combinatorics/combinations-permutations.html)
