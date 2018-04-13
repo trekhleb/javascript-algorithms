@@ -15,6 +15,7 @@ When the order **does** matter it is a **Permutation**.
 ![Permutation Lock](https://www.mathsisfun.com/combinatorics/images/combination-lock.jpg)
 
 Permutation with repetitions example
+
 ![Permutation With Repetitions](https://upload.wikimedia.org/wikipedia/commons/6/69/Permutations-With-Repetition.gif)
 
 ## References
