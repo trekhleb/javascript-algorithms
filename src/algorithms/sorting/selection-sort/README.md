@@ -9,4 +9,4 @@ performance advantages over more complicated algorithms
 in certain situations, particularly where auxiliary 
 memory is limited.
 
-![](https://en.wikipedia.org/wiki/Selection_sort#/media/File:Selection-Sort-Animation.gif)
+![Selection Sort Visualization](https://en.wikipedia.org/wiki/Selection_sort#/media/File:Selection-Sort-Animation.gif)
