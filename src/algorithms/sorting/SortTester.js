@@ -32,6 +32,7 @@ export class SortTester {
     expect(sorter.sort([''])).toEqual(['']);
     expect(sorter.sort(['a'])).toEqual(['a']);
     expect(sorter.sort(['aa', 'a'])).toEqual(['a', 'aa']);
+    expect(sorter.sort(['aa', 'q', 'a', 'bbbb', 'ccc'])).toEqual(['q', 'a', 'aa', 'ccc', 'bbbb']);
     expect(sorter.sort(['aa', 'aa'])).toEqual(['aa', 'aa']);
   }
 
