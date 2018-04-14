@@ -22,9 +22,9 @@ describe('MergeSort', () => {
     SortTester.testSortWithCustomComparator(BubbleSort);
   });
 
-  // it('should do stable sorting', () => {
-  //   SortTester.testSortStability(BubbleSort);
-  // });
+  it('should do stable sorting', () => {
+    SortTester.testSortStability(BubbleSort);
+  });
 
   it('should visit EQUAL array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
