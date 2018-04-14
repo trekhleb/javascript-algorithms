@@ -1,4 +1,4 @@
-import BubbleSort from '../MergeSort';
+import MergeSort from '../MergeSort';
 import {
   equalArr,
   notSortedArr,
@@ -15,20 +15,20 @@ const EQUAL_ARRAY_VISITING_COUNT = 79;
 
 describe('MergeSort', () => {
   it('should sort array', () => {
-    SortTester.testSort(BubbleSort);
+    SortTester.testSort(MergeSort);
   });
 
   it('should sort array with custom comparator', () => {
-    SortTester.testSortWithCustomComparator(BubbleSort);
+    SortTester.testSortWithCustomComparator(MergeSort);
   });
 
   it('should do stable sorting', () => {
-    SortTester.testSortStability(BubbleSort);
+    SortTester.testSortStability(MergeSort);
   });
 
   it('should visit EQUAL array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
-      BubbleSort,
+      MergeSort,
       equalArr,
       EQUAL_ARRAY_VISITING_COUNT,
     );
@@ -36,7 +36,7 @@ describe('MergeSort', () => {
 
   it('should visit SORTED array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
-      BubbleSort,
+      MergeSort,
       sortedArr,
       SORTED_ARRAY_VISITING_COUNT,
     );
@@ -44,7 +44,7 @@ describe('MergeSort', () => {
 
   it('should visit NOT SORTED array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
-      BubbleSort,
+      MergeSort,
       notSortedArr,
       NOT_SORTED_ARRAY_VISITING_COUNT,
     );
@@ -52,7 +52,7 @@ describe('MergeSort', () => {
 
   it('should visit REVERSE SORTED array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
-      BubbleSort,
+      MergeSort,
       reverseArr,
       REVERSE_SORTED_ARRAY_VISITING_COUNT,
     );
