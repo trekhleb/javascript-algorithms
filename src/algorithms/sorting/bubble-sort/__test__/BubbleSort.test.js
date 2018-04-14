@@ -7,6 +7,12 @@ import {
   SortTester,
 } from '../../SortTester';
 
+// Complexity constants.
+const SORTED_ARRAY_VISITING_COUNT = 20;
+const NOT_SORTED_ARRAY_VISITING_COUNT = 280;
+const REVERSE_SORTED_ARRAY_VISITING_COUNT = 400;
+const EQUAL_ARRAY_VISITING_COUNT = 20;
+
 describe('BubbleSort', () => {
   it('should sort array', () => {
     SortTester.testSort(BubbleSort);
@@ -21,42 +27,34 @@ describe('BubbleSort', () => {
   });
 
   it('should visit EQUAL array element specified number of times', () => {
-    const expectedNumberOfVisits = 20;
-
     SortTester.testAlgorithmTimeComplexity(
       BubbleSort,
       equalArr,
-      expectedNumberOfVisits,
+      EQUAL_ARRAY_VISITING_COUNT,
     );
   });
 
   it('should visit SORTED array element specified number of times', () => {
-    const expectedNumberOfVisits = 20;
-
     SortTester.testAlgorithmTimeComplexity(
       BubbleSort,
       sortedArr,
-      expectedNumberOfVisits,
+      SORTED_ARRAY_VISITING_COUNT,
     );
   });
 
   it('should visit NOT SORTED array element specified number of times', () => {
-    const expectedNumberOfVisits = 280;
-
     SortTester.testAlgorithmTimeComplexity(
       BubbleSort,
       notSortedArr,
-      expectedNumberOfVisits,
+      NOT_SORTED_ARRAY_VISITING_COUNT,
     );
   });
 
   it('should visit REVERSE SORTED array element specified number of times', () => {
-    const expectedNumberOfVisits = 400;
-
     SortTester.testAlgorithmTimeComplexity(
       BubbleSort,
       reverseArr,
-      expectedNumberOfVisits,
+      REVERSE_SORTED_ARRAY_VISITING_COUNT,
     );
   });
 });

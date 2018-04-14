@@ -1,4 +1,4 @@
-import SelectionSort from '../SelectionSort';
+import HeapSort from '../HeapSort';
 import {
   equalArr,
   notSortedArr,
@@ -8,23 +8,23 @@ import {
 } from '../../SortTester';
 
 // Complexity constants.
-const SORTED_ARRAY_VISITING_COUNT = 209;
-const NOT_SORTED_ARRAY_VISITING_COUNT = 209;
-const REVERSE_SORTED_ARRAY_VISITING_COUNT = 209;
-const EQUAL_ARRAY_VISITING_COUNT = 209;
+const SORTED_ARRAY_VISITING_COUNT = 40;
+const NOT_SORTED_ARRAY_VISITING_COUNT = 40;
+const REVERSE_SORTED_ARRAY_VISITING_COUNT = 40;
+const EQUAL_ARRAY_VISITING_COUNT = 40;
 
-describe('SelectionSort', () => {
+describe('HeapSort', () => {
   it('should sort array', () => {
-    SortTester.testSort(SelectionSort);
+    SortTester.testSort(HeapSort);
   });
 
   it('should sort array with custom comparator', () => {
-    SortTester.testSortWithCustomComparator(SelectionSort);
+    SortTester.testSortWithCustomComparator(HeapSort);
   });
 
   it('should visit EQUAL array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
-      SelectionSort,
+      HeapSort,
       equalArr,
       EQUAL_ARRAY_VISITING_COUNT,
     );
@@ -32,7 +32,7 @@ describe('SelectionSort', () => {
 
   it('should visit SORTED array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
-      SelectionSort,
+      HeapSort,
       sortedArr,
       SORTED_ARRAY_VISITING_COUNT,
     );
@@ -40,7 +40,7 @@ describe('SelectionSort', () => {
 
   it('should visit NOT SORTED array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
-      SelectionSort,
+      HeapSort,
       notSortedArr,
       NOT_SORTED_ARRAY_VISITING_COUNT,
     );
@@ -48,7 +48,7 @@ describe('SelectionSort', () => {
 
   it('should visit REVERSE SORTED array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
-      SelectionSort,
+      HeapSort,
       reverseArr,
       REVERSE_SORTED_ARRAY_VISITING_COUNT,
     );

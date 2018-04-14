@@ -1,10 +1,10 @@
 import Comparator from '../../utils/comparator/Comparator';
 
 export default class MinHeap {
-  constructor() {
+  constructor(comparatorFunction) {
     // Array representation of the heap.
     this.heapContainer = [];
-    this.compare = new Comparator();
+    this.compare = new Comparator(comparatorFunction);
   }
 
   static getLeftChildIndex(parentIndex) {
@@ -118,6 +118,10 @@ export default class MinHeap {
       this.swap(currentIndex, nextIndex);
       currentIndex = nextIndex;
     }
+  }
+
+  isEmpty() {
+    return !this.heapContainer.length;
   }
 
   toString() {
