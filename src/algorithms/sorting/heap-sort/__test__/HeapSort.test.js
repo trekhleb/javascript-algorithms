@@ -8,6 +8,8 @@ import {
 } from '../../SortTester';
 
 // Complexity constants.
+// These numbers don't take into account up/dow heapifying of the heap.
+// Thus these numbers are higher in reality.
 const SORTED_ARRAY_VISITING_COUNT = 40;
 const NOT_SORTED_ARRAY_VISITING_COUNT = 40;
 const REVERSE_SORTED_ARRAY_VISITING_COUNT = 40;
