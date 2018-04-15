@@ -104,5 +104,3 @@ Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 | **Heap sort**         | n log(n)  | n log(n)  | n log(n)  | 1         | No        |
 | **Merge sort**        | n log(n)  | n log(n)  | n log(n)  | n         | Yes       |
 | **Quick sort**        | n log(n)  | n log(n)  | n^2       | log(n)    | No        |
-| **Radix sort**        | nk        | nk        | nk        | n + k     |           |
-| **Bucket sort**       | n + k     | n + k     | n^2       | n         |           |
