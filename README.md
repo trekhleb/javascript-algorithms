@@ -89,10 +89,29 @@ Below is the list of some of the most used Big O notations and their performance
 | **O(2^N)**     | 1024                         | 1.26e+29                      | 1.07e+301                       |
 | **O(N!)**      | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
 
-### Common Data Structure Operations
+### Common Data Structure Operations Complexity
     
-![Common Data Structure Operations](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-data-structures.png)
-Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+<table>
+  <tr>
+    <td>One</td>
+    <td>Two</td>
+  </tr>
+  <tr>
+    <td colspan="2">Three</td>
+  </tr>
+</table>    
+    
+| Data Structure          | Access      | Search   | Insertion     | Deletion    |
+| ----------------------- | :-------: | :-------: | :-------: | :-------: | 
+| **Array**               | 1         | n       | n       | n         |
+| **Stack**               | n         | n       | 1       | 1         |
+| **Queue**               | n       | n       | 1       | 1         | 
+| **Linked List**         | n  | n  | 1  | 1         |
+| **Hash Table**          |   | n  | n  | n         |
+| **Binary Search Tree**  | n  | n  | n       | n    |
+| **B-Tree**              | log(n)  | log(n)  | log(n)       | log(n)    |
+| **Red-Black Tree**      | log(n)  | log(n)  | log(n)       | log(n)    |
+| **AVL Tree**            | log(n)  | log(n)  | log(n)       | log(n)    |
 
 ### Array Sorting Algorithms Complexity
 
