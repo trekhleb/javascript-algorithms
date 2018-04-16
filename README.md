@@ -30,6 +30,8 @@
 * Graph
   * [Depth-First Search (DFS)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search)
   * [Breadth-First Search (BFS)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/breadth-first-search)
+* Search
+  * [Binary Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search)
 * Sorting
   * [Bubble Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/bubble-sort)
   * [Selection Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/selection-sort)
