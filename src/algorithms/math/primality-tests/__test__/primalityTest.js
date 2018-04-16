@@ -16,6 +16,8 @@ export default function primalityTest(testFunction) {
   expect(testFunction(4)).toBeFalsy();
   expect(testFunction(6)).toBeFalsy();
   expect(testFunction(12)).toBeFalsy();
+  expect(testFunction(14)).toBeFalsy();
+  expect(testFunction(25)).toBeFalsy();
   expect(testFunction(192)).toBeFalsy();
   expect(testFunction(200)).toBeFalsy();
   expect(testFunction(400)).toBeFalsy();

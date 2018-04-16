@@ -18,7 +18,7 @@ export default function trialDivision(number) {
 
   // If there is no dividers up to square root of n then there is no higher dividers as well.
   const dividerLimit = Math.sqrt(number);
-  for (let divider = 3; divider < dividerLimit; divider += 2) {
+  for (let divider = 3; divider <= dividerLimit; divider += 2) {
     if (number % divider === 0) {
       return false;
     }
