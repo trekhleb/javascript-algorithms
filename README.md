@@ -17,22 +17,43 @@
 8. [Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
     * [Binary Search Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
     * [AVL Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/avl-tree)
+    * B-Tree
+    * 2-3 Tree
+    * Red-Black Tree
+    * Suffix Tree
+    * Segment Tree or Interval Tree
+    * Binary Indexed Tree or Fenwick Tree
 9. [Graph](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph)
 
 ### Algorithms
 
-* Math
+* **Math**
   * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
   * [Cartesian Product](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/cartesian-product)
   * [Power Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/power-set)
-* String
+  * Collatz Conjecture algorithm
+  * Extended Euclidean algorithm
+  * Euclidean algorithm to calculate the Greatest Common Divisor (GCD)
+  * Find Divisors
+  * Fisher-Yates
+  * Greatest Difference
+  * Least Common Multiple
+  * Newton's square
+  * Primality Test
+  * Shannon Entropy
+* **String**
   * [String Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/permutations)
-* Graph
-  * [Depth-First Search (DFS)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search)
-  * [Breadth-First Search (BFS)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/breadth-first-search)
-* Search
+  * Combination
+  * Minimum Edit distance (Levenshtein Distance)
+  * Hamming
+  * Huffman
+  * Knuth Morris Pratt
+  * Longest common subsequence
+  * longest common substring
+  * Rabin Karp
+* **Search**
   * [Binary Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search)
-* Sorting
+* **Sorting**
   * [Bubble Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/bubble-sort)
   * [Selection Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/selection-sort)
   * [Insertion Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/insertion-sort)
@@ -40,6 +61,35 @@
   * [Merge Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/merge-sort)
   * [Quicksort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/quick-sort)
   * [Shellsort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/shell-sort)
+* **Graph**
+  * [Depth-First Search (DFS)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search)
+  * [Breadth-First Search (BFS)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/breadth-first-search)
+  * Detect Cycle
+  * Topological Sorting
+  * Dijkstra Algorithm to Find Shortest Path
+  * Eulerian path, Eulerian circuit
+  * Bellman Ford
+  * Strongly Connected Component algorithm
+  * Shortest Path Faster Algorithm (SPFA)
+* **Tree**  
+  * Depth-First Search (DFS)
+  * Breadth-First Search (BFS)
+* **Minimum Spanning Tree**
+  * Prim’s algorithm
+  * Kruskal’s algorithm
+* **Dynamic Programming**
+  * Increasing subsequence
+  * Knapsack problem
+  * Maximum subarray
+  * Maximum sum path
+  * Integer Partition
+  * Longest common Subsequence
+  * Longest Increasing subsequence
+  * Shortest common supersequence
+* **Uncategorized**  
+  * Union-Find
+  * Maze
+  
 
 ## Running Tests
 
