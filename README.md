@@ -31,6 +31,7 @@
   * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
   * [Cartesian Product](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/cartesian-product)
   * [Power Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/power-set)
+  * [Primality Tests](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/primality-tests)
   * Collatz Conjecture algorithm
   * Extended Euclidean algorithm
   * Euclidean algorithm to calculate the Greatest Common Divisor (GCD)
@@ -39,7 +40,6 @@
   * Greatest Difference
   * Least Common Multiple
   * Newton's square
-  * Primality Test
   * Shannon Entropy
 * **String**
   * [String Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/permutations)
