@@ -31,10 +31,10 @@
   * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
   * [Cartesian Product](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/cartesian-product)
   * [Power Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/power-set)
-  * [Primality Test](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/primality-test)
+  * [Primality Test](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/primality-test) (Trial Division)
+  * [Euclidean Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - calculate the greatest common divisor (GCD)
   * Collatz Conjecture algorithm
   * Extended Euclidean algorithm
-  * Euclidean algorithm to calculate the Greatest Common Divisor (GCD)
   * Find Divisors
   * Fisher-Yates
   * Greatest Difference
