@@ -20,5 +20,7 @@ describe('euclideanAlgorithm', () => {
     expect(euclideanAlgorithm(105, 252)).toBe(21);
     expect(euclideanAlgorithm(1071, 462)).toBe(21);
     expect(euclideanAlgorithm(462, 1071)).toBe(21);
+    expect(euclideanAlgorithm(462, -1071)).toBe(21);
+    expect(euclideanAlgorithm(-462, -1071)).toBe(21);
   });
 });
