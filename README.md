@@ -36,7 +36,7 @@
   * [Least Common Multiple (LCM)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/least-common-multiple)
   * [Fisher–Yates Shuffle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fisher-yates) - random permutation of a finite sequence
 * **String**
-  * [Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/permutations) - with and without repetitions
+  * [Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/permutations) (with and without repetitions)
   * Combination
   * Minimum Edit distance (Levenshtein Distance)
   * Hamming
