@@ -1,3 +1,7 @@
+/**
+ * @param {string} str
+ * @return {string[]}
+ */
 export default function permutateWithoutRepetitions(str) {
   if (str.length === 0) {
     return [];
