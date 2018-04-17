@@ -33,10 +33,9 @@
   * [Power Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/power-set)
   * [Primality Test](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/primality-test) (trial division)
   * [Euclidean Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - calculate the greatest common divisor (GCD)
+  * [Fisher–Yates Shuffle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fisher-yates) - random permutation of a finite sequence
   * Collatz Conjecture algorithm
   * Extended Euclidean algorithm
-  * Find Divisors
-  * Fisher-Yates
   * Greatest Difference
   * Least Common Multiple
   * Newton's square
