@@ -35,7 +35,6 @@
   * [Euclidean Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - calculate the greatest common divisor (GCD)
   * [Least Common Multiple (LCM)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/least-common-multiple)
   * [Fisher–Yates Shuffle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fisher-yates) - random permutation of a finite sequence
-  * Collatz Conjecture algorithm
   * Newton's square
   * Shannon Entropy
 * **String**
