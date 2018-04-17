@@ -1,4 +1,4 @@
-export default function permutateString(str) {
+export default function permutateWithoutRepetitions(str) {
   if (str.length === 0) {
     return [];
   }
@@ -11,7 +11,7 @@ export default function permutateString(str) {
 
   // Get all permutations of string of length (n - 1).
   const previousString = str.substring(0, str.length - 1);
-  const previousPermutations = permutateString(previousString);
+  const previousPermutations = permutateWithoutRepetitions(previousString);
 
   // Insert last character into every possible position of every previous permutation.
   const lastCharacter = str.substring(str.length - 1);
