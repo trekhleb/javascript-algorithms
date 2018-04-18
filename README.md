@@ -28,6 +28,7 @@
 ### Algorithms
 
 * **Math**
+  * [Factorial](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/factorial)
   * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
   * [Cartesian Product](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/cartesian-product)
   * [Power Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/power-set)
@@ -37,7 +38,7 @@
   * [Fisher–Yates Shuffle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fisher-yates) - random permutation of a finite sequence
 * **String**
   * [Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/permutations) (with and without repetitions)
-  * Combination
+  * [Combinations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/combinations) (with and without repetitions)
   * Minimum Edit distance (Levenshtein Distance)
   * Hamming
   * Huffman
