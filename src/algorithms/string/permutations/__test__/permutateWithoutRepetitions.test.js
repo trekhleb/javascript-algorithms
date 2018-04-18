@@ -1,4 +1,5 @@
 import permutateWithoutRepetitions from '../permutateWithoutRepetitions';
+import factorial from '../../../math/factorial/factorial';
 
 describe('permutateString', () => {
   it('should permutate string', () => {
@@ -23,7 +24,7 @@ describe('permutateString', () => {
     ]);
 
     const permutations3 = permutateWithoutRepetitions('ABC');
-    expect(permutations3.length).toBe(2 * 3);
+    expect(permutations3.length).toBe(factorial(3));
     expect(permutations3).toEqual([
       'CBA',
       'BCA',
@@ -34,7 +35,7 @@ describe('permutateString', () => {
     ]);
 
     const permutations4 = permutateWithoutRepetitions('ABCD');
-    expect(permutations4.length).toBe(2 * 3 * 4);
+    expect(permutations4.length).toBe(factorial(4));
     expect(permutations4).toEqual([
       'DCBA',
       'CDBA',
@@ -63,6 +64,6 @@ describe('permutateString', () => {
     ]);
 
     const permutations5 = permutateWithoutRepetitions('ABCDEF');
-    expect(permutations5.length).toBe(2 * 3 * 4 * 5 * 6);
+    expect(permutations5.length).toBe(factorial(6));
   });
 });
