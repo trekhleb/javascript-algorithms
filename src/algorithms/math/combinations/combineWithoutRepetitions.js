@@ -38,14 +38,14 @@
  */
 
 /**
- * @param {string} combinationOptions
+ * @param {*[]} combinationOptions
  * @param {number} combinationLength
- * @return {string[]}
+ * @return {*[]}
  */
 export default function combineWithoutRepetitions(combinationOptions, combinationLength) {
   // If combination length is just 1 then return combinationOptions.
   if (combinationLength === 1) {
-    return Array.from(combinationOptions);
+    return combinationOptions.map(option => [option]);
   }
 
   // Init combinations array.
@@ -53,12 +53,13 @@ export default function combineWithoutRepetitions(combinationOptions, combinatio
 
   for (let i = 0; i <= (combinationOptions.length - combinationLength); i += 1) {
     const smallerCombinations = combineWithoutRepetitions(
-      combinationOptions.substr(i + 1),
+      combinationOptions.slice(i + 1),
       combinationLength - 1,
     );
 
     for (let j = 0; j < smallerCombinations.length; j += 1) {
-      combinations.push(combinationOptions[i] + smallerCombinations[j]);
+      const combination = [combinationOptions[i]].concat(smallerCombinations[j]);
+      combinations.push(combination);
     }
   }
 

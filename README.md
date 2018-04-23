@@ -32,13 +32,13 @@
   * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
   * [Cartesian Product](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/cartesian-product)
   * [Power Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/power-set)
-  * [Primality Test](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/primality-test) (trial division)
+  * [Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/permutations) (with and without repetitions)
+  * [Combinations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/combinations) (with and without repetitions)  
+  * [Primality Test](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/primality-test) (trial division method)
   * [Euclidean Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - calculate the greatest common divisor (GCD)
   * [Least Common Multiple (LCM)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/least-common-multiple)
   * [Fisher–Yates Shuffle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fisher-yates) - random permutation of a finite sequence
 * **String**
-  * [Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/permutations) (with and without repetitions)
-  * [Combinations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/combinations) (with and without repetitions)
   * Minimum Edit distance (Levenshtein Distance)
   * Hamming
   * Huffman
