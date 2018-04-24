@@ -21,4 +21,5 @@ strings, single-string searching algorithms are impractical.
 
 ## References
 
-[Wikipedia](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm)
+- [Wikipedia](https://en.wikipedia.org/wiki/Rabin%E2%80%93Karp_algorithm)
+- [YouTube](https://www.youtube.com/watch?v=H4VrKHVG5qI)
