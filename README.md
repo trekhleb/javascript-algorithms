@@ -39,7 +39,7 @@
   * [Least Common Multiple (LCM)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/least-common-multiple)
   * [Fisher–Yates Shuffle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fisher-yates) - random permutation of a finite sequence
 * **String**
-  * Minimum Edit distance (Levenshtein Distance)
+  * [Levenshtein Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * Hamming
   * Huffman
   * Knuth Morris Pratt
