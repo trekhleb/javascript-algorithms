@@ -112,9 +112,6 @@ npm test -- -t 'playground'
 ## Useful links
 
 * [Data Structures and Algorithms on YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
-* Algorithms
-  * Dynamic Programming
-    * [Introduction to Dynamic Programming 1](https://www.hackerearth.com/practice/algorithms/dynamic-programming/introduction-to-dynamic-programming-1/tutorial/)
 
 ## Useful Information
 
