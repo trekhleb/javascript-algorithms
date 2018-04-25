@@ -55,9 +55,12 @@
   * [Merge Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/merge-sort)
   * [Quicksort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/quick-sort)
   * [Shellsort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/shell-sort)
+* **Tree**  
+  * [Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/depth-first-search) (DFS)
+  * [Breadth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/breadth-first-search) (BFS)
 * **Graph**
-  * [Depth-First Search (DFS)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search)
-  * [Breadth-First Search (BFS)](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/breadth-first-search)
+  * [Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search) (DFS)
+  * [Breadth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/breadth-first-search) (BFS)
   * Detect Cycle
   * Topological Sorting
   * Dijkstra Algorithm to Find Shortest Path
@@ -65,9 +68,6 @@
   * Bellman Ford
   * Strongly Connected Component algorithm
   * Shortest Path Faster Algorithm (SPFA)
-* **Tree**  
-  * Depth-First Search (DFS)
-  * Breadth-First Search (BFS)
 * **Minimum Spanning Tree**
   * Prim’s algorithm
   * Kruskal’s algorithm

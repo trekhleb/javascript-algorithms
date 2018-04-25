@@ -39,7 +39,7 @@ describe('depthFirstSearch', () => {
     const enterVertexCallback = jest.fn();
     const leaveVertexCallback = jest.fn();
 
-    // Traverse graphs without callbacks first.
+    // Traverse graphs without callbacks first to check default ones.
     depthFirstSearch(graph, vertexA);
 
     // Traverse graph with enterVertex and leaveVertex callbacks.
