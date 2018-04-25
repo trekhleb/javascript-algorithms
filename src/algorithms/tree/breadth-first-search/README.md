@@ -10,4 +10,6 @@ nodes first, before moving to the next level neighbors.
 
 ## References
 
-[Wikipedia](https://en.wikipedia.org/wiki/Breadth-first_search)
+- [Wikipedia](https://en.wikipedia.org/wiki/Breadth-first_search)
+- [Tree Traversals (Inorder, Preorder and Postorder)](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
+- [BFS vs DFS](https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/)

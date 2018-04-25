@@ -10,4 +10,6 @@ along each branch before backtracking.
 
 ## References
 
-[Wikipedia](https://en.wikipedia.org/wiki/Depth-first_search)
+- [Wikipedia](https://en.wikipedia.org/wiki/Depth-first_search)
+- [Tree Traversals (Inorder, Preorder and Postorder)](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
+- [BFS vs DFS](https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/)
