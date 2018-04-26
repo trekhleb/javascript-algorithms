@@ -1,5 +1,5 @@
 import combineWithoutRepetitions from '../combineWithoutRepetitions';
-import factorial from '../../factorial/factorial';
+import factorial from '../../../math/factorial/factorial';
 
 describe('combineWithoutRepetitions', () => {
   it('should combine string without repetitions', () => {

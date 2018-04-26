@@ -1,5 +1,5 @@
 import permutateWithoutRepetitions from '../permutateWithoutRepetitions';
-import factorial from '../../factorial/factorial';
+import factorial from '../../../math/factorial/factorial';
 
 describe('permutateWithoutRepetitions', () => {
   it('should permutate string', () => {
