@@ -19,7 +19,7 @@
     * Suffix Tree
     * Segment Tree or Interval Tree
     * Binary Indexed Tree or Fenwick Tree
-9. [Graph](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph)
+9. [Graph](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph) (both directed and undirected)
 
 ## Algorithms
 
