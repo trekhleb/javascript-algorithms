@@ -3,9 +3,7 @@
 [![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
-## Code Examples
-
-### Data Structures
+## Data Structures
 
 1. [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
 2. [Queue](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/queue)
@@ -25,7 +23,7 @@
     * Binary Indexed Tree or Fenwick Tree
 9. [Graph](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph)
 
-### Algorithms
+## Algorithms
 
 * **Math**
   * [Factorial](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/factorial)
