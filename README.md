@@ -80,6 +80,9 @@
 
 * **Greedy**
 * **Divide and Conquer**
+  * [Euclidean Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
+  * [Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/permutations) (with and without repetitions)
+  * [Combinations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/combinations) (with and without repetitions)
 * **Dynamic Programming**
   * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
   * [Levenshtein Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
