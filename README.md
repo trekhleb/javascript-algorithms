@@ -44,7 +44,7 @@
   * [Knuth–Morris–Pratt Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/knuth-morris-pratt) - substring search
   * [Rabin Karp Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/rabin-karp) - substring search
   * [Longest Common Subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-subsequnce) (LCS)
-  * longest common substring
+  * [Longest Common Substring](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-substring)
 * **Search**
   * [Binary Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search)
 * **Sorting**
@@ -74,6 +74,7 @@
 * **Dynamic Programming**
   * [Levenshtein Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * [Longest Common Subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-subsequnce) (LCS)
+  * [Longest Common Substring](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-substring)
   * Increasing subsequence
   * Knapsack problem
   * Maximum subarray
