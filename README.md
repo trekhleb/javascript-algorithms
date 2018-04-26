@@ -25,6 +25,8 @@
 
 ## Algorithms
 
+### Algorithms by Topic
+
 * **Math**
   * [Factorial](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/factorial)
   * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
@@ -70,21 +72,27 @@
 * **Minimum Spanning Tree**
   * Prim’s algorithm
   * Kruskal’s algorithm
-* **Dynamic Programming**
-  * [Levenshtein Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
-  * [Longest Common Subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-subsequnce) (LCS)
-  * [Longest Common Substring](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-substring)
-  * Increasing subsequence
-  * Knapsack problem
-  * Maximum subarray
-  * Maximum sum path
-  * Integer Partition
-  * Longest Increasing subsequence
-  * Shortest common supersequence
 * **Uncategorized**  
   * Union-Find
   * Maze
   
+### Algorithms by Paradigm
+
+* **Greedy**
+* **Divide and Conquer**
+* **Dynamic Programming**
+   * [Levenshtein Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
+   * [Longest Common Subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-subsequnce) (LCS)
+   * [Longest Common Substring](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-substring)
+   * Increasing subsequence
+   * Longest Increasing subsequence
+   * Shortest common supersequence
+   * Knapsack problem
+   * Maximum subarray
+   * Maximum sum path
+   * Integer Partition
+* **Backtracking**
+* **Branch & Bound**
 
 ## Running Tests
 
