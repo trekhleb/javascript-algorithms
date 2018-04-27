@@ -13,10 +13,6 @@
     "type": "git",
     "url": "git+https://github.com/trekhleb/javascript-algorithms.git"
   },
-  "pre-commit": [
-    "lint",
-    "test"
-  ],
   "keywords": [
     "computer-science",
     "cs",
