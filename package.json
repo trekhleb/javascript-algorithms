@@ -9,6 +9,10 @@
     "ci": "npm run lint && npm run test -- --coverage",
     "codecov": "codecov"
   },
+  "pre-commit": [
+    "lint",
+    "test"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trekhleb/javascript-algorithms.git"
@@ -39,7 +43,8 @@
     "eslint-plugin-jest": "^21.15.1",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
-    "jest": "^22.4.3"
+    "jest": "^22.4.3",
+    "pre-commit": "^1.2.2"
   },
   "dependencies": {}
 }
