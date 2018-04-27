@@ -1,7 +1,7 @@
 {
-  "name": "data-structures",
+  "name": "javascript-algorithms",
   "version": "1.0.0",
-  "description": "Data structures on JavaScript",
+  "description": "Algorithms and data-structures implemented on JavaScript",
   "main": "index.js",
   "scripts": {
     "lint": "eslint ./src/*",
@@ -11,29 +11,32 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/trekhleb/data-structures.git"
+    "url": "git+https://github.com/trekhleb/javascript-algorithms.git"
   },
   "keywords": [
-    "computer science",
+    "computer-science",
     "cs",
     "algorithms",
-    "data structures"
+    "data-structures",
+    "javascript",
+    "algorithm",
+    "javascript-algorithms"
   ],
   "author": "Oleksii Trekhleb (https://www.linkedin.com/in/trekhleb/)",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/trekhleb/data-structures/issues"
+    "url": "https://github.com/trekhleb/javascript-algorithms/issues"
   },
-  "homepage": "https://github.com/trekhleb/data-structures#readme",
+  "homepage": "https://github.com/trekhleb/javascript-algorithms#readme",
   "devDependencies": {
-    "@types/jest": "^22.2.2",
+    "@types/jest": "^22.2.3",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
-    "codecov": "^3.0.0",
+    "codecov": "^3.0.1",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
-    "eslint-plugin-import": "^2.9.0",
-    "eslint-plugin-jest": "^21.15.0",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-jest": "^21.15.1",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.7.0",
     "jest": "^22.4.3"
