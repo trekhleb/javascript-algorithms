@@ -6,7 +6,7 @@ describe('longestCommonSubsequnce', () => {
 
     expect(longestCommonSubsequnce([''], ['A', 'B', 'C'])).toEqual(['']);
 
-    expect(longestCommonSubsequnce(['A', 'B', 'C'], ['c'])).toEqual(['']);
+    expect(longestCommonSubsequnce(['A', 'B', 'C'], [''])).toEqual(['']);
 
     expect(longestCommonSubsequnce(
       ['A', 'B', 'C'],
