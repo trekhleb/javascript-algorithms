@@ -17,6 +17,52 @@ while still keeping the overall weight under or equal to 15 kg?
 
 ![knapsack problem](https://upload.wikimedia.org/wikipedia/commons/f/fd/Knapsack.svg)
 
+## Definition
+
+### 0/1 knapsack problem
+
+The most common problem being solved is the **0/1 knapsack problem**, 
+which restricts the number `xi` of copies of each kind of item to zero or one.
+
+Given a set of n items numbered from `1` up to `n`, each with a 
+weight `wi` and a value `vi`, along with a maximum weight 
+capacity `W`,
+
+maximize ![0/1 knapsack](https://wikimedia.org/api/rest_v1/media/math/render/svg/85620037d368d2136fb3361702df6a489416931b)
+
+subject to ![0/1 knapsack](https://wikimedia.org/api/rest_v1/media/math/render/svg/dd6e7c9bca4397980976ea6d19237500ce3b8176)
+and ![0/1 knapsack](https://wikimedia.org/api/rest_v1/media/math/render/svg/07dda71da2a630762c7b21b51ea54f86f422f951)
+
+Here `xi` represents the number of instances of item `i` to 
+include in the knapsack. Informally, the problem is to maximize 
+the sum of the values of the items in the knapsack so that the 
+sum of the weights is less than or equal to the knapsack's 
+capacity.
+
+### Bounded knapsack problem (BKP)
+
+The **bounded knapsack problem (BKP)** removes the restriction 
+that there is only one of each item, but restricts the number 
+`xi` of copies of each kind of item to a maximum non-negative 
+integer value `c`:
+
+maximize ![bounded knapsack](https://wikimedia.org/api/rest_v1/media/math/render/svg/85620037d368d2136fb3361702df6a489416931b)
+
+subject to ![bounded knapsack](https://wikimedia.org/api/rest_v1/media/math/render/svg/dd6e7c9bca4397980976ea6d19237500ce3b8176)
+and ![bounded knapsack](https://wikimedia.org/api/rest_v1/media/math/render/svg/6c8c5ac4f8247b3b8e01e89de76a1df0ea969821)
+
+### Unbounded knapsack problem (UKP)
+
+The **unbounded knapsack problem (UKP)** places no upper bound 
+on the number of copies of each kind of item and can be 
+formulated as above except for that the only restriction 
+on `xi` is that it is a non-negative integer.
+
+maximize ![unbounded knapsack](https://wikimedia.org/api/rest_v1/media/math/render/svg/85620037d368d2136fb3361702df6a489416931b)
+
+subject to ![unbounded knapsack](https://wikimedia.org/api/rest_v1/media/math/render/svg/dd6e7c9bca4397980976ea6d19237500ce3b8176) 
+and ![unbounded knapsack](https://wikimedia.org/api/rest_v1/media/math/render/svg/90a99710f61d5dea19e49ae5b31164d2b56b07e3)
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Knapsack_problem)
