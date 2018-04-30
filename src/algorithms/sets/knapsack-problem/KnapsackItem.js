@@ -21,6 +21,12 @@ export default class KnapsackItem {
     return this.weight * this.quantity;
   }
 
+  // This coefficient shows how valuable the 1 unit of weight is
+  // for current item.
+  get valuePerWeightRatio() {
+    return this.value / this.weight;
+  }
+
   toString() {
     return `v${this.value} w${this.weight} x ${this.quantity}`;
   }

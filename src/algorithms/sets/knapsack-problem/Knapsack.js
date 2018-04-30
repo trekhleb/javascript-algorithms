@@ -9,16 +9,9 @@ export default class Knapsack {
     this.selectedItems = [];
     this.weightLimit = weightLimit;
     this.possibleItems = possibleItems;
-    // We do two sorts because in case of equal weights but different values
-    // we need to take the most valuable items first.
-    this.sortPossibleItemsByValue();
-    this.sortPossibleItemsByWeight();
   }
 
   sortPossibleItemsByWeight() {
-    // Sort possible items by their weight.
-    // We need them to be sorted in order to solve knapsack problem using
-    // Dynamic Programming approach.
     this.possibleItems = new MergeSort({
       /**
        * @var KnapsackItem itemA
@@ -35,9 +28,6 @@ export default class Knapsack {
   }
 
   sortPossibleItemsByValue() {
-    // Sort possible items by their weight.
-    // We need them to be sorted in order to solve knapsack problem using
-    // Dynamic Programming approach.
     this.possibleItems = new MergeSort({
       /**
        * @var KnapsackItem itemA
@@ -53,8 +43,30 @@ export default class Knapsack {
     }).sort(this.possibleItems);
   }
 
-  // Solve 0/1 knapsack problem using dynamic programming.
+  sortPossibleItemsByValuePerWeightRatio() {
+    this.possibleItems = new MergeSort({
+      /**
+       * @var KnapsackItem itemA
+       * @var KnapsackItem itemB
+       */
+      compareCallback: (itemA, itemB) => {
+        if (itemA.valuePerWeightRatio === itemB.valuePerWeightRatio) {
+          return 0;
+        }
+
+        return itemA.valuePerWeightRatio > itemB.valuePerWeightRatio ? -1 : 1;
+      },
+    }).sort(this.possibleItems);
+  }
+
+  // Solve 0/1 knapsack problem
+  // Dynamic Programming approach.
   solveZeroOneKnapsackProblem() {
+    // We do two sorts because in case of equal weights but different values
+    // we need to take the most valuable items first.
+    this.sortPossibleItemsByValue();
+    this.sortPossibleItemsByWeight();
+
     this.selectedItems = [];
 
     // Create knapsack values matrix.
@@ -135,6 +147,29 @@ export default class Knapsack {
       }
 
       itemIndex -= 1;
+    }
+  }
+
+
+  // Solve unbounded knapsack problem.
+  // Greedy approach.
+  solveUnboundedKnapsackProblem() {
+    this.sortPossibleItemsByValue();
+    this.sortPossibleItemsByValuePerWeightRatio();
+
+    for (let itemIndex = 0; itemIndex < this.possibleItems.length; itemIndex += 1) {
+      if (this.totalWeight < this.weightLimit) {
+        const currentItem = this.possibleItems[itemIndex];
+
+        // Detect how much of current items we can push to knapsack.
+        const availableWeight = this.weightLimit - this.totalWeight;
+        const maxPossibleItemsCount = Math.floor(availableWeight / currentItem.weight);
+
+        if (maxPossibleItemsCount) {
+          currentItem.quantity = maxPossibleItemsCount;
+          this.selectedItems.push(currentItem);
+        }
+      }
     }
   }
 
