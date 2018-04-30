@@ -76,6 +76,7 @@
 * **Uncategorized**  
   * Union-Find
   * Maze
+  * Sudoku
   
 ### Algorithms by Paradigm
 
