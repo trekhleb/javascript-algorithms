@@ -1,54 +1,100 @@
 import Comparator from '../../utils/comparator/Comparator';
 
 export default class MinHeap {
+  /**
+   * @param {Function} [comparatorFunction]
+   */
   constructor(comparatorFunction) {
     // Array representation of the heap.
     this.heapContainer = [];
     this.compare = new Comparator(comparatorFunction);
   }
 
+  /**
+   * @param {number} parentIndex
+   * @return {number}
+   */
   static getLeftChildIndex(parentIndex) {
     return (2 * parentIndex) + 1;
   }
 
+  /**
+   * @param {number} parentIndex
+   * @return {number}
+   */
   static getRightChildIndex(parentIndex) {
     return (2 * parentIndex) + 2;
   }
 
+  /**
+   * @param {number} childIndex
+   * @return {number}
+   */
   static getParentIndex(childIndex) {
     return Math.floor((childIndex - 1) / 2);
   }
 
+  /**
+   * @param {number} childIndex
+   * @return {boolean}
+   */
   static hasParent(childIndex) {
     return this.getParentIndex(childIndex) >= 0;
   }
 
+  /**
+   * @param {number} parentIndex
+   * @return {boolean}
+   */
   hasLeftChild(parentIndex) {
     return MinHeap.getLeftChildIndex(parentIndex) < this.heapContainer.length;
   }
 
+  /**
+   * @param {number} parentIndex
+   * @return {boolean}
+   */
   hasRightChild(parentIndex) {
     return MinHeap.getRightChildIndex(parentIndex) < this.heapContainer.length;
   }
 
+  /**
+   * @param {number} parentIndex
+   * @return {*}
+   */
   leftChild(parentIndex) {
     return this.heapContainer[MinHeap.getLeftChildIndex(parentIndex)];
   }
 
+  /**
+   * @param {number} parentIndex
+   * @return {*}
+   */
   rightChild(parentIndex) {
     return this.heapContainer[MinHeap.getRightChildIndex(parentIndex)];
   }
 
+  /**
+   * @param {number} childIndex
+   * @return {*}
+   */
   parent(childIndex) {
     return this.heapContainer[MinHeap.getParentIndex(childIndex)];
   }
 
+  /**
+   * @param {number} indexOne
+   * @param {number} indexTwo
+   */
   swap(indexOne, indexTwo) {
     const tmp = this.heapContainer[indexTwo];
     this.heapContainer[indexTwo] = this.heapContainer[indexOne];
     this.heapContainer[indexOne] = tmp;
   }
 
+  /**
+   * @return {*}
+   */
   peek() {
     if (this.heapContainer.length === 0) {
       return null;
@@ -57,6 +103,9 @@ export default class MinHeap {
     return this.heapContainer[0];
   }
 
+  /**
+   * @return {*}
+   */
   poll() {
     if (this.heapContainer.length === 0) {
       return null;
@@ -75,9 +124,28 @@ export default class MinHeap {
     return item;
   }
 
+  /**
+   * @param {*} item
+   */
   add(item) {
     this.heapContainer.push(item);
     this.heapifyUp();
+  }
+
+  /**
+   * @param {*} item
+   * @return {Number[]}
+   */
+  findItem(item) {
+    const foundItemIndices = [];
+
+    for (let itemIndex = 0; itemIndex < this.heapContainer.length; itemIndex += 1) {
+      if (this.compare.equal(item, this.heapContainer[itemIndex])) {
+        foundItemIndices.push(itemIndex);
+      }
+    }
+
+    return foundItemIndices;
   }
 
   heapifyUp() {
@@ -120,10 +188,16 @@ export default class MinHeap {
     }
   }
 
+  /**
+   * @return {boolean}
+   */
   isEmpty() {
     return !this.heapContainer.length;
   }
 
+  /**
+   * @return {string}
+   */
   toString() {
     return this.heapContainer.toString();
   }

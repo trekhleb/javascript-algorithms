@@ -88,4 +88,20 @@ describe('MinHeap', () => {
     expect(minHeap.poll()).toBe(3);
     expect(minHeap.toString()).toBe('10,11,12');
   });
+
+  it('should be possible to find item indices in heap', () => {
+    const minHeap = new MinHeap();
+
+    minHeap.add(3);
+    minHeap.add(12);
+    minHeap.add(10);
+    minHeap.add(11);
+    minHeap.add(11);
+
+    expect(minHeap.toString()).toBe('3,11,10,12,11');
+
+    expect(minHeap.findItem(5)).toEqual([]);
+    expect(minHeap.findItem(3)).toEqual([0]);
+    expect(minHeap.findItem(11)).toEqual([1, 4]);
+  });
 });
