@@ -14,7 +14,7 @@ export default class MinHeap {
    * @param {number} parentIndex
    * @return {number}
    */
-  static getLeftChildIndex(parentIndex) {
+  getLeftChildIndex(parentIndex) {
     return (2 * parentIndex) + 1;
   }
 
@@ -22,7 +22,7 @@ export default class MinHeap {
    * @param {number} parentIndex
    * @return {number}
    */
-  static getRightChildIndex(parentIndex) {
+  getRightChildIndex(parentIndex) {
     return (2 * parentIndex) + 2;
   }
 
@@ -30,7 +30,7 @@ export default class MinHeap {
    * @param {number} childIndex
    * @return {number}
    */
-  static getParentIndex(childIndex) {
+  getParentIndex(childIndex) {
     return Math.floor((childIndex - 1) / 2);
   }
 
@@ -38,7 +38,7 @@ export default class MinHeap {
    * @param {number} childIndex
    * @return {boolean}
    */
-  static hasParent(childIndex) {
+  hasParent(childIndex) {
     return this.getParentIndex(childIndex) >= 0;
   }
 
@@ -47,7 +47,7 @@ export default class MinHeap {
    * @return {boolean}
    */
   hasLeftChild(parentIndex) {
-    return MinHeap.getLeftChildIndex(parentIndex) < this.heapContainer.length;
+    return this.getLeftChildIndex(parentIndex) < this.heapContainer.length;
   }
 
   /**
@@ -55,7 +55,7 @@ export default class MinHeap {
    * @return {boolean}
    */
   hasRightChild(parentIndex) {
-    return MinHeap.getRightChildIndex(parentIndex) < this.heapContainer.length;
+    return this.getRightChildIndex(parentIndex) < this.heapContainer.length;
   }
 
   /**
@@ -63,7 +63,7 @@ export default class MinHeap {
    * @return {*}
    */
   leftChild(parentIndex) {
-    return this.heapContainer[MinHeap.getLeftChildIndex(parentIndex)];
+    return this.heapContainer[this.getLeftChildIndex(parentIndex)];
   }
 
   /**
@@ -71,7 +71,7 @@ export default class MinHeap {
    * @return {*}
    */
   rightChild(parentIndex) {
-    return this.heapContainer[MinHeap.getRightChildIndex(parentIndex)];
+    return this.heapContainer[this.getRightChildIndex(parentIndex)];
   }
 
   /**
@@ -79,7 +79,7 @@ export default class MinHeap {
    * @return {*}
    */
   parent(childIndex) {
-    return this.heapContainer[MinHeap.getParentIndex(childIndex)];
+    return this.heapContainer[this.getParentIndex(childIndex)];
   }
 
   /**
@@ -126,17 +126,63 @@ export default class MinHeap {
 
   /**
    * @param {*} item
+   * @return {MinHeap}
    */
   add(item) {
     this.heapContainer.push(item);
     this.heapifyUp();
+    return this;
+  }
+
+  /**
+   * @param {*} item
+   * @return {MinHeap}
+   */
+  remove(item) {
+    // Find number of items to remove.
+    const numberOfItemsToRemove = this.find(item).length;
+
+    for (let iteration = 0; iteration < numberOfItemsToRemove; iteration += 1) {
+      // We need to find item index to remove each time after removal since
+      // indices are being change after each heapify process.
+      const indexToRemove = this.find(item).pop();
+
+      // If we need to remove last child in the heap then just remove it.
+      // There is no need to heapify the heap afterwards.
+      if (indexToRemove === (this.heapContainer.length - 1)) {
+        this.heapContainer.pop();
+      } else {
+        // Move last element in heap to the vacant (removed) position.
+        this.heapContainer[indexToRemove] = this.heapContainer.pop();
+
+        // Get parent.
+        const parentItem = this.hasParent(indexToRemove) ? this.parent(indexToRemove) : null;
+        const leftChild = this.hasLeftChild(indexToRemove) ? this.leftChild(indexToRemove) : null;
+
+        // If there is no parent or parent is less then node to delete then heapify down.
+        // Otherwise heapify up.
+        if (
+          leftChild !== null &&
+          (
+            parentItem === null ||
+            this.compare.lessThen(parentItem, this.heapContainer[indexToRemove])
+          )
+        ) {
+          this.heapifyDown(indexToRemove);
+        } else {
+          this.heapifyUp(indexToRemove);
+        }
+      }
+    }
+
+    return this;
   }
 
   /**
    * @param {*} item
    * @return {Number[]}
    */
-  findItem(item) {
+  find(item) {
     const foundItemIndices = [];
 
     for (let itemIndex = 0; itemIndex < this.heapContainer.length; itemIndex += 1) {
@@ -148,35 +194,41 @@ export default class MinHeap {
     return foundItemIndices;
   }
 
-  heapifyUp() {
+  /**
+   * @param {number} [customStartIndex]
+   */
+  heapifyUp(customStartIndex) {
     // Take last element (last in array or the bottom left in a tree) in
     // a heap container and lift him up until we find the parent element
     // that is less then the current new one.
-    let currentIndex = this.heapContainer.length - 1;
+    let currentIndex = customStartIndex || this.heapContainer.length - 1;
 
     while (
-      MinHeap.hasParent(currentIndex) &&
+      this.hasParent(currentIndex) &&
       this.compare.lessThen(this.heapContainer[currentIndex], this.parent(currentIndex))
     ) {
-      this.swap(currentIndex, MinHeap.getParentIndex(currentIndex));
-      currentIndex = MinHeap.getParentIndex(currentIndex);
+      this.swap(currentIndex, this.getParentIndex(currentIndex));
+      currentIndex = this.getParentIndex(currentIndex);
     }
   }
 
-  heapifyDown() {
+  /**
+   * @param {number} [customStartIndex]
+   */
+  heapifyDown(customStartIndex) {
     // Compare the root element to its children and swap root with the smallest
     // of children. Do the same for next children after swap.
-    let currentIndex = 0;
-    let nextIndex = 0;
+    let currentIndex = customStartIndex || 0;
+    let nextIndex = null;
 
     while (this.hasLeftChild(currentIndex)) {
       if (
         this.hasRightChild(currentIndex) &&
         this.compare.lessThen(this.rightChild(currentIndex), this.leftChild(currentIndex))
       ) {
-        nextIndex = MinHeap.getRightChildIndex(currentIndex);
+        nextIndex = this.getRightChildIndex(currentIndex);
       } else {
-        nextIndex = MinHeap.getLeftChildIndex(currentIndex);
+        nextIndex = this.getLeftChildIndex(currentIndex);
       }
 
       if (this.compare.lessThen(this.heapContainer[currentIndex], this.heapContainer[nextIndex])) {

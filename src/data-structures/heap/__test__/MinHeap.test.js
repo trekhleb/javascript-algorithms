@@ -100,8 +100,51 @@ describe('MinHeap', () => {
 
     expect(minHeap.toString()).toBe('3,11,10,12,11');
 
-    expect(minHeap.findItem(5)).toEqual([]);
-    expect(minHeap.findItem(3)).toEqual([0]);
-    expect(minHeap.findItem(11)).toEqual([1, 4]);
+    expect(minHeap.find(5)).toEqual([]);
+    expect(minHeap.find(3)).toEqual([0]);
+    expect(minHeap.find(11)).toEqual([1, 4]);
+  });
+
+  it('should be possible to remove items from heap with heapify down', () => {
+    const minHeap = new MinHeap();
+
+    minHeap.add(3);
+    minHeap.add(12);
+    minHeap.add(10);
+    minHeap.add(11);
+    minHeap.add(11);
+
+    expect(minHeap.toString()).toBe('3,11,10,12,11');
+
+    expect(minHeap.remove(3).toString()).toEqual('10,11,11,12');
+    expect(minHeap.remove(3).peek()).toEqual(10);
+    expect(minHeap.remove(11).toString()).toEqual('10,12');
+    expect(minHeap.remove(3).peek()).toEqual(10);
+  });
+
+  it('should be possible to remove items from heap with heapify up', () => {
+    const minHeap = new MinHeap();
+
+    minHeap.add(3);
+    minHeap.add(10);
+    minHeap.add(5);
+    minHeap.add(6);
+    minHeap.add(7);
+    minHeap.add(4);
+    minHeap.add(6);
+    minHeap.add(8);
+    minHeap.add(2);
+    minHeap.add(1);
+
+    expect(minHeap.toString()).toBe('1,2,4,6,3,5,6,10,8,7');
+    expect(minHeap.remove(8).toString()).toEqual('1,2,4,6,3,5,6,10,7');
+    expect(minHeap.remove(7).toString()).toEqual('1,2,4,6,3,5,6,10');
+    expect(minHeap.remove(1).toString()).toEqual('2,3,4,6,10,5,6');
+    expect(minHeap.remove(2).toString()).toEqual('3,6,4,6,10,5');
+    expect(minHeap.remove(6).toString()).toEqual('3,5,4,10');
+    expect(minHeap.remove(10).toString()).toEqual('3,5,4');
+    expect(minHeap.remove(5).toString()).toEqual('3,4');
+    expect(minHeap.remove(3).toString()).toEqual('4');
+    expect(minHeap.remove(4).toString()).toEqual('');
   });
 });
