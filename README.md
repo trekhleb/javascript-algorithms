@@ -65,11 +65,11 @@
 * **Graph**
   * [Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search) (DFS)
   * [Breadth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/breadth-first-search) (BFS)
+  * [Dijkstra Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/dijkstra) - finding shortest path
+  * Bellman Ford
   * Detect Cycle
   * Topological Sorting
-  * Dijkstra Algorithm to Find Shortest Path
   * Eulerian path, Eulerian circuit
-  * Bellman Ford
   * Strongly Connected Component algorithm
   * Shortest Path Faster Algorithm (SPFA)
 * **Minimum Spanning Tree**
@@ -84,6 +84,7 @@
 
 * **Greedy**
   * [Unbound Knapsack Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem)
+  * [Dijkstra Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/dijkstra) - finding shortest path
 * **Divide and Conquer**
   * [Euclidean Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
   * [Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/permutations) (with and without repetitions)

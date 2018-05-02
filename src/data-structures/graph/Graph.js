@@ -71,6 +71,7 @@ export default class Graph {
   /**
    * @param {GraphVertex} startVertex
    * @param {GraphVertex} endVertex
+   * @return {(GraphEdge|null)}
    */
   findEdge(startVertex, endVertex) {
     const vertex = this.getVertexByKey(startVertex.getKey());
