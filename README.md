@@ -20,6 +20,7 @@
     * Segment Tree or Interval Tree
     * Binary Indexed Tree or Fenwick Tree
 9. [Graph](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph) (both directed and undirected)
+9. [Disjoint Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/disjoint-set)
 
 ## Algorithms
 
