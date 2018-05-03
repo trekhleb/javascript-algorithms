@@ -7,6 +7,7 @@ import PriorityQueue from '../../../data-structures/priority-queue/PriorityQueue
 export default function dijkstra(graph, startVertex) {
   const distances = {};
   const visitedVertices = {};
+  const previousVertices = {};
   const queue = new PriorityQueue();
 
   // Init all distances with infinity assuming that currently we can't reach
@@ -38,6 +39,9 @@ export default function dijkstra(graph, startVertex) {
           if (queue.hasValue(neighbor)) {
             queue.changePriority(neighbor, distances[neighbor.getKey()]);
           }
+
+          // Remember previous vertex.
+          previousVertices[neighbor.getKey()] = currentVertex;
         }
 
         // Add neighbor to the queue for further visiting.
@@ -51,5 +55,8 @@ export default function dijkstra(graph, startVertex) {
     visitedVertices[currentVertex.getKey()] = currentVertex;
   }
 
-  return distances;
+  return {
+    distances,
+    previousVertices,
+  };
 }

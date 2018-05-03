@@ -43,7 +43,7 @@ describe('dijkstra', () => {
       .addEdge(edgeFG)
       .addEdge(edgeEG);
 
-    const distances = dijkstra(graph, vertexA);
+    const { distances, previousVertices } = dijkstra(graph, vertexA);
 
     expect(distances).toEqual({
       H: Infinity,
@@ -55,5 +55,11 @@ describe('dijkstra', () => {
       G: 12,
       F: 11,
     });
+
+    expect(previousVertices.F.getKey()).toBe('D');
+    expect(previousVertices.D.getKey()).toBe('B');
+    expect(previousVertices.B.getKey()).toBe('A');
+    expect(previousVertices.G.getKey()).toBe('E');
+    expect(previousVertices.C.getKey()).toBe('A');
   });
 });
