@@ -12,8 +12,9 @@ export default function dijkstra(graph, startVertex) {
 
   // Init all distances with infinity assuming that currently we can't reach
   // any of the vertices except start one.
-  Object.keys(graph.vertices).forEach((vertexKey) => {
-    distances[vertexKey] = Infinity;
+  graph.getAllVertices().forEach((vertex) => {
+    distances[vertex.getKey()] = Infinity;
+    previousVertices[vertex.getKey()] = null;
   });
   distances[startVertex.getKey()] = 0;
 

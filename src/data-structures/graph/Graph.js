@@ -33,6 +33,13 @@ export default class Graph {
   }
 
   /**
+   * @return {GraphVertex[]}
+   */
+  getAllVertices() {
+    return Object.values(this.vertices);
+  }
+
+  /**
    * @param {GraphEdge} edge
    * @returns {Graph}
    */

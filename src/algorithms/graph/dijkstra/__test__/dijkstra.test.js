@@ -61,5 +61,7 @@ describe('dijkstra', () => {
     expect(previousVertices.B.getKey()).toBe('A');
     expect(previousVertices.G.getKey()).toBe('E');
     expect(previousVertices.C.getKey()).toBe('A');
+    expect(previousVertices.A).toBeNull();
+    expect(previousVertices.H).toBeNull();
   });
 });

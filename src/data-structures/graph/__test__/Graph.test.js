@@ -28,6 +28,10 @@ describe('Graph', () => {
 
     graph.addEdge(edgeAB);
 
+    expect(graph.getAllVertices().length).toBe(2);
+    expect(graph.getAllVertices()[0]).toEqual(vertexA);
+    expect(graph.getAllVertices()[1]).toEqual(vertexB);
+
     const graphVertexA = graph.findVertexByKey(vertexA.getKey());
     const graphVertexB = graph.findVertexByKey(vertexB.getKey());
 
