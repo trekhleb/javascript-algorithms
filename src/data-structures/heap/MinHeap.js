@@ -136,16 +136,18 @@ export default class MinHeap {
 
   /**
    * @param {*} item
+   * @param {Comparator} [customFindingComparator]
    * @return {MinHeap}
    */
-  remove(item) {
+  remove(item, customFindingComparator) {
     // Find number of items to remove.
     const numberOfItemsToRemove = this.find(item).length;
+    const customComparator = customFindingComparator || this.compare;
 
     for (let iteration = 0; iteration < numberOfItemsToRemove; iteration += 1) {
       // We need to find item index to remove each time after removal since
       // indices are being change after each heapify process.
-      const indexToRemove = this.find(item).pop();
+      const indexToRemove = this.find(item, customComparator).pop();
 
       // If we need to remove last child in the heap then just remove it.
       // There is no need to heapify the heap afterwards.
@@ -180,13 +182,15 @@ export default class MinHeap {
 
   /**
    * @param {*} item
+   * @param {Comparator} [customComparator]
    * @return {Number[]}
    */
-  find(item) {
+  find(item, customComparator) {
     const foundItemIndices = [];
+    const comparator = customComparator || this.compare;
 
     for (let itemIndex = 0; itemIndex < this.heapContainer.length; itemIndex += 1) {
-      if (this.compare.equal(item, this.heapContainer[itemIndex])) {
+      if (comparator.equal(item, this.heapContainer[itemIndex])) {
         foundItemIndices.push(itemIndex);
       }
     }
