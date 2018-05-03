@@ -33,10 +33,17 @@ export default function dijkstra(graph, startVertex) {
 
         if (distanceToNeighborFromCurrent < existingDistanceToNeighbor) {
           distances[neighbor.getKey()] = distanceToNeighborFromCurrent;
+
+          // Change priority.
+          if (queue.hasValue(neighbor)) {
+            queue.changePriority(neighbor, distances[neighbor.getKey()]);
+          }
         }
 
         // Add neighbor to the queue for further visiting.
-        queue.add(neighbor, distances[neighbor.getKey()]);
+        if (!queue.hasValue(neighbor)) {
+          queue.add(neighbor, distances[neighbor.getKey()]);
+        }
       }
     });
 

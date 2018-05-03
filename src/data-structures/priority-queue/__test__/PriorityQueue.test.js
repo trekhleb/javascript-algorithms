@@ -87,4 +87,17 @@ describe('PriorityQueue', () => {
     expect(priorityQueue.poll()).toBe(15);
     expect(priorityQueue.poll()).toBe(10);
   });
+
+  it('should be possible to search in priority queue by value', () => {
+    const priorityQueue = new PriorityQueue();
+
+    priorityQueue.add(10, 1);
+    priorityQueue.add(5, 2);
+    priorityQueue.add(100, 0);
+    priorityQueue.add(200, 0);
+    priorityQueue.add(15, 15);
+
+    expect(priorityQueue.hasValue(70)).toBeFalsy();
+    expect(priorityQueue.hasValue(15)).toBeTruthy();
+  });
 });

@@ -40,17 +40,26 @@ export default class PriorityQueue extends MinHeap {
    * @return {PriorityQueue}
    */
   changePriority(item, priority) {
-    const customFindingComparator = new Comparator((a, b) => {
-      if (a === b) {
-        return 0;
-      }
-      return a < b ? -1 : 1;
-    });
-
-    this.remove(item, customFindingComparator);
+    this.remove(item, new Comparator(this.compareValue));
     this.add(item, priority);
 
     return this;
+  }
+
+  /**
+   * @param {*} item
+   * @return {Number[]}
+   */
+  findByValue(item) {
+    return this.find(item, new Comparator(this.compareValue));
+  }
+
+  /**
+   * @param {*} item
+   * @return {boolean}
+   */
+  hasValue(item) {
+    return this.findByValue(item).length > 0;
   }
 
   /**
@@ -64,5 +73,18 @@ export default class PriorityQueue extends MinHeap {
     }
 
     return this.priorities[a] < this.priorities[b] ? -1 : 1;
+  }
+
+  /**
+   * @param {*} a
+   * @param {*} b
+   * @return {number}
+   */
+  compareValue(a, b) {
+    if (a === b) {
+      return 0;
+    }
+
+    return a < b ? -1 : 1;
   }
 }
