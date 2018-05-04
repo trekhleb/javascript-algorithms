@@ -136,4 +136,42 @@ describe('Graph', () => {
     expect(neighbors[0]).toEqual(vertexB);
     expect(neighbors[1]).toEqual(vertexC);
   });
+
+  it('should throw an error when trying to add edge twice', () => {
+    function addSameEdgeTwice() {
+      const graph = new Graph(true);
+
+      const vertexA = new GraphVertex('A');
+      const vertexB = new GraphVertex('B');
+
+      const edgeAB = new GraphEdge(vertexA, vertexB);
+
+      graph
+        .addEdge(edgeAB)
+        .addEdge(edgeAB);
+    }
+
+    expect(addSameEdgeTwice).toThrow();
+  });
+
+  it('should return the list of all added edges', () => {
+    const graph = new Graph(true);
+
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBC);
+
+    const edges = graph.getAllEdges();
+
+    expect(edges.length).toBe(2);
+    expect(edges[0]).toEqual(edgeAB);
+    expect(edges[1]).toEqual(edgeBC);
+  });
 });

@@ -4,6 +4,7 @@ export default class Graph {
    */
   constructor(isDirected = false) {
     this.vertices = {};
+    this.edges = {};
     this.isDirected = isDirected;
   }
 
@@ -40,6 +41,13 @@ export default class Graph {
   }
 
   /**
+   * @return {GraphEdge[]}
+   */
+  getAllEdges() {
+    return Object.values(this.edges);
+  }
+
+  /**
    * @param {GraphEdge} edge
    * @returns {Graph}
    */
@@ -60,7 +68,12 @@ export default class Graph {
       endVertex = this.getVertexByKey(edge.endVertex.getKey());
     }
 
-    // @TODO: Check if edge has been already added.
+    // Check if edge has been already added.
+    if (this.edges[edge.getKey()]) {
+      throw new Error('Edge has already been added before');
+    } else {
+      this.edges[edge.getKey()] = edge;
+    }
 
     // Add edge to the vertices.
     if (this.isDirected) {

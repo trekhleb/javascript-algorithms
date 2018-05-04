@@ -7,6 +7,7 @@ describe('GraphEdge', () => {
     const endVertex = new GraphVertex('B');
     const edge = new GraphEdge(startVertex, endVertex);
 
+    expect(edge.getKey()).toBe('A_B');
     expect(edge.startVertex).toEqual(startVertex);
     expect(edge.endVertex).toEqual(endVertex);
     expect(edge.weight).toEqual(1);
