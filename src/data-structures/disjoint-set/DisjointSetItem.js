@@ -39,25 +39,27 @@ export default class DisjointSetItem {
   }
 
   /**
+   * Rank basically means the number of all ancestors.
+   *
    * @return {number}
    */
-  getAncestorsCount() {
+  getRank() {
     if (this.getChildren().length === 0) {
       return 0;
     }
 
-    let count = 0;
+    let rank = 0;
 
     /** @var {DisjointSetItem} child */
     this.getChildren().forEach((child) => {
       // Count child itself.
-      count += 1;
+      rank += 1;
 
       // Also add all children of current child.
-      count += child.getAncestorsCount();
+      rank += child.getRank();
     });
 
-    return count;
+    return rank;
   }
 
   /**

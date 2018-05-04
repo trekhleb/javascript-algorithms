@@ -25,6 +25,8 @@ export default class DisjointSet {
   }
 
   /**
+   * Find set representation node.
+   *
    * @param {*} itemValue
    * @return {(string|null)}
    */
@@ -42,6 +44,8 @@ export default class DisjointSet {
   }
 
   /**
+   * Union by rank.
+   *
    * @param {*} valueA
    * @param {*} valueB
    * @return {DisjointSet}
@@ -62,7 +66,7 @@ export default class DisjointSet {
     const rootA = this.items[rootKeyA];
     const rootB = this.items[rootKeyB];
 
-    if (rootA.getAncestorsCount() < rootB.getAncestorsCount()) {
+    if (rootA.getRank() < rootB.getRank()) {
       // If rootB's tree is bigger then make rootB to be a new root.
       rootB.addChild(rootA);
 

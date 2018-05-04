@@ -7,7 +7,7 @@ describe('DisjointSetItem', () => {
     const itemC = new DisjointSetItem('C');
     const itemD = new DisjointSetItem('D');
 
-    expect(itemA.getAncestorsCount()).toBe(0);
+    expect(itemA.getRank()).toBe(0);
     expect(itemA.getChildren()).toEqual([]);
     expect(itemA.getKey()).toBe('A');
     expect(itemA.getRoot()).toEqual(itemA);
@@ -17,11 +17,11 @@ describe('DisjointSetItem', () => {
     itemA.addChild(itemB);
     itemD.setParent(itemC);
 
-    expect(itemA.getAncestorsCount()).toBe(1);
-    expect(itemC.getAncestorsCount()).toBe(1);
+    expect(itemA.getRank()).toBe(1);
+    expect(itemC.getRank()).toBe(1);
 
-    expect(itemB.getAncestorsCount()).toBe(0);
-    expect(itemD.getAncestorsCount()).toBe(0);
+    expect(itemB.getRank()).toBe(0);
+    expect(itemD.getRank()).toBe(0);
 
     expect(itemA.getChildren().length).toBe(1);
     expect(itemC.getChildren().length).toBe(1);
@@ -50,9 +50,9 @@ describe('DisjointSetItem', () => {
     expect(itemC.isRoot()).toBeFalsy();
     expect(itemD.isRoot()).toBeFalsy();
 
-    expect(itemA.getAncestorsCount()).toEqual(3);
-    expect(itemB.getAncestorsCount()).toEqual(0);
-    expect(itemC.getAncestorsCount()).toEqual(1);
+    expect(itemA.getRank()).toEqual(3);
+    expect(itemB.getRank()).toEqual(0);
+    expect(itemC.getRank()).toEqual(1);
   });
 
   it('should do basic manipulation with disjoint set item with custom key extractor', () => {
@@ -65,7 +65,7 @@ describe('DisjointSetItem', () => {
     const itemC = new DisjointSetItem({ key: 'C', value: 3 }, keyExtractor);
     const itemD = new DisjointSetItem({ key: 'D', value: 4 }, keyExtractor);
 
-    expect(itemA.getAncestorsCount()).toBe(0);
+    expect(itemA.getRank()).toBe(0);
     expect(itemA.getChildren()).toEqual([]);
     expect(itemA.getKey()).toBe('A');
     expect(itemA.getRoot()).toEqual(itemA);
@@ -75,11 +75,11 @@ describe('DisjointSetItem', () => {
     itemA.addChild(itemB);
     itemD.setParent(itemC);
 
-    expect(itemA.getAncestorsCount()).toBe(1);
-    expect(itemC.getAncestorsCount()).toBe(1);
+    expect(itemA.getRank()).toBe(1);
+    expect(itemC.getRank()).toBe(1);
 
-    expect(itemB.getAncestorsCount()).toBe(0);
-    expect(itemD.getAncestorsCount()).toBe(0);
+    expect(itemB.getRank()).toBe(0);
+    expect(itemD.getRank()).toBe(0);
 
     expect(itemA.getChildren().length).toBe(1);
     expect(itemC.getChildren().length).toBe(1);
@@ -108,8 +108,8 @@ describe('DisjointSetItem', () => {
     expect(itemC.isRoot()).toBeFalsy();
     expect(itemD.isRoot()).toBeFalsy();
 
-    expect(itemA.getAncestorsCount()).toEqual(3);
-    expect(itemB.getAncestorsCount()).toEqual(0);
-    expect(itemC.getAncestorsCount()).toEqual(1);
+    expect(itemA.getRank()).toEqual(3);
+    expect(itemB.getRank()).toEqual(0);
+    expect(itemC.getRank()).toEqual(1);
   });
 });
