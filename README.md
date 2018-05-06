@@ -69,13 +69,12 @@
   * [Dijkstra Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
   * [Bellman-Ford Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
   * [Detect Cycle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/detect-cycle) - for both directed and undirected graphs (DFS and Disjoint Set based versions)
+  * Prim’s Algorithm - finding Minimum Spanning Tree (MST)
+  * Kruskal’s Algorithm - finding Minimum Spanning Tree (MST)
   * Topological Sorting
   * Eulerian path, Eulerian circuit
   * Strongly Connected Component algorithm
   * Shortest Path Faster Algorithm (SPFA)
-* **Minimum Spanning Tree**
-  * Prim’s algorithm
-  * Kruskal’s algorithm
 * **Uncategorized**  
   * Union-Find
   * Maze
