@@ -10,7 +10,7 @@ describe('GraphEdge', () => {
     expect(edge.getKey()).toBe('A_B');
     expect(edge.startVertex).toEqual(startVertex);
     expect(edge.endVertex).toEqual(endVertex);
-    expect(edge.weight).toEqual(1);
+    expect(edge.weight).toEqual(0);
   });
 
   it('should create graph edge with predefined weight', () => {

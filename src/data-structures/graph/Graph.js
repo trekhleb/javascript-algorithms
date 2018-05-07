@@ -110,6 +110,12 @@ export default class Graph {
     return null;
   }
 
+  getWeight() {
+    return this.getAllEdges().reduce((weight, graphEdge) => {
+      return weight + graphEdge.weight;
+    }, 0);
+  }
+
   toString() {
     return Object.keys(this.vertices).toString();
   }
