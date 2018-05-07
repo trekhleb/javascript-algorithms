@@ -1,6 +1,9 @@
 import LinkedList from '../linked-list/LinkedList';
 
 export default class GraphVertex {
+  /**
+   * @param {*} value
+   */
   constructor(value) {
     if (value === undefined) {
       throw new Error('Graph vertex must have a value');
@@ -35,6 +38,13 @@ export default class GraphVertex {
     // Return either start or end vertex.
     // For undirected graphs it is possible that current vertex will be the end one.
     return edges.map(neighborsConverter);
+  }
+
+  /**
+   * @return {GraphEdge[]}
+   */
+  getEdges() {
+    return this.edges.toArray().map(linkedListNode => linkedListNode.value);
   }
 
   /**

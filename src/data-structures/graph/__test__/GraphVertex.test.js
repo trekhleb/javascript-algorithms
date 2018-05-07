@@ -21,17 +21,20 @@ describe('GraphVertex', () => {
     expect(vertex.toString()).toBe('A');
     expect(vertex.getKey()).toBe('A');
     expect(vertex.edges.toString()).toBe('');
+    expect(vertex.getEdges()).toEqual([]);
   });
 
   it('should add edges to vertex and check if it exists', () => {
     const vertexA = new GraphVertex('A');
-    const vertexB = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
 
     const edgeAB = new GraphEdge(vertexA, vertexB);
     vertexA.addEdge(edgeAB);
 
     expect(vertexA.hasEdge(edgeAB)).toBeTruthy();
     expect(vertexB.hasEdge(edgeAB)).toBeFalsy();
+    expect(vertexA.getEdges().length).toBe(1);
+    expect(vertexA.getEdges()[0].toString()).toBe('A_B');
   });
 
   it('should return vertex neighbors in case if current node is start one', () => {
