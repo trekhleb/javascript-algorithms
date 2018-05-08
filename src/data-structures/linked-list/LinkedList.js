@@ -9,6 +9,10 @@ export default class LinkedList {
     this.tail = null;
   }
 
+  /**
+   * @param {*} value
+   * @return {LinkedList}
+   */
   prepend(value) {
     // Make new node to be a head.
     this.head = new LinkedListNode(value, this.head);
@@ -16,6 +20,10 @@ export default class LinkedList {
     return this;
   }
 
+  /**
+   * @param {*} value
+   * @return {LinkedList}
+   */
   append(value) {
     const newNode = new LinkedListNode(value);
 
@@ -34,6 +42,10 @@ export default class LinkedList {
     return this;
   }
 
+  /**
+   * @param {*} value
+   * @return {LinkedListNode}
+   */
   delete(value) {
     if (!this.head) {
       return null;
@@ -67,6 +79,12 @@ export default class LinkedList {
     return deletedNode;
   }
 
+  /**
+   * @param {Object} findParams
+   * @param {*} findParams.value
+   * @param {function} [findParams.callback]
+   * @return {LinkedListNode}
+   */
   find({ value = undefined, callback = undefined }) {
     if (!this.head) {
       return null;
@@ -91,6 +109,9 @@ export default class LinkedList {
     return null;
   }
 
+  /**
+   * @return {LinkedListNode}
+   */
   deleteTail() {
     if (this.head === this.tail) {
       const deletedTail = this.tail;
@@ -116,6 +137,9 @@ export default class LinkedList {
     return deletedTail;
   }
 
+  /**
+   * @return {LinkedListNode}
+   */
   deleteHead() {
     if (!this.head) {
       return null;
@@ -133,6 +157,9 @@ export default class LinkedList {
     return deletedHead;
   }
 
+  /**
+   * @return {LinkedListNode[]}
+   */
   toArray() {
     const nodes = [];
 
@@ -145,6 +172,10 @@ export default class LinkedList {
     return nodes;
   }
 
+  /**
+   * @param {function} [callback]
+   * @return {string}
+   */
   toString(callback) {
     return this.toArray().map(node => node.toString(callback)).toString();
   }

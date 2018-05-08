@@ -62,4 +62,16 @@ describe('Stack', () => {
     expect(stack.pop().value).toBe('test2');
     expect(stack.pop().value).toBe('test1');
   });
+
+  it('should be possible to convert stack to array', () => {
+    const stack = new Stack();
+
+    expect(stack.peek()).toBeNull();
+
+    stack.push(1);
+    stack.push(2);
+    stack.push(3);
+
+    expect(stack.toArray()).toEqual([3, 2, 1]);
+  });
 });

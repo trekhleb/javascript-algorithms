@@ -5,10 +5,16 @@ export default class Stack {
     this.linkedList = new LinkedList();
   }
 
+  /**
+   * @return {boolean}
+   */
   isEmpty() {
     return !this.linkedList.tail;
   }
 
+  /**
+   * @return {LinkedListNode}
+   */
   peek() {
     if (!this.linkedList.tail) {
       return null;
@@ -17,15 +23,35 @@ export default class Stack {
     return this.linkedList.tail.value;
   }
 
+  /**
+   * @param {*} value
+   */
   push(value) {
     this.linkedList.append(value);
   }
 
+  /**
+   * @return {LinkedListNode}
+   */
   pop() {
     const removedTail = this.linkedList.deleteTail();
     return removedTail ? removedTail.value : null;
   }
 
+  /**
+   * @return {*[]}
+   */
+  toArray() {
+    return this.linkedList
+      .toArray()
+      .map(linkedListNode => linkedListNode.value)
+      .reverse();
+  }
+
+  /**
+   * @param {function} [callback]
+   * @return {string}
+   */
   toString(callback) {
     return this.linkedList.toString(callback);
   }
