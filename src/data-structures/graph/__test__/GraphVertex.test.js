@@ -100,4 +100,26 @@ describe('GraphVertex', () => {
     expect(vertexA.findEdge(vertexB)).toEqual(edgeAB);
     expect(vertexA.findEdge(vertexC)).toBeNull();
   });
+
+  it('should calculate vertex degree', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+
+    expect(vertexA.getDegree()).toBe(0);
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    vertexA.addEdge(edgeAB);
+
+    expect(vertexA.getDegree()).toBe(1);
+
+    const edgeBA = new GraphEdge(vertexB, vertexA);
+    vertexA.addEdge(edgeBA);
+
+    expect(vertexA.getDegree()).toBe(2);
+
+    vertexA.addEdge(edgeAB);
+    expect(vertexA.getDegree()).toBe(3);
+
+    expect(vertexA.getEdges().length).toEqual(3);
+  });
 });

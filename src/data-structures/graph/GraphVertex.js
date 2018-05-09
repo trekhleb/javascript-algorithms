@@ -31,8 +31,9 @@ export default class GraphVertex {
   getNeighbors() {
     const edges = this.edges.toArray();
 
-    const neighborsConverter = ({ value }) => {
-      return value.startVertex === this ? value.endVertex : value.startVertex;
+    /** @param {LinkedListNode} node */
+    const neighborsConverter = (node) => {
+      return node.value.startVertex === this ? node.value.endVertex : node.value.startVertex;
     };
 
     // Return either start or end vertex.
@@ -45,6 +46,13 @@ export default class GraphVertex {
    */
   getEdges() {
     return this.edges.toArray().map(linkedListNode => linkedListNode.value);
+  }
+
+  /**
+   * @return {number}
+   */
+  getDegree() {
+    return this.edges.toArray().length;
   }
 
   /**
