@@ -140,4 +140,71 @@ describe('articulationPoints', () => {
       vertexD,
     ]);
   });
+
+  it('should find articulation points in yet another graph #1', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+    const vertexE = new GraphVertex('E');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeAC = new GraphEdge(vertexA, vertexC);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+    const edgeCD = new GraphEdge(vertexC, vertexD);
+    const edgeDE = new GraphEdge(vertexD, vertexE);
+
+    const graph = new Graph();
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeAC)
+      .addEdge(edgeBC)
+      .addEdge(edgeCD)
+      .addEdge(edgeDE);
+
+    const articulationPointsSet = articulationPoints(graph);
+
+    expect(articulationPointsSet).toEqual([
+      vertexD,
+      vertexC,
+    ]);
+  });
+
+  it('should find articulation points in yet another graph #2', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+    const vertexE = new GraphVertex('E');
+    const vertexF = new GraphVertex('F');
+    const vertexG = new GraphVertex('G');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeAC = new GraphEdge(vertexA, vertexC);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+    const edgeCD = new GraphEdge(vertexC, vertexD);
+    const edgeCE = new GraphEdge(vertexC, vertexE);
+    const edgeCF = new GraphEdge(vertexC, vertexF);
+    const edgeEG = new GraphEdge(vertexE, vertexG);
+    const edgeFG = new GraphEdge(vertexF, vertexG);
+
+    const graph = new Graph();
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeAC)
+      .addEdge(edgeBC)
+      .addEdge(edgeCD)
+      .addEdge(edgeCE)
+      .addEdge(edgeCF)
+      .addEdge(edgeEG)
+      .addEdge(edgeFG);
+
+    const articulationPointsSet = articulationPoints(graph);
+
+    expect(articulationPointsSet).toEqual([
+      vertexC,
+    ]);
+  });
 });
