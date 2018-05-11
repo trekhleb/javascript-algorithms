@@ -14,7 +14,7 @@ class VisitMetadata {
 
     // We need this in order to check graph root node, whether it has two
     // disconnected children or not.
-    this.childrenCount = 0;
+    this.independantChildrenCount = 0;
   }
 }
 
@@ -57,7 +57,7 @@ export default function articulationPoints(graph) {
         visitedSet[previousVertex.getKey()].childVertex = currentVertex;
 
         // Update children counter for previous vertex.
-        visitedSet[previousVertex.getKey()].childrenCount += 1;
+        visitedSet[previousVertex.getKey()].independantChildrenCount += 1;
       }
     },
     /**
@@ -71,7 +71,7 @@ export default function articulationPoints(graph) {
       // 2. If its visited time is <= low time of adjacent vertex.
       if (currentVertex === startVertex) {
         // Check that it has at least two independent children.
-        if (visitedSet[currentVertex.getKey()].childrenCount >= 2) {
+        if (visitedSet[currentVertex.getKey()].independantChildrenCount >= 2) {
           articulationPointsSet.push(currentVertex);
         }
       } else {

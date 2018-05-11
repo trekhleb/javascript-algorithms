@@ -55,6 +55,35 @@ describe('articulationPoints', () => {
     ]);
   });
 
+  it('should find articulation points in simple graph with back edge #2', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+    const vertexE = new GraphVertex('E');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+    const edgeCD = new GraphEdge(vertexC, vertexD);
+    const edgeAE = new GraphEdge(vertexA, vertexE);
+    const edgeCE = new GraphEdge(vertexC, vertexE);
+
+    const graph = new Graph();
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeAE)
+      .addEdge(edgeCE)
+      .addEdge(edgeBC)
+      .addEdge(edgeCD);
+
+    const articulationPointsSet = articulationPoints(graph);
+
+    expect(articulationPointsSet).toEqual([
+      vertexC,
+    ]);
+  });
+
   it('should find articulation points in graph', () => {
     const vertexA = new GraphVertex('A');
     const vertexB = new GraphVertex('B');
