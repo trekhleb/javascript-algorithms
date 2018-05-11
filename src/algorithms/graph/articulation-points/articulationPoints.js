@@ -65,13 +65,19 @@ export default function articulationPoints(graph) {
       // Update the low time with the smallest time of adjacent vertices.
       // Get minimum low discovery time from all neighbors.
       /** @param {GraphVertex} neighbor */
-      visitedSet[currentVertex.getKey()].lowDiscoveryTime = currentVertex.getNeighbors().reduce(
-        (lowestDiscoveryTime, neighbor) => {
-          const neighborLowTime = visitedSet[neighbor.getKey()].lowDiscoveryTime;
-          return neighborLowTime < lowestDiscoveryTime ? neighborLowTime : lowestDiscoveryTime;
-        },
-        visitedSet[currentVertex.getKey()].lowDiscoveryTime,
-      );
+      visitedSet[currentVertex.getKey()].lowDiscoveryTime = currentVertex.getNeighbors()
+        .filter(earlyNeighbor => earlyNeighbor.getKey() !== previousVertex.getKey())
+        /**
+         * @param {number} lowestDiscoveryTime
+         * @param {GraphVertex} neighbor
+         */
+        .reduce(
+          (lowestDiscoveryTime, neighbor) => {
+            const neighborLowTime = visitedSet[neighbor.getKey()].lowDiscoveryTime;
+            return neighborLowTime < lowestDiscoveryTime ? neighborLowTime : lowestDiscoveryTime;
+          },
+          visitedSet[currentVertex.getKey()].lowDiscoveryTime,
+        );
 
       // Detect whether previous vertex is articulation point or not.
       // To do so we need to check two [OR] conditions:
