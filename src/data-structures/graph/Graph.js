@@ -89,6 +89,25 @@ export default class Graph {
   }
 
   /**
+   * @param {GraphEdge} edge
+   */
+  deleteEdge(edge) {
+    // Delete edge from the list of edges.
+    if (this.edges[edge.getKey()]) {
+      delete this.edges[edge.getKey()];
+    } else {
+      throw new Error('Edge not found in graph');
+    }
+
+    // Try to find and end start vertices and delete edge from them.
+    const startVertex = this.getVertexByKey(edge.startVertex.getKey());
+    const endVertex = this.getVertexByKey(edge.endVertex.getKey());
+
+    startVertex.deleteEdge(edge);
+    endVertex.deleteEdge(edge);
+  }
+
+  /**
    * @param {GraphVertex} startVertex
    * @param {GraphVertex} endVertex
    * @return {(GraphEdge|null)}

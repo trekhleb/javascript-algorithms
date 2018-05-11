@@ -218,4 +218,47 @@ describe('Graph', () => {
 
     expect(graph.getWeight()).toBe(10);
   });
+
+  it('should be possible to delete edges from graph', () => {
+    const graph = new Graph();
+
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+    const edgeAC = new GraphEdge(vertexA, vertexC);
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBC)
+      .addEdge(edgeAC);
+
+    expect(graph.getAllEdges().length).toBe(3);
+
+    graph.deleteEdge(edgeAB);
+
+    expect(graph.getAllEdges().length).toBe(2);
+    expect(graph.getAllEdges()[0].getKey()).toBe(edgeBC.getKey());
+    expect(graph.getAllEdges()[1].getKey()).toBe(edgeAC.getKey());
+  });
+
+  it('should should throw an error when trying to delete not existing edge', () => {
+    function deleteNotExistingEdge() {
+      const graph = new Graph();
+
+      const vertexA = new GraphVertex('A');
+      const vertexB = new GraphVertex('B');
+      const vertexC = new GraphVertex('C');
+
+      const edgeAB = new GraphEdge(vertexA, vertexB);
+      const edgeBC = new GraphEdge(vertexB, vertexC);
+
+      graph.addEdge(edgeAB);
+      graph.deleteEdge(edgeBC);
+    }
+
+    expect(deleteNotExistingEdge).toThrowError();
+  });
 });
