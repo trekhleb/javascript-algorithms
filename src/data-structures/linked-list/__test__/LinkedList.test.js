@@ -67,6 +67,9 @@ describe('LinkedList', () => {
 
     expect(linkedList.head.toString()).toBe('2');
     expect(linkedList.tail.toString()).toBe('2');
+
+    linkedList.delete(2);
+    expect(linkedList.toString()).toBe('');
   });
 
   it('should delete linked list tail', () => {

@@ -67,13 +67,15 @@ export default class LinkedList {
 
     let currentNode = this.head;
 
-    // If next node must be deleted then make next node to be a next next one.
-    while (currentNode.next) {
-      if (this.compare.equal(currentNode.next.value, value)) {
-        deletedNode = currentNode.next;
-        currentNode.next = currentNode.next.next;
-      } else {
-        currentNode = currentNode.next;
+    if (currentNode !== null) {
+      // If next node must be deleted then make next node to be a next next one.
+      while (currentNode.next) {
+        if (this.compare.equal(currentNode.next.value, value)) {
+          deletedNode = currentNode.next;
+          currentNode.next = currentNode.next.next;
+        } else {
+          currentNode = currentNode.next;
+        }
       }
     }
 

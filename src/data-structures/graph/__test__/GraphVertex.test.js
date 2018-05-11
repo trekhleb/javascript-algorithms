@@ -37,6 +37,39 @@ describe('GraphVertex', () => {
     expect(vertexA.getEdges()[0].toString()).toBe('A_B');
   });
 
+  it('should delete edges from vertex', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeAC = new GraphEdge(vertexA, vertexC);
+    vertexA
+      .addEdge(edgeAB)
+      .addEdge(edgeAC);
+
+    expect(vertexA.hasEdge(edgeAB)).toBeTruthy();
+    expect(vertexB.hasEdge(edgeAB)).toBeFalsy();
+
+    expect(vertexA.hasEdge(edgeAC)).toBeTruthy();
+    expect(vertexC.hasEdge(edgeAC)).toBeFalsy();
+
+    expect(vertexA.getEdges().length).toBe(2);
+
+    expect(vertexA.getEdges()[0].toString()).toBe('A_B');
+    expect(vertexA.getEdges()[1].toString()).toBe('A_C');
+
+    vertexA.deleteEdge(edgeAB);
+    expect(vertexA.hasEdge(edgeAB)).toBeFalsy();
+    expect(vertexA.hasEdge(edgeAC)).toBeTruthy();
+    expect(vertexA.getEdges()[0].toString()).toBe('A_C');
+
+    vertexA.deleteEdge(edgeAC);
+    expect(vertexA.hasEdge(edgeAB)).toBeFalsy();
+    expect(vertexA.hasEdge(edgeAC)).toBeFalsy();
+    expect(vertexA.getEdges().length).toBe(0);
+  });
+
   it('should return vertex neighbors in case if current node is start one', () => {
     const vertexA = new GraphVertex('A');
     const vertexB = new GraphVertex('B');
