@@ -14,7 +14,7 @@ class VisitMetadata {
 }
 
 /**
- * Tarjan's algorithm for rinding articulation points in graph.
+ * Tarjan's algorithm for finding articulation points in graph.
  *
  * @param {Graph} graph
  * @return {GraphVertex[]}
