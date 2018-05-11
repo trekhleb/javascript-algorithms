@@ -23,10 +23,9 @@ describe('articulationPoints', () => {
 
     const articulationPointsSet = articulationPoints(graph);
 
-    expect(articulationPointsSet).toEqual([
-      vertexC,
-      vertexB,
-    ]);
+    expect(articulationPointsSet.length).toBe(2);
+    expect(articulationPointsSet[0].getKey()).toBe(vertexC.getKey());
+    expect(articulationPointsSet[1].getKey()).toBe(vertexB.getKey());
   });
 
   it('should find articulation points in simple graph with back edge', () => {
@@ -50,9 +49,8 @@ describe('articulationPoints', () => {
 
     const articulationPointsSet = articulationPoints(graph);
 
-    expect(articulationPointsSet).toEqual([
-      vertexC,
-    ]);
+    expect(articulationPointsSet.length).toBe(1);
+    expect(articulationPointsSet[0].getKey()).toBe(vertexC.getKey());
   });
 
   it('should find articulation points in simple graph with back edge #2', () => {
@@ -79,9 +77,8 @@ describe('articulationPoints', () => {
 
     const articulationPointsSet = articulationPoints(graph);
 
-    expect(articulationPointsSet).toEqual([
-      vertexC,
-    ]);
+    expect(articulationPointsSet.length).toBe(1);
+    expect(articulationPointsSet[0].getKey()).toBe(vertexC.getKey());
   });
 
   it('should find articulation points in graph', () => {
@@ -119,12 +116,11 @@ describe('articulationPoints', () => {
 
     const articulationPointsSet = articulationPoints(graph);
 
-    expect(articulationPointsSet).toEqual([
-      vertexF,
-      vertexE,
-      vertexD,
-      vertexC,
-    ]);
+    expect(articulationPointsSet.length).toBe(4);
+    expect(articulationPointsSet[0].getKey()).toBe(vertexF.getKey());
+    expect(articulationPointsSet[1].getKey()).toBe(vertexE.getKey());
+    expect(articulationPointsSet[2].getKey()).toBe(vertexD.getKey());
+    expect(articulationPointsSet[3].getKey()).toBe(vertexC.getKey());
   });
 
   it('should find articulation points in graph starting with articulation root vertex', () => {
@@ -162,12 +158,11 @@ describe('articulationPoints', () => {
 
     const articulationPointsSet = articulationPoints(graph);
 
-    expect(articulationPointsSet).toEqual([
-      vertexF,
-      vertexE,
-      vertexC,
-      vertexD,
-    ]);
+    expect(articulationPointsSet.length).toBe(4);
+    expect(articulationPointsSet[0].getKey()).toBe(vertexF.getKey());
+    expect(articulationPointsSet[1].getKey()).toBe(vertexE.getKey());
+    expect(articulationPointsSet[2].getKey()).toBe(vertexC.getKey());
+    expect(articulationPointsSet[3].getKey()).toBe(vertexD.getKey());
   });
 
   it('should find articulation points in yet another graph #1', () => {
@@ -194,10 +189,9 @@ describe('articulationPoints', () => {
 
     const articulationPointsSet = articulationPoints(graph);
 
-    expect(articulationPointsSet).toEqual([
-      vertexD,
-      vertexC,
-    ]);
+    expect(articulationPointsSet.length).toBe(2);
+    expect(articulationPointsSet[0].getKey()).toBe(vertexD.getKey());
+    expect(articulationPointsSet[1].getKey()).toBe(vertexC.getKey());
   });
 
   it('should find articulation points in yet another graph #2', () => {
@@ -232,8 +226,7 @@ describe('articulationPoints', () => {
 
     const articulationPointsSet = articulationPoints(graph);
 
-    expect(articulationPointsSet).toEqual([
-      vertexC,
-    ]);
+    expect(articulationPointsSet.length).toBe(1);
+    expect(articulationPointsSet[0].getKey()).toBe(vertexC.getKey());
   });
 });
