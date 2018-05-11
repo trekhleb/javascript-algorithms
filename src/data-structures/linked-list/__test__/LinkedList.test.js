@@ -175,4 +175,30 @@ describe('LinkedList', () => {
     expect(node.value.key).toBe('test2');
     expect(linkedList.find({ callback: value => value.key === 'test5' })).toBeNull();
   });
+
+  it('should find node by means of custom compare function', () => {
+    const comparatorFunction = (a, b) => {
+      if (a.customValue === b.customValue) {
+        return 0;
+      }
+
+      return a.customValue < b.customValue ? -1 : 1;
+    };
+
+    const linkedList = new LinkedList(comparatorFunction);
+
+    linkedList
+      .append({ value: 1, customValue: 'test1' })
+      .append({ value: 2, customValue: 'test2' })
+      .append({ value: 3, customValue: 'test3' });
+
+    const node = linkedList.find({
+      value: { value: 2, customValue: 'test2' },
+    });
+
+    expect(node).toBeDefined();
+    expect(node.value.value).toBe(2);
+    expect(node.value.customValue).toBe('test2');
+    expect(linkedList.find({ value: 2, customValue: 'test5' })).toBeNull();
+  });
 });

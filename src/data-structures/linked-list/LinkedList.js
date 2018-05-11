@@ -1,12 +1,18 @@
 import LinkedListNode from './LinkedListNode';
+import Comparator from '../../utils/comparator/Comparator';
 
 export default class LinkedList {
-  constructor() {
+  /**
+   * @param {Function} [comparatorFunction]
+   */
+  constructor(comparatorFunction) {
     /** @var LinkedListNode */
     this.head = null;
 
     /** @var LinkedListNode */
     this.tail = null;
+
+    this.compare = new Comparator(comparatorFunction);
   }
 
   /**
@@ -54,7 +60,7 @@ export default class LinkedList {
     let deletedNode = null;
 
     // If the head must be deleted then make 2nd node to be a head.
-    if (this.head.value === value) {
+    if (this.compare.equal(this.head.value, value)) {
       deletedNode = this.head;
       this.head = this.head.next;
     }
@@ -63,7 +69,7 @@ export default class LinkedList {
 
     // If next node must be deleted then make next node to be a next next one.
     while (currentNode.next) {
-      if (currentNode.next.value === value) {
+      if (this.compare.equal(currentNode.next.value, value)) {
         deletedNode = currentNode.next;
         currentNode.next = currentNode.next.next;
       } else {
@@ -72,7 +78,7 @@ export default class LinkedList {
     }
 
     // Check if tail must be deleted.
-    if (this.tail.value === value) {
+    if (this.compare.equal(this.tail.value, value)) {
       this.tail = currentNode;
     }
 
@@ -99,7 +105,7 @@ export default class LinkedList {
       }
 
       // If value is specified then try to compare by value..
-      if (value !== undefined && currentNode.value === value) {
+      if (value !== undefined && this.compare.equal(currentNode.value, value)) {
         return currentNode;
       }
 
