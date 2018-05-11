@@ -38,14 +38,14 @@ export default function articulationPoints(graph) {
      * @param {GraphVertex} previousVertex
      */
     enterVertex: ({ currentVertex, previousVertex }) => {
+      // Tick discovery time.
+      discoveryTime += 1;
+
       // Put current vertex to visited set.
       visitedSet[currentVertex.getKey()] = new VisitMetadata({
         discoveryTime,
         lowDiscoveryTime: discoveryTime,
       });
-
-      // Tick discovery time.
-      discoveryTime += 1;
 
       if (previousVertex) {
         // Update children counter for previous vertex.

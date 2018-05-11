@@ -21,6 +21,6 @@ An undirected connected graph with no cut edges
 
 ## References
 
+- [GeeksForGeeks on YouTube](https://www.youtube.com/watch?time_continue=110&v=thLQYBlz2DM)
 - [Wikipedia](https://en.wikipedia.org/wiki/Bridge_%28graph_theory%29#Tarjan.27s_Bridge-finding_algorithm)
 - [GeeksForGeeks](https://www.geeksforgeeks.org/bridge-in-a-graph/)
-- [GeeksForGeeks on YouTube](https://www.youtube.com/watch?time_continue=110&v=thLQYBlz2DM)
