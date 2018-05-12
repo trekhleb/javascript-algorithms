@@ -21,7 +21,7 @@ describe('articulationPoints', () => {
       .addEdge(edgeBC)
       .addEdge(edgeCD);
 
-    const articulationPointsSet = articulationPoints(graph);
+    const articulationPointsSet = Object.values(articulationPoints(graph));
 
     expect(articulationPointsSet.length).toBe(2);
     expect(articulationPointsSet[0].getKey()).toBe(vertexC.getKey());
@@ -47,7 +47,7 @@ describe('articulationPoints', () => {
       .addEdge(edgeBC)
       .addEdge(edgeCD);
 
-    const articulationPointsSet = articulationPoints(graph);
+    const articulationPointsSet = Object.values(articulationPoints(graph));
 
     expect(articulationPointsSet.length).toBe(1);
     expect(articulationPointsSet[0].getKey()).toBe(vertexC.getKey());
@@ -75,7 +75,7 @@ describe('articulationPoints', () => {
       .addEdge(edgeBC)
       .addEdge(edgeCD);
 
-    const articulationPointsSet = articulationPoints(graph);
+    const articulationPointsSet = Object.values(articulationPoints(graph));
 
     expect(articulationPointsSet.length).toBe(1);
     expect(articulationPointsSet[0].getKey()).toBe(vertexC.getKey());
@@ -114,7 +114,7 @@ describe('articulationPoints', () => {
       .addEdge(edgeGF)
       .addEdge(edgeFH);
 
-    const articulationPointsSet = articulationPoints(graph);
+    const articulationPointsSet = Object.values(articulationPoints(graph));
 
     expect(articulationPointsSet.length).toBe(4);
     expect(articulationPointsSet[0].getKey()).toBe(vertexF.getKey());
@@ -156,7 +156,7 @@ describe('articulationPoints', () => {
       .addEdge(edgeGF)
       .addEdge(edgeFH);
 
-    const articulationPointsSet = articulationPoints(graph);
+    const articulationPointsSet = Object.values(articulationPoints(graph));
 
     expect(articulationPointsSet.length).toBe(4);
     expect(articulationPointsSet[0].getKey()).toBe(vertexF.getKey());
@@ -187,7 +187,7 @@ describe('articulationPoints', () => {
       .addEdge(edgeCD)
       .addEdge(edgeDE);
 
-    const articulationPointsSet = articulationPoints(graph);
+    const articulationPointsSet = Object.values(articulationPoints(graph));
 
     expect(articulationPointsSet.length).toBe(2);
     expect(articulationPointsSet[0].getKey()).toBe(vertexD.getKey());
@@ -224,7 +224,7 @@ describe('articulationPoints', () => {
       .addEdge(edgeEG)
       .addEdge(edgeFG);
 
-    const articulationPointsSet = articulationPoints(graph);
+    const articulationPointsSet = Object.values(articulationPoints(graph));
 
     expect(articulationPointsSet.length).toBe(1);
     expect(articulationPointsSet[0].getKey()).toBe(vertexC.getKey());

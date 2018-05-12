@@ -17,7 +17,7 @@ class VisitMetadata {
  * Tarjan's algorithm for finding articulation points in graph.
  *
  * @param {Graph} graph
- * @return {GraphVertex[]}
+ * @return {Object}
  */
 export default function articulationPoints(graph) {
   // Set of vertices we've already visited during DFS.
@@ -109,5 +109,5 @@ export default function articulationPoints(graph) {
   // Do Depth First Search traversal over submitted graph.
   depthFirstSearch(graph, startVertex, dfsCallbacks);
 
-  return Object.values(articulationPointsSet);
+  return articulationPointsSet;
 }

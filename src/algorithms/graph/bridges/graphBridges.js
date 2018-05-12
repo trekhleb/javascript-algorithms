@@ -12,7 +12,7 @@ class VisitMetadata {
 
 /**
  * @param {Graph} graph
- * @return {GraphVertex[]}
+ * @return {Object}
  */
 export default function graphBridges(graph) {
   // Set of vertices we've already visited during DFS.
@@ -91,5 +91,5 @@ export default function graphBridges(graph) {
   // Do Depth First Search traversal over submitted graph.
   depthFirstSearch(graph, startVertex, dfsCallbacks);
 
-  return Object.values(bridges);
+  return bridges;
 }

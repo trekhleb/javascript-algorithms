@@ -74,7 +74,7 @@
   * [Topological Sorting](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/topological-sorting) - DFS method
   * [Articulation Points](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/articulation-points) - Tarjan's algorithm (DFS based)
   * [Bridges](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bridges) - DFS based algorithm
-  * [Eulerian Path and Eulerian Circuit](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/eulerian-path)
+  * [Eulerian Path and Eulerian Circuit](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/eulerian-path) - Fleury's algorithm
   * Strongly Connected Component algorithm
   * Shortest Path Faster Algorithm (SPFA)
 * **Uncategorized**  
