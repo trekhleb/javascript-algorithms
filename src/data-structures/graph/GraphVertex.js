@@ -120,6 +120,15 @@ export default class GraphVertex {
   }
 
   /**
+   * @return {GraphVertex}
+   */
+  deleteAllEdges() {
+    this.getEdges().forEach(edge => this.deleteEdge(edge));
+
+    return this;
+  }
+
+  /**
    * @param {function} [callback]
    * @returns {string}
    */
