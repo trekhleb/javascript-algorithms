@@ -32,3 +32,4 @@ therefore, a solution does not exist.
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Eulerian_path)
+- [YouTube](https://www.youtube.com/watch?v=vvP4Fg4r-Ns)
