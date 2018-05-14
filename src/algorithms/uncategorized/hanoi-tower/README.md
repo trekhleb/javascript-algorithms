@@ -21,7 +21,7 @@ Animation of an iterative algorithm solving 6-disk problem
 
 With `3` disks, the puzzle can be solved in `7` moves. The minimal 
 number of moves required to solve a Tower of Hanoi puzzle 
-is `2n − 1`, where `n` is the number of disks.
+is `2^n − 1`, where `n` is the number of disks.
 
 ## References
 

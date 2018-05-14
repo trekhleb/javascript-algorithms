@@ -3,10 +3,11 @@ import hanoiTower from '../hanoiTower';
 describe('hanoiTower', () => {
   it('should solve tower of hanoi puzzle with 2 discs', () => {
     const moveCallbackMock = jest.fn();
+    const numberOfDiscs = 2;
 
-    hanoiTower(2, moveCallbackMock);
+    hanoiTower(numberOfDiscs, moveCallbackMock);
 
-    expect(moveCallbackMock).toHaveBeenCalledTimes(3);
+    expect(moveCallbackMock).toHaveBeenCalledTimes((2 ** numberOfDiscs) - 1);
 
     expect(moveCallbackMock.mock.calls[0][0]).toBe(1);
     expect(moveCallbackMock.mock.calls[0][1]).toEqual([1, 2]);
@@ -23,17 +24,19 @@ describe('hanoiTower', () => {
 
   it('should solve tower of hanoi puzzle with 3 discs', () => {
     const moveCallbackMock = jest.fn();
+    const numberOfDiscs = 3;
 
-    hanoiTower(3, moveCallbackMock);
+    hanoiTower(numberOfDiscs, moveCallbackMock);
 
-    expect(moveCallbackMock).toHaveBeenCalledTimes(7);
+    expect(moveCallbackMock).toHaveBeenCalledTimes((2 ** numberOfDiscs) - 1);
   });
 
   it('should solve tower of hanoi puzzle with 6 discs', () => {
     const moveCallbackMock = jest.fn();
+    const numberOfDiscs = 6;
 
-    hanoiTower(6, moveCallbackMock);
+    hanoiTower(numberOfDiscs, moveCallbackMock);
 
-    expect(moveCallbackMock).toHaveBeenCalledTimes(63);
+    expect(moveCallbackMock).toHaveBeenCalledTimes((2 ** numberOfDiscs) - 1);
   });
 });
