@@ -31,7 +31,7 @@ export default class Stack {
   }
 
   /**
-   * @return {LinkedListNode}
+   * @return {*}
    */
   pop() {
     const removedTail = this.linkedList.deleteTail();
