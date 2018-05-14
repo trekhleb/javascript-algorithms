@@ -261,4 +261,43 @@ describe('Graph', () => {
 
     expect(deleteNotExistingEdge).toThrowError();
   });
+
+  it('should be possible to reverse graph', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeAC = new GraphEdge(vertexA, vertexC);
+    const edgeCD = new GraphEdge(vertexC, vertexD);
+
+    const graph = new Graph(true);
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeAC)
+      .addEdge(edgeCD);
+
+    expect(graph.toString()).toBe('A,B,C,D');
+    expect(graph.getAllEdges().length).toBe(3);
+    expect(graph.getNeighbors(vertexA).length).toBe(2);
+    expect(graph.getNeighbors(vertexA)[0].getKey()).toBe(vertexB.getKey());
+    expect(graph.getNeighbors(vertexA)[1].getKey()).toBe(vertexC.getKey());
+    expect(graph.getNeighbors(vertexB).length).toBe(0);
+    expect(graph.getNeighbors(vertexC).length).toBe(1);
+    expect(graph.getNeighbors(vertexC)[0].getKey()).toBe(vertexD.getKey());
+    expect(graph.getNeighbors(vertexD).length).toBe(0);
+
+    graph.reverse();
+
+    expect(graph.toString()).toBe('A,B,C,D');
+    expect(graph.getAllEdges().length).toBe(3);
+    expect(graph.getNeighbors(vertexA).length).toBe(0);
+    expect(graph.getNeighbors(vertexB).length).toBe(1);
+    expect(graph.getNeighbors(vertexB)[0].getKey()).toBe(vertexA.getKey());
+    expect(graph.getNeighbors(vertexC).length).toBe(1);
+    expect(graph.getNeighbors(vertexC)[0].getKey()).toBe(vertexA.getKey());
+    expect(graph.getNeighbors(vertexD).length).toBe(1);
+    expect(graph.getNeighbors(vertexD)[0].getKey()).toBe(vertexC.getKey());
+  });
 });

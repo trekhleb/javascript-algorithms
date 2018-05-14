@@ -139,6 +139,26 @@ export default class Graph {
   }
 
   /**
+   * Reverse all the edges in directed graph.
+   * @return {Graph}
+   */
+  reverse() {
+    /** @param {GraphEdge} edge */
+    this.getAllEdges().forEach((edge) => {
+      // Delete straight edge from graph and from vertices.
+      this.deleteEdge(edge);
+
+      // Reverse the edge.
+      edge.reverse();
+
+      // Add reversed edge back to the graph and its vertices.
+      this.addEdge(edge);
+    });
+
+    return this;
+  }
+
+  /**
    * @return {string}
    */
   toString() {
