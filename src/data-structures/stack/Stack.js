@@ -13,7 +13,7 @@ export default class Stack {
   }
 
   /**
-   * @return {LinkedListNode}
+   * @return {*}
    */
   peek() {
     if (!this.linkedList.tail) {
