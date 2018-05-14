@@ -76,7 +76,6 @@
   * [Bridges](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bridges) - DFS based algorithm
   * [Eulerian Path and Eulerian Circuit](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/eulerian-path) - Fleury's algorithm
   * [Strongly Connected Components](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
-  * Shortest Path Faster Algorithm (SPFA)
 * **Uncategorized**  
   * Union-Find
   * Maze
