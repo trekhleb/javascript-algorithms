@@ -78,6 +78,7 @@
   * [Strongly Connected Components](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
 * **Uncategorized**  
   * [Tower of Hanoi](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/hanoi-tower)
+  * [N-Queens Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/n-queens)
   * Union-Find
   * Maze
   * Sudoku
@@ -110,9 +111,15 @@
   * [Maximum Subarray](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray)
   * [Bellman-Ford Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
 * **Backtracking**
+  * [N-Queens Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/n-queens)
 * **Branch & Bound**
 
-## Running Tests
+## How to use this repository
+
+**Install all dependencies**
+```
+npm i
+```
 
 **Run all tests**
 ```
@@ -135,11 +142,11 @@ Then just simply run the following command to test if your playground code works
 npm test -- -t 'playground'
 ```
 
-## Useful links
+## Useful Information
+
+### References
 
 [▶ Data Structures and Algorithms on YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
-
-## Useful Information
 
 ### Big O Notation
     
@@ -185,4 +192,4 @@ Below is the list of some of the most used Big O notations and their performance
 | **Heap sort**         | n log(n)  | n log(n)  | n log(n)      | 1         | No        |
 | **Merge sort**        | n log(n)  | n log(n)  | n log(n)      | n         | Yes       |
 | **Quick sort**        | n log(n)  | n log(n)  | n^2           | log(n)    | No        |
-| **Shell sort**        | n log(n)  | depends on gap sequence  | n (log(n))^2  | 1         | No        |
+| **Shell sort**        | n log(n)  | depends on gap sequence   | n (log(n))^2  | 1         | No        |
