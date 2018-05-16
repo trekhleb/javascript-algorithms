@@ -29,7 +29,7 @@ Generate all possible configurations of queens on board and print a
 configuration that satisfies the given constraints.
 
 ```
-while there are untried conflagrations
+while there are untried configurations
 {
    generate the next configuration
    if queens don't attack in this configuration then
