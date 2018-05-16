@@ -300,4 +300,85 @@ describe('Graph', () => {
     expect(graph.getNeighbors(vertexD).length).toBe(1);
     expect(graph.getNeighbors(vertexD)[0].getKey()).toBe(vertexC.getKey());
   });
+
+  it('should return vertices indices', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+    const edgeCD = new GraphEdge(vertexC, vertexD);
+    const edgeBD = new GraphEdge(vertexB, vertexD);
+
+    const graph = new Graph();
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBC)
+      .addEdge(edgeCD)
+      .addEdge(edgeBD);
+
+    const verticesIndices = graph.getVerticesIndices();
+    expect(verticesIndices).toEqual({
+      A: 0,
+      B: 1,
+      C: 2,
+      D: 3,
+    });
+  });
+
+  it('should generate adjacency matrix for undirected graph', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+    const edgeCD = new GraphEdge(vertexC, vertexD);
+    const edgeBD = new GraphEdge(vertexB, vertexD);
+
+    const graph = new Graph();
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBC)
+      .addEdge(edgeCD)
+      .addEdge(edgeBD);
+
+    const adjacencyMatrix = graph.getAdjacencyMatrix();
+    expect(adjacencyMatrix).toEqual([
+      [0, 1, 0, 0],
+      [1, 0, 1, 1],
+      [0, 1, 0, 1],
+      [0, 1, 1, 0],
+    ]);
+  });
+
+  it('should generate adjacency matrix for directed graph', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB, 2);
+    const edgeBC = new GraphEdge(vertexB, vertexC, 1);
+    const edgeCD = new GraphEdge(vertexC, vertexD, 5);
+    const edgeBD = new GraphEdge(vertexB, vertexD, 7);
+
+    const graph = new Graph(true);
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBC)
+      .addEdge(edgeCD)
+      .addEdge(edgeBD);
+
+    const adjacencyMatrix = graph.getAdjacencyMatrix();
+    expect(adjacencyMatrix).toEqual([
+      [0, 2, 0, 0],
+      [0, 0, 1, 7],
+      [0, 0, 0, 5],
+      [0, 0, 0, 0],
+    ]);
+  });
 });

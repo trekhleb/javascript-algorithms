@@ -159,6 +159,43 @@ export default class Graph {
   }
 
   /**
+   * @return {object}
+   */
+  getVerticesIndices() {
+    const verticesIndices = {};
+    this.getAllVertices().forEach((vertex, index) => {
+      verticesIndices[vertex.getKey()] = index;
+    });
+
+    return verticesIndices;
+  }
+
+  /**
+   * @return {*[][]}
+   */
+  getAdjacencyMatrix() {
+    const vertices = this.getAllVertices();
+    const verticesIndices = this.getVerticesIndices();
+
+    // Init matrix with zeros.
+    const adjacencyMatrix = Array(vertices.length).fill(null).map(() => {
+      return Array(vertices.length).fill(0);
+    });
+
+    // Fill the columns.
+    vertices.forEach((vertex, vertexIndex) => {
+      vertex.getNeighbors().forEach((neighbor) => {
+        const neighborIndex = verticesIndices[neighbor.getKey()];
+        adjacencyMatrix[vertexIndex][neighborIndex] = this.isDirected ?
+          this.findEdge(vertex, neighbor).weight :
+          1;
+      });
+    });
+
+    return adjacencyMatrix;
+  }
+
+  /**
    * @return {string}
    */
   toString() {
