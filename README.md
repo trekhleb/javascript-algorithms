@@ -82,7 +82,6 @@
   * [N-Queens Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/n-queens)
   * [Knight's Tour](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/knight-tour)
   * Union-Find
-  * Maze
   * Sudoku
   
 ### Algorithms by Paradigm
