@@ -5,28 +5,28 @@
 
 ## Data Structures
 
-1. [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
-2. [Queue](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/queue)
-3. [Stack](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/stack)
-4. [Hash Table](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/hash-table)
-5. [Heap](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/heap)
-6. [Priority Queue](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/priority-queue)
-7. [Trie](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/trie)
-8. [Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
-    8.1. [Binary Search Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
-    8.2. [AVL Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/avl-tree)
-    8.3. Red-Black Tree
-    8.4. Suffix Tree
-    8.5. Segment Tree or Interval Tree
-    8.6. Binary Indexed Tree or Fenwick Tree
-9. [Graph](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph) (both directed and undirected)
-9. [Disjoint Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/disjoint-set)
+* [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
+* [Queue](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/queue)
+* [Stack](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/stack)
+* [Hash Table](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/hash-table)
+* [Heap](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/heap)
+* [Priority Queue](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/priority-queue)
+* [Trie](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/trie)
+* [Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
+    * [Binary Search Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
+    * [AVL Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/avl-tree)
+    * Red-Black Tree
+    * Suffix Tree
+    * Segment Tree or Interval Tree
+    * Binary Indexed Tree or Fenwick Tree
+* [Graph](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph) (both directed and undirected)
+* [Disjoint Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/disjoint-set)
 
 ## Algorithms
 
 ### Algorithms by Topic
 
-1. **Math**
+* **Math**
   * [Factorial](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/factorial)
   * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
   * [Primality Test](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/primality-test) (trial division method)
