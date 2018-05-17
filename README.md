@@ -119,7 +119,7 @@
 
 **Install all dependencies**
 ```
-npm i
+npm install
 ```
 
 **Run all tests**
