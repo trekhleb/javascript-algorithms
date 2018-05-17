@@ -3,6 +3,13 @@
 [![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
+This repository contains JavaScript based examples of many 
+popular algorithms and data structures.
+
+Each algorithm and data structure have its own separate READMEs 
+with related explanations and link for further reading and YouTube
+videos.
+
 ## Data Structures
 
 * [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
