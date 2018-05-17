@@ -6,7 +6,7 @@
 This repository contains JavaScript based examples of many 
 popular algorithms and data structures.
 
-Each algorithm and data structure have its own separate READMEs 
+Each algorithm and data structure have its own separate README 
 with related explanations and link for further reading and YouTube
 videos.
 
