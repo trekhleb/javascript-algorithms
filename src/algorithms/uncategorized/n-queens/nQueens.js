@@ -72,6 +72,7 @@ function nQueensRecursive(solutions, previousQueensPositions, queensCount, rowIn
       // Try to place all other queens as well.
       nQueensRecursive(solutions, queensPositions, queensCount, rowIndex + 1);
 
+      // BACKTRACKING.
       // Remove the queen from the row to avoid isSafe() returning false.
       queensPositions[rowIndex] = null;
     }

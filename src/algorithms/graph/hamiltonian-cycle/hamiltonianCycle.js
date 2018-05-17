@@ -91,6 +91,7 @@ function hamiltonianCycleRecursive({
         cycle: currentCycle,
       });
 
+      // BACKTRACKING.
       // Remove candidate vertex from cycle path in order to try another one.
       currentCycle.pop();
     }
