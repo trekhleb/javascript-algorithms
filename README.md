@@ -13,12 +13,12 @@
 6. [Priority Queue](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/priority-queue)
 7. [Trie](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/trie)
 8. [Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
-    * [Binary Search Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
-    * [AVL Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/avl-tree)
-    * Red-Black Tree
-    * Suffix Tree
-    * Segment Tree or Interval Tree
-    * Binary Indexed Tree or Fenwick Tree
+    8.1. [Binary Search Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
+    8.2. [AVL Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/avl-tree)
+    8.3. Red-Black Tree
+    8.4. Suffix Tree
+    8.5. Segment Tree or Interval Tree
+    8.6. Binary Indexed Tree or Fenwick Tree
 9. [Graph](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph) (both directed and undirected)
 9. [Disjoint Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/disjoint-set)
 
@@ -26,7 +26,7 @@
 
 ### Algorithms by Topic
 
-* **Math**
+1. **Math**
   * [Factorial](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/factorial)
   * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
   * [Primality Test](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/primality-test) (trial division method)
