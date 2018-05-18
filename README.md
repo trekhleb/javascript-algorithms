@@ -139,7 +139,7 @@ npm test
 npm test -- -t 'LinkedList'
 ```
 
-## Playground
+**Playground**
 
 You may play with data-structures and algorithms in `./src/playground/playground.js` file and write
 tests for it in `./src/playground/__test__/playground.test.js`.
