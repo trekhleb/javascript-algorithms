@@ -104,6 +104,7 @@ of algorithms. It is an abstraction higher than the notion of an algorithm, just
 algorithm is an abstraction higher than a computer program.
 
 * **Brute Force** - look at all the possibilities and selects the best solution
+  * [Maximum Subarray](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray)
 * **Greedy** - choose the best option at the current time, without any consideration for the future
   * [Unbound Knapsack Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem)
   * [Dijkstra Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
