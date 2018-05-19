@@ -36,6 +36,9 @@ the data.
 
 ## Algorithms
 
+Algorithm is an unambiguous specification of how to solve a class of problems. Algorithm is
+a set of rules that precisely defines a sequence of operations.
+
 ### Algorithms by Topic
 
 * **Math**
