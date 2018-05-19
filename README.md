@@ -99,6 +99,10 @@ a set of rules that precisely defines a sequence of operations.
   
 ### Algorithms by Paradigm
 
+An algorithmic paradigm is a generic method or approach which underlies the design of a class 
+of algorithms. It is an abstraction higher than the notion of an algorithm, just as an 
+algorithm is an abstraction higher than a computer program.
+
 * **Greedy**
   * [Unbound Knapsack Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem)
   * [Dijkstra Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
