@@ -24,4 +24,5 @@ root node, at the top, has no parent.
 
 ## References
 
-[Wikipedia](https://en.wikipedia.org/wiki/Tree_(data_structure))
+- [Wikipedia](https://en.wikipedia.org/wiki/Tree_(data_structure))
+- [YouTube](https://www.youtube.com/watch?v=oSWTXtMglKE&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=8)

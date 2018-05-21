@@ -21,4 +21,5 @@ Simple representation of a stack runtime with push and pop operations.
 
 ## References
 
-[Wikipedia](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
+- [Wikipedia](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
+- [YouTube](https://www.youtube.com/watch?v=wjI1WNcIntg&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=3&)

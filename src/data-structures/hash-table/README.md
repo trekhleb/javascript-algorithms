@@ -22,4 +22,5 @@ Hash collision resolved by separate chaining.
 
 ## References
 
-[Wikipedia](https://en.wikipedia.org/wiki/Hash_table)
+- [Wikipedia](https://en.wikipedia.org/wiki/Hash_table)
+- [YouTube](https://www.youtube.com/watch?v=shs0KM3wKv8&index=4&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

@@ -19,4 +19,5 @@ prefix tree.
 
 ## References
 
-[Wikipedia](https://en.wikipedia.org/wiki/Trie)
+- [Wikipedia](https://en.wikipedia.org/wiki/Trie)
+- [YouTube](https://www.youtube.com/watch?v=zIjfhVPRZCg&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=7&t=0s)

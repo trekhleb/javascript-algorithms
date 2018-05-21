@@ -12,4 +12,5 @@ called the root node.
 
 ## References
 
-[Wikipedia](https://en.wikipedia.org/wiki/Heap_(data_structure))
+- [Wikipedia](https://en.wikipedia.org/wiki/Heap_(data_structure))
+- [YouTube](https://www.youtube.com/watch?v=t0Cq6tVNRBA&index=5&t=0s&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

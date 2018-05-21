@@ -17,4 +17,4 @@ After some operations of *Union*, some sets are grouped together.
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)
-- [By Abdul Bari on YouTube](https://www.youtube.com/watch?v=wU6udHRIkcc)
+- [By Abdul Bari on YouTube](https://www.youtube.com/watch?v=wU6udHRIkcc&index=14&t=0s&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
