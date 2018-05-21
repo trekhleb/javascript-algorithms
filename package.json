@@ -1,6 +1,6 @@
 {
   "name": "javascript-algorithms",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Algorithms and data-structures implemented on JavaScript",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,10 @@
     "data-structures",
     "javascript",
     "algorithm",
-    "javascript-algorithms"
+    "javascript-algorithms",
+    "sorting-algorithms",
+    "graph",
+    "tree"
   ],
   "author": "Oleksii Trekhleb (https://www.linkedin.com/in/trekhleb/)",
   "license": "MIT",
