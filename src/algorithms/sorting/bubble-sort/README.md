@@ -11,4 +11,5 @@ are needed, which indicates that the list is sorted.
 
 ## References
 
-[Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
+- [Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
+- [YouTube](https://www.youtube.com/watch?v=6Gv8vg0kcHc&index=27&t=0s&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

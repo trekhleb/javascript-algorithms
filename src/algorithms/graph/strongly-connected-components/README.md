@@ -13,4 +13,4 @@ Graph with strongly connected components marked
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Strongly_connected_component)
-- [YouTube](https://www.youtube.com/watch?v=RpgcYiky7uw)
+- [YouTube](https://www.youtube.com/watch?v=RpgcYiky7uw&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

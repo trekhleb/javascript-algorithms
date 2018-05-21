@@ -43,4 +43,4 @@ input sequence.
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Longest_increasing_subsequence)
-- [Dynamic Programming Approach on YouTube](https://www.youtube.com/watch?v=CE2b_-XfVDk)
+- [Dynamic Programming Approach on YouTube](https://www.youtube.com/watch?v=CE2b_-XfVDk&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

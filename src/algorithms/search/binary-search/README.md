@@ -14,4 +14,5 @@ in the array.
 
 ## References
 
-[Wikipedia](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+- [Wikipedia](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+- [YouTube](https://www.youtube.com/watch?v=P3YID7liBug&index=29&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

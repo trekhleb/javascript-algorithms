@@ -18,4 +18,4 @@ Worst-case space complexity `O(|V|)`
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Bellman%E2%80%93Ford_algorithm)
-- [On YouTube by Michael Sambol](https://www.youtube.com/watch?v=obWXjtg0L64)
+- [On YouTube by Michael Sambol](https://www.youtube.com/watch?v=obWXjtg0L64&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

@@ -21,4 +21,4 @@ ABABC
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Longest_common_substring_problem)
-- [YouTube](https://www.youtube.com/watch?v=BysNXJHzCEs)
+- [YouTube](https://www.youtube.com/watch?v=BysNXJHzCEs&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

@@ -22,4 +22,4 @@ made to a revision-controlled collection of files.
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Longest_common_subsequence_problem)
-- [YouTube](https://www.youtube.com/watch?v=NnD96abizww)
+- [YouTube](https://www.youtube.com/watch?v=NnD96abizww&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

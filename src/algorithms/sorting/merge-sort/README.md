@@ -24,4 +24,5 @@ emulate merge sort (top-down).
 
 ## References
 
-[Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)
+- [Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)
+- [YouTube](https://www.youtube.com/watch?v=KF2j-9iSf4Q&index=27&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

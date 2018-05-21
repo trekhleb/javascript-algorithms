@@ -16,4 +16,4 @@ with the largest sum is `4, −1, 2, 1`, with sum `6`.
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Maximum_subarray_problem)
-- [YouTube](https://www.youtube.com/watch?v=ohHWQf1HDfU)
+- [YouTube](https://www.youtube.com/watch?v=ohHWQf1HDfU&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

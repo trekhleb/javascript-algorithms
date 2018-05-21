@@ -69,5 +69,5 @@ and return false.
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Eight_queens_puzzle)
 - [GeeksForGeeks](https://www.geeksforgeeks.org/backtracking-set-3-n-queen-problem/)
-- [On YouTube by Abdul Bari](https://www.youtube.com/watch?v=xFv_Hl4B83A)
-- [On YouTube by Tushar Roy](https://www.youtube.com/watch?v=xouin83ebxE)
+- [On YouTube by Abdul Bari](https://www.youtube.com/watch?v=xFv_Hl4B83A&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+- [On YouTube by Tushar Roy](https://www.youtube.com/watch?v=xouin83ebxE&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

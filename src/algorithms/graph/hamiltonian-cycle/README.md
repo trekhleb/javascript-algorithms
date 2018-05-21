@@ -44,5 +44,5 @@ then we return false.
 ## References
 
 - [Hamiltonian path on Wikipedia](https://en.wikipedia.org/wiki/Hamiltonian_path)
-- [Hamiltonian path on YouTube](https://www.youtube.com/watch?v=dQr4wZCiJJ4)
+- [Hamiltonian path on YouTube](https://www.youtube.com/watch?v=dQr4wZCiJJ4&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 - [Hamiltonian cycle on GeeksForGeeks](https://www.geeksforgeeks.org/backtracking-set-7-hamiltonian-cycle/)

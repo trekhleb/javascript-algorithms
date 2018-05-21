@@ -52,4 +52,4 @@ next dependency has its dependent packages to be installed in prior.
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Topological_sorting)
-- [Topological Sorting on YouTube by Tushar Roy](https://www.youtube.com/watch?v=ddTC4Zovtbc)
+- [Topological Sorting on YouTube by Tushar Roy](https://www.youtube.com/watch?v=ddTC4Zovtbc&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

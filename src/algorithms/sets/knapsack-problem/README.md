@@ -66,4 +66,4 @@ and ![unbounded knapsack](https://wikimedia.org/api/rest_v1/media/math/render/sv
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Knapsack_problem)
-- [0/1 Knapsack Problem on YouTube](https://www.youtube.com/watch?v=8LusJS5-AGo)
+- [0/1 Knapsack Problem on YouTube](https://www.youtube.com/watch?v=8LusJS5-AGo&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

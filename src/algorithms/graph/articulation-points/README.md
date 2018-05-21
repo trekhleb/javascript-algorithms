@@ -19,4 +19,4 @@ vertex removing which increases number of connected components.
 ## References
 
 - [GeeksForGeeks](https://www.geeksforgeeks.org/articulation-points-or-cut-vertices-in-a-graph/)
-- [YouTube](https://www.youtube.com/watch?v=2kREIkF9UAs)
+- [YouTube](https://www.youtube.com/watch?v=2kREIkF9UAs&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

@@ -21,5 +21,5 @@ and updates the neighbor's distance if smaller. Mark visited
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
-- [On YouTube by Nathaniel Fan](https://www.youtube.com/watch?v=gdmfOwyQlcI)
-- [On YouTube by Tushar Roy](https://www.youtube.com/watch?v=lAXZGERcDf4)
+- [On YouTube by Nathaniel Fan](https://www.youtube.com/watch?v=gdmfOwyQlcI&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+- [On YouTube by Tushar Roy](https://www.youtube.com/watch?v=lAXZGERcDf4&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

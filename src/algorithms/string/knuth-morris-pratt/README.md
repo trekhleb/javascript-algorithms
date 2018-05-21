@@ -16,4 +16,4 @@ of previously matched characters.
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Knuth%E2%80%93Morris%E2%80%93Pratt_algorithm)
-- [YouTube](https://www.youtube.com/watch?v=GTJr8OvyEVQ)
+- [YouTube](https://www.youtube.com/watch?v=GTJr8OvyEVQ&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

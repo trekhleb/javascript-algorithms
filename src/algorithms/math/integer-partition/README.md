@@ -31,4 +31,4 @@ are conjugate partitions.
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Partition_(number_theory))
-- [YouTube](https://www.youtube.com/watch?v=ZaVM057DuzE)
+- [YouTube](https://www.youtube.com/watch?v=ZaVM057DuzE&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

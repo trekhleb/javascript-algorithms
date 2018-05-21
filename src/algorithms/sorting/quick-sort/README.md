@@ -25,4 +25,5 @@ The horizontal lines are pivot values.
 
 ## References
 
-[Wikipedia](https://en.wikipedia.org/wiki/Quicksort)
+- [Wikipedia](https://en.wikipedia.org/wiki/Quicksort)
+- [YouTube](https://www.youtube.com/watch?v=SLauY6PpjW4&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

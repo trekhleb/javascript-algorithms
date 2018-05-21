@@ -43,4 +43,4 @@ three edits:
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Levenshtein_distance)
-- [YouTube](https://www.youtube.com/watch?v=We3YDTzNXEk)
+- [YouTube](https://www.youtube.com/watch?v=We3YDTzNXEk&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
