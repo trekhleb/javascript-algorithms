@@ -179,7 +179,7 @@ npm test -- -t 'playground'
     
 Order of growth of algorithms specified in Big O notation.
     
-![Big O graphs](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-graph.png)
+![Big O graphs](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-graph.png?raw=true)
 
 Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
     
