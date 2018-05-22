@@ -348,10 +348,10 @@ describe('Graph', () => {
 
     const adjacencyMatrix = graph.getAdjacencyMatrix();
     expect(adjacencyMatrix).toEqual([
-      [0, 1, 0, 0],
-      [1, 0, 1, 1],
-      [0, 1, 0, 1],
-      [0, 1, 1, 0],
+      [Infinity, 0, Infinity, Infinity],
+      [0, Infinity, 0, 0],
+      [Infinity, 0, Infinity, 0],
+      [Infinity, 0, 0, Infinity],
     ]);
   });
 
@@ -375,10 +375,10 @@ describe('Graph', () => {
 
     const adjacencyMatrix = graph.getAdjacencyMatrix();
     expect(adjacencyMatrix).toEqual([
-      [0, 2, 0, 0],
-      [0, 0, 1, 7],
-      [0, 0, 0, 5],
-      [0, 0, 0, 0],
+      [Infinity, 2, Infinity, Infinity],
+      [Infinity, Infinity, 1, 7],
+      [Infinity, Infinity, Infinity, 5],
+      [Infinity, Infinity, Infinity, Infinity],
     ]);
   });
 });

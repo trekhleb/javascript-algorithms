@@ -15,7 +15,7 @@ function isSafe(adjacencyMatrix, verticesIndices, cycle, vertexCandidate) {
   const endVertexAdjacencyIndex = verticesIndices[endVertex.getKey()];
 
   // Check if last vertex in the path and candidate vertex are adjacent.
-  if (!adjacencyMatrix[endVertexAdjacencyIndex][candidateVertexAdjacencyIndex]) {
+  if (adjacencyMatrix[endVertexAdjacencyIndex][candidateVertexAdjacencyIndex] === Infinity) {
     return false;
   }
 
@@ -43,7 +43,7 @@ function isCycle(adjacencyMatrix, verticesIndices, cycle) {
   const endVertexAdjacencyIndex = verticesIndices[endVertex.getKey()];
 
   // Check if we can go from end vertex to the start one.
-  return !!adjacencyMatrix[endVertexAdjacencyIndex][startVertexAdjacencyIndex];
+  return adjacencyMatrix[endVertexAdjacencyIndex][startVertexAdjacencyIndex] !== Infinity;
 }
 
 /**

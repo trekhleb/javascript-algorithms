@@ -177,18 +177,17 @@ export default class Graph {
     const vertices = this.getAllVertices();
     const verticesIndices = this.getVerticesIndices();
 
-    // Init matrix with zeros.
+    // Init matrix with infinities meaning that there is no ways of
+    // getting from one vertex to another yet.
     const adjacencyMatrix = Array(vertices.length).fill(null).map(() => {
-      return Array(vertices.length).fill(0);
+      return Array(vertices.length).fill(Infinity);
     });
 
     // Fill the columns.
     vertices.forEach((vertex, vertexIndex) => {
       vertex.getNeighbors().forEach((neighbor) => {
         const neighborIndex = verticesIndices[neighbor.getKey()];
-        adjacencyMatrix[vertexIndex][neighborIndex] = this.isDirected ?
-          this.findEdge(vertex, neighbor).weight :
-          1;
+        adjacencyMatrix[vertexIndex][neighborIndex] = this.findEdge(vertex, neighbor).weight;
       });
     });
 
