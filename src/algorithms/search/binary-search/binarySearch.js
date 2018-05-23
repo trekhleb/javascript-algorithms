@@ -7,7 +7,11 @@ import Comparator from '../../../utils/comparator/Comparator';
  * @return {number}
  */
 
-export default function binarySearch(sortedArray, seekElement, comparatorCallback) {
+export default function binarySearch(
+  sortedArray,
+  seekElement,
+  comparatorCallback,
+) {
   const comparator = new Comparator(comparatorCallback);
 
   let startIndex = 0;
@@ -22,7 +26,7 @@ export default function binarySearch(sortedArray, seekElement, comparatorCallbac
     }
 
     // Decide which half to choose for seeking next: left or right one.
-    if (comparator.lessThen(sortedArray[middleIndex], seekElement)) {
+    if (comparator.lessThan(sortedArray[middleIndex], seekElement)) {
       // Go to the right half of the array.
       startIndex = middleIndex + 1;
     } else {

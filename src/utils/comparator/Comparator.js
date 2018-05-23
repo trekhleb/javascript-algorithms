@@ -23,20 +23,20 @@ export default class Comparator {
     return this.compare(a, b) === 0;
   }
 
-  lessThen(a, b) {
+  lessThan(a, b) {
     return this.compare(a, b) < 0;
   }
 
-  greaterThen(a, b) {
+  greaterThan(a, b) {
     return this.compare(a, b) > 0;
   }
 
-  lessThenOrEqual(a, b) {
-    return this.lessThen(a, b) || this.equal(a, b);
+  lessThanOrEqual(a, b) {
+    return this.lessThan(a, b) || this.equal(a, b);
   }
 
-  greaterThenOrEqual(a, b) {
-    return this.greaterThen(a, b) || this.equal(a, b);
+  greaterThanOrEqual(a, b) {
+    return this.greaterThan(a, b) || this.equal(a, b);
   }
 
   reverse() {
