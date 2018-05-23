@@ -7,11 +7,7 @@ import Comparator from '../../../utils/comparator/Comparator';
  * @return {number}
  */
 
-export default function binarySearch(
-  sortedArray,
-  seekElement,
-  comparatorCallback,
-) {
+export default function binarySearch(sortedArray, seekElement, comparatorCallback) {
   const comparator = new Comparator(comparatorCallback);
 
   let startIndex = 0;
