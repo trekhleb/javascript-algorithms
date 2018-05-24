@@ -10,7 +10,7 @@ Each algorithm and data structure have its own separate README
 with related explanations and links for further reading and YouTube
 videos.
 
-_Read this in other languages:_ [_Chinese_](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md)
+_Read this in other languages:_ [简体中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md)
 
 ## Data Structures
 
