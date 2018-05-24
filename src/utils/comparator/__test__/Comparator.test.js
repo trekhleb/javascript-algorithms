@@ -7,19 +7,19 @@ describe('Comparator', () => {
     expect(comparator.equal(0, 0)).toBeTruthy();
     expect(comparator.equal(0, 1)).toBeFalsy();
     expect(comparator.equal('a', 'a')).toBeTruthy();
-    expect(comparator.lessThen(1, 2)).toBeTruthy();
-    expect(comparator.lessThen(-1, 2)).toBeTruthy();
-    expect(comparator.lessThen('a', 'b')).toBeTruthy();
-    expect(comparator.lessThen('a', 'ab')).toBeTruthy();
-    expect(comparator.lessThen(10, 2)).toBeFalsy();
-    expect(comparator.lessThenOrEqual(10, 2)).toBeFalsy();
-    expect(comparator.lessThenOrEqual(1, 1)).toBeTruthy();
-    expect(comparator.lessThenOrEqual(0, 0)).toBeTruthy();
-    expect(comparator.greaterThen(0, 0)).toBeFalsy();
-    expect(comparator.greaterThen(10, 0)).toBeTruthy();
-    expect(comparator.greaterThenOrEqual(10, 0)).toBeTruthy();
-    expect(comparator.greaterThenOrEqual(10, 10)).toBeTruthy();
-    expect(comparator.greaterThenOrEqual(0, 10)).toBeFalsy();
+    expect(comparator.lessThan(1, 2)).toBeTruthy();
+    expect(comparator.lessThan(-1, 2)).toBeTruthy();
+    expect(comparator.lessThan('a', 'b')).toBeTruthy();
+    expect(comparator.lessThan('a', 'ab')).toBeTruthy();
+    expect(comparator.lessThan(10, 2)).toBeFalsy();
+    expect(comparator.lessThanOrEqual(10, 2)).toBeFalsy();
+    expect(comparator.lessThanOrEqual(1, 1)).toBeTruthy();
+    expect(comparator.lessThanOrEqual(0, 0)).toBeTruthy();
+    expect(comparator.greaterThan(0, 0)).toBeFalsy();
+    expect(comparator.greaterThan(10, 0)).toBeTruthy();
+    expect(comparator.greaterThanOrEqual(10, 0)).toBeTruthy();
+    expect(comparator.greaterThanOrEqual(10, 10)).toBeTruthy();
+    expect(comparator.greaterThanOrEqual(0, 10)).toBeFalsy();
   });
 
   it('should compare with custom comparator function', () => {
@@ -33,18 +33,18 @@ describe('Comparator', () => {
 
     expect(comparator.equal('a', 'b')).toBeTruthy();
     expect(comparator.equal('a', '')).toBeFalsy();
-    expect(comparator.lessThen('b', 'aa')).toBeTruthy();
-    expect(comparator.greaterThenOrEqual('a', 'aa')).toBeFalsy();
-    expect(comparator.greaterThenOrEqual('aa', 'a')).toBeTruthy();
-    expect(comparator.greaterThenOrEqual('a', 'a')).toBeTruthy();
+    expect(comparator.lessThan('b', 'aa')).toBeTruthy();
+    expect(comparator.greaterThanOrEqual('a', 'aa')).toBeFalsy();
+    expect(comparator.greaterThanOrEqual('aa', 'a')).toBeTruthy();
+    expect(comparator.greaterThanOrEqual('a', 'a')).toBeTruthy();
 
     comparator.reverse();
 
     expect(comparator.equal('a', 'b')).toBeTruthy();
     expect(comparator.equal('a', '')).toBeFalsy();
-    expect(comparator.lessThen('b', 'aa')).toBeFalsy();
-    expect(comparator.greaterThenOrEqual('a', 'aa')).toBeTruthy();
-    expect(comparator.greaterThenOrEqual('aa', 'a')).toBeFalsy();
-    expect(comparator.greaterThenOrEqual('a', 'a')).toBeTruthy();
+    expect(comparator.lessThan('b', 'aa')).toBeFalsy();
+    expect(comparator.greaterThanOrEqual('a', 'aa')).toBeTruthy();
+    expect(comparator.greaterThanOrEqual('aa', 'a')).toBeFalsy();
+    expect(comparator.greaterThanOrEqual('a', 'a')).toBeTruthy();
   });
 });

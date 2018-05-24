@@ -16,7 +16,7 @@ export default class SelectionSort extends Sort {
         // Call visiting callback.
         this.callbacks.visitingCallback(array[j]);
 
-        if (this.comparator.lessThen(array[j], array[minIndex])) {
+        if (this.comparator.lessThan(array[j], array[minIndex])) {
           minIndex = j;
         }
       }

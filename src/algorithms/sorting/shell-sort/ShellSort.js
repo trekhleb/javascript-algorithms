@@ -20,7 +20,7 @@ export default class ShellSort extends Sort {
           this.callbacks.visitingCallback(array[currentIndex]);
 
           // Compare and swap array elements if needed.
-          if (this.comparator.lessThen(array[gapShiftedIndex], array[currentIndex])) {
+          if (this.comparator.lessThan(array[gapShiftedIndex], array[currentIndex])) {
             const tmp = array[currentIndex];
             array[currentIndex] = array[gapShiftedIndex];
             array[gapShiftedIndex] = tmp;
