@@ -27,7 +27,7 @@ export default class QuickSort extends Sort {
 
       if (this.comparator.equal(currentElement, pivotElement)) {
         centerArray.push(currentElement);
-      } else if (this.comparator.lessThen(currentElement, pivotElement)) {
+      } else if (this.comparator.lessThan(currentElement, pivotElement)) {
         leftArray.push(currentElement);
       } else {
         rightArray.push(currentElement);
