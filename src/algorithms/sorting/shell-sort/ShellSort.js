@@ -11,7 +11,7 @@ export default class ShellSort extends Sort {
     // Until gap is bigger then zero do elements comparisons and swaps.
     while (gap > 0) {
       // Go and compare all distant element pairs.
-      for (let i = 0; i < (array.length - gap); i += 1) {
+      for (let i = 0; i < array.length - gap; i += 1) {
         let currentIndex = i;
         let gapShiftedIndex = i + gap;
 
