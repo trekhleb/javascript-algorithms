@@ -3,7 +3,7 @@ import Sort from '../Sort';
 export default class SelectionSort extends Sort {
   sort(originalArray) {
     // Clone original array to prevent its modification.
-    const array = originalArray.slice(0);
+    const array = [...originalArray];
 
     for (let i = 0; i < array.length - 1; i += 1) {
       let minIndex = i;
@@ -16,7 +16,7 @@ export default class SelectionSort extends Sort {
         // Call visiting callback.
         this.callbacks.visitingCallback(array[j]);
 
-        if (this.comparator.lessThen(array[j], array[minIndex])) {
+        if (this.comparator.lessThan(array[j], array[minIndex])) {
           minIndex = j;
         }
       }

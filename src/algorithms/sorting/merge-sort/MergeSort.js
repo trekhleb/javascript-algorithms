@@ -31,7 +31,7 @@ export default class MergeSort extends Sort {
       let minimumElement = null;
 
       // Find minimum element of two arrays.
-      if (this.comparator.lessThenOrEqual(leftArray[0], rightArray[0])) {
+      if (this.comparator.lessThanOrEqual(leftArray[0], rightArray[0])) {
         minimumElement = leftArray.shift();
       } else {
         minimumElement = rightArray.shift();

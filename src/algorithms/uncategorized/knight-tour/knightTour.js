@@ -4,7 +4,7 @@
  * @return {number[][]}
  */
 function getPossibleMoves(chessboard, position) {
-  // Generate all knight moves (event those that goes beyond the board).
+  // Generate all knight moves (even those that go beyond the board).
   const possibleMoves = [
     [position[0] - 1, position[1] - 2],
     [position[0] - 2, position[1] - 1],

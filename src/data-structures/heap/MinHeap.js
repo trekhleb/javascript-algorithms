@@ -167,7 +167,7 @@ export default class MinHeap {
           leftChild !== null &&
           (
             parentItem === null ||
-            this.compare.lessThen(parentItem, this.heapContainer[indexToRemove])
+            this.compare.lessThan(parentItem, this.heapContainer[indexToRemove])
           )
         ) {
           this.heapifyDown(indexToRemove);
@@ -209,7 +209,7 @@ export default class MinHeap {
 
     while (
       this.hasParent(currentIndex) &&
-      this.compare.lessThen(this.heapContainer[currentIndex], this.parent(currentIndex))
+      this.compare.lessThan(this.heapContainer[currentIndex], this.parent(currentIndex))
     ) {
       this.swap(currentIndex, this.getParentIndex(currentIndex));
       currentIndex = this.getParentIndex(currentIndex);
@@ -228,14 +228,14 @@ export default class MinHeap {
     while (this.hasLeftChild(currentIndex)) {
       if (
         this.hasRightChild(currentIndex) &&
-        this.compare.lessThen(this.rightChild(currentIndex), this.leftChild(currentIndex))
+        this.compare.lessThan(this.rightChild(currentIndex), this.leftChild(currentIndex))
       ) {
         nextIndex = this.getRightChildIndex(currentIndex);
       } else {
         nextIndex = this.getLeftChildIndex(currentIndex);
       }
 
-      if (this.compare.lessThen(this.heapContainer[currentIndex], this.heapContainer[nextIndex])) {
+      if (this.compare.lessThan(this.heapContainer[currentIndex], this.heapContainer[nextIndex])) {
         break;
       }
 

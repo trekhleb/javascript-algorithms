@@ -2,7 +2,7 @@ import Sort from '../Sort';
 
 export default class InsertionSort extends Sort {
   sort(originalArray) {
-    const array = originalArray.slice(0);
+    const array = [...originalArray];
 
     // Go through all array elements...
     for (let i = 0; i < array.length; i += 1) {
@@ -15,7 +15,7 @@ export default class InsertionSort extends Sort {
       // If this is the case then swap that elements.
       while (
         array[currentIndex - 1] &&
-        this.comparator.lessThen(array[currentIndex], array[currentIndex - 1])
+        this.comparator.lessThan(array[currentIndex], array[currentIndex - 1])
       ) {
         // Call visiting callback.
         this.callbacks.visitingCallback(array[currentIndex - 1]);
