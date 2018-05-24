@@ -2,7 +2,7 @@ import Sort from '../Sort';
 
 export default class InsertionSort extends Sort {
   sort(originalArray) {
-    const array = originalArray.slice(0);
+    const array = [...originalArray];
 
     // Go through all array elements...
     for (let i = 0; i < array.length; i += 1) {
