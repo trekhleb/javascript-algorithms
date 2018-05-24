@@ -13,7 +13,7 @@ export default class BubbleSort extends Sort {
       // Call visiting callback.
       this.callbacks.visitingCallback(array[i]);
 
-      for (let j = 0; j < array.length - 1; j += 1) {
+      for (let j = 0; j < array.length - 1 - i; j += 1) {
         // Call visiting callback.
         this.callbacks.visitingCallback(array[j]);
 
