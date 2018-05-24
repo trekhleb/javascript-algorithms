@@ -16,7 +16,7 @@ export default class Stack {
    * @return {*}
    */
   peek() {
-    if (!this.linkedList.tail) {
+    if (this.isEmpty()) {
       return null;
     }
 
