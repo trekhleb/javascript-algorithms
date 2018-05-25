@@ -7,6 +7,8 @@
 
 每种算法和数据结构都有自己的 README 并提供相关说明以及进一步阅读和 YouTube 视频。
 
+_Read this in other languages:_ [_English_](https://github.com/trekhleb/javascript-algorithms/)
+
 ## 数据结构
 
 数据结构是在计算机中组织和存储数据的一种特殊方式，它可以高效地访问和修改数据。更确切地说，数据结构是数据值的集合，它们之间的关系、函数或操作可以应用于数据。
