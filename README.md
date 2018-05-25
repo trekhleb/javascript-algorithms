@@ -199,17 +199,17 @@ Below is the list of some of the most used Big O notations and their performance
 
 ### Data Structure Operations Complexity
         
-| Data Structure          | Access    | Search    | Insertion | Deletion  |
-| ----------------------- | :-------: | :-------: | :-------: | :-------: | 
-| **Array**               | 1         | n         | n         | n         |
-| **Stack**               | n         | n         | 1         | 1         |
-| **Queue**               | n         | n         | 1         | 1         | 
-| **Linked List**         | n         | n         | 1         | 1         |
-| **Hash Table**          | -         | n         | n         | n         |
-| **Binary Search Tree**  | n         | n         | n         | n         |
-| **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |
-| **Red-Black Tree**      | log(n)    | log(n)    | log(n)    | log(n)    |
-| **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |
+| Data Structure          | Access    | Search    | Insertion | Deletion  | Comments  |
+| ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- | 
+| **Array**               | 1         | n         | n         | n         |           |
+| **Stack**               | n         | n         | 1         | 1         |           |
+| **Queue**               | n         | n         | 1         | 1         |           | 
+| **Linked List**         | n         | n         | 1         | 1         |           |
+| **Hash Table**          | -         | n         | n         | n         | In case of perfect hash function costs would be O(1) |
+| **Binary Search Tree**  | n         | n         | n         | n         |           |
+| **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **Red-Black Tree**      | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
 
 ### Array Sorting Algorithms Complexity
 
