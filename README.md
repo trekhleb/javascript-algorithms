@@ -206,7 +206,7 @@ Below is the list of some of the most used Big O notations and their performance
 | **Queue**               | n         | n         | 1         | 1         |           | 
 | **Linked List**         | n         | n         | 1         | 1         |           |
 | **Hash Table**          | -         | n         | n         | n         | In case of perfect hash function costs would be O(1) |
-| **Binary Search Tree**  | n         | n         | n         | n         |           |
+| **Binary Search Tree**  | n         | n         | n         | n         | In case of balanced tree costs would be O(log(n)) |
 | **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
 | **Red-Black Tree**      | log(n)    | log(n)    | log(n)    | log(n)    |           |
 | **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
