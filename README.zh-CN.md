@@ -7,7 +7,9 @@
 
 每种算法和数据结构都有自己的 README 并提供相关说明以及进一步阅读和 YouTube 视频。
 
-_Read this in other languages:_ [_English_](https://github.com/trekhleb/javascript-algorithms/)
+_Read this in other languages:_
+[_English_](https://github.com/trekhleb/javascript-algorithms/),
+[繁體中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-TW.md)
 
 ## 数据结构
 

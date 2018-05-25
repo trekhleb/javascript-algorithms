@@ -6,7 +6,9 @@
 這個知識庫包含許多 JavaScript 的資料結構與演算法的基礎範例。
 每個演算法和資料結構都有其個別的文件，內有相關的解釋以及更多相關的文章或Youtube影片連結。
 
-_Read this in other languages:_ [简体中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md)
+_Read this in other languages:_
+[_English_](https://github.com/trekhleb/javascript-algorithms/),
+[简体中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md)
 
 ## 資料結構
 
