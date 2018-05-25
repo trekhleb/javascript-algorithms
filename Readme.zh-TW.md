@@ -8,8 +8,6 @@
 
 _Read this in other languages:_ [简体中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md)
 
-_Read this in other languages:_ [繁體中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-TW.md)
-
 ## 資料結構
 
 資料結構是一個電腦用來組織和排序資料的特定方式，透過這樣的方式資料可以有效率地被讀取以及修改。更精確地說，一個資料結構是一個資料值的集合、彼此間的關係，函數或者運作可以應用於資料上。
@@ -41,12 +39,12 @@ _Read this in other languages:_ [繁體中文](https://github.com/trekhleb/javas
   * [Factorial](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/factorial)
   * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
   * [Primality Test](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/primality-test) (trial division method)
-  * [Euclidean Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
+  * [Euclidean Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - 計算最大公因數 (GCD)
   * [Least Common Multiple](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/least-common-multiple) (LCM)
   * [Integer Partition](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/integer-partition)
 * **集合**
-  * [Cartesian Product](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/cartesian-product) - product of multiple sets
-  * [Power Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/power-set) - all subsets of the set 
+  * [Cartesian Product](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/cartesian-product) - 多個集合的乘積
+  * [Power Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/power-set) - 所有集合的子集合
   * [Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/permutations) (with and without repetitions)
   * [Combinations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/combinations) (with and without repetitions)
   * [Fisher–Yates Shuffle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
@@ -94,21 +92,19 @@ _Read this in other languages:_ [繁體中文](https://github.com/trekhleb/javas
   * [N-Queens Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/n-queens)
   * [Knight's Tour](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/knight-tour)
   
-### Algorithms by Paradigm
+### 演算法範型
 
-An algorithmic paradigm is a generic method or approach which underlies the design of a class 
-of algorithms. It is an abstraction higher than the notion of an algorithm, just as an 
-algorithm is an abstraction higher than a computer program.
+演算法的範型是一個泛用方法或設計一類底層演算法的方式。它是一個比演算法的概念更高階的抽象化，就像是演算法是比電腦程式更高階的抽象化。
 
-* **Brute Force** - look at all the possibilities and selects the best solution
+* **暴力法** - 尋遍所有的可能解然後選取最好的解
   * [Maximum Subarray](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray)
   * [Travelling Salesman Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
-* **Greedy** - choose the best option at the current time, without any consideration for the future
+* **貪婪法** - choose the best option at the current time, without any consideration for the future
   * [Unbound Knapsack Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem)
   * [Dijkstra Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
   * [Prim’s Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
   * [Kruskal’s Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-* **Divide and Conquer** - divide the problem into smaller parts and then solve those parts
+* **分治法** - divide the problem into smaller parts and then solve those parts
   * [Binary Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search)
   * [Tower of Hanoi](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/hanoi-tower)
   * [Euclidean Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
@@ -118,7 +114,7 @@ algorithm is an abstraction higher than a computer program.
   * [Quicksort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/quick-sort)
   * [Tree Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/depth-first-search) (DFS)
   * [Graph Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search) (DFS)
-* **Dynamic Programming** - build up to a solution using previously found sub-solutions
+* **動態編程** - build up to a solution using previously found sub-solutions
   * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
   * [Levenshtein Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * [Longest Common Subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-common-subsequnce) (LCS)
@@ -129,7 +125,7 @@ algorithm is an abstraction higher than a computer program.
   * [Integer Partition](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/integer-partition)
   * [Maximum Subarray](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray)
   * [Bellman-Ford Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
-* **Backtracking** - similarly to brute force try to generate all possible solutions but each time you generate a solution test 
+* **回溯法** - similarly to brute force try to generate all possible solutions but each time you generate a solution test 
 if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise backtrack and go on a 
 different path of finding solution
   * [Hamiltonian Cycle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
@@ -154,12 +150,11 @@ npm test
 ```
 npm test -- -t 'LinkedList'
 ```
-**Playground**
+**練習場**
 
-You may play with data-structures and algorithms in `./src/playground/playground.js` file and write
-tests for it in `./src/playground/__test__/playground.test.js`.
+你可以透過在`./src/playground/playground.js`裡面的檔案練習資料結構以及演算法，並且撰寫在`./src/playground/__test__/playground.test.js`裡面的測試程式。
 
-Then just simply run the following command to test if your playground code works as expected:
+接著直接執行下列的指令來測試你練習的 code 是否如預期運作：
 
 ```
 npm test -- -t 'playground'
@@ -172,16 +167,16 @@ npm test -- -t 'playground'
 [▶ Data Structures and Algorithms on YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 
 ### 大 O 標記
-    
-Order of growth of algorithms specified in Big O notation.
+
+特別用大 O 標記演算法增長度的排序。
     
 ![Big O 表](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-graph.png?raw=true)
 
 資料來源: [Big O Cheat Sheet](http://bigocheatsheet.com/).
     
-Below is the list of some of the most used Big O notations and their performance comparisons against different sizes of the input data.
+下列列出幾個常用的 Big O 標記以及其不同大小資料量輸入後的運算效能比較。
 
-| Big O Notation | Computations for 10 elements | Computations for 100 elements | Computations for 1000 elements  |
+| Big O 標記     | 10個資料量需花費的時間 | 100個資料量需花費的時間 | 1000個資料量需花費的時間  |
 | -------------- | ---------------------------- | ----------------------------- | ------------------------------- |
 | **O(1)**       | 1                            | 1                             | 1                               |
 | **O(log N)**   | 3                            | 6                             | 9                               |
@@ -191,23 +186,23 @@ Below is the list of some of the most used Big O notations and their performance
 | **O(2^N)**     | 1024                         | 1.26e+29                      | 1.07e+301                       |
 | **O(N!)**      | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
 
-### Data Structure Operations Complexity
+### 資料結構運作複雜度
         
-| Data Structure          | Access    | Search    | Insertion | Deletion  |
+| 資料結構                 | 存取    | 搜尋    | 插入 | 刪除  |
 | ----------------------- | :-------: | :-------: | :-------: | :-------: | 
-| **Array**               | 1         | n         | n         | n         |
-| **Stack**               | n         | n         | 1         | 1         |
-| **Queue**               | n         | n         | 1         | 1         | 
-| **Linked List**         | n         | n         | 1         | 1         |
-| **Hash Table**          | -         | n         | n         | n         |
-| **Binary Search Tree**  | n         | n         | n         | n         |
+| **陣列**               | 1         | n         | n         | n         |
+| **堆疊**               | n         | n         | 1         | 1         |
+| **貯列**               | n         | n         | 1         | 1         | 
+| **鏈結串列**         | n         | n         | 1         | 1         |
+| **雜湊表**          | -         | n         | n         | n         |
+| **二元搜尋樹**  | n         | n         | n         | n         |
 | **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |
-| **Red-Black Tree**      | log(n)    | log(n)    | log(n)    | log(n)    |
+| **紅黑樹**      | log(n)    | log(n)    | log(n)    | log(n)    |
 | **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |
 
-### Array Sorting Algorithms Complexity
+### 陣列搜尋演算法複雜度
 
-| Name                  | Best      | Average   | Worst         | Memory    | Stable    |
+| 名稱                   | Best      | Average   | Worst         | Memory    | Stable    |
 | --------------------- | :-------: | :-------: | :-----------: | :-------: | :-------: |
 | **Bubble sort**       | n         | n^2       | n^2           | 1         | Yes       |
 | **Insertion sort**    | n         | n^2       | n^2           | 1         | Yes       |
