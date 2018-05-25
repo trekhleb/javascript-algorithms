@@ -26,7 +26,7 @@ _Read this in other languages:_ [简体中文](https://github.com/trekhleb/javas
   * Suffix Tree
   * Segment Tree or Interval Tree
   * Binary Indexed Tree or Fenwick Tree
-* [Graph 圖](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph) (both directed and undirected)
+* [Graph 圖](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph) (有向跟無向皆包含)
 * [Disjoint Set 互斥集](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/disjoint-set)
 
 ## 演算法
@@ -188,26 +188,26 @@ npm test -- -t 'playground'
 
 ### 資料結構運作複雜度
         
-| 資料結構                 | 存取    | 搜尋    | 插入 | 刪除  |
+| 資料結構                 | 存取      | 搜尋       | 插入      | 刪除      |
 | ----------------------- | :-------: | :-------: | :-------: | :-------: | 
-| **陣列**               | 1         | n         | n         | n         |
-| **堆疊**               | n         | n         | 1         | 1         |
-| **貯列**               | n         | n         | 1         | 1         | 
-| **鏈結串列**         | n         | n         | 1         | 1         |
-| **雜湊表**          | -         | n         | n         | n         |
-| **二元搜尋樹**  | n         | n         | n         | n         |
+| **陣列**                | 1         | n         | n         | n         |
+| **堆疊**                | n         | n         | 1         | 1         |
+| **貯列**                | n         | n         | 1         | 1         | 
+| **鏈結串列**            | n         | n         | 1         | 1         |
+| **雜湊表**              | -         | n         | n         | n         |
+| **二元搜尋樹**          | n         | n         | n         | n         |
 | **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |
-| **紅黑樹**      | log(n)    | log(n)    | log(n)    | log(n)    |
+| **紅黑樹**              | log(n)    | log(n)    | log(n)    | log(n)    |
 | **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |
 
 ### 陣列搜尋演算法複雜度
 
-| 名稱                   | Best      | Average   | Worst         | Memory    | Stable    |
+| 名稱                   | 最佳      | 平均      | 最差           | 記憶體    | 穩定      |
 | --------------------- | :-------: | :-------: | :-----------: | :-------: | :-------: |
-| **Bubble sort**       | n         | n^2       | n^2           | 1         | Yes       |
-| **Insertion sort**    | n         | n^2       | n^2           | 1         | Yes       |
-| **Selection sort**    | n^2       | n^2       | n^2           | 1         | No        |
-| **Heap sort**         | n log(n)  | n log(n)  | n log(n)      | 1         | No        |
-| **Merge sort**        | n log(n)  | n log(n)  | n log(n)      | n         | Yes       |
-| **Quick sort**        | n log(n)  | n log(n)  | n^2           | log(n)    | No        |
-| **Shell sort**        | n log(n)  | depends on gap sequence   | n (log(n))^2  | 1         | No        |
+| **氣派排序**           | n         | n^2       | n^2           | 1         | Yes       |
+| **插入排序**           | n         | n^2       | n^2           | 1         | Yes       |
+| **選擇排序**           | n^2       | n^2       | n^2           | 1         | No        |
+| **Heap 排序**          | n log(n)  | n log(n)  | n log(n)      | 1         | No        |
+| **合併排序**         | n log(n)  | n log(n)  | n log(n)      | n         | Yes       |
+| **快速排序**           | n log(n)  | n log(n)  | n^2           | log(n)    | No        |
+| **希爾排序**        | n log(n)  | 由gap sequence決定   | n (log(n))^2  | 1         | No        |
