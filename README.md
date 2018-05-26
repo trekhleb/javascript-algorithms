@@ -10,7 +10,9 @@ Each algorithm and data structure have its own separate README
 with related explanations and links for further reading and YouTube
 videos.
 
-_Read this in other languages:_ [简体中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md)
+_Read this in other languages:_ 
+[简体中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md),
+[繁體中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-TW.md)
 
 ## Data Structures
 
@@ -68,6 +70,7 @@ a set of rules that precisely defines a sequence of operations.
   * [Rabin Karp Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/rabin-karp) - substring search
   * [Longest Common Substring](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-substring)
 * **Search**
+  * [Linear Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/linear-search)
   * [Binary Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search)
 * **Sorting**
   * [Bubble Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/bubble-sort)
@@ -199,17 +202,17 @@ Below is the list of some of the most used Big O notations and their performance
 
 ### Data Structure Operations Complexity
         
-| Data Structure          | Access    | Search    | Insertion | Deletion  |
-| ----------------------- | :-------: | :-------: | :-------: | :-------: | 
-| **Array**               | 1         | n         | n         | n         |
-| **Stack**               | n         | n         | 1         | 1         |
-| **Queue**               | n         | n         | 1         | 1         | 
-| **Linked List**         | n         | n         | 1         | 1         |
-| **Hash Table**          | -         | n         | n         | n         |
-| **Binary Search Tree**  | n         | n         | n         | n         |
-| **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |
-| **Red-Black Tree**      | log(n)    | log(n)    | log(n)    | log(n)    |
-| **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |
+| Data Structure          | Access    | Search    | Insertion | Deletion  | Comments  |
+| ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- | 
+| **Array**               | 1         | n         | n         | n         |           |
+| **Stack**               | n         | n         | 1         | 1         |           |
+| **Queue**               | n         | n         | 1         | 1         |           | 
+| **Linked List**         | n         | n         | 1         | 1         |           |
+| **Hash Table**          | -         | n         | n         | n         | In case of perfect hash function costs would be O(1) |
+| **Binary Search Tree**  | n         | n         | n         | n         | In case of balanced tree costs would be O(log(n)) |
+| **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **Red-Black Tree**      | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
 
 ### Array Sorting Algorithms Complexity
 
