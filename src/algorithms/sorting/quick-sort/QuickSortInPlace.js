@@ -7,6 +7,7 @@ export default class QuickSortInPlace extends Sort {
    * http://www.algomation.com/algorithm/quick-sort-visualization
    */
   sort(originalArray, inputLow, inputHigh) {
+    // Destructures array on initial passthrough, and then sorts in place.
     const array = inputLow === undefined ? [...originalArray] : originalArray;
     // Partition array segment and return index of last swap
     const partition = (l, h) => {
@@ -17,10 +18,10 @@ export default class QuickSortInPlace extends Sort {
       };
 
       const pivot = array[h];
+      this.callbacks.visitingCallback(array[pivot]);
       let firstRunner = l - 1;
 
       for (let secondRunner = l; secondRunner < h; secondRunner += 1) {
-        this.callbacks.visitingCallback(array[secondRunner]);
         if (this.comparator.lessThan(array[secondRunner], pivot)) {
           firstRunner += 1;
           swap(firstRunner, secondRunner);

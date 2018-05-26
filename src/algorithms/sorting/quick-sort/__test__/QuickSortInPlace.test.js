@@ -8,10 +8,10 @@ import {
 } from '../../SortTester';
 
 // Complexity constants.
-const SORTED_ARRAY_VISITING_COUNT = 190;
-const NOT_SORTED_ARRAY_VISITING_COUNT = 80;
-const REVERSE_SORTED_ARRAY_VISITING_COUNT = 190;
-const EQUAL_ARRAY_VISITING_COUNT = 190;
+const SORTED_ARRAY_VISITING_COUNT = 19;
+const NOT_SORTED_ARRAY_VISITING_COUNT = 12;
+const REVERSE_SORTED_ARRAY_VISITING_COUNT = 19;
+const EQUAL_ARRAY_VISITING_COUNT = 19;
 
 describe('QuickSortInPlace', () => {
   it('should sort array', () => {
