@@ -18,7 +18,7 @@ export default class QuickSortInPlace extends Sort {
 
       const pivot = array[h];
       let firstRunner = l - 1;
-      
+
       for (let secondRunner = l; secondRunner < h; secondRunner += 1) {
         this.callbacks.visitingCallback(array[secondRunner]);
         if (this.comparator.lessThan(array[secondRunner], pivot)) {
