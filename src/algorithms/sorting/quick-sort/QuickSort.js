@@ -57,7 +57,7 @@ export default class QuickSort extends Sort {
         array[right] = tempVariable;
       };
 
-      const pivot = arr[h];
+      const pivot = array[h];
       let firstRunner = l - 1;
 
       for (let secondRunner = l; secondRunner < h; secondRunner += 1) {
@@ -75,8 +75,9 @@ export default class QuickSort extends Sort {
     };
 
     /*
-     * While we can use a default parameter to set `low` to 0, we would still have to set `high`'s
-     * default within the function as we don't have access to `array.length - 1` when declaring paramaters
+     * While we can use a default parameter to set `low` to 0, we would
+     * still have to set `high`'s default within the function as we
+     * don't have access to `array.length - 1` when declaring paramaters
      */
     const low = inputLow === undefined ? 0 : inputLow;
     const high = inputHigh === undefined ? array.length - 1 : inputHigh;
@@ -86,7 +87,7 @@ export default class QuickSort extends Sort {
       const partitionIndex = partition(low, high);
       /*
        * `partition()` swaps elements of the array based on their comparison to the `hi` parameter,
-       * and then returns the index where swapping is no longer necessary, which can be best thought 
+       * and then returns the index where swapping is no longer necessary, which can be best thought
        * of as the pivot used to split an array in a non-in-place quicksort
        */
       this.sortInPlace(array, low, partitionIndex - 1);
