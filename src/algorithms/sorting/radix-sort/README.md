@@ -1,0 +1,13 @@
+# Radix Sort
+
+In computer science, radix sort is a non-comparative integer sorting algorithm that sorts data with integer keys by grouping keys by the individual digits which share the same significant position and value. A positional notation is required, but because integers can represent strings of characters (e.g., names or dates) and specially formatted floating point numbers, radix sort is not limited to integers. Radix sort dates back as far as 1887 to the work of Herman Hollerith on tabulating machines.
+
+## Efficiency
+
+The topic of the efficiency of radix sort compared to other sorting algorithms is somewhat tricky and subject to quite a lot of misunderstandings. Whether radix sort is equally efficient, less efficient or more efficient than the best comparison-based algorithms depends on the details of the assumptions made. Radix sort complexity is O(wn) for n keys which are integers of word size w. Sometimes w is presented as a constant, which would make radix sort better (for sufficiently large n) than the best comparison-based sorting algorithms, which all perform O(n log n) comparisons to sort n keys. However, in general w cannot be considered a constant: if all n keys are distinct, then w has to be at least log n for a random-access machine to be able to store them in memory, which gives at best a time complexity O(n log n).[2] That would seem to make radix sort at most equally efficient as the best comparison-based sorts (and worse if keys are much longer than log n).
+
+The counter argument is that comparison-based algorithms are measured in number of comparisons, not actual time complexity. Under some assumptions the comparisons will be constant time on average, under others they will not. Comparisons of randomly generated keys takes constant time on average, as keys differ on the very first bit in half the cases, and differ on the second bit in half of the remaining half, and so on, resulting in an average of two bits that need to be compared. In a sorting algorithm the first comparisons made satisfies the randomness condition, but as the sort progresses the keys compared are clearly not randomly chosen anymore. For example, consider a bottom-up merge sort. The first pass will compare pairs of random keys, but the last pass will compare keys that are very close in the sorting order. This makes merge sort, on this class of inputs, take O(n (log n)2) time. That assumes all memory accesses cost the same, which is not a physically reasonable assumption as we scale n to infinity, and not, in practice, how real computers work.
+
+## References
+
+- [Wikipedia](https://en.wikipedia.org/wiki/Radix_sort)
