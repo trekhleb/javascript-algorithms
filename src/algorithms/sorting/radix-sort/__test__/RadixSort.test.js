@@ -1,9 +1,5 @@
 import RadixSort from '../RadixSort';
-import {
-  stringArr,
-  intArr,
-  SortTester,
-} from '../../SortTester';
+import { SortTester } from '../../SortTester';
 
 // Complexity constants.
 const ARRAY_OF_STRINGS_VISIT_COUNT = 24;
@@ -16,7 +12,7 @@ describe('RadixSort', () => {
   it('should visit array of strings n (number of strings) x m (length of longest element) times', () => {
     SortTester.testAlgorithmTimeComplexity(
       RadixSort,
-      stringArr,
+      ['zzz', 'bb', 'a', 'rr', 'rrb', 'rrba'],
       ARRAY_OF_STRINGS_VISIT_COUNT,
     );
   });
@@ -24,7 +20,7 @@ describe('RadixSort', () => {
   it('should visit array of integers n (number of elements) x m (length of longest integer) times', () => {
     SortTester.testAlgorithmTimeComplexity(
       RadixSort,
-      intArr,
+      [3, 1, 75, 32, 884, 523, 4343456, 232, 123, 656, 343],
       ARRAY_OF_INTEGERS_VISIT_COUNT,
     );
   });
