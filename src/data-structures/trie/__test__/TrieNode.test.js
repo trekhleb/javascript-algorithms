@@ -26,7 +26,7 @@ describe('TrieNode', () => {
 
     expect(trieNode.getChild('a').toString()).toBe('a');
     expect(trieNode.getChild('o').toString()).toBe('o');
-    expect(trieNode.getChild('b')).toBeNull();
+    expect(trieNode.getChild('b')).toBeUndefined();
   });
 
   it('should check if node has specific child', () => {

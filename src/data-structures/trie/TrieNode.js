@@ -2,35 +2,31 @@ export default class TrieNode {
   constructor(character, isCompleteWord = false) {
     this.character = character;
     this.isCompleteWord = isCompleteWord;
-    this.children = {};
+    this.children = new Map();
   }
 
   getChild(character) {
-    if (!Object.prototype.hasOwnProperty.call(this.children, character)) {
-      return null;
-    }
-
-    return this.children[character];
+    return this.children.get(character);
   }
 
   addChild(character, isCompleteWord = false) {
-    if (!this.children[character]) {
-      this.children[character] = new TrieNode(character, isCompleteWord);
+    if (!this.children.has(character)) {
+      this.children.set(character, new TrieNode(character, isCompleteWord));
     }
 
-    return this.children[character];
+    return this.children.get(character);
   }
 
   hasChild(character) {
-    return !!this.children[character];
+    return this.children.has(character);
   }
 
   suggestChildren() {
-    return Object.keys(this.children);
+    return [...this.children.keys()];
   }
 
   toString() {
-    let childrenAsString = Object.keys(this.children).toString();
+    let childrenAsString = this.suggestChildren().toString();
     childrenAsString = childrenAsString ? `:${childrenAsString}` : '';
     const isCompleteString = this.isCompleteWord ? '*' : '';
 
