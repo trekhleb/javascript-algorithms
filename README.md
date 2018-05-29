@@ -80,6 +80,7 @@ a set of rules that precisely defines a sequence of operations.
   * [Merge Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/merge-sort)
   * [Quicksort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/quick-sort) - in-place and non-in-place implementations
   * [Shellsort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/shell-sort)
+  * [Counting Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/counting-sort)
 * **Tree**  
   * [Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/depth-first-search) (DFS)
   * [Breadth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/breadth-first-search) (BFS)
@@ -225,3 +226,4 @@ Below is the list of some of the most used Big O notations and their performance
 | **Merge sort**        | n log(n)  | n log(n)  | n log(n)      | n         | Yes       |
 | **Quick sort**        | n log(n)  | n log(n)  | n^2           | log(n)    | No        |
 | **Shell sort**        | n log(n)  | depends on gap sequence   | n (log(n))^2  | 1         | No        |
+| **Counting sort**     | n + r     | n + r     | n + r         | n + r     | Yes       |
