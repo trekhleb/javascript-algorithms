@@ -226,4 +226,4 @@ Below is the list of some of the most used Big O notations and their performance
 | **Merge sort**        | n log(n)  | n log(n)  | n log(n)      | n         | Yes       |           |
 | **Quick sort**        | n log(n)  | n log(n)  | n^2           | log(n)    | No        |           |
 | **Shell sort**        | n log(n)  | depends on gap sequence   | n (log(n))^2  | 1         | No        |           |
-| **Counting sort**     | n + r     | n + r     | n + r         | n + r     | Yes       | r - biggest number in sorted array |
+| **Counting sort**     | n + r     | n + r     | n + r         | n + r     | Yes       | r - biggest number in array |
