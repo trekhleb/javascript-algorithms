@@ -23,7 +23,10 @@ store them in memory, which gives at best a time complexity `O(n log n)`. That
 would seem to make radix sort at most equally efficient as the best 
 comparison-based sorts (and worse if keys are much longer than `log n`).
 
+![Radix Sort](https://www.researchgate.net/publication/291086231/figure/fig1/AS:614214452404240@1523451545568/Simplistic-illustration-of-the-steps-performed-in-a-radix-sort-In-this-example-the.png)
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Radix_sort)
 - [YouTube](https://www.youtube.com/watch?v=XiuSW_mEn7g&index=62&t=0s&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+- [ResearchGate](https://www.researchgate.net/figure/Simplistic-illustration-of-the-steps-performed-in-a-radix-sort-In-this-example-the_fig1_291086231)
