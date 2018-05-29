@@ -2,7 +2,7 @@ import Sort from '../Sort';
 
 // Using charCode (a = 97, b = 98, etc), we can map characters to buckets from 0 - 25
 const BASE_CHAR_CODE = 97;
-const NUMBER_OF_DIGITS = 10;
+const NUMBER_OF_POSSIBLE_DIGITS = 10;
 const ENGLISH_ALPHABET_LENGTH = 26;
 
 export default class RadixSort extends Sort {
@@ -40,7 +40,7 @@ export default class RadixSort extends Sort {
     // See below. These are used to determine which digit to use for bucket allocation
     const modded = 10 ** (index + 1);
     const divided = 10 ** index;
-    const buckets = this.createBuckets(NUMBER_OF_DIGITS);
+    const buckets = this.createBuckets(NUMBER_OF_POSSIBLE_DIGITS);
 
     array.forEach((element) => {
       this.callbacks.visitingCallback(element);
