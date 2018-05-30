@@ -1,12 +1,10 @@
-// Return a fibonacci sequence as an array
-export default function fibonacci(n) {
-  const fibSequence = [1];
-
+// Calculate fibonacci number at specific position using Dynamic Programming approach.
+export default function fibonacciNth(n) {
   let currentValue = 1;
   let previousValue = 0;
 
   if (n === 1) {
-    return fibSequence;
+    return 1;
   }
 
   let iterationsCounter = n - 1;
@@ -15,10 +13,8 @@ export default function fibonacci(n) {
     currentValue += previousValue;
     previousValue = (currentValue - previousValue);
 
-    fibSequence.push(currentValue);
-
     iterationsCounter -= 1;
   }
 
-  return fibSequence;
+  return currentValue;
 }
