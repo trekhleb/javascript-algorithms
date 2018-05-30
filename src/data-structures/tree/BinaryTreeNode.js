@@ -2,8 +2,8 @@ import Comparator from '../../utils/comparator/Comparator';
 
 export default class BinaryTreeNode {
   /**
-   * @param {*} value
-   * @param {BinaryTreeNode} parent
+   * @param {*} [value]
+   * @param {BinaryTreeNode} [parent]
    */
   constructor(value = null, parent = null) {
     this.left = null;
