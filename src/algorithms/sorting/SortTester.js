@@ -11,6 +11,7 @@ export class SortTester {
     expect(sorter.sort([1])).toEqual([1]);
     expect(sorter.sort([1, 2])).toEqual([1, 2]);
     expect(sorter.sort([2, 1])).toEqual([1, 2]);
+    expect(sorter.sort([3, 4, 2, 1, 0, 0, 4, 3, 4, 2])).toEqual([0, 0, 1, 2, 2, 3, 3, 4, 4, 4]);
     expect(sorter.sort(sortedArr)).toEqual(sortedArr);
     expect(sorter.sort(reverseArr)).toEqual(sortedArr);
     expect(sorter.sort(notSortedArr)).toEqual(sortedArr);

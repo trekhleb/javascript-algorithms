@@ -4,7 +4,7 @@ import trialDivision from '../trialDivision';
  * @param {function(n: number)} testFunction
  */
 function primalityTest(testFunction) {
-  expect(testFunction(1)).toBeTruthy();
+  expect(testFunction(1)).toBeFalsy();
   expect(testFunction(2)).toBeTruthy();
   expect(testFunction(3)).toBeTruthy();
   expect(testFunction(5)).toBeTruthy();

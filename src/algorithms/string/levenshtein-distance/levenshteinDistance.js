@@ -8,7 +8,7 @@ export default function levenshteinDistance(a, b) {
   // substrings of a to substrings of b.
   const distanceMatrix = Array(b.length + 1).fill(null).map(() => Array(a.length + 1).fill(null));
 
-  // Fill the first raw of the matrix.
+  // Fill the first row of the matrix.
   // If this is first row then we're transforming empty string to a.
   // In this case the number of transformations equals to size of a substring.
   for (let i = 0; i <= a.length; i += 1) {
