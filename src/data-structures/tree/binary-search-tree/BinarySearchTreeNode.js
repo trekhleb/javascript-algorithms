@@ -4,11 +4,10 @@ import Comparator from '../../../utils/comparator/Comparator';
 export default class BinarySearchTreeNode extends BinaryTreeNode {
   /**
    * @param {*} [value]
-   * @param {BinaryTreeNode} [parent]
    * @param {function} [compareFunction]
    */
-  constructor(value = null, parent = null, compareFunction = undefined) {
-    super(value, parent);
+  constructor(value = null, compareFunction = undefined) {
+    super(value);
 
     // This comparator is used to compare node values with each other.
     this.compareFunction = compareFunction;
@@ -30,14 +29,14 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
       if (this.left) {
         this.left.insert(value);
       } else {
-        this.setLeft(new BinarySearchTreeNode(value, null, this.compareFunction));
+        this.setLeft(new BinarySearchTreeNode(value, this.compareFunction));
       }
     } else if (this.nodeValueComparator.greaterThan(value, this.value)) {
       // Insert to the right.
       if (this.right) {
         this.right.insert(value);
       } else {
-        this.setRight(new BinarySearchTreeNode(value, null, this.compareFunction));
+        this.setRight(new BinarySearchTreeNode(value, this.compareFunction));
       }
     }
 

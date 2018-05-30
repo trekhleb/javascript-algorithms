@@ -188,7 +188,7 @@ describe('BinarySearchTreeNode', () => {
     const obj2 = { key: 'obj2', value: 2, toString: () => 'obj2' };
     const obj3 = { key: 'obj3', value: 3, toString: () => 'obj3' };
 
-    const bstNode = new BinarySearchTreeNode(obj2, null, nodeValueComparatorCallback);
+    const bstNode = new BinarySearchTreeNode(obj2, nodeValueComparatorCallback);
     bstNode.insert(obj1);
 
     expect(bstNode.toString()).toBe('obj1,obj2');

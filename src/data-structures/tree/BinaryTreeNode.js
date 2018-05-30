@@ -3,12 +3,11 @@ import Comparator from '../../utils/comparator/Comparator';
 export default class BinaryTreeNode {
   /**
    * @param {*} [value]
-   * @param {BinaryTreeNode} [parent]
    */
-  constructor(value = null, parent = null) {
+  constructor(value = null) {
     this.left = null;
     this.right = null;
-    this.parent = parent;
+    this.parent = null;
     this.value = value;
 
     // This comparator is used to compare binary tree nodes with each other.
