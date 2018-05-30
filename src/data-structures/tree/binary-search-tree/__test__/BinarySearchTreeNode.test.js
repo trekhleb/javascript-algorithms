@@ -171,4 +171,35 @@ describe('BinarySearchTreeNode', () => {
 
     expect(removeNotExistingElementFromTree).toThrow();
   });
+
+  it('should be possible to use objects as node values', () => {
+    const nodeValueComparatorCallback = (a, b) => {
+      const normalizedA = a || { value: null };
+      const normalizedB = b || { value: null };
+
+      if (normalizedA.value === normalizedB.value) {
+        return 0;
+      }
+
+      return normalizedA.value < normalizedB.value ? -1 : 1;
+    };
+
+    const obj1 = { key: 'obj1', value: 1, toString: () => 'obj1' };
+    const obj2 = { key: 'obj2', value: 2, toString: () => 'obj2' };
+    const obj3 = { key: 'obj3', value: 3, toString: () => 'obj3' };
+
+    const bstNode = new BinarySearchTreeNode(obj2, null, nodeValueComparatorCallback);
+    bstNode.insert(obj1);
+
+    expect(bstNode.toString()).toBe('obj1,obj2');
+    expect(bstNode.contains(obj1)).toBeTruthy();
+    expect(bstNode.contains(obj3)).toBeFalsy();
+
+    bstNode.insert(obj3);
+
+    expect(bstNode.toString()).toBe('obj1,obj2,obj3');
+    expect(bstNode.contains(obj3)).toBeTruthy();
+
+    expect(bstNode.findMin().value).toEqual(obj1);
+  });
 });
