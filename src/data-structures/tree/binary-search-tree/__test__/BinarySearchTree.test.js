@@ -46,4 +46,29 @@ describe('BinarySearchTree', () => {
     bst.remove(20);
     expect(bst.toString()).toBe('10');
   });
+
+  it('should insert object values', () => {
+    const nodeValueComparatorCallback = (a, b) => {
+      const normalizedA = a || { value: null };
+      const normalizedB = b || { value: null };
+
+      if (normalizedA.value === normalizedB.value) {
+        return 0;
+      }
+
+      return normalizedA.value < normalizedB.value ? -1 : 1;
+    };
+
+    const obj1 = { key: 'obj1', value: 1, toString: () => 'obj1' };
+    const obj2 = { key: 'obj2', value: 2, toString: () => 'obj2' };
+    const obj3 = { key: 'obj3', value: 3, toString: () => 'obj3' };
+
+    const bst = new BinarySearchTree(nodeValueComparatorCallback);
+
+    bst.insert(obj2);
+    bst.insert(obj3);
+    bst.insert(obj1);
+
+    expect(bst.toString()).toBe('obj1,obj2,obj3');
+  });
 });
