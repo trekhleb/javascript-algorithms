@@ -1,11 +1,23 @@
+import Comparator from '../../utils/comparator/Comparator';
+
 export default class BinaryTreeNode {
+  /**
+   * @param {*} value
+   * @param {BinaryTreeNode} parent
+   */
   constructor(value = null, parent = null) {
     this.left = null;
     this.right = null;
     this.parent = parent;
     this.value = value;
+
+    // This comparator is used to compare binary tree nodes with each other.
+    this.nodeComparator = new Comparator();
   }
 
+  /**
+   * @return {number}
+   */
   get leftHeight() {
     if (!this.left) {
       return 0;
@@ -14,6 +26,9 @@ export default class BinaryTreeNode {
     return this.left.height + 1;
   }
 
+  /**
+   * @return {number}
+   */
   get rightHeight() {
     if (!this.right) {
       return 0;
@@ -22,14 +37,24 @@ export default class BinaryTreeNode {
     return this.right.height + 1;
   }
 
+  /**
+   * @return {number}
+   */
   get height() {
     return Math.max(this.leftHeight, this.rightHeight);
   }
 
+  /**
+   * @return {number}
+   */
   get balanceFactor() {
     return this.leftHeight - this.rightHeight;
   }
 
+  /**
+   * @param {BinaryTreeNode} node
+   * @return {BinaryTreeNode}
+   */
   setLeft(node) {
     // Reset parent for left node since it is going to be detached.
     if (this.left) {
@@ -47,6 +72,10 @@ export default class BinaryTreeNode {
     return this;
   }
 
+  /**
+   * @param {BinaryTreeNode} node
+   * @return {BinaryTreeNode}
+   */
   setRight(node) {
     // Reset parent for right node since it is going to be detached.
     if (this.right) {
@@ -64,13 +93,17 @@ export default class BinaryTreeNode {
     return this;
   }
 
+  /**
+   * @param {BinaryTreeNode} nodeToRemove
+   * @return {boolean}
+   */
   removeChild(nodeToRemove) {
-    if (this.left && this.left === nodeToRemove) {
+    if (this.left && this.nodeComparator.equal(this.left, nodeToRemove)) {
       this.left = null;
       return true;
     }
 
-    if (this.right && this.right === nodeToRemove) {
+    if (this.right && this.nodeComparator.equal(this.right, nodeToRemove)) {
       this.right = null;
       return true;
     }
@@ -78,17 +111,22 @@ export default class BinaryTreeNode {
     return false;
   }
 
+  /**
+   * @param {BinaryTreeNode} nodeToReplace
+   * @param {BinaryTreeNode} replacementNode
+   * @return {boolean}
+   */
   replaceChild(nodeToReplace, replacementNode) {
     if (!nodeToReplace || !replacementNode) {
       return false;
     }
 
-    if (this.left && this.left === nodeToReplace) {
+    if (this.left && this.nodeComparator.equal(this.left, nodeToReplace)) {
       this.left = replacementNode;
       return true;
     }
 
-    if (this.right && this.right === nodeToReplace) {
+    if (this.right && this.nodeComparator.equal(this.right, nodeToReplace)) {
       this.right = replacementNode;
       return true;
     }
@@ -96,6 +134,9 @@ export default class BinaryTreeNode {
     return false;
   }
 
+  /**
+   * @return {*[]}
+   */
   traverseInOrder() {
     let traverse = [];
 
@@ -115,6 +156,9 @@ export default class BinaryTreeNode {
     return traverse;
   }
 
+  /**
+   * @return {string}
+   */
   toString() {
     return this.traverseInOrder().toString();
   }
