@@ -196,4 +196,12 @@ describe('BinaryTreeNode', () => {
     expect(node1.toString()).toBe('object_1');
     expect(node2.toString()).toBe('[object Object]');
   });
+
+  it('should be possible to attach meta information to the node', () => {
+    const redNode = new BinaryTreeNode(1, { color: 'red' });
+    const blackNode = new BinaryTreeNode(2, { color: 'black' });
+
+    expect(redNode.meta.color).toBe('red');
+    expect(blackNode.meta.color).toBe('black');
+  });
 });

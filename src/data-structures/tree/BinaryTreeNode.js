@@ -2,13 +2,15 @@ import Comparator from '../../utils/comparator/Comparator';
 
 export default class BinaryTreeNode {
   /**
-   * @param {*} [value]
+   * @param {*} [value] - node value.
+   * @param {Object} meta - any meta information that needs to be attached to the node.
    */
-  constructor(value = null) {
+  constructor(value = null, meta = {}) {
     this.left = null;
     this.right = null;
     this.parent = null;
     this.value = value;
+    this.meta = meta;
 
     // This comparator is used to compare binary tree nodes with each other.
     this.nodeComparator = new Comparator();
