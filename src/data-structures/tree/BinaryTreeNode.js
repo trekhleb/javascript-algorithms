@@ -5,7 +5,7 @@ export default class BinaryTreeNode {
    * @param {*} [value] - node value.
    * @param {Object} meta - any meta information that needs to be attached to the node.
    */
-  constructor(value = null, meta = null) {
+  constructor(value = null, meta = {}) {
     this.left = null;
     this.right = null;
     this.parent = null;
@@ -155,6 +155,29 @@ export default class BinaryTreeNode {
     }
 
     return traverse;
+  }
+
+  /**
+   * @param {string} property
+   * @param {*} value
+   * @return {BinaryTreeNode}
+   */
+  setMeta(property, value) {
+    this.meta[property] = value;
+
+    return this;
+  }
+
+  /**
+   * @param property
+   * @return {*}
+   */
+  getMeta(property) {
+    if (!this.meta || !Object.prototype.hasOwnProperty.call(this.meta, property)) {
+      return null;
+    }
+
+    return this.meta[property];
   }
 
   /**
