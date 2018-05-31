@@ -125,10 +125,13 @@ describe('BinarySearchTreeNode', () => {
 
     expect(bstRootNode.toString()).toBe('5,10,20');
 
-    bstRootNode.remove(5);
+    const removedNode1 = bstRootNode.remove(5);
     expect(bstRootNode.toString()).toBe('10,20');
-    bstRootNode.remove(20);
+    expect(removedNode1.value).toBe(5);
+
+    const removedNode2 = bstRootNode.remove(20);
     expect(bstRootNode.toString()).toBe('10');
+    expect(removedNode2.value).toBe(20);
   });
 
   it('should remove nodes with one child', () => {

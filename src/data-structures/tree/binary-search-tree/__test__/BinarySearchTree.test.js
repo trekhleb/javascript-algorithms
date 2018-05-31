@@ -14,11 +14,13 @@ describe('BinarySearchTree', () => {
   it('should insert values', () => {
     const bst = new BinarySearchTree();
 
-    bst.insert(10);
-    bst.insert(20);
+    const insertedNode1 = bst.insert(10);
+    const insertedNode2 = bst.insert(20);
     bst.insert(5);
 
     expect(bst.toString()).toBe('5,10,20');
+    expect(insertedNode1.value).toBe(10);
+    expect(insertedNode2.value).toBe(20);
   });
 
   it('should check if value exists', () => {
@@ -41,10 +43,13 @@ describe('BinarySearchTree', () => {
 
     expect(bst.toString()).toBe('5,10,20');
 
-    bst.remove(5);
+    const removedNode1 = bst.remove(5);
     expect(bst.toString()).toBe('10,20');
-    bst.remove(20);
+    expect(removedNode1.value).toBe(5);
+
+    const removedNode2 = bst.remove(20);
     expect(bst.toString()).toBe('10');
+    expect(removedNode2.value).toBe(20);
   });
 
   it('should insert object values', () => {

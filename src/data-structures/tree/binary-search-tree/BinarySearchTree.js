@@ -10,9 +10,10 @@ export default class BinarySearchTree {
 
   /**
    * @param {*} value
+   * @return {BinarySearchTreeNode}
    */
   insert(value) {
-    this.root.insert(value);
+    return this.root.insert(value);
   }
 
   /**
@@ -25,6 +26,7 @@ export default class BinarySearchTree {
 
   /**
    * @param {*} value
+   * @return {BinarySearchTreeNode}
    */
   remove(value) {
     return this.root.remove(value);
