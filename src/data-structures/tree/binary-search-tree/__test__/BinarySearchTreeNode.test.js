@@ -79,6 +79,23 @@ describe('BinarySearchTreeNode', () => {
     expect(node.findMin().value).toBe(1);
   });
 
+  it('should be possible to attach meta information to binary search tree nodes', () => {
+    const node = new BinarySearchTreeNode(10, { value: 10 });
+
+    node.insert(20, { value: 20 });
+    node.insert(30, { value: 30 });
+    node.insert(5, { value: 5 });
+    node.insert(40, { value: 40 });
+    node.insert(1, { value: 1 });
+
+    expect(node.meta.value).toBe(10);
+
+    expect(node.findMin()).not.toBeNull();
+    expect(node.findMin().value).toBe(1);
+    expect(node.findMin().meta.value).toBe(1);
+    expect(node.find(30).meta.value).toBe(30);
+  });
+
   it('should find node', () => {
     const node = new BinarySearchTreeNode(10);
 
@@ -188,7 +205,7 @@ describe('BinarySearchTreeNode', () => {
     const obj2 = { key: 'obj2', value: 2, toString: () => 'obj2' };
     const obj3 = { key: 'obj3', value: 3, toString: () => 'obj3' };
 
-    const bstNode = new BinarySearchTreeNode(obj2, nodeValueComparatorCallback);
+    const bstNode = new BinarySearchTreeNode(obj2, null, nodeValueComparatorCallback);
     bstNode.insert(obj1);
 
     expect(bstNode.toString()).toBe('obj1,obj2');

@@ -5,7 +5,7 @@ export default class BinaryTreeNode {
    * @param {*} [value] - node value.
    * @param {Object} meta - any meta information that needs to be attached to the node.
    */
-  constructor(value = null, meta = {}) {
+  constructor(value = null, meta = null) {
     this.left = null;
     this.right = null;
     this.parent = null;
