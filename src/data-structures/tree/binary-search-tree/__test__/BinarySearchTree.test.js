@@ -48,7 +48,7 @@ describe('BinarySearchTree', () => {
   });
 
   it('should insert object values', () => {
-    const nodeValueComparatorCallback = (a, b) => {
+    const nodeValueCompareFunction = (a, b) => {
       const normalizedA = a || { value: null };
       const normalizedB = b || { value: null };
 
@@ -63,7 +63,7 @@ describe('BinarySearchTree', () => {
     const obj2 = { key: 'obj2', value: 2, toString: () => 'obj2' };
     const obj3 = { key: 'obj3', value: 3, toString: () => 'obj3' };
 
-    const bst = new BinarySearchTree(nodeValueComparatorCallback);
+    const bst = new BinarySearchTree(nodeValueCompareFunction);
 
     bst.insert(obj2);
     bst.insert(obj3);
