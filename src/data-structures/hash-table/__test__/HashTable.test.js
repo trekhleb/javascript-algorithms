@@ -43,12 +43,13 @@ describe('HashTable', () => {
 
     expect(hashTable.get('a')).toBe('sky');
     expect(hashTable.get('d')).toBe('ocean');
+    expect(hashTable.get('x')).not.toBeDefined();
 
     hashTable.delete('a');
 
     expect(hashTable.delete('not-existing')).toBeNull();
 
-    expect(hashTable.get('a')).toBeNull();
+    expect(hashTable.get('a')).not.toBeDefined();
     expect(hashTable.get('d')).toBe('ocean');
 
     hashTable.set('d', 'ocean-new');

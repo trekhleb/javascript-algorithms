@@ -78,7 +78,7 @@ export default class HashTable {
     const bucketLinkedList = this.buckets[this.hash(key)];
     const node = bucketLinkedList.find({ callback: nodeValue => nodeValue.key === key });
 
-    return node ? node.value.value : null;
+    return node ? node.value.value : undefined;
   }
 
   /**
