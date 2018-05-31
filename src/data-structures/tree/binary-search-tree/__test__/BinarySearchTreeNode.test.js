@@ -20,14 +20,16 @@ describe('BinarySearchTreeNode', () => {
 
   it('should insert nodes in correct order', () => {
     const bstNode = new BinarySearchTreeNode(2);
-    bstNode.insert(1);
+    const insertedNode1 = bstNode.insert(1);
 
+    expect(insertedNode1.value).toBe(1);
     expect(bstNode.toString()).toBe('1,2');
     expect(bstNode.contains(1)).toBeTruthy();
     expect(bstNode.contains(3)).toBeFalsy();
 
-    bstNode.insert(3);
+    const insertedNode2 = bstNode.insert(3);
 
+    expect(insertedNode2.value).toBe(3);
     expect(bstNode.toString()).toBe('1,2,3');
     expect(bstNode.contains(3)).toBeTruthy();
     expect(bstNode.contains(4)).toBeFalsy();
@@ -80,20 +82,24 @@ describe('BinarySearchTreeNode', () => {
   });
 
   it('should be possible to attach meta information to binary search tree nodes', () => {
-    const node = new BinarySearchTreeNode(10, { value: 10 });
+    const node = new BinarySearchTreeNode(10);
 
-    node.insert(20, { value: 20 });
-    node.insert(30, { value: 30 });
-    node.insert(5, { value: 5 });
-    node.insert(40, { value: 40 });
-    node.insert(1, { value: 1 });
+    node.insert(20);
+    const node1 = node.insert(30);
+    node.insert(5);
+    node.insert(40);
+    const node2 = node.insert(1);
 
-    expect(node.meta.value).toBe(10);
+    node.meta.set('color', 'red');
+    node1.meta.set('color', 'black');
+    node2.meta.set('color', 'white');
+
+    expect(node.meta.get('color')).toBe('red');
 
     expect(node.findMin()).not.toBeNull();
     expect(node.findMin().value).toBe(1);
-    expect(node.findMin().meta.value).toBe(1);
-    expect(node.find(30).meta.value).toBe(30);
+    expect(node.findMin().meta.get('color')).toBe('white');
+    expect(node.find(30).meta.get('color')).toBe('black');
   });
 
   it('should find node', () => {
@@ -205,7 +211,7 @@ describe('BinarySearchTreeNode', () => {
     const obj2 = { key: 'obj2', value: 2, toString: () => 'obj2' };
     const obj3 = { key: 'obj3', value: 3, toString: () => 'obj3' };
 
-    const bstNode = new BinarySearchTreeNode(obj2, null, nodeValueComparatorCallback);
+    const bstNode = new BinarySearchTreeNode(obj2, nodeValueComparatorCallback);
     bstNode.insert(obj1);
 
     expect(bstNode.toString()).toBe('obj1,obj2');

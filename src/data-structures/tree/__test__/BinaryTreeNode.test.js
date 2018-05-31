@@ -198,29 +198,13 @@ describe('BinaryTreeNode', () => {
   });
 
   it('should be possible to attach meta information to the node', () => {
-    const redNode = new BinaryTreeNode(1, { color: 'red' });
-    const blackNode = new BinaryTreeNode(2, { color: 'black' });
+    const redNode = new BinaryTreeNode(1);
+    const blackNode = new BinaryTreeNode(2);
 
-    expect(redNode.meta.color).toBe('red');
-    expect(blackNode.meta.color).toBe('black');
-  });
+    redNode.meta.set('color', 'red');
+    blackNode.meta.set('color', 'black');
 
-  it('should be possible to use get/set methods to change node meta information', () => {
-    const redNode = new BinaryTreeNode(1, { color: 'red' });
-    const blackNode = new BinaryTreeNode(2, { color: 'black' });
-
-    expect(redNode.getMeta('color')).toBe('red');
-    expect(blackNode.getMeta('color')).toBe('black');
-
-    redNode.setMeta('size', 8);
-
-    expect(redNode.getMeta('size')).toBe(8);
-    expect(redNode.getMeta('color')).toBe('red');
-    expect(redNode.getMeta('not_existing')).toBeNull();
-
-    // It must also be possible to override meta information.
-    redNode.setMeta('color', 'blue');
-    expect(redNode.getMeta('size')).toBe(8);
-    expect(redNode.getMeta('color')).toBe('blue');
+    expect(redNode.meta.get('color')).toBe('red');
+    expect(blackNode.meta.get('color')).toBe('black');
   });
 });
