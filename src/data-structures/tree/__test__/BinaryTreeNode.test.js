@@ -207,4 +207,54 @@ describe('BinaryTreeNode', () => {
     expect(redNode.meta.get('color')).toBe('red');
     expect(blackNode.meta.get('color')).toBe('black');
   });
+
+  it('should detect right uncle', () => {
+    const grandParent = new BinaryTreeNode('grand-parent');
+    const parent = new BinaryTreeNode('parent');
+    const uncle = new BinaryTreeNode('uncle');
+    const child = new BinaryTreeNode('child');
+
+    expect(grandParent.uncle).not.toBeDefined();
+    expect(parent.uncle).not.toBeDefined();
+
+    grandParent.setLeft(parent);
+
+    expect(parent.uncle).not.toBeDefined();
+    expect(child.uncle).not.toBeDefined();
+
+    parent.setLeft(child);
+
+    expect(child.uncle).not.toBeDefined();
+
+    grandParent.setRight(uncle);
+
+    expect(parent.uncle).not.toBeDefined();
+    expect(child.uncle).toBeDefined();
+    expect(child.uncle).toEqual(uncle);
+  });
+
+  it('should detect left uncle', () => {
+    const grandParent = new BinaryTreeNode('grand-parent');
+    const parent = new BinaryTreeNode('parent');
+    const uncle = new BinaryTreeNode('uncle');
+    const child = new BinaryTreeNode('child');
+
+    expect(grandParent.uncle).not.toBeDefined();
+    expect(parent.uncle).not.toBeDefined();
+
+    grandParent.setRight(parent);
+
+    expect(parent.uncle).not.toBeDefined();
+    expect(child.uncle).not.toBeDefined();
+
+    parent.setRight(child);
+
+    expect(child.uncle).not.toBeDefined();
+
+    grandParent.setLeft(uncle);
+
+    expect(parent.uncle).not.toBeDefined();
+    expect(child.uncle).toBeDefined();
+    expect(child.uncle).toEqual(uncle);
+  });
 });
