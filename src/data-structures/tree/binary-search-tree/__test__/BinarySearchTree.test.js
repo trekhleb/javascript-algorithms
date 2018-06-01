@@ -76,4 +76,23 @@ describe('BinarySearchTree', () => {
 
     expect(bst.toString()).toBe('obj1,obj2,obj3');
   });
+
+  it('should be traversed to sorted array', () => {
+    const bst = new BinarySearchTree();
+
+    bst.insert(10);
+    bst.insert(-10);
+    bst.insert(20);
+    bst.insert(-20);
+    bst.insert(25);
+    bst.insert(6);
+
+    expect(bst.toString()).toBe('-20,-10,6,10,20,25');
+    expect(bst.root.height).toBe(2);
+
+    bst.insert(4);
+
+    expect(bst.toString()).toBe('-20,-10,4,6,10,20,25');
+    expect(bst.root.height).toBe(3);
+  });
 });
