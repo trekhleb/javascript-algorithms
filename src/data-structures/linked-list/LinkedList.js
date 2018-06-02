@@ -60,7 +60,7 @@ export default class LinkedList {
     let deletedNode = null;
 
     // If the head must be deleted then make 2nd node to be a head.
-    if (this.compare.equal(this.head.value, value)) {
+    while (this.head && this.compare.equal(this.head.value, value)) {
       deletedNode = this.head;
       this.head = this.head.next;
     }
