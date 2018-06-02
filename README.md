@@ -137,13 +137,17 @@ algorithm is an abstraction higher than a computer program.
   * [Integer Partition](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/integer-partition)
   * [Maximum Subarray](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray)
   * [Bellman-Ford Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
-* **Backtracking** - similarly to brute force, try to generate all possible solutions, but each time you generate a solution test
+* **Backtracking** - similarly to brute force, try to generate all possible solutions, but each time you generate next solution you test
 if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise, backtrack, and go on a 
-different path of finding a solution
+different path of finding a solution. Normally the DFS traversal of state-space is being used.
   * [Hamiltonian Cycle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * [N-Queens Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/n-queens)
   * [Knight's Tour](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/knight-tour)
-* **Branch & Bound**
+* **Branch & Bound** - remember the lowest-cost solution found at each stage of the backtracking
+search, and use the cost of the lowest-cost solution found so far as a lower bound on the cost of
+a least-cost solution to the problem, in order to discard partial solutions with costs larger than the
+lowest-cost solution found so far. Normally BFS traversal in combination with DFS traversal of state-space
+tree is being used.
 
 ## How to use this repository
 
