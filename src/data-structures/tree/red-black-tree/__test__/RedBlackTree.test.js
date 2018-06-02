@@ -285,4 +285,30 @@ describe('RedBlackTree', () => {
     expect(tree.isNodeRed(node3)).toBeTruthy();
     expect(tree.isNodeRed(node6)).toBeTruthy();
   });
+
+  it('should do left-left rotation with left grand-parent', () => {
+    const tree = new RedBlackTree();
+
+    tree.insert(20);
+    tree.insert(15);
+    tree.insert(25);
+    tree.insert(10);
+    tree.insert(5);
+
+    expect(tree.toString()).toBe('5,10,15,20,25');
+    expect(tree.root.height).toBe(2);
+  });
+
+  it('should do right-right rotation with left grand-parent', () => {
+    const tree = new RedBlackTree();
+
+    tree.insert(20);
+    tree.insert(15);
+    tree.insert(25);
+    tree.insert(17);
+    tree.insert(19);
+
+    expect(tree.toString()).toBe('15,17,19,20,25');
+    expect(tree.root.height).toBe(2);
+  });
 });
