@@ -23,7 +23,7 @@ _Read this in other languages:_
 * [Trie 字典樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/trie)
 * [Tree 樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
   * [Binary Search Tree 二元搜尋樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
-  * [AVL Tree AVL樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/avl-tree)
+  * [AVL Tree AVL樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/avl-tree)
   * [紅黑樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/red-black-tree)
 * [Graph 圖](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph) (有向跟無向皆包含)
 * [Disjoint Set 互斥集](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/disjoint-set)
