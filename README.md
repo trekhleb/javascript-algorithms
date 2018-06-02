@@ -6,9 +6,9 @@
 This repository contains JavaScript based examples of many 
 popular algorithms and data structures.
 
-Each algorithm and data structure have its own separate README 
-with related explanations and links for further reading and YouTube
-videos.
+Each algorithm and data structure has its own separate README
+with related explanations and links for further reading (including ones
+to YouTube videos).
 
 _Read this in other languages:_ 
 [简体中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md),
@@ -16,7 +16,7 @@ _Read this in other languages:_
 
 ## Data Structures
 
-Data structure is a particular way of organizing and storing data in a computer so that it can 
+A data structure is a particular way of organizing and storing data in a computer so that it can
 be accessed and modified efficiently. More precisely, a data structure is a collection of data 
 values, the relationships among them, and the functions or operations that can be applied to 
 the data.
@@ -37,8 +37,8 @@ the data.
 
 ## Algorithms
 
-Algorithm is an unambiguous specification of how to solve a class of problems. Algorithm is
-a set of rules that precisely defines a sequence of operations.
+An algorithm is an unambiguous specification of how to solve a class of problems. It is
+a set of rules that precisely define a sequence of operations.
 
 ### Algorithms by Topic
 
@@ -51,7 +51,7 @@ a set of rules that precisely defines a sequence of operations.
   * [Integer Partition](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/integer-partition)
 * **Sets**
   * [Cartesian Product](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/cartesian-product) - product of multiple sets
-  * [Power Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/power-set) - all subsets of the set 
+  * [Power Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/power-set) - all subsets of a set
   * [Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/permutations) (with and without repetitions)
   * [Combinations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/combinations) (with and without repetitions)
   * [Fisher–Yates Shuffle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
@@ -60,13 +60,13 @@ a set of rules that precisely defines a sequence of operations.
   * [Shortest Common Supersequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/shortest-common-supersequence) (SCS)
   * [Knapsack Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem) - "0/1" and "Unbound" ones
   * [Maximum Subarray](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray) - "Brute Force" and "Dynamic Programming" (Kadane's) versions
-* **String**
+* **Strings**
   * [Levenshtein Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * [Hamming Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/hamming-distance) - number of positions at which the symbols are different
   * [Knuth–Morris–Pratt Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/knuth-morris-pratt) - substring search
   * [Rabin Karp Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/rabin-karp) - substring search
   * [Longest Common Substring](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-substring)
-* **Search**
+* **Searches**
   * [Linear Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/linear-search)
   * [Binary Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search)
 * **Sorting**
@@ -79,10 +79,10 @@ a set of rules that precisely defines a sequence of operations.
   * [Shellsort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/shell-sort)
   * [Counting Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/counting-sort)
   * [Radix Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/radix-sort)
-* **Tree**  
+* **Tree Searches**
   * [Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/depth-first-search) (DFS)
   * [Breadth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/breadth-first-search) (BFS)
-* **Graph**
+* **Graph Algorithms**
   * [Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search) (DFS)
   * [Breadth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/breadth-first-search) (BFS)
   * [Dijkstra Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
@@ -126,7 +126,7 @@ algorithm is an abstraction higher than a computer program.
   * [Quicksort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/quick-sort)
   * [Tree Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/depth-first-search) (DFS)
   * [Graph Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search) (DFS)
-* **Dynamic Programming** - build up to a solution using previously found sub-solutions
+* **Dynamic Programming** - build up a solution using previously found sub-solutions
   * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
   * [Levenshtein Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * [Longest Common Subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-common-subsequnce) (LCS)
@@ -137,8 +137,8 @@ algorithm is an abstraction higher than a computer program.
   * [Integer Partition](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/integer-partition)
   * [Maximum Subarray](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray)
   * [Bellman-Ford Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
-* **Backtracking** - similarly to brute force try to generate all possible solutions but each time you generate a solution test 
-if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise backtrack and go on a 
+* **Backtracking** - similarly to brute force, try to generate all possible solutions, but each time you generate a solution test
+if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise, backtrack, and go on a 
 different path of finding solution
   * [Hamiltonian Cycle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * [N-Queens Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/n-queens)
