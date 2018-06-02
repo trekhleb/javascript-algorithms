@@ -1,4 +1,9 @@
-// Return a fibonacci sequence as an array
+/**
+ * Return a fibonacci sequence as an array.
+ *
+ * @param n
+ * @return {number[]}
+ */
 export default function fibonacci(n) {
   const fibSequence = [1];
 

@@ -1,4 +1,9 @@
-// Calculate fibonacci number at specific position using Dynamic Programming approach.
+/**
+ * Calculate fibonacci number at specific position using Dynamic Programming approach.
+ *
+ * @param n
+ * @return {number}
+ */
 export default function fibonacciNth(n) {
   let currentValue = 1;
   let previousValue = 0;
