@@ -1,8 +1,10 @@
+import HashTable from '../hash-table/HashTable';
+
 export default class TrieNode {
   constructor(character, isCompleteWord = false) {
     this.character = character;
     this.isCompleteWord = isCompleteWord;
-    this.children = new Map();
+    this.children = new HashTable();
   }
 
   getChild(character) {
@@ -22,7 +24,7 @@ export default class TrieNode {
   }
 
   suggestChildren() {
-    return [...this.children.keys()];
+    return [...this.children.getKeys()];
   }
 
   toString() {
