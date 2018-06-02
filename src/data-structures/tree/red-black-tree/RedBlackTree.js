@@ -33,6 +33,14 @@ export default class RedBlackTree extends BinarySearchTree {
   }
 
   /**
+   * @param {*} value
+   * @return {BinarySearchTreeNode}
+   */
+  remove(value) {
+    throw new Error(`Can't remove ${value}. Remove method is not implemented yet`);
+  }
+
+  /**
    * @param {BinarySearchTreeNode} node
    */
   balance(node) {

@@ -311,4 +311,14 @@ describe('RedBlackTree', () => {
     expect(tree.toString()).toBe('15,17,19,20,25');
     expect(tree.root.height).toBe(2);
   });
+
+  it('should throw an error when trying to remove node', () => {
+    const removeNodeFromRedBlackTree = () => {
+      const tree = new RedBlackTree();
+
+      tree.remove(1);
+    };
+
+    expect(removeNodeFromRedBlackTree).toThrowError();
+  });
 });
