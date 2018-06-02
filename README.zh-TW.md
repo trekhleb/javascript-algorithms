@@ -14,19 +14,19 @@ _Read this in other languages:_
 
 資料結構是一個電腦用來組織和排序資料的特定方式，透過這樣的方式資料可以有效率地被讀取以及修改。更精確地說，一個資料結構是一個資料值的集合、彼此間的關係，函數或者運作可以應用於資料上。
 
-* [Linked List 鏈結串列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
-* [Queue 貯列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/queue)
-* [Stack 堆疊](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/stack)
-* [Hash Table 雜湊表](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/hash-table)
-* [Heap 堆](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/heap)
-* [Priority Queue 優先貯列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/priority-queue)
-* [Trie 字典樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/trie)
-* [Tree 樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
-  * [Binary Search Tree 二元搜尋樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
-  * [AVL Tree AVL樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/avl-tree)
+* [鏈結串列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
+* [貯列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/queue)
+* [堆疊](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/stack)
+* [雜湊表](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/hash-table)
+* [堆](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/heap)
+* [優先貯列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/priority-queue)
+* [字典樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/trie)
+* [樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
+  * [二元搜尋樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
+  * [AVL樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/avl-tree)
   * [紅黑樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/red-black-tree)
-* [Graph 圖](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph) (有向跟無向皆包含)
-* [Disjoint Set 互斥集](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/disjoint-set)
+* [圖](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph) (有向跟無向皆包含)
+* [互斥集](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/disjoint-set)
 
 ## 演算法
 
