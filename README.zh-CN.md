@@ -25,10 +25,7 @@ _Read this in other languages:_
 * [树](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
     * [二分查找](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
     * [AVL 树](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/avl-tree)
-    * 红黑树
-    * 后缀树
-    * 线段树 或 间隔树
-    * 二叉索引树
+    * [红黑树](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/red-black-tree)
 * [图](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph) (有向图与无向图)
 * [并查集](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/disjoint-set)
 
