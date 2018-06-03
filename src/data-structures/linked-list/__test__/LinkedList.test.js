@@ -33,6 +33,7 @@ describe('LinkedList', () => {
     expect(linkedList.delete(5)).toBeNull();
 
     linkedList.append(1);
+    linkedList.append(1);
     linkedList.append(2);
     linkedList.append(3);
     linkedList.append(3);
@@ -45,10 +46,10 @@ describe('LinkedList', () => {
 
     const deletedNode = linkedList.delete(3);
     expect(deletedNode.value).toBe(3);
-    expect(linkedList.toString()).toBe('1,2,4,5');
+    expect(linkedList.toString()).toBe('1,1,2,4,5');
 
     linkedList.delete(3);
-    expect(linkedList.toString()).toBe('1,2,4,5');
+    expect(linkedList.toString()).toBe('1,1,2,4,5');
 
     linkedList.delete(1);
     expect(linkedList.toString()).toBe('2,4,5');
