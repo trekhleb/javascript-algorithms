@@ -1,6 +1,6 @@
 import sieveOfEratosthenes from '../sieveOfEratosthenes';
 
-describe('factorial', () => {
+describe('sieveOfEratosthenes', () => {
   it('should find all primes less than or equal to n', () => {
     expect(sieveOfEratosthenes(5)).toEqual([2, 3, 5]);
     expect(sieveOfEratosthenes(10)).toEqual([2, 3, 5, 7]);
