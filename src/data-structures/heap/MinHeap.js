@@ -141,8 +141,8 @@ export default class MinHeap {
    */
   remove(item, customFindingComparator) {
     // Find number of items to remove.
-    const numberOfItemsToRemove = this.find(item).length;
     const customComparator = customFindingComparator || this.compare;
+    const numberOfItemsToRemove = this.find(item, customComparator).length;
 
     for (let iteration = 0; iteration < numberOfItemsToRemove; iteration += 1) {
       // We need to find item index to remove each time after removal since
