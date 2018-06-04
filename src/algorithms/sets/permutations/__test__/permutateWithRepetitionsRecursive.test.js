@@ -1,7 +1,7 @@
 import permutateWithRepetitionsRecursive from '../permutateWithRepetitionsRecursive';
 import testPermutateWithRepetitionsFn from './testPermutateWithRepetitionsFn';
 
-describe('permutateWithRepetitions', () => {
+describe('permutateWithRepetitionsRecursive', () => {
   it('should permutate string with repetition', () => {
     testPermutateWithRepetitionsFn(permutateWithRepetitionsRecursive);
   });
