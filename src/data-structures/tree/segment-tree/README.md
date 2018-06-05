@@ -1,41 +1,23 @@
 # Segment Tree
 
-A segment tree is a data structure designed to perform 
-certain array operations efficiently - especially those 
-involving range queries.
+In computer science, a segment tree also known as a statistic tree 
+is a tree data structure used for storing information about intervals, 
+or segments. It allows querying which of the stored segments contain 
+a given point. It is, in principle, a static structure; that is, 
+it's a structure that cannot be modified once it's built. A similar 
+data structure is the interval tree.
 
-A common application is the [Range Minimum Query](https://en.wikipedia.org/wiki/Range_minimum_query) (RMQ) problem,
-where we are given an array of numbers and need to 
-support operations of updating values of the array and 
-finding the minimum of a contiguous subarray. 
-A segment tree implementation for the RMQ problem 
-takes `O(n)` to initialize, and `O(log n)` per query or 
-update. The "minimum" operation can be replaced by any 
-array operation (such as sum).
-
-A segment tree is a binary tree with contiguous 
-sub-arrays as nodes. The root of the tree represents the 
+A segment tree is a binary tree. The root of the tree represents the 
 whole array. The two children of the root represent the 
 first and second halves of the array. Similarly, the 
 children of each node corresponds to the two halves of 
-the array corresponding to the node. If the array has 
-size `n`, we can prove that the segment tree has size at 
-most `4n`. Each node stores the minimum of its 
-corresponding sub-array.
-
-In the implementation, we do not explicitly store this 
-tree structure, but represent it using a `4n` sized array.
-The left child of node i is `2i+1` and the right child 
-is `2i+2`. This is a standard way to represent segment 
-trees, and lends itself to an efficient implementation.
+the array corresponding to the node.
 
 We build the tree bottom up, with the value of each node 
-being the minimum of its children's values. This will 
-take time `O(n)`, with one operation for each node. Updates 
-are also done bottom up, with values being recomputed 
-starting from the leaf, and up to the root. The number 
+being the "minimum" (or any other function) of its children's values. This will 
+take `O(n log n)` time. The number 
 of operations done is the height of the tree, which 
-is `O(log n)`. To answer queries, each node splits the 
+is `O(log n)`. To do range queries, each node splits the 
 query into two parts, one sub-query for each child. 
 If a query contains the whole subarray of a node, we 
 can use the precomputed value at the node. Using this 
@@ -44,6 +26,21 @@ operations are done.
 
 ![Segment Tree](https://www.geeksforgeeks.org/wp-content/uploads/segment-tree1.png)
 
+## Application
+
+A segment tree is a data structure designed to perform 
+certain array operations efficiently - especially those 
+involving range queries.
+
+Applications of the segment tree are in the areas of computational geometry, 
+and geographic information systems.
+
+Current implementation of Segment Tree implies that you may
+pass any binary (with two input params) function to it and 
+thus you're able to do range query for variety of functions.
+In tests you may fins examples of doing `min`, `max` and `sam` range
+queries on SegmentTree.
+ 
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Segment_tree)

@@ -1,149 +1,168 @@
-/**
- * Segment Tree implementation for Range Query data structure
- * Tracks a array of numbers. 0 indexed
- * operation is a binary function (eg sum, min) - needs to be associative
- * identity is the identity of the operation
- *    i.e, operation(x, identity) = x (eg 0 for sum, Infinity for min)
- * Supports methods
- *  update(index, val) - set value of index
- *  query(l, r) - finds operation(values in range [l, r]) (both inclusive)
- *
- * As is customary, we store the tree implicitly with i being the parent of 2i, 2i+1.
- */
+import isPowerOfTwo from '../../../algorithms/math/is-power-of-two/isPowerOfTwo';
 
 export default class SegmentTree {
   /**
-   * array initialises the numbers
-   * @param {number[]} array
+   * @param {number[]} inputArray
+   * @param {function} operation - binary function (i.e. sum, min)
+   * @param {number} operationFallback - operation fallback value (i.e. 0 for sum, Infinity for min)
    */
-  constructor(array, operation, identity) {
-    this.n = array.length;
-    this.array = array;
-    this.tree = new Array(4 * this.n);
-
+  constructor(inputArray, operation, operationFallback) {
+    this.inputArray = inputArray;
     this.operation = operation;
-    this.identity = identity;
+    this.operationFallback = operationFallback;
 
-    // use Range Min Query by default
-    if (this.operation === undefined) {
-      this.operation = Math.min;
-      this.identity = Infinity;
-    }
+    // Init array representation of segment tree.
+    this.segmentTree = this.initSegmentTree(this.inputArray);
 
-
-    this.build();
+    this.buildSegmentTree();
   }
 
   /**
-   * Stub for recursive call
+   * @param {number[]} inputArray
+   * @return {number[]}
    */
-  build() {
-    this.buildRec(1, 0, this.n - 1);
-  }
+  initSegmentTree(inputArray) {
+    let segmentTreeArrayLength;
+    const inputArrayLength = inputArray.length;
 
-  /**
-   * Left child index
-   * @param {number} root
-   */
-  left(root) {
-    return 2 * root;
-  }
-
-  /**
-   * Right child index
-   * @param {number} root
-   */
-  right(root) {
-    return (2 * root) + 1;
-  }
-
-  /**
-   * root is the index in the tree, [l,r] (inclusive) is the current array segment being built
-   * @param {number} root
-   * @param {number} l
-   * @param {number} r
-   */
-  buildRec(root, l, r) {
-    if (l === r) {
-      this.tree[root] = this.array[l];
+    if (isPowerOfTwo(inputArrayLength)) {
+      // If original array length is a power of two.
+      segmentTreeArrayLength = (2 * inputArrayLength) - 1;
     } else {
-      const mid = Math.floor((l + r) / 2);
-      // build left and right nodes
-      this.buildRec(this.left(root), l, mid);
-      this.buildRec(this.right(root), mid + 1, r);
-      this.tree[root] = this.operation(this.tree[this.left(root)], this.tree[this.right(root)]);
+      // If original array length is not a power of two then we need to find
+      // next number that is a power of two and use it to calculate
+      // tree array size. This is happens because we need to fill empty children
+      // in perfect binary tree with nulls.And those nulls need extra space.
+      const currentPower = Math.floor(Math.log2(inputArrayLength));
+      const nextPower = currentPower + 1;
+      const nextPowerOfTwoNumber = 2 ** nextPower;
+      segmentTreeArrayLength = (2 * nextPowerOfTwoNumber) - 1;
     }
+
+    return new Array(segmentTreeArrayLength).fill(null);
   }
 
   /**
-   * Stub for recursive call
-   * @param {number} lindex
-   * @param {number} rindex
+   * Build segment tree.
    */
-  query(lindex, rindex) {
-    return this.queryRec(1, lindex, rindex, 0, this.n - 1);
+  buildSegmentTree() {
+    const leftIndex = 0;
+    const rightIndex = this.inputArray.length - 1;
+    const position = 0;
+    this.buildTreeRecursively(leftIndex, rightIndex, position);
   }
 
   /**
-   * [lindex, rindex] is the query region
-   * [l,r] is the current region being processed
-   * Guaranteed that [lindex,rindex] contained in [l,r]
-   * @param {number} root
-   * @param {number} lindex
-   * @param {number} rindex
-   * @param {number} l
-   * @param {number} r
+   * Build segment tree recursively.
+   *
+   * @param {number} leftInputIndex
+   * @param {number} rightInputIndex
+   * @param {number} position
    */
-  queryRec(root, lindex, rindex, l, r) {
-    // console.log(root, lindex, rindex, l, r);
-    if (lindex > rindex) {
-      // happens when mid+1 > r - no segment
-      return this.identity;
+  buildTreeRecursively(leftInputIndex, rightInputIndex, position) {
+    // If low input index and high input index are equal that would mean
+    // the we have finished splitting and we are already came to the leaf
+    // of the segment tree. We need to copy this leaf value from input
+    // array to segment tree.
+    if (leftInputIndex === rightInputIndex) {
+      this.segmentTree[position] = this.inputArray[leftInputIndex];
+      return;
     }
-    if (l === lindex && r === rindex) {
-      // query region matches current region - use tree value
-      return this.tree[root];
-    }
-    const mid = Math.floor((l + r) / 2);
-    // get left and right results and combine
-    const leftResult = this.queryRec(this.left(root), lindex, Math.min(rindex, mid), l, mid);
-    const rightResult = this.queryRec(
-      this.right(root), Math.max(mid + 1, lindex), rindex,
-      mid + 1, r,
+
+    // Split input array on two halves and process them recursively.
+    const middleIndex = Math.floor((leftInputIndex + rightInputIndex) / 2);
+    // Process left half of the input array.
+    this.buildTreeRecursively(leftInputIndex, middleIndex, this.getLeftChildIndex(position));
+    // Process right half of the input array.
+    this.buildTreeRecursively(middleIndex + 1, rightInputIndex, this.getRightChildIndex(position));
+
+    // Once every tree leaf is not empty we're able to build tree bottom up using
+    // provided operation function.
+    this.segmentTree[position] = this.operation(
+      this.segmentTree[this.getLeftChildIndex(position)],
+      this.segmentTree[this.getRightChildIndex(position)],
     );
-    return this.operation(leftResult, rightResult);
   }
 
   /**
-   * Set array[index] to value
-   * @param {number} index
-   * @param {number} value
+   * Do range query on segment tree in context of this.operation function.
+   *
+   * @param {number} queryLeftIndex
+   * @param {number} queryRightIndex
+   * @return {number}
    */
-  update(index, value) {
-    this.array[index] = value;
-    this.updateRec(1, index, value, 0, this.n - 1);
+  rangeQuery(queryLeftIndex, queryRightIndex) {
+    const leftIndex = 0;
+    const rightIndex = this.inputArray.length - 1;
+    const position = 0;
+
+    return this.rangeQueryRecursive(
+      queryLeftIndex,
+      queryRightIndex,
+      leftIndex,
+      rightIndex,
+      position,
+    );
   }
 
   /**
-   * @param {number} root
-   * @param {number} index
-   * @param {number} value
-   * @param {number} l
-   * @param {number} r
+   * Do range query on segment tree recursively in context of this.operation function.
+   *
+   * @param {number} queryLeftIndex - left index of the query
+   * @param {number} queryRightIndex - right index of the query
+   * @param {number} leftIndex - left index of input array segment
+   * @param {number} rightIndex - right index of input array segment
+   * @param {number} position - root position in binary tree
+   * @return {number}
    */
-  updateRec(root, index, value, l, r) {
-    if (l === r) {
-      // we are at tree node containing array[index]
-      this.tree[root] = value;
-    } else {
-      const mid = Math.floor((l + r) / 2);
-      // update whichever child index is in, update this.tree[root]
-      if (index <= mid) {
-        this.updateRec(this.left(root), index, value, l, mid);
-      } else {
-        this.updateRec(this.right(root), index, value, mid + 1, r);
-      }
-      this.tree[root] = this.operation(this.tree[this.left(root)], this.tree[this.right(root)]);
+  rangeQueryRecursive(queryLeftIndex, queryRightIndex, leftIndex, rightIndex, position) {
+    if (queryLeftIndex <= leftIndex && queryRightIndex >= rightIndex) {
+      // Total overlap.
+      return this.segmentTree[position];
     }
+
+    if (queryLeftIndex > rightIndex || queryRightIndex < leftIndex) {
+      // No overlap.
+      return this.operationFallback;
+    }
+
+    // Partial overlap.
+    const middleIndex = Math.floor((leftIndex + rightIndex) / 2);
+
+    const leftOperationResult = this.rangeQueryRecursive(
+      queryLeftIndex,
+      queryRightIndex,
+      leftIndex,
+      middleIndex,
+      this.getLeftChildIndex(position),
+    );
+
+    const rightOperationResult = this.rangeQueryRecursive(
+      queryLeftIndex,
+      queryRightIndex,
+      middleIndex + 1,
+      rightIndex,
+      this.getRightChildIndex(position),
+    );
+
+    return this.operation(leftOperationResult, rightOperationResult);
+  }
+
+  /**
+   * Left child index.
+   * @param {number} parentIndex
+   * @return {number}
+   */
+  getLeftChildIndex(parentIndex) {
+    return (2 * parentIndex) + 1;
+  }
+
+  /**
+   * Right child index.
+   * @param {number} parentIndex
+   * @return {number}
+   */
+  getRightChildIndex(parentIndex) {
+    return (2 * parentIndex) + 2;
   }
 }
