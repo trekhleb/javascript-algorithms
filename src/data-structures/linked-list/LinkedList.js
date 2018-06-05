@@ -21,7 +21,13 @@ export default class LinkedList {
    */
   prepend(value) {
     // Make new node to be a head.
-    this.head = new LinkedListNode(value, this.head);
+    const newNode = new LinkedListNode(value, this.head);
+    this.head = newNode;
+
+    // If there is no tail yet let's make new node a tail.
+    if (!this.tail) {
+      this.tail = newNode;
+    }
 
     return this;
   }
@@ -60,7 +66,7 @@ export default class LinkedList {
     let deletedNode = null;
 
     // If the head must be deleted then make 2nd node to be a head.
-    if (this.compare.equal(this.head.value, value)) {
+    while (this.head && this.compare.equal(this.head.value, value)) {
       deletedNode = this.head;
       this.head = this.head.next;
     }

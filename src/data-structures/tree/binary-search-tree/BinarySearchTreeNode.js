@@ -3,8 +3,8 @@ import Comparator from '../../../utils/comparator/Comparator';
 
 export default class BinarySearchTreeNode extends BinaryTreeNode {
   /**
-   * @param {*} [value]
-   * @param {function} [compareFunction]
+   * @param {*} [value] - node value.
+   * @param {function} [compareFunction] - comparator function for node values.
    */
   constructor(value = null, compareFunction = undefined) {
     super(value);
@@ -21,23 +21,30 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
   insert(value) {
     if (this.nodeValueComparator.equal(this.value, null)) {
       this.value = value;
+
       return this;
     }
 
     if (this.nodeValueComparator.lessThan(value, this.value)) {
       // Insert to the left.
       if (this.left) {
-        this.left.insert(value);
-      } else {
-        this.setLeft(new BinarySearchTreeNode(value, this.compareFunction));
+        return this.left.insert(value);
       }
+
+      const newNode = new BinarySearchTreeNode(value, this.compareFunction);
+      this.setLeft(newNode);
+
+      return newNode;
     } else if (this.nodeValueComparator.greaterThan(value, this.value)) {
       // Insert to the right.
       if (this.right) {
-        this.right.insert(value);
-      } else {
-        this.setRight(new BinarySearchTreeNode(value, this.compareFunction));
+        return this.right.insert(value);
       }
+
+      const newNode = new BinarySearchTreeNode(value, this.compareFunction);
+      this.setRight(newNode);
+
+      return newNode;
     }
 
     return this;
@@ -74,6 +81,7 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
 
   /**
    * @param {*} value
+   * @return {BinarySearchTreeNode}
    */
   remove(value) {
     const nodeToRemove = this.find(value);
@@ -111,6 +119,8 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
         parent.replaceChild(nodeToRemove, nodeToRemove.right);
       }
     }
+
+    return nodeToRemove;
   }
 
   /**
