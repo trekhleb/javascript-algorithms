@@ -13,13 +13,13 @@ export default class FenwickTree {
   }
 
   /**
-   * Adds value to position.
+   * Adds value to existing value at position.
    *
    * @param  {number} position
    * @param  {number} value
    * @return {FenwickTree}
    */
-  update(position, value) {
+  increase(position, value) {
     if (position < 1 || position > this.arraySize) {
       throw new Error('Position is out of allowed range');
     }
