@@ -1,49 +1,72 @@
 export default class FenwickTree {
   /**
-   * Constructor creates empty fenwick tree of size 'size',
-   *    however, array size is size+1, because index is 1-based
-   * @param  {number} [size]
+   * Constructor creates empty fenwick tree of size 'arraySize',
+   * however, array size is size+1, because index is 1-based.
+   *
+   * @param  {number} arraySize
    */
-  constructor(size) {
-    this.n = size;
-    this.arr = [];
-    for (let i = 0; i <= size; i += 1) this.arr.push(0);
+  constructor(arraySize) {
+    this.arraySize = arraySize;
+
+    // Fill tree array with zeros.
+    this.treeArray = Array(this.arraySize + 1).fill(0);
   }
 
   /**
-   * Adds v to index x
-   * @param  {number} [x]
-   * @param  {number} [v]
+   * Adds value to position.
+   *
+   * @param  {number} position
+   * @param  {number} value
+   * @return {FenwickTree}
    */
-  update(x, v) {
-    if (x < 1 || x > this.n) return;
-    for (let i = x; i <= this.n; i += (i & -i)) {
-      this.arr[i] += v;
+  update(position, value) {
+    if (position < 1 || position > this.arraySize) {
+      throw new Error('Position is out of allowed range');
     }
-  }
 
-  /**
-   * query sum from index 1 to x
-   * @param  {number} [x]
-   * @return {number} sum
-   */
-  query(x) {
-    if (x > this.n) return this.query(this.n);
-    let ret = 0;
-    for (let i = x; i > 0; i -= (i & -i)) {
-      ret += this.arr[i];
+    for (let i = position; i <= this.arraySize; i += (i & -i)) {
+      this.treeArray[i] += value;
     }
-    return ret;
+
+    return this;
   }
 
   /**
-   * query sum from index l to r
-   * @param  {number} [l]
-   * @param  {number} [r]
+   * Query sum from index 1 to position.
+   *
+   * @param  {number} position
    * @return {number}
    */
-  queryRange(l, r) {
-    if (l > r) return 0;
-    return this.query(r) - this.query(l - 1);
+  query(position) {
+    if (position < 1 || position > this.arraySize) {
+      throw new Error('Position is out of allowed range');
+    }
+
+    let sum = 0;
+
+    for (let i = position; i > 0; i -= (i & -i)) {
+      sum += this.treeArray[i];
+    }
+
+    return sum;
+  }
+
+  /**
+   * Query sum from index leftIndex to rightIndex.
+   *
+   * @param  {number} leftIndex
+   * @param  {number} rightIndex
+   * @return {number}
+   */
+  queryRange(leftIndex, rightIndex) {
+    if (leftIndex > rightIndex) {
+      throw new Error('Left index can not be greater then right one');
+    }
+
+    if (leftIndex === 1) {
+      return this.query(rightIndex);
+    }
+
+    return this.query(rightIndex) - this.query(leftIndex - 1);
   }
 }
