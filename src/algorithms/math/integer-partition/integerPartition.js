@@ -1,5 +1,6 @@
 /**
- * @param {Number} number
+ * @param {number} number
+ * @return {number}
  */
 export default function integerPartition(number) {
   // Create partition matrix for solving this task using Dynamic Programming.
