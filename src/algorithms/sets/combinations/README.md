@@ -30,7 +30,7 @@ It is often called "n choose r" (such as "16 choose 3"). And is also known as th
 
 Repetition is Allowed: such as coins in your pocket `(5,5,5,10,10)`
 
-Or let us say there are five flavours of icecream: 
+Or let us say there are five flavours of ice cream: 
 `banana`, `chocolate`, `lemon`, `strawberry` and `vanilla`.
 
 We can have three scoops. How many variations will there be?
