@@ -1,4 +1,4 @@
-import longestCommonSubsequnce from '../longest-common-subsequnce/longestCommonSubsequnce';
+import longestCommonSubsequnce from '../longest-common-subsequence/longestCommonSubsequence';
 
 /**
  * @param {string[]} set1
