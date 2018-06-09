@@ -32,7 +32,7 @@ element is very small.
 
 In first step we calculate the count of all the elements of the 
 input array `A`. Then Store the result in the count array `C`.
-The way we count is depected below.
+The way we count is depicted below.
 
 ![Counting Sort](https://3.bp.blogspot.com/-jJchly1BkTc/WLGqCFDdvCI/AAAAAAAAAHA/luljAlz2ptMndIZNH0KLTTuQMNsfzDeFQCLcB/s1600/CSortUpdatedStepI.gif)
 
