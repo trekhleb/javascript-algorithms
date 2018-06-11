@@ -3,6 +3,11 @@
  * @return {boolean}
  */
 export default function trialDivision(number) {
+  // Check if number is integer.
+  if (number % 1 !== 0) {
+    return false;
+  }
+
   if (number <= 1) {
     // If number is less than one then it isn't prime by definition.
     return false;
