@@ -47,7 +47,7 @@ _Read this in other languages:_
   * [排列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/permutations) (有/無重複)
   * [组合](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/combinations) (有/無重複)
   * [洗牌算法](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/fisher-yates) - 隨機置換一有限序列
-  * [最長共同子序列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-common-subsequnce) (LCS) 
+  * [最長共同子序列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-common-subsequnce) (LCS)
   * [最長遞增子序列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-increasing-subsequence)
   * [Shortest Common Supersequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/shortest-common-supersequence) (SCS)
   * [背包問題](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem) - "0/1" and "Unbound" ones
@@ -90,7 +90,7 @@ _Read this in other languages:_
   * [河內塔](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/hanoi-tower)
   * [N-皇后問題](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/n-queens)
   * [騎士走棋盤](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/knight-tour)
-  
+
 ### 演算法範型
 
 演算法的範型是一個泛用方法或設計一類底層演算法的方式。它是一個比演算法的概念更高階的抽象化，就像是演算法是比電腦程式更高階的抽象化。
@@ -166,11 +166,11 @@ npm test -- -t 'playground'
 ### 大 O 標記
 
 特別用大 O 標記演算法增長度的排序。
-    
-![Big O 表](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-graph.png?raw=true)
+
+![Big O 表](./assets/big-o-graph.png)
 
 資料來源: [Big O Cheat Sheet](http://bigocheatsheet.com/).
-    
+
 下列列出幾個常用的 Big O 標記以及其不同大小資料量輸入後的運算效能比較。
 
 | Big O 標記     | 10個資料量需花費的時間 | 100個資料量需花費的時間 | 1000個資料量需花費的時間  |
@@ -184,12 +184,12 @@ npm test -- -t 'playground'
 | **O(N!)**      | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
 
 ### 資料結構運作複雜度
-        
+
 | 資料結構                 | 存取      | 搜尋       | 插入      | 刪除      |
-| ----------------------- | :-------: | :-------: | :-------: | :-------: | 
+| ----------------------- | :-------: | :-------: | :-------: | :-------: |
 | **陣列**                | 1         | n         | n         | n         |
 | **堆疊**                | n         | n         | 1         | 1         |
-| **貯列**                | n         | n         | 1         | 1         | 
+| **貯列**                | n         | n         | 1         | 1         |
 | **鏈結串列**            | n         | n         | 1         | 1         |
 | **雜湊表**              | -         | n         | n         | n         |
 | **二元搜尋樹**          | n         | n         | n         | n         |
