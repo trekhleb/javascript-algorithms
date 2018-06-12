@@ -11,6 +11,7 @@ const getSideLength = (sideLength, count) => {
   // Liu Hui used the Gou Gu theorem repetitively.
   const g = Math.sqrt((r ** 2) - (m ** 2));
   const j = r - g;
+
   return getSideLength(Math.sqrt((j ** 2) + (m ** 2)), count - 1);
 };
 
@@ -27,27 +28,15 @@ const getSideCount = splitCount => c * (splitCount ? 2 ** splitCount : 1);
  * the smaller the loss with respect to the area of circle, thus with
  * further cut after cut, the area of the resulting polygon will coincide
  * and become one with the circle; there will be no loss
- * @param {Number} splitCount repeat times
- * @return {Number}
+ *
+ * @param {number} splitCount repeat times
+ * @return {number}
  */
-const pi = (splitCount = 1) => {
+export default function liuHui(splitCount = 1) {
   const sideLength = getSideLength(r, splitCount - 1);
   const sideCount = getSideCount(splitCount - 1);
   const p = sideLength * sideCount;
   const area = (p / 2) * r;
+
   return area / (r ** 2);
-};
-
-// !test
-// for (let i = 1; i < 26; i += 1) {
-//   const p = pi(i);
-//   console.log(
-//     'split count: %f, side count: %f, π: %f, is Math.PI? %o',
-//     i,
-//     getSideCount(i),
-//     p,
-//     p === Math.PI,
-//   );
-// }
-
-export default pi;
+}
