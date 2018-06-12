@@ -1,42 +1,54 @@
-// Liu Hui began with an inscribed hexagon.
-// Let r is the radius of circle.
-// r is also the side length of the inscribed hexagon
-const c = 6;
-const r = 0.5;
+/*
+ * Let circleRadius is the radius of circle.
+ * circleRadius is also the side length of the inscribed hexagon
+ */
+const circleRadius = 1;
 
-const getSideLength = (sideLength, count) => {
-  if (count <= 0) return sideLength;
-  const m = sideLength / 2;
+/**
+ * @param {number} sideLength
+ * @param {number} splitCounter
+ * @return {number}
+ */
+function getNGonSideLength(sideLength, splitCounter) {
+  if (splitCounter <= 0) {
+    return sideLength;
+  }
 
-  // Liu Hui used the Gou Gu theorem repetitively.
-  const g = Math.sqrt((r ** 2) - (m ** 2));
-  const j = r - g;
+  const halfSide = sideLength / 2;
 
-  return getSideLength(Math.sqrt((j ** 2) + (m ** 2)), count - 1);
-};
+  // Liu Hui used the Gou Gu (Pythagorean theorem) theorem repetitively.
+  const perpendicular = Math.sqrt((circleRadius ** 2) - (halfSide ** 2));
+  const excessRadius = circleRadius - perpendicular;
+  const splitSideLength = Math.sqrt((excessRadius ** 2) + (halfSide ** 2));
 
-const getSideCount = splitCount => c * (splitCount ? 2 ** splitCount : 1);
+  return getNGonSideLength(splitSideLength, splitCounter - 1);
+}
+
+/**
+ * @param {number} splitCount
+ * @return {number}
+ */
+function getNGonSideCount(splitCount) {
+  // Liu Hui began with an inscribed hexagon (6-gon).
+  const hexagonSidesCount = 6;
+
+  // On every split iteration we make N-gons: 6-gon, 12-gon, 24-gon, 48-gon and so on.
+  return hexagonSidesCount * (splitCount ? 2 ** splitCount : 1);
+}
 
 /**
  * Calculate the π value using Liu Hui's π algorithm
  *
- * Liu Hui argued:
- * Multiply one side of a hexagon by the radius (of its circumcircle),
- * then multiply this by three, to yield the area of a dodecagon; if we
- * cut a hexagon into a dodecagon, multiply its side by its radius, then
- * again multiply by six, we get the area of a 24-gon; the finer we cut,
- * the smaller the loss with respect to the area of circle, thus with
- * further cut after cut, the area of the resulting polygon will coincide
- * and become one with the circle; there will be no loss
- *
- * @param {number} splitCount repeat times
+ * @param {number} splitCount - number of times we're going to split 6-gon.
+ *  On each split we will receive 12-gon, 24-gon and so on.
  * @return {number}
  */
 export default function liuHui(splitCount = 1) {
-  const sideLength = getSideLength(r, splitCount - 1);
-  const sideCount = getSideCount(splitCount - 1);
-  const p = sideLength * sideCount;
-  const area = (p / 2) * r;
+  const nGonSideLength = getNGonSideLength(circleRadius, splitCount - 1);
+  const nGonSideCount = getNGonSideCount(splitCount - 1);
+  const nGonPerimeter = nGonSideLength * nGonSideCount;
+  const approximateCircleArea = (nGonPerimeter / 2) * circleRadius;
 
-  return area / (r ** 2);
+  // Return approximate value of pi.
+  return approximateCircleArea / (circleRadius ** 2);
 }
