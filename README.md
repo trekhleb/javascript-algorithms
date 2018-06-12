@@ -3,22 +3,22 @@
 [![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
-This repository contains JavaScript based examples of many 
+This repository contains JavaScript based examples of many
 popular algorithms and data structures.
 
 Each algorithm and data structure has its own separate README
 with related explanations and links for further reading (including ones
 to YouTube videos).
 
-_Read this in other languages:_ 
+_Read this in other languages:_
 [简体中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md),
 [繁體中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-TW.md)
 
 ## Data Structures
 
 A data structure is a particular way of organizing and storing data in a computer so that it can
-be accessed and modified efficiently. More precisely, a data structure is a collection of data 
-values, the relationships among them, and the functions or operations that can be applied to 
+be accessed and modified efficiently. More precisely, a data structure is a collection of data
+values, the relationships among them, and the functions or operations that can be applied to
 the data.
 
 * [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
@@ -59,7 +59,7 @@ a set of rules that precisely define a sequence of operations.
   * [Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/permutations) (with and without repetitions)
   * [Combinations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/combinations) (with and without repetitions)
   * [Fisher–Yates Shuffle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
-  * [Longest Common Subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-common-subsequnce) (LCS) 
+  * [Longest Common Subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-common-subsequnce) (LCS)
   * [Longest Increasing subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-increasing-subsequence)
   * [Shortest Common Supersequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/shortest-common-supersequence) (SCS)
   * [Knapsack Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem) - "0/1" and "Unbound" ones
@@ -105,11 +105,11 @@ a set of rules that precisely define a sequence of operations.
   * [Tower of Hanoi](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/hanoi-tower)
   * [N-Queens Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/n-queens)
   * [Knight's Tour](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/knight-tour)
-  
+
 ### Algorithms by Paradigm
 
-An algorithmic paradigm is a generic method or approach which underlies the design of a class 
-of algorithms. It is an abstraction higher than the notion of an algorithm, just as an 
+An algorithmic paradigm is a generic method or approach which underlies the design of a class
+of algorithms. It is an abstraction higher than the notion of an algorithm, just as an
 algorithm is an abstraction higher than a computer program.
 
 * **Brute Force** - look at all the possibilities and selects the best solution
@@ -142,7 +142,7 @@ algorithm is an abstraction higher than a computer program.
   * [Maximum Subarray](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray)
   * [Bellman-Ford Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
 * **Backtracking** - similarly to brute force, try to generate all possible solutions, but each time you generate next solution you test
-if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise, backtrack, and go on a 
+if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise, backtrack, and go on a
 different path of finding a solution. Normally the DFS traversal of state-space is being used.
   * [Hamiltonian Cycle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * [N-Queens Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/n-queens)
@@ -188,13 +188,13 @@ npm test -- -t 'playground'
 [▶ Data Structures and Algorithms on YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 
 ### Big O Notation
-    
+
 Order of growth of algorithms specified in Big O notation.
-    
-![Big O graphs](https://github.com/trekhleb/javascript-algorithms/blob/master/assets/big-o-graph.png?raw=true)
+
+![Big O graphs](./assets/big-o-graph.png)
 
 Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
-    
+
 Below is the list of some of the most used Big O notations and their performance comparisons against different sizes of the input data.
 
 | Big O Notation | Computations for 10 elements | Computations for 100 elements | Computations for 1000 elements  |
@@ -208,12 +208,12 @@ Below is the list of some of the most used Big O notations and their performance
 | **O(N!)**      | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
 
 ### Data Structure Operations Complexity
-        
+
 | Data Structure          | Access    | Search    | Insertion | Deletion  | Comments  |
-| ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- | 
+| ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- |
 | **Array**               | 1         | n         | n         | n         |           |
 | **Stack**               | n         | n         | 1         | 1         |           |
-| **Queue**               | n         | n         | 1         | 1         |           | 
+| **Queue**               | n         | n         | 1         | 1         |           |
 | **Linked List**         | n         | n         | 1         | 1         |           |
 | **Hash Table**          | -         | n         | n         | n         | In case of perfect hash function costs would be O(1) |
 | **Binary Search Tree**  | n         | n         | n         | n         | In case of balanced tree costs would be O(log(n)) |
