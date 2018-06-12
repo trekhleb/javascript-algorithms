@@ -47,7 +47,7 @@ _Read this in other languages:_
   * [排列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/permutations) (有/無重複)
   * [组合](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/combinations) (有/無重複)
   * [洗牌算法](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/fisher-yates) - 隨機置換一有限序列
-  * [最長共同子序列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-common-subsequnce) (LCS)
+  * [最長共同子序列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-common-subsequence) (LCS)
   * [最長遞增子序列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-increasing-subsequence)
   * [Shortest Common Supersequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/shortest-common-supersequence) (SCS)
   * [背包問題](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem) - "0/1" and "Unbound" ones
