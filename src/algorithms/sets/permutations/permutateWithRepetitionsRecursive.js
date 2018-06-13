@@ -1,26 +1,37 @@
 /**
  * @param {*[]} permutationOptions
+ * @param {number} permutationLength
+ * @param {*[]} currentPermutation
+ * @param {*[][]} permutations
  * @return {*[]}
  */
 export default function permutateWithRepetitionsRecursive(
-  options,
-  n = options.length || 0,
-  prefix = [],
-  perms = [],
+  permutationOptions,
+  permutationLength = permutationOptions.length || 0,
+  currentPermutation = [],
+  permutations = [],
 ) {
-  // If initial options are null or empty then return empty array
-  if (!options || !options.length) return [];
-
-  // If no more iterations then add current prefix to perms array
-  if (n === 0) {
-    perms.push(prefix);
-    return perms;
+  // If initial options are null or empty then return empty array.
+  if (!permutationOptions || !permutationOptions.length) {
+    return [];
   }
 
-  // Recursively find permutations and store in perms array
-  options.forEach((option) => {
-    permutateWithRepetitionsRecursive(options, n - 1, prefix.concat([option]), perms);
+  // If no more iterations required then add current permutation to permutations array.
+  if (permutationLength === 0) {
+    permutations.push(currentPermutation);
+
+    return permutations;
+  }
+
+  // Recursively find permutations and store in permutations array.
+  permutationOptions.forEach((permutationOption) => {
+    permutateWithRepetitionsRecursive(
+      permutationOptions,
+      permutationLength - 1,
+      currentPermutation.concat([permutationOption]),
+      permutations,
+    );
   });
 
-  return perms;
+  return permutations;
 }
