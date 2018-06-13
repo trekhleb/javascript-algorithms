@@ -1,41 +1,31 @@
-/*
-  @see: https://stackoverflow.com/a/127898/7794070
-
-  Lets say your array of letters looks like this: "ABCDEFGH".
-  You have three indices (i, j, k) indicating which letters you
-  are going to use for the current word, You start with:
-
-  A B C D E F G H
-  ^ ^ ^
-  i j k
-
-  First you vary k, so the next step looks like that:
-
-  A B C D E F G H
-  ^ ^   ^
-  i j   k
-
-  If you reached the end you go on and vary j and then k again.
-
-  A B C D E F G H
-  ^   ^ ^
-  i   j k
-
-  A B C D E F G H
-  ^   ^   ^
-  i   j   k
-
-  Once you j reached G you start also to vary i.
-
-  A B C D E F G H
-    ^ ^ ^
-    i j k
-
-  A B C D E F G H
-    ^ ^   ^
-    i j   k
-  ...
+/**
+ * @param {*[]} comboOptions
+ * @param {number} comboLength
+ * @param {*[][]} combos
+ * @param {*[]} currentCombo
+ * @return {*[]}
  */
+function combineRecursively(comboOptions, comboLength, combos = [], currentCombo = []) {
+  if (comboLength === 0) {
+    combos.push(currentCombo);
+
+    return combos;
+  }
+
+  for (let letterIndex = 0; letterIndex <= (comboOptions.length - comboLength); letterIndex += 1) {
+    const letter = comboOptions[letterIndex];
+    const restCombinationOptions = comboOptions.slice(letterIndex + 1);
+
+    combineRecursively(
+      restCombinationOptions,
+      comboLength - 1,
+      combos,
+      currentCombo.concat([letter]),
+    );
+  }
+
+  return combos;
+}
 
 /**
  * @param {*[]} combinationOptions
@@ -43,26 +33,5 @@
  * @return {*[]}
  */
 export default function combineWithoutRepetitions(combinationOptions, combinationLength) {
-  // If combination length is just 1 then return combinationOptions.
-  if (combinationLength === 1) {
-    return combinationOptions.map(option => [option]);
-  }
-
-  // Init combinations array.
-  const combinations = [];
-
-  for (let i = 0; i <= (combinationOptions.length - combinationLength); i += 1) {
-    const smallerCombinations = combineWithoutRepetitions(
-      combinationOptions.slice(i + 1),
-      combinationLength - 1,
-    );
-
-    for (let j = 0; j < smallerCombinations.length; j += 1) {
-      const combination = [combinationOptions[i]].concat(smallerCombinations[j]);
-      combinations.push(combination);
-    }
-  }
-
-  // Return all calculated combinations.
-  return combinations;
+  return combineRecursively(combinationOptions, combinationLength);
 }
