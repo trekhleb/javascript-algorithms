@@ -54,7 +54,7 @@ export default class QuickSortInPlace extends Sort {
     /*
      * While we can use a default parameter to set `low` to 0, we would
      * still have to set `high`'s default within the function as we
-     * don't have access to `array.length - 1` when declaring paramaters
+     * don't have access to `array.length - 1` when declaring parameters
      */
     const lowIndex = inputLowIndex === undefined ? 0 : inputLowIndex;
     const highIndex = inputHighIndex === undefined ? array.length - 1 : inputHighIndex;

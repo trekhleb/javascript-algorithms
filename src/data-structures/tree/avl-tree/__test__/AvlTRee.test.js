@@ -229,4 +229,14 @@ describe('AvlTree', () => {
     expect(tree.toString()).toBe('10,15,18,30,35,40,42,43,45,47');
     expect(tree.root.height).toBe(3);
   });
+
+  it('should throw an error when trying to remove the node', () => {
+    const removeNodeAvlTree = () => {
+      const tree = new AvlTree();
+
+      tree.remove(1);
+    };
+
+    expect(removeNodeAvlTree).toThrowError();
+  });
 });

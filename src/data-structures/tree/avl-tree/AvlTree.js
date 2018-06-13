@@ -17,6 +17,14 @@ export default class AvlTree extends BinarySearchTree {
   }
 
   /**
+   * @param {*} value
+   * @return {boolean}
+   */
+  remove(value) {
+    throw new Error(`Can't remove ${value}. Remove method is not implemented yet`);
+  }
+
+  /**
    * @param {BinarySearchTreeNode} node
    */
   balance(node) {

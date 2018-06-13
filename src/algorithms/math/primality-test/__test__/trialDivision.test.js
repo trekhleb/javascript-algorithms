@@ -23,6 +23,11 @@ function primalityTest(testFunction) {
   expect(testFunction(192)).toBeFalsy();
   expect(testFunction(200)).toBeFalsy();
   expect(testFunction(400)).toBeFalsy();
+
+  // It should also deal with floats.
+  expect(testFunction(0.5)).toBeFalsy();
+  expect(testFunction(1.3)).toBeFalsy();
+  expect(testFunction(10.5)).toBeFalsy();
 }
 
 describe('trialDivision', () => {

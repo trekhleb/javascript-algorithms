@@ -43,13 +43,13 @@ describe('BinarySearchTree', () => {
 
     expect(bst.toString()).toBe('5,10,20');
 
-    const removedNode1 = bst.remove(5);
+    const removed1 = bst.remove(5);
     expect(bst.toString()).toBe('10,20');
-    expect(removedNode1.value).toBe(5);
+    expect(removed1).toBeTruthy();
 
-    const removedNode2 = bst.remove(20);
+    const removed2 = bst.remove(20);
     expect(bst.toString()).toBe('10');
-    expect(removedNode2.value).toBe(20);
+    expect(removed2).toBeTruthy();
   });
 
   it('should insert object values', () => {
