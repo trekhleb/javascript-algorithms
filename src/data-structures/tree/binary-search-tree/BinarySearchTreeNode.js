@@ -120,7 +120,7 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
       }
     }
 
-    return nodeToRemove;
+    return parent;
   }
 
   /**
