@@ -81,7 +81,7 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
 
   /**
    * @param {*} value
-   * @return {BinarySearchTreeNode}
+   * @return {boolean}
    */
   remove(value) {
     const nodeToRemove = this.find(value);
@@ -120,7 +120,7 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
       }
     }
 
-    return nodeToRemove;
+    return true;
   }
 
   /**

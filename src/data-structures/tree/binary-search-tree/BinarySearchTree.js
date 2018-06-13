@@ -29,7 +29,7 @@ export default class BinarySearchTree {
 
   /**
    * @param {*} value
-   * @return {BinarySearchTreeNode}
+   * @return {boolean}
    */
   remove(value) {
     return this.root.remove(value);

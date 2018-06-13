@@ -1,29 +1,29 @@
-import longestCommonSubsequnce from '../longestCommonSubsequnce';
+import longestCommonSubsequence from '../longestCommonSubsequence';
 
-describe('longestCommonSubsequnce', () => {
+describe('longestCommonSubsequence', () => {
   it('should find longest common subsequence for two strings', () => {
-    expect(longestCommonSubsequnce([''], [''])).toEqual(['']);
+    expect(longestCommonSubsequence([''], [''])).toEqual(['']);
 
-    expect(longestCommonSubsequnce([''], ['A', 'B', 'C'])).toEqual(['']);
+    expect(longestCommonSubsequence([''], ['A', 'B', 'C'])).toEqual(['']);
 
-    expect(longestCommonSubsequnce(['A', 'B', 'C'], [''])).toEqual(['']);
+    expect(longestCommonSubsequence(['A', 'B', 'C'], [''])).toEqual(['']);
 
-    expect(longestCommonSubsequnce(
+    expect(longestCommonSubsequence(
       ['A', 'B', 'C'],
       ['D', 'E', 'F', 'G'],
     )).toEqual(['']);
 
-    expect(longestCommonSubsequnce(
+    expect(longestCommonSubsequence(
       ['A', 'B', 'C', 'D', 'G', 'H'],
       ['A', 'E', 'D', 'F', 'H', 'R'],
     )).toEqual(['A', 'D', 'H']);
 
-    expect(longestCommonSubsequnce(
+    expect(longestCommonSubsequence(
       ['A', 'G', 'G', 'T', 'A', 'B'],
       ['G', 'X', 'T', 'X', 'A', 'Y', 'B'],
     )).toEqual(['G', 'T', 'A', 'B']);
 
-    expect(longestCommonSubsequnce(
+    expect(longestCommonSubsequence(
       ['A', 'B', 'C', 'D', 'A', 'F'],
       ['A', 'C', 'B', 'C', 'F'],
     )).toEqual(['A', 'B', 'C', 'F']);
