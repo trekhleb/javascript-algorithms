@@ -1,17 +1,13 @@
 import Sort from '../Sort';
 import Comparator from '../../../utils/comparator/Comparator';
 
-function exception(message) {
-  return {
-    Error: true,
-    Message: message,
-  };
-}
 export default class BCIS extends Sort {
   /**
+   * This method will swap the values at the given indexs
    * @param {Object[]} _array array to be swapped
-   * @param {number} a index a to be swapped with index b
-   * @param {number} b index b to be swapped with index a
+   * @param {number} j index j to be swapped with index i
+   * @param {number} i index i to be swapped with index j
+   * @returns {Array} Swapped array will be returned
    */
   SWAP(_array = [], i, j) {
     const arr = [..._array];
@@ -21,10 +17,14 @@ export default class BCIS extends Sort {
     return arr;
   } // end SWAP
   /**
+   * This will move down the sorted right array and shift the elements down with it until
+   * the proper index is found.
    * @param {Object[]} _array
    * @param {*} currentItem
    * @param {number} SR
    * @param {number} right
+   * @param {Object} comp
+   * @returns {Array}
    */
   INSRIGHT(_array, currentItem, SR, right, comp) {
     const arr = [..._array];
@@ -38,11 +38,13 @@ export default class BCIS extends Sort {
     return arr;
   } // end INSRIGHT
   /**
-   *
+   * The will insert a new value into the left sorted array.
    * @param {Object[]} _array
    * @param {*} currentItem
    * @param {number} SL
    * @param {number} left
+   * @param {Object} comp
+   * @returns {Array}
    */
   INSLEFT(_array, currentItem, SL, left, comp) {
     const arr = [..._array];
@@ -59,6 +61,7 @@ export default class BCIS extends Sort {
    * @param {Object[]} _array
    * @param {number} SL
    * @param {number} SR
+   * @param {Object} comp
    */
   ISEQUAL(_array, SL, SR, comp) {
     let arr = [..._array];
