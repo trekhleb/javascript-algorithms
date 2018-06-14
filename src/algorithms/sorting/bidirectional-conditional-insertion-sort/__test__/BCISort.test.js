@@ -8,10 +8,10 @@ import {
 } from '../../SortTester';
 
 // Complexity constants.
-const SORTED_ARRAY_VISITING_COUNT = 0;
-const NOT_SORTED_ARRAY_VISITING_COUNT = 0;
-const REVERSE_SORTED_ARRAY_VISITING_COUNT = 0;
-const EQUAL_ARRAY_VISITING_COUNT = 0;
+const SORTED_ARRAY_VISITING_COUNT = 26;
+const NOT_SORTED_ARRAY_VISITING_COUNT = 20;
+const REVERSE_SORTED_ARRAY_VISITING_COUNT = 26;
+const EQUAL_ARRAY_VISITING_COUNT = 90;
 
 describe('BCIS', () => {
   it('should sort array', () => {

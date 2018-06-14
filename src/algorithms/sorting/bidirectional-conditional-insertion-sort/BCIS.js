@@ -124,6 +124,7 @@ export default class BCIS extends Sort {
       const RC = arr[SR];
       do {
         const currentItem = arr[i];
+        this.callbacks.visitingCallback(arr[i]);
         if (comp.greaterThan(currentItem, RC)) {
           arr[i] = arr[SR - 1];
           arr = this.INSRIGHT(arr, currentItem, SR, right, comp);
