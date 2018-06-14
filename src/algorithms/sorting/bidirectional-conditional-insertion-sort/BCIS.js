@@ -146,7 +146,7 @@ export default class BCIS extends Sort {
   } // end Sort
   sort(array) {
     if (Array.isArray(array) === false) {
-      throw exception('An Array object is required.');
+      throw new Error('An Array object is required.');
     }
     const len = array.length;
     if (len <= 1) return array;
