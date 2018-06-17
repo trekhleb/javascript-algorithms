@@ -46,6 +46,9 @@ a set of rules that precisely define a sequence of operations.
 
 * **Math**
   * [Factorial](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/factorial)
+  * [Combintation](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/combination) (for total number of combination)
+  * [Permutation](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/permutation) (for total number of permutation)
+  * [Complex Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/complex) (complex number class)
   * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
   * [Primality Test](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/primality-test) (trial division method)
   * [Euclidean Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
