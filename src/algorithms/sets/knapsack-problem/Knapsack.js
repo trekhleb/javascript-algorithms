@@ -165,7 +165,10 @@ export default class Knapsack {
         const availableWeight = this.weightLimit - this.totalWeight;
         const maxPossibleItemsCount = Math.floor(availableWeight / currentItem.weight);
 
-        if (maxPossibleItemsCount) {
+        if (maxPossibleItemsCount > currentItem.itemsInStock) {
+          currentItem.quantity = currentItem.itemsInStock;
+          this.selectedItems.push(currentItem);
+        } else if (maxPossibleItemsCount) {
           currentItem.quantity = maxPossibleItemsCount;
           this.selectedItems.push(currentItem);
         }
