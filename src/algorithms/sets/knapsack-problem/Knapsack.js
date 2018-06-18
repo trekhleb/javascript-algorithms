@@ -166,12 +166,16 @@ export default class Knapsack {
         const maxPossibleItemsCount = Math.floor(availableWeight / currentItem.weight);
 
         if (maxPossibleItemsCount > currentItem.itemsInStock) {
+          // If we have more items in stock then it is allowed to add
+          // let's add the maximum allowed number of them.
           currentItem.quantity = currentItem.itemsInStock;
-          this.selectedItems.push(currentItem);
         } else if (maxPossibleItemsCount) {
+          // In case if we don't have specified number of items in stock
+          // let's add only items we have in stock.
           currentItem.quantity = maxPossibleItemsCount;
-          this.selectedItems.push(currentItem);
         }
+
+        this.selectedItems.push(currentItem);
       }
     }
   }
