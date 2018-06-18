@@ -21,91 +21,95 @@ be accessed and modified efficiently. More precisely, a data structure is a coll
 values, the relationships among them, and the functions or operations that can be applied to
 the data.
 
-* [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
-* [Queue](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/queue)
-* [Stack](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/stack)
-* [Hash Table](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/hash-table)
-* [Heap](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/heap)
-* [Priority Queue](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/priority-queue)
-* [Trie](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/trie)
-* [Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
-    * [Binary Search Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
-    * [AVL Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/avl-tree)
-    * [Red-Black Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/red-black-tree)
-    * [Segment Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/segment-tree) - with min/max/sum range queries examples
-    * [Fenwick Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
-* [Graph](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph) (both directed and undirected)
-* [Disjoint Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/disjoint-set)
+`B` - Beginner, `A` - Advanced
+
+* `B` [Linked List](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
+* `B` [Queue](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/queue)
+* `B` [Stack](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/stack)
+* `B` [Hash Table](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/hash-table)
+* `B` [Heap](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/heap)
+* `B` [Priority Queue](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/priority-queue)
+* `A` [Trie](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/trie)
+* `A` [Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
+    * `A` [Binary Search Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
+    * `A` [AVL Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/avl-tree)
+    * `A` [Red-Black Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/red-black-tree)
+    * `A` [Segment Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/segment-tree) - with min/max/sum range queries examples
+    * `A` [Fenwick Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
+* `A` [Graph](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph) (both directed and undirected)
+* `A` [Disjoint Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/disjoint-set)
 
 ## Algorithms
 
 An algorithm is an unambiguous specification of how to solve a class of problems. It is
 a set of rules that precisely define a sequence of operations.
 
+`B` - Beginner, `A` - Advanced
+
 ### Algorithms by Topic
 
 * **Math**
-  * [Factorial](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/factorial)
-  * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
-  * [Primality Test](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/primality-test) (trial division method)
-  * [Euclidean Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
-  * [Least Common Multiple](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/least-common-multiple) (LCM)
-  * [Integer Partition](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/integer-partition)
-  * [Sieve of Eratosthenes](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/sieve-of-eratosthenes) - finding all prime numbers up to any given limit
-  * [Is Power of Two](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/is-power-of-two) - check if the number is power of two (naive and bitwise algorithms)
-  * [Liu Hui π Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
+  * `B` [Factorial](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/factorial) 
+  * `B` [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
+  * `B` [Primality Test](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/primality-test) (trial division method)
+  * `B` [Euclidean Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
+  * `B` [Least Common Multiple](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/least-common-multiple) (LCM)
+  * `A` [Integer Partition](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/integer-partition)
+  * `B` [Sieve of Eratosthenes](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/sieve-of-eratosthenes) - finding all prime numbers up to any given limit
+  * `B` [Is Power of Two](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/is-power-of-two) - check if the number is power of two (naive and bitwise algorithms)
+  * `A` [Liu Hui π Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
 * **Sets**
-  * [Cartesian Product](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/cartesian-product) - product of multiple sets
-  * [Power Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/power-set) - all subsets of a set
-  * [Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/permutations) (with and without repetitions)
-  * [Combinations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/combinations) (with and without repetitions)
-  * [Fisher–Yates Shuffle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
-  * [Longest Common Subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-common-subsequence) (LCS)
-  * [Longest Increasing Subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-increasing-subsequence)
-  * [Shortest Common Supersequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/shortest-common-supersequence) (SCS)
-  * [Knapsack Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem) - "0/1" and "Unbound" ones
-  * [Maximum Subarray](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray) - "Brute Force" and "Dynamic Programming" (Kadane's) versions
+  * `B` [Cartesian Product](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/cartesian-product) - product of multiple sets
+  * `A` [Power Set](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/power-set) - all subsets of a set
+  * `A` [Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/permutations) (with and without repetitions)
+  * `A` [Combinations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/combinations) (with and without repetitions)
+  * `B` [Fisher–Yates Shuffle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
+  * `A` [Longest Common Subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-common-subsequence) (LCS)
+  * `A` [Longest Increasing Subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-increasing-subsequence)
+  * `A` [Shortest Common Supersequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/shortest-common-supersequence) (SCS)
+  * `A` [Knapsack Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem) - "0/1" and "Unbound" ones
+  * `A` [Maximum Subarray](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray) - "Brute Force" and "Dynamic Programming" (Kadane's) versions
 * **Strings**
-  * [Levenshtein Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
-  * [Hamming Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/hamming-distance) - number of positions at which the symbols are different
-  * [Knuth–Morris–Pratt Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/knuth-morris-pratt) - substring search
-  * [Rabin Karp Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/rabin-karp) - substring search
-  * [Longest Common Substring](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-substring)
+  * `A` [Levenshtein Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
+  * `B` [Hamming Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/hamming-distance) - number of positions at which the symbols are different
+  * `A` [Knuth–Morris–Pratt Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/knuth-morris-pratt) - substring search
+  * `A` [Rabin Karp Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/rabin-karp) - substring search
+  * `A` [Longest Common Substring](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-substring)
 * **Searches**
-  * [Linear Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/linear-search)
-  * [Binary Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search)
+  * `B` [Linear Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/linear-search)
+  * `B` [Binary Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search)
 * **Sorting**
-  * [Bubble Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/bubble-sort)
-  * [Selection Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/selection-sort)
-  * [Insertion Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/insertion-sort)
-  * [Heap Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/heap-sort)
-  * [Merge Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/merge-sort)
-  * [Quicksort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/quick-sort) - in-place and non-in-place implementations
-  * [Shellsort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/shell-sort)
-  * [Counting Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/counting-sort)
-  * [Radix Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/radix-sort)
+  * `B` [Bubble Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/bubble-sort)
+  * `B` [Selection Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/selection-sort)
+  * `B` [Insertion Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/insertion-sort)
+  * `B` [Heap Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/heap-sort)
+  * `B` [Merge Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/merge-sort)
+  * `B` [Quicksort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/quick-sort) - in-place and non-in-place implementations
+  * `B` [Shellsort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/shell-sort)
+  * `A` [Counting Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/counting-sort)
+  * `A` [Radix Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/radix-sort)
 * **Trees**
-  * [Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/depth-first-search) (DFS)
-  * [Breadth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/breadth-first-search) (BFS)
+  * `B` [Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/depth-first-search) (DFS)
+  * `B` [Breadth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/breadth-first-search) (BFS)
 * **Graphs**
-  * [Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search) (DFS)
-  * [Breadth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/breadth-first-search) (BFS)
-  * [Dijkstra Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
-  * [Bellman-Ford Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
-  * [Detect Cycle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/detect-cycle) - for both directed and undirected graphs (DFS and Disjoint Set based versions)
-  * [Prim’s Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * [Kruskal’s Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * [Topological Sorting](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/topological-sorting) - DFS method
-  * [Articulation Points](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/articulation-points) - Tarjan's algorithm (DFS based)
-  * [Bridges](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bridges) - DFS based algorithm
-  * [Eulerian Path and Eulerian Circuit](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/eulerian-path) - Fleury's algorithm - Visit every edge exactly once
-  * [Hamiltonian Cycle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
-  * [Strongly Connected Components](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
-  * [Travelling Salesman Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
+  * `B` [Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search) (DFS)
+  * `B` [Breadth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/breadth-first-search) (BFS)
+  * `A` [Dijkstra Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
+  * `A` [Bellman-Ford Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
+  * `A` [Detect Cycle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/detect-cycle) - for both directed and undirected graphs (DFS and Disjoint Set based versions)
+  * `A` [Prim’s Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
+  * `B` [Kruskal’s Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
+  * `A` [Topological Sorting](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/topological-sorting) - DFS method
+  * `A` [Articulation Points](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/articulation-points) - Tarjan's algorithm (DFS based)
+  * `A` [Bridges](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bridges) - DFS based algorithm
+  * `A` [Eulerian Path and Eulerian Circuit](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/eulerian-path) - Fleury's algorithm - Visit every edge exactly once
+  * `A` [Hamiltonian Cycle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
+  * `A` [Strongly Connected Components](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
+  * `A` [Travelling Salesman Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
 * **Uncategorized**  
-  * [Tower of Hanoi](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/hanoi-tower)
-  * [N-Queens Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/n-queens)
-  * [Knight's Tour](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/knight-tour)
+  * `B` [Tower of Hanoi](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/hanoi-tower)
+  * `A` [N-Queens Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/n-queens)
+  * `A` [Knight's Tour](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/knight-tour)
 
 ### Algorithms by Paradigm
 
@@ -114,40 +118,40 @@ of algorithms. It is an abstraction higher than the notion of an algorithm, just
 algorithm is an abstraction higher than a computer program.
 
 * **Brute Force** - look at all the possibilities and selects the best solution
-  * [Maximum Subarray](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray)
-  * [Travelling Salesman Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
+  * `A` [Maximum Subarray](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray)
+  * `A` [Travelling Salesman Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
 * **Greedy** - choose the best option at the current time, without any consideration for the future
-  * [Unbound Knapsack Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem)
-  * [Dijkstra Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
-  * [Prim’s Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * [Kruskal’s Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
+  * `A` [Unbound Knapsack Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem)
+  * `A` [Dijkstra Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
+  * `A` [Prim’s Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
+  * `A` [Kruskal’s Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
 * **Divide and Conquer** - divide the problem into smaller parts and then solve those parts
-  * [Binary Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search)
-  * [Tower of Hanoi](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/hanoi-tower)
-  * [Euclidean Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
-  * [Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/permutations) (with and without repetitions)
-  * [Combinations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/combinations) (with and without repetitions)
-  * [Merge Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/merge-sort)
-  * [Quicksort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/quick-sort)
-  * [Tree Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/depth-first-search) (DFS)
-  * [Graph Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search) (DFS)
+  * `B` [Binary Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search)
+  * `B` [Tower of Hanoi](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/hanoi-tower)
+  * `B` [Euclidean Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
+  * `A` [Permutations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/permutations) (with and without repetitions)
+  * `A` [Combinations](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/combinations) (with and without repetitions)
+  * `B` [Merge Sort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/merge-sort)
+  * `B` [Quicksort](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/quick-sort)
+  * `B` [Tree Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/depth-first-search) (DFS)
+  * `B` [Graph Depth-First Search](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search) (DFS)
 * **Dynamic Programming** - build up a solution using previously found sub-solutions
-  * [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
-  * [Levenshtein Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
-  * [Longest Common Subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-common-subsequnce) (LCS)
-  * [Longest Common Substring](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-substring)
-  * [Longest Increasing subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-increasing-subsequence)
-  * [Shortest Common Supersequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/shortest-common-supersequence)
-  * [0/1 Knapsack Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem)
-  * [Integer Partition](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/integer-partition)
-  * [Maximum Subarray](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray)
-  * [Bellman-Ford Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
+  * `B` [Fibonacci Number](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
+  * `A` [Levenshtein Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
+  * `A` [Longest Common Subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-common-subsequnce) (LCS)
+  * `A` [Longest Common Substring](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-substring)
+  * `A` [Longest Increasing subsequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-increasing-subsequence)
+  * `A` [Shortest Common Supersequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/shortest-common-supersequence)
+  * `A` [0/1 Knapsack Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem)
+  * `A` [Integer Partition](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/integer-partition)
+  * `A` [Maximum Subarray](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray)
+  * `A` [Bellman-Ford Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
 * **Backtracking** - similarly to brute force, try to generate all possible solutions, but each time you generate next solution you test
 if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise, backtrack, and go on a
 different path of finding a solution. Normally the DFS traversal of state-space is being used.
-  * [Hamiltonian Cycle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
-  * [N-Queens Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/n-queens)
-  * [Knight's Tour](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/knight-tour)
+  * `A` [Hamiltonian Cycle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
+  * `A` [N-Queens Problem](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/n-queens)
+  * `A` [Knight's Tour](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/knight-tour)
 * **Branch & Bound** - remember the lowest-cost solution found at each stage of the backtracking
 search, and use the cost of the lowest-cost solution found so far as a lower bound on the cost of
 a least-cost solution to the problem, in order to discard partial solutions with costs larger than the
