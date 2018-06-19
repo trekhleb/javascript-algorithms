@@ -96,6 +96,31 @@ describe('Knapsack', () => {
       new KnapsackItem({ value: 20, weight: 2 }), // v/w ratio is 10
     ];
 
+    const maxKnapsackWeight = 15;
+
+    const knapsack = new Knapsack(possibleKnapsackItems, maxKnapsackWeight);
+
+    knapsack.solveUnboundedKnapsackProblem();
+
+    expect(knapsack.totalValue).toBe(84 + 20 + 12 + 10 + 5);
+    expect(knapsack.totalWeight).toBe(15);
+    expect(knapsack.selectedItems.length).toBe(5);
+    expect(knapsack.selectedItems[0].toString()).toBe('v84 w7 x 1');
+    expect(knapsack.selectedItems[1].toString()).toBe('v20 w2 x 1');
+    expect(knapsack.selectedItems[2].toString()).toBe('v10 w1 x 1');
+    expect(knapsack.selectedItems[3].toString()).toBe('v12 w3 x 1');
+    expect(knapsack.selectedItems[4].toString()).toBe('v5 w2 x 1');
+  });
+
+  it('should solve unbound knapsack problem with items in stock', () => {
+    const possibleKnapsackItems = [
+      new KnapsackItem({ value: 84, weight: 7, itemsInStock: 3 }), // v/w ratio is 12
+      new KnapsackItem({ value: 5, weight: 2, itemsInStock: 2 }), // v/w ratio is 2.5
+      new KnapsackItem({ value: 12, weight: 3, itemsInStock: 1 }), // v/w ratio is 4
+      new KnapsackItem({ value: 10, weight: 1, itemsInStock: 6 }), // v/w ratio is 10
+      new KnapsackItem({ value: 20, weight: 2, itemsInStock: 8 }), // v/w ratio is 10
+    ];
+
     const maxKnapsackWeight = 17;
 
     const knapsack = new Knapsack(possibleKnapsackItems, maxKnapsackWeight);
@@ -108,5 +133,30 @@ describe('Knapsack', () => {
     expect(knapsack.selectedItems[0].toString()).toBe('v84 w7 x 2');
     expect(knapsack.selectedItems[1].toString()).toBe('v20 w2 x 1');
     expect(knapsack.selectedItems[2].toString()).toBe('v10 w1 x 1');
+  });
+
+  it('should solve unbound knapsack problem with items in stock and max weight more than sum of all items', () => {
+    const possibleKnapsackItems = [
+      new KnapsackItem({ value: 84, weight: 7, itemsInStock: 3 }), // v/w ratio is 12
+      new KnapsackItem({ value: 5, weight: 2, itemsInStock: 2 }), // v/w ratio is 2.5
+      new KnapsackItem({ value: 12, weight: 3, itemsInStock: 1 }), // v/w ratio is 4
+      new KnapsackItem({ value: 10, weight: 1, itemsInStock: 6 }), // v/w ratio is 10
+      new KnapsackItem({ value: 20, weight: 2, itemsInStock: 8 }), // v/w ratio is 10
+    ];
+
+    const maxKnapsackWeight = 60;
+
+    const knapsack = new Knapsack(possibleKnapsackItems, maxKnapsackWeight);
+
+    knapsack.solveUnboundedKnapsackProblem();
+
+    expect(knapsack.totalValue).toBe((3 * 84) + (2 * 5) + (1 * 12) + (6 * 10) + (8 * 20));
+    expect(knapsack.totalWeight).toBe((3 * 7) + (2 * 2) + (1 * 3) + (6 * 1) + (8 * 2));
+    expect(knapsack.selectedItems.length).toBe(5);
+    expect(knapsack.selectedItems[0].toString()).toBe('v84 w7 x 3');
+    expect(knapsack.selectedItems[1].toString()).toBe('v20 w2 x 8');
+    expect(knapsack.selectedItems[2].toString()).toBe('v10 w1 x 6');
+    expect(knapsack.selectedItems[3].toString()).toBe('v12 w3 x 1');
+    expect(knapsack.selectedItems[4].toString()).toBe('v5 w2 x 2');
   });
 });

@@ -69,7 +69,7 @@ export default class BinaryTreeNode {
       return undefined;
     }
 
-    // Check if grand-parent has more than two children.
+    // Check if grand-parent has two children.
     if (!this.parent.parent.left || !this.parent.parent.right) {
       return undefined;
     }
