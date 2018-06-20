@@ -22,6 +22,12 @@ emulate merge sort (top-down).
 
 ![Merge Sort](https://upload.wikimedia.org/wikipedia/commons/e/e6/Merge_sort_algorithm_diagram.svg)
 
+## Complexity
+
+###### time: average _O_(_n log n_)
+
+###### space: worst _O_(_n_) 
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)
