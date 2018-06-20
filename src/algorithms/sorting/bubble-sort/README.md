@@ -11,7 +11,7 @@ are needed, which indicates that the list is sorted.
 
 ## Complexity
 
-###### time: worst _O_(n<sup>2</sup>), best _O_(n), average _O_(n<sup>2</sup>)
+###### time: worst _O_(_n_<sup>2</sup>), best _O_(_n_), average _O_(_n_<sup>2</sup>)
 
 ###### space: worst _O_(1) auxiliary
 
