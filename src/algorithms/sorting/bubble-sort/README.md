@@ -9,6 +9,13 @@ are needed, which indicates that the list is sorted.
 
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
 
+## Complexity
+
+###### time: worst _O_(n<sup>2</sup>), best _O_(n), average _O_(n<sup>2</sup>)
+
+###### space: worst _O_(1) auxiliary
+
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
