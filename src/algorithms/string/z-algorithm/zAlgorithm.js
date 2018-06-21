@@ -5,47 +5,53 @@
  */
 
 function buildZArray(word, text) {
-  let zString = word+"$+"text;
-  let zArray = new Array(zString.length);
-  let left = 0, right = 0, k = 0;
+  const zString = `${word}$${text}`;
+  const zArray = new Array(zString.length);
+  let left = 0;
+  let right = 0;
+  let k = 0;
 
-  for (let i = 1; i < zString.length; i++) {
+  for (let i = 1; i < zString.length; i += 1) {
     if (i > right) {
-      left = right = 0;
-      while ( right<zString.length && zString[right-left] == zString[right]) {
-        right++;
+      left = i;
+      right = i;
+
+      while (right < zString.length && zString[right - left] === zString[right]) {
+        right += 1;
       }
-      zArray[i] = right-left;
-      right--;
+
+      zArray[i] = right - left;
+      right -= 1;
     } else {
-      k = i-left;
-      if (zString[k] < right-i+1) {
-        zString[i] = zString[k];
+      k = i - left;
+      if (zArray[k] < (right - i) + 1) {
+        zArray[i] = zArray[k];
       } else {
         left = i;
-        while (right<zString.length && zString[right-left] == zString[right]) {
-          right++;
+        while (right < zString.length && zString[right - left] === zString[right]) {
+          right += 1;
         }
-        zString[i] = right-left;
-        right--;
+
+        zArray[i] = right - left;
+        right -= 1;
       }
     }
   }
 
   return zArray;
 }
+
 /**
  * @param {string} text
  * @param {string} word
  * @return {number}
  */
-export default function knuthMorrisPratt(text, word) {
+export default function zAlgorithm(text, word) {
   const zArray = buildZArray(word, text);
-
-  for (let i=0; i<zArray.length; i++) {
-    if (zArray[i] == word.length) {
-      return (i-word.length-1);
+  for (let i = 1; i < zArray.length; i += 1) {
+    if (zArray[i] === word.length) {
+      return (i - word.length - 1);
     }
-    return -1;
   }
+  return -1;
 }
