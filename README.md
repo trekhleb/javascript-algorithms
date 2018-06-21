@@ -72,7 +72,8 @@ a set of rules that precisely define a sequence of operations.
 * **Strings**
   * `A` [Levenshtein Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * `B` [Hamming Distance](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/hamming-distance) - number of positions at which the symbols are different
-  * `A` [Knuth–Morris–Pratt Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/knuth-morris-pratt) (KMP Algorithm) - substring search
+  * `A` [Knuth–Morris–Pratt Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/knuth-morris-pratt) (KMP Algorithm) - substring search (pattern matching)
+  * `A` [Z Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/z-algorithm) - substring search (pattern matching)
   * `A` [Rabin Karp Algorithm](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/rabin-karp) - substring search
   * `A` [Longest Common Substring](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-substring)
 * **Searches**
