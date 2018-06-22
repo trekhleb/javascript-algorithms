@@ -34,20 +34,17 @@ export default function integerPartition(number) {
         // any new ways of forming the number. Thus we may just copy the number from row above.
         partitionMatrix[summandIndex][numberIndex] = partitionMatrix[summandIndex - 1][numberIndex];
       } else {
-        // The number of combinations would equal to number of combinations of forming the same
-        // number but WITHOUT current summand number plus number of combinations of forming the
-        // <current number - current summand> number but WITH current summand.
-        // Example: number of ways to form number 4 using summands 1, 2 and 3 is the sum of
-        // {number of ways to form 4 with sums that begin with 1 +
-        // number of ways to form 4 with sums that begin with 2 and include 1} +
-        // {number of ways to form 4 with sums that begin with 3 and include 2 and 1}
-        // Taking these sums to proceed in descending order of intergers, this gives us:
-        // With 1: 1+1+1+1  -> 1 way
-        // With 2: 2+2, 2+1+1 -> 2 ways
-        // With 3: 3 + (4-3) <= convince yourself that number of ways to form 4 starting
-        // with 3 is == number of ways to form 4-3 where 4-3 == <current number-current summand>
-        // Helper: if there are n ways to get (4-3) then 4 can be represented as 3 + first way,
-        // 3 + second way, and so on until the 3 + nth way. So answer for 4 is: 1 + 2 + 1 = 4 ways
+        /*
+         * The number of combinations would equal to number of combinations of forming the same
+         * number but WITHOUT current summand number PLUS number of combinations of forming the
+         * <current number - current summand> number but WITH current summand.
+         *
+         * Example:
+         * Number of ways to form 5 using summands {0, 1, 2} would equal the SUM of:
+         * - number of ways to form 5 using summands {0, 1} (we've excluded summand 2)
+         * - number of ways to form 3 (because 5 - 2 = 3) using summands {0, 1, 2}
+         * (we've included summand 2)
+        */
         const combosWithoutSummand = partitionMatrix[summandIndex - 1][numberIndex];
         const combosWithSummand = partitionMatrix[summandIndex][numberIndex - summandIndex];
 
