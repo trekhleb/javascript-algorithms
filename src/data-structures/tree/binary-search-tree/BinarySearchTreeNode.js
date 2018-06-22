@@ -94,8 +94,13 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
 
     if (!nodeToRemove.left && !nodeToRemove.right) {
       // Node is a leaf and thus has no children.
-      // Just remove the pointer to this node from the parent node.
-      parent.removeChild(nodeToRemove);
+      if (parent) {
+        // Node has a parent. Just remove the pointer to this node from the parent.
+        parent.removeChild(nodeToRemove);
+      } else {
+        // Node has no parent. Just erase current node value.
+        nodeToRemove.value = null;
+      }
     } else if (nodeToRemove.left && nodeToRemove.right) {
       // Node has two children.
       // Find the next biggest value (minimum value in the right branch)
@@ -113,11 +118,10 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
     } else {
       // Node has only one child.
       // Make this child to be a direct child of current node's parent.
-      if (nodeToRemove.left) {
-        parent.replaceChild(nodeToRemove, nodeToRemove.left);
-      } else {
-        parent.replaceChild(nodeToRemove, nodeToRemove.right);
-      }
+      const child = nodeToRemove.left || nodeToRemove.right;
+      nodeToRemove.value = child.value;
+      nodeToRemove.setLeft(child.left);
+      nodeToRemove.setRight(child.right);
     }
 
     return true;
