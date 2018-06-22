@@ -25,9 +25,9 @@ The horizontal lines are pivot values.
 
 ## Complexity
 
-###### time: worst _O_(_n_<sup>2</sup>), best _O_(_n log n_), average _O_(_n log n_)
-
-###### space: worst _O_(_n_) auxiliary
+| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
+| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
+| **Quick sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No        |           |
 
 ## References
 

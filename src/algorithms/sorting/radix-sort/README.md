@@ -27,9 +27,9 @@ comparison-based sorts (and worse if keys are much longer than `log n`).
 
 ## Complexity
 
-###### time: worst _O_(_n_), best _O_(_n_), average _O_(_n_)
-
-###### space: always _O_(_n_)
+| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
+| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
+| **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Yes       | k - length of longest key |
 
 ## References
 

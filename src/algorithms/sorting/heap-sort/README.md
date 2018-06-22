@@ -15,9 +15,9 @@ rather than a linear-time search to find the maximum.
 
 ## Complexity
 
-###### time: worst _O_(_n log n_), best _O_(_n log n_), average _O_(_n log n_)
-
-###### space: worst _O_(1) auxiliary
+| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
+| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
+| **Heap sort**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |           |
 
 ## References
 

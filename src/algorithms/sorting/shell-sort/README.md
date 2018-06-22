@@ -44,9 +44,9 @@ Shell sort uses insertion sort to sort the array.
 
 ## Complexity
 
-###### time: best _O_(_n log n_), average - depends on 'gap sequence'.
-
-###### space: worst _O_(_n_) total, _O_(1) auxiliary
+| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
+| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
+| **Shell sort**        | n&nbsp;log(n)   | depends on gap sequence   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
 
 ## References
 

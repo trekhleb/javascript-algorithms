@@ -56,9 +56,9 @@ zero.
 
 ## Complexity
 
-###### time: worst _O_(_n_ + _k_), best _O_(_n_), average _O_(_n_ + _k_) where _n_ is the number of elements in the input array and _k_ is the range of the output.
-
-###### space: worst _O_(_n_ + _k_) 
+| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
+| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
+| **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - biggest number in array |
 
 ## References
 

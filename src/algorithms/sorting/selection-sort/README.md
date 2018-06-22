@@ -15,9 +15,9 @@ memory is limited.
 
 ## Complexity
 
-###### time: worst _O_(_n_<sup>2</sup>), best _O_(_n_<sup>2</sup>), average _O_(_n_<sup>2</sup>)
-
-###### space: _O_(1) auxiliary
+| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
+| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
+| **Selection sort**    | n<sup>2</sup>   | n<sup>2</sup>       | n<sup>2</sup>       | 1         | No        |           |
 
 ## References
 

@@ -24,9 +24,9 @@ emulate merge sort (top-down).
 
 ## Complexity
 
-###### time: average _O_(_n log n_)
-
-###### space: worst _O_(_n_) 
+| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
+| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
+| **Merge sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Yes       |           |
 
 ## References
 

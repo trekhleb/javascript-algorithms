@@ -11,16 +11,9 @@ are needed, which indicates that the list is sorted.
 
 ## Complexity
 
-Time
-
-- worst _O_(_n_<sup>2</sup>),
-- best _O_(_n_),
-- average _O_(_n_<sup>2</sup>)
-
-Space
-
-worst _O_(1) auxiliary
-
+| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
+| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
+| **Bubble sort**       | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
 
 ## References
 
