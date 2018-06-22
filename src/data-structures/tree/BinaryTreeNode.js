@@ -86,6 +86,16 @@ export default class BinaryTreeNode {
   }
 
   /**
+   * @param {*} value
+   * @return {BinaryTreeNode}
+   */
+  setValue(value) {
+    this.value = value;
+
+    return this;
+  }
+
+  /**
    * @param {BinaryTreeNode} node
    * @return {BinaryTreeNode}
    */
@@ -166,6 +176,16 @@ export default class BinaryTreeNode {
     }
 
     return false;
+  }
+
+  /**
+   * @param {BinaryTreeNode} sourceNode
+   * @param {BinaryTreeNode} targetNode
+   */
+  static copyNode(sourceNode, targetNode) {
+    targetNode.setValue(sourceNode.value);
+    targetNode.setLeft(sourceNode.left);
+    targetNode.setRight(sourceNode.right);
   }
 
   /**
