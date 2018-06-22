@@ -54,6 +54,12 @@ zero.
  
 ![Counting Sort](https://1.bp.blogspot.com/-xPqylngqASY/WLGq3p9n9vI/AAAAAAAAAHM/JHdtXAkJY8wYzDMBXxqarjmhpPhM0u8MACLcB/s1600/ResultArrayCS.gif)
 
+## Complexity
+
+###### time: worst _O_(_n_ + _k_), best _O_(_n_), average _O_(_n_ + _k_) where _n_ is the number of elements in the input array and _k_ is the range of the output.
+
+###### space: worst _O_(_n_ + _k_) 
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Counting_sort)

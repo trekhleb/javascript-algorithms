@@ -13,6 +13,12 @@ rather than a linear-time search to find the maximum.
 
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/4/4d/Heapsort-example.gif)
 
+## Complexity
+
+###### time: worst _O_(_n log n_), best _O_(_n log n_), average _O_(_n log n_)
+
+###### space: worst _O_(1) auxiliary
+
 ## References
 
 [Wikipedia](https://en.wikipedia.org/wiki/Heapsort)

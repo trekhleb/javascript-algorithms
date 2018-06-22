@@ -25,6 +25,12 @@ comparison-based sorts (and worse if keys are much longer than `log n`).
 
 ![Radix Sort](https://www.researchgate.net/publication/291086231/figure/fig1/AS:614214452404240@1523451545568/Simplistic-illustration-of-the-steps-performed-in-a-radix-sort-In-this-example-the.png)
 
+## Complexity
+
+###### time: worst _O_(_n_), best _O_(_n_), average _O_(_n_)
+
+###### space: always _O_(_n_)
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Radix_sort)
