@@ -1,7 +1,10 @@
 # Tree
 
-* [Binary Search Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
-* [AVL Tree](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/avl-tree)
+* [Binary Search Tree](binary-search-tree)
+* [AVL Tree](avl-tree)
+* [Red-Black Tree](red-black-tree)
+* [Segment Tree](segment-tree) - with min/max/sum range queries examples
+* [Fenwick Tree](fenwick-tree) (Binary Indexed Tree)
 
 In computer science, a tree is a widely used abstract data 
 type (ADT) — or data structure implementing this ADT—that 
