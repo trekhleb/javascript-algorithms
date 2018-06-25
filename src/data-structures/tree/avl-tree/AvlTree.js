@@ -80,18 +80,16 @@ export default class AvlTree extends BinarySearchTree {
    * @param {BinarySearchTreeNode} rootNode
    */
   rotateLeftRight(rootNode) {
-    // Detach left node from rootNode since it is going to be replaced.
     const leftNode = rootNode.left;
-    rootNode.setLeft(null);
-
-    // Detach right node from leftNode.
     const leftRightNode = leftNode.right;
-    leftNode.setRight(null);
 
-    // Preserve leftRightNode's left subtree.
     if (leftRightNode.left) {
+      // Preserve leftRightNode's left subtree.
       leftNode.setRight(leftRightNode.left);
       leftRightNode.setLeft(null);
+    } else {
+      // Detach right node from leftNode.
+      leftNode.setRight(null);
     }
 
     // Attach leftRightNode to the rootNode.
@@ -108,17 +106,16 @@ export default class AvlTree extends BinarySearchTree {
    * @param {BinarySearchTreeNode} rootNode
    */
   rotateRightLeft(rootNode) {
-    // Detach right node from rootNode since it is going to be replaced.
     const rightNode = rootNode.right;
-    rootNode.setRight(null);
-
-    // Detach left node from rightNode.
     const rightLeftNode = rightNode.left;
-    rightNode.setLeft(null);
 
     if (rightLeftNode.right) {
+      // Preserve rightLeftNode's right subtree.
       rightNode.setLeft(rightLeftNode.right);
       rightLeftNode.setRight(null);
+    } else {
+      // Detach left node from rightNode.
+      rightNode.setLeft(null);
     }
 
     // Attach rightLeftNode to the rootNode.
