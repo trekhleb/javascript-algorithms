@@ -76,6 +76,7 @@ a set of rules that precisely define a sequence of operations.
   * `A` [Z Algorithm](src/algorithms/string/z-algorithm) - substring search (pattern matching)
   * `A` [Rabin Karp Algorithm](src/algorithms/string/rabin-karp) - substring search
   * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
+  * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
 * **Searches**
   * `B` [Linear Search](src/algorithms/search/linear-search)
   * `B` [Binary Search](src/algorithms/search/binary-search)
@@ -147,6 +148,7 @@ algorithm is an abstraction higher than a computer program.
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
   * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
+  * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
 * **Backtracking** - similarly to brute force, try to generate all possible solutions, but each time you generate next solution you test
 if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise, backtrack, and go on a
 different path of finding a solution. Normally the DFS traversal of state-space is being used.
