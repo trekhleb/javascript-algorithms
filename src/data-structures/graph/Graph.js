@@ -115,9 +115,11 @@ export default class Graph {
    */
   findEdge(startVertex, endVertex) {
     const vertex = this.getVertexByKey(startVertex.getKey());
+
     if (!vertex) {
       return null;
     }
+
     return vertex.findEdge(endVertex);
   }
 
