@@ -8,25 +8,25 @@
 
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
-[简体中文](https://github.com/trekhleb/javascript-algorithms/blob/master/README.zh-CN.md)
+[简体中文](README.zh-CN.md)
 
 ## 資料結構
 
 資料結構是一個電腦用來組織和排序資料的特定方式，透過這樣的方式資料可以有效率地被讀取以及修改。更精確地說，一個資料結構是一個資料值的集合、彼此間的關係，函數或者運作可以應用於資料上。
 
-* [鏈結串列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/linked-list)
-* [貯列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/queue)
-* [堆疊](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/stack)
-* [雜湊表](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/hash-table)
-* [堆](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/heap)
-* [優先貯列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/priority-queue)
-* [字典樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/trie)
-* [樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree)
-  * [二元搜尋樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/binary-search-tree)
-  * [AVL樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/avl-tree)
-  * [紅黑樹](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/tree/red-black-tree)
-* [圖](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/graph) (有向跟無向皆包含)
-* [互斥集](https://github.com/trekhleb/javascript-algorithms/tree/master/src/data-structures/disjoint-set)
+* [鏈結串列](src/data-structures/linked-list)
+* [貯列](src/data-structures/queue)
+* [堆疊](src/data-structures/stack)
+* [雜湊表](src/data-structures/hash-table)
+* [堆](src/data-structures/heap)
+* [優先貯列](src/data-structures/priority-queue)
+* [字典樹](src/data-structures/trie)
+* [樹](src/data-structures/tree)
+  * [二元搜尋樹](src/data-structures/tree/binary-search-tree)
+  * [AVL樹](src/data-structures/tree/avl-tree)
+  * [紅黑樹](src/data-structures/tree/red-black-tree)
+* [圖](src/data-structures/graph) (有向跟無向皆包含)
+* [互斥集](src/data-structures/disjoint-set)
 
 ## 演算法
 
@@ -35,99 +35,99 @@ _Read this in other languages:_
 ### 演算法議題分類
 
 * **數學類**
-  * [階層](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/factorial)
-  * [費伯納西數列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
-  * [Primality Test](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/primality-test) (排除法)
-  * [歐幾里得算法](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - 計算最大公因數 (GCD)
-  * [最小公倍數](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/least-common-multiple) (LCM)
-  * [整數拆分](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/integer-partition)
+  * [階層](src/algorithms/math/factorial)
+  * [費伯納西數列](src/algorithms/math/fibonacci)
+  * [Primality Test](src/algorithms/math/primality-test) (排除法)
+  * [歐幾里得算法](src/algorithms/math/euclidean-algorithm) - 計算最大公因數 (GCD)
+  * [最小公倍數](src/algorithms/math/least-common-multiple) (LCM)
+  * [整數拆分](src/algorithms/math/integer-partition)
 * **集合**
-  * [笛卡爾積](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/cartesian-product) - 多個集合的乘積
-  * [冪集合](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/power-set) - 所有集合的子集合
-  * [排列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/permutations) (有/無重複)
-  * [组合](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/combinations) (有/無重複)
-  * [洗牌算法](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/fisher-yates) - 隨機置換一有限序列
-  * [最長共同子序列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-common-subsequence) (LCS)
-  * [最長遞增子序列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-increasing-subsequence)
-  * [Shortest Common Supersequence](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/shortest-common-supersequence) (SCS)
-  * [背包問題](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem) - "0/1" and "Unbound" ones
-  * [最大子序列問題](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray) - 暴力法以及動態編程的(Kadane's)版本
+  * [笛卡爾積](src/algorithms/sets/cartesian-product) - 多個集合的乘積
+  * [冪集合](src/algorithms/sets/power-set) - 所有集合的子集合
+  * [排列](src/algorithms/sets/permutations) (有/無重複)
+  * [组合](src/algorithms/sets/combinations) (有/無重複)
+  * [洗牌算法](src/algorithms/sets/fisher-yates) - 隨機置換一有限序列
+  * [最長共同子序列](src/algorithms/sets/longest-common-subsequence) (LCS)
+  * [最長遞增子序列](src/algorithms/sets/longest-increasing-subsequence)
+  * [Shortest Common Supersequence](src/algorithms/sets/shortest-common-supersequence) (SCS)
+  * [背包問題](src/algorithms/sets/knapsack-problem) - "0/1" and "Unbound" ones
+  * [最大子序列問題](src/algorithms/sets/maximum-subarray) - 暴力法以及動態編程的(Kadane's)版本
 * **字串**
-  * [萊文斯坦距離](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance) - 兩序列間的最小編輯距離
-  * [漢明距離](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/hamming-distance) - number of positions at which the symbols are different
-  * [KMP 演算法](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/knuth-morris-pratt) - 子字串搜尋
-  * [Rabin Karp 演算法](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/rabin-karp) - 子字串搜尋
-  * [最長共通子序列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-substring)
+  * [萊文斯坦距離](src/algorithms/string/levenshtein-distance) - 兩序列間的最小編輯距離
+  * [漢明距離](src/algorithms/string/hamming-distance) - number of positions at which the symbols are different
+  * [KMP 演算法](src/algorithms/string/knuth-morris-pratt) - 子字串搜尋
+  * [Rabin Karp 演算法](src/algorithms/string/rabin-karp) - 子字串搜尋
+  * [最長共通子序列](src/algorithms/string/longest-common-substring)
 * **搜尋**
-  * [二元搜尋](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search)
+  * [二元搜尋](src/algorithms/search/binary-search)
 * **排序**
-  * [氣泡排序](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/bubble-sort)
-  * [選擇排序](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/selection-sort)
-  * [插入排序](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/insertion-sort)
-  * [堆排序](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/heap-sort)
-  * [合併排序](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/merge-sort)
-  * [快速排序](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/quick-sort)
-  * [希爾排序](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/shell-sort)
+  * [氣泡排序](src/algorithms/sorting/bubble-sort)
+  * [選擇排序](src/algorithms/sorting/selection-sort)
+  * [插入排序](src/algorithms/sorting/insertion-sort)
+  * [堆排序](src/algorithms/sorting/heap-sort)
+  * [合併排序](src/algorithms/sorting/merge-sort)
+  * [快速排序](src/algorithms/sorting/quick-sort)
+  * [希爾排序](src/algorithms/sorting/shell-sort)
 * **樹**  
-  * [深度優先搜尋](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/depth-first-search) (DFS)
-  * [廣度優先搜尋](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/breadth-first-search) (BFS)
+  * [深度優先搜尋](src/algorithms/tree/depth-first-search) (DFS)
+  * [廣度優先搜尋](src/algorithms/tree/breadth-first-search) (BFS)
 * **圖**
-  * [深度優先搜尋](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search) (DFS)
-  * [廣度優先搜尋](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/breadth-first-search) (BFS)
-  * [Dijkstra 演算法](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/dijkstra) - 找到所有圖頂點的最短路徑
-  * [Bellman-Ford 演算法](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bellman-ford) - 找到所有圖頂點的最短路徑
-  * [Detect Cycle](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/detect-cycle) - for both directed and undirected graphs (DFS and Disjoint Set based versions)
-  * [Prim’s 演算法](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * [Kruskal’s 演算法](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * [拓撲排序](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/topological-sorting) - DFS method
-  * [關節點](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/articulation-points) - Tarjan's algorithm (DFS based)
-  * [橋](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bridges) - DFS based algorithm
-  * [尤拉路徑及尤拉環](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/eulerian-path) - Fleury's algorithm - Visit every edge exactly once
-  * [漢彌爾頓環](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
-  * [強連通組件](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
-  * [旅行推銷員問題](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
+  * [深度優先搜尋](src/algorithms/graph/depth-first-search) (DFS)
+  * [廣度優先搜尋](src/algorithms/graph/breadth-first-search) (BFS)
+  * [Dijkstra 演算法](src/algorithms/graph/dijkstra) - 找到所有圖頂點的最短路徑
+  * [Bellman-Ford 演算法](src/algorithms/graph/bellman-ford) - 找到所有圖頂點的最短路徑
+  * [Detect Cycle](src/algorithms/graph/detect-cycle) - for both directed and undirected graphs (DFS and Disjoint Set based versions)
+  * [Prim’s 演算法](src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
+  * [Kruskal’s 演算法](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
+  * [拓撲排序](src/algorithms/graph/topological-sorting) - DFS method
+  * [關節點](src/algorithms/graph/articulation-points) - Tarjan's algorithm (DFS based)
+  * [橋](src/algorithms/graph/bridges) - DFS based algorithm
+  * [尤拉路徑及尤拉環](src/algorithms/graph/eulerian-path) - Fleury's algorithm - Visit every edge exactly once
+  * [漢彌爾頓環](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
+  * [強連通組件](src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
+  * [旅行推銷員問題](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
 * **未分類**  
-  * [河內塔](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/hanoi-tower)
-  * [N-皇后問題](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/n-queens)
-  * [騎士走棋盤](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/knight-tour)
+  * [河內塔](src/algorithms/uncategorized/hanoi-tower)
+  * [N-皇后問題](src/algorithms/uncategorized/n-queens)
+  * [騎士走棋盤](src/algorithms/uncategorized/knight-tour)
 
 ### 演算法範型
 
 演算法的範型是一個泛用方法或設計一類底層演算法的方式。它是一個比演算法的概念更高階的抽象化，就像是演算法是比電腦程式更高階的抽象化。
 
 * **暴力法** - 尋遍所有的可能解然後選取最好的解
-  * [最大子序列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray)
-  * [旅行推銷員問題](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
+  * [最大子序列](src/algorithms/sets/maximum-subarray)
+  * [旅行推銷員問題](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
 * **貪婪法** - choose the best option at the current time, without any consideration for the future
-  * [未定背包問題](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem)
-  * [Dijkstra 演算法](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/dijkstra) - 找到所有圖頂點的最短路徑
-  * [Prim’s 演算法](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * [Kruskal’s 演算法](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
+  * [未定背包問題](src/algorithms/sets/knapsack-problem)
+  * [Dijkstra 演算法](src/algorithms/graph/dijkstra) - 找到所有圖頂點的最短路徑
+  * [Prim’s 演算法](src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
+  * [Kruskal’s 演算法](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
 * **分治法** - divide the problem into smaller parts and then solve those parts
-  * [二元搜尋](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/search/binary-search)
-  * [河內塔](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/hanoi-tower)
-  * [歐幾里得演算法](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
-  * [排列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/permutations) (有/無重複)
-  * [组合](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/combinations) (有/無重複)
-  * [合併排序](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/merge-sort)
-  * [快速排序](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sorting/quick-sort)
-  * [樹深度優先搜尋](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/tree/depth-first-search) (DFS)
-  * [圖深度優先搜尋](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/depth-first-search) (DFS)
+  * [二元搜尋](src/algorithms/search/binary-search)
+  * [河內塔](src/algorithms/uncategorized/hanoi-tower)
+  * [歐幾里得演算法](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
+  * [排列](src/algorithms/sets/permutations) (有/無重複)
+  * [组合](src/algorithms/sets/combinations) (有/無重複)
+  * [合併排序](src/algorithms/sorting/merge-sort)
+  * [快速排序](src/algorithms/sorting/quick-sort)
+  * [樹深度優先搜尋](src/algorithms/tree/depth-first-search) (DFS)
+  * [圖深度優先搜尋](src/algorithms/graph/depth-first-search) (DFS)
 * **動態編程** - build up to a solution using previously found sub-solutions
-  * [費伯納西數列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/fibonacci)
-  * [萊溫斯坦距離](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
-  * [最長共同子序列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-common-subsequnce) (LCS)
-  * [最長共同子字串](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/string/longest-common-substring)
-  * [最長遞增子序列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/longest-increasing-subsequence)
-  * [最短共同子序列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/shortest-common-supersequence)
-  * [0/1背包問題](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/knapsack-problem)
-  * [整數拆分](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/math/integer-partition)
-  * [最大子序列](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/sets/maximum-subarray)
-  * [Bellman-Ford 演算法](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
+  * [費伯納西數列](src/algorithms/math/fibonacci)
+  * [萊溫斯坦距離](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
+  * [最長共同子序列](src/algorithms/sets/longest-common-subsequnce) (LCS)
+  * [最長共同子字串](src/algorithms/string/longest-common-substring)
+  * [最長遞增子序列](src/algorithms/sets/longest-increasing-subsequence)
+  * [最短共同子序列](src/algorithms/sets/shortest-common-supersequence)
+  * [0/1背包問題](src/algorithms/sets/knapsack-problem)
+  * [整數拆分](src/algorithms/math/integer-partition)
+  * [最大子序列](src/algorithms/sets/maximum-subarray)
+  * [Bellman-Ford 演算法](src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
 * **回溯法** - 用類似暴力法來嘗試產生所有可能解，但每次只在能滿足所有測試條件，且只有繼續產生子序列方案來產生的解決方案。否則回溯並尋找不同路徑的解決方案。
-  * [漢彌爾頓迴路](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
-  * [N-皇后問題](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/n-queens)
-  * [騎士走棋盤](https://github.com/trekhleb/javascript-algorithms/tree/master/src/algorithms/uncategorized/knight-tour)
+  * [漢彌爾頓迴路](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
+  * [N-皇后問題](src/algorithms/uncategorized/n-queens)
+  * [騎士走棋盤](src/algorithms/uncategorized/knight-tour)
 * **Branch & Bound**
 
 ## 如何使用本知識庫

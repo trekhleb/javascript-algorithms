@@ -42,6 +42,12 @@ Shell sort uses insertion sort to sort the array.
 
 ![Shellsort](https://www.tutorialspoint.com/data_structures_algorithms/images/shell_sort.jpg)
 
+## Complexity
+
+| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
+| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
+| **Shell sort**        | n&nbsp;log(n)   | depends on gap sequence   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
+
 ## References
 
 * [Tutorials Point](https://www.tutorialspoint.com/data_structures_algorithms/shell_sort_algorithm.htm)

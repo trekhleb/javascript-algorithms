@@ -257,4 +257,41 @@ describe('BinaryTreeNode', () => {
     expect(child.uncle).toBeDefined();
     expect(child.uncle).toEqual(uncle);
   });
+
+  it('should be possible to set node values', () => {
+    const node = new BinaryTreeNode('initial_value');
+
+    expect(node.value).toBe('initial_value');
+
+    node.setValue('new_value');
+
+    expect(node.value).toBe('new_value');
+  });
+
+  it('should be possible to copy node', () => {
+    const root = new BinaryTreeNode('root');
+    const left = new BinaryTreeNode('left');
+    const right = new BinaryTreeNode('right');
+
+    root
+      .setLeft(left)
+      .setRight(right);
+
+    expect(root.toString()).toBe('left,root,right');
+
+    const newRoot = new BinaryTreeNode('new_root');
+    const newLeft = new BinaryTreeNode('new_left');
+    const newRight = new BinaryTreeNode('new_right');
+
+    newRoot
+      .setLeft(newLeft)
+      .setRight(newRight);
+
+    expect(newRoot.toString()).toBe('new_left,new_root,new_right');
+
+    BinaryTreeNode.copyNode(root, newRoot);
+
+    expect(root.toString()).toBe('left,root,right');
+    expect(newRoot.toString()).toBe('left,root,right');
+  });
 });

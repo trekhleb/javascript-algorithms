@@ -99,7 +99,7 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
         parent.removeChild(nodeToRemove);
       } else {
         // Node has no parent. Just erase current node value.
-        nodeToRemove.value = null;
+        nodeToRemove.setValue(undefined);
       }
     } else if (nodeToRemove.left && nodeToRemove.right) {
       // Node has two children.
@@ -108,20 +108,24 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
       const nextBiggerNode = nodeToRemove.right.findMin();
       if (!this.nodeComparator.equal(nextBiggerNode, nodeToRemove.right)) {
         this.remove(nextBiggerNode.value);
-        nodeToRemove.value = nextBiggerNode.value;
+        nodeToRemove.setValue(nextBiggerNode.value);
       } else {
         // In case if next right value is the next bigger one and it doesn't have left child
         // then just replace node that is going to be deleted with the right node.
-        nodeToRemove.value = nodeToRemove.right.value;
-        nodeToRemove.right = nodeToRemove.right.right;
+        nodeToRemove.setValue(nodeToRemove.right.value);
+        nodeToRemove.setRight(nodeToRemove.right.right);
       }
     } else {
       // Node has only one child.
       // Make this child to be a direct child of current node's parent.
-      const child = nodeToRemove.left || nodeToRemove.right;
-      nodeToRemove.value = child.value;
-      nodeToRemove.setLeft(child.left);
-      nodeToRemove.setRight(child.right);
+      /** @var BinarySearchTreeNode */
+      const childNode = nodeToRemove.left || nodeToRemove.right;
+
+      if (parent) {
+        parent.replaceChild(nodeToRemove, childNode);
+      } else {
+        BinaryTreeNode.copyNode(childNode, nodeToRemove);
+      }
     }
 
     return true;
