@@ -22,6 +22,7 @@ export default class LinkedList {
   prepend(value) {
     // Make new node to be a head.
     const newNode = new LinkedListNode(value, this.head);
+    newNode.next = this.head;
     this.head = newNode;
 
     // If there is no tail yet let's make new node a tail.
