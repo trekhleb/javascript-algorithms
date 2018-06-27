@@ -35,3 +35,37 @@ unsets the bit.
 This method is a combination of "Clear Bit" and "Set Bit" methods.
 
 > See `updateBit` function for further details.
+
+#### Multiply By Two
+
+This method shifts original number by one bit to the left.
+Thus all binary number components (powers of two) are being
+multiplying by two and thus the number itself is being 
+multiplied by two.
+
+```
+Before the shift
+Number: 0b0101 = 5
+Powers of two: 0 + 2^2 + 0 + 2^0 
+
+After the shift
+Number: 0b1010 = 10
+Powers of two: 2^3 + 0 + 2^1 + 0 
+```
+
+#### Divide By Two
+
+This method shifts original number by one bit to the right.
+Thus all binary number components (powers of two) are being
+divided by two and thus the number itself is being 
+divided by two without remainder.
+
+```
+Before the shift
+Number: 0b0101 = 5
+Powers of two: 0 + 2^2 + 0 + 2^0 
+
+After the shift
+Number: 0b0010 = 2
+Powers of two: 0 + 0 + 2^1 + 0 
+```
