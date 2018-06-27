@@ -49,6 +49,7 @@ a set of rules that precisely define a sequence of operations.
 ### Algorithms by Topic
 
 * **Math**
+  * `B` [Bit Manipulation](src/algorithms/math/bits) - set/get/update/clear bits
   * `B` [Factorial](src/algorithms/math/factorial) 
   * `B` [Fibonacci Number](src/algorithms/math/fibonacci)
   * `B` [Primality Test](src/algorithms/math/primality-test) (trial division method)
