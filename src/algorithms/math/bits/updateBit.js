@@ -11,6 +11,6 @@ export default function updateBit(number, bitPosition, bitValue) {
   // Init clear mask.
   const clearMask = ~(1 << bitPosition);
 
-  // Cleat bit value and then set it up to required value.
+  // Clear bit value and then set it up to required value.
   return (number & clearMask) | (bitValueNormalized << bitPosition);
 }
