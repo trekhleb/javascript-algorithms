@@ -53,6 +53,8 @@ Number: 0b1010 = 10
 Powers of two: 2^3 + 0 + 2^1 + 0 
 ```
 
+> See `multiplyByTwo` function for further details.
+
 #### Divide By Two
 
 This method shifts original number by one bit to the right.
@@ -69,3 +71,29 @@ After the shift
 Number: 0b0010 = 2
 Powers of two: 0 + 0 + 2^1 + 0 
 ```
+
+> See `divideByTwo` function for further details.
+
+#### Switch Sign
+
+This method make positive numbers to be negative and backwards.
+To do so it uses "Twos Complement" approach which does it by
+inverting all of the bits of the number and adding 1 to it.
+
+```
+1101 -3
+1110 -2
+1111 -1
+0000  0
+0001  1
+0010  2
+0011  3
+``` 
+
+> See `switchSign` function for further details.
+
+## References
+
+- [Bit Manipulation on YouTube](https://www.youtube.com/watch?v=NLKQEOgBAnw&t=0s&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+- [Negative Numbers in binary on YouTube](https://www.youtube.com/watch?v=4qH4unVtJkE&t=0s&index=30&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+- [Bit Hacks on stanford.edu](https://graphics.stanford.edu/~seander/bithacks.html)
