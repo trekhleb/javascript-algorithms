@@ -8,20 +8,21 @@ export default function combineWithoutRepetitions(comboOptions, comboLength) {
     return comboOptions.map(comboOption => [comboOption]);
   }
 
+  // Init combinations array.
   const combos = [];
 
   // Eliminate characters one by one and concatenate them to
-  // combinations of smaller lengths.s
-  for (let letterIndex = 0; letterIndex <= (comboOptions.length - comboLength); letterIndex += 1) {
-    const currentLetter = comboOptions[letterIndex];
+  // combinations of smaller lengths.
+  for (let optionIndex = 0; optionIndex <= (comboOptions.length - comboLength); optionIndex += 1) {
+    const currentOption = comboOptions[optionIndex];
 
     const smallerCombos = combineWithoutRepetitions(
-      comboOptions.slice(letterIndex + 1),
+      comboOptions.slice(optionIndex + 1),
       comboLength - 1,
     );
 
     smallerCombos.forEach((smallerCombo) => {
-      combos.push([currentLetter].concat(smallerCombo));
+      combos.push([currentOption].concat(smallerCombo));
     });
   }
 
