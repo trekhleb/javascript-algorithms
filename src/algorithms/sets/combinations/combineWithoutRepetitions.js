@@ -1,37 +1,30 @@
 /**
  * @param {*[]} comboOptions
  * @param {number} comboLength
- * @param {*[][]} combos
- * @param {*[]} currentCombo
  * @return {*[]}
  */
-function combineRecursively(comboOptions, comboLength, combos = [], currentCombo = []) {
-  if (comboLength === 0) {
-    combos.push(currentCombo);
-
-    return combos;
+export default function combineWithoutRepetitions(comboOptions, comboLength) {
+  if (comboLength === 1) {
+    return comboOptions.map(comboOption => [comboOption]);
   }
 
-  for (let letterIndex = 0; letterIndex <= (comboOptions.length - comboLength); letterIndex += 1) {
-    const letter = comboOptions[letterIndex];
-    const restCombinationOptions = comboOptions.slice(letterIndex + 1);
+  // Init combinations array.
+  const combos = [];
 
-    combineRecursively(
-      restCombinationOptions,
+  // Eliminate characters one by one and concatenate them to
+  // combinations of smaller lengths.
+  for (let optionIndex = 0; optionIndex <= (comboOptions.length - comboLength); optionIndex += 1) {
+    const currentOption = comboOptions[optionIndex];
+
+    const smallerCombos = combineWithoutRepetitions(
+      comboOptions.slice(optionIndex + 1),
       comboLength - 1,
-      combos,
-      currentCombo.concat([letter]),
     );
+
+    smallerCombos.forEach((smallerCombo) => {
+      combos.push([currentOption].concat(smallerCombo));
+    });
   }
 
   return combos;
-}
-
-/**
- * @param {*[]} combinationOptions
- * @param {number} combinationLength
- * @return {*[]}
- */
-export default function combineWithoutRepetitions(combinationOptions, combinationLength) {
-  return combineRecursively(combinationOptions, combinationLength);
 }
