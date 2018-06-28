@@ -13,9 +13,7 @@ export default function combineWithoutRepetitions(comboOptions, comboLength) {
 
   // Eliminate characters one by one and concatenate them to
   // combinations of smaller lengths.
-  for (let optionIndex = 0; optionIndex <= (comboOptions.length - comboLength); optionIndex += 1) {
-    const currentOption = comboOptions[optionIndex];
-
+  comboOptions.forEach((currentOption, optionIndex) => {
     const smallerCombos = combineWithoutRepetitions(
       comboOptions.slice(optionIndex + 1),
       comboLength - 1,
@@ -24,7 +22,7 @@ export default function combineWithoutRepetitions(comboOptions, comboLength) {
     smallerCombos.forEach((smallerCombo) => {
       combos.push([currentOption].concat(smallerCombo));
     });
-  }
+  });
 
   return combos;
 }
