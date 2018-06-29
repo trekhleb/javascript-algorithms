@@ -70,7 +70,7 @@ export default class DisjointSet {
       // If rootB's tree is bigger then make rootB to be a new root.
       rootB.addChild(rootA);
 
-      return rootB.getKey();
+      return this;
     }
 
     // If rootA's tree is bigger then make rootA to be a new root.

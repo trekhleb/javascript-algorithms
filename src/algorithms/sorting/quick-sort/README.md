@@ -23,6 +23,12 @@ The horizontal lines are pivot values.
 
 ![Quicksort](https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif)
 
+## Complexity
+
+| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
+| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
+| **Quick sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No        |           |
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Quicksort)

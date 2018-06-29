@@ -22,6 +22,12 @@ emulate merge sort (top-down).
 
 ![Merge Sort](https://upload.wikimedia.org/wikipedia/commons/e/e6/Merge_sort_algorithm_diagram.svg)
 
+## Complexity
+
+| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
+| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
+| **Merge sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Yes       |           |
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Merge_sort)

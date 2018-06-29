@@ -3,35 +3,27 @@
  * @return {*[]}
  */
 export default function permutateWithoutRepetitions(permutationOptions) {
-  if (permutationOptions.length === 0) {
-    return [];
-  }
-
   if (permutationOptions.length === 1) {
     return [permutationOptions];
   }
 
+  // Init permutations array.
   const permutations = [];
 
-  // Get all permutations of length (n - 1).
-  const previousOptions = permutationOptions.slice(0, permutationOptions.length - 1);
-  const previousPermutations = permutateWithoutRepetitions(previousOptions);
+  // Get all permutations for permutationOptions excluding the first element.
+  const smallerPermutations = permutateWithoutRepetitions(permutationOptions.slice(1));
 
-  // Insert last option into every possible position of every previous permutation.
-  const lastOption = permutationOptions.slice(permutationOptions.length - 1);
+  // Insert first option into every possible position of every smaller permutation.
+  const firstOption = permutationOptions[0];
 
-  for (
-    let permutationIndex = 0;
-    permutationIndex < previousPermutations.length;
-    permutationIndex += 1
-  ) {
-    const currentPermutation = previousPermutations[permutationIndex];
+  for (let permIndex = 0; permIndex < smallerPermutations.length; permIndex += 1) {
+    const smallerPermutation = smallerPermutations[permIndex];
 
-    // Insert last option into every possible position of currentPermutation.
-    for (let positionIndex = 0; positionIndex <= currentPermutation.length; positionIndex += 1) {
-      const permutationPrefix = currentPermutation.slice(0, positionIndex);
-      const permutationSuffix = currentPermutation.slice(positionIndex);
-      permutations.push(permutationPrefix.concat(lastOption, permutationSuffix));
+    // Insert first option into every possible position of smallerPermutation.
+    for (let positionIndex = 0; positionIndex <= smallerPermutation.length; positionIndex += 1) {
+      const permutationPrefix = smallerPermutation.slice(0, positionIndex);
+      const permutationSuffix = smallerPermutation.slice(positionIndex);
+      permutations.push(permutationPrefix.concat([firstOption], permutationSuffix));
     }
   }
 

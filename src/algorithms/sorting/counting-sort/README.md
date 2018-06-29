@@ -54,6 +54,12 @@ zero.
  
 ![Counting Sort](https://1.bp.blogspot.com/-xPqylngqASY/WLGq3p9n9vI/AAAAAAAAAHM/JHdtXAkJY8wYzDMBXxqarjmhpPhM0u8MACLcB/s1600/ResultArrayCS.gif)
 
+## Complexity
+
+| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
+| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
+| **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - biggest number in array |
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Counting_sort)

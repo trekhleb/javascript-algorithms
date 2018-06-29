@@ -50,6 +50,21 @@ Where `n` is the number of things to choose from, and we
 choose `r` of them. Repetition allowed, 
 order doesn't matter.
 
+## Cheat Sheets
+
+Permutations cheat sheet
+
+![Permutations Cheat Sheet](https://cdn-images-1.medium.com/max/2000/1*JNK-n0Pt0Vbxk0lxVpgT5A.png)
+
+Combinations cheat sheet
+
+![Combinations Cheat Sheet](https://cdn-images-1.medium.com/max/2000/1*7cFRn8jW4g_91YgDAbmxRQ.png)
+
+Permutations/combinations algorithm ideas.
+
+![Algorithms Idea](https://cdn-images-1.medium.com/max/2000/1*vLsSsZMnesCFPCYTYMbxrQ.png)
+
 ## References
 
-[Math Is Fun](https://www.mathsisfun.com/combinatorics/combinations-permutations.html)
+- [Math Is Fun](https://www.mathsisfun.com/combinatorics/combinations-permutations.html)
+- [Permutations/combinations cheat sheets](https://medium.com/@trekhleb/permutations-combinations-algorithms-cheat-sheet-68c14879aba5)
