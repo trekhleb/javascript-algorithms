@@ -38,6 +38,7 @@ the data.
     * `A` [Fenwick Tree](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
 * `A` [Graph](src/data-structures/graph) (both directed and undirected)
 * `A` [Disjoint Set](src/data-structures/disjoint-set)
+* `A` [Bloom Filter](src/data-structures/bloom-filter)
 
 ## Algorithms
 
@@ -231,6 +232,7 @@ Below is the list of some of the most used Big O notations and their performance
 | **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
 | **Red-Black Tree**      | log(n)    | log(n)    | log(n)    | log(n)    |           |
 | **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **Bloom Filter**        |           | 1         | 1         |           |           |
 
 ### Array Sorting Algorithms Complexity
 
