@@ -1,6 +1,6 @@
 export default class BloomFilter {
   /**
-   * @param {number} size
+   * @param {number} size - the size of the storage.
    */
   constructor(size = 100) {
     // Bloom filter size directly affects the likelihood of false positives.
@@ -15,7 +15,7 @@ export default class BloomFilter {
   insert(item) {
     const hashValues = this.getHashValues(item);
 
-    // Set each hashValue index to true
+    // Set each hashValue index to true.
     hashValues.forEach(val => this.storage.setValue(val));
   }
 
@@ -26,8 +26,8 @@ export default class BloomFilter {
   mayContain(item) {
     const hashValues = this.getHashValues(item);
 
-    for (let i = 0; i < hashValues.length; i += 1) {
-      if (!this.storage.getValue(hashValues[i])) {
+    for (let hashIndex = 0; hashIndex < hashValues.length; hashIndex += 1) {
+      if (!this.storage.getValue(hashValues[hashIndex])) {
         // We know that the item was definitely not inserted.
         return false;
       }
@@ -50,7 +50,7 @@ export default class BloomFilter {
     const storage = [];
 
     // Initialize all indexes to false
-    for (let i = 0; i < size; i += 1) {
+    for (let storageCellIndex = 0; storageCellIndex < size; storageCellIndex += 1) {
       storage.push(false);
     }
 
@@ -67,14 +67,14 @@ export default class BloomFilter {
   }
 
   /**
-   * @param {string} str
+   * @param {string} item
    * @return {number}
    */
-  hash1(str) {
+  hash1(item) {
     let hash = 0;
 
-    for (let i = 0; i < str.length; i += 1) {
-      const char = str.charCodeAt(i);
+    for (let charIndex = 0; charIndex < item.length; charIndex += 1) {
+      const char = item.charCodeAt(charIndex);
       hash = (hash << 5) + hash + char;
       hash &= hash; // Convert to 32bit integer
       hash = Math.abs(hash);
@@ -84,44 +84,48 @@ export default class BloomFilter {
   }
 
   /**
-   * @param {string} str
+   * @param {string} item
    * @return {number}
    */
-  hash2(str) {
+  hash2(item) {
     let hash = 5381;
 
-    for (let i = 0; i < str.length; i += 1) {
-      const char = str.charCodeAt(i);
+    for (let charIndex = 0; charIndex < item.length; charIndex += 1) {
+      const char = item.charCodeAt(charIndex);
       hash = (hash << 5) + hash + char; /* hash * 33 + c */
     }
 
-    return hash % this.size;
+    return Math.abs(hash % this.size);
   }
 
   /**
-   * @param {string} str
+   * @param {string} item
    * @return {number}
    */
-  hash3(str) {
+  hash3(item) {
     let hash = 0;
 
-    for (let i = 0; i < str.length; i += 1) {
-      const char = str.charCodeAt(i);
+    for (let charIndex = 0; charIndex < item.length; charIndex += 1) {
+      const char = item.charCodeAt(charIndex);
       hash = (hash << 5) - hash;
       hash += char;
       hash &= hash; // Convert to 32bit integer
     }
 
-    return hash % this.size;
+    return Math.abs(hash % this.size);
   }
 
   /**
-   * Runs all 3 hash functions on the input and returns an array of results
+   * Runs all 3 hash functions on the input and returns an array of results.
    *
-   * @param {string} str
+   * @param {string} item
    * @return {number[]}
    */
   getHashValues(item) {
-    return [this.hash1(item), Math.abs(this.hash2(item)), Math.abs(this.hash3(item))];
+    return [
+      this.hash1(item),
+      this.hash2(item),
+      this.hash3(item),
+    ];
   }
 }
