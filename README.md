@@ -232,7 +232,7 @@ Below is the list of some of the most used Big O notations and their performance
 | **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
 | **Red-Black Tree**      | log(n)    | log(n)    | log(n)    | log(n)    |           |
 | **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **Bloom Filter**        |           | 1         | 1         |           |           |
+| **Bloom Filter**        | -         | 1         | 1         | -         |           |
 
 ### Array Sorting Algorithms Complexity
 
