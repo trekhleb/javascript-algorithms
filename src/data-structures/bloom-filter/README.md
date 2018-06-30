@@ -122,7 +122,7 @@ to see every time they visit the site.
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Bloom_filter)
-- [Tutorial](http://llimllib.github.io/bloomfilter-tutorial/)
-- [Calculating false positive probability](https://hur.st/bloomfilter/?n=4&p=&m=18&k=3)
-- [Medium blog](https://blog.medium.com/what-are-bloom-filters-1ec2a50c68ff)
-- [YouTube](https://www.youtube.com/watch?v=bEmBh1HtYrw)
+- [Bloom Filters by Example](http://llimllib.github.io/bloomfilter-tutorial/)
+- [Calculating False Positive Probability](https://hur.st/bloomfilter/?n=4&p=&m=18&k=3)
+- [Bloom Filters on Medium](https://blog.medium.com/what-are-bloom-filters-1ec2a50c68ff)
+- [Bloom Filters on YouTube](https://www.youtube.com/watch?v=bEmBh1HtYrw)
