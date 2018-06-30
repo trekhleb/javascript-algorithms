@@ -70,6 +70,7 @@ a set of rules that precisely define a sequence of operations.
   * `A` [Shortest Common Supersequence](src/algorithms/sets/shortest-common-supersequence) (SCS)
   * `A` [Knapsack Problem](src/algorithms/sets/knapsack-problem) - "0/1" and "Unbound" ones
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray) - "Brute Force" and "Dynamic Programming" (Kadane's) versions
+  * `A` [Combination Sum](src/algorithms/sets/combination-sum) - find all combinations that form specific sum
 * **Strings**
   * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * `B` [Hamming Distance](src/algorithms/string/hamming-distance) - number of positions at which the symbols are different
@@ -156,6 +157,7 @@ different path of finding a solution. Normally the DFS traversal of state-space 
   * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
+  * `A` [Combination Sum](src/algorithms/sets/combination-sum) - find all combinations that form specific sum
 * **Branch & Bound** - remember the lowest-cost solution found at each stage of the backtracking
 search, and use the cost of the lowest-cost solution found so far as a lower bound on the cost of
 a least-cost solution to the problem, in order to discard partial solutions with costs larger than the
