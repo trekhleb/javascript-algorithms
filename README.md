@@ -38,6 +38,7 @@ the data.
     * `A` [Fenwick Tree](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
 * `A` [Graph](src/data-structures/graph) (both directed and undirected)
 * `A` [Disjoint Set](src/data-structures/disjoint-set)
+* `A` [Bloom Filter](src/data-structures/bloom-filter)
 
 ## Algorithms
 
@@ -70,6 +71,7 @@ a set of rules that precisely define a sequence of operations.
   * `A` [Shortest Common Supersequence](src/algorithms/sets/shortest-common-supersequence) (SCS)
   * `A` [Knapsack Problem](src/algorithms/sets/knapsack-problem) - "0/1" and "Unbound" ones
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray) - "Brute Force" and "Dynamic Programming" (Kadane's) versions
+  * `A` [Combination Sum](src/algorithms/sets/combination-sum) - find all combinations that form specific sum
 * **Strings**
   * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * `B` [Hamming Distance](src/algorithms/string/hamming-distance) - number of positions at which the symbols are different
@@ -156,6 +158,7 @@ different path of finding a solution. Normally the DFS traversal of state-space 
   * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
+  * `A` [Combination Sum](src/algorithms/sets/combination-sum) - find all combinations that form specific sum
 * **Branch & Bound** - remember the lowest-cost solution found at each stage of the backtracking
 search, and use the cost of the lowest-cost solution found so far as a lower bound on the cost of
 a least-cost solution to the problem, in order to discard partial solutions with costs larger than the
@@ -229,6 +232,7 @@ Below is the list of some of the most used Big O notations and their performance
 | **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
 | **Red-Black Tree**      | log(n)    | log(n)    | log(n)    | log(n)    |           |
 | **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **Bloom Filter**        | -         | 1         | 1         | -         | False positives are possible while searching |
 
 ### Array Sorting Algorithms Complexity
 

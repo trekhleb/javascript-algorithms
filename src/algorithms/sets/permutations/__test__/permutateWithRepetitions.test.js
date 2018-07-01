@@ -2,9 +2,6 @@ import permutateWithRepetitions from '../permutateWithRepetitions';
 
 describe('permutateWithRepetitions', () => {
   it('should permutate string with repetition', () => {
-    const permutations0 = permutateWithRepetitions([]);
-    expect(permutations0).toEqual([]);
-
     const permutations1 = permutateWithRepetitions(['A']);
     expect(permutations1).toEqual([
       ['A'],
