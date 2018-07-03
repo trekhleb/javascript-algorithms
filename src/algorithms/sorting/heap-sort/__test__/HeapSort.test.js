@@ -24,6 +24,10 @@ describe('HeapSort', () => {
     SortTester.testSortWithCustomComparator(HeapSort);
   });
 
+  it('should sort negative numbers', () => {
+    SortTester.testNegativeNumbersSort(HeapSort);
+  });
+
   it('should visit EQUAL array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
       HeapSort,

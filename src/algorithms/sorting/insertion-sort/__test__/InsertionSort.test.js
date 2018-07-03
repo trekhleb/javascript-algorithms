@@ -26,6 +26,10 @@ describe('InsertionSort', () => {
     SortTester.testSortStability(InsertionSort);
   });
 
+  it('should sort negative numbers', () => {
+    SortTester.testNegativeNumbersSort(InsertionSort);
+  });
+
   it('should visit EQUAL array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
       InsertionSort,

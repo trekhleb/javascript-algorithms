@@ -6,8 +6,7 @@ export default class CountingSort extends Sort {
    * @param {number} [biggestElement]
    */
   sort(originalArray, biggestElement = 0) {
-    // Detect biggest element in array in order to build in order to build
-    // number bucket array later.
+    // Detect biggest element in array in order to build number bucket array later.
     let detectedBiggestElement = biggestElement;
     if (!detectedBiggestElement) {
       originalArray.forEach((element) => {
