@@ -3,13 +3,8 @@
  * @return {boolean}
  */
 export default function isPowerOfTwoBitwise(number) {
-  // Don't work with negative numbers.
-  if (number < 0) {
-    throw new Error('Please provide positive number');
-  }
-
-  // 0 and 1 are not powers of two.
-  if (number <= 1) {
+  // 1 (2^0) is the smallest power of two.
+  if (number < 1) {
     return false;
   }
 

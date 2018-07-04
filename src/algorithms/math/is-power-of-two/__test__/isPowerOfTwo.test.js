@@ -1,17 +1,10 @@
 import isPowerOfTwo from '../isPowerOfTwo';
 
 describe('isPowerOfTwo', () => {
-  it('should throw an exception when trying to apply function to negative number', () => {
-    const isNegativePowerOfTwo = () => {
-      isPowerOfTwo(-1);
-    };
-
-    expect(isNegativePowerOfTwo).toThrowError();
-  });
-
   it('should check if the number is made by multiplying twos', () => {
+    expect(isPowerOfTwo(-1)).toBeFalsy();
     expect(isPowerOfTwo(0)).toBeFalsy();
-    expect(isPowerOfTwo(1)).toBeFalsy();
+    expect(isPowerOfTwo(1)).toBeTruthy();
     expect(isPowerOfTwo(2)).toBeTruthy();
     expect(isPowerOfTwo(3)).toBeFalsy();
     expect(isPowerOfTwo(4)).toBeTruthy();
