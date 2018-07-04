@@ -89,6 +89,8 @@ describe('DoublyLinkedList', () => {
   it('should delete linked list tail', () => {
     const linkedList = new DoublyLinkedList();
 
+    expect(linkedList.deleteTail()).toBeNull();
+
     linkedList.append(1);
     linkedList.append(2);
     linkedList.append(3);

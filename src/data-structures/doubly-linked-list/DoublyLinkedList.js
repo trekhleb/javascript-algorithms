@@ -78,44 +78,38 @@ export default class DoublyLinkedList {
     let deletedNode = null;
     let currentNode = this.head;
 
-    if (currentNode !== null) {
-      do {
-        if (this.compare.equal(currentNode.value, value)) {
-          deletedNode = currentNode;
+    do {
+      if (this.compare.equal(currentNode.value, value)) {
+        deletedNode = currentNode;
 
-          if (deletedNode === this.head) {
-            // set head to second node, which will become new head
-            this.head = deletedNode.next;
+        if (deletedNode === this.head) {
+          // set head to second node, which will become new head
+          this.head = deletedNode.next;
 
-            // set new head's previous to null
-            if (this.head) {
-              this.head.previous = null;
-            }
-
-            // If all the nodes in list has same value that is passed as argument
-            // then all nodes will get deleted, therefore tail needs to be updated
-            if (deletedNode === this.tail) {
-              this.tail = null;
-            }
-          } else if (deletedNode === this.tail) {
-            // set tail to second last node, which will become new tail
-            this.tail = deletedNode.previous;
-
-            // set new tail's next to null
-            if (this.tail) {
-              this.tail.next = null;
-            }
-          } else {
-            const previousNode = deletedNode.previous;
-            const nextNode = deletedNode.next;
-            previousNode.next = nextNode;
-            nextNode.previous = previousNode;
+          // set new head's previous to null
+          if (this.head) {
+            this.head.previous = null;
           }
-        }
 
-        currentNode = currentNode.next;
-      } while (currentNode);
-    }
+          // If all the nodes in list has same value that is passed as argument
+          // then all nodes will get deleted, therefore tail needs to be updated
+          if (deletedNode === this.tail) {
+            this.tail = null;
+          }
+        } else if (deletedNode === this.tail) {
+          // set tail to second last node, which will become new tail
+          this.tail = deletedNode.previous;
+          this.tail.next = null;
+        } else {
+          const previousNode = deletedNode.previous;
+          const nextNode = deletedNode.next;
+          previousNode.next = nextNode;
+          nextNode.previous = previousNode;
+        }
+      }
+
+      currentNode = currentNode.next;
+    } while (currentNode);
 
     return deletedNode;
   }
@@ -166,10 +160,7 @@ export default class DoublyLinkedList {
 
     const deletedTail = this.tail;
     this.tail = this.tail.previous;
-
-    if (this.tail) {
-      this.tail.next = null;
-    }
+    this.tail.next = null;
 
     return deletedTail;
   }
