@@ -2,7 +2,7 @@ import euclideanAlgorithm from '../euclideanAlgorithm';
 
 describe('euclideanAlgorithm', () => {
   it('should calculate GCD', () => {
-    expect(euclideanAlgorithm(0, 0)).toBeNull();
+    expect(euclideanAlgorithm(0, 0)).toBe(0);
     expect(euclideanAlgorithm(2, 0)).toBe(2);
     expect(euclideanAlgorithm(0, 2)).toBe(2);
     expect(euclideanAlgorithm(1, 2)).toBe(1);
