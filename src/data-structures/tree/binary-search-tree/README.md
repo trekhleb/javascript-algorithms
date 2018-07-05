@@ -15,7 +15,7 @@ keys stored in the nodes of the tree and deciding to search in the left or right
 subtrees. On average, this means that each comparison allows 
 the operations to skip about half of the tree, so that each 
 lookup, insertion or deletion takes time proportional to the 
-logarithm of the number of items stored in the tree. This is 
+logarithm of the number of items stored in the tree (`O(log n)`). This is 
 much better than the linear time required to find items by key 
 in an (unsorted) array, but slower than the corresponding 
 operations on hash tables.
