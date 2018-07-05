@@ -30,7 +30,7 @@ An example of a red–black tree:
 ## Properties
 
 In addition to the requirements imposed on a binary search 
-tree the following must be satisfied by a red–black tree:
+tree, the following must be satisfied by a red–black tree:
 
 - Each node is either red or black.
 - The root is black. This rule is sometimes omitted. 
