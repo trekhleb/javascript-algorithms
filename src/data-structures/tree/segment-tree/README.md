@@ -2,7 +2,7 @@
 
 In computer science, a segment tree also known as a statistic tree 
 is a tree data structure used for storing information about intervals, 
-or segments. It allows querying which of the stored segments contain 
+or segments. It allows querying the stored segments to find 
 a given point. It is, in principle, a static structure; that is, 
 it's a structure that cannot be modified once it's built. A similar 
 data structure is the interval tree.
@@ -38,9 +38,8 @@ Applications of the segment tree are in the areas of computational geometry,
 and geographic information systems.
 
 Current implementation of Segment Tree implies that you may
-pass any binary (with two input params) function to it and 
-thus you're able to do range query for variety of functions.
-In tests you may fins examples of doing `min`, `max` and `sam` range
+pass any binary (with two input params) function to it and do range query for variety of functions.
+In tests you may find examples of doing `min`, `max` and `sam` range
 queries on SegmentTree.
  
 ## References
