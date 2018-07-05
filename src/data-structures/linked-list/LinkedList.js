@@ -128,6 +128,7 @@ export default class LinkedList {
    */
   deleteTail() {
     if (this.head === this.tail) {
+      // There is only one node in linked list.
       const deletedTail = this.tail;
       this.head = null;
       this.tail = null;
@@ -135,6 +136,7 @@ export default class LinkedList {
       return deletedTail;
     }
 
+    // If there are many nodes in linked list...
     const deletedTail = this.tail;
 
     // Rewind to the last node and delete "next" link for the node before the last one.
@@ -148,6 +150,7 @@ export default class LinkedList {
     }
 
     this.tail = currentNode;
+
     return deletedTail;
   }
 

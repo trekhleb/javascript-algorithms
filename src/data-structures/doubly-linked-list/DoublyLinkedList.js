@@ -78,38 +78,44 @@ export default class DoublyLinkedList {
     let deletedNode = null;
     let currentNode = this.head;
 
-    do {
+    while (currentNode) {
       if (this.compare.equal(currentNode.value, value)) {
         deletedNode = currentNode;
 
         if (deletedNode === this.head) {
+          // If HEAD is going to be deleted...
+
           // Set head to second node, which will become new head.
           this.head = deletedNode.next;
 
-          // Set new head's previous to null
+          // Set new head's previous to null.
           if (this.head) {
             this.head.previous = null;
           }
 
           // If all the nodes in list has same value that is passed as argument
-          // then all nodes will get deleted, therefore tail needs to be updated
+          // then all nodes will get deleted, therefore tail needs to be updated.
           if (deletedNode === this.tail) {
             this.tail = null;
           }
         } else if (deletedNode === this.tail) {
-          // set tail to second last node, which will become new tail
+          // If TAIL is going to be deleted...
+
+          // Set tail to second last node, which will become new tail.
           this.tail = deletedNode.previous;
           this.tail.next = null;
         } else {
+          // If MIDDLE node is going to be deleted...
           const previousNode = deletedNode.previous;
           const nextNode = deletedNode.next;
+
           previousNode.next = nextNode;
           nextNode.previous = previousNode;
         }
       }
 
       currentNode = currentNode.next;
-    } while (currentNode);
+    }
 
     return deletedNode;
   }
@@ -149,8 +155,12 @@ export default class DoublyLinkedList {
    */
   deleteTail() {
     if (!this.tail) {
+      // No tail to delete.
       return null;
-    } else if (this.head === this.tail) {
+    }
+
+    if (this.head === this.tail) {
+      // There is only one node in linked list.
       const deletedTail = this.tail;
       this.head = null;
       this.tail = null;
@@ -158,7 +168,9 @@ export default class DoublyLinkedList {
       return deletedTail;
     }
 
+    // If there are many nodes in linked list...
     const deletedTail = this.tail;
+
     this.tail = this.tail.previous;
     this.tail.next = null;
 
