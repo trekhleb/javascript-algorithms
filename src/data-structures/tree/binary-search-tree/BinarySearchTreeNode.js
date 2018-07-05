@@ -35,7 +35,9 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
       this.setLeft(newNode);
 
       return newNode;
-    } else if (this.nodeValueComparator.greaterThan(value, this.value)) {
+    }
+
+    if (this.nodeValueComparator.greaterThan(value, this.value)) {
       // Insert to the right.
       if (this.right) {
         return this.right.insert(value);
@@ -63,7 +65,9 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
     if (this.nodeValueComparator.lessThan(value, this.value) && this.left) {
       // Check left nodes.
       return this.left.find(value);
-    } else if (this.nodeValueComparator.greaterThan(value, this.value) && this.right) {
+    }
+
+    if (this.nodeValueComparator.greaterThan(value, this.value) && this.right) {
       // Check right nodes.
       return this.right.find(value);
     }

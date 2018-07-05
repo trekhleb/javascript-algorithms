@@ -88,18 +88,18 @@ export default function regularExpressionMatching(string, pattern) {
           matchMatrix[rowIndex][columnIndex] = true;
         } else if (
           (
-            pattern[patternIndex - 1] === string[stringIndex] ||
-            pattern[patternIndex - 1] === ANY_CHAR
-          ) &&
-          matchMatrix[rowIndex - 1][columnIndex] === true
+            pattern[patternIndex - 1] === string[stringIndex]
+            || pattern[patternIndex - 1] === ANY_CHAR
+          )
+          && matchMatrix[rowIndex - 1][columnIndex] === true
         ) {
           matchMatrix[rowIndex][columnIndex] = true;
         } else {
           matchMatrix[rowIndex][columnIndex] = false;
         }
       } else if (
-        pattern[patternIndex] === string[stringIndex] ||
-        pattern[patternIndex] === ANY_CHAR
+        pattern[patternIndex] === string[stringIndex]
+        || pattern[patternIndex] === ANY_CHAR
       ) {
         /*
          * In case if current pattern char is the same as current string char

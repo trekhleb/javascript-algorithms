@@ -164,10 +164,10 @@ export default class MinHeap {
         // If there is no parent or parent is less then node to delete then heapify down.
         // Otherwise heapify up.
         if (
-          leftChild !== null &&
-          (
-            parentItem === null ||
-            this.compare.lessThan(parentItem, this.heapContainer[indexToRemove])
+          leftChild !== null
+          && (
+            parentItem === null
+            || this.compare.lessThan(parentItem, this.heapContainer[indexToRemove])
           )
         ) {
           this.heapifyDown(indexToRemove);
@@ -208,8 +208,8 @@ export default class MinHeap {
     let currentIndex = customStartIndex || this.heapContainer.length - 1;
 
     while (
-      this.hasParent(currentIndex) &&
-      this.compare.lessThan(this.heapContainer[currentIndex], this.parent(currentIndex))
+      this.hasParent(currentIndex)
+      && this.compare.lessThan(this.heapContainer[currentIndex], this.parent(currentIndex))
     ) {
       this.swap(currentIndex, this.getParentIndex(currentIndex));
       currentIndex = this.getParentIndex(currentIndex);
@@ -227,8 +227,8 @@ export default class MinHeap {
 
     while (this.hasLeftChild(currentIndex)) {
       if (
-        this.hasRightChild(currentIndex) &&
-        this.compare.lessThan(this.rightChild(currentIndex), this.leftChild(currentIndex))
+        this.hasRightChild(currentIndex)
+        && this.compare.lessThan(this.rightChild(currentIndex), this.leftChild(currentIndex))
       ) {
         nextIndex = this.getRightChildIndex(currentIndex);
       } else {
