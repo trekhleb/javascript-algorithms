@@ -6,6 +6,7 @@ describe('DoublyLinkedListNode', () => {
 
     expect(node.value).toBe(1);
     expect(node.next).toBeNull();
+    expect(node.previous).toBeNull();
   });
 
   it('should create list node with object as a value', () => {
