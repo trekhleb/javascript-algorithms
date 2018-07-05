@@ -23,9 +23,9 @@ export default class DoublyLinkedList {
     // Make new node to be a head.
     const newNode = new DoublyLinkedListNode(value, this.head);
 
-    // If there is head, then it won't be head anymore
-    // Therefore, make its previous reference to be new node (new head)
-    // Then mark the new node as head
+    // If there is head, then it won't be head anymore.
+    // Therefore, make its previous reference to be new node (new head).
+    // Then mark the new node as head.
     if (this.head) {
       this.head.previous = newNode;
     }
@@ -57,7 +57,7 @@ export default class DoublyLinkedList {
     // Attach new node to the end of linked list.
     this.tail.next = newNode;
 
-    // Attach current tail to the new node's previous reference
+    // Attach current tail to the new node's previous reference.
     newNode.previous = this.tail;
 
     // Set new node to be the tail of linked list.
@@ -83,10 +83,10 @@ export default class DoublyLinkedList {
         deletedNode = currentNode;
 
         if (deletedNode === this.head) {
-          // set head to second node, which will become new head
+          // Set head to second node, which will become new head.
           this.head = deletedNode.next;
 
-          // set new head's previous to null
+          // Set new head's previous to null
           if (this.head) {
             this.head.previous = null;
           }
