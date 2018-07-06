@@ -80,9 +80,29 @@ diagonal top-right/bottom-left rotation along with horizontal
 rotation.
 
 ```
-A B C         A - -         . . A
-/ /     -->   B - -   -->   . . B
-/ . .         C - -         . . C
+Let's say we have a string at the top of the matrix:
+
+A B C
+• • •
+• • •
+
+Let's do top-right/bottom-left diagonal reflection:
+
+A B C
+/ / •
+/ • •  
+
+And not let's do horizontal reflection:
+
+A → →
+B → →
+C → →
+
+The string has been rotated to 90 degree.
+
+• • A
+• • B
+• • C
 ```
 
 ## References
