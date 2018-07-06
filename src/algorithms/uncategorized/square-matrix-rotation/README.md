@@ -92,13 +92,13 @@ A B C
 / / •
 / • •  
 
-And not let's do horizontal reflection:
+And now let's do horizontal reflection:
 
 A → →
 B → →
 C → →
 
-The string has been rotated to 90 degree.
+The string has been rotated to 90 degree:
 
 • • A
 • • B
