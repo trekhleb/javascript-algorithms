@@ -116,6 +116,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
+  * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
 
 ### Algorithms by Paradigm
 
