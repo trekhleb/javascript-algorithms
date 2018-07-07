@@ -1,7 +1,7 @@
 # Pascal's Triangle
 
 In mathematics, **Pascal's triangle** is a triangular array of 
-the binomial coefficients.
+the [binomial coefficients](https://en.wikipedia.org/wiki/Binomial_coefficient).
 
 The rows of Pascal's triangle are conventionally enumerated 
 starting with row `n = 0` at the top (the `0th` row). The 
@@ -34,6 +34,31 @@ paragraph may be written as follows:
 for any non-negative integer `n` and any 
 integer `k` between `0` and `n`, inclusive.
 
+![Binomial Coefficient](https://wikimedia.org/api/rest_v1/media/math/render/svg/a2457a7ef3c77831e34e06a1fe17a80b84a03181)
+
+## Calculating triangle entries in O(n) time
+
+We know that `i`-th entry in a line number `lineNumber` is 
+Binomial Coefficient `C(lineNumber, i)` and all lines start 
+with value `1`. The idea is to 
+calculate `C(lineNumber, i)` using `C(lineNumber, i-1)`. It 
+can be calculated in `O(1)` time using the following:
+
+```
+C(lineNumber, i)   = lineNumber! / ((lineNumber - i)! * i!)
+C(lineNumber, i - 1) = lineNumber! / ((lineNumber - i + 1)! * (i - 1)!)
+```
+
+We can derive following expression from above two expressions:
+
+```
+C(lineNumber, i) = C(lineNumber, i - 1) * (lineNumber - i + 1) / i
+```
+
+So `C(lineNumber, i)` can be calculated 
+from `C(lineNumber, i - 1)` in `O(1)` time.
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Pascal%27s_triangle)
+- [GeeksForGeeks](https://www.geeksforgeeks.org/pascal-triangle/)

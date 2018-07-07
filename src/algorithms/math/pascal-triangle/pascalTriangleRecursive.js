@@ -1,5 +1,5 @@
 /**
- * @param {number} lineNumber
+ * @param {number} lineNumber - zero based.
  * @return {number[]}
  */
 export default function pascalTriangleRecursive(lineNumber) {
