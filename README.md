@@ -174,6 +174,14 @@ tree is being used.
 npm install
 ```
 
+**Run ESLint**
+
+You may want to run it to check code quality.
+
+```
+npm run lint
+```
+
 **Run all tests**
 ```
 npm test
@@ -181,7 +189,7 @@ npm test
 
 **Run tests by name**
 ```
-npm test -- -t 'LinkedList'
+npm test -- 'LinkedList'
 ```
 
 **Playground**
@@ -192,7 +200,7 @@ tests for it in `./src/playground/__test__/playground.test.js`.
 Then just simply run the following command to test if your playground code works as expected:
 
 ```
-npm test -- -t 'playground'
+npm test -- 'playground'
 ```
 
 ## Useful Information

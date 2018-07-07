@@ -147,7 +147,7 @@ npm test
 
 **按照名称执行测试**
 ```
-npm test -- -t 'LinkedList'
+npm test -- 'LinkedList'
 ```
 
 **Playground**
@@ -157,7 +157,7 @@ npm test -- -t 'LinkedList'
 然后，只需运行以下命令来测试你的 Playground 是否按无误:
 
 ```
-npm test -- -t 'playground'
+npm test -- 'playground'
 ```
 
 ## 有用的信息
