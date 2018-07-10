@@ -2,6 +2,7 @@
  * GREEDY approach of solving Jump Game.
  *
  * @param {number[]} numbers - array of possible jump length.
+ * @return {boolean}
  */
 export default function grdJumpGame(numbers) {
   // The "good" cell is a cell from which we may jump to the last cell of the numbers array.
