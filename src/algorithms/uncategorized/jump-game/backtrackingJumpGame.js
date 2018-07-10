@@ -6,7 +6,7 @@
  * @param {number[]} currentJumps - current jumps path.
  * @return {boolean}
  */
-export default function btJumpGame(numbers, startIndex = 0, currentJumps = []) {
+export default function backtrackingJumpGame(numbers, startIndex = 0, currentJumps = []) {
   if (startIndex === numbers.length - 1) {
     // We've jumped directly to last cell. This situation is a solution.
     return true;
@@ -26,7 +26,7 @@ export default function btJumpGame(numbers, startIndex = 0, currentJumps = []) {
     const nextIndex = startIndex + jumpLength;
     currentJumps.push(nextIndex);
 
-    const isJumpSuccessful = btJumpGame(numbers, nextIndex, currentJumps);
+    const isJumpSuccessful = backtrackingJumpGame(numbers, nextIndex, currentJumps);
 
     // Check if current jump was successful.
     if (isJumpSuccessful) {

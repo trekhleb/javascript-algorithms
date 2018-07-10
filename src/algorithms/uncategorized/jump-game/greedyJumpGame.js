@@ -4,7 +4,7 @@
  * @param {number[]} numbers - array of possible jump length.
  * @return {boolean}
  */
-export default function grdJumpGame(numbers) {
+export default function greedyJumpGame(numbers) {
   // The "good" cell is a cell from which we may jump to the last cell of the numbers array.
 
   // The last cell in numbers array is for sure the "good" one since it is our goal to reach.
