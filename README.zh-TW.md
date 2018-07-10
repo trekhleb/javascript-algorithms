@@ -145,7 +145,7 @@ npm test
 
 **以名稱執行該測試**
 ```
-npm test -- -t 'LinkedList'
+npm test -- 'LinkedList'
 ```
 **練習場**
 
@@ -154,7 +154,7 @@ npm test -- -t 'LinkedList'
 接著直接執行下列的指令來測試你練習的 code 是否如預期運作：
 
 ```
-npm test -- -t 'playground'
+npm test -- 'playground'
 ```
 
 ## 有用的資訊

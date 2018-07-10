@@ -22,6 +22,10 @@ describe('ShellSort', () => {
     SortTester.testSortWithCustomComparator(ShellSort);
   });
 
+  it('should sort negative numbers', () => {
+    SortTester.testNegativeNumbersSort(ShellSort);
+  });
+
   it('should visit EQUAL array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
       ShellSort,

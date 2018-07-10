@@ -11,7 +11,9 @@ export default function trialDivision(number) {
   if (number <= 1) {
     // If number is less than one then it isn't prime by definition.
     return false;
-  } else if (number <= 3) {
+  }
+
+  if (number <= 3) {
     // All numbers from 2 to 3 are prime.
     return true;
   }

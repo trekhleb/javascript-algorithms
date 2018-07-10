@@ -40,8 +40,8 @@ function buildZArray(zString) {
       // more characters that are equal to the ones in the prefix we will expand
       // right Z box boundary by 3.
       while (
-        zBoxRightIndex < zString.length &&
-        zString[zBoxRightIndex - zBoxLeftIndex] === zString[zBoxRightIndex]
+        zBoxRightIndex < zString.length
+        && zString[zBoxRightIndex - zBoxLeftIndex] === zString[zBoxRightIndex]
       ) {
         // Expanding Z box right boundary.
         zBoxRightIndex += 1;
@@ -81,8 +81,8 @@ function buildZArray(zString) {
         // And start comparing characters one by one as we normally do for the case
         // when we are outside of checkbox.
         while (
-          zBoxRightIndex < zString.length &&
-          zString[zBoxRightIndex - zBoxLeftIndex] === zString[zBoxRightIndex]
+          zBoxRightIndex < zString.length
+          && zString[zBoxRightIndex - zBoxLeftIndex] === zString[zBoxRightIndex]
         ) {
           zBoxRightIndex += 1;
         }

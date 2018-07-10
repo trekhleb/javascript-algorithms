@@ -14,8 +14,8 @@ export default class InsertionSort extends Sort {
       // Go and check if previous elements and greater then current one.
       // If this is the case then swap that elements.
       while (
-        array[currentIndex - 1] &&
-        this.comparator.lessThan(array[currentIndex], array[currentIndex - 1])
+        array[currentIndex - 1] !== undefined
+        && this.comparator.lessThan(array[currentIndex], array[currentIndex - 1])
       ) {
         // Call visiting callback.
         this.callbacks.visitingCallback(array[currentIndex - 1]);

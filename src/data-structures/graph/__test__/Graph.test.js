@@ -87,9 +87,11 @@ describe('Graph', () => {
 
     const graphEdgeAB = graph.findEdge(vertexA, vertexB);
     const graphEdgeBA = graph.findEdge(vertexB, vertexA);
-    const graphEdgeAC = graph.findEdge(vertexB, vertexC);
+    const graphEdgeAC = graph.findEdge(vertexA, vertexC);
+    const graphEdgeCA = graph.findEdge(vertexC, vertexA);
 
     expect(graphEdgeAC).toBeNull();
+    expect(graphEdgeCA).toBeNull();
     expect(graphEdgeAB).toEqual(edgeAB);
     expect(graphEdgeBA).toEqual(edgeAB);
     expect(graphEdgeAB.weight).toBe(10);
@@ -108,9 +110,11 @@ describe('Graph', () => {
 
     const graphEdgeAB = graph.findEdge(vertexA, vertexB);
     const graphEdgeBA = graph.findEdge(vertexB, vertexA);
-    const graphEdgeAC = graph.findEdge(vertexB, vertexC);
+    const graphEdgeAC = graph.findEdge(vertexA, vertexC);
+    const graphEdgeCA = graph.findEdge(vertexC, vertexA);
 
     expect(graphEdgeAC).toBeNull();
+    expect(graphEdgeCA).toBeNull();
     expect(graphEdgeBA).toBeNull();
     expect(graphEdgeAB).toEqual(edgeAB);
     expect(graphEdgeAB.weight).toBe(10);

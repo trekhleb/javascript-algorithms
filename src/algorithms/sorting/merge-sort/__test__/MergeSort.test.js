@@ -26,6 +26,10 @@ describe('MergeSort', () => {
     SortTester.testSortStability(MergeSort);
   });
 
+  it('should sort negative numbers', () => {
+    SortTester.testNegativeNumbersSort(MergeSort);
+  });
+
   it('should visit EQUAL array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
       MergeSort,

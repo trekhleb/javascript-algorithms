@@ -1,5 +1,6 @@
 import combineWithoutRepetitions from '../combineWithoutRepetitions';
 import factorial from '../../../math/factorial/factorial';
+import pascalTriangle from '../../../math/pascal-triangle/pascalTriangle';
 
 describe('combineWithoutRepetitions', () => {
   it('should combine string without repetitions', () => {
@@ -56,5 +57,8 @@ describe('combineWithoutRepetitions', () => {
     const expectedNumberOfCombinations = factorial(n) / (factorial(r) * factorial(n - r));
 
     expect(combinations.length).toBe(expectedNumberOfCombinations);
+
+    // This one is just to see one of the way of Pascal's triangle application.
+    expect(combinations.length).toBe(pascalTriangle(n)[r]);
   });
 });

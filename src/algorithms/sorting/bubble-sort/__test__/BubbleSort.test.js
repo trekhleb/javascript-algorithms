@@ -26,6 +26,10 @@ describe('BubbleSort', () => {
     SortTester.testSortStability(BubbleSort);
   });
 
+  it('should sort negative numbers', () => {
+    SortTester.testNegativeNumbersSort(BubbleSort);
+  });
+
   it('should visit EQUAL array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
       BubbleSort,
