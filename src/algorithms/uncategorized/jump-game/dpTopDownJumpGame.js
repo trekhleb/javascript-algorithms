@@ -2,11 +2,14 @@
  * DYNAMIC PROGRAMMING TOP-DOWN approach of solving Jump Game.
  *
  * This comes out as an optimisation of BACKTRACKING approach.
- * Optimisation is done by using memo table where we store information
- * about each cell whether it is "good" or "bad" or "unknown".
+ *
+ * It relies on the observation that once we determine that a certain
+ * index is good / bad, this result will never change. This means that
+ * we can store the result and not need to recompute it every time.
  *
  * We call a position in the array a "good" one if starting at that
- * position, we can reach the last index.
+ * position, we can reach the last index. Otherwise, that index
+ * is called a "bad" one.
  *
  * @param {number[]} numbers - array of possible jump length.
  * @param {number} startIndex - index from where we start jumping.
@@ -30,8 +33,7 @@ export default function dpTopDownJumpGame(
   const currentCellsGoodness = [...cellsGoodness];
   if (!currentCellsGoodness.length) {
     numbers.forEach(() => currentCellsGoodness.push(undefined));
-    // Mark the last cell as "good" one since it is where
-    // we ultimately want to get.
+    // Mark the last cell as "good" one since it is where we ultimately want to get.
     currentCellsGoodness[cellsGoodness.length - 1] = true;
   }
 
