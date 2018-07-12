@@ -69,7 +69,7 @@ _Read this in other languages:_
   * [归并排序](src/algorithms/sorting/merge-sort)
   * [快速排序](src/algorithms/sorting/quick-sort)
   * [希尔排序](src/algorithms/sorting/shell-sort)
-* **树**  
+* **树**
   * [深度优先搜索](src/algorithms/tree/depth-first-search) (DFS)
   * [广度优先搜索](src/algorithms/tree/breadth-first-search) (BFS)
 * **图**
@@ -87,7 +87,8 @@ _Read this in other languages:_
   * [哈密顿图](src/algorithms/graph/hamiltonian-cycle) - 恰好访问每个顶点一次
   * [强连通分量](src/algorithms/graph/strongly-connected-components) - Kosaraju算法
   * [旅行推销员问题](src/algorithms/graph/travelling-salesman) - 尽可能以最短的路线访问每个城市并返回原始城市
-* **未分类**  
+  * [Floyd-Warshall algorithm](src/algorithms/graph/floyd-warshall) - 一次循环可以找出所有顶点之间的最短路径
+* **未分类**
   * [汉诺塔](src/algorithms/uncategorized/hanoi-tower)
   * [八皇后问题](src/algorithms/uncategorized/n-queens)
   * [骑士巡逻](src/algorithms/uncategorized/knight-tour)
