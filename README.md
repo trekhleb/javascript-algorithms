@@ -154,12 +154,13 @@ algorithm is an abstraction higher than a computer program.
   * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
   * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
-  * `A` [Longest Increasing subsequence](src/algorithms/sets/longest-increasing-subsequence)
+  * `A` [Longest Increasing Subsequence](src/algorithms/sets/longest-increasing-subsequence)
   * `A` [Shortest Common Supersequence](src/algorithms/sets/shortest-common-supersequence)
   * `A` [0/1 Knapsack Problem](src/algorithms/sets/knapsack-problem)
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
   * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
+  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - find shortest paths between all pairs of vertices
   * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
 * **Backtracking** - similarly to brute force, try to generate all possible solutions, but each time you generate next solution you test
 if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise, backtrack, and go on a
