@@ -117,7 +117,7 @@ _Read this in other languages:_
 * **動態編程** - build up to a solution using previously found sub-solutions
   * [費伯納西數列](src/algorithms/math/fibonacci)
   * [萊溫斯坦距離](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
-  * [最長共同子序列](src/algorithms/sets/longest-common-subsequnce) (LCS)
+  * [最長共同子序列](src/algorithms/sets/longest-common-subsequence) (LCS)
   * [最長共同子字串](src/algorithms/string/longest-common-substring)
   * [最長遞增子序列](src/algorithms/sets/longest-increasing-subsequence)
   * [最短共同子序列](src/algorithms/sets/shortest-common-supersequence)
