@@ -113,7 +113,8 @@ a set of rules that precisely define a sequence of operations.
   * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * `A` [Strongly Connected Components](src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
-* **Uncategorized**  
+  * `A` [Floyd-Warshall algorithm](src/algorithms/graph/floyd-warshall) - a single execution of the algorithm will find the lengths (summed weights) of shortest paths between all pairs of vertices
+* **Uncategorized**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples 
