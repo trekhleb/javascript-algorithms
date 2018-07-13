@@ -1,60 +1,72 @@
+/**
+ * @param {Graph} graph
+ * @return {{distances: number[][], previousVertices: GraphVertex[][]}}
+ */
 export default function floydWarshall(graph) {
+  // Get all graph vertices.
   const vertices = graph.getAllVertices();
 
-  // Three dimension matrices.
-  const distances = [];
-  const previousVertices = [];
+  // Init previous vertices matrix with nulls meaning that there are no
+  // previous vertices exist that will give us shortest path.
+  const previousVertices = Array(vertices.length).fill(null).map(() => {
+    return Array(vertices.length).fill(null);
+  });
 
-  // There are k vertices, loop from 0 to k.
-  for (let k = 0; k <= vertices.length; k += 1) {
-    // Path starts from vertex i.
-    vertices.forEach((vertex, i) => {
-      if (k === 0) {
-        distances[i] = [];
-        previousVertices[i] = [];
-      }
+  // Init distances matrix with Infinities meaning there are no paths
+  // between vertices exist so far.
+  const distances = Array(vertices.length).fill(null).map(() => {
+    return Array(vertices.length).fill(Infinity);
+  });
 
-      // Path ends to vertex j.
-      vertices.forEach((endVertex, j) => {
-        if (k === 0) {
-          // Initialize distance and previousVertices array
-          distances[i][j] = [];
-          previousVertices[i][j] = [];
+  // Init distance matrix with the distance we already now (from existing edges).
+  // And also init previous vertices from the edges.
+  vertices.forEach((startVertex, startIndex) => {
+    vertices.forEach((endVertex, endIndex) => {
+      if (startVertex === endVertex) {
+        // Distance to the vertex itself is 0.
+        distances[startIndex][endIndex] = 0;
+      } else {
+        // Find edge between the start and end vertices.
+        const edge = graph.findEdge(startVertex, endVertex);
 
-          if (vertex === endVertex) {
-            // Distance to self as 0
-            distances[i][j][k] = 0;
-            // Previous vertex to self as null
-            previousVertices[i][j][k] = null;
-          } else {
-            const edge = graph.findEdge(vertex, endVertex);
-            if (edge) {
-              // There is an edge from vertex i to vertex j.
-              // Save distance and previous vertex.
-              distances[i][j][k] = edge.weight;
-              previousVertices[i][j][k] = vertex;
-            } else {
-              distances[i][j][k] = Infinity;
-              previousVertices[i][j][k] = null;
-            }
-          }
+        if (edge) {
+          // There is an edge from vertex with startIndex to vertex with endIndex.
+          // Save distance and previous vertex.
+          distances[startIndex][endIndex] = edge.weight;
+          previousVertices[startIndex][endIndex] = startVertex;
         } else {
-          // Compare distance from i to j, with distance from i to k - 1 and then from k - 1 to j.
-          // Save the shortest distance and previous vertex
-          // distance[i][j][k] = min( distance[i][k - 1][k - 1], distance[k - 1][j][k - 1] )
-          if (distances[i][j][k - 1] > distances[i][k - 1][k - 1] + distances[k - 1][j][k - 1]) {
-            distances[i][j][k] = distances[i][k - 1][k - 1] + distances[k - 1][j][k - 1];
-            previousVertices[i][j][k] = previousVertices[k - 1][j][k - 1];
-          } else {
-            distances[i][j][k] = distances[i][j][k - 1];
-            previousVertices[i][j][k] = previousVertices[i][j][k - 1];
-          }
+          distances[startIndex][endIndex] = Infinity;
+        }
+      }
+    });
+  });
+
+  // Now let's go to the core of the algorithm.
+  // Let's all pair of vertices (from start to end ones) and try to check if there
+  // is a shorter path exists between them via middle vertex. Middle vertex may also
+  // be one of the graph vertices. As you may see now we're going to have three
+  // loops over all graph vertices: for start, end and middle vertices.
+  vertices.forEach((middleVertex, middleIndex) => {
+    // Path starts from startVertex with startIndex.
+    vertices.forEach((startVertex, startIndex) => {
+      // Path ends to endVertex with endIndex.
+      vertices.forEach((endVertex, endIndex) => {
+        // Compare existing distance from startVertex to endVertex, with distance
+        // from startVertex to endVertex but via middleVertex.
+        // Save the shortest distance and previous vertex that allows
+        // us to have this shortest distance.
+        const distViaMiddle = distances[startIndex][middleIndex] + distances[middleIndex][endIndex];
+
+        if (distances[startIndex][endIndex] > distViaMiddle) {
+          // We've found a shortest pass via middle vertex.
+          distances[startIndex][endIndex] = distViaMiddle;
+          previousVertices[startIndex][endIndex] = middleVertex;
         }
       });
     });
-  }
+  });
 
-  // Shortest distance from x to y: distance[x][y][k]
-  // Previous vertex when shortest distance from x to y: previousVertices[x][y][k]
+  // Shortest distance from x to y: distance[x][y].
+  // Previous vertex of shortest path from x to y: previousVertices[x][y].
   return { distances, previousVertices };
 }
