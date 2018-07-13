@@ -55,7 +55,7 @@ describe('floydWarshall', () => {
       .addEdge(edgeFG)
       .addEdge(edgeEG);
 
-    const { distances, previousVertices } = floydWarshall(graph);
+    const { distances, nextVertices } = floydWarshall(graph);
 
     const vertices = graph.getAllVertices();
 
@@ -77,13 +77,13 @@ describe('floydWarshall', () => {
     expect(distances[vertexAIndex][vertexGIndex]).toBe(12);
     expect(distances[vertexAIndex][vertexFIndex]).toBe(11);
 
-    expect(previousVertices[vertexAIndex][vertexFIndex]).toBe(vertexD);
-    expect(previousVertices[vertexAIndex][vertexDIndex]).toBe(vertexB);
-    expect(previousVertices[vertexAIndex][vertexBIndex]).toBe(vertexA);
-    expect(previousVertices[vertexAIndex][vertexGIndex]).toBe(vertexE);
-    expect(previousVertices[vertexAIndex][vertexCIndex]).toBe(vertexA);
-    expect(previousVertices[vertexAIndex][vertexAIndex]).toBe(null);
-    expect(previousVertices[vertexAIndex][vertexHIndex]).toBe(null);
+    expect(nextVertices[vertexAIndex][vertexFIndex]).toBe(vertexD);
+    expect(nextVertices[vertexAIndex][vertexDIndex]).toBe(vertexB);
+    expect(nextVertices[vertexAIndex][vertexBIndex]).toBe(vertexA);
+    expect(nextVertices[vertexAIndex][vertexGIndex]).toBe(vertexE);
+    expect(nextVertices[vertexAIndex][vertexCIndex]).toBe(vertexA);
+    expect(nextVertices[vertexAIndex][vertexAIndex]).toBe(null);
+    expect(nextVertices[vertexAIndex][vertexHIndex]).toBe(null);
   });
 
   it('should find minimum paths to all vertices for directed graph', () => {
@@ -119,7 +119,7 @@ describe('floydWarshall', () => {
       .addEdge(edgeCA)
       .addEdge(edgeCD);
 
-    const { distances, previousVertices } = floydWarshall(graph);
+    const { distances, nextVertices } = floydWarshall(graph);
 
     const vertices = graph.getAllVertices();
 
@@ -140,11 +140,11 @@ describe('floydWarshall', () => {
       [2, 5, 7, 0],
     ]);
 
-    expect(previousVertices[vertexAIndex][vertexDIndex]).toBe(vertexC);
-    expect(previousVertices[vertexAIndex][vertexCIndex]).toBe(vertexB);
-    expect(previousVertices[vertexBIndex][vertexDIndex]).toBe(vertexC);
-    expect(previousVertices[vertexAIndex][vertexAIndex]).toBe(null);
-    expect(previousVertices[vertexAIndex][vertexBIndex]).toBe(vertexA);
+    expect(nextVertices[vertexAIndex][vertexDIndex]).toBe(vertexC);
+    expect(nextVertices[vertexAIndex][vertexCIndex]).toBe(vertexB);
+    expect(nextVertices[vertexBIndex][vertexDIndex]).toBe(vertexC);
+    expect(nextVertices[vertexAIndex][vertexAIndex]).toBe(null);
+    expect(nextVertices[vertexAIndex][vertexBIndex]).toBe(vertexA);
   });
 
   it('should find minimum paths to all vertices for directed graph with negative edge weights', () => {
@@ -188,7 +188,7 @@ describe('floydWarshall', () => {
       .addEdge(edgeCB)
       .addEdge(edgeBA);
 
-    const { distances, previousVertices } = floydWarshall(graph);
+    const { distances, nextVertices } = floydWarshall(graph);
 
     const vertices = graph.getAllVertices();
 
@@ -208,11 +208,13 @@ describe('floydWarshall', () => {
     expect(distances[vertexFIndex][vertexDIndex]).toBe(9);
     expect(distances[vertexFIndex][vertexEIndex]).toBe(8);
 
-    expect(previousVertices[vertexFIndex][vertexGIndex]).toBe(null);
-    expect(previousVertices[vertexFIndex][vertexFIndex]).toBe(null);
-    // expect(previousVertices[vertexFIndex][vertexBIndex]).toBe(vertexC);
-    // expect(previousVertices[vertexFIndex][vertexCIndex].getKey()).toBe(vertexA.getKey());
-    // expect(previousVertices[vertexFIndex][vertexAIndex]).toBe(vertexD);
-    // expect(previousVertices[vertexFIndex][vertexDIndex]).toBe(vertexE);
+    expect(nextVertices[vertexFIndex][vertexGIndex]).toBe(null);
+    expect(nextVertices[vertexFIndex][vertexFIndex]).toBe(null);
+    expect(nextVertices[vertexAIndex][vertexBIndex]).toBe(vertexC);
+    expect(nextVertices[vertexAIndex][vertexCIndex]).toBe(vertexA);
+    expect(nextVertices[vertexFIndex][vertexBIndex]).toBe(vertexE);
+    expect(nextVertices[vertexEIndex][vertexBIndex]).toBe(vertexD);
+    expect(nextVertices[vertexDIndex][vertexBIndex]).toBe(vertexC);
+    expect(nextVertices[vertexCIndex][vertexBIndex]).toBe(vertexC);
   });
 });

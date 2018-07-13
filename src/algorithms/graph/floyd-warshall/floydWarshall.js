@@ -1,6 +1,6 @@
 /**
  * @param {Graph} graph
- * @return {{distances: number[][], previousVertices: GraphVertex[][]}}
+ * @return {{distances: number[][], nextVertices: GraphVertex[][]}}
  */
 export default function floydWarshall(graph) {
   // Get all graph vertices.
@@ -8,7 +8,7 @@ export default function floydWarshall(graph) {
 
   // Init previous vertices matrix with nulls meaning that there are no
   // previous vertices exist that will give us shortest path.
-  const previousVertices = Array(vertices.length).fill(null).map(() => {
+  const nextVertices = Array(vertices.length).fill(null).map(() => {
     return Array(vertices.length).fill(null);
   });
 
@@ -33,7 +33,7 @@ export default function floydWarshall(graph) {
           // There is an edge from vertex with startIndex to vertex with endIndex.
           // Save distance and previous vertex.
           distances[startIndex][endIndex] = edge.weight;
-          previousVertices[startIndex][endIndex] = startVertex;
+          nextVertices[startIndex][endIndex] = startVertex;
         } else {
           distances[startIndex][endIndex] = Infinity;
         }
@@ -60,13 +60,13 @@ export default function floydWarshall(graph) {
         if (distances[startIndex][endIndex] > distViaMiddle) {
           // We've found a shortest pass via middle vertex.
           distances[startIndex][endIndex] = distViaMiddle;
-          previousVertices[startIndex][endIndex] = middleVertex;
+          nextVertices[startIndex][endIndex] = middleVertex;
         }
       });
     });
   });
 
   // Shortest distance from x to y: distance[x][y].
-  // Previous vertex of shortest path from x to y: previousVertices[x][y].
-  return { distances, previousVertices };
+  // Next vertex after x one in path from x to y: nextVertices[x][y].
+  return { distances, nextVertices };
 }
