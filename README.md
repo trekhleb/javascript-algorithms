@@ -118,6 +118,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples 
+  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking and dynamic programming examples 
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
 
@@ -151,6 +152,7 @@ algorithm is an abstraction higher than a computer program.
 * **Dynamic Programming** - build up a solution using previously found sub-solutions
   * `B` [Fibonacci Number](src/algorithms/math/fibonacci)
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
+  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
   * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
   * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
@@ -166,6 +168,7 @@ algorithm is an abstraction higher than a computer program.
 if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise, backtrack, and go on a
 different path of finding a solution. Normally the DFS traversal of state-space is being used.
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
+  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
   * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
