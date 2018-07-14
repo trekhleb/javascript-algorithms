@@ -94,6 +94,13 @@ the bottom right one with number `3`.
 
 **Auxiliary Space Complexity**: `O(m * n)` - since we need to have DP matrix.
 
+### Pascal's Triangle Based
+
+This question is actually another form of Pascal Triangle.
+
+The corner of this rectangle is at `m + n - 2` line, and 
+at `min(m, n) - 1` position of the Pascal's Triangle.
+
 ## References
 
 - [LeetCode](https://leetcode.com/problems/unique-paths/description/)
