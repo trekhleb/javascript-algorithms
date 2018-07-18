@@ -23,5 +23,5 @@ minimum when `m = √n`. Therefore, the best step size is `m = √n`.
 
 ## References
 
-- [Wikipedia](https://en.wikipedia.org/wiki/Jump_search)
 - [GeeksForGeeks](https://www.geeksforgeeks.org/jump-search/)
+- [Wikipedia](https://en.wikipedia.org/wiki/Jump_search)

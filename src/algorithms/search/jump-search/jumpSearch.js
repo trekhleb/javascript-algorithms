@@ -3,7 +3,7 @@ import Comparator from '../../../utils/comparator/Comparator';
 /**
  * Jump (block) search implementation.
  *
- * @param {*[]} sortedArray.
+ * @param {*[]} sortedArray
  * @param {*} seekElement
  * @param {function(a, b)} [comparatorCallback]
  * @return {number}

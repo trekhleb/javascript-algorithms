@@ -86,6 +86,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Linear Search](src/algorithms/search/linear-search)
   * `B` [Jump Search](src/algorithms/search/jump-search) (or Block Search) - search in sorted array
   * `B` [Binary Search](src/algorithms/search/binary-search) - search in sorted array
+  * `B` [Interpolation Search](src/algorithms/search/interpolation-search) - search in uniformly distributed sorted array
 * **Sorting**
   * `B` [Bubble Sort](src/algorithms/sorting/bubble-sort)
   * `B` [Selection Sort](src/algorithms/sorting/selection-sort)
