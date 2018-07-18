@@ -84,6 +84,7 @@ a set of rules that precisely define a sequence of operations.
   * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
 * **Searches**
   * `B` [Linear Search](src/algorithms/search/linear-search)
+  * `B` [Jump Search](src/algorithms/search/jump-search)
   * `B` [Binary Search](src/algorithms/search/binary-search)
 * **Sorting**
   * `B` [Bubble Sort](src/algorithms/sorting/bubble-sort)
@@ -129,6 +130,7 @@ of algorithms. It is an abstraction higher than the notion of an algorithm, just
 algorithm is an abstraction higher than a computer program.
 
 * **Brute Force** - look at all the possibilities and selects the best solution
+  * `B` [Linear Search](src/algorithms/search/linear-search)
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
 * **Greedy** - choose the best option at the current time, without any consideration for the future

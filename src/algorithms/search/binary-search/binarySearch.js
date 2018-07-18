@@ -1,6 +1,8 @@
 import Comparator from '../../../utils/comparator/Comparator';
 
 /**
+ * Binary search implementation.
+ *
  * @param {*[]} sortedArray
  * @param {*} seekElement
  * @param {function(a, b)} [comparatorCallback]
