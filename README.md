@@ -14,7 +14,7 @@ _Read this in other languages:_
 [简体中文](README.zh-CN.md),
 [繁體中文](README.zh-TW.md)
 
-> [Be notified when the JavaScript Algorithms book launches](https://upscri.be/402324/)
+> [→ Be notified when the JavaScript Algorithms book launches](https://upscri.be/402324/)
 
 ## Data Structures
 
