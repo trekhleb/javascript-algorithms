@@ -248,7 +248,8 @@ Below is the list of some of the most used Big O notations and their performance
 
 | Data Structure          | Access    | Search    | Insertion | Deletion  | Comments  |
 | ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- |
-| **Array**               | 1         | n         | n         | n         |           |
+| **Sorted Array**        | 1         | logn      | n         | n         |           |
+| **Unsorted Array**      | 1         | n         | 1         | 1         | For deletion, move the last element to the space that was just deleted |
 | **Stack**               | n         | n         | 1         | 1         |           |
 | **Queue**               | n         | n         | 1         | 1         |           |
 | **Linked List**         | n         | n         | 1         | 1         |           |
