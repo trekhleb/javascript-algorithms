@@ -18,6 +18,10 @@ describe('CountingSort', () => {
     SortTester.testSort(CountingSort);
   });
 
+  it('should sort negative numbers', () => {
+    SortTester.testNegativeNumbersSort(CountingSort);
+  });
+
   it('should allow to use specify maximum integer value in array to make sorting faster', () => {
     const visitingCallback = jest.fn();
     const sorter = new CountingSort({ visitingCallback });
@@ -27,7 +31,7 @@ describe('CountingSort', () => {
       return element > accumulator ? element : accumulator;
     }, 0);
 
-    const sortedArray = sorter.sort(notSortedArr, biggestElement);
+    const sortedArray = sorter.sort(notSortedArr, 0, biggestElement);
 
     expect(sortedArray).toEqual(sortedArr);
     // Normally visitingCallback is being called 60 times but in this case

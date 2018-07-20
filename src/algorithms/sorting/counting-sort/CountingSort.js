@@ -5,8 +5,9 @@ export default class CountingSort extends Sort {
    * @param {number[]} originalArray
    * @param {number} [biggestElement]
    */
-  sort(originalArray, biggestElement = 0) {
+  sort(originalArray, smallestElement = 0, biggestElement = 0) {
     // Detect biggest element in array in order to build number bucket array later.
+    let detectedSmallestElement = smallestElement;
     let detectedBiggestElement = biggestElement;
     if (!detectedBiggestElement) {
       originalArray.forEach((element) => {
@@ -16,17 +17,20 @@ export default class CountingSort extends Sort {
         if (this.comparator.greaterThan(element, detectedBiggestElement)) {
           detectedBiggestElement = element;
         }
+        if (this.comparator.greaterThan(detectedSmallestElement, element)) {
+          detectedSmallestElement = element;
+        }
       });
     }
 
     // Init buckets array.
     // This array will hold frequency of each number from originalArray.
-    const buckets = Array(detectedBiggestElement + 1).fill(0);
+    const buckets = Array(detectedBiggestElement - detectedSmallestElement + 1).fill(0);
     originalArray.forEach((element) => {
       // Visit element.
       this.callbacks.visitingCallback(element);
 
-      buckets[element] += 1;
+      buckets[element - detectedSmallestElement] += 1;
     });
 
     // Add previous frequencies to the current one for each number in bucket
@@ -53,13 +57,13 @@ export default class CountingSort extends Sort {
       this.callbacks.visitingCallback(element);
 
       // Get correct position of this element in sorted array.
-      const elementSortedPosition = buckets[element];
+      const elementSortedPosition = buckets[element - detectedSmallestElement];
 
       // Put element into correct position in sorted array.
       sortedArray[elementSortedPosition] = element;
 
       // Increase position of current element in the bucket for future correct placements.
-      buckets[element] += 1;
+      buckets[element - detectedSmallestElement] += 1;
     }
 
     // Return sorted array.
