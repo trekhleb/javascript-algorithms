@@ -12,7 +12,8 @@ to YouTube videos).
 
 _Read this in other languages:_
 [简体中文](README.zh-CN.md),
-[繁體中文](README.zh-TW.md)
+[繁體中文](README.zh-TW.md),
+[한국어](README.ko_KR.md)
 
 > We’re writing a book that will clearly explain, in detail, the main algorithms. 
 If you’d like to be notified when the “JavaScript Algorithms” book 
