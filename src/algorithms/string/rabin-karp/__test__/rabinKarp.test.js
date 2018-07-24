@@ -11,6 +11,9 @@ describe('rabinKarp', () => {
   });
 
   it('should find substring in a string', () => {
+    expect(rabinKarp('', '')).toBe(0);
+    expect(rabinKarp('a', '')).toBe(0);
+    expect(rabinKarp('a', 'a')).toBe(0);
     expect(rabinKarp('abcbcglx', 'abca')).toBe(-1);
     expect(rabinKarp('abcbcglx', 'bcgl')).toBe(3);
     expect(rabinKarp('abcxabcdabxabcdabcdabcy', 'abcdabcy')).toBe(15);
