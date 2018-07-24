@@ -17,7 +17,7 @@ export function hashWord(word) {
   let hash = 0;
 
   for (let charIndex = 0; charIndex < word.length; charIndex += 1) {
-    hash += word[charIndex].charCodeAt(0) * (PRIME ** charIndex);
+    hash += word.charCodeAt(charIndex) * (PRIME ** charIndex);
   }
 
   return hash;
@@ -37,9 +37,9 @@ export function hashWord(word) {
  */
 export function reHashWord(prevHash, prevWord, newWord) {
   const newWordLastIndex = newWord.length - 1;
-  let newHash = prevHash - prevWord[0].charCodeAt(0);
+  let newHash = prevHash - prevWord.charCodeAt(0);
   newHash /= PRIME;
-  newHash += newWord[newWordLastIndex].charCodeAt(0) * (PRIME ** newWordLastIndex);
+  newHash += newWord.charCodeAt(newWordLastIndex) * (PRIME ** newWordLastIndex);
 
   return newHash;
 }
@@ -70,19 +70,8 @@ export function rabinKarp(text, word) {
     prevSegment = currentSegment;
 
     // Compare the hash of current substring and seeking string.
-    if (wordHash === currentSegmentHash) {
-      // In case if hashes match let's check substring char by char.
-      let numberOfMatches = 0;
-
-      for (let deepCharIndex = 0; deepCharIndex < word.length; deepCharIndex += 1) {
-        if (word[deepCharIndex] === text[charIndex + deepCharIndex]) {
-          numberOfMatches += 1;
-        }
-      }
-
-      if (numberOfMatches === word.length) {
-        return charIndex;
-      }
+    if ((wordHash === currentSegmentHash) && (currentSegment.valueOf() === word.valueOf())) {
+      return charIndex;
     }
   }
 
