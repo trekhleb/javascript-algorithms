@@ -16,6 +16,7 @@ _Read this in other languages:_
 数据结构是在计算机中组织和存储数据的一种特殊方式，它可以高效地访问和修改数据。更确切地说，数据结构是数据值的集合，它们之间的关系、函数或操作可以应用于数据。
 
 * [链表](src/data-structures/linked-list)
+* [双向链表](src/data-structures/doubly-linked-list)
 * [队列](src/data-structures/queue)
 * [栈](src/data-structures/stack)
 * [哈希表](src/data-structures/hash-table)
