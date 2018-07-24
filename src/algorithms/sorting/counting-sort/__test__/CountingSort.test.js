@@ -18,7 +18,11 @@ describe('CountingSort', () => {
     SortTester.testSort(CountingSort);
   });
 
-  it('should allow to use specify maximum integer value in array to make sorting faster', () => {
+  it('should sort negative numbers', () => {
+    SortTester.testNegativeNumbersSort(CountingSort);
+  });
+
+  it('should allow to use specify max/min integer value in array to make sorting faster', () => {
     const visitingCallback = jest.fn();
     const sorter = new CountingSort({ visitingCallback });
 
@@ -27,7 +31,12 @@ describe('CountingSort', () => {
       return element > accumulator ? element : accumulator;
     }, 0);
 
-    const sortedArray = sorter.sort(notSortedArr, biggestElement);
+    // Detect smallest number in array in prior.
+    const smallestElement = notSortedArr.reduce((accumulator, element) => {
+      return element < accumulator ? element : accumulator;
+    }, 0);
+
+    const sortedArray = sorter.sort(notSortedArr, smallestElement, biggestElement);
 
     expect(sortedArray).toEqual(sortedArr);
     // Normally visitingCallback is being called 60 times but in this case

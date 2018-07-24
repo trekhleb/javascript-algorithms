@@ -14,7 +14,9 @@ _Read this in other languages:_
 [简体中文](README.zh-CN.md),
 [繁體中文](README.zh-TW.md)
 
-> [→ Be notified when the JavaScript Algorithms book launches](https://upscri.be/402324/)
+> We’re writing a book that will clearly explain, in detail, the main algorithms. 
+If you’d like to be notified when the “JavaScript Algorithms” book 
+launches, [click here](https://upscri.be/402324/).
 
 ## Data Structures
 
@@ -97,8 +99,8 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Merge Sort](src/algorithms/sorting/merge-sort)
   * `B` [Quicksort](src/algorithms/sorting/quick-sort) - in-place and non-in-place implementations
   * `B` [Shellsort](src/algorithms/sorting/shell-sort)
-  * `A` [Counting Sort](src/algorithms/sorting/counting-sort)
-  * `A` [Radix Sort](src/algorithms/sorting/radix-sort)
+  * `B` [Counting Sort](src/algorithms/sorting/counting-sort)
+  * `B` [Radix Sort](src/algorithms/sorting/radix-sort)
 * **Trees**
   * `B` [Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [Breadth-First Search](src/algorithms/tree/breadth-first-search) (BFS)
