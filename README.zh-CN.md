@@ -9,7 +9,8 @@
 
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
-[繁體中文](README.zh-TW.md)
+[繁體中文](README.zh-TW.md),
+[한국어](README.ko_KR.md)
 
 ## 数据结构
 

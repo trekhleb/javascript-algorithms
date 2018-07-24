@@ -8,7 +8,8 @@
 
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
-[简体中文](README.zh-CN.md)
+[简体中文](README.zh-CN.md),
+[한국어](README.ko_KR.md)
 
 ## 資料結構
 
