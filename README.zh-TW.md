@@ -11,6 +11,10 @@ _Read this in other languages:_
 [简体中文](README.zh-CN.md),
 [한국어](README.ko_KR.md)
 
+> We’re writing a book that will clearly explain, in detail, the main algorithms. 
+If you’d like to be notified when the “JavaScript Algorithms” book 
+launches, [click here](https://upscri.be/402324/).
+
 ## 資料結構
 
 資料結構是一個電腦用來組織和排序資料的特定方式，透過這樣的方式資料可以有效率地被讀取以及修改。更精確地說，一個資料結構是一個資料值的集合、彼此間的關係，函數或者運作可以應用於資料上。

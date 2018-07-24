@@ -12,6 +12,10 @@ _Read this in other languages:_
 [繁體中文](README.zh-TW.md),
 [한국어](README.ko_KR.md)
 
+> We’re writing a book that will clearly explain, in detail, the main algorithms. 
+If you’d like to be notified when the “JavaScript Algorithms” book 
+launches, [click here](https://upscri.be/402324/).
+
 ## 数据结构
 
 数据结构是在计算机中组织和存储数据的一种特殊方式，它可以高效地访问和修改数据。更确切地说，数据结构是数据值的集合，它们之间的关系、函数或操作可以应用于数据。
