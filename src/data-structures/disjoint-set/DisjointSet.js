@@ -1,97 +1,46 @@
-import DisjointSetItem from './DisjointSetItem';
-
 export default class DisjointSet {
   /**
-   * @param {function(value: *)} [keyCallback]
+   * @param {number} [size] - Number of disjoint elements in set
    */
-  constructor(keyCallback) {
-    this.keyCallback = keyCallback;
-    this.items = {};
+  constructor(size) {
+    this.data = new Array(size).fill().map((val, idx) => ({ rank: 0, parent: idx }));
   }
 
   /**
-   * @param {*} itemValue
-   * @return {DisjointSet}
+   * @param {number} [x] - The index of element to query.
+   * @return {number|null} - The unique ID for the set containing the input. Null if invalid.
    */
-  makeSet(itemValue) {
-    const disjointSetItem = new DisjointSetItem(itemValue, this.keyCallback);
-
-    if (!this.items[disjointSetItem.getKey()]) {
-      // Add new item only in case if it not presented yet.
-      this.items[disjointSetItem.getKey()] = disjointSetItem;
-    }
-
-    return this;
-  }
-
-  /**
-   * Find set representation node.
-   *
-   * @param {*} itemValue
-   * @return {(string|null)}
-   */
-  find(itemValue) {
-    const templateDisjointItem = new DisjointSetItem(itemValue, this.keyCallback);
-
-    // Try to find item itself;
-    const requiredDisjointItem = this.items[templateDisjointItem.getKey()];
-
-    if (!requiredDisjointItem) {
+  find(x) {
+    if ((!x && x !== 0) || (x < 0) || (x >= this.data.length)) {
       return null;
     }
 
-    return requiredDisjointItem.getRoot().getKey();
+    let curr = x;
+    for (; this.data[curr].parent !== curr; curr = this.data[curr].parent) {
+      this.data[curr].parent = this.data[this.data[curr].parent].parent;
+    }
+    return curr;
   }
 
   /**
-   * Union by rank.
-   *
-   * @param {*} valueA
-   * @param {*} valueB
-   * @return {DisjointSet}
+   * @param {number} x - Index corresponding to 1st set to combine.
+   * @param {number} y - Index corresponding to 2nd set to combine.
    */
-  union(valueA, valueB) {
-    const rootKeyA = this.find(valueA);
-    const rootKeyB = this.find(valueB);
+  union(x, y) {
+    const rootX = this.find(x);
+    const rootY = this.find(y);
 
-    if (rootKeyA === null || rootKeyB === null) {
-      throw new Error('One or two values are not in sets');
+    if ((rootX != null) && (rootY != null) && (rootX !== rootY)) {
+      const rankX = this.data[rootX].rank;
+      const rankY = this.data[rootY].rank;
+
+      if (rankX > rankY) {
+        this.data[rootX].parent = rootY;
+        this.data[rootY].rank += 1;
+      } else {
+        this.data[rootY].parent = rootX;
+        this.data[rootX].rank += 1;
+      }
     }
-
-    if (rootKeyA === rootKeyB) {
-      // In case if both elements are already in the same set then just return its key.
-      return this;
-    }
-
-    const rootA = this.items[rootKeyA];
-    const rootB = this.items[rootKeyB];
-
-    if (rootA.getRank() < rootB.getRank()) {
-      // If rootB's tree is bigger then make rootB to be a new root.
-      rootB.addChild(rootA);
-
-      return this;
-    }
-
-    // If rootA's tree is bigger then make rootA to be a new root.
-    rootA.addChild(rootB);
-
-    return this;
-  }
-
-  /**
-   * @param {*} valueA
-   * @param {*} valueB
-   * @return {boolean}
-   */
-  inSameSet(valueA, valueB) {
-    const rootKeyA = this.find(valueA);
-    const rootKeyB = this.find(valueB);
-
-    if (rootKeyA === null || rootKeyB === null) {
-      throw new Error('One or two values are not in sets');
-    }
-
-    return rootKeyA === rootKeyB;
   }
 }

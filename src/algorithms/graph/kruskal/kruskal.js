@@ -33,28 +33,20 @@ export default function kruskal(graph) {
   const sortedEdges = new QuickSort(sortingCallbacks).sort(graph.getAllEdges());
 
   // Create disjoint sets for all graph vertices.
-  const keyCallback = graphVertex => graphVertex.getKey();
-  const disjointSet = new DisjointSet(keyCallback);
-
-  graph.getAllVertices().forEach((graphVertex) => {
-    disjointSet.makeSet(graphVertex);
-  });
+  const vertices = graph.getAllVertices();
+  const disjointSet = new DisjointSet(vertices.length);
 
   // Go through all edges started from the minimum one and try to add them
   // to minimum spanning tree. The criteria of adding the edge would be whether
   // it is forms the cycle or not (if it connects two vertices from one disjoint
   // set or not).
   for (let edgeIndex = 0; edgeIndex < sortedEdges.length; edgeIndex += 1) {
-    /** @var {GraphEdge} currentEdge */
-    const currentEdge = sortedEdges[edgeIndex];
+    const begIdx = vertices.indexOf(sortedEdges[edgeIndex].startVertex);
+    const endIdx = vertices.indexOf(sortedEdges[edgeIndex].endVertex);
 
-    // Check if edge forms the cycle. If it does then skip it.
-    if (!disjointSet.inSameSet(currentEdge.startVertex, currentEdge.endVertex)) {
-      // Unite two subsets into one.
-      disjointSet.union(currentEdge.startVertex, currentEdge.endVertex);
-
-      // Add this edge to spanning tree.
-      minimumSpanningTree.addEdge(currentEdge);
+    if (disjointSet.find(begIdx) !== disjointSet.find(endIdx)) {
+      disjointSet.union(begIdx, endIdx);
+      minimumSpanningTree.addEdge(sortedEdges[edgeIndex]);
     }
   }
 
