@@ -6,9 +6,9 @@ describe('RedBlackTree', () => {
 
     const firstInsertedNode = tree.insert(10);
 
-    expect(tree.isNodeColored(firstInsertedNode)).toBeTruthy();
-    expect(tree.isNodeBlack(firstInsertedNode)).toBeTruthy();
-    expect(tree.isNodeRed(firstInsertedNode)).toBeFalsy();
+    expect(tree.isNodeColored(firstInsertedNode)).toBe(true);
+    expect(tree.isNodeBlack(firstInsertedNode)).toBe(true);
+    expect(tree.isNodeRed(firstInsertedNode)).toBe(false);
 
     expect(tree.toString()).toBe('10');
     expect(tree.root.height).toBe(0);
@@ -21,9 +21,9 @@ describe('RedBlackTree', () => {
     const secondInsertedNode = tree.insert(15);
     const thirdInsertedNode = tree.insert(5);
 
-    expect(tree.isNodeBlack(firstInsertedNode)).toBeTruthy();
-    expect(tree.isNodeRed(secondInsertedNode)).toBeTruthy();
-    expect(tree.isNodeRed(thirdInsertedNode)).toBeTruthy();
+    expect(tree.isNodeBlack(firstInsertedNode)).toBe(true);
+    expect(tree.isNodeRed(secondInsertedNode)).toBe(true);
+    expect(tree.isNodeRed(thirdInsertedNode)).toBe(true);
 
     expect(tree.toString()).toBe('5,10,15');
     expect(tree.root.height).toBe(1);
@@ -48,42 +48,42 @@ describe('RedBlackTree', () => {
 
     const node1 = tree.insert(10);
 
-    expect(tree.isNodeBlack(node1)).toBeTruthy();
+    expect(tree.isNodeBlack(node1)).toBe(true);
 
     const node2 = tree.insert(-10);
 
-    expect(tree.isNodeBlack(node1)).toBeTruthy();
-    expect(tree.isNodeRed(node2)).toBeTruthy();
+    expect(tree.isNodeBlack(node1)).toBe(true);
+    expect(tree.isNodeRed(node2)).toBe(true);
 
     const node3 = tree.insert(20);
 
-    expect(tree.isNodeBlack(node1)).toBeTruthy();
-    expect(tree.isNodeRed(node2)).toBeTruthy();
-    expect(tree.isNodeRed(node3)).toBeTruthy();
+    expect(tree.isNodeBlack(node1)).toBe(true);
+    expect(tree.isNodeRed(node2)).toBe(true);
+    expect(tree.isNodeRed(node3)).toBe(true);
 
     const node4 = tree.insert(-20);
 
-    expect(tree.isNodeBlack(node1)).toBeTruthy();
-    expect(tree.isNodeBlack(node2)).toBeTruthy();
-    expect(tree.isNodeBlack(node3)).toBeTruthy();
-    expect(tree.isNodeRed(node4)).toBeTruthy();
+    expect(tree.isNodeBlack(node1)).toBe(true);
+    expect(tree.isNodeBlack(node2)).toBe(true);
+    expect(tree.isNodeBlack(node3)).toBe(true);
+    expect(tree.isNodeRed(node4)).toBe(true);
 
     const node5 = tree.insert(25);
 
-    expect(tree.isNodeBlack(node1)).toBeTruthy();
-    expect(tree.isNodeBlack(node2)).toBeTruthy();
-    expect(tree.isNodeBlack(node3)).toBeTruthy();
-    expect(tree.isNodeRed(node4)).toBeTruthy();
-    expect(tree.isNodeRed(node5)).toBeTruthy();
+    expect(tree.isNodeBlack(node1)).toBe(true);
+    expect(tree.isNodeBlack(node2)).toBe(true);
+    expect(tree.isNodeBlack(node3)).toBe(true);
+    expect(tree.isNodeRed(node4)).toBe(true);
+    expect(tree.isNodeRed(node5)).toBe(true);
 
     const node6 = tree.insert(6);
 
-    expect(tree.isNodeBlack(node1)).toBeTruthy();
-    expect(tree.isNodeBlack(node2)).toBeTruthy();
-    expect(tree.isNodeBlack(node3)).toBeTruthy();
-    expect(tree.isNodeRed(node4)).toBeTruthy();
-    expect(tree.isNodeRed(node5)).toBeTruthy();
-    expect(tree.isNodeRed(node6)).toBeTruthy();
+    expect(tree.isNodeBlack(node1)).toBe(true);
+    expect(tree.isNodeBlack(node2)).toBe(true);
+    expect(tree.isNodeBlack(node3)).toBe(true);
+    expect(tree.isNodeRed(node4)).toBe(true);
+    expect(tree.isNodeRed(node5)).toBe(true);
+    expect(tree.isNodeRed(node6)).toBe(true);
 
     expect(tree.toString()).toBe('-20,-10,6,10,20,25');
     expect(tree.root.height).toBe(2);
@@ -95,14 +95,14 @@ describe('RedBlackTree', () => {
     expect(tree.toString()).toBe('-20,-10,4,6,10,20,25');
     expect(tree.root.height).toBe(3);
 
-    expect(tree.isNodeBlack(node1)).toBeTruthy();
-    expect(tree.isNodeRed(node2)).toBeTruthy();
-    expect(tree.isNodeBlack(node3)).toBeTruthy();
-    expect(tree.isNodeBlack(node4)).toBeTruthy();
-    expect(tree.isNodeBlack(node4)).toBeTruthy();
-    expect(tree.isNodeRed(node5)).toBeTruthy();
-    expect(tree.isNodeBlack(node6)).toBeTruthy();
-    expect(tree.isNodeRed(node7)).toBeTruthy();
+    expect(tree.isNodeBlack(node1)).toBe(true);
+    expect(tree.isNodeRed(node2)).toBe(true);
+    expect(tree.isNodeBlack(node3)).toBe(true);
+    expect(tree.isNodeBlack(node4)).toBe(true);
+    expect(tree.isNodeBlack(node4)).toBe(true);
+    expect(tree.isNodeRed(node5)).toBe(true);
+    expect(tree.isNodeBlack(node6)).toBe(true);
+    expect(tree.isNodeRed(node7)).toBe(true);
   });
 
   it('should balance itself when uncle is red', () => {
@@ -121,15 +121,15 @@ describe('RedBlackTree', () => {
     expect(tree.toString()).toBe('-20,-10,2,6,8,10,15,20,25');
     expect(tree.root.height).toBe(3);
 
-    expect(tree.isNodeBlack(node1)).toBeTruthy();
-    expect(tree.isNodeRed(node2)).toBeTruthy();
-    expect(tree.isNodeBlack(node3)).toBeTruthy();
-    expect(tree.isNodeBlack(node4)).toBeTruthy();
-    expect(tree.isNodeBlack(node5)).toBeTruthy();
-    expect(tree.isNodeRed(node6)).toBeTruthy();
-    expect(tree.isNodeRed(node7)).toBeTruthy();
-    expect(tree.isNodeRed(node8)).toBeTruthy();
-    expect(tree.isNodeRed(node9)).toBeTruthy();
+    expect(tree.isNodeBlack(node1)).toBe(true);
+    expect(tree.isNodeRed(node2)).toBe(true);
+    expect(tree.isNodeBlack(node3)).toBe(true);
+    expect(tree.isNodeBlack(node4)).toBe(true);
+    expect(tree.isNodeBlack(node5)).toBe(true);
+    expect(tree.isNodeRed(node6)).toBe(true);
+    expect(tree.isNodeRed(node7)).toBe(true);
+    expect(tree.isNodeRed(node8)).toBe(true);
+    expect(tree.isNodeRed(node9)).toBe(true);
 
     const node10 = tree.insert(4);
 
@@ -138,16 +138,16 @@ describe('RedBlackTree', () => {
 
     expect(tree.root.value).toBe(node5.value);
 
-    expect(tree.isNodeBlack(node5)).toBeTruthy();
-    expect(tree.isNodeRed(node1)).toBeTruthy();
-    expect(tree.isNodeRed(node2)).toBeTruthy();
-    expect(tree.isNodeRed(node10)).toBeTruthy();
-    expect(tree.isNodeRed(node6)).toBeTruthy();
-    expect(tree.isNodeRed(node7)).toBeTruthy();
-    expect(tree.isNodeBlack(node4)).toBeTruthy();
-    expect(tree.isNodeBlack(node8)).toBeTruthy();
-    expect(tree.isNodeBlack(node9)).toBeTruthy();
-    expect(tree.isNodeBlack(node3)).toBeTruthy();
+    expect(tree.isNodeBlack(node5)).toBe(true);
+    expect(tree.isNodeRed(node1)).toBe(true);
+    expect(tree.isNodeRed(node2)).toBe(true);
+    expect(tree.isNodeRed(node10)).toBe(true);
+    expect(tree.isNodeRed(node6)).toBe(true);
+    expect(tree.isNodeRed(node7)).toBe(true);
+    expect(tree.isNodeBlack(node4)).toBe(true);
+    expect(tree.isNodeBlack(node8)).toBe(true);
+    expect(tree.isNodeBlack(node9)).toBe(true);
+    expect(tree.isNodeBlack(node3)).toBe(true);
   });
 
   it('should do left-left rotation', () => {
@@ -162,23 +162,23 @@ describe('RedBlackTree', () => {
     expect(tree.toString()).toBe('-10,7,10,15,20');
     expect(tree.root.height).toBe(2);
 
-    expect(tree.isNodeBlack(node1)).toBeTruthy();
-    expect(tree.isNodeBlack(node2)).toBeTruthy();
-    expect(tree.isNodeBlack(node3)).toBeTruthy();
-    expect(tree.isNodeRed(node4)).toBeTruthy();
-    expect(tree.isNodeRed(node5)).toBeTruthy();
+    expect(tree.isNodeBlack(node1)).toBe(true);
+    expect(tree.isNodeBlack(node2)).toBe(true);
+    expect(tree.isNodeBlack(node3)).toBe(true);
+    expect(tree.isNodeRed(node4)).toBe(true);
+    expect(tree.isNodeRed(node5)).toBe(true);
 
     const node6 = tree.insert(13);
 
     expect(tree.toString()).toBe('-10,7,10,13,15,20');
     expect(tree.root.height).toBe(2);
 
-    expect(tree.isNodeBlack(node1)).toBeTruthy();
-    expect(tree.isNodeBlack(node2)).toBeTruthy();
-    expect(tree.isNodeBlack(node5)).toBeTruthy();
-    expect(tree.isNodeRed(node4)).toBeTruthy();
-    expect(tree.isNodeRed(node6)).toBeTruthy();
-    expect(tree.isNodeRed(node3)).toBeTruthy();
+    expect(tree.isNodeBlack(node1)).toBe(true);
+    expect(tree.isNodeBlack(node2)).toBe(true);
+    expect(tree.isNodeBlack(node5)).toBe(true);
+    expect(tree.isNodeRed(node4)).toBe(true);
+    expect(tree.isNodeRed(node6)).toBe(true);
+    expect(tree.isNodeRed(node3)).toBe(true);
   });
 
   it('should do left-right rotation', () => {
@@ -193,23 +193,23 @@ describe('RedBlackTree', () => {
     expect(tree.toString()).toBe('-10,7,10,15,20');
     expect(tree.root.height).toBe(2);
 
-    expect(tree.isNodeBlack(node1)).toBeTruthy();
-    expect(tree.isNodeBlack(node2)).toBeTruthy();
-    expect(tree.isNodeBlack(node3)).toBeTruthy();
-    expect(tree.isNodeRed(node4)).toBeTruthy();
-    expect(tree.isNodeRed(node5)).toBeTruthy();
+    expect(tree.isNodeBlack(node1)).toBe(true);
+    expect(tree.isNodeBlack(node2)).toBe(true);
+    expect(tree.isNodeBlack(node3)).toBe(true);
+    expect(tree.isNodeRed(node4)).toBe(true);
+    expect(tree.isNodeRed(node5)).toBe(true);
 
     const node6 = tree.insert(17);
 
     expect(tree.toString()).toBe('-10,7,10,15,17,20');
     expect(tree.root.height).toBe(2);
 
-    expect(tree.isNodeBlack(node1)).toBeTruthy();
-    expect(tree.isNodeBlack(node2)).toBeTruthy();
-    expect(tree.isNodeBlack(node6)).toBeTruthy();
-    expect(tree.isNodeRed(node4)).toBeTruthy();
-    expect(tree.isNodeRed(node5)).toBeTruthy();
-    expect(tree.isNodeRed(node3)).toBeTruthy();
+    expect(tree.isNodeBlack(node1)).toBe(true);
+    expect(tree.isNodeBlack(node2)).toBe(true);
+    expect(tree.isNodeBlack(node6)).toBe(true);
+    expect(tree.isNodeRed(node4)).toBe(true);
+    expect(tree.isNodeRed(node5)).toBe(true);
+    expect(tree.isNodeRed(node3)).toBe(true);
   });
 
   it('should do recoloring, left-left and left-right rotation', () => {
@@ -228,15 +228,15 @@ describe('RedBlackTree', () => {
     expect(tree.toString()).toBe('-20,-10,1,6,9,10,15,20,30');
     expect(tree.root.height).toBe(3);
 
-    expect(tree.isNodeBlack(node1)).toBeTruthy();
-    expect(tree.isNodeRed(node2)).toBeTruthy();
-    expect(tree.isNodeBlack(node3)).toBeTruthy();
-    expect(tree.isNodeBlack(node4)).toBeTruthy();
-    expect(tree.isNodeBlack(node5)).toBeTruthy();
-    expect(tree.isNodeRed(node6)).toBeTruthy();
-    expect(tree.isNodeRed(node7)).toBeTruthy();
-    expect(tree.isNodeRed(node8)).toBeTruthy();
-    expect(tree.isNodeRed(node9)).toBeTruthy();
+    expect(tree.isNodeBlack(node1)).toBe(true);
+    expect(tree.isNodeRed(node2)).toBe(true);
+    expect(tree.isNodeBlack(node3)).toBe(true);
+    expect(tree.isNodeBlack(node4)).toBe(true);
+    expect(tree.isNodeBlack(node5)).toBe(true);
+    expect(tree.isNodeRed(node6)).toBe(true);
+    expect(tree.isNodeRed(node7)).toBe(true);
+    expect(tree.isNodeRed(node8)).toBe(true);
+    expect(tree.isNodeRed(node9)).toBe(true);
 
     tree.insert(4);
 
@@ -257,12 +257,12 @@ describe('RedBlackTree', () => {
     expect(tree.toString()).toBe('-20,-10,6,10,20,30');
     expect(tree.root.height).toBe(2);
 
-    expect(tree.isNodeBlack(node1)).toBeTruthy();
-    expect(tree.isNodeBlack(node2)).toBeTruthy();
-    expect(tree.isNodeBlack(node3)).toBeTruthy();
-    expect(tree.isNodeRed(node4)).toBeTruthy();
-    expect(tree.isNodeRed(node5)).toBeTruthy();
-    expect(tree.isNodeRed(node6)).toBeTruthy();
+    expect(tree.isNodeBlack(node1)).toBe(true);
+    expect(tree.isNodeBlack(node2)).toBe(true);
+    expect(tree.isNodeBlack(node3)).toBe(true);
+    expect(tree.isNodeRed(node4)).toBe(true);
+    expect(tree.isNodeRed(node5)).toBe(true);
+    expect(tree.isNodeRed(node6)).toBe(true);
 
     const node7 = tree.insert(25);
 
@@ -277,13 +277,13 @@ describe('RedBlackTree', () => {
     expect(tree.toString()).toBe('-20,-10,6,10,20,25,30');
     expect(tree.root.height).toBe(2);
 
-    expect(tree.isNodeBlack(node1)).toBeTruthy();
-    expect(tree.isNodeBlack(node2)).toBeTruthy();
-    expect(tree.isNodeBlack(node7)).toBeTruthy();
-    expect(tree.isNodeRed(node4)).toBeTruthy();
-    expect(tree.isNodeRed(node5)).toBeTruthy();
-    expect(tree.isNodeRed(node3)).toBeTruthy();
-    expect(tree.isNodeRed(node6)).toBeTruthy();
+    expect(tree.isNodeBlack(node1)).toBe(true);
+    expect(tree.isNodeBlack(node2)).toBe(true);
+    expect(tree.isNodeBlack(node7)).toBe(true);
+    expect(tree.isNodeRed(node4)).toBe(true);
+    expect(tree.isNodeRed(node5)).toBe(true);
+    expect(tree.isNodeRed(node3)).toBe(true);
+    expect(tree.isNodeRed(node6)).toBe(true);
   });
 
   it('should do left-left rotation with left grand-parent', () => {

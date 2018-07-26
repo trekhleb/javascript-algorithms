@@ -9,7 +9,7 @@
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
 [简体中文](README.zh-CN.md),
-[한국어](README.ko_KR.md)
+[한국어](README.ko-KR.md)
 
 > We’re writing a book that will clearly explain, in detail, the main algorithms. 
 If you’d like to be notified when the “JavaScript Algorithms” book 

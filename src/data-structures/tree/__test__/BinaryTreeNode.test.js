@@ -63,13 +63,13 @@ describe('BinaryTreeNode', () => {
 
     expect(rootNode.traverseInOrder()).toEqual([1, 2, 3]);
 
-    expect(rootNode.removeChild(rootNode.left)).toBeTruthy();
+    expect(rootNode.removeChild(rootNode.left)).toBe(true);
     expect(rootNode.traverseInOrder()).toEqual([2, 3]);
 
-    expect(rootNode.removeChild(rootNode.right)).toBeTruthy();
+    expect(rootNode.removeChild(rootNode.right)).toBe(true);
     expect(rootNode.traverseInOrder()).toEqual([2]);
 
-    expect(rootNode.removeChild(rootNode.right)).toBeFalsy();
+    expect(rootNode.removeChild(rootNode.right)).toBe(false);
     expect(rootNode.traverseInOrder()).toEqual([2]);
   });
 
@@ -89,21 +89,21 @@ describe('BinaryTreeNode', () => {
 
     expect(rootNode.traverseInOrder()).toEqual([1, 2, 3, 5]);
 
-    expect(rootNode.replaceChild(rootNode.right, rootNode.right.right)).toBeTruthy();
+    expect(rootNode.replaceChild(rootNode.right, rootNode.right.right)).toBe(true);
     expect(rootNode.right.value).toBe(5);
     expect(rootNode.right.right).toBeNull();
     expect(rootNode.traverseInOrder()).toEqual([1, 2, 5]);
 
-    expect(rootNode.replaceChild(rootNode.right, rootNode.right.right)).toBeFalsy();
+    expect(rootNode.replaceChild(rootNode.right, rootNode.right.right)).toBe(false);
     expect(rootNode.traverseInOrder()).toEqual([1, 2, 5]);
 
-    expect(rootNode.replaceChild(rootNode.right, replacementNode)).toBeTruthy();
+    expect(rootNode.replaceChild(rootNode.right, replacementNode)).toBe(true);
     expect(rootNode.traverseInOrder()).toEqual([1, 2, 5]);
 
-    expect(rootNode.replaceChild(rootNode.left, replacementNode)).toBeTruthy();
+    expect(rootNode.replaceChild(rootNode.left, replacementNode)).toBe(true);
     expect(rootNode.traverseInOrder()).toEqual([5, 2, 5]);
 
-    expect(rootNode.replaceChild(new BinaryTreeNode(), new BinaryTreeNode())).toBeFalsy();
+    expect(rootNode.replaceChild(new BinaryTreeNode(), new BinaryTreeNode())).toBe(false);
   });
 
   it('should calculate node height', () => {
