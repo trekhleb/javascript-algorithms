@@ -16,7 +16,7 @@ related `README.xx-XX.md` files in each of them.
 
 **Contributing New Algorithms**
 
-- Make you pull requests to be **specific** and **focused**. Instead of 
+- Make your pull requests to be **specific** and **focused**. Instead of 
 contributing "several sorting algorithms" all at once contribute them all 
 one by one separately (i.e. one pull request for "Quick Sort", another one
 for "Heap Sort" and so on).
