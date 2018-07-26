@@ -10,8 +10,9 @@
 
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
-[简体中文](README.zh-CN.md),
-[繁體中文](README.zh-TW.md)
+[_简体中文_](README.zh-CN.md),
+[_繁體中文_](README.zh-TW.md),
+[_Polski_](README.pl-PL.md)
 
 > 우리는 주요 알고리즘에 대해 더 자세한 설명을 담은 책을 제작 중입니다.
 만약 “JavaScript Algorithms” 책이 언제 출시되는지 알고 싶다면
@@ -242,29 +243,29 @@ Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
 ### 자료 구조 작업별 복잡도
 
-| 자료 구조          | 접근    | 검색    | 삽입  | 삭제  | 비고  |
-| ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- |
-| **배열**               | 1         | n         | n         | n         |           |
-| **스택**               | n         | n         | 1         | 1         |           |
-| **큐**               | n         | n         | 1         | 1         |           |
-| **연결 리스트**         | n         | n         | 1         | 1         |           |
-| **해시 테이블**          | -         | n         | n         | n         | 완벽한 해시 함수의 경우 O(1) |
-| **이진 탐색 트리**  | n         | n         | n         | n         | 균형 트리의 경우 O(log(n)) |
-| **B-트리**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **Red-Black 트리**      | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **AVL 트리**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **Bloom Filter**        | -         | 1         | 1         | -         | 거짓 양성이 탐색 중 발생 가능 |
+| 자료 구조                 | 접근       | 검색      | 삽입       | 삭제      | 비고       |
+| ------------------------ | :-------: | :-------: | :-------: | :-------: | :-------- |
+| **배열**                  | 1         | n         | n         | n         |           |
+| **스택**                  | n         | n         | 1         | 1         |           |
+| **큐**                    | n         | n         | 1         | 1         |           |
+| **연결 리스트**            | n         | n         | 1         | 1         |           |
+| **해시 테이블**            | -         | n         | n         | n         | 완벽한 해시 함수의 경우 O(1) |
+| **이진 탐색 트리**          | n         | n         | n         | n         | 균형 트리의 경우 O(log(n)) |
+| **B-트리**                | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **Red-Black 트리**        | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **AVL 트리**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **Bloom Filter**          | -         | 1         | 1         | -         | 거짓 양성이 탐색 중 발생 가능 |
 
 ### 정렬 알고리즘 복잡도
 
-| 이름                  | 최적            | 평균             | 최악               | 메모리    | 동일값 순서유지    | 비고  |
+| 이름                   | 최적            | 평균                 | 최악                | 메모리     | 동일값 순서유지    | 비고  |
 | --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
-| **거품 정렬**       | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
-| **삽입 정렬**    | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
-| **선택 정렬**    | n<sup>2</sup>   | n<sup>2</sup>       | n<sup>2</sup>       | 1         | No        |           |
-| **힙 정렬**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |           |
-| **병합 정렬**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Yes       |           |
-| **퀵 정렬**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No        | 퀵 정렬은 보통 제자리(in-place)로 O(log(n)) 스택공간으로 수행됩니다. |
-| **셸 정렬**        | n&nbsp;log(n)   | 간격 순서에 영향을 받습니다.   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
-| **계수 정렬**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - 배열내 가장 큰 수 |
-| **기수 정렬**        | n * k           | n * k               | n * k               | n + k     | Yes       | k - 키값의 최대 길이 |
+| **거품 정렬**          | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
+| **삽입 정렬**          | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
+| **선택 정렬**          | n<sup>2</sup>   | n<sup>2</sup>       | n<sup>2</sup>       | 1         | No        |           |
+| **힙 정렬**            | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |           |
+| **병합 정렬**          | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Yes       |           |
+| **퀵 정렬**            | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No        | 퀵 정렬은 보통 제자리(in-place)로 O(log(n)) 스택공간으로 수행됩니다. |
+| **셸 정렬**            | n&nbsp;log(n)   | 간격 순서에 영향을 받습니다.   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
+| **계수 정렬**          | n + r           | n + r               | n + r               | n + r     | Yes       | r - 배열내 가장 큰 수 |
+| **기수 정렬**          | n * k           | n * k               | n * k               | n + k     | Yes       | k - 키값의 최대 길이 |

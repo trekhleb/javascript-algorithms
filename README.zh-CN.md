@@ -9,8 +9,9 @@
 
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
-[繁體中文](README.zh-TW.md),
-[한국어](README.ko-KR.md)
+[_繁體中文_](README.zh-TW.md),
+[_한국어_](README.ko-KR.md),
+[_Polski_](README.pl-PL.md)
 
 > We’re writing a book that will clearly explain, in detail, the main algorithms. 
 If you’d like to be notified when the “JavaScript Algorithms” book 
@@ -195,26 +196,26 @@ npm test -- 'playground'
 
 ### 数据结构操作的复杂性
 
-| 数据结构          | 连接    | 查找    | 插入 | 删除  |
-| ----------------------- | :-------: | :-------: | :-------: | :-------: |
+| 数据结构               | 连接      | 查找      | 插入      | 删除      |
+| ---------------------- | :-------: | :-------: | :-------: | :-------: |
 | **数组**               | 1         | n         | n         | n         |
-| **栈**               | n         | n         | 1         | 1         |
+| **栈**                 | n         | n         | 1         | 1         |
 | **队列**               | n         | n         | 1         | 1         |
-| **链表**         | n         | n         | 1         | 1         |
-| **哈希表**          | -         | n         | n         | n         |
-| **二分查找树**  | n         | n         | n         | n         |
-| **B树**              | log(n)    | log(n)    | log(n)    | log(n)    |
-| **红黑树**      | log(n)    | log(n)    | log(n)    | log(n)    |
-| **AVL树**            | log(n)    | log(n)    | log(n)    | log(n)    |
+| **链表**               | n         | n         | 1         | 1         |
+| **哈希表**             | -         | n         | n         | n         |
+| **二分查找树**         | n         | n         | n         | n         |
+| **B树**                | log(n)    | log(n)    | log(n)    | log(n)    |
+| **红黑树**             | log(n)    | log(n)    | log(n)    | log(n)    |
+| **AVL树**              | log(n)    | log(n)    | log(n)    | log(n)    |
 
 ### 数组排序算法的复杂性
 
 | 名称                  | 最优      | 平均   | 最坏         | 内存    | 稳定    |
 | --------------------- | :-------: | :-------: | :-----------: | :-------: | :-------: |
-| **冒泡排序**       | n         | n^2       | n^2           | 1         | Yes       |
-| **插入排序**    | n         | n^2       | n^2           | 1         | Yes       |
-| **选择排序**    | n^2       | n^2       | n^2           | 1         | No        |
-| **堆排序**         | n log(n)  | n log(n)  | n log(n)      | 1         | No        |
-| **归并排序**        | n log(n)  | n log(n)  | n log(n)      | n         | Yes       |
-| **快速排序**        | n log(n)  | n log(n)  | n^2           | log(n)    | No        |
-| **希尔排序**        | n log(n)  | 取决于差距序列   | n (log(n))^2  | 1         | No        |
+| **冒泡排序**          | n         | n^2       | n^2           | 1         | Yes       |
+| **插入排序**          | n         | n^2       | n^2           | 1         | Yes       |
+| **选择排序**          | n^2       | n^2       | n^2           | 1         | No        |
+| **堆排序**            | n log(n)  | n log(n)  | n log(n)      | 1         | No        |
+| **归并排序**          | n log(n)  | n log(n)  | n log(n)      | n         | Yes       |
+| **快速排序**          | n log(n)  | n log(n)  | n^2           | log(n)    | No        |
+| **希尔排序**          | n log(n)  | 取决于差距序列   | n (log(n))^2  | 1         | No        |

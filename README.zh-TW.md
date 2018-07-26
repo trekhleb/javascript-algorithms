@@ -8,8 +8,9 @@
 
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
-[简体中文](README.zh-CN.md),
-[한국어](README.ko-KR.md)
+[_简体中文_](README.zh-CN.md),
+[_한국어_](README.ko-KR.md),
+[_Polski_](README.pl-PL.md)
 
 > We’re writing a book that will clearly explain, in detail, the main algorithms. 
 If you’d like to be notified when the “JavaScript Algorithms” book 
@@ -191,7 +192,7 @@ npm test -- 'playground'
 
 ### 資料結構運作複雜度
 
-| 資料結構                 | 存取      | 搜尋       | 插入      | 刪除      |
+| 資料結構                | 存取      | 搜尋      | 插入      | 刪除      |
 | ----------------------- | :-------: | :-------: | :-------: | :-------: |
 | **陣列**                | 1         | n         | n         | n         |
 | **堆疊**                | n         | n         | 1         | 1         |
@@ -206,11 +207,11 @@ npm test -- 'playground'
 ### 陣列排序演算法複雜度
 
 | 名稱                   | 最佳      | 平均      | 最差           | 記憶體    | 穩定      |
-| --------------------- | :-------: | :-------: | :-----------: | :-------: | :-------: |
+| ---------------------- | :-------: | :-------: | :-----------: | :-------: | :-------: |
 | **氣派排序**           | n         | n^2       | n^2           | 1         | Yes       |
 | **插入排序**           | n         | n^2       | n^2           | 1         | Yes       |
 | **選擇排序**           | n^2       | n^2       | n^2           | 1         | No        |
 | **Heap 排序**          | n log(n)  | n log(n)  | n log(n)      | 1         | No        |
-| **合併排序**         | n log(n)  | n log(n)  | n log(n)      | n         | Yes       |
+| **合併排序**           | n log(n)  | n log(n)  | n log(n)      | n         | Yes       |
 | **快速排序**           | n log(n)  | n log(n)  | n^2           | log(n)    | No        |
-| **希爾排序**        | n log(n)  | 由gap sequence決定   | n (log(n))^2  | 1         | No        |
+| **希爾排序**           | n log(n)  | 由gap sequence決定   | n (log(n))^2  | 1         | No        |

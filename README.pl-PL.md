@@ -7,20 +7,26 @@ To repozytorium zawiera wiele przykładów JavaScript opartych na
 znanych algorytmach i strukturach danych.
 
 Każdy algorytm i struktura danych zawiera osobny plik README
-wraz z powiązanymi wyjaśnieniami i odnośnikami do dalszego czytania (włącznie z tymi do YouTube videos).
+wraz z powiązanymi wyjaśnieniami i odnośnikami do dalszego czytania 
+(włącznie z tymi do YouTube videos).
 
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/)
-[ç®€ä½“ä¸­æ–‡](README.zh-CN.md),
-[ç¹é«”ä¸­æ–‡](README.zh-TW.md),
-[í•œêµ­ì–´](README.ko-KR.md)
+[_简体中文_](README.zh-CN.md),
+[_繁體中文_](README.zh-TW.md),
+[_한국어_](README.ko-KR.md)
 
-> Jesteśmy w trakcie pisania książki, która w jasny i specyficzny sposób, wyjaśni główne algorytmy. Jeżeli chcesz dostać powiadomienie o tym kiedy książka â€œJavaScript Algorithmsâ€ zostanie wydana,[kliknij tutaj](https://upscri.be/402324/).
+> Jesteśmy w trakcie pisania książki, która w jasny i specyficzny sposób, 
+wyjaśni główne algorytmy. Jeżeli chcesz dostać powiadomienie o tym kiedy 
+książka â€œJavaScript Algorithmsâ€ zostanie wydana,[kliknij tutaj](https://upscri.be/402324/).
 
 
 ## Struktury Danych
 
-Struktura danych to sposób uporządkowania i przechowywania informacji w komputerze żeby mogłaby być sprawnie dostępna i efektywnie zmodyfikowana. Dokładniej, struktura danych jest zbiorem wartości danych, relacjami pomiędzy nimi, zadaniami lub działaniami, które mogą dotyczyć danych. 
+Struktura danych to sposób uporządkowania i przechowywania informacji w 
+komputerze żeby mogłaby być sprawnie dostępna i efektywnie zmodyfikowana.
+Dokładniej, struktura danych jest zbiorem wartości danych, relacjami 
+pomiędzy nimi, zadaniami lub działaniami, które mogą dotyczyć danych. 
 
 `B` - Początkujący, `A` - Zaawansowany
 
@@ -44,7 +50,9 @@ Struktura danych to sposób uporządkowania i przechowywania informacji w komput
 
 ## Algorytmy
 
-Algorytm jest to skończony ciąg jasno zdefiniowanych czynności, koniecznych do wykonania pewnego rodzaju zadań. Sposób postępowania prowadzący do rozwiązania problemu.
+Algorytm jest to skończony ciąg jasno zdefiniowanych czynności, koniecznych 
+do wykonania pewnego rodzaju zadań. Sposób postępowania prowadzący do 
+rozwiązania problemu.
 
 `B` - Początkujący, `A` - Zaawansowany
 
@@ -127,7 +135,10 @@ znajdź wszystkie kombinacje, które tworzą określoną sumę
 
 ### Algorytmy według paradygmatu
 
-Paradygmat algorytmiczny jest ogólną metodą lub podejściem, które jest podstawą projektowania klasy algorytmów. Jest abstrakcją wyższą niż pojęcie algorytmu, podobnie jak algorytm jest abstrakcją wyższą niż program komputerowy.
+Paradygmat algorytmiczny jest ogólną metodą lub podejściem, które jest 
+podstawą projektowania klasy algorytmów. Jest abstrakcją wyższą niż 
+pojęcie algorytmu, podobnie jak algorytm jest abstrakcją wyższą niż 
+program komputerowy.
 
 * **Metoda Siłowa** - Sprawdza wszystkie możliwosci i wybiera  najlepsze rozwiązanie.
   * `B` [Wyszukiwanie Liniowe](src/algorithms/search/linear-search)
@@ -246,29 +257,29 @@ Poniżej umieszczamy listę najbardziej używanych Big O notacji i ich porównan
 
 ### Złożoność operacji struktury danych
 
-| Struktura Danych         | Dostęp    | Szukaj    | Umieszczanie | Usuwanie  | Komentarze  |
-| ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- |
-| **Szereg**               | 1         | n         | n         | n         |           |
-| **Sterta**               | n         | n         | 1         | 1         |           |
-| **Kolejka**               | n         | n         | 1         | 1         |           |
-| **Lista Powiązana**         | n         | n         | 1         | 1         |           |
-| **Tablica funkcji mieszanej**          | -         | n         | n         | n         | W wypadku idealnej funkcji skrótu koszt mógłby sie równać O(1) |
-| **Binarne Drzewo Poszukiwań**  | n         | n         | n         | n         | W przypadku zrównoważonych kosztów drzew byłoby O(log(n)) |
-| **B-Drzewo**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| Struktura Danych                | Dostęp    | Szukaj    | Umieszczanie | Usuwanie  | Komentarze  |
+| ------------------------------- | :-------: | :-------: | :-------: | :-------: | :-------- |
+| **Szereg**                      | 1         | n         | n         | n         |           |
+| **Sterta**                      | n         | n         | 1         | 1         |           |
+| **Kolejka**                     | n         | n         | 1         | 1         |           |
+| **Lista Powiązana**             | n         | n         | 1         | 1         |           |
+| **Tablica funkcji mieszanej**   | -         | n         | n         | n         | W wypadku idealnej funkcji skrótu koszt mógłby sie równać O(1) |
+| **Binarne Drzewo Poszukiwań**   | n         | n         | n         | n         | W przypadku zrównoważonych kosztów drzew byłoby O(log(n)) |
+| **B-Drzewo**                    | log(n)    | log(n)    | log(n)    | log(n)    |           |
 | **Drzewa czerwono-czarne**      | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **AVL Drzewo**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **Filtr Blooma **        | -         | 1         | 1         | -         | Fałszywe dotatnie są możliwe podczas wyszukiwania |
+| **AVL Drzewo**                  | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **Filtr Blooma**                | -         | 1         | 1         | -         | Fałszywe dotatnie są możliwe podczas wyszukiwania |
 
 ### Sortowanie Tablic Złożoności Algorytmów
 
-| Nazwa                  | Najlepszy            | Średni             | Najgorszy              | Pamięć    | Stabilność  | Komentarze  |
-| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
-| **Sortowanie bąbelkowe**       | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
-| **Sortowanie przez wstawianie**    | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
-| **Sortowanie przez wybieranie**    | n<sup>2</sup>   | n<sup>2</sup>       | n<sup>2</sup>       | 1         | No        |           |
-| **Sortowanie przez kopcowanie**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |           |
-| **Sortowanie przez scalanie**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Yes       |           |
-| **Szybkie sortowanie**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No        | Szybkie sortowanie jest zazwyczaj robione w miejsce O(log(n)) stosu przestrzeni |
-| **Sortowanie Shella**        | n&nbsp;log(n)   | zależy od luki w układzie   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
-| **Sortowanie przez zliczanie**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - największy numer w tablicy|
-| **Sortowanie Radix**        | n * k           | n * k               | n * k               | n + k     | Yes       | k -długość najdłuższego klucza |
+| Nazwa                               | Najlepszy            | Średni             | Najgorszy              | Pamięć    | Stabilność  | Komentarze  |
+| ----------------------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
+| **Sortowanie bąbelkowe**            | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
+| **Sortowanie przez wstawianie**     | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
+| **Sortowanie przez wybieranie**     | n<sup>2</sup>   | n<sup>2</sup>       | n<sup>2</sup>       | 1         | No        |           |
+| **Sortowanie przez kopcowanie**     | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |           |
+| **Sortowanie przez scalanie**       | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Yes       |           |
+| **Szybkie sortowanie**              | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No        | Szybkie sortowanie jest zazwyczaj robione w miejsce O(log(n)) stosu przestrzeni |
+| **Sortowanie Shella**               | n&nbsp;log(n)   | zależy od luki w układzie   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
+| **Sortowanie przez zliczanie**      | n + r           | n + r               | n + r               | n + r     | Yes       | r - największy numer w tablicy|
+| **Sortowanie Radix**                | n * k           | n * k               | n * k               | n + k     | Yes       | k -długość najdłuższego klucza |
