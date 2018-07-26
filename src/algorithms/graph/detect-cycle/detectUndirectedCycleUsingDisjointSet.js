@@ -6,26 +6,19 @@ import DisjointSet from '../../../data-structures/disjoint-set/DisjointSet';
  * @param {Graph} graph
  */
 export default function detectUndirectedCycleUsingDisjointSet(graph) {
-  // Create initial singleton disjoint sets for each graph vertex.
-  /** @param {GraphVertex} graphVertex */
-  const keyExtractor = graphVertex => graphVertex.getKey();
-  const disjointSet = new DisjointSet(keyExtractor);
-  graph.getAllVertices().forEach(graphVertex => disjointSet.makeSet(graphVertex));
+  const vertices = graph.getAllVertices();
+  const disjointSet = new DisjointSet(vertices.length);
 
-  // Go trough all graph edges one by one and check if edge vertices are from the
-  // different sets. In this case joint those sets together. Do this until you find
-  // an edge where to edge vertices are already in one set. This means that current
-  // edge will create a cycle.
-  let cycleFound = false;
-  /** @param {GraphEdge} graphEdge */
-  graph.getAllEdges().forEach((graphEdge) => {
-    if (disjointSet.inSameSet(graphEdge.startVertex, graphEdge.endVertex)) {
-      // Cycle found.
-      cycleFound = true;
-    } else {
-      disjointSet.union(graphEdge.startVertex, graphEdge.endVertex);
+  for (let i = 0; i < vertices.length; i += 1) {
+    for (let j = (i + 1); j < vertices.length; j += 1) {
+      if (vertices[i].hasNeighbor(vertices[j])) {
+        if (disjointSet.find(i) === disjointSet.find(j)) {
+          return true;
+        }
+        disjointSet.union(i, j);
+      }
     }
-  });
+  }
 
-  return cycleFound;
+  return false;
 }
