@@ -25,6 +25,7 @@ describe('TrieNode', () => {
     trieNode.addChild('o');
 
     expect(trieNode.getChild('a').toString()).toBe('a');
+    expect(trieNode.getChild('a').character).toBe('a');
     expect(trieNode.getChild('o').toString()).toBe('o');
     expect(trieNode.getChild('b')).toBeUndefined();
   });
