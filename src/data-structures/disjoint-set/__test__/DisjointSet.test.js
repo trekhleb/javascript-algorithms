@@ -36,15 +36,15 @@ describe('DisjointSet', () => {
 
     disjointSet.makeSet('C');
 
-    expect(disjointSet.inSameSet('A', 'B')).toBeFalsy();
+    expect(disjointSet.inSameSet('A', 'B')).toBe(false);
 
     disjointSet.union('A', 'B');
 
     expect(disjointSet.find('A')).toBe('A');
     expect(disjointSet.find('B')).toBe('A');
-    expect(disjointSet.inSameSet('A', 'B')).toBeTruthy();
-    expect(disjointSet.inSameSet('B', 'A')).toBeTruthy();
-    expect(disjointSet.inSameSet('A', 'C')).toBeFalsy();
+    expect(disjointSet.inSameSet('A', 'B')).toBe(true);
+    expect(disjointSet.inSameSet('B', 'A')).toBe(true);
+    expect(disjointSet.inSameSet('A', 'C')).toBe(false);
 
     disjointSet.union('A', 'A');
 
@@ -54,9 +54,9 @@ describe('DisjointSet', () => {
     expect(disjointSet.find('B')).toBe('A');
     expect(disjointSet.find('C')).toBe('A');
 
-    expect(disjointSet.inSameSet('A', 'B')).toBeTruthy();
-    expect(disjointSet.inSameSet('B', 'C')).toBeTruthy();
-    expect(disjointSet.inSameSet('A', 'C')).toBeTruthy();
+    expect(disjointSet.inSameSet('A', 'B')).toBe(true);
+    expect(disjointSet.inSameSet('B', 'C')).toBe(true);
+    expect(disjointSet.inSameSet('A', 'C')).toBe(true);
 
     disjointSet
       .makeSet('E')
@@ -71,13 +71,13 @@ describe('DisjointSet', () => {
       .union('G', 'H')
       .union('H', 'I');
 
-    expect(disjointSet.inSameSet('A', 'I')).toBeFalsy();
-    expect(disjointSet.inSameSet('E', 'I')).toBeTruthy();
+    expect(disjointSet.inSameSet('A', 'I')).toBe(false);
+    expect(disjointSet.inSameSet('E', 'I')).toBe(true);
 
     disjointSet.union('I', 'C');
 
     expect(disjointSet.find('I')).toBe('E');
-    expect(disjointSet.inSameSet('A', 'I')).toBeTruthy();
+    expect(disjointSet.inSameSet('A', 'I')).toBe(true);
   });
 
   it('should union smaller set with bigger one making bigger one to be new root', () => {
@@ -117,15 +117,15 @@ describe('DisjointSet', () => {
 
     disjointSet.makeSet(itemC);
 
-    expect(disjointSet.inSameSet(itemA, itemB)).toBeFalsy();
+    expect(disjointSet.inSameSet(itemA, itemB)).toBe(false);
 
     disjointSet.union(itemA, itemB);
 
     expect(disjointSet.find(itemA)).toBe('A');
     expect(disjointSet.find(itemB)).toBe('A');
-    expect(disjointSet.inSameSet(itemA, itemB)).toBeTruthy();
-    expect(disjointSet.inSameSet(itemB, itemA)).toBeTruthy();
-    expect(disjointSet.inSameSet(itemA, itemC)).toBeFalsy();
+    expect(disjointSet.inSameSet(itemA, itemB)).toBe(true);
+    expect(disjointSet.inSameSet(itemB, itemA)).toBe(true);
+    expect(disjointSet.inSameSet(itemA, itemC)).toBe(false);
 
     disjointSet.union(itemA, itemC);
 
@@ -133,8 +133,8 @@ describe('DisjointSet', () => {
     expect(disjointSet.find(itemB)).toBe('A');
     expect(disjointSet.find(itemC)).toBe('A');
 
-    expect(disjointSet.inSameSet(itemA, itemB)).toBeTruthy();
-    expect(disjointSet.inSameSet(itemB, itemC)).toBeTruthy();
-    expect(disjointSet.inSameSet(itemA, itemC)).toBeTruthy();
+    expect(disjointSet.inSameSet(itemA, itemB)).toBe(true);
+    expect(disjointSet.inSameSet(itemB, itemC)).toBe(true);
+    expect(disjointSet.inSameSet(itemA, itemC)).toBe(true);
   });
 });

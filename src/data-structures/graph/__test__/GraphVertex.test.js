@@ -31,8 +31,8 @@ describe('GraphVertex', () => {
     const edgeAB = new GraphEdge(vertexA, vertexB);
     vertexA.addEdge(edgeAB);
 
-    expect(vertexA.hasEdge(edgeAB)).toBeTruthy();
-    expect(vertexB.hasEdge(edgeAB)).toBeFalsy();
+    expect(vertexA.hasEdge(edgeAB)).toBe(true);
+    expect(vertexB.hasEdge(edgeAB)).toBe(false);
     expect(vertexA.getEdges().length).toBe(1);
     expect(vertexA.getEdges()[0].toString()).toBe('A_B');
   });
@@ -48,11 +48,11 @@ describe('GraphVertex', () => {
       .addEdge(edgeAB)
       .addEdge(edgeAC);
 
-    expect(vertexA.hasEdge(edgeAB)).toBeTruthy();
-    expect(vertexB.hasEdge(edgeAB)).toBeFalsy();
+    expect(vertexA.hasEdge(edgeAB)).toBe(true);
+    expect(vertexB.hasEdge(edgeAB)).toBe(false);
 
-    expect(vertexA.hasEdge(edgeAC)).toBeTruthy();
-    expect(vertexC.hasEdge(edgeAC)).toBeFalsy();
+    expect(vertexA.hasEdge(edgeAC)).toBe(true);
+    expect(vertexC.hasEdge(edgeAC)).toBe(false);
 
     expect(vertexA.getEdges().length).toBe(2);
 
@@ -60,13 +60,13 @@ describe('GraphVertex', () => {
     expect(vertexA.getEdges()[1].toString()).toBe('A_C');
 
     vertexA.deleteEdge(edgeAB);
-    expect(vertexA.hasEdge(edgeAB)).toBeFalsy();
-    expect(vertexA.hasEdge(edgeAC)).toBeTruthy();
+    expect(vertexA.hasEdge(edgeAB)).toBe(false);
+    expect(vertexA.hasEdge(edgeAC)).toBe(true);
     expect(vertexA.getEdges()[0].toString()).toBe('A_C');
 
     vertexA.deleteEdge(edgeAC);
-    expect(vertexA.hasEdge(edgeAB)).toBeFalsy();
-    expect(vertexA.hasEdge(edgeAC)).toBeFalsy();
+    expect(vertexA.hasEdge(edgeAB)).toBe(false);
+    expect(vertexA.hasEdge(edgeAC)).toBe(false);
     expect(vertexA.getEdges().length).toBe(0);
   });
 
@@ -81,21 +81,21 @@ describe('GraphVertex', () => {
       .addEdge(edgeAB)
       .addEdge(edgeAC);
 
-    expect(vertexA.hasEdge(edgeAB)).toBeTruthy();
-    expect(vertexB.hasEdge(edgeAB)).toBeFalsy();
+    expect(vertexA.hasEdge(edgeAB)).toBe(true);
+    expect(vertexB.hasEdge(edgeAB)).toBe(false);
 
-    expect(vertexA.hasEdge(edgeAC)).toBeTruthy();
-    expect(vertexC.hasEdge(edgeAC)).toBeFalsy();
+    expect(vertexA.hasEdge(edgeAC)).toBe(true);
+    expect(vertexC.hasEdge(edgeAC)).toBe(false);
 
     expect(vertexA.getEdges().length).toBe(2);
 
     vertexA.deleteAllEdges();
 
-    expect(vertexA.hasEdge(edgeAB)).toBeFalsy();
-    expect(vertexB.hasEdge(edgeAB)).toBeFalsy();
+    expect(vertexA.hasEdge(edgeAB)).toBe(false);
+    expect(vertexB.hasEdge(edgeAB)).toBe(false);
 
-    expect(vertexA.hasEdge(edgeAC)).toBeFalsy();
-    expect(vertexC.hasEdge(edgeAC)).toBeFalsy();
+    expect(vertexA.hasEdge(edgeAC)).toBe(false);
+    expect(vertexC.hasEdge(edgeAC)).toBe(false);
 
     expect(vertexA.getEdges().length).toBe(0);
   });
@@ -148,8 +148,8 @@ describe('GraphVertex', () => {
     const edgeAB = new GraphEdge(vertexA, vertexB);
     vertexA.addEdge(edgeAB);
 
-    expect(vertexA.hasNeighbor(vertexB)).toBeTruthy();
-    expect(vertexA.hasNeighbor(vertexC)).toBeFalsy();
+    expect(vertexA.hasNeighbor(vertexB)).toBe(true);
+    expect(vertexA.hasNeighbor(vertexC)).toBe(false);
   });
 
   it('should edge by vertex', () => {
