@@ -15,8 +15,8 @@ _Read this in other languages:_
 [繁體中文](README.zh-TW.md),
 [한국어](README.ko-KR.md)
 
-> We’re writing a book that will clearly explain, in detail, the main algorithms. 
-If you’d like to be notified when the “JavaScript Algorithms” book 
+> We’re writing a book that will clearly explain, in detail, the main algorithms.
+If you’d like to be notified when the “JavaScript Algorithms” book
 launches, [click here](https://upscri.be/402324/).
 
 ## Data Structures
@@ -57,7 +57,7 @@ a set of rules that precisely define a sequence of operations.
 
 * **Math**
   * `B` [Bit Manipulation](src/algorithms/math/bits) - set/get/update/clear bits, multiplication/division by two, make negative etc.
-  * `B` [Factorial](src/algorithms/math/factorial) 
+  * `B` [Factorial](src/algorithms/math/factorial)
   * `B` [Fibonacci Number](src/algorithms/math/fibonacci)
   * `B` [Primality Test](src/algorithms/math/primality-test) (trial division method)
   * `B` [Euclidean Algorithm](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
@@ -65,6 +65,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Sieve of Eratosthenes](src/algorithms/math/sieve-of-eratosthenes) - finding all prime numbers up to any given limit
   * `B` [Is Power of Two](src/algorithms/math/is-power-of-two) - check if the number is power of two (naive and bitwise algorithms)
   * `B` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
+  * `B` [Statistics](src/algorithms/math/statistics) - calculate various statistics of data
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
 * **Sets**
@@ -124,8 +125,8 @@ a set of rules that precisely define a sequence of operations.
 * **Uncategorized**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
-  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples 
-  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples 
+  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples
+  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
 
