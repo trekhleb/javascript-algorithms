@@ -27,10 +27,10 @@ describe('detectUndirectedCycleUsingDisjointSet', () => {
       .addEdge(edgeBC)
       .addEdge(edgeCD);
 
-    expect(detectUndirectedCycleUsingDisjointSet(graph)).toBeFalsy();
+    expect(detectUndirectedCycleUsingDisjointSet(graph)).toBe(false);
 
     graph.addEdge(edgeDE);
 
-    expect(detectUndirectedCycleUsingDisjointSet(graph)).toBeTruthy();
+    expect(detectUndirectedCycleUsingDisjointSet(graph)).toBe(true);
   });
 });

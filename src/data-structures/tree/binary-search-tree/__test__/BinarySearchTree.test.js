@@ -30,8 +30,8 @@ describe('BinarySearchTree', () => {
     bst.insert(20);
     bst.insert(5);
 
-    expect(bst.contains(20)).toBeTruthy();
-    expect(bst.contains(40)).toBeFalsy();
+    expect(bst.contains(20)).toBe(true);
+    expect(bst.contains(40)).toBe(false);
   });
 
   it('should remove nodes', () => {
@@ -45,11 +45,11 @@ describe('BinarySearchTree', () => {
 
     const removed1 = bst.remove(5);
     expect(bst.toString()).toBe('10,20');
-    expect(removed1).toBeTruthy();
+    expect(removed1).toBe(true);
 
     const removed2 = bst.remove(20);
     expect(bst.toString()).toBe('10');
-    expect(removed2).toBeTruthy();
+    expect(removed2).toBe(true);
   });
 
   it('should insert object values', () => {

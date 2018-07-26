@@ -31,9 +31,9 @@ describe('HashTable', () => {
     hashTable.set('c', 'earth');
     hashTable.set('d', 'ocean');
 
-    expect(hashTable.has('x')).toBeFalsy();
-    expect(hashTable.has('b')).toBeTruthy();
-    expect(hashTable.has('c')).toBeTruthy();
+    expect(hashTable.has('x')).toBe(false);
+    expect(hashTable.has('b')).toBe(true);
+    expect(hashTable.has('c')).toBe(true);
 
     const stringifier = value => `${value.key}:${value.value}`;
 
@@ -77,13 +77,13 @@ describe('HashTable', () => {
     hashTable.set('d', 'ocean');
 
     expect(hashTable.getKeys()).toEqual(['a', 'b', 'c', 'd']);
-    expect(hashTable.has('a')).toBeTruthy();
-    expect(hashTable.has('x')).toBeFalsy();
+    expect(hashTable.has('a')).toBe(true);
+    expect(hashTable.has('x')).toBe(false);
 
     hashTable.delete('a');
 
-    expect(hashTable.has('a')).toBeFalsy();
-    expect(hashTable.has('b')).toBeTruthy();
-    expect(hashTable.has('x')).toBeFalsy();
+    expect(hashTable.has('a')).toBe(false);
+    expect(hashTable.has('b')).toBe(true);
+    expect(hashTable.has('x')).toBe(false);
   });
 });

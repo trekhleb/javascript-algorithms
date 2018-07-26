@@ -5,7 +5,7 @@ describe('TrieNode', () => {
     const trieNode = new TrieNode('c', true);
 
     expect(trieNode.character).toBe('c');
-    expect(trieNode.isCompleteWord).toBeTruthy();
+    expect(trieNode.isCompleteWord).toBe(true);
     expect(trieNode.toString()).toBe('c*');
   });
 
@@ -35,9 +35,9 @@ describe('TrieNode', () => {
     trieNode.addChild('a');
     trieNode.addChild('o');
 
-    expect(trieNode.hasChild('a')).toBeTruthy();
-    expect(trieNode.hasChild('o')).toBeTruthy();
-    expect(trieNode.hasChild('b')).toBeFalsy();
+    expect(trieNode.hasChild('a')).toBe(true);
+    expect(trieNode.hasChild('o')).toBe(true);
+    expect(trieNode.hasChild('b')).toBe(false);
   });
 
   it('should suggest next children', () => {
