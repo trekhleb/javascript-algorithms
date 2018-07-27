@@ -74,7 +74,7 @@ the sides minus its own height.
 
 - Initialize `answer = 0`
 - Iterate the array from left to right:
-  - Initialize `max_left = 0  and `max_right = 0`
+  - Initialize `max_left = 0`  and `max_right = 0`
   - Iterate from the current element to the beginning of array updating: `max_left = max(max_left, height[j])`
   - Iterate from the current element to the end of array updating: `max_right = max(max_right, height[j])`
   - Add `min(max_left, max_right) − height[i]` to `answer`
