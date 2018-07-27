@@ -1,8 +1,10 @@
 /**
+ * DYNAMIC PROGRAMMING approach of solving Trapping Rain Water problem.
+ *
  * @param {number[]} terraces
  * @return {number}
  */
-export default function rainTerraces(terraces) {
+export default function dpRainTerraces(terraces) {
   /*
    * STEPS
    *

@@ -128,7 +128,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples 
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples 
-  * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
+  * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem (dynamic programming and brute force versions)
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
 
@@ -140,6 +140,7 @@ algorithm is an abstraction higher than a computer program.
 
 * **Brute Force** - look at all the possibilities and selects the best solution
   * `B` [Linear Search](src/algorithms/search/linear-search)
+  * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
 * **Greedy** - choose the best option at the current time, without any consideration for the future
@@ -164,6 +165,7 @@ algorithm is an abstraction higher than a computer program.
   * `B` [Fibonacci Number](src/algorithms/math/fibonacci)
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
+  * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
   * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
   * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
