@@ -109,9 +109,12 @@ The concept is illustrated as shown:
 
 **Complexity Analysis**
 
-Time complexity: `O(n)`.
+Time complexity: `O(n)`. We store the maximum heights upto a point using 2 
+iterations of `O(n)` each. We finally update `answer` using the stored 
+values in `O(n)`.
 
-Auxiliary space complexity: `O(n)` extra space.
+Auxiliary space complexity: `O(n)` extra space. Additional space 
+for `left_max` and `right_max` arrays than in Approach 1.
 
 ## References
 
