@@ -3,9 +3,12 @@
 [![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
-Ce dépôt contient des exemples d'implémentation en JavaScript de plusieurs algorithmes et structures de données populaires.
+Ce dépôt contient des exemples d'implémentation en JavaScript de plusieurs 
+algorithmes et structures de données populaires.
 
-Chaque algorithme et structure de donnée possède son propre README contenant les explications détaillées et liens (incluant aussi des vidéos Youtube) pour complément d'informations.
+Chaque algorithme et structure de donnée possède son propre README contenant 
+les explications détaillées et liens (incluant aussi des vidéos Youtube) pour 
+complément d'informations.
 
 _Lisez ceci dans d'autres langues:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
@@ -14,11 +17,18 @@ _Lisez ceci dans d'autres langues:_
 [_한국어_](README.ko-KR.md),
 [_Polski_](README.pl-PL.md)
 
-> Nous écrivons actuellement un livre qui expliquera clairement, en détail, les principaux algorithmes. Si vous souhaitez être notifié lorsque le livre “JavaScript Algorithms” paraîtra, [cliquez ici](https://upscri.be/402324/).
+> Nous écrivons actuellement un livre qui expliquera clairement, en détail, les 
+principaux algorithmes. Si vous souhaitez être notifié lorsque le livre 
+“JavaScript Algorithms” paraîtra, [cliquez ici](https://upscri.be/402324/).
 
 ## Data Structures
 
-Une structure de données est une manière spéciale d'organiser et de stocker des données dans un ordinateur de manière à ce que l'on puisse accéder à cette information et la modifier de manière efficiente. De manière plus spécifique, une structure de données est un ensemble composé d'une collection de valeurs, des relations entre ces valeurs ainsi que d'un ensemble de fonctions ou d'opérations pouvant être appliquées sur ces données.
+Une structure de données est une manière spéciale d'organiser et de stocker 
+des données dans un ordinateur de manière à ce que l'on puisse accéder à 
+cette information et la modifier de manière efficiente. De manière plus 
+spécifique, une structure de données est un ensemble composé d'une collection 
+de valeurs, des relations entre ces valeurs ainsi que d'un ensemble de 
+fonctions ou d'opérations pouvant être appliquées sur ces données.
 
 `B` - Débutant, `A` - Avancé
 
@@ -42,7 +52,9 @@ Une structure de données est une manière spéciale d'organiser et de stocker d
 
 ## Algorithmes
 
-Un algorithme est une démarche non ambigüe expliquant comment résoudre une classe de problèmes. C'est un ensemble de règles décrivant de manière précise une séquence d'opérations.
+Un algorithme est une démarche non ambigüe expliquant comment résoudre une 
+classe de problèmes. C'est un ensemble de règles décrivant de manière précise 
+une séquence d'opérations.
 
 `B` - Débutant, `A` - Avancé
 
@@ -124,8 +136,10 @@ Un algorithme est une démarche non ambigüe expliquant comment résoudre une cl
 
 ### Algorithmes par Paradigme
 
-Un paradigme algorithmique est une méthode générique ou une approche qui sous-tend la conception d'une classe
-d'algorithmes. C'est une abstraction au-dessus de la notion d'algorithme, tout comme l'algorithme est une abstraction supérieure à un programme informatique.
+Un paradigme algorithmique est une méthode générique ou une approche qui 
+sous-tend la conception d'une classe d'algorithmes. C'est une abstraction 
+au-dessus de la notion d'algorithme, tout comme l'algorithme est une abstraction 
+supérieure à un programme informatique.
 
 * **Force Brute** - cherche parmi toutes les possibilités et retient la meilleure
   * `B` [Recherche Linéaire](src/algorithms/search/linear-search)
@@ -201,9 +215,12 @@ npm test -- 'LinkedList'
 
 **Tests personnalisés**
 
-Vous pouvez manipuler les structures de données et algorithmes présents dans ce dépôt avec le fichier `./src/playground/playground.js` et écrire vos propres tests dans file `./src/playground/__test__/playground.test.js`.
+Vous pouvez manipuler les structures de données et algorithmes présents dans ce 
+dépôt avec le fichier `./src/playground/playground.js` et écrire vos propres 
+tests dans file `./src/playground/__test__/playground.test.js`.
 
-Vous pourrez alors simplement exécuter la commande suivante afin de tester si votre code fonctionne comme escompté
+Vous pourrez alors simplement exécuter la commande suivante afin de tester si 
+votre code fonctionne comme escompté
 
 ```
 npm test -- 'playground'
@@ -223,42 +240,43 @@ Comparaison de la performance d'algorithmes en notation Grand O.
 
 Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
-Voici la liste de certaines des notations Grand O les plus utilisées et de leurs comparaisons de performance suivant différentes tailles pour les données d'entrée.
+Voici la liste de certaines des notations Grand O les plus utilisées et de leurs 
+comparaisons de performance suivant différentes tailles pour les données d'entrée.
 
 | Notation Grand O | Opérations pour 10 éléments  | Opérations pour 100 éléments  | Opérations pour 1000 éléments   |
-| -------------- | ---------------------------- | ----------------------------- | ------------------------------- |
-| **O(1)**       | 1                            | 1                             | 1                               |
-| **O(log N)**   | 3                            | 6                             | 9                               |
-| **O(N)**       | 10                           | 100                           | 1000                            |
-| **O(N log N)** | 30                           | 600                           | 9000                            |
-| **O(N^2)**     | 100                          | 10000                         | 1000000                         |
-| **O(2^N)**     | 1024                         | 1.26e+29                      | 1.07e+301                       |
-| **O(N!)**      | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
+| ---------------- | ---------------------------- | ----------------------------- | ------------------------------- |
+| **O(1)**         | 1                            | 1                             | 1                               |
+| **O(log N)**     | 3                            | 6                             | 9                               |
+| **O(N)**         | 10                           | 100                           | 1000                            |
+| **O(N log N)**   | 30                           | 600                           | 9000                            |
+| **O(N^2)**       | 100                          | 10000                         | 1000000                         |
+| **O(2^N)**       | 1024                         | 1.26e+29                      | 1.07e+301                       |
+| **O(N!)**        | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
 
 ### Complexité des Opérations suivant les Structures de Données
 
 | Structure de donnée             | Accès     | Recherche | Insertion | Suppression  | Commentaires  |
-| ------------------------------- | :-------: | :-------: | :-------: | :----------: | :-------- |
-| **Liste**                       | 1         | n         | n         | n            |           |
-| **Pile**                        | n         | n         | 1         | 1            |           |
-| **Queue**                       | n         | n         | 1         | 1            |           |
-| **Liste Liée**                  | n         | n         | 1         | 1            |           |
+| ------------------------------- | :-------: | :-------: | :-------: | :----------: | :------------ |
+| **Liste**                       | 1         | n         | n         | n            |               |
+| **Pile**                        | n         | n         | 1         | 1            |               |
+| **Queue**                       | n         | n         | 1         | 1            |               |
+| **Liste Liée**                  | n         | n         | 1         | 1            |               |
 | **Table de Hachage**            | -         | n         | n         | n            | Dans le cas des fonctions de hachage parfaites, les couts seraient de O(1) |
 | **Arbre de Recherche Binaire**  | n         | n         | n         | n            | Dans le cas des arbre équilibrés, les coûts seraient de O(log(n)) |
-| **Arbre B**                     | log(n)    | log(n)    | log(n)    | log(n)       |           |
-| **Arbre Red-Black**             | log(n)    | log(n)    | log(n)    | log(n)       |           |
-| **Arbre AVL**                   | log(n)    | log(n)    | log(n)    | log(n)       |           |
+| **Arbre B**                     | log(n)    | log(n)    | log(n)    | log(n)       |               |
+| **Arbre Red-Black**             | log(n)    | log(n)    | log(n)    | log(n)       |               |
+| **Arbre AVL**                   | log(n)    | log(n)    | log(n)    | log(n)       |               |
 | **Filtre de Bloom**             | -         | 1         | 1         | -            | Les faux positifs sont possibles lors de la recherche |
 
 ### Complexité des Algorithmes de Tri de Liste
 
 | Nom                     | Meilleur        | Moyenne                | Pire                | Mémoire   | Stable    | Commentaires  |
-| ----------------------- | :-------------: | :--------------------: | :-----------------: | :-------: | :-------: | :-------- |
-| **Tri Bulle**           | n               | n<sup>2</sup>          | n<sup>2</sup>       | 1         | Oui       |           |
-| **Tri Insertion**       | n               | n<sup>2</sup>          | n<sup>2</sup>       | 1         | Oui       |           |
-| **Tri Sélection**       | n<sup>2</sup>   | n<sup>2</sup>          | n<sup>2</sup>       | 1         | Non       |           |
-| **Tri par Tas**         | n&nbsp;log(n)   | n&nbsp;log(n)          | n&nbsp;log(n)       | 1         | Non       |           |
-| **Merge sort**          | n&nbsp;log(n)   | n&nbsp;log(n)          | n&nbsp;log(n)       | n         | Oui       |           |
+| ----------------------- | :-------------: | :--------------------: | :-----------------: | :-------: | :-------: | :------------ |
+| **Tri Bulle**           | n               | n<sup>2</sup>          | n<sup>2</sup>       | 1         | Oui       |               |
+| **Tri Insertion**       | n               | n<sup>2</sup>          | n<sup>2</sup>       | 1         | Oui       |               |
+| **Tri Sélection**       | n<sup>2</sup>   | n<sup>2</sup>          | n<sup>2</sup>       | 1         | Non       |               |
+| **Tri par Tas**         | n&nbsp;log(n)   | n&nbsp;log(n)          | n&nbsp;log(n)       | 1         | Non       |               |
+| **Merge sort**          | n&nbsp;log(n)   | n&nbsp;log(n)          | n&nbsp;log(n)       | n         | Oui       |               |
 | **Tri Rapide**          | n&nbsp;log(n)   | n&nbsp;log(n)          | n<sup>2</sup>       | log(n)    | Non       | le Tri Rapide est généralement effectué *in-place* avec une pile de taille O(log(n)) |
 | **Tri Shell**           | n&nbsp;log(n)   | dépend du gap séquence | n&nbsp;(log(n))<sup>2</sup>  | 1         | Non         |           |
 | **Tri Comptage**        | n + r           | n + r                  | n + r               | n + r     | Oui       | r - le plus grand nombre dans la liste |

@@ -10,7 +10,8 @@ _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
 [_简体中文_](README.zh-CN.md),
 [_한국어_](README.ko-KR.md),
-[_Polski_](README.pl-PL.md)
+[_Polski_](README.pl-PL.md),
+[_Français_](README.fr-FR.md)
 
 > We’re writing a book that will clearly explain, in detail, the main algorithms. 
 If you’d like to be notified when the “JavaScript Algorithms” book 
@@ -180,7 +181,7 @@ npm test -- 'playground'
 
 下列列出幾個常用的 Big O 標記以及其不同大小資料量輸入後的運算效能比較。
 
-| Big O 標記     | 10個資料量需花費的時間 | 100個資料量需花費的時間 | 1000個資料量需花費的時間  |
+| Big O 標記     | 10個資料量需花費的時間       | 100個資料量需花費的時間       | 1000個資料量需花費的時間        |
 | -------------- | ---------------------------- | ----------------------------- | ------------------------------- |
 | **O(1)**       | 1                            | 1                             | 1                               |
 | **O(log N)**   | 3                            | 6                             | 9                               |

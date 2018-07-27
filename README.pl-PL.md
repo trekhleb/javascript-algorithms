@@ -14,7 +14,8 @@ _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/)
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
-[_한국어_](README.ko-KR.md)
+[_한국어_](README.ko-KR.md),
+[_Français_](README.fr-FR.md)
 
 > Jesteśmy w trakcie pisania książki, która w jasny i specyficzny sposób, 
 wyjaśni główne algorytmy. Jeżeli chcesz dostać powiadomienie o tym kiedy 
@@ -245,7 +246,7 @@ Kolejność wzrastania algorytmów według Big O notacji.
 
 Poniżej umieszczamy listę najbardziej używanych Big O notacji i ich porównania wydajności do róznych rozmiarów z wprowadzonych danych.
 
-| Big O notacja | Obliczenia na 10 elementów | Obliczenia na 100 elementów | Obliczenia na 1000 elementów |
+| Big O notacja  | Obliczenia na 10 elementów   | Obliczenia na 100 elementów   | Obliczenia na 1000 elementów    |
 | -------------- | ---------------------------- | ----------------------------- | ------------------------------- |
 | **O(1)**       | 1                            | 1                             | 1                               |
 | **O(log N)**   | 3                            | 6                             | 9                               |
@@ -257,29 +258,29 @@ Poniżej umieszczamy listę najbardziej używanych Big O notacji i ich porównan
 
 ### Złożoność operacji struktury danych
 
-| Struktura Danych                | Dostęp    | Szukaj    | Umieszczanie | Usuwanie  | Komentarze  |
-| ------------------------------- | :-------: | :-------: | :-------: | :-------: | :-------- |
-| **Szereg**                      | 1         | n         | n         | n         |           |
-| **Sterta**                      | n         | n         | 1         | 1         |           |
-| **Kolejka**                     | n         | n         | 1         | 1         |           |
-| **Lista Powiązana**             | n         | n         | 1         | 1         |           |
-| **Tablica funkcji mieszanej**   | -         | n         | n         | n         | W wypadku idealnej funkcji skrótu koszt mógłby sie równać O(1) |
-| **Binarne Drzewo Poszukiwań**   | n         | n         | n         | n         | W przypadku zrównoważonych kosztów drzew byłoby O(log(n)) |
-| **B-Drzewo**                    | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **Drzewa czerwono-czarne**      | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **AVL Drzewo**                  | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **Filtr Blooma**                | -         | 1         | 1         | -         | Fałszywe dotatnie są możliwe podczas wyszukiwania |
+| Struktura Danych                | Dostęp    | Szukaj    | Umieszczanie | Usuwanie  | Komentarze   |
+| ------------------------------- | :-------: | :-------: | :----------: | :-------: | :----------- |
+| **Szereg**                      | 1         | n         | n            | n         |              |
+| **Sterta**                      | n         | n         | 1            | 1         |              |
+| **Kolejka**                     | n         | n         | 1            | 1         |              |
+| **Lista Powiązana**             | n         | n         | 1            | 1         |              |
+| **Tablica funkcji mieszanej**   | -         | n         | n            | n         | W wypadku idealnej funkcji skrótu koszt mógłby sie równać O(1) |
+| **Binarne Drzewo Poszukiwań**   | n         | n         | n            | n         | W przypadku zrównoważonych kosztów drzew byłoby O(log(n)) |
+| **B-Drzewo**                    | log(n)    | log(n)    | log(n)       | log(n)    |              |
+| **Drzewa czerwono-czarne**      | log(n)    | log(n)    | log(n)       | log(n)    |              |
+| **AVL Drzewo**                  | log(n)    | log(n)    | log(n)       | log(n)    |              |
+| **Filtr Blooma**                | -         | 1         | 1            | -         | Fałszywe dotatnie są możliwe podczas wyszukiwania |
 
 ### Sortowanie Tablic Złożoności Algorytmów
 
-| Nazwa                               | Najlepszy            | Średni             | Najgorszy              | Pamięć    | Stabilność  | Komentarze  |
-| ----------------------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
-| **Sortowanie bąbelkowe**            | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
-| **Sortowanie przez wstawianie**     | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
-| **Sortowanie przez wybieranie**     | n<sup>2</sup>   | n<sup>2</sup>       | n<sup>2</sup>       | 1         | No        |           |
-| **Sortowanie przez kopcowanie**     | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |           |
-| **Sortowanie przez scalanie**       | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Yes       |           |
-| **Szybkie sortowanie**              | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No        | Szybkie sortowanie jest zazwyczaj robione w miejsce O(log(n)) stosu przestrzeni |
+| Nazwa                               | Najlepszy       | Średni              | Najgorszy           | Pamięć    | Stabilność  | Komentarze  |
+| ----------------------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :---------: | :---------- |
+| **Sortowanie bąbelkowe**            | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes         |             |
+| **Sortowanie przez wstawianie**     | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes         |             |
+| **Sortowanie przez wybieranie**     | n<sup>2</sup>   | n<sup>2</sup>       | n<sup>2</sup>       | 1         | No          |             |
+| **Sortowanie przez kopcowanie**     | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No          |             |
+| **Sortowanie przez scalanie**       | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Yes         |             |
+| **Szybkie sortowanie**              | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No          | Szybkie sortowanie jest zazwyczaj robione w miejsce O(log(n)) stosu przestrzeni |
 | **Sortowanie Shella**               | n&nbsp;log(n)   | zależy od luki w układzie   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
-| **Sortowanie przez zliczanie**      | n + r           | n + r               | n + r               | n + r     | Yes       | r - największy numer w tablicy|
-| **Sortowanie Radix**                | n * k           | n * k               | n * k               | n + k     | Yes       | k -długość najdłuższego klucza |
+| **Sortowanie przez zliczanie**      | n + r           | n + r               | n + r               | n + r     | Yes         | r - największy numer w tablicy|
+| **Sortowanie Radix**                | n * k           | n * k               | n * k               | n + k     | Yes         | k -długość najdłuższego klucza |

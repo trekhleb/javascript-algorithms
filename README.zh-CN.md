@@ -11,7 +11,8 @@ _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
-[_Polski_](README.pl-PL.md)
+[_Polski_](README.pl-PL.md),
+[_Français_](README.fr-FR.md)
 
 > We’re writing a book that will clearly explain, in detail, the main algorithms. 
 If you’d like to be notified when the “JavaScript Algorithms” book 
@@ -184,12 +185,12 @@ npm test -- 'playground'
 
 以下是一些最常用的 大O标记法 列表以及它们与不同大小输入数据的性能比较。
 
-| 大O标记法 | 计算10个元素 | 计算100个元素 | 计算1000个元素  |
+| 大O标记法      | 计算10个元素                 | 计算100个元素                 | 计算1000个元素                  |
 | -------------- | ---------------------------- | ----------------------------- | ------------------------------- |
 | **O(1)**       | 1                            | 1                             | 1                               |
 | **O(log N)**   | 3                            | 6                             | 9                               |
 | **O(N)**       | 10                           | 100                           | 1000                            |
-| **O(N log N)** | 30                           | 600                            | 9000                            |
+| **O(N log N)** | 30                           | 600                           | 9000                            |
 | **O(N^2)**     | 100                          | 10000                         | 1000000                         |
 | **O(2^N)**     | 1024                         | 1.26e+29                      | 1.07e+301                       |
 | **O(N!)**      | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
