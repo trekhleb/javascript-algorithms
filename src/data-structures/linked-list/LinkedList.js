@@ -127,18 +127,14 @@ export default class LinkedList {
    * @return {LinkedListNode}
    */
   deleteTail() {
+    const deletedTail = this.tail;
     if (this.head === this.tail) {
       // There is only one node in linked list.
-      const deletedTail = this.tail;
       this.head = null;
       this.tail = null;
 
       return deletedTail;
     }
-
-    // If there are many nodes in linked list...
-    const deletedTail = this.tail;
-
     // Rewind to the last node and delete "next" link for the node before the last one.
     let currentNode = this.head;
     while (currentNode.next) {
