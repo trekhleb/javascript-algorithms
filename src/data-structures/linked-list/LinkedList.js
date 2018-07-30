@@ -135,7 +135,6 @@ export default class LinkedList {
 
       return deletedTail;
     }
-    
     // Rewind to the last node and delete "next" link for the node before the last one.
     let currentNode = this.head;
     while (currentNode.next) {
