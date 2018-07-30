@@ -1,88 +1,33 @@
-/**
- * A prime number used to create
- * the hash representation of a word
- *
- * Bigger the prime number,
- * bigger the hash value
- */
-const PRIME = 97;
-
-/**
- * Function that creates hash representation of the word.
- *
- * @param {string} word
- * @return {number}
- */
-export function hashWord(word) {
-  let hash = 0;
-
-  for (let charIndex = 0; charIndex < word.length; charIndex += 1) {
-    hash += word[charIndex].charCodeAt(0) * (PRIME ** charIndex);
-  }
-
-  return hash;
-}
-
-/**
- * Function that creates hash representation of the word
- * based on previous word (shifted by one character left) hash value.
- *
- * Recalculates the hash representation of a word so that it isn't
- * necessary to traverse the whole word again
- *
- * @param {number} prevHash
- * @param {string} prevWord
- * @param {string} newWord
- * @return {number}
- */
-export function reHashWord(prevHash, prevWord, newWord) {
-  const newWordLastIndex = newWord.length - 1;
-  let newHash = prevHash - prevWord[0].charCodeAt(0);
-  newHash /= PRIME;
-  newHash += newWord[newWordLastIndex].charCodeAt(0) * (PRIME ** newWordLastIndex);
-
-  return newHash;
-}
+import RabinFingerprint from '../../../utils/hash/rolling/Rabin_Fingerprint';
 
 /**
  * @param {string} text
  * @param {string} word
  * @return {number}
  */
-export function rabinKarp(text, word) {
-  // Calculate word hash that we will use for comparison with other substring hashes.
-  const wordHash = hashWord(word);
+export default function rabinKarp(text, word) {
+  const toNum = function toNum(character) {
+    const surrogate = character.codePointAt(1);
+    return ((surrogate === undefined) ? 0 : surrogate) + (character.codePointAt(0) * (2 ** 16));
+  };
+  const arrEq = (a1, a2) => ((a1.length === a2.length) && a1.every((val, idx) => val === a2[idx]));
 
-  let prevSegment = null;
-  let currentSegmentHash = null;
+  const wordArr = [...word].map(toNum);
+  const textArr = [...text].map(toNum);
 
-  // Go through all substring of the text that may match
-  for (let charIndex = 0; charIndex <= text.length - word.length; charIndex += 1) {
-    const currentSegment = text.substring(charIndex, charIndex + word.length);
+  // The prime generation function could depend on the inputs for collision guarantees.
+  const hasher = new RabinFingerprint(() => 229);
+  const cmpVal = hasher.init(wordArr);
 
-    // Calculate the hash of current substring.
-    if (currentSegmentHash === null) {
-      currentSegmentHash = hashWord(currentSegment);
-    } else {
-      currentSegmentHash = reHashWord(currentSegmentHash, prevSegment, currentSegment);
-    }
+  let currHash = hasher.init(textArr.slice(0, wordArr.length));
+  if ((currHash === cmpVal) && arrEq(wordArr, textArr.slice(0, wordArr.length))) {
+    return 0;
+  }
 
-    prevSegment = currentSegment;
-
-    // Compare the hash of current substring and seeking string.
-    if (wordHash === currentSegmentHash) {
-      // In case if hashes match let's check substring char by char.
-      let numberOfMatches = 0;
-
-      for (let deepCharIndex = 0; deepCharIndex < word.length; deepCharIndex += 1) {
-        if (word[deepCharIndex] === text[charIndex + deepCharIndex]) {
-          numberOfMatches += 1;
-        }
-      }
-
-      if (numberOfMatches === word.length) {
-        return charIndex;
-      }
+  for (let i = 0; i < (textArr.length - wordArr.length); i += 1) {
+    currHash = hasher.roll(textArr[i], textArr[i + wordArr.length]);
+    if ((currHash === cmpVal) && arrEq(wordArr, textArr.slice(i + 1, i + wordArr.length + 1))) {
+      return i + 1;
     }
   }
 
