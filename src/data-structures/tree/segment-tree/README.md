@@ -1,6 +1,6 @@
 # Segment Tree
 
-In computer science, a segment tree also known as a statistic tree 
+In computer science, a **segment tree** also known as a statistic tree 
 is a tree data structure used for storing information about intervals, 
 or segments. It allows querying which of the stored segments contain 
 a given point. It is, in principle, a static structure; that is, 
