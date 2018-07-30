@@ -189,7 +189,13 @@ export default class LinkedList {
 
     return nodes;
   }
-
+  
+  /**
+   * @param {Array} Array of nodes
+   */
+  fromArray(arr = []) {
+    arr.map(node => this.append(node.value));
+  }
   /**
    * @param {function} [callback]
    * @return {string}
