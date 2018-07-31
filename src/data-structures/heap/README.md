@@ -1,6 +1,6 @@
 # Heap (data-structure)
 
-In computer science, a heap is a specialized tree-based 
+In computer science, a **heap** is a specialized tree-based 
 data structure that satisfies the heap property described
 below.
 
