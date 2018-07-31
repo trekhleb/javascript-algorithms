@@ -197,7 +197,7 @@ export default class LinkedList {
    */
   addToPosition({ position = undefined, value = undefined }) {
     if (!this.head || value === undefined) {
-        return null;
+      return null;
     }
 
     if (position === undefined) {
@@ -214,8 +214,8 @@ export default class LinkedList {
     let i = 1;
 
     while (currentNode.next) {
-      if (( i+1 ) === position) {
-        const newNode = new LinkedListNode( value );
+      if (( i + 1 ) === position) {
+        const newNode = new LinkedListNode(value);
         newNode.next = currentNode.next;
         currentNode.next = newNode;
       }
