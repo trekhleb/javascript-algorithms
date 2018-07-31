@@ -199,20 +199,21 @@ export default class LinkedList {
 	  if (!this.head || value == undefined)
 		  return null
 
-		  if (position == undefined)
-		  {
-			  this.append(value);
-			  return this;
-		  }
+	  if (position == undefined)
+	  {
+		  this.append(value);
+		  return this;
+	  }
 
 	  if (position == 1)
 	  {
 		  this.prepend(value);
 		  return this;
 	  }
-	
+
 	  let currentNode = this.head;
 	  let i = 1;
+
 	  while (currentNode.next) 
 	  {
 		  if ((i+1) == position)
