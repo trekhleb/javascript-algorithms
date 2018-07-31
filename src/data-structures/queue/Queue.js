@@ -2,7 +2,7 @@ import LinkedList from '../linked-list/LinkedList';
 
 export default class Queue {
   constructor() {
-    this.linkedList = (function () {
+    this.linkedList = ( () => {
       const temp = new LinkedList();
 
       return {
@@ -11,7 +11,7 @@ export default class Queue {
         },
 
         peek: () => {
-          if(!temp.head) {
+          if (!temp.head) {
             return null;
           }
 
@@ -29,9 +29,9 @@ export default class Queue {
 
         toString: (callback) => {
           return temp.toString(callback);
-        }
+        },
       };
-    }) ();
+    } )();
   }
 
   isEmpty() {
