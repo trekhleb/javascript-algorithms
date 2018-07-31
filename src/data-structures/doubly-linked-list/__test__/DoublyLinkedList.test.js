@@ -46,7 +46,7 @@ describe('DoublyLinkedList', () => {
     linkedList1.append(3);
     linkedList1.append(4);
     linkedList1.append(5);
-    let array = linkedList1.toArray();
+    const array = linkedList1.toArray();
 
     const linkedList2 = new DoublyLinkedList();
     linkedList2.fromArray(array);
