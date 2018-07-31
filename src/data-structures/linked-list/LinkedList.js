@@ -196,37 +196,35 @@ export default class LinkedList {
    * @return {LinkedListNode}
    */
   addToPosition({position = undefined, value = undefined}) {
-	  if (!this.head || value == undefined)
-		  return null
+    if (!this.head || value === undefined) {
+        return null;
+    }
 
-	  if (position == undefined)
-	  {
-		  this.append(value);
-		  return this;
-	  }
+    if (position === undefined) {
+      this.append(value);
+      return this;
+    }
 
-	  if (position == 1)
-	  {
-		  this.prepend(value);
-		  return this;
-	  }
+    if (position === 1) {
+      this.prepend(value);
+      return this;
+    }
 
-	  let currentNode = this.head;
-	  let i = 1;
+    let currentNode = this.head;
+    let i = 1;
 
-	  while (currentNode.next) 
-	  {
-		  if ((i+1) == position)
-		  {
-			  const newNode = new LinkedListNode(value);
-			  newNode.next = currentNode.next;
-			  currentNode.next = newNode;
-		  }
-		  
-		  currentNode = currentNode.next;
-		  ++i;
-	  }
-	  return this;
+    while (currentNode.next) {
+      if ((i+1) === position) {
+        const newNode = new LinkedListNode(value);
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+      }
+
+      currentNode = currentNode.next;
+      ++i;
+    }
+
+    return this;
   }
 
   /**
