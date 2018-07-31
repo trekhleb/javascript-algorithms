@@ -39,7 +39,7 @@ describe('LinkedList', () => {
     linkedList1.append(4);
     linkedList1.append(5);
     const array = linkedList1.toArray();
-    
+
     const linkedList2 = new LinkedList();
     linkedList2.fromArray(array);
     expect(linkedList2.toString()).toBe('1,2,3,4,5');
