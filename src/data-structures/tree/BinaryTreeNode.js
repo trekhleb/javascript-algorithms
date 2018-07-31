@@ -1,14 +1,18 @@
 import Comparator from '../../utils/comparator/Comparator';
+import HashTable from '../hash-table/HashTable';
 
 export default class BinaryTreeNode {
   /**
-   * @param {*} [value]
+   * @param {*} [value] - node value.
    */
   constructor(value = null) {
     this.left = null;
     this.right = null;
     this.parent = null;
     this.value = value;
+
+    // Any node related meta information may be stored here.
+    this.meta = new HashTable();
 
     // This comparator is used to compare binary tree nodes with each other.
     this.nodeComparator = new Comparator();
@@ -48,6 +52,47 @@ export default class BinaryTreeNode {
    */
   get balanceFactor() {
     return this.leftHeight - this.rightHeight;
+  }
+
+  /**
+   * Get parent's sibling if it exists.
+   * @return {BinaryTreeNode}
+   */
+  get uncle() {
+    // Check if current node has parent.
+    if (!this.parent) {
+      return undefined;
+    }
+
+    // Check if current node has grand-parent.
+    if (!this.parent.parent) {
+      return undefined;
+    }
+
+    // Check if grand-parent has two children.
+    if (!this.parent.parent.left || !this.parent.parent.right) {
+      return undefined;
+    }
+
+    // So for now we know that current node has grand-parent and this
+    // grand-parent has two children. Let's find out who is the uncle.
+    if (this.nodeComparator.equal(this.parent, this.parent.parent.left)) {
+      // Right one is an uncle.
+      return this.parent.parent.right;
+    }
+
+    // Left one is an uncle.
+    return this.parent.parent.left;
+  }
+
+  /**
+   * @param {*} value
+   * @return {BinaryTreeNode}
+   */
+  setValue(value) {
+    this.value = value;
+
+    return this;
   }
 
   /**
@@ -131,6 +176,16 @@ export default class BinaryTreeNode {
     }
 
     return false;
+  }
+
+  /**
+   * @param {BinaryTreeNode} sourceNode
+   * @param {BinaryTreeNode} targetNode
+   */
+  static copyNode(sourceNode, targetNode) {
+    targetNode.setValue(sourceNode.value);
+    targetNode.setLeft(sourceNode.left);
+    targetNode.setRight(sourceNode.right);
   }
 
   /**

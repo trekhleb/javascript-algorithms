@@ -1,6 +1,8 @@
 import Comparator from '../../../utils/comparator/Comparator';
 
 /**
+ * Linear search implementation.
+ *
  * @param {*[]} array
  * @param {*} seekElement
  * @param {function(a, b)} [comparatorCallback]

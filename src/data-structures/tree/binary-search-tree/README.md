@@ -1,6 +1,6 @@
 # Binary Search Tree
 
-In computer science, binary search trees (BST), sometimes called 
+In computer science, **binary search trees** (BST), sometimes called 
 ordered or sorted binary trees, are a particular type of container: 
 data structures that store "items" (such as numbers, names etc.) 
 in memory. They allow fast lookup, addition and removal of 
@@ -31,3 +31,4 @@ The leaves are not drawn.
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Binary_search_tree)
 - [Inserting to BST on YouTube](https://www.youtube.com/watch?v=wcIRPqTR3Kc&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=9&t=0s)
+- [BST Interactive Visualisations](https://www.cs.usfca.edu/~galles/visualization/BST.html)

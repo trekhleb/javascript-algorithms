@@ -8,6 +8,11 @@ comparisons, where `n` is the length of the list.
 
 ![Linear Search](https://www.tutorialspoint.com/data_structures_algorithms/images/linear_search.gif)
 
+## Complexity
+
+**Time Complexity**: `O(n)` - since in worst case we're checking each element
+exactly once.
+
 ## References
 - [Wikipedia](https://en.wikipedia.org/wiki/Linear_search)
 - [TutorialsPoint](https://www.tutorialspoint.com/data_structures_algorithms/linear_search_algorithm.htm)

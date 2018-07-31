@@ -1,42 +1,30 @@
 /**
  * @param {*[]} permutationOptions
+ * @param {number} permutationLength
  * @return {*[]}
  */
-export default function permutateWithRepetitions(permutationOptions) {
-  // There is no permutations for empty array.
-  if (!permutationOptions || permutationOptions.length === 0) {
-    return [];
+export default function permutateWithRepetitions(
+  permutationOptions,
+  permutationLength = permutationOptions.length,
+) {
+  if (permutationLength === 1) {
+    return permutationOptions.map(permutationOption => [permutationOption]);
   }
 
-  // There is only one permutation for the 1-element array.
-  if (permutationOptions.length === 1) {
-    return [permutationOptions];
-  }
+  // Init permutations array.
+  const permutations = [];
 
-  // Let's create initial set of permutations.
-  let previousPermutations = permutationOptions.map(option => [option]);
-  let currentPermutations = [];
-  let permutationSize = 1;
+  // Go through all options and join it to the smaller permutations.
+  permutationOptions.forEach((currentOption) => {
+    const smallerPermutations = permutateWithRepetitions(
+      permutationOptions,
+      permutationLength - 1,
+    );
 
-  // While the size of each permutation is less then or equal to options length...
-  while (permutationSize < permutationOptions.length) {
-    // Reset all current permutations.
-    currentPermutations = [];
+    smallerPermutations.forEach((smallerPermutation) => {
+      permutations.push([currentOption].concat(smallerPermutation));
+    });
+  });
 
-    for (let permIndex = 0; permIndex < previousPermutations.length; permIndex += 1) {
-      for (let optionIndex = 0; optionIndex < permutationOptions.length; optionIndex += 1) {
-        let currentPermutation = previousPermutations[permIndex];
-        currentPermutation = currentPermutation.concat([permutationOptions[optionIndex]]);
-        currentPermutations.push(currentPermutation);
-      }
-    }
-
-    // Make current permutations to be the previous ones.
-    previousPermutations = currentPermutations.slice(0);
-
-    // Increase permutation size counter.
-    permutationSize += 1;
-  }
-
-  return currentPermutations;
+  return permutations;
 }

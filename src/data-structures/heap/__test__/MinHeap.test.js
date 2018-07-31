@@ -1,4 +1,5 @@
 import MinHeap from '../MinHeap';
+import Comparator from '../../../utils/comparator/Comparator';
 
 describe('MinHeap', () => {
   it('should create an empty min heap', () => {
@@ -6,14 +7,14 @@ describe('MinHeap', () => {
 
     expect(minHeap).toBeDefined();
     expect(minHeap.peek()).toBeNull();
-    expect(minHeap.isEmpty()).toBeTruthy();
+    expect(minHeap.isEmpty()).toBe(true);
   });
 
   it('should add items to the heap and heapify it up', () => {
     const minHeap = new MinHeap();
 
     minHeap.add(5);
-    expect(minHeap.isEmpty()).toBeFalsy();
+    expect(minHeap.isEmpty()).toBe(false);
     expect(minHeap.peek()).toBe(5);
     expect(minHeap.toString()).toBe('5');
 
@@ -146,5 +147,26 @@ describe('MinHeap', () => {
     expect(minHeap.remove(5).toString()).toEqual('3,4');
     expect(minHeap.remove(3).toString()).toEqual('4');
     expect(minHeap.remove(4).toString()).toEqual('');
+  });
+
+  it('should be possible to remove items from heap with custom finding comparator', () => {
+    const minHeap = new MinHeap();
+    minHeap.add('dddd');
+    minHeap.add('ccc');
+    minHeap.add('bb');
+    minHeap.add('a');
+
+    expect(minHeap.toString()).toBe('a,bb,ccc,dddd');
+
+    const comparator = new Comparator((a, b) => {
+      if (a.length === b.length) {
+        return 0;
+      }
+
+      return a.length < b.length ? -1 : 1;
+    });
+
+    minHeap.remove('hey', comparator);
+    expect(minHeap.toString()).toBe('a,bb,dddd');
   });
 });

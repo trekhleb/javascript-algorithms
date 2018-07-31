@@ -26,6 +26,10 @@ describe('QuickSort', () => {
     SortTester.testSortStability(QuickSort);
   });
 
+  it('should sort negative numbers', () => {
+    SortTester.testNegativeNumbersSort(QuickSort);
+  });
+
   it('should visit EQUAL array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
       QuickSort,

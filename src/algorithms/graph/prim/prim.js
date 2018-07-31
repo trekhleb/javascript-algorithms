@@ -60,8 +60,8 @@ export default function prim(graph) {
       nextMinVertex.getEdges().forEach((graphEdge) => {
         // Add only vertices that link to unvisited nodes.
         if (
-          !visitedVertices[graphEdge.startVertex.getKey()] ||
-          !visitedVertices[graphEdge.endVertex.getKey()]
+          !visitedVertices[graphEdge.startVertex.getKey()]
+          || !visitedVertices[graphEdge.endVertex.getKey()]
         ) {
           edgesQueue.add(graphEdge, graphEdge.weight);
         }

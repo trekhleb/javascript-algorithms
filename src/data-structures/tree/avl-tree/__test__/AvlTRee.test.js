@@ -185,4 +185,58 @@ describe('AvlTree', () => {
     expect(tree.root.height).toBe(2);
     expect(tree.toString()).toBe('6,8,9,18,21,22,43');
   });
+
+  it('should do left right rotation and keeping left right node safe', () => {
+    const tree = new AvlTree();
+
+    tree.insert(30);
+    tree.insert(15);
+    tree.insert(40);
+    tree.insert(10);
+    tree.insert(18);
+    tree.insert(35);
+    tree.insert(45);
+    tree.insert(5);
+    tree.insert(12);
+
+    expect(tree.toString()).toBe('5,10,12,15,18,30,35,40,45');
+    expect(tree.root.height).toBe(3);
+
+    tree.insert(11);
+
+    expect(tree.toString()).toBe('5,10,11,12,15,18,30,35,40,45');
+    expect(tree.root.height).toBe(3);
+  });
+
+  it('should do left right rotation and keeping left right node safe', () => {
+    const tree = new AvlTree();
+
+    tree.insert(30);
+    tree.insert(15);
+    tree.insert(40);
+    tree.insert(10);
+    tree.insert(18);
+    tree.insert(35);
+    tree.insert(45);
+    tree.insert(42);
+    tree.insert(47);
+
+    expect(tree.toString()).toBe('10,15,18,30,35,40,42,45,47');
+    expect(tree.root.height).toBe(3);
+
+    tree.insert(43);
+
+    expect(tree.toString()).toBe('10,15,18,30,35,40,42,43,45,47');
+    expect(tree.root.height).toBe(3);
+  });
+
+  it('should throw an error when trying to remove the node', () => {
+    const removeNodeAvlTree = () => {
+      const tree = new AvlTree();
+
+      tree.remove(1);
+    };
+
+    expect(removeNodeAvlTree).toThrowError();
+  });
 });

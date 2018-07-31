@@ -22,6 +22,10 @@ describe('QuickSortInPlace', () => {
     SortTester.testSortWithCustomComparator(QuickSortInPlace);
   });
 
+  it('should sort negative numbers', () => {
+    SortTester.testNegativeNumbersSort(QuickSortInPlace);
+  });
+
   it('should visit EQUAL array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
       QuickSortInPlace,

@@ -6,13 +6,17 @@ export default class BinarySearchTree {
    */
   constructor(nodeValueCompareFunction) {
     this.root = new BinarySearchTreeNode(null, nodeValueCompareFunction);
+
+    // Steal node comparator from the root.
+    this.nodeComparator = this.root.nodeComparator;
   }
 
   /**
    * @param {*} value
+   * @return {BinarySearchTreeNode}
    */
   insert(value) {
-    this.root.insert(value);
+    return this.root.insert(value);
   }
 
   /**
@@ -25,6 +29,7 @@ export default class BinarySearchTree {
 
   /**
    * @param {*} value
+   * @return {boolean}
    */
   remove(value) {
     return this.root.remove(value);

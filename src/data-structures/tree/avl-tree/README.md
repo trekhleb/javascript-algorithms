@@ -1,6 +1,6 @@
 # AVL Tree
 
-In computer science, an AVL tree (named after inventors 
+In computer science, an **AVL tree** (named after inventors 
 Adelson-Velsky and Landis) is a self-balancing binary search 
 tree. It was the first such data structure to be invented. 
 In an AVL tree, the heights of the two child subtrees of any
@@ -45,3 +45,4 @@ AVL tree with balance factors (green)
 * [Tutorials Point](https://www.tutorialspoint.com/data_structures_algorithms/avl_tree_algorithm.htm)
 * [BTech](http://btechsmartclass.com/DS/U5_T2.html)
 * [AVL Tree Insertion on YouTube](https://www.youtube.com/watch?v=rbg7Qf8GkQ4&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=12&)
+* [AVL Tree Interactive Visualisations](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)

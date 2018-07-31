@@ -1,26 +1,29 @@
-// Calculate fibonacci number at specific position using Dynamic Programming approach.
-export default function fibonacci(numberPosition) {
-  if (numberPosition === 1) {
-    return 1;
+/**
+ * Return a fibonacci sequence as an array.
+ *
+ * @param n
+ * @return {number[]}
+ */
+export default function fibonacci(n) {
+  const fibSequence = [1];
+
+  let currentValue = 1;
+  let previousValue = 0;
+
+  if (n === 1) {
+    return fibSequence;
   }
 
-  let iterationsCounter = numberPosition - 1;
-
-  // Calculated fibonacci number.
-  let fib = null;
-  // Previous fibonacci number.
-  let fibPrev = 1;
-  // Before previous fibonacci number.
-  let fibPrevPrev = 0;
+  let iterationsCounter = n - 1;
 
   while (iterationsCounter) {
-    // Calculate current value using two previous ones.
-    fib = fibPrev + fibPrevPrev;
-    // Shift previous values.
-    fibPrevPrev = fibPrev;
-    fibPrev = fib;
+    currentValue += previousValue;
+    previousValue = currentValue - previousValue;
+
+    fibSequence.push(currentValue);
+
     iterationsCounter -= 1;
   }
 
-  return fib;
+  return fibSequence;
 }
