@@ -2,7 +2,8 @@ import ComplexNumber from './complex';
 
 /**
  * Return the no of bits used in the binary representation of input
- * @param {number} [input]
+ * @param {Number} [input]
+ * @return {Number}
  */
 function bitLength(input) {
   let bitlen = 0;
@@ -14,8 +15,9 @@ function bitLength(input) {
 
 /**
  * Returns the number which is the flipped binary representation of input
- * @param {number} [input]
- * @param {number} [bitlen]
+ * @param {Number} [input]
+ * @param {Number} [bitlen]
+ * @return {Number}
  */
 function reverseBits(input, bitlen) {
   let reversedBits = 0;
@@ -30,7 +32,8 @@ function reverseBits(input, bitlen) {
  * Returns the radix-2 fast fourier transform of the given array
  * Optionally computes the radix-2 inverse fast fourier transform
  * @param {ComplexNumber[]} [inputData]
- * @param {bool} [inverse]
+ * @param {Boolean} [inverse]
+ * @return {ComplexNumber[]}
  */
 export default function fastFourierTransform(inputData, inverse = false) {
   const bitlen = bitLength(inputData.length - 1);

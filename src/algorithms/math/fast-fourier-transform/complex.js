@@ -1,7 +1,7 @@
 export default class ComplexNumber {
   /**
-  * @param{number} [real]
-  * @param{number} [imaginary]
+  * @param {Number} [real]
+  * @param {Number} [imaginary]
   */
   constructor(real, imaginary) {
     this.real = real;
@@ -9,21 +9,24 @@ export default class ComplexNumber {
   }
 
   /**
-  * @param{ComplexNumber} [addend]
+  * @param {ComplexNumber} [addend]
+  * @return {ComplexNumber}
   */
   add(addend) {
     return new ComplexNumber(this.real + addend.real, this.imaginary + addend.imaginary);
   }
 
   /**
-  * @param{ComplexNumber} [subtrahend]
+  * @param {ComplexNumber} [subtrahend]
+  * @return {ComplexNumber}
   */
   subtract(subtrahend) {
     return new ComplexNumber(this.real - subtrahend.real, this.imaginary - subtrahend.imaginary);
   }
 
   /**
-  * @param{ComplexNumber} [multiplicand]
+  * @param {ComplexNumber} [multiplicand]
+  * @return {ComplexNumber}
   */
   multiply(multiplicand) {
     const real = this.real * multiplicand.real - this.imaginary * multiplicand.imaginary;
