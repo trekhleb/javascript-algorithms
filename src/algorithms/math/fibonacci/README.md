@@ -18,4 +18,4 @@ The Fibonacci spiral: an approximation of the golden spiral created by drawing c
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_number)
-- [SICP](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-11.html#%_sec_1.2.4)
+- [SICP](https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-11.html#%_thm_1.19)

@@ -2,7 +2,7 @@
  * Calculate the Nth fibonacci number in LogN steps
  *
  * Found in exercise 1.19 of SICP
- * https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-11.html#%_sec_1.2.4
+ * https://mitpress.mit.edu/sites/default/files/sicp/full-text/book/book-Z-H-11.html#%_thm_1.19
  *
  * @param {number} n
  * @return {number}
