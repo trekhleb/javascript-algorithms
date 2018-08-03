@@ -9,7 +9,5 @@
   *
   */
 export default function extractBits(number, k, p) {
-
     return (((1 << k) - 1) & (number >> (p - 1)));
-
 }
