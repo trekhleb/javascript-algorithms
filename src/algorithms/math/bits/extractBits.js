@@ -1,5 +1,5 @@
 /**
- * @param {number} number, size(k), position(p)
+ * @param {number, number, number}
  * @return {number}
  */
  
