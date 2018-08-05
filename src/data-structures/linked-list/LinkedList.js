@@ -88,6 +88,7 @@ export default class LinkedList {
 
     // Check if tail must be deleted.
     if (this.compare.equal(this.tail.value, value)) {
+      deletedNode = this.tail;
       this.tail = currentNode;
     }
 
