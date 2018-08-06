@@ -1,6 +1,6 @@
 # Bloom Filter
 
-A bloom filter is a space-efficient probabilistic 
+A **bloom filter** is a space-efficient probabilistic 
 data structure designed to test whether an element 
 is present in a set. It is designed to be blazingly 
 fast and use minimal memory at the cost of potential

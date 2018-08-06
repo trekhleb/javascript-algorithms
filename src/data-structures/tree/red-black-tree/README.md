@@ -1,6 +1,6 @@
 # Red–Black Tree
 
-A red–black tree is a kind of self-balancing binary search 
+A **red–black tree** is a kind of self-balancing binary search 
 tree in computer science. Each node of the binary tree has 
 an extra bit, and that bit is often interpreted as the 
 color (red or black) of the node. These color bits are used 
@@ -74,7 +74,7 @@ unlike ordinary binary search trees.
 
 #### Left Right Case (See g, p and x)
 
-![Red Black Tree Balancing](https://www.geeksforgeeks.org/wp-content/uploads/redBlackCase3d.png)
+![Red Black Tree Balancing](https://www.geeksforgeeks.org/wp-content/uploads/redBlackCase3b.png)
 
 #### Right Right Case (See g, p and x)
 
@@ -82,7 +82,7 @@ unlike ordinary binary search trees.
 
 #### Right Left Case (See g, p and x)
 
-![Red Black Tree Balancing](https://www.geeksforgeeks.org/wp-content/uploads/redBlackCase3c.png)
+![Red Black Tree Balancing](https://www.geeksforgeeks.org/wp-content/uploads/redBlackCase3d.png)
 
 ## References
 
