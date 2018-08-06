@@ -214,6 +214,15 @@ export default class DoublyLinkedList {
   }
 
   /**
+   * @param {DoublyLinkedListNode[]} array - Array of nodes
+   * @return {DoublyLinkedListNode[]}
+   */
+  fromArray(arr = []) {
+    arr.forEach(node => this.append(node.value));
+    return this;
+  }
+
+  /**
    * @param {function} [callback]
    * @return {string}
    */
