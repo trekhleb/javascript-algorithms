@@ -201,9 +201,16 @@ export default class LinkedList {
   }
 
   /**
+   * @param {LinkedListNode[]} array - Array of nodes
+   */
+  fromArray(arr = []) {
+    arr.forEach(node => this.append(node.value));
+  }
+  /**
    * @param {function} [callback]
    * @return {string}
    */
+
   toString(callback) {
     return this.toArray().map(node => node.toString(callback)).toString();
   }
