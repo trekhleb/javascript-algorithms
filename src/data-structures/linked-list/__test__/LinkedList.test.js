@@ -31,6 +31,20 @@ describe('LinkedList', () => {
     expect(linkedList.toString()).toBe('3,2,1');
   });
 
+  it('should get nodes from other Linked list', () => {
+    const linkedList1 = new LinkedList();
+    linkedList1.append(1);
+    linkedList1.append(2);
+    linkedList1.append(3);
+    linkedList1.append(4);
+    linkedList1.append(5);
+    const array = linkedList1.toArray();
+
+    const linkedList2 = new LinkedList();
+    linkedList2.fromArray(array);
+    expect(linkedList2.toString()).toBe('1,2,3,4,5');
+  });
+
   it('should delete node by value from linked list', () => {
     const linkedList = new LinkedList();
 
