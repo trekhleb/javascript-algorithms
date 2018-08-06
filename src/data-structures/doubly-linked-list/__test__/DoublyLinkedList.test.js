@@ -36,21 +36,11 @@ describe('DoublyLinkedList', () => {
     expect(linkedList.toString()).toBe('3,2,1');
   });
 
-  it('should append new nodes from array', () => {
-    const linkedList1 = new DoublyLinkedList();
-    linkedList1.append(1);
-    linkedList1.append(1);
-    linkedList1.append(2);
-    linkedList1.append(3);
-    linkedList1.append(3);
-    linkedList1.append(3);
-    linkedList1.append(4);
-    linkedList1.append(5);
-    const array = linkedList1.toArray();
+  it('should create linked list from array', () => {
+    const linkedList = new DoublyLinkedList();
+    linkedList.fromArray([1, 1, 2, 3, 3, 3, 4, 5]);
 
-    const linkedList2 = new DoublyLinkedList();
-    linkedList2.fromArray(array);
-    expect(linkedList2.toString()).toBe('1,1,2,3,3,3,4,5');
+    expect(linkedList.toString()).toBe('1,1,2,3,3,3,4,5');
   });
 
   it('should delete node by value from linked list', () => {

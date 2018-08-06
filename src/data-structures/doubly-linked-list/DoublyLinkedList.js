@@ -214,11 +214,12 @@ export default class DoublyLinkedList {
   }
 
   /**
-   * @param {DoublyLinkedListNode[]} array - Array of nodes
-   * @return {DoublyLinkedListNode[]}
+   * @param {*[]} values - Array of values that need to be converted to linked list.
+   * @return {DoublyLinkedList}
    */
-  fromArray(arr = []) {
-    arr.forEach(node => this.append(node.value));
+  fromArray(values) {
+    values.forEach(value => this.append(value));
+
     return this;
   }
 
