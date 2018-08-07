@@ -43,7 +43,7 @@ los datos.
     * `A` [Arbol AVL ](src/data-structures/tree/avl-tree)
     * `A` [Árbol Rojo-Negro](src/data-structures/tree/red-black-tree)
     * `A` [Árbol de segmentos](src/data-structures/tree/segment-tree) - con ejemplos de consultas de rango mín/máx/suma
-    * `A` [Arbol de Fenwick ](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
+    * `A` [Arbol de Fenwick ](src/data-structures/tree/fenwick-tree) (Árbol binario indexado)
 * `A` [Grafo](src/data-structures/graph) (con dirección y sin dirección)
 * `A` [Conjunto disjunto](src/data-structures/disjoint-set)
 * `A` [Filtro Bloom](src/data-structures/bloom-filter)
@@ -54,33 +54,33 @@ Un algoritmo es una especificación inequívoca de cómo resolver una clase de p
 
 `P` - Principiante, `A` - Avanzado
 
-### Algorithms by Topic
+### Algoritmos por Tema
 
-* **Math**
-  * `P` [Bit Manipulation](src/algorithms/math/bits) - set/get/update/clear bits, multiplication/division by two, make negative etc.
+* **Matematica**
+  * `P` [Manipulacion de bits](src/algorithms/math/bits) - setear/obtener/actualizar/limpiar bits, multiplication/division por dos, hacer negativo, etc.
   * `P` [Factorial](src/algorithms/math/factorial) 
-  * `P` [Fibonacci Number](src/algorithms/math/fibonacci)
-  * `P` [Primality Test](src/algorithms/math/primality-test) (trial division method)
-  * `P` [Euclidean Algorithm](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
-  * `P` [Least Common Multiple](src/algorithms/math/least-common-multiple) (LCM)
-  * `P` [Sieve of Eratosthenes](src/algorithms/math/sieve-of-eratosthenes) - finding all prime numbers up to any given limit
-  * `P` [Is Power of Two](src/algorithms/math/is-power-of-two) - check if the number is power of two (naive and bitwise algorithms)
-  * `P` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
-  * `A` [Integer Partition](src/algorithms/math/integer-partition)
-  * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
-* **Sets**
-  * `P` [Cartesian Product](src/algorithms/sets/cartesian-product) - product of multiple sets
-  * `P` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
-  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set
-  * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
-  * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
-  * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
-  * `A` [Longest Increasing Subsequence](src/algorithms/sets/longest-increasing-subsequence)
-  * `A` [Shortest Common Supersequence](src/algorithms/sets/shortest-common-supersequence) (SCS)
-  * `A` [Knapsack Problem](src/algorithms/sets/knapsack-problem) - "0/1" and "Unbound" ones
-  * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray) - "Brute Force" and "Dynamic Programming" (Kadane's) versions
-  * `A` [Combination Sum](src/algorithms/sets/combination-sum) - find all combinations that form specific sum
-* **Strings**
+  * `P` [Numero de Fibonacci](src/algorithms/math/fibonacci)
+  * `P` [Prueba de Primacia](src/algorithms/math/primality-test) (metodo de division de prueba)
+  * `P` [Algoritmo Euclideo](src/algorithms/math/euclidean-algorithm) - Calcular el maximo comun divisor (MCD)
+  * `P` [Minimo comun multiplo](src/algorithms/math/least-common-multiple) (MCM)
+  * `P` [Tamiz de Eratosthenes](src/algorithms/math/sieve-of-eratosthenes) - encontrar todos los números primos hasta cualquier límite dado
+  * `P` [Es la potencia de dos](src/algorithms/math/is-power-of-two) - comprueba si el número es la potencia de dos (algoritmos ingenuos y de bits)
+  * `P` [Triangulo de Pascal](src/algorithms/math/pascal-triangle)
+  * `A` [Particion Entera](src/algorithms/math/integer-partition)
+  * `A` [Algortimo π de Liu Hui  ](src/algorithms/math/liu-hui) - aproximado π cálculos basados en N-gons
+* **Conjuntos**
+  * `P` [Producto Cartesiano](src/algorithms/sets/cartesian-product) - pproducto de múltiples conjuntos
+  * `P` [Permutación de Fisher–Yates](src/algorithms/sets/fisher-yates) - permutación aleatoria de una secuencia finita
+  * `A` [Conjunto Potencia](src/algorithms/sets/power-set) - todos los subconjuntos de un conjunto
+  * `A` [Permutaciones](src/algorithms/sets/permutations) (con y sin repeticiones)
+  * `A` [Combinaciones](src/algorithms/sets/combinations) (con y sin repeticiones)
+  * `A` [Subsecuencia Común más Larga](src/algorithms/sets/longest-common-subsequence) (SCL)
+  * `A` [Subsecuencia Creciente mas Larga](src/algorithms/sets/longest-increasing-subsequence)
+  * `A` [Supersequencia Común Más Corta](src/algorithms/sets/shortest-common-supersequence) (SCS)
+  * `A` [Problema de la Mochila](src/algorithms/sets/knapsack-problem) - "0/1" y unos sin consolidar
+  * `A` [Maxima Subcoleccion](src/algorithms/sets/maximum-subarray) - versiones de "Fuerza Bruta" y "Programación Dinámica" ( de Kadane's)
+  * `A` [Suma Combinada](src/algorithms/sets/combination-sum) -  encuentra todas las combinaciones que forman una suma específica.
+* **Cadenas de caracteres**
   * `P` [Hamming Distance](src/algorithms/string/hamming-distance) - number of positions at which the symbols are different
   * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * `A` [Knuth–Morris–Pratt Algorithm](src/algorithms/string/knuth-morris-pratt) (KMP Algorithm) - substring search (pattern matching)
@@ -88,12 +88,12 @@ Un algoritmo es una especificación inequívoca de cómo resolver una clase de p
   * `A` [Rabin Karp Algorithm](src/algorithms/string/rabin-karp) - substring search
   * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
   * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
-* **Searches**
+* **Busquedas**
   * `P` [Linear Search](src/algorithms/search/linear-search)
   * `P` [Jump Search](src/algorithms/search/jump-search) (or Block Search) - search in sorted array
   * `P` [Binary Search](src/algorithms/search/binary-search) - search in sorted array
   * `P` [Interpolation Search](src/algorithms/search/interpolation-search) - search in uniformly distributed sorted array
-* **Sorting**
+* **Ordenamiento**
   * `P` [Bubble Sort](src/algorithms/sorting/bubble-sort)
   * `P` [Selection Sort](src/algorithms/sorting/selection-sort)
   * `P` [Insertion Sort](src/algorithms/sorting/insertion-sort)
@@ -103,10 +103,10 @@ Un algoritmo es una especificación inequívoca de cómo resolver una clase de p
   * `P` [Shellsort](src/algorithms/sorting/shell-sort)
   * `P` [Counting Sort](src/algorithms/sorting/counting-sort)
   * `P` [Radix Sort](src/algorithms/sorting/radix-sort)
-* **Trees**
+* **Arboles**
   * `P` [Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
   * `P` [Breadth-First Search](src/algorithms/tree/breadth-first-search) (BFS)
-* **Graphs**
+* **Grafos**
   * `P` [Depth-First Search](src/algorithms/graph/depth-first-search) (DFS)
   * `P` [Breadth-First Search](src/algorithms/graph/breadth-first-search) (BFS)
   * `P` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
@@ -122,7 +122,7 @@ Un algoritmo es una especificación inequívoca de cómo resolver una clase de p
   * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * `A` [Strongly Connected Components](src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
-* **Uncategorized**
+* **Sin Categoria**
   * `P` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `P` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples 
@@ -131,13 +131,13 @@ Un algoritmo es una especificación inequívoca de cómo resolver una clase de p
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
 
-### Algorithms by Paradigm
+### Algoritmos por Paradigma
 
 An algorithmic paradigm is a generic method or approach which underlies the design of a class
 of algorithms. It is an abstraction higher than the notion of an algorithm, just as an
 algorithm is an abstraction higher than a computer program.
 
-* **Brute Force** - look at all the possibilities and selects the best solution
+* **Fuerza Bruta** - look at all the possibilities and selects the best solution
   * `P` [Linear Search](src/algorithms/search/linear-search)
   * `P` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
@@ -148,7 +148,7 @@ algorithm is an abstraction higher than a computer program.
   * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
   * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
   * `A` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-* **Divide and Conquer** - divide the problem into smaller parts and then solve those parts
+* **Divide y venceras** - divide the problem into smaller parts and then solve those parts
   * `P` [Binary Search](src/algorithms/search/binary-search)
   * `P` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `P` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
@@ -160,7 +160,7 @@ algorithm is an abstraction higher than a computer program.
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
   * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
-* **Dynamic Programming** - build up a solution using previously found sub-solutions
+* **Programacion Dinamica** - build up a solution using previously found sub-solutions
   * `P` [Fibonacci Number](src/algorithms/math/fibonacci)
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `P` [Unique Paths](src/algorithms/uncategorized/unique-paths)
@@ -176,7 +176,7 @@ algorithm is an abstraction higher than a computer program.
   * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
   * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - find shortest paths between all pairs of vertices
   * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
-* **Backtracking** - similarly to brute force, try to generate all possible solutions, but each time you generate next solution you test
+* **De Retorceso** - similarly to brute force, try to generate all possible solutions, but each time you generate next solution you test
 if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise, backtrack, and go on a
 different path of finding a solution. Normally the DFS traversal of state-space is being used.
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
@@ -185,38 +185,38 @@ different path of finding a solution. Normally the DFS traversal of state-space 
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
   * `A` [Combination Sum](src/algorithms/sets/combination-sum) - find all combinations that form specific sum
-* **Branch & Bound** - remember the lowest-cost solution found at each stage of the backtracking
+* **Ramas y Limites** - remember the lowest-cost solution found at each stage of the backtracking
 search, and use the cost of the lowest-cost solution found so far as a lower bound on the cost of
 a least-cost solution to the problem, in order to discard partial solutions with costs larger than the
 lowest-cost solution found so far. Normally BFS traversal in combination with DFS traversal of state-space
 tree is being used.
 
-## How to use this repository
+## Como usar este repositorio
 
-**Install all dependencies**
+**Instalar las dependencias**
 ```
 npm install
 ```
 
-**Run ESLint**
+**Correr ESLint**
 
-You may want to run it to check code quality.
+Es posible que desee ejecutarlo para comprobar la calidad del código.
 
 ```
 npm run lint
 ```
 
-**Run all tests**
+**Correr los tests**
 ```
 npm test
 ```
 
-**Run tests by name**
+**Correr tests por nombre**
 ```
 npm test -- 'LinkedList'
 ```
 
-**Playground**
+**Campo de Juegos**
 
 You may play with data-structures and algorithms in `./src/playground/playground.js` file and write
 tests for it in `./src/playground/__test__/playground.test.js`.
@@ -227,17 +227,17 @@ Then just simply run the following command to test if your playground code works
 npm test -- 'playground'
 ```
 
-## Useful Information
+## Información util
 
-### References
+### Refrencias
 
-[▶ Data Structures and Algorithms on YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+[▶ Estructuras de datos y Algoritmos en YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 
-### Big O Notation
+### Notacion Big O
 
 Order of growth of algorithms specified in Big O notation.
 
-![Big O graphs](./assets/big-o-graph.png)
+![Graficas de Big O ](./assets/big-o-graph.png)
 
 Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
