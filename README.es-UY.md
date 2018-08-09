@@ -278,5 +278,5 @@ A continuación se muestra la lista de algunas de las notaciones de Big O más u
 | **Clasificacion por Fusion**     | n&nbsp;log(n) |      n&nbsp;log(n)      |        n&nbsp;log(n)        |   n    |  Si   |                                                               |
 | **Quick sort**     | n&nbsp;log(n) |      n&nbsp;log(n)      |        n<sup>2</sup>        | log(n) |   No   | Quicksort es utilizqado con O(log(n)) espacio en el stack  |
 | **Shell sort**     | n&nbsp;log(n) | depende de la secuencia de huecos | n&nbsp;(log(n))<sup>2</sup> |   1    |   No   |                                                               |
-| **Clasificacion por Conteo**  |     n + r     |          n + r          |            n + r            | n + r  |  Si   | r - maypr numero en arreglo                                   |
+| **Clasificacion por Conteo**  |     n + r     |          n + r          |            n + r            | n + r  |  Si   | r - mayor numero en arreglo                                   |
 | **Radix sort**     |    n \* k     |         n \* k          |           n \* k            | n + k  |  Si   | k - largo de la llave más larga                                     |
