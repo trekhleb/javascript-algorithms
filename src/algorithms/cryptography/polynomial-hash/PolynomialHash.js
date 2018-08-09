@@ -23,7 +23,6 @@ export default class PolynomialHash {
     const charCodes = Array.from(word).map(char => this.charToNumber(char));
 
     let hash = 0;
-
     for (let charIndex = 0; charIndex < charCodes.length; charIndex += 1) {
       hash *= this.base;
       hash %= this.modulus;
