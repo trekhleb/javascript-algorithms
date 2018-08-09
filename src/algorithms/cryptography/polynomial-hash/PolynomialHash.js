@@ -25,8 +25,7 @@ export default class PolynomialHash {
     let hash = 0;
     for (let charIndex = 0; charIndex < charCodes.length; charIndex += 1) {
       hash *= this.base;
-      hash %= this.modulus;
-      hash += charCodes[charIndex] % this.modulus;
+      hash += charCodes[charIndex];
       hash %= this.modulus;
     }
 
@@ -61,11 +60,9 @@ export default class PolynomialHash {
 
     hash += this.modulus;
     hash -= (prevValue * prevValueMultiplier) % this.modulus;
-    hash %= this.modulus;
 
     hash *= this.base;
-    hash %= this.modulus;
-    hash += newValue % this.modulus;
+    hash += newValue;
     hash %= this.modulus;
 
     return hash;
