@@ -17,9 +17,9 @@ _Léelo en otros idiomas:_
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md)
 
- > Estamos escribiendo un libro que explicará claramente, en detalle, los principales algoritmos.
-Si desea ser notificado cuando se publique el libro "Algoritmos JavaScript
-lanzamientos, [haga clic aquí](https://upscri.be/402324/).
+> Estamos escribiendo un libro que explicará claramente, en detalle, los principales algoritmos.
+> Si desea ser notificado cuando se publique el libro "Algoritmos JavaScript
+> lanzamientos, [haga clic aquí](https://upscri.be/402324/).
 
 ## Estructuras de datos
 
@@ -30,23 +30,23 @@ los datos.
 
 `P` - Principiante, `A` - Avanzado
 
-* `P` [Lista Enlazada](src/data-structures/linked-list)
-* `P` [Lista Doblemente Enlazada](src/data-structures/doubly-linked-list)
-* `P` [Cola](src/data-structures/queue)
-* `P` [Pila - Stack](src/data-structures/stack)
-* `P` [Hash Table](src/data-structures/hash-table)
-* `P` [Pila - Heap](src/data-structures/heap)
-* `P` [Cola de Prioridad](src/data-structures/priority-queue)
-* `A` [Trie](src/data-structures/trie)
-* `A` [Arbol](src/data-structures/tree)
-    * `A` [Arbol de busqueda binaria](src/data-structures/tree/binary-search-tree)
-    * `A` [Arbol AVL ](src/data-structures/tree/avl-tree)
-    * `A` [Árbol Rojo-Negro](src/data-structures/tree/red-black-tree)
-    * `A` [Árbol de segmentos](src/data-structures/tree/segment-tree) - con ejemplos de consultas de rango mín/máx/suma
-    * `A` [Arbol de Fenwick ](src/data-structures/tree/fenwick-tree) (Árbol binario indexado)
-* `A` [Grafo](src/data-structures/graph) (con dirección y sin dirección)
-* `A` [Conjunto disjunto](src/data-structures/disjoint-set)
-* `A` [Filtro Bloom](src/data-structures/bloom-filter)
+- `P` [Lista Enlazada](src/data-structures/linked-list)
+- `P` [Lista Doblemente Enlazada](src/data-structures/doubly-linked-list)
+- `P` [Cola](src/data-structures/queue)
+- `P` [Pila - Stack](src/data-structures/stack)
+- `P` [Hash Table](src/data-structures/hash-table)
+- `P` [Pila - Heap](src/data-structures/heap)
+- `P` [Cola de Prioridad](src/data-structures/priority-queue)
+- `A` [Trie](src/data-structures/trie)
+- `A` [Arbol](src/data-structures/tree)
+  - `A` [Arbol de busqueda binaria](src/data-structures/tree/binary-search-tree)
+  - `A` [Arbol AVL ](src/data-structures/tree/avl-tree)
+  - `A` [Árbol Rojo-Negro](src/data-structures/tree/red-black-tree)
+  - `A` [Árbol de segmentos](src/data-structures/tree/segment-tree) - con ejemplos de consultas de rango mín/máx/suma
+  - `A` [Arbol de Fenwick ](src/data-structures/tree/fenwick-tree) (Árbol binario indexado)
+- `A` [Grafo](src/data-structures/graph) (con dirección y sin dirección)
+- `A` [Conjunto disjunto](src/data-structures/disjoint-set)
+- `A` [Filtro Bloom](src/data-structures/bloom-filter)
 
 ## Algoritmos
 
@@ -56,144 +56,142 @@ Un algoritmo es una especificación inequívoca de cómo resolver una clase de p
 
 ### Algoritmos por Tema
 
-* **Matematica**
-  * `P` [Manipulacion de bits](src/algorithms/math/bits) - setear/obtener/actualizar/limpiar bits, multiplication/division por dos, hacer negativo, etc.
-  * `P` [Factorial](src/algorithms/math/factorial) 
-  * `P` [Numero de Fibonacci](src/algorithms/math/fibonacci)
-  * `P` [Prueba de Primacia](src/algorithms/math/primality-test) (metodo de division de prueba)
-  * `P` [Algoritmo Euclideo](src/algorithms/math/euclidean-algorithm) - Calcular el maximo comun divisor (MCD)
-  * `P` [Minimo comun multiplo](src/algorithms/math/least-common-multiple) (MCM)
-  * `P` [Tamiz de Eratosthenes](src/algorithms/math/sieve-of-eratosthenes) - encontrar todos los números primos hasta cualquier límite dado
-  * `P` [Es la potencia de dos](src/algorithms/math/is-power-of-two) - comprueba si el número es la potencia de dos (algoritmos ingenuos y de bits)
-  * `P` [Triangulo de Pascal](src/algorithms/math/pascal-triangle)
-  * `A` [Particion Entera](src/algorithms/math/integer-partition)
-  * `A` [Algortimo π de Liu Hui  ](src/algorithms/math/liu-hui) - aproximado π cálculos basados en N-gons
-* **Conjuntos**
-  * `P` [Producto Cartesiano](src/algorithms/sets/cartesian-product) - pproducto de múltiples conjuntos
-  * `P` [Permutación de Fisher–Yates](src/algorithms/sets/fisher-yates) - permutación aleatoria de una secuencia finita
-  * `A` [Conjunto Potencia](src/algorithms/sets/power-set) - todos los subconjuntos de un conjunto
-  * `A` [Permutaciones](src/algorithms/sets/permutations) (con y sin repeticiones)
-  * `A` [Combinaciones](src/algorithms/sets/combinations) (con y sin repeticiones)
-  * `A` [Subsecuencia Común más Larga](src/algorithms/sets/longest-common-subsequence) (SCL)
-  * `A` [Subsecuencia Creciente mas Larga](src/algorithms/sets/longest-increasing-subsequence)
-  * `A` [Supersequencia Común Más Corta](src/algorithms/sets/shortest-common-supersequence) (SCS)
-  * `A` [Problema de la Mochila](src/algorithms/sets/knapsack-problem) - "0/1" y unos sin consolidar
-  * `A` [Maxima Subcoleccion](src/algorithms/sets/maximum-subarray) - versiones de "Fuerza Bruta" y "Programación Dinámica" ( de Kadane's)
-  * `A` [Suma Combinada](src/algorithms/sets/combination-sum) -  encuentra todas las combinaciones que forman una suma específica.
-* **Cadenas de caracteres**
-  * `P` [Hamming Distance](src/algorithms/string/hamming-distance) - number of positions at which the symbols are different
-  * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
-  * `A` [Knuth–Morris–Pratt Algorithm](src/algorithms/string/knuth-morris-pratt) (KMP Algorithm) - substring search (pattern matching)
-  * `A` [Z Algorithm](src/algorithms/string/z-algorithm) - substring search (pattern matching)
-  * `A` [Rabin Karp Algorithm](src/algorithms/string/rabin-karp) - substring search
-  * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
-  * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
-* **Busquedas**
-  * `P` [Linear Search](src/algorithms/search/linear-search)
-  * `P` [Jump Search](src/algorithms/search/jump-search) (or Block Search) - search in sorted array
-  * `P` [Binary Search](src/algorithms/search/binary-search) - search in sorted array
-  * `P` [Interpolation Search](src/algorithms/search/interpolation-search) - search in uniformly distributed sorted array
-* **Ordenamiento**
-  * `P` [Bubble Sort](src/algorithms/sorting/bubble-sort)
-  * `P` [Selection Sort](src/algorithms/sorting/selection-sort)
-  * `P` [Insertion Sort](src/algorithms/sorting/insertion-sort)
-  * `P` [Heap Sort](src/algorithms/sorting/heap-sort)
-  * `P` [Merge Sort](src/algorithms/sorting/merge-sort)
-  * `P` [Quicksort](src/algorithms/sorting/quick-sort) - in-place and non-in-place implementations
-  * `P` [Shellsort](src/algorithms/sorting/shell-sort)
-  * `P` [Counting Sort](src/algorithms/sorting/counting-sort)
-  * `P` [Radix Sort](src/algorithms/sorting/radix-sort)
-* **Arboles**
-  * `P` [Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
-  * `P` [Breadth-First Search](src/algorithms/tree/breadth-first-search) (BFS)
-* **Grafos**
-  * `P` [Depth-First Search](src/algorithms/graph/depth-first-search) (DFS)
-  * `P` [Breadth-First Search](src/algorithms/graph/breadth-first-search) (BFS)
-  * `P` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - finding shortest paths to all graph vertices from single vertex
-  * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - finding shortest paths to all graph vertices from single vertex
-  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - find shortest paths between all pairs of vertices
-  * `A` [Detect Cycle](src/algorithms/graph/detect-cycle) - for both directed and undirected graphs (DFS and Disjoint Set based versions)
-  * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * `A` [Topological Sorting](src/algorithms/graph/topological-sorting) - DFS method
-  * `A` [Articulation Points](src/algorithms/graph/articulation-points) - Tarjan's algorithm (DFS based)
-  * `A` [Bridges](src/algorithms/graph/bridges) - DFS based algorithm
-  * `A` [Eulerian Path and Eulerian Circuit](src/algorithms/graph/eulerian-path) - Fleury's algorithm - Visit every edge exactly once
-  * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
-  * `A` [Strongly Connected Components](src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
-  * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
-* **Sin Categoria**
-  * `P` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
-  * `P` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
-  * `P` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples 
-  * `P` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples 
-  * `P` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem (dynamic programming and brute force versions)
-  * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
-  * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
+- **Matematica**
+  - `P` [Manipulacion de bits](src/algorithms/math/bits) - setear/obtener/actualizar/limpiar bits, multiplication/division por dos, hacer negativo, etc.
+  - `P` [Factorial](src/algorithms/math/factorial)
+  - `P` [Numero de Fibonacci](src/algorithms/math/fibonacci)
+  - `P` [Prueba de Primacia](src/algorithms/math/primality-test) (metodo de division de prueba)
+  - `P` [Algoritmo Euclideo](src/algorithms/math/euclidean-algorithm) - Calcular el maximo comun divisor (MCD)
+  - `P` [Minimo comun multiplo](src/algorithms/math/least-common-multiple) (MCM)
+  - `P` [Tamiz de Eratosthenes](src/algorithms/math/sieve-of-eratosthenes) - encontrar todos los números primos hasta cualquier límite dado
+  - `P` [Es la potencia de dos](src/algorithms/math/is-power-of-two) - comprueba si el número es la potencia de dos (algoritmos ingenuos y de bits)
+  - `P` [Triangulo de Pascal](src/algorithms/math/pascal-triangle)
+  - `A` [Particion Entera](src/algorithms/math/integer-partition)
+  - `A` [Algortimo π de Liu Hui ](src/algorithms/math/liu-hui) - aproximado π cálculos basados en N-gons
+- **Conjuntos**
+  - `P` [Producto Cartesiano](src/algorithms/sets/cartesian-product) - pproducto de múltiples conjuntos
+  - `P` [Permutación de Fisher–Yates](src/algorithms/sets/fisher-yates) - permutación aleatoria de una secuencia finita
+  - `A` [Conjunto Potencia](src/algorithms/sets/power-set) - todos los subconjuntos de un conjunto
+  - `A` [Permutaciones](src/algorithms/sets/permutations) (con y sin repeticiones)
+  - `A` [Combinaciones](src/algorithms/sets/combinations) (con y sin repeticiones)
+  - `A` [Subsecuencia Común más Larga](src/algorithms/sets/longest-common-subsequence) (SCL)
+  - `A` [Subsecuencia Creciente más Larga](src/algorithms/sets/longest-increasing-subsequence)
+  - `A` [Supersequencia Común Más Corta](src/algorithms/sets/shortest-common-supersequence) (SCS)
+  - `A` [Problema de la Mochila](src/algorithms/sets/knapsack-problem) - "0/1" y unos sin consolidar
+  - `A` [Maxima Subarreglo](src/algorithms/sets/maximum-subarray) - versiones de "Fuerza Bruta" y "Programación Dinámica" ( de Kadane's)
+  - `A` [Suma Combinada](src/algorithms/sets/combination-sum) - encuentra todas las combinaciones que forman una suma específica.
+- **Cadenas de caracteres**
+  - `P` [Distancia de Hamming](src/algorithms/string/hamming-distance) - número de posiciones en las que los símbolos son diferentes
+  - `A` [Distancia de Levenshtein](src/algorithms/string/levenshtein-distance) - distancia mínima de edición entre dos secuencias
+  - `A` [Algoritmo Knuth-Morris-Prattm](src/algorithms/string/knuth-morris-pratt) (Algoritmo KMP) - búsqueda por subcadenas (coincidencia de patrones)
+  - `A` [Algoritmo Z](src/algorithms/string/z-algorithm) - úsqueda de subcadenas (coincidencia de patrones)
+  - `A` [Algoritmo de Rabin Karp ](src/algorithms/string/rabin-karp) - búsqueda por subcadenas
+  - `A` [Subcadena Común Más Larga](src/algorithms/string/longest-common-substring)
+  - `A` [Coincidencia por Expresiones Regulares](src/algorithms/string/regular-expression-matching)
+- **Busquedas**
+  - `P` [Búsqueda Lineal](src/algorithms/search/linear-search)
+  - `P` [Búsqueda de Salto](src/algorithms/search/jump-search) (o Búsqueda de Bloque) - búsqueda en una lista ordenada
+  - `P` [Búsqueda binaria](src/algorithms/search/binary-search) - búsqueda en una lista ordenada
+  - `P` [ Búsqueda por Interpolación](src/algorithms/search/interpolation-search) - búsqueda en una lista ordenada yd uniformemente distribuida
+- **Ordenamiento**
+  - `P` [Ordenamiento de Burbuja](src/algorithms/sorting/bubble-sort)
+  - `P` [Ordenamiento por Selección](src/algorithms/sorting/selection-sort)
+  - `P` [Ordenamiento por Inserción](src/algorithms/sorting/insertion-sort)
+  - `P` [ Ordenamiento en Pilas](src/algorithms/sorting/heap-sort)
+  - `P` [Ordenamiento por Fusion](src/algorithms/sorting/merge-sort)
+  - `P` [Quicksort](src/algorithms/sorting/quick-sort) - implementaciones in situ y no in situ
+  - `P` [Shellsort](src/algorithms/sorting/shell-sort)
+  - `P` [Clasificación de Recuento](src/algorithms/sorting/counting-sort)
+  - `P` [Ordenamiento Radix](src/algorithms/sorting/radix-sort)
+- **Arboles**
+  - `P` [Búsqueda en profundidad](src/algorithms/tree/depth-first-search) (DFS)
+  - `P` [Búsqueda en anchura](src/algorithms/tree/breadth-first-search) (BFS)
+- **Grafos**
+  - `P` [Búsqueda en profundidad](src/algorithms/graph/depth-first-search) (DFS)
+  - `P` [Búsqueda en anchura](src/algorithms/graph/breadth-first-search) (BFS)
+  - `P` [Algoritmo de Kruskal’s](src/algorithms/graph/kruskal) - encontrar el árbol de expansión mínima (MST) para el grafo no dirigido ponderado
+  - `A` [Algoritmo de Dijkstra](src/algorithms/graph/dijkstra) - encontrar las trayectorias más cortas a todos los vértices del grafo desde un solo vértice
+  - `A` [Algoritmo de Bellman-Ford](src/algorithms/graph/bellman-ford) - encontrar las trayectorias más cortas a todos los vértices del gráfico desde un solo vértice
+  - `A` [Algortimo de Floyd-Warshall](src/algorithms/graph/floyd-warshall) - encuentra los caminos más cortos entre todos los pares de vértices
+  - `A` [Ciclo de detección](src/algorithms/graph/detect-cycle) - para gráficos dirigidos y no dirigidos (versiones basadas en DFS y Conjuntos Disjuntos)
+  - `A` [Algoritmo de Prim](src/algorithms/graph/prim) - encontrar el árbol de expansión mínima (MST) para una grafo no dirigido ponderada
+  - `A` [Clasificación topológica](src/algorithms/graph/topological-sorting) - método DFS
+  - `A` [Puntos de Articulación](src/algorithms/graph/articulation-points) - Algoritmo de Tarjan (basado en DFS)
+  - `A` [Puentes](src/algorithms/graph/bridges) - Algoritmo basado en DFS
+  - `A` [Senda Euleriana y un Circuito Euleriano](src/algorithms/graph/eulerian-path) - algoritmo de Fleury - Visite cada borde exactamente una vez
+  - `A` [Ciclo Hamiltoniano](src/algorithms/graph/hamiltonian-cycle) - visite cada vértice exactamente una vez
+  - `A` [Componentes Fuertemente Conectados](src/algorithms/graph/strongly-connected-components) - Algoritmo de Kosaraju
+  - `A` [Problema del Vendedor Itinerante](src/algorithms/graph/travelling-salesman) - la ruta más corta posible que visita cada ciudad y vuelve a la ciudad de origen
+- **Criptografia**
+  - `P` [Hash Polinomial](src/algorithms/cryptography/polynomial-hash) - función de hash rodante basada en polinomio
+- **Sin Categoria**
+  - `P` [Torre de Hanoi](src/algorithms/uncategorized/hanoi-tower)
+  - `P` [Rotación de matriz cuadrada](src/algorithms/uncategorized/square-matrix-rotation) - algoritmo in situ
+  - `P` [Juego de los saltos](src/algorithms/uncategorized/jump-game) - retroceso, programación dinámica (de arriba hacia abajo + de abajo hacia arriba) y ejemplos codiciosos
+  - `P` [Caminos Unicos](src/algorithms/uncategorized/unique-paths) -etroceso, programación dinámica y ejemplos basados en el Triángulo de Pascal
+  - `P` [Terrazas Pluviales](src/algorithms/uncategorized/rain-terraces) - problema de atrapamiento de aguas pluviales (programación dinámica y versiones de fuerza bruta)
+  - `A` [Problema de N-Reinas](src/algorithms/uncategorized/n-queens)
+  - `A` [Una gira de Caballeros](src/algorithms/uncategorized/knight-tour)
 
 ### Algoritmos por Paradigma
 
-An algorithmic paradigm is a generic method or approach which underlies the design of a class
-of algorithms. It is an abstraction higher than the notion of an algorithm, just as an
-algorithm is an abstraction higher than a computer program.
+Un paradigma algorítmico es un método o enfoque genérico que subyace al diseño de una clase de algoritmos.
+Es una abstracción superior a la noción de algoritmo, del mismo modo que un algoritmo es una abstracción superior a un programa de ordenador.
 
-* **Fuerza Bruta** - look at all the possibilities and selects the best solution
-  * `P` [Linear Search](src/algorithms/search/linear-search)
-  * `P` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
-  * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
-  * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
-* **Greedy** - choose the best option at the current time, without any consideration for the future
-  * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
-  * `A` [Unbound Knapsack Problem](src/algorithms/sets/knapsack-problem)
-  * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
-  * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * `A` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-* **Divide y venceras** - divide the problem into smaller parts and then solve those parts
-  * `P` [Binary Search](src/algorithms/search/binary-search)
-  * `P` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
-  * `P` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
-  * `P` [Euclidean Algorithm](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
-  * `P` [Merge Sort](src/algorithms/sorting/merge-sort)
-  * `P` [Quicksort](src/algorithms/sorting/quick-sort)
-  * `P` [Tree Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
-  * `P` [Graph Depth-First Search](src/algorithms/graph/depth-first-search) (DFS)
-  * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
-  * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
-  * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
-* **Programacion Dinamica** - build up a solution using previously found sub-solutions
-  * `P` [Fibonacci Number](src/algorithms/math/fibonacci)
-  * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
-  * `P` [Unique Paths](src/algorithms/uncategorized/unique-paths)
-  * `P` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
-  * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
-  * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
-  * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
-  * `A` [Longest Increasing Subsequence](src/algorithms/sets/longest-increasing-subsequence)
-  * `A` [Shortest Common Supersequence](src/algorithms/sets/shortest-common-supersequence)
-  * `A` [0/1 Knapsack Problem](src/algorithms/sets/knapsack-problem)
-  * `A` [Integer Partition](src/algorithms/math/integer-partition)
-  * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
-  * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
-  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - find shortest paths between all pairs of vertices
-  * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
-* **De Retorceso** - similarly to brute force, try to generate all possible solutions, but each time you generate next solution you test
-if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise, backtrack, and go on a
-different path of finding a solution. Normally the DFS traversal of state-space is being used.
-  * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
-  * `P` [Unique Paths](src/algorithms/uncategorized/unique-paths)
-  * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
-  * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
-  * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
-  * `A` [Combination Sum](src/algorithms/sets/combination-sum) - find all combinations that form specific sum
-* **Ramas y Limites** - remember the lowest-cost solution found at each stage of the backtracking
-search, and use the cost of the lowest-cost solution found so far as a lower bound on the cost of
-a least-cost solution to the problem, in order to discard partial solutions with costs larger than the
-lowest-cost solution found so far. Normally BFS traversal in combination with DFS traversal of state-space
-tree is being used.
+- **Fuerza Bruta** - mira todas las posibilidades y selecciona la mejor solución
+  - `P` [Busqueda Lienal](src/algorithms/search/linear-search)
+  - `P` [Terrazas Pluviales](src/algorithms/uncategorized/rain-terraces) - el problema de la retención del agua de lluvia
+  - `A` [Subcoleción maxima](src/algorithms/sets/maximum-subarray)
+  - `A` [Problema del Vendedor Itinerante](src/algorithms/graph/travelling-salesman) - la ruta más corta posible que visita cada ciudad y vuelve a la ciudad de origen
+- **Codiciosos** - escoja la mejor opción en el momento actual, sin ninguna consideración para el futuro.
+  - `P` [El juego de los saltos](src/algorithms/uncategorized/jump-game)
+  - `A` [Problema de la Mochila no Consolidada](src/algorithms/sets/knapsack-problem)
+  - `A` [Algoritmo de Dijkstra](src/algorithms/graph/dijkstra) - encontrar la ruta más corta a todos los vértices del gráfico
+  - `A` [Algortimo de Prim](src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
+  - `A` [Algoritmo de Kruskal](src/algorithms/graph/kruskal) - encontrar el árbol de expansión mínima (MST) para una gráfica no dirigida ponderada
+- **Divide y venceras** - divide el problema en partes más pequeñas y luego resuelve esas partes.
+  - `P` [Búsqueda Binaria](src/algorithms/search/binary-search)
+  - `P` [Torre de Hanoi](src/algorithms/uncategorized/hanoi-tower)
+  - `P` [Triangulo de Pascal](src/algorithms/math/pascal-triangle)
+  - `P` [Algoritmo Euclideo](src/algorithms/math/euclidean-algorithm) - ccalcular el Maximo Comun Divisor (MCD)
+  - `P` [Clasificacion por Fusión](src/algorithms/sorting/merge-sort)
+  - `P` [Quicksort](src/algorithms/sorting/quick-sort)
+  - `P` [Busqueda por Profundidad](src/algorithms/tree/depth-first-search) - (DFS)
+  - `P` [Busqueda por Anchura](src/algorithms/graph/depth-first-search) - (DFS)
+  - `P` [Juego de los Saltos](src/algorithms/uncategorized/jump-game)
+  - `A` [Permutaciones](src/algorithms/sets/permutations) - (con y sin repeticiones)
+  - `A` [Combinaciones](src/algorithms/sets/combinations) - (con y sin repeticiones)
+- **Programacion Dinamica** - onstruya una solución usando sub-soluciones previamente encontradas
+  - `P` [Numero de Fibonacci](src/algorithms/math/fibonacci)
+  - `P` [Juego de los Saltos](src/algorithms/uncategorized/jump-game)
+  - `P` [Unicos Caminos](src/algorithms/uncategorized/unique-paths)
+  - `P` [Terrazas Pluviales](src/algorithms/uncategorized/rain-terraces) - el problema de la retención del agua de lluvia
+  - `A` [Distancia de Levenshtein](src/algorithms/string/levenshtein-distance) - distancia mínima de edición entre dos secuencias
+  - `A` [Subsecuencia Comun más Larga](src/algorithms/sets/longest-common-subsequence) (LCS)
+  - `A` [Subcadena de Caracteres Comun más larga](src/algorithms/string/longest-common-substring)
+  - `A` [Subsecuencia Creciente más Larga](src/algorithms/sets/longest-increasing-subsequence)
+  - `A` [Susecuencia Comun más Corta](src/algorithms/sets/shortest-common-supersequence)
+  - `A` [0/1 Problema de la Mochila](src/algorithms/sets/knapsack-problem)
+  - `A` [Particion Entera](src/algorithms/math/integer-partition)
+  - `A` [Subarreglo Macima](src/algorithms/sets/maximum-subarray)
+  - `A` [Algoritmo de Bellman-Ford](src/algorithms/graph/bellman-ford) - encontrar el camino más corto a todos los vértices del grafo
+  - `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) -encuentra los caminos más cortos entre todos los pares de vértices
+  - `A` [Coincidencia por Expresiones regulares](src/algorithms/string/regular-expression-matching)
+- **De Retorceso** - de manera similar a la fuerza bruta, trate de generar todas las soluciones posibles, pero cada vez que genere la siguiente solución, compruebe si cumple con todas las condiciones, y sólo entonces continúe generando soluciones posteriores. De lo contrario, retroceda y siga un camino diferente para encontrar una solución. Normalmente se utiliza la travesía del espacio estatal.
+
+  - `P` [Juego de Saltos](src/algorithms/uncategorized/jump-game)
+  - `P` [Camino Unico](src/algorithms/uncategorized/unique-paths)
+  - `A` [Ciclo Hamiltoniano](src/algorithms/graph/hamiltonian-cycle) - Visite cada vértice exactamente una vez
+  - `A` [Problema de las N-Reinas](src/algorithms/uncategorized/n-queens)
+  - `A` [Gira de Caballeros](src/algorithms/uncategorized/knight-tour)
+  - `A` [Suma Combinada](src/algorithms/sets/combination-sum) - encuentra todas las combinaciones que forman una suma específica.
+
+- **Ramas y Limites** - recuerde la solución de menor costo encontrada en cada etapa de la búsqueda de rastreo, y utilice el costo de la solución de menor costo encontrada hasta el momento como un límite más bajo en el costo de una solución de menor costo para el problema, a fin de descartar soluciones parciales con costos mayores que la solución de menor costo encontrada hasta el momento. Normalmente se utiliza la travesía BFS en combinación con la travesía DFS del árbol del espacio de estado.
 
 ## Como usar este repositorio
 
 **Instalar las dependencias**
+
 ```
 npm install
 ```
@@ -207,21 +205,22 @@ npm run lint
 ```
 
 **Correr los tests**
+
 ```
 npm test
 ```
 
 **Correr tests por nombre**
+
 ```
 npm test -- 'LinkedList'
 ```
 
 **Campo de Juegos**
 
-You may play with data-structures and algorithms in `./src/playground/playground.js` file and write
-tests for it in `./src/playground/__test__/playground.test.js`.
+Puede jugar con estructuras de datos y algoritmos en el archivo `./src/playground/playground.js` y escribir pruebas para ello en `./src/playground/__test__/playground.test.js`.
 
-Then just simply run the following command to test if your playground code works as expected:
+A continuación, simplemente ejecute el siguiente comando para comprobar si el código funciona como se espera:
 
 ```
 npm test -- 'playground'
@@ -233,51 +232,51 @@ npm test -- 'playground'
 
 [▶ Estructuras de datos y Algoritmos en YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 
-### Notacion Big O
+### Notación O grande
 
-Order of growth of algorithms specified in Big O notation.
+Orden de crecimiento de los algoritmos especificados en la notación O grande.
 
-![Graficas de Big O ](./assets/big-o-graph.png)
+![Graficas de Notación O grande ](./assets/big-o-graph.png)
 
-Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+Fuente: [Notación O grande, Hoja de atajos](http://bigocheatsheet.com/).
 
-Below is the list of some of the most used Big O notations and their performance comparisons against different sizes of the input data.
+A continuación se muestra la lista de algunas de las notaciones de Big O más utilizadas y sus comparaciones de rendimiento frente a diferentes tamaños de los datos de entrada.
 
-| Big O Notation | Computations for 10 elements | Computations for 100 elements | Computations for 1000 elements  |
-| -------------- | ---------------------------- | ----------------------------- | ------------------------------- |
-| **O(1)**       | 1                            | 1                             | 1                               |
-| **O(log N)**   | 3                            | 6                             | 9                               |
-| **O(N)**       | 10                           | 100                           | 1000                            |
-| **O(N log N)** | 30                           | 600                           | 9000                            |
-| **O(N^2)**     | 100                          | 10000                         | 1000000                         |
-| **O(2^N)**     | 1024                         | 1.26e+29                      | 1.07e+301                       |
-| **O(N!)**      | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
+| Notación O grande | Cálculos para 10 elementos | Cálculos para 100 elementos | Cálculos para 1000 elementos |
+| ----------------- | -------------------------- | --------------------------- | ---------------------------- |
+| **O(1)**          | 1                          | 1                           | 1                            |
+| **O(log N)**      | 3                          | 6                           | 9                            |
+| **O(N)**          | 10                         | 100                         | 1000                         |
+| **O(N log N)**    | 30                         | 600                         | 9000                         |
+| **O(N^2)**        | 100                        | 10000                       | 1000000                      |
+| **O(2^N)**        | 1024                       | 1.26e+29                    | 1.07e+301                    |
+| **O(N!)**         | 3628800                    | 9.3e+157                    | 4.02e+2567                   |
 
-### Data Structure Operations Complexity
+### Complejidad de las operaciones de estructura de datos
 
-| Data Structure          | Access    | Search    | Insertion | Deletion  | Comments  |
-| ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- |
-| **Array**               | 1         | n         | n         | n         |           |
-| **Stack**               | n         | n         | 1         | 1         |           |
-| **Queue**               | n         | n         | 1         | 1         |           |
-| **Linked List**         | n         | n         | 1         | 1         |           |
-| **Hash Table**          | -         | n         | n         | n         | In case of perfect hash function costs would be O(1) |
-| **Binary Search Tree**  | n         | n         | n         | n         | In case of balanced tree costs would be O(log(n)) |
-| **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **Red-Black Tree**      | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **Bloom Filter**        | -         | 1         | 1         | -         | False positives are possible while searching |
+| Estructura de Datos            | Accesso | Busqueda | Inserción | Borrado | Comentarios                                                     |
+| ------------------------------ | :-----: | :------: | :-------: | :-----: | :-------------------------------------------------------------- |
+| **Coleción**                   |    1    |    n     |     n     |    n    |                                                                 |
+| **Stack**                      |    n    |    n     |     1     |    1    |                                                                 |
+| **Cola**                       |    n    |    n     |     1     |    1    |                                                                 |
+| **Lista Enlazada**             |    n    |    n     |     1     |    1    |                                                                 |
+| **Tabla de Hash**              |    -    |    n     |     n     |    n    | En caso de función hash perfecta los costos serían O(1)         |
+| **Búsqueda por Arbol Binario** |    n    |    n     |     n     |    n    | En el caso de un árbol equilibrado, los costes serían O(log(n)) |
+| **Árbol B**                    | log(n)  |  log(n)  |  log(n)   | log(n)  |                                                                 |
+| **Árbol Rojo-Negro**           | log(n)  |  log(n)  |  log(n)   | log(n)  |                                                                 |
+| **Árbol AVL**                  | log(n)  |  log(n)  |  log(n)   | log(n)  |                                                                 |
+| **Filtro de Bloom**            |    -    |    1     |     1     |    -    | Falsos positivos son posibles durante la búsqueda               |
 
-### Array Sorting Algorithms Complexity
+### Complejidad de Algoritmos de Clasificación de Arreglos
 
-| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
-| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
-| **Bubble sort**       | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
-| **Insertion sort**    | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
-| **Selection sort**    | n<sup>2</sup>   | n<sup>2</sup>       | n<sup>2</sup>       | 1         | No        |           |
-| **Heap sort**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |           |
-| **Merge sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Yes       |           |
-| **Quick sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No        | Quicksort is usually done in-place with O(log(n)) stack space |
-| **Shell sort**        | n&nbsp;log(n)   | depends on gap sequence   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
-| **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - biggest number in array |
-| **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Yes       | k - length of longest key |
+| Nombre               |     Mejor      |         Promedio        |            Pero            | Memorya | Estable | Comentarios                                                      |
+| ------------------ | :-----------: | :---------------------: | :-------------------------: | :----: | :----: | :------------------------------------------------------------ |
+| **Clasificación de Burbujas**    |       n       |      n<sup>2</sup>      |        n<sup>2</sup>        |   1    |  Si   |                                                               |
+| **Clasificación por Inserción** |       n       |      n<sup>2</sup>      |        n<sup>2</sup>        |   1    |  Si   |                                                               |
+| **Clasificacion por Selección** | n<sup>2</sup> |      n<sup>2</sup>      |        n<sup>2</sup>        |   1    |   No   |                                                               |
+| **Classificacion por Pila**      | n&nbsp;log(n) |      n&nbsp;log(n)      |        n&nbsp;log(n)        |   1    |   No   |                                                               |
+| **Clasificacion por Fusion**     | n&nbsp;log(n) |      n&nbsp;log(n)      |        n&nbsp;log(n)        |   n    |  Si   |                                                               |
+| **Quick sort**     | n&nbsp;log(n) |      n&nbsp;log(n)      |        n<sup>2</sup>        | log(n) |   No   | Quicksort es utilizqado con O(log(n)) espacio en el stack  |
+| **Shell sort**     | n&nbsp;log(n) | depende de la secuencia de huecos | n&nbsp;(log(n))<sup>2</sup> |   1    |   No   |                                                               |
+| **Clasificacion por Conteo**  |     n + r     |          n + r          |            n + r            | n + r  |  Si   | r - maypr numero en arreglo                                   |
+| **Radix sort**     |    n \* k     |         n \* k          |           n \* k            | n + k  |  Si   | k - largo de la llave más larga                                     |
