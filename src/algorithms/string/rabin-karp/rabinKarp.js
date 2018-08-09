@@ -1,30 +1,6 @@
 import PolynomialHash from '../../cryptography/polynomial-hash/PolynomialHash';
 
 /**
- * Checks if two strings are equal.
- *
- * We may simply compare (string1 === string2) but for the
- * purpose of analyzing algorithm time complexity let's do
- * it character by character.
- *
- * @param {string} string1
- * @param {string} string2
- */
-function stringsAreEqual(string1, string2) {
-  if (string1.length !== string2.length) {
-    return false;
-  }
-
-  for (let charIndex = 0; charIndex < string1.length; charIndex += 1) {
-    if (string1[charIndex] !== string2[charIndex]) {
-      return false;
-    }
-  }
-
-  return true;
-}
-
-/**
  * @param {string} text - Text that may contain the searchable word.
  * @param {string} word - Word that is being searched in text.
  * @return {number} - Position of the word in text.
@@ -52,10 +28,11 @@ export default function rabinKarp(text, word) {
     prevFrame = currentFrame;
 
     // Compare the hash of current substring and seeking string.
-    // In case if hashes match let's check substring char by char.
+    // In case if hashes match let's make sure that substrings are equal.
+    // In case of hash collision the strings may not be equal.
     if (
       wordHash === currentFrameHash
-      && stringsAreEqual(text.substr(charIndex, word.length), word)
+      && text.substr(charIndex, word.length) === word
     ) {
       return charIndex;
     }
