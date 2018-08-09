@@ -1,12 +1,14 @@
-const DEFAULT_PRIME = 37;
+const DEFAULT_BASE = 37;
+const DEFAULT_MODULUS = 101;
 
 export default class PolynomialHash {
   /**
-   * @param {number} [prime] - A prime number used to create the hash representation of a word.
+   * @param {number} [base] - Base number that is used to create the polynomial.
+   * @param {number} [modulus] - Modulus number that keeps the hash from overflowing.
    */
-  constructor(prime = DEFAULT_PRIME) {
-    this.prime = prime;
-    this.primeModulus = 101;
+  constructor({ base = DEFAULT_BASE, modulus = DEFAULT_MODULUS } = {}) {
+    this.base = base;
+    this.modulus = modulus;
   }
 
   /**
@@ -18,10 +20,15 @@ export default class PolynomialHash {
    * @return {number}
    */
   hash(word) {
+    const charCodes = Array.from(word).map(char => this.charToNumber(char));
+
     let hash = 0;
 
-    for (let charIndex = 0; charIndex < word.length; charIndex += 1) {
-      hash += word.charCodeAt(charIndex) * (this.prime ** charIndex);
+    for (let charIndex = 0; charIndex < charCodes.length; charIndex += 1) {
+      hash *= this.base;
+      hash %= this.modulus;
+      hash += charCodes[charIndex] % this.modulus;
+      hash %= this.modulus;
     }
 
     return hash;
@@ -42,12 +49,45 @@ export default class PolynomialHash {
    * @return {number}
    */
   roll(prevHash, prevWord, newWord) {
-    const newWordLastIndex = newWord.length - 1;
+    let hash = prevHash;
 
-    let hash = prevHash - prevWord.charCodeAt(0);
-    hash /= this.prime;
-    hash += newWord.charCodeAt(newWordLastIndex) * (this.prime ** newWordLastIndex);
+    const prevValue = this.charToNumber(prevWord[0]);
+    const newValue = this.charToNumber(newWord[newWord.length - 1]);
+
+    let prevValueMultiplier = 1;
+    for (let i = 1; i < prevWord.length; i += 1) {
+      prevValueMultiplier *= this.base;
+      prevValueMultiplier %= this.modulus;
+    }
+
+    hash += this.modulus;
+    hash -= (prevValue * prevValueMultiplier) % this.modulus;
+    hash %= this.modulus;
+
+    hash *= this.base;
+    hash %= this.modulus;
+    hash += newValue % this.modulus;
+    hash %= this.modulus;
 
     return hash;
+  }
+
+  /**
+   * Converts char to number.
+   *
+   * @param {string} char
+   * @return {number}
+   */
+  charToNumber(char) {
+    let charCode = char.codePointAt(0);
+
+    // Check if character has surrogate pair.
+    const surrogate = char.codePointAt(1);
+    if (surrogate !== undefined) {
+      const surrogateShift = 2 ** 16;
+      charCode += surrogate * surrogateShift;
+    }
+
+    return charCode;
   }
 }
