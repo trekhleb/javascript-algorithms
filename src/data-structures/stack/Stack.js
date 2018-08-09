@@ -1,15 +1,13 @@
-import LinkedList from '../linked-list/LinkedList';
-
 export default class Stack {
   constructor() {
-    this.linkedList = new LinkedList();
+    this.array = [];
   }
 
   /**
    * @return {boolean}
    */
   isEmpty() {
-    return !this.linkedList.tail;
+    return this.array.length > 0 ? false : true;
   }
 
   /**
@@ -20,39 +18,36 @@ export default class Stack {
       return null;
     }
 
-    return this.linkedList.tail.value;
+    return this.array[this.array.length-1];
   }
 
   /**
    * @param {*} value
    */
   push(value) {
-    this.linkedList.append(value);
+    this.array.push(value);
   }
 
   /**
    * @return {*}
    */
   pop() {
-    const removedTail = this.linkedList.deleteTail();
-    return removedTail ? removedTail.value : null;
+    const removed = this.array.pop();
+    return removed ? removed : null;
   }
 
   /**
    * @return {*[]}
    */
   toArray() {
-    return this.linkedList
-      .toArray()
-      .map(linkedListNode => linkedListNode.value)
-      .reverse();
+    return [...this.array].reverse();;
   }
 
   /**
    * @param {function} [callback]
    * @return {string}
    */
-  toString(callback) {
-    return this.linkedList.toString(callback);
+  toString() {
+    return this.array.toString();
   }
 }
