@@ -15,7 +15,8 @@ _Read this in other languages:_
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
-[_Français_](README.fr-FR.md)
+[_Français_](README.fr-FR.md),
+[_Español_](README.es-ES.md)
 
 > Jesteśmy w trakcie pisania książki, która w jasny i specyficzny sposób, 
 wyjaśni główne algorytmy. Jeżeli chcesz dostać powiadomienie o tym kiedy 

@@ -13,7 +13,8 @@ _Read this in other languages:_
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
 [_Polski_](README.pl-PL.md),
-[_Français_](README.fr-FR.md)
+[_Français_](README.fr-FR.md),
+[_Español_](README.es-ES.md)
 
 > 우리는 주요 알고리즘에 대해 더 자세한 설명을 담은 책을 제작 중입니다.
 만약 “JavaScript Algorithms” 책이 언제 출시되는지 알고 싶다면
