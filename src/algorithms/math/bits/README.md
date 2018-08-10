@@ -91,24 +91,30 @@ inverting all of the bits of the number and adding 1 to it.
 
 > See `switchSign` function for further details.
 
-#### Multiply
+#### Multiply Two Numbers
 
-This method multiplies two numbers(integer) using bitwise operators. This method is based on that "Every number can be denoted as the sum of powers of 2".
+This method multiplies two integer numbers using bitwise operators.
+This method is based on that "Every number can be denoted as the sum of powers of 2".
 
-```
-Let us take two numbers number1 and number2.
+The main idea of bitwise multiplication is that every number may be split
+to the sum of powers of two:
 
-number1 * number2 = number1 * (Representation in Base 2)
+I.e.
 
-Let us take number2 = 8 = 0b 1000
-
-number1 * number2 = number1 * (1*8 + 0*4 + 0*2 + 0*1)
-                  = number1 * 1 * (1<<3) + number1 * 0 * (1<<2) + number1 * 0 * (1<<1) + number1 * 0 * (1<<0)
-                  = (number1<<3) * 1 + (number1<<2) * 0 + (number1<<1) * 0 + (number1<<0) * 0
+```text
+19 = 2^4 + 2^1 + 2^0
 ```
 
+Then multiplying number `x` by `19` is equivalent of:
 
-> See `multiply` function for further details.
+```text
+x * 19 = x * 2^4 + x * 2^1 + x * 2^0
+```
+
+Now we need to remember that `x * 2^4` is equivalent of shifting `x` left 
+by `4` bits ()`x << 4`).
+
+> See `multiplyUnsigned` function for further details.
 
 ## References
 

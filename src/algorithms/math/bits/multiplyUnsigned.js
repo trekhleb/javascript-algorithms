@@ -2,7 +2,7 @@
  * Multiply to unsigned numbers using bitwise operator.
  *
  * The main idea of bitwise multiplication is that every number may be split
- * to the sum of posers of two:
+ * to the sum of powers of two:
  *
  * I.e. 19 = 2^4 + 2^1 + 2^0
  *
