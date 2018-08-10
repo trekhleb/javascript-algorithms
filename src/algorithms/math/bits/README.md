@@ -112,7 +112,7 @@ x * 19 = x * 2^4 + x * 2^1 + x * 2^0
 ```
 
 Now we need to remember that `x * 2^4` is equivalent of shifting `x` left 
-by `4` bits ()`x << 4`).
+by `4` bits (`x << 4`).
 
 > See `multiplyUnsigned` function for further details.
 
