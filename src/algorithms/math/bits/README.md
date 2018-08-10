@@ -91,6 +91,25 @@ inverting all of the bits of the number and adding 1 to it.
 
 > See `switchSign` function for further details.
 
+#### Multiply
+
+This method multiplies two numbers(integer) using bitwise operators. This method is based on that "Every number can be denoted as the sum of powers of 2".
+
+```
+Let us take two numbers number1 and number2.
+
+number1 * number2 = number1 * (Representation in Base 2)
+
+Let us take number2 = 8 = 0b 1000
+
+number1 * number2 = number1 * (1*8 + 0*4 + 0*2 + 0*1)
+                  = number1 * 1 * (1<<3) + number1 * 0 * (1<<2) + number1 * 0 * (1<<1) + number1 * 0 * (1<<0)
+                  = (number1<<3) * 1 + (number1<<2) * 0 + (number1<<1) * 0 + (number1<<0) * 0
+```
+
+
+> See `multiply` function for further details.
+
 ## References
 
 - [Bit Manipulation on YouTube](https://www.youtube.com/watch?v=NLKQEOgBAnw&t=0s&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
