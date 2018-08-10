@@ -10,6 +10,7 @@ Cada algoritmo y estructura de datos tiene su propio LÉAME con explicaciones re
 enlaces para lecturas adicionales (incluyendo algunas a vídeos de YouTube).
 
 _Léelo en otros idiomas:_
+[_English_](https://github.com/trekhleb/javascript-algorithms/),
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
