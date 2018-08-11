@@ -91,6 +91,18 @@ inverting all of the bits of the number and adding 1 to it.
 
 > See `switchSign` function for further details.
 
+#### Multiply By 7
+
+This method multiplies a number by 7 using bitwise operator. It uses the property that
+`8*n - n` would be `7n` multiplied by the number.
+
+```
+Muliplier : 5
+Multiplied by 7 : 35
+```
+
+> See `multiplyBy7` function for further details.
+
 ## References
 
 - [Bit Manipulation on YouTube](https://www.youtube.com/watch?v=NLKQEOgBAnw&t=0s&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
