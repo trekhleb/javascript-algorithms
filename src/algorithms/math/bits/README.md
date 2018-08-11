@@ -91,6 +91,26 @@ inverting all of the bits of the number and adding 1 to it.
 
 > See `switchSign` function for further details.
 
+#### Booth's Multiplication
+
+This is the known algorithm where two signed binary numbers are multplied using 2's
+complement notation. This algorithm primarily works on shifting than adding. The alorithm
+works as
+
+Put multiplicant in A and multiplied in B
+1. if C_n  and C_n+1 are same i.e., 00 or 11 perform arithmetic shift by 1 bit.
+2. If C_nC_n+1 = 10 do R += A and perform arithmetic shift by 1 bit.
+3. if C_nC_n+1 = 01 do R -= A and peform arithmetic shift by 1 bit.
+
+``
+Number A : 2
+Number B : 3
+
+Output : 6
+``
+
+> See `boothsMultiplication` function for further details
+
 ## References
 
 - [Bit Manipulation on YouTube](https://www.youtube.com/watch?v=NLKQEOgBAnw&t=0s&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
