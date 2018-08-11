@@ -91,6 +91,19 @@ inverting all of the bits of the number and adding 1 to it.
 
 > See `switchSign` function for further details.
 
+#### Count Bits to Flip One Number to Another
+
+This methods outputs the number of bits required to convert a number to another. This
+makes use of property when numbers are XORed and `countSetBits`.
+
+``
+Number A : 5 = (0101)_2
+Number B : 1 = (0001)_2
+Count Bits to be Flipped: 1
+``
+
+> See `countBitsToflipAToB` function for further details.
+
 ## References
 
 - [Bit Manipulation on YouTube](https://www.youtube.com/watch?v=NLKQEOgBAnw&t=0s&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
