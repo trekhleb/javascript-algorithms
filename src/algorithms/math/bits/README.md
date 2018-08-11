@@ -91,6 +91,25 @@ inverting all of the bits of the number and adding 1 to it.
 
 > See `switchSign` function for further details.
 
+
+#### Pandigital Concatenation
+
+This method checks if pair of strings when concatenation consists of all digits from
+(0-9) in any order at least once. Given an array of such numbers it returns the count
+of number of possible pandigital concatenation. This uses the propery that when two
+masks(all 1's) be i and j with frequencies freq_i and freq_j have 
+
+
+i | j = Mask_pandigitalconcatenation
+
+Then,
+Number of pairs = freq_i * freq_j
+
+Using bitwise operators and with this approach the complexity of the method reduces to
+`O(N * |s| + 1023 * 1023)` where `|s|` is the length of strings in the array.
+
+> See `pandigitalConcatenation` function for further details
+
 ## References
 
 - [Bit Manipulation on YouTube](https://www.youtube.com/watch?v=NLKQEOgBAnw&t=0s&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
