@@ -91,6 +91,19 @@ inverting all of the bits of the number and adding 1 to it.
 
 > See `switchSign` function for further details.
 
+#### Karatsuba Multiplication
+
+Given two numbers in binary representation, karatsuba algorithm find the multiplication
+in O(n^1.59) T.C.
+
+This uses the fact that
+
+``
+AB = 22ceil(num / 2) A_1B_1 + 2ceil(num / 2) * [(A_1 + A_r)(B_1 + B_r) - A_1B_1 - A_rB_r] + A_rB_r
+``
+
+> See `karasubaMultiplication` function for further details.
+
 ## References
 
 - [Bit Manipulation on YouTube](https://www.youtube.com/watch?v=NLKQEOgBAnw&t=0s&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
