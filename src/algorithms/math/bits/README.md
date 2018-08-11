@@ -91,6 +91,17 @@ inverting all of the bits of the number and adding 1 to it.
 
 > See `switchSign` function for further details.
 
+#### XOR Output Without Using XOR operator
+
+This method outputs the XOR of two numbers without using the XOR operator.
+
+``
+Number A : 5 = (0101)_2
+Number B : 1 = (0001)_2
+A XOR B  : 4 = (0100)_2
+``
+
+> See `XORWithoutXOR` function for further details.
 ## References
 
 - [Bit Manipulation on YouTube](https://www.youtube.com/watch?v=NLKQEOgBAnw&t=0s&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
