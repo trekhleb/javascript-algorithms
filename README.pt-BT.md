@@ -190,11 +190,11 @@ se satisfizer todas as condições, e só então continuar gerando soluções su
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
   * `A` [Combination Sum](src/algorithms/sets/combination-sum) - encontre todas as combinações que formam uma soma específica
-* **Branch & Bound** - remember the lowest-cost solution found at each stage of the backtracking
-search, and use the cost of the lowest-cost solution found so far as a lower bound on the cost of
-a least-cost solution to the problem, in order to discard partial solutions with costs larger than the
-lowest-cost solution found so far. Normally BFS traversal in combination with DFS traversal of state-space
-tree is being used.
+* **Branch & Bound** - lembre-se da solução de menor custo encontrada em cada etapa do retrocesso
+pesquisar e usar o custo da solução de menor custo encontrada até o limite inferior do custo de
+solução de menor custo para o problema, a fim de descartar soluções parciais com custos maiores que o
+solução de menor custo encontrada até o momento. Normalmente, a travessia BFS em combinação com a passagem DFS do espaço de estados
+árvore está sendo usada
 
 ## Como usar este repositório
 
