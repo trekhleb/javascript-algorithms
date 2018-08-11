@@ -68,6 +68,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Sieve of Eratosthenes](src/algorithms/math/sieve-of-eratosthenes) - finding all prime numbers up to any given limit
   * `B` [Is Power of Two](src/algorithms/math/is-power-of-two) - check if the number is power of two (naive and bitwise algorithms)
   * `B` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
+  * `B` [Complex Number](src/algorithms/math/complex-number) - complex numbers and basic operations with them
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
 * **Sets**
