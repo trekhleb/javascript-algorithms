@@ -91,6 +91,22 @@ inverting all of the bits of the number and adding 1 to it.
 
 > See `switchSign` function for further details.
 
+#### Power of 2
+
+This method checks if a number provided is power of two. It uses the property that when
+a power of 2 is `&` with power of 2 minus 1, it would return 0 implying that the provided
+number is power of 2.
+
+```
+Number: 4
+Power of 2: True
+
+Number: 1
+Power of 2: False
+```
+
+> See `ifPowerof2` function for further details.
+
 ## References
 
 - [Bit Manipulation on YouTube](https://www.youtube.com/watch?v=NLKQEOgBAnw&t=0s&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
