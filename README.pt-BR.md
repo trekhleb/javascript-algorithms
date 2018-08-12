@@ -11,13 +11,13 @@ com explicações relacionadas e links para leitura adicional (incluindo
 vídeos para YouTube)
 
 _Leia isto em outros idiomas:_
+[_English_](https://github.com/trekhleb/javascript-algorithms/)
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md)
-[_Português_](README.pt-BR.md)
 
 > Nós estamos escrevendo um livro que explicará claramente, em datalhes, os principais algoritmos.
 Se você deseja ser notificado quando o livro "Algoritmos em JavaScript” 
@@ -41,11 +41,11 @@ os dados.
 * `B` [Priority Queue](src/data-structures/priority-queue)
 * `A` [Trie](src/data-structures/trie)
 * `A` [Tree](src/data-structures/tree)
-    * `A` [Binary Search Tree](src/data-structures/tree/binary-search-tree)
-    * `A` [AVL Tree](src/data-structures/tree/avl-tree)
-    * `A` [Red-Black Tree](src/data-structures/tree/red-black-tree)
-    * `A` [Segment Tree](src/data-structures/tree/segment-tree) - com exemplos de consultas min / max / sum range
-    * `A` [Fenwick Tree](src/data-structures/tree/fenwick-tree) (Árvore indexada binária)
+  * `A` [Binary Search Tree](src/data-structures/tree/binary-search-tree)
+  * `A` [AVL Tree](src/data-structures/tree/avl-tree)
+  * `A` [Red-Black Tree](src/data-structures/tree/red-black-tree)
+  * `A` [Segment Tree](src/data-structures/tree/segment-tree) - com exemplos de consultas min / max / sum range
+  * `A` [Fenwick Tree](src/data-structures/tree/fenwick-tree) (Árvore indexada binária)
 * `A` [Graph](src/data-structures/graph) (ambos dirigidos e não direcionados)
 * `A` [Disjoint Set](src/data-structures/disjoint-set)
 * `A` [Bloom Filter](src/data-structures/bloom-filter)

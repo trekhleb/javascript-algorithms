@@ -15,7 +15,8 @@ _Léelo en otros idiomas:_
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
 [_Polski_](README.pl-PL.md),
-[_Français_](README.fr-FR.md)
+[_Français_](README.fr-FR.md),
+[_Português_](README.pt-BR.md)
 
 > Estamos escribiendo un libro que explicará claramente, en detalle, los principales algoritmos.
 Si desea ser notificado cuando se publique el libro "Algoritmos JavaScript

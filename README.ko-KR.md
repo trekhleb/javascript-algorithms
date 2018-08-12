@@ -14,7 +14,8 @@ _Read this in other languages:_
 [_繁體中文_](README.zh-TW.md),
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
-[_Español_](README.es-ES.md)
+[_Español_](README.es-ES.md),
+[_Português_](README.pt-BR.md)
 
 > 우리는 주요 알고리즘에 대해 더 자세한 설명을 담은 책을 제작 중입니다.
 만약 “JavaScript Algorithms” 책이 언제 출시되는지 알고 싶다면
@@ -38,11 +39,11 @@ _Read this in other languages:_
 * `B` [우선순위 큐](src/data-structures/priority-queue)
 * `A` [트라이](src/data-structures/trie)
 * `A` [트리](src/data-structures/tree)
-    * `A` [이진 탐색 트리](src/data-structures/tree/binary-search-tree)
-    * `A` [AVL 트리](src/data-structures/tree/avl-tree)
-    * `A` [Red-Black 트리](src/data-structures/tree/red-black-tree)
-    * `A` [세그먼트 트리](src/data-structures/tree/segment-tree) - min/max/sum range 쿼리 예제.
-    * `A` [Fenwick 트리](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
+  * `A` [이진 탐색 트리](src/data-structures/tree/binary-search-tree)
+  * `A` [AVL 트리](src/data-structures/tree/avl-tree)
+  * `A` [Red-Black 트리](src/data-structures/tree/red-black-tree)
+  * `A` [세그먼트 트리](src/data-structures/tree/segment-tree) - min/max/sum range 쿼리 예제.
+  * `A` [Fenwick 트리](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
 * `A` [그래프](src/data-structures/graph) (유방향, 무방향)
 * `A` [서로소 집합](src/data-structures/disjoint-set)
 * `A` [블룸 필터](src/data-structures/bloom-filter)

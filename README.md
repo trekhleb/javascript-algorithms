@@ -16,7 +16,8 @@ _Read this in other languages:_
 [_한국어_](README.ko-KR.md),
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
-[_Español_](README.es-ES.md)
+[_Español_](README.es-ES.md),
+[_Português_](README.pt-BR.md)
 
 > We’re writing a book that will clearly explain, in detail, the main algorithms. 
 If you’d like to be notified when the “JavaScript Algorithms” book 
@@ -40,11 +41,11 @@ the data.
 * `B` [Priority Queue](src/data-structures/priority-queue)
 * `A` [Trie](src/data-structures/trie)
 * `A` [Tree](src/data-structures/tree)
-    * `A` [Binary Search Tree](src/data-structures/tree/binary-search-tree)
-    * `A` [AVL Tree](src/data-structures/tree/avl-tree)
-    * `A` [Red-Black Tree](src/data-structures/tree/red-black-tree)
-    * `A` [Segment Tree](src/data-structures/tree/segment-tree) - with min/max/sum range queries examples
-    * `A` [Fenwick Tree](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
+  * `A` [Binary Search Tree](src/data-structures/tree/binary-search-tree)
+  * `A` [AVL Tree](src/data-structures/tree/avl-tree)
+  * `A` [Red-Black Tree](src/data-structures/tree/red-black-tree)
+  * `A` [Segment Tree](src/data-structures/tree/segment-tree) - with min/max/sum range queries examples
+  * `A` [Fenwick Tree](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
 * `A` [Graph](src/data-structures/graph) (both directed and undirected)
 * `A` [Disjoint Set](src/data-structures/disjoint-set)
 * `A` [Bloom Filter](src/data-structures/bloom-filter)

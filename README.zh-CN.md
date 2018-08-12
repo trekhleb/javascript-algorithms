@@ -13,7 +13,8 @@ _Read this in other languages:_
 [_한국어_](README.ko-KR.md),
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
-[_Español_](README.es-ES.md)
+[_Español_](README.es-ES.md),
+[_Português_](README.pt-BR.md)
 
 > We’re writing a book that will clearly explain, in detail, the main algorithms. 
 If you’d like to be notified when the “JavaScript Algorithms” book 
@@ -34,11 +35,11 @@ launches, [click here](https://upscri.be/402324/).
 * `B` [优先队列](src/data-structures/priority-queue)
 * `A` [字典树](src/data-structures/trie)
 * `A` [树](src/data-structures/tree)
-    * `A` [二叉查找树](src/data-structures/tree/binary-search-tree)
-    * `A` [AVL 树](src/data-structures/tree/avl-tree)
-    * `A` [红黑树](src/data-structures/tree/red-black-tree)
-    * `A` [线段树](src/data-structures/tree/segment-tree) - 使用 最小/最大/总和 范围查询示例
-    * `A` [树状数组](src/data-structures/tree/fenwick-tree) (二叉索引树)
+  * `A` [二叉查找树](src/data-structures/tree/binary-search-tree)
+  * `A` [AVL 树](src/data-structures/tree/avl-tree)
+  * `A` [红黑树](src/data-structures/tree/red-black-tree)
+  * `A` [线段树](src/data-structures/tree/segment-tree) - 使用 最小/最大/总和 范围查询示例
+  * `A` [树状数组](src/data-structures/tree/fenwick-tree) (二叉索引树)
 * `A` [图](src/data-structures/graph) (有向图与无向图)
 * `A` [并查集](src/data-structures/disjoint-set)
 * `A` [布隆过滤器](src/data-structures/bloom-filter)
