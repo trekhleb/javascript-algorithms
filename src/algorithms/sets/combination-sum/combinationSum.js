@@ -15,20 +15,20 @@ function combinationSumRecursive(
 ) {
   if (remainingSum < 0) {
     // By adding another candidate we've gone below zero.
-    // This would mean that last candidate was not acceptable.
+    // This would mean that the last candidate was not acceptable.
     return finalCombinations;
   }
 
   if (remainingSum === 0) {
-    // In case if after adding the previous candidate out remaining sum
-    // became zero we need to same current combination since it is one
-    // of the answer we're looking for.
+    // If after adding the previous candidate our remaining sum
+    // became zero - we need to save the current combination since it is one
+    // of the answers we're looking for.
     finalCombinations.push(currentCombination.slice());
 
     return finalCombinations;
   }
 
-  // In case if we haven't reached zero yet let's continue to add all
+  // If we haven't reached zero yet let's continue to add all
   // possible candidates that are left.
   for (let candidateIndex = startFrom; candidateIndex < candidates.length; candidateIndex += 1) {
     const currentCandidate = candidates[candidateIndex];
