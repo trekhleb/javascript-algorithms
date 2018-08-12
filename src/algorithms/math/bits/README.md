@@ -119,10 +119,12 @@ by `4` bits (`x << 4`).
 #### Count Set Bits
 
 This method counts the number of set bits in a number using bitwise operators.
+The main idea is that we shift the number right by one bit at a time and check
+the result of `&` operation that is `1` if bit is set and `0` otherwise.
 
 ``
-Number: 5 = (0101)_2
-Count Set Bits = 2
+Number: 5 = 0b0101
+Count of set bits = 2
 ``
 
 > See `countSetBits` function for further details.
