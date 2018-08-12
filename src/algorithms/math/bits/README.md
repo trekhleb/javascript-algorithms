@@ -116,6 +116,17 @@ by `4` bits (`x << 4`).
 
 > See `multiplyUnsigned` function for further details.
 
+#### Count Set Bits
+
+This method counts the number of set bits in a number using bitwise operators.
+
+``
+Number: 5 = (0101)_2
+Count Set Bits = 2
+``
+
+> See `countSetBits` function for further details.
+
 ## References
 
 - [Bit Manipulation on YouTube](https://www.youtube.com/watch?v=NLKQEOgBAnw&t=0s&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
