@@ -1,29 +1,16 @@
 import ComplexNumber from '../complex-number/ComplexNumber';
-
-/**
- * Return the no of bits used in the binary representation of input.
- *
- * @param {Number} [input]
- * @return {Number}
- */
-function bitLength(input) {
-  let bitlen = 0;
-  while ((1 << bitlen) <= input) {
-    bitlen += 1;
-  }
-  return bitlen;
-}
+import bitLength from '../bits/bitLength';
 
 /**
  * Returns the number which is the flipped binary representation of input.
  *
  * @param {Number} [input]
- * @param {Number} [bitlen]
+ * @param {Number} [bitsCount]
  * @return {Number}
  */
-function reverseBits(input, bitlen) {
+function reverseBits(input, bitsCount) {
   let reversedBits = 0;
-  for (let i = 0; i < bitlen; i += 1) {
+  for (let i = 0; i < bitsCount; i += 1) {
     reversedBits *= 2;
     if (Math.floor(input / (1 << i)) % 2 === 1) { reversedBits += 1; }
   }
@@ -39,8 +26,8 @@ function reverseBits(input, bitlen) {
  * @return {ComplexNumber[]}
  */
 export default function fastFourierTransform(inputData, inverse = false) {
-  const bitlen = bitLength(inputData.length - 1);
-  const N = 1 << bitlen;
+  const bitsCount = bitLength(inputData.length - 1);
+  const N = 1 << bitsCount;
 
   while (inputData.length < N) {
     inputData.push(new ComplexNumber({
@@ -50,7 +37,7 @@ export default function fastFourierTransform(inputData, inverse = false) {
   }
 
   const output = [];
-  for (let i = 0; i < N; i += 1) { output[i] = inputData[reverseBits(i, bitlen)]; }
+  for (let i = 0; i < N; i += 1) { output[i] = inputData[reverseBits(i, bitsCount)]; }
 
   for (let blockLength = 2; blockLength <= N; blockLength *= 2) {
     let phaseStep;
