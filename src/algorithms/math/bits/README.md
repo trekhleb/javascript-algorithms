@@ -102,6 +102,45 @@ A XOR B  : 4 = (0100)_2
 ``
 
 > See `XORWithoutXOR` function for further details.
+
+#### Multiply Two Numbers
+
+This method multiplies two integer numbers using bitwise operators.
+This method is based on that "Every number can be denoted as the sum of powers of 2".
+
+The main idea of bitwise multiplication is that every number may be split
+to the sum of powers of two:
+
+I.e.
+
+```text
+19 = 2^4 + 2^1 + 2^0
+```
+
+Then multiplying number `x` by `19` is equivalent of:
+
+```text
+x * 19 = x * 2^4 + x * 2^1 + x * 2^0
+```
+
+Now we need to remember that `x * 2^4` is equivalent of shifting `x` left 
+by `4` bits (`x << 4`).
+
+> See `multiplyUnsigned` function for further details.
+
+#### Count Set Bits
+
+This method counts the number of set bits in a number using bitwise operators.
+The main idea is that we shift the number right by one bit at a time and check
+the result of `&` operation that is `1` if bit is set and `0` otherwise.
+
+```text
+Number: 5 = 0b0101
+Count of set bits = 2
+```
+
+> See `countSetBits` function for further details.
+
 ## References
 
 - [Bit Manipulation on YouTube](https://www.youtube.com/watch?v=NLKQEOgBAnw&t=0s&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
