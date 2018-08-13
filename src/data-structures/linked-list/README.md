@@ -110,16 +110,16 @@ ReverseTraversal(head, tail)
   Pre: head and tail belong to the same list
   Post: the items in the list have been traversed in reverse order
   if tail = ø
-     curr ← tail
-     while curr = head
-       prev ← head
-       while prev.next = curr
-           prev ← prev.next
-       end while
-       yield curr.value
-       curr ← prev
-     end while
-     yeild curr.value
+    curr ← tail
+    while curr = head
+      prev ← head
+      while prev.next = curr
+        prev ← prev.next
+      end while
+      yield curr.value
+      curr ← prev
+    end while
+   yeild curr.value
   end if
 end ReverseTraversal
 ```
