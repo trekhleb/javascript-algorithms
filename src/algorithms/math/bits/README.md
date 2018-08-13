@@ -143,6 +143,19 @@ Count of Bits to be Flipped: 1
 
 > See `bitsDiff` function for further details.
 
+#### Count Bits of a Number
+
+To calculate the number of valuable bits we need to shift `1` one bit left each
+time and see if shifted number is bigger than the input number.
+
+```
+5 = 0b0101
+Count of valuable bits is: 3
+When we shift 1 four times it will become bigger than 5.
+```
+
+> See `bitsDiff` function for further details.
+
 ## References
 
 - [Bit Manipulation on YouTube](https://www.youtube.com/watch?v=NLKQEOgBAnw&t=0s&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
