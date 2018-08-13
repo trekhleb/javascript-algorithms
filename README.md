@@ -15,7 +15,9 @@ _Read this in other languages:_
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
 [_Polski_](README.pl-PL.md),
-[_Français_](README.fr-FR.md)
+[_Français_](README.fr-FR.md),
+[_Español_](README.es-ES.md),
+[_Português_](README.pt-BR.md)
 
 > We’re writing a book that will clearly explain, in detail, the main algorithms. 
 If you’d like to be notified when the “JavaScript Algorithms” book 
@@ -39,11 +41,11 @@ the data.
 * `B` [Priority Queue](src/data-structures/priority-queue)
 * `A` [Trie](src/data-structures/trie)
 * `A` [Tree](src/data-structures/tree)
-    * `A` [Binary Search Tree](src/data-structures/tree/binary-search-tree)
-    * `A` [AVL Tree](src/data-structures/tree/avl-tree)
-    * `A` [Red-Black Tree](src/data-structures/tree/red-black-tree)
-    * `A` [Segment Tree](src/data-structures/tree/segment-tree) - with min/max/sum range queries examples
-    * `A` [Fenwick Tree](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
+  * `A` [Binary Search Tree](src/data-structures/tree/binary-search-tree)
+  * `A` [AVL Tree](src/data-structures/tree/avl-tree)
+  * `A` [Red-Black Tree](src/data-structures/tree/red-black-tree)
+  * `A` [Segment Tree](src/data-structures/tree/segment-tree) - with min/max/sum range queries examples
+  * `A` [Fenwick Tree](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
 * `A` [Graph](src/data-structures/graph) (both directed and undirected)
 * `A` [Disjoint Set](src/data-structures/disjoint-set)
 * `A` [Bloom Filter](src/data-structures/bloom-filter)
@@ -67,6 +69,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Sieve of Eratosthenes](src/algorithms/math/sieve-of-eratosthenes) - finding all prime numbers up to any given limit
   * `B` [Is Power of Two](src/algorithms/math/is-power-of-two) - check if the number is power of two (naive and bitwise algorithms)
   * `B` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
+  * `B` [Complex Number](src/algorithms/math/complex-number) - complex numbers and basic operations with them
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
 * **Sets**
@@ -123,6 +126,8 @@ a set of rules that precisely define a sequence of operations.
   * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * `A` [Strongly Connected Components](src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
+* **Cryptography**
+  * `B` [Polynomial Hash](src/algorithms/cryptography/polynomial-hash) - rolling hash function based on polynomial
 * **Uncategorized**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
