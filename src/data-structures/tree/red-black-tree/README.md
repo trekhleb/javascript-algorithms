@@ -74,7 +74,7 @@ unlike ordinary binary search trees.
 
 #### Left Right Case (See g, p and x)
 
-![Red Black Tree Balancing](https://www.geeksforgeeks.org/wp-content/uploads/redBlackCase3d.png)
+![Red Black Tree Balancing](https://www.geeksforgeeks.org/wp-content/uploads/redBlackCase3b.png)
 
 #### Right Right Case (See g, p and x)
 
@@ -82,7 +82,7 @@ unlike ordinary binary search trees.
 
 #### Right Left Case (See g, p and x)
 
-![Red Black Tree Balancing](https://www.geeksforgeeks.org/wp-content/uploads/redBlackCase3c.png)
+![Red Black Tree Balancing](https://www.geeksforgeeks.org/wp-content/uploads/redBlackCase3d.png)
 
 ## References
 
