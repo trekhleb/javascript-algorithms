@@ -1,11 +1,11 @@
 export default class ComplexNumber {
   /**
-   * @param {number} [real]
-   * @param {number} [imaginary]
+   * @param {number} [re]
+   * @param {number} [im]
    */
-  constructor({ real = 0, imaginary = 0 } = {}) {
-    this.real = real;
-    this.imaginary = imaginary;
+  constructor({ re = 0, im = 0 } = {}) {
+    this.re = re;
+    this.im = im;
   }
 
   /**
@@ -14,8 +14,8 @@ export default class ComplexNumber {
    */
   add(addend) {
     return new ComplexNumber({
-      real: this.real + addend.real,
-      imaginary: this.imaginary + addend.imaginary,
+      re: this.re + addend.re,
+      im: this.im + addend.im,
     });
   }
 
@@ -25,8 +25,8 @@ export default class ComplexNumber {
    */
   subtract(subtrahend) {
     return new ComplexNumber({
-      real: this.real - subtrahend.real,
-      imaginary: this.imaginary - subtrahend.imaginary,
+      re: this.re - subtrahend.re,
+      im: this.im - subtrahend.im,
     });
   }
 
@@ -36,8 +36,8 @@ export default class ComplexNumber {
    */
   multiply(multiplicand) {
     return new ComplexNumber({
-      real: this.real * multiplicand.real - this.imaginary * multiplicand.imaginary,
-      imaginary: this.real * multiplicand.imaginary + this.imaginary * multiplicand.real,
+      re: this.re * multiplicand.re - this.im * multiplicand.im,
+      im: this.re * multiplicand.im + this.im * multiplicand.re,
     });
   }
 
@@ -53,11 +53,11 @@ export default class ComplexNumber {
     const finalDivident = this.multiply(dividerConjugate);
 
     // Calculating final divider using formula (a + bi)(a − bi) = a^2 + b^2
-    const finalDivider = (divider.real ** 2) + (divider.imaginary ** 2);
+    const finalDivider = (divider.re ** 2) + (divider.im ** 2);
 
     return new ComplexNumber({
-      real: finalDivident.real / finalDivider,
-      imaginary: finalDivident.imaginary / finalDivider,
+      re: finalDivident.re / finalDivider,
+      im: finalDivident.im / finalDivider,
     });
   }
 
@@ -66,8 +66,8 @@ export default class ComplexNumber {
    */
   conjugate(complexNumber) {
     return new ComplexNumber({
-      real: complexNumber.real,
-      imaginary: -1 * complexNumber.imaginary,
+      re: complexNumber.re,
+      im: -1 * complexNumber.im,
     });
   }
 }
