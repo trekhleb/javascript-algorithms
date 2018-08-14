@@ -61,7 +61,8 @@ end Contains
 ```text
 Remove(head, value)
   Pre: head is the head node in the list
-  Post: value is the value to remove from the list, true, otherwise false
+       value is the value to remove from the list
+  Post: value is removed from the list, true, otherwise false
   if head = ø
     return false
   end if
