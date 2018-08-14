@@ -27,205 +27,234 @@ The leaves are not drawn.
 
 ![Binary Search Tree](https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg)
 
-## Pseudocode
+## Pseudocode for Basic Operations
 
 ### Insertion
 
-    insert(value)
-        Pre: value has passed custome type checks for type T
-        Post: value has been placed in the correct location in the tree
-        if root = ø
-            root ← node(value)
-        else
-            insertNode(root, value)
-        end if
-    end insert
+```text
+insert(value)
+  Pre: value has passed custom type checks for type T
+  Post: value has been placed in the correct location in the tree
+  if root = ø
+    root ← node(value)
+  else
+    insertNode(root, value)
+  end if
+end insert
+```
     
-    insertNode(current, value)
-        Pre: current is the node to start from
-        Post: value has been placed in the correct location in the tree
-        if value < current.value
-            if current.left = ø
-                current.left ← node(value)
-            else
-                InsertNode(current.left, value)
-            end if
-        else
-            if current.right = ø
-                current.right ← node(value)
-            end if
-        end if
-    end insertNode
+```text
+insertNode(current, value)
+  Pre: current is the node to start from
+  Post: value has been placed in the correct location in the tree
+  if value < current.value
+    if current.left = ø
+      current.left ← node(value)
+    else
+      InsertNode(current.left, value)
+    end if
+  else
+    if current.right = ø
+      current.right ← node(value)
+    else
+      InsertNode(current.right, value)
+    end if
+  end if
+end insertNode
+```
 
 ### Searching
 
-    contains(root, value)
-        Pre: root is the root node of the tree, value is what we would like to locate
-        Post: value is either located or not
-        if root = ø
-            return false
-        end if
-        if root.value = value
-            return true
-        else if value < root.value
-            return contains(root.left, value)
-        else
-            return contains(root.right, value)
-        end if
-     end contains
+```text
+contains(root, value)
+  Pre: root is the root node of the tree, value is what we would like to locate
+  Post: value is either located or not
+  if root = ø
+    return false
+  end if
+  if root.value = value
+    return true
+  else if value < root.value
+    return contains(root.left, value)
+  else
+    return contains(root.right, value)
+  end if
+end contains
+```
+    
      
 ### Deletion
 
-     remove(value)
-         Pre: value is the value of the node to remove, root is the node of the BST
-              count is the number of items in the BST
-         Post: node with value is removed if found in which case yields true, otherwise false
-         nodeToRemove ← findNode(value)
-         if nodeToRemove = ø
-             return false
-         end if
-         parent ← findParent(value)
-         if count = 1
-             root ← ø
-         else if nodeToRemove.left = ø and nodeToRemove.right = ø
-             if nodeToRemove.value < parent.value
-                 parent.left ←  nodeToRemove.right
-             else
-                 parent.right ← nodeToRemove.right
-             end if
-         else if nodeToRemove.left = ø and nodeToRemove.right = ø
-             if nodeToRemove.value < parent.value
-                 parent.left ←  nodeToRemove.left
-             else
-                 parent.right ← nodeToRemove.left
-             end if
-         else
-             largestValue ← nodeToRemove.left
-             while largestValue.right = ø
-                 largestValue ← largestValue.right
-             end while
-             findParent(largestValue.value).right ← ø
-             nodeToRemove.value ← largestValue.value
-         end if
-     count ← count - 1
-         return true
-     end remove
+```text
+remove(value)
+  Pre: value is the value of the node to remove, root is the node of the BST
+      count is the number of items in the BST
+  Post: node with value is removed if found in which case yields true, otherwise false
+  nodeToRemove ← findNode(value)
+  if nodeToRemove = ø
+    return false
+  end if
+  parent ← findParent(value)
+  if count = 1
+    root ← ø
+  else if nodeToRemove.left = ø and nodeToRemove.right = ø
+    if nodeToRemove.value < parent.value
+      parent.left ←  nodeToRemove.right
+    else
+      parent.right ← nodeToRemove.right
+    end if
+  else if nodeToRemove.left = ø and nodeToRemove.right = ø
+   if nodeToRemove.value < parent.value
+     parent.left ←  nodeToRemove.left
+   else
+     parent.right ← nodeToRemove.left
+   end if
+  else
+   largestValue ← nodeToRemove.left
+   while largestValue.right = ø
+     largestValue ← largestValue.right
+   end while
+   findParent(largestValue.value).right ← ø
+   nodeToRemove.value ← largestValue.value
+  end if
+  count ← count - 1
+  return true
+end remove
+```
 
 ### Find Parent of Node
-    findParent(value, root)
-        Pre: value is the value of the node we want to find the parent of
-             root is the root node of the BST and is != ø
-        Post: a reference to the prent node of value if found; otherwise ø
-        if value = root.value
-            return ø
-        end if
-        if value < root.value
-            if root.left = ø
-                return ø
-            else if root.left.value = value
-                return root
-            else
-                return findParent(value, root.left)
-            end if
-        else
-            if root.right = ø
-                return ø
-            else if root.right.value = value
-                return root
-            else
-                return findParent(value, root.right)
-            end if
-        end if
-    end findParent
+
+```text
+findParent(value, root)
+  Pre: value is the value of the node we want to find the parent of
+       root is the root node of the BST and is != ø
+  Post: a reference to the prent node of value if found; otherwise ø
+  if value = root.value
+    return ø
+  end if
+  if value < root.value
+    if root.left = ø
+      return ø
+    else if root.left.value = value
+      return root
+    else
+      return findParent(value, root.left)
+    end if
+  else
+    if root.right = ø
+      return ø
+    else if root.right.value = value
+      return root
+    else
+      return findParent(value, root.right)
+    end if
+  end if
+end findParent
+```
 
 ### Find Node
-    findNode(root, value)
-        Pre: value is the value of the node we want to find the parent of
-             root is the root node of the BST
-        Post: a reference to the node of value if found; otherwise ø
-        if root = ø
-            return ø
-        end if
-        if root.value = value
-            return root
-        else if value < root.value
-            return findNode(root.left, value)
-        else
-            return findNode(root.right, value)
-        end if
-    end findNode
+
+```text
+findNode(root, value)
+  Pre: value is the value of the node we want to find the parent of
+       root is the root node of the BST
+  Post: a reference to the node of value if found; otherwise ø
+  if root = ø
+    return ø
+  end if
+  if root.value = value
+    return root
+  else if value < root.value
+    return findNode(root.left, value)
+  else
+    return findNode(root.right, value)
+  end if
+end findNode
+```
     
 ### Find Minimum
-    findMin(root)
-        Pre: root is the root node of the BST
-             root = ø
-        Post: the smallest value in the BST is located
-        if root.left = ø
-            return root.value
-        end if
-        findMin(root.left)
-    end findMin
-    
-    
-### Find Maximim
-    findMax(root)
-        Pre: root is the root node of the BST
-             root = ø
-        Post: the largest value in the BST is located
-        if root.right = ø
-            return root.value
-        end if
-        findMax(root.right)
-    end findMax
-    
- ### Traversal
- #### InOrder
-     inorder(root)
-         Pre: root is the root node of the BST
-         Post: the nodes in the BST have been visited in inorder
-         if root = ø
-             inorder(root.left)
-             yield root.value
-             inorder(root.right)
-         end if
-     end inorder
 
- #### PreOrder
-      preorder(root)
-         Pre: root is the root node of the BST
-         Post: the nodes in the BST have been visited in preorder
-         if root = ø
-             yield root.value
-             preorder(root.left)
-             preorder(root.right)
-         end if
-     end preorder
- #### PostOrder
-      postorder(root)
-         Pre: root is the root node of the BST
-         Post: the nodes in the BST have been visited in postorder
-         if root = ø
-             postorder(root.left)
-             postorder(root.right)
-             yield root.value
-         end if
-     end postorder
+```text
+findMin(root)
+  Pre: root is the root node of the BST
+    root = ø
+  Post: the smallest value in the BST is located
+  if root.left = ø
+    return root.value
+  end if
+  findMin(root.left)
+end findMin
+```
+    
+### Find Maximum
+
+```text
+findMax(root)
+  Pre: root is the root node of the BST
+    root = ø
+  Post: the largest value in the BST is located
+  if root.right = ø
+    return root.value
+  end if
+  findMax(root.right)
+end findMax
+```
+    
+### Traversal
+
+#### InOrder Traversal
+
+```text
+inorder(root)
+  Pre: root is the root node of the BST
+  Post: the nodes in the BST have been visited in inorder
+  if root = ø
+    inorder(root.left)
+    yield root.value
+    inorder(root.right)
+  end if
+end inorder
+```
+
+#### PreOrder Traversal
+
+```text
+preorder(root)
+  Pre: root is the root node of the BST
+  Post: the nodes in the BST have been visited in preorder
+  if root = ø
+    yield root.value
+    preorder(root.left)
+    preorder(root.right)
+  end if
+end preorder
+```
+   
+#### PostOrder Traversal
+
+```text
+postorder(root)
+  Pre: root is the root node of the BST
+  Post: the nodes in the BST have been visited in postorder
+  if root = ø
+    postorder(root.left)
+    postorder(root.right)
+    yield root.value
+  end if
+end postorder
+```
      
-     
-## Big O
+## Complexities
 
 ### Time Complexity
 
-Access: O(log(n))
-Search: O(log(n))
-Insert: O(log(n))
-Delete: O(log(n))
-
+| Access    | Search    | Insertion | Deletion  |
+| :-------: | :-------: | :-------: | :-------: |
+| O(log(n)) | O(log(n)) | O(log(n)) | O(log(n)) |
 
 ### Space Complexity
 
 O(n)
-
 
 ## References
 
