@@ -201,6 +201,44 @@ export default class LinkedList {
   }
 
   /**
+   * @param {Object} findParams
+   * @param {*} findParams.value
+   * @param {*} findParams.position
+   * @return {LinkedListNode}
+   */
+  addToPosition({ position = undefined, value = undefined }) {
+    if (!this.head || value === undefined) {
+      return null;
+    }
+
+    if (position === undefined) {
+      this.append(value);
+      return this;
+    }
+
+    if (position === 1) {
+      this.prepend(value);
+      return this;
+    }
+
+    let currentNode = this.head;
+    let i = 1;
+
+    while (currentNode.next) {
+      if ((i + 1) === position) {
+        const newNode = new LinkedListNode(value);
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+      }
+
+      currentNode = currentNode.next;
+      i += 1;
+    }
+
+    return this;
+  }
+
+  /**
    * @param {function} [callback]
    * @return {string}
    */

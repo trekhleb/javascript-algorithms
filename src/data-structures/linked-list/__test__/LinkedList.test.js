@@ -31,6 +31,19 @@ describe('LinkedList', () => {
     expect(linkedList.toString()).toBe('3,2,1');
   });
 
+  it('should add node to specified position in the list', () => {
+    const linkedList = new LinkedList();
+    linkedList.append(1);
+    linkedList.append(2);
+    linkedList.append(3);
+    linkedList.append(4);
+    linkedList.append(5);
+
+    linkedList.addToPosition({ position: 4, value: 22 });
+
+    expect(linkedList.toString()).toBe('1,2,3,22,4,5');
+  });
+
   it('should delete node by value from linked list', () => {
     const linkedList = new LinkedList();
 

@@ -2,28 +2,52 @@ import LinkedList from '../linked-list/LinkedList';
 
 export default class Queue {
   constructor() {
-    this.linkedList = new LinkedList();
+    this.linkedList = (() => {
+      const temp = new LinkedList();
+
+      return {
+        isEmpty: () => {
+          return !temp.tail;
+        },
+
+        peek: () => {
+          if (!temp.head) {
+            return null;
+          }
+
+          return temp.head.value;
+        },
+
+        enqueue: (value) => {
+          temp.append(value);
+        },
+
+        dequeue: () => {
+          const removedHead = temp.deleteHead();
+          return removedHead ? removedHead.value : null;
+        },
+
+        toString: (callback) => {
+          return temp.toString(callback);
+        },
+      };
+    })();
   }
 
   isEmpty() {
-    return !this.linkedList.tail;
+    return this.linkedList.isEmpty();
   }
 
   peek() {
-    if (!this.linkedList.head) {
-      return null;
-    }
-
-    return this.linkedList.head.value;
+    return this.linkedList.peek();
   }
 
   enqueue(value) {
-    this.linkedList.append(value);
+    return this.linkedList.enqueue(value);
   }
 
   dequeue() {
-    const removedHead = this.linkedList.deleteHead();
-    return removedHead ? removedHead.value : null;
+    return this.linkedList.dequeue();
   }
 
   toString(callback) {
