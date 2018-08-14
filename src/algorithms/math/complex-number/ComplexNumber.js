@@ -1,5 +1,10 @@
+import radianToDegree from '../radian/radianToDegree';
+
 export default class ComplexNumber {
   /**
+   * z = re + im * i
+   * z = radius * e^(i * phase)
+   *
    * @param {number} [re]
    * @param {number} [im]
    */
@@ -69,5 +74,45 @@ export default class ComplexNumber {
       re: complexNumber.re,
       im: -1 * complexNumber.im,
     });
+  }
+
+  /**
+   * @return {number}
+   */
+  getRadius() {
+    return Math.sqrt((this.re ** 2) + (this.im ** 2));
+  }
+
+  /**
+   * @param {boolean} [inRadians]
+   * @return {number}
+   */
+  getPhase(inRadians = true) {
+    let phase = Math.atan(Math.abs(this.im) / Math.abs(this.re));
+
+    if (this.re < 0 && this.im > 0) {
+      phase = Math.PI - phase;
+    } else if (this.re < 0 && this.im < 0) {
+      phase = -(Math.PI - phase);
+    } else if (this.re > 0 && this.im < 0) {
+      phase = -phase;
+    }
+
+    if (!inRadians) {
+      phase = radianToDegree(phase);
+    }
+
+    return phase;
+  }
+
+  /**
+   * @param {boolean} [inRadians]
+   * @return {{radius: number, phase: number}}
+   */
+  getPolarForm(inRadians = true) {
+    return {
+      radius: this.getRadius(),
+      phase: this.getPhase(inRadians),
+    };
   }
 }
