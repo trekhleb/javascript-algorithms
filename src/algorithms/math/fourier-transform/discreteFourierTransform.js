@@ -1,55 +1,55 @@
+import ComplexNumber from '../complex-number/ComplexNumber';
+
 /**
- * @param {number[]} data
- * @return {*[]}
+ * @param {number[]} inputSignalAmplitudes - Input signal amplitudes over time (i.e. [1, 0, 4]).
+ * @return {ComplexNumber[]} - Array of complex number. Each of the number represents the frequency
+ * or signal. All signals together will form input signal over discrete time periods. Each signal's
+ * complex number has radius (amplitude) and phase (angle) in polar form that describes the signal.
+ *
+ * @see https://gist.github.com/anonymous/129d477ddb1c8025c9ac
+ * @see https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/
  */
-export default function discreteFourierTransform(data) {
-  const N = data.length;
-  const frequencies = [];
+export default function discreteFourierTransform(inputSignalAmplitudes) {
+  const N = inputSignalAmplitudes.length;
+  const outpuFrequencies = [];
 
-  // for every frequency...
-  for (let frequency = 0; frequency < N; frequency += 1) {
-    let re = 0;
-    let im = 0;
+  // For every frequency discrete...
+  for (let frequencyValue = 0; frequencyValue < N; frequencyValue += 1) {
+    let signal = new ComplexNumber();
 
-    // for every point in time...
+    // For every discrete point in time...
     for (let t = 0; t < N; t += 1) {
       // Spin the signal _backwards_ at each frequency (as radians/s, not Hertz)
-      const rate = -1 * (2 * Math.PI) * frequency;
+      const rate = -1 * (2 * Math.PI) * frequencyValue;
 
       // How far around the circle have we gone at time=t?
       const time = t / N;
       const distance = rate * time;
 
       // Data-point * e^(-i*2*pi*f) is complex, store each part.
-      const rePart = data[t] * Math.cos(distance);
-      const imPart = data[t] * Math.sin(distance);
+      const dataPointContribution = new ComplexNumber({
+        re: inputSignalAmplitudes[t] * Math.cos(distance),
+        im: inputSignalAmplitudes[t] * Math.sin(distance),
+      });
 
-      // add this data point's contribution
-      re += rePart;
-      im += imPart;
+      // Add this data point's contribution.
+      signal = signal.add(dataPointContribution);
     }
 
     // Close to zero? You're zero.
-    if (Math.abs(re) < 1e-10) {
-      re = 0;
+    if (Math.abs(signal.re) < 1e-10) {
+      signal.re = 0;
     }
 
-    if (Math.abs(im) < 1e-10) {
-      im = 0;
+    if (Math.abs(signal.im) < 1e-10) {
+      signal.im = 0;
     }
 
     // Average contribution at this frequency
-    re /= N;
-    im /= N;
+    signal = signal.divide(N);
 
-    frequencies[frequency] = {
-      re,
-      im,
-      frequency,
-      amp: Math.sqrt((re ** 2) + (im ** 2)),
-      phase: Math.atan2(im, re) * 180 / Math.PI, // in degrees
-    };
+    outpuFrequencies[frequencyValue] = signal;
   }
 
-  return frequencies;
+  return outpuFrequencies;
 }

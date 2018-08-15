@@ -78,12 +78,49 @@ Rather than jumping into the symbols, let's experience the key idea firsthand. H
 - *Why?* Recipes are easier to analyze, compare, and modify than the smoothie itself.
 - *How do we get the smoothie back?* Blend the ingredients.
 
+**Think With Circles, Not Just Sinusoids**
+
+The Fourier Transform is about circular paths (not 1-d sinusoids) and Euler's 
+formula is a clever way to generate one:
+
+![](https://betterexplained.com/wp-content/uploads/euler/equal_paths.png)
+
+Must we use imaginary exponents to move in a circle? Nope. But it's convenient
+and compact. And sure, we can describe our path as coordinated motion in two 
+dimensions (real and imaginary), but don't forget the big picture: we're just 
+moving in a circle.
+
+**Discovering The Full Transform**
+
+The big insight: our signal is just a bunch of time spikes! If we merge the 
+recipes for each time spike, we should get the recipe for the full signal.
+
+The Fourier Transform builds the recipe frequency-by-frequency:
+
+![](https://betterexplained.com/wp-content/uploads/images/fourier-explained-20121219-224649.png)
+
+A few notes:
+
+- N = number of time samples we have
+- n = current sample we're considering (0 ... N-1)
+- x<sub>n</sub> = value of the signal at time n
+- k = current frequency we're considering (0 Hertz up to N-1 Hertz)
+- X<sub>k</sub> = amount of frequency k in the signal (amplitude and phase, a complex number)
+- The 1/N factor is usually moved to the reverse transform (going from frequencies back to time). This is allowed, though I prefer 1/N in the forward transform since it gives the actual sizes for the time spikes. You can get wild and even use 1/sqrt(N) on both transforms (going forward and back creates the 1/N factor).
+- n/N is the percent of the time we've gone through. 2 * pi * k is our speed in radians / sec. e^-ix is our backwards-moving circular path. The combination is how far we've moved, for this speed and time.
+- The raw equations for the Fourier Transform just say "add the complex numbers". Many programming languages cannot handle complex numbers directly, so you convert everything to rectangular coordinates and add those.
+
+Stuart Riffle has a great interpretation of the Fourier Transform:
+
+![](https://betterexplained.com/wp-content/uploads/images/DerivedDFT.png)
+
 ## References
 
 - [An Interactive Guide To The Fourier Transform](https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/)
 - [YouTube by Better Explained](https://www.youtube.com/watch?v=iN0VG9N2q0U&t=0s&index=77&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 - [YouTube by 3Blue1Brown](https://www.youtube.com/watch?v=spUNpyF58BY&t=0s&index=76&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
-- [Wikipedia, FT](https://en.wikipedia.org/wiki/Fourier_transform)
-- [Wikipedia, DFT](https://www.wikiwand.com/en/Discrete_Fourier_transform)
-- [Wikipedia, DTFT](https://en.wikipedia.org/wiki/Discrete-time_Fourier_transform)
-- [Wikipedia, FFT](https://www.wikiwand.com/en/Fast_Fourier_transform)
+- Wikipedia
+  - [FT](https://en.wikipedia.org/wiki/Fourier_transform)
+  - [DFT](https://www.wikiwand.com/en/Discrete_Fourier_transform)
+  - [DTFT](https://en.wikipedia.org/wiki/Discrete-time_Fourier_transform)
+  - [FFT](https://www.wikiwand.com/en/Fast_Fourier_transform)

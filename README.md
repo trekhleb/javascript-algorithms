@@ -73,6 +73,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Radian & Degree](src/algorithms/math/radian) - radians to degree and backwards conversion
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
+  * `A` [Fourier Transform (DFT, FFT)](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up 
 * **Sets**
   * `B` [Cartesian Product](src/algorithms/sets/cartesian-product) - product of multiple sets
   * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
