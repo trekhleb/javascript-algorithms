@@ -34,6 +34,7 @@ export default class TrieNode {
 
   /**
    * @param {string} character
+   * @description Deletes the child with the given character of the TrieNode
    * @return {TrieNode}
    */
   removeChild(character) {
