@@ -20,4 +20,6 @@ module.exports = {
 
   // The pattern Jest uses to detect test files.
   testRegex: '(/__tests__/.*|(\\.|/)(test|spec))\\.jsx?$',
+
+  testURL: 'http://localhost/'
 };
