@@ -184,6 +184,13 @@ describe('LinkedList', () => {
     expect(linkedList.find({ callback: value => value.key === 'test5' })).toBeNull();
   });
 
+  it('should create linked list from array', () => {
+    const linkedList = new LinkedList();
+    linkedList.fromArray([1, 1, 2, 3, 3, 3, 4, 5]);
+
+    expect(linkedList.toString()).toBe('1,1,2,3,3,3,4,5');
+  });
+
   it('should find node by means of custom compare function', () => {
     const comparatorFunction = (a, b) => {
       if (a.customValue === b.customValue) {
