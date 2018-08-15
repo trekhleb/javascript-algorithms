@@ -34,6 +34,18 @@ export default class TrieNode {
 
   /**
    * @param {string} character
+   * @return {TrieNode}
+   */
+  removeChild(character) {
+    if(this.children.has(character)) {
+      this.children.delete(character);
+    }
+
+    return this
+  }
+
+  /**
+   * @param {string} character
    * @return {boolean}
    */
   hasChild(character) {
