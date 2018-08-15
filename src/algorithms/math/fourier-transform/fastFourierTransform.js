@@ -4,17 +4,17 @@ import bitLength from '../bits/bitLength';
 /**
  * Returns the number which is the flipped binary representation of input.
  *
- * @param {Number} [input]
- * @param {Number} [bitsCount]
- * @return {Number}
+ * @param {number} input
+ * @param {number} bitsCount
+ * @return {number}
  */
 function reverseBits(input, bitsCount) {
   let reversedBits = 0;
 
-  for (let i = 0; i < bitsCount; i += 1) {
+  for (let bitIndex = 0; bitIndex < bitsCount; bitIndex += 1) {
     reversedBits *= 2;
 
-    if (Math.floor(input / (1 << i)) % 2 === 1) {
+    if (Math.floor(input / (1 << bitIndex)) % 2 === 1) {
       reversedBits += 1;
     }
   }
@@ -39,8 +39,8 @@ export default function fastFourierTransform(inputData, inverse = false) {
   }
 
   const output = [];
-  for (let i = 0; i < N; i += 1) {
-    output[i] = inputData[reverseBits(i, bitsCount)];
+  for (let dataSampleIndex = 0; dataSampleIndex < N; dataSampleIndex += 1) {
+    output[dataSampleIndex] = inputData[reverseBits(dataSampleIndex, bitsCount)];
   }
 
   for (let blockLength = 2; blockLength <= N; blockLength *= 2) {
@@ -53,14 +53,14 @@ export default function fastFourierTransform(inputData, inverse = false) {
     for (let blockStart = 0; blockStart < N; blockStart += blockLength) {
       let phase = new ComplexNumber({ re: 1, im: 0 });
 
-      for (let idx = blockStart; idx < blockStart + blockLength / 2; idx += 1) {
-        const component = output[idx + blockLength / 2].multiply(phase);
+      for (let signalId = blockStart; signalId < (blockStart + blockLength / 2); signalId += 1) {
+        const component = output[signalId + blockLength / 2].multiply(phase);
 
-        const upd1 = output[idx].add(component);
-        const upd2 = output[idx].subtract(component);
+        const upd1 = output[signalId].add(component);
+        const upd2 = output[signalId].subtract(component);
 
-        output[idx] = upd1;
-        output[idx + blockLength / 2] = upd2;
+        output[signalId] = upd1;
+        output[signalId + blockLength / 2] = upd2;
 
         phase = phase.multiply(phaseStep);
       }
@@ -68,8 +68,8 @@ export default function fastFourierTransform(inputData, inverse = false) {
   }
 
   if (inverse) {
-    for (let idx = 0; idx < N; idx += 1) {
-      output[idx] /= N;
+    for (let signalId = 0; signalId < N; signalId += 1) {
+      output[signalId] /= N;
     }
   }
 

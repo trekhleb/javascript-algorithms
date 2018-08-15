@@ -53,10 +53,10 @@ describe('fastFourierTransform', () => {
     ];
 
     const output = fastFourierTransform(input);
-    const invertedOut = fastFourierTransform(output, true);
+    const invertedOutput = fastFourierTransform(output, true);
 
     expect(sequencesApproximatelyEqual(expectedOutput, output, delta)).toBe(true);
-    expect(sequencesApproximatelyEqual(input, invertedOut, delta)).toBe(true);
+    expect(sequencesApproximatelyEqual(input, invertedOutput, delta)).toBe(true);
   });
 
   it('should calculate the radix-2 discrete fourier transform #3', () => {
