@@ -1,6 +1,11 @@
-import MinHeap from './MinHeap';
+import Heap from './Heap';
 
-export default class MaxHeap extends MinHeap {
+/**
+ * Creates a new MaxHeap
+ * @class
+ * @augments Heap
+ */
+class MaxHeap extends Heap {
   /**
    * @param {*} item
    * @param {Comparator} [customFindingComparator]
@@ -95,3 +100,5 @@ export default class MaxHeap extends MinHeap {
     }
   }
 }
+
+export default MaxHeap;
