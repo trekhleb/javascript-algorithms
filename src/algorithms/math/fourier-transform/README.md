@@ -69,6 +69,9 @@ The Fourier Transform is one of deepest insights ever made. Unfortunately, the
 meaning is buried within dense equations:
 
 ![](https://betterexplained.com/wp-content/plugins/wp-latexrender/pictures/45c088dbb767150fc0bacfeb49dd49e5.png)
+
+and
+
 ![](https://betterexplained.com/wp-content/plugins/wp-latexrender/pictures/faeb9c5bf2e60add63ae4a70b293c7b4.png)
 
 Rather than jumping into the symbols, let's experience the key idea firsthand. Here's a plain-English metaphor:
