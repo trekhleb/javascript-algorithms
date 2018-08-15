@@ -33,12 +33,16 @@ describe('ComplexNumber', () => {
 
     const complexNumber3 = complexNumber.add(realNumber);
     const complexNumber4 = realNumber.add(complexNumber);
+    const complexNumber5 = complexNumber.add(3);
 
     expect(complexNumber3.re).toBe(1 + 3);
     expect(complexNumber3.im).toBe(2);
 
     expect(complexNumber4.re).toBe(1 + 3);
     expect(complexNumber4.im).toBe(2);
+
+    expect(complexNumber5.re).toBe(1 + 3);
+    expect(complexNumber5.im).toBe(2);
   });
 
   it('should subtract complex numbers', () => {
@@ -61,12 +65,16 @@ describe('ComplexNumber', () => {
 
     const complexNumber3 = complexNumber.subtract(realNumber);
     const complexNumber4 = realNumber.subtract(complexNumber);
+    const complexNumber5 = complexNumber.subtract(3);
 
     expect(complexNumber3.re).toBe(1 - 3);
     expect(complexNumber3.im).toBe(2);
 
     expect(complexNumber4.re).toBe(3 - 1);
     expect(complexNumber4.im).toBe(-2);
+
+    expect(complexNumber5.re).toBe(1 - 3);
+    expect(complexNumber5.im).toBe(2);
   });
 
   it('should multiply complex numbers', () => {
@@ -75,12 +83,16 @@ describe('ComplexNumber', () => {
 
     const complexNumber3 = complexNumber1.multiply(complexNumber2);
     const complexNumber4 = complexNumber2.multiply(complexNumber1);
+    const complexNumber5 = complexNumber1.multiply(5);
 
     expect(complexNumber3.re).toBe(-11);
     expect(complexNumber3.im).toBe(23);
 
     expect(complexNumber4.re).toBe(-11);
     expect(complexNumber4.im).toBe(23);
+
+    expect(complexNumber5.re).toBe(15);
+    expect(complexNumber5.im).toBe(10);
   });
 
   it('should multiply complex numbers by themselves', () => {
@@ -106,9 +118,13 @@ describe('ComplexNumber', () => {
     const complexNumber2 = new ComplexNumber({ re: 4, im: -5 });
 
     const complexNumber3 = complexNumber1.divide(complexNumber2);
+    const complexNumber4 = complexNumber1.divide(2);
 
     expect(complexNumber3.re).toBe(-7 / 41);
     expect(complexNumber3.im).toBe(22 / 41);
+
+    expect(complexNumber4.re).toBe(1);
+    expect(complexNumber4.im).toBe(1.5);
   });
 
   it('should return complex number in polar form', () => {
@@ -136,5 +152,30 @@ describe('ComplexNumber', () => {
     expect(complexNumber5.getPolarForm().radius).toBeCloseTo(8.60);
     expect(complexNumber5.getPolarForm().phase).toBeCloseTo(0.95);
     expect(complexNumber5.getPolarForm(false).phase).toBeCloseTo(54.46);
+
+    const complexNumber6 = new ComplexNumber({ re: 0, im: 0.25 });
+    expect(complexNumber6.getPolarForm().radius).toBeCloseTo(0.25);
+    expect(complexNumber6.getPolarForm().phase).toBeCloseTo(1.57);
+    expect(complexNumber6.getPolarForm(false).phase).toBeCloseTo(90);
+
+    const complexNumber7 = new ComplexNumber({ re: 0, im: -0.25 });
+    expect(complexNumber7.getPolarForm().radius).toBeCloseTo(0.25);
+    expect(complexNumber7.getPolarForm().phase).toBeCloseTo(-1.57);
+    expect(complexNumber7.getPolarForm(false).phase).toBeCloseTo(-90);
+
+    const complexNumber8 = new ComplexNumber();
+    expect(complexNumber8.getPolarForm().radius).toBeCloseTo(0);
+    expect(complexNumber8.getPolarForm().phase).toBeCloseTo(0);
+    expect(complexNumber8.getPolarForm(false).phase).toBeCloseTo(0);
+
+    const complexNumber9 = new ComplexNumber({ re: -0.25, im: 0 });
+    expect(complexNumber9.getPolarForm().radius).toBeCloseTo(0.25);
+    expect(complexNumber9.getPolarForm().phase).toBeCloseTo(Math.PI);
+    expect(complexNumber9.getPolarForm(false).phase).toBeCloseTo(180);
+
+    const complexNumber10 = new ComplexNumber({ re: 0.25, im: 0 });
+    expect(complexNumber10.getPolarForm().radius).toBeCloseTo(0.25);
+    expect(complexNumber10.getPolarForm().phase).toBeCloseTo(0);
+    expect(complexNumber10.getPolarForm(false).phase).toBeCloseTo(0);
   });
 });
