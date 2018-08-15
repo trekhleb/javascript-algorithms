@@ -54,8 +54,10 @@ export default function fastFourierTransform(inputData, inverse = false) {
       let phase = new ComplexNumber({ re: 1, im: 0 });
 
       for (let idx = blockStart; idx < blockStart + blockLength / 2; idx += 1) {
-        const upd1 = output[idx].add(output[idx + blockLength / 2].multiply(phase));
-        const upd2 = output[idx].subtract(output[idx + blockLength / 2].multiply(phase));
+        const component = output[idx + blockLength / 2].multiply(phase);
+
+        const upd1 = output[idx].add(component);
+        const upd2 = output[idx].subtract(component);
 
         output[idx] = upd1;
         output[idx + blockLength / 2] = upd2;

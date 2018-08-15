@@ -28,7 +28,7 @@ function sequencesApproximatelyEqual(sequence1, sequence2, delta) {
 const delta = 1e-6;
 
 describe('fastFourierTransform', () => {
-  it('should calculate the radix-2 discrete fourier transform after zero padding', () => {
+  it('should calculate the radix-2 discrete fourier transform #1', () => {
     const input = [new ComplexNumber({ re: 0, im: 0 })];
     const expectedOutput = [new ComplexNumber({ re: 0, im: 0 })];
     const output = fastFourierTransform(input);
@@ -38,7 +38,7 @@ describe('fastFourierTransform', () => {
     expect(sequencesApproximatelyEqual(input, invertedOutput, delta)).toBe(true);
   });
 
-  it('should calculate the radix-2 discrete fourier transform after zero padding', () => {
+  it('should calculate the radix-2 discrete fourier transform #2', () => {
     const input = [
       new ComplexNumber({ re: 1, im: 2 }),
       new ComplexNumber({ re: 2, im: 3 }),
@@ -59,7 +59,7 @@ describe('fastFourierTransform', () => {
     expect(sequencesApproximatelyEqual(input, invertedOut, delta)).toBe(true);
   });
 
-  it('should calculate the radix-2 discrete fourier transform after zero padding', () => {
+  it('should calculate the radix-2 discrete fourier transform #3', () => {
     const input = [
       new ComplexNumber({ re: -83656.9359385182, im: 98724.08038374918 }),
       new ComplexNumber({ re: -47537.415125808424, im: 88441.58381765135 }),
