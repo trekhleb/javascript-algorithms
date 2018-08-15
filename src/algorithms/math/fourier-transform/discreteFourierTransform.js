@@ -11,7 +11,7 @@ import ComplexNumber from '../complex-number/ComplexNumber';
  */
 export default function discreteFourierTransform(inputSignalAmplitudes) {
   const N = inputSignalAmplitudes.length;
-  const outpuFrequencies = [];
+  const outputFrequencies = [];
 
   // For every frequency discrete...
   for (let frequencyValue = 0; frequencyValue < N; frequencyValue += 1) {
@@ -48,8 +48,8 @@ export default function discreteFourierTransform(inputSignalAmplitudes) {
     // Average contribution at this frequency
     signal = signal.divide(N);
 
-    outpuFrequencies[frequencyValue] = signal;
+    outputFrequencies[frequencyValue] = signal;
   }
 
-  return outpuFrequencies;
+  return outputFrequencies;
 }
