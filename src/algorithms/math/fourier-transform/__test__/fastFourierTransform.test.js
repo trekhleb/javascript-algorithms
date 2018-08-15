@@ -2,50 +2,65 @@ import fastFourierTransform from '../fastFourierTransform';
 import ComplexNumber from '../../complex-number/ComplexNumber';
 
 /**
- * @param {ComplexNumber[]} [seq1]
- * @param {ComplexNumber[]} [seq2]
- * @param {Number} [eps]
+ * @param {ComplexNumber[]} sequence1
+ * @param {ComplexNumber[]} sequence2
+ * @param {Number} delta
  * @return {boolean}
  */
-function approximatelyEqual(seq1, seq2, eps) {
-  if (seq1.length !== seq2.length) { return false; }
+function sequencesApproximatelyEqual(sequence1, sequence2, delta) {
+  if (sequence1.length !== sequence2.length) {
+    return false;
+  }
 
-  for (let i = 0; i < seq1.length; i += 1) {
-    if (Math.abs(seq1[i].real - seq2[i].real) > eps) { return false; }
-    if (Math.abs(seq1[i].complex - seq2[i].complex) > eps) { return false; }
+  for (let numberIndex = 0; numberIndex < sequence1.length; numberIndex += 1) {
+    if (Math.abs(sequence1[numberIndex].re - sequence2[numberIndex].re) > delta) {
+      return false;
+    }
+
+    if (Math.abs(sequence1[numberIndex].im - sequence2[numberIndex].im) > delta) {
+      return false;
+    }
   }
 
   return true;
 }
 
+const delta = 1e-6;
+
 describe('fastFourierTransform', () => {
   it('should calculate the radix-2 discrete fourier transform after zero padding', () => {
-    const eps = 1e-6;
-    const in1 = [new ComplexNumber({ re: 0, im: 0 })];
-    const expOut1 = [new ComplexNumber({ re: 0, im: 0 })];
-    const out1 = fastFourierTransform(in1);
-    const invOut1 = fastFourierTransform(out1, true);
-    expect(approximatelyEqual(expOut1, out1, eps)).toBe(true);
-    expect(approximatelyEqual(in1, invOut1, eps)).toBe(true);
+    const input = [new ComplexNumber({ re: 0, im: 0 })];
+    const expectedOutput = [new ComplexNumber({ re: 0, im: 0 })];
+    const output = fastFourierTransform(input);
+    const invertedOutput = fastFourierTransform(output, true);
 
-    const in2 = [
+    expect(sequencesApproximatelyEqual(expectedOutput, output, delta)).toBe(true);
+    expect(sequencesApproximatelyEqual(input, invertedOutput, delta)).toBe(true);
+  });
+
+  it('should calculate the radix-2 discrete fourier transform after zero padding', () => {
+    const input = [
       new ComplexNumber({ re: 1, im: 2 }),
       new ComplexNumber({ re: 2, im: 3 }),
       new ComplexNumber({ re: 8, im: 4 }),
     ];
 
-    const expOut2 = [
+    const expectedOutput = [
       new ComplexNumber({ re: 11, im: 9 }),
       new ComplexNumber({ re: -10, im: 0 }),
       new ComplexNumber({ re: 7, im: 3 }),
       new ComplexNumber({ re: -4, im: -4 }),
     ];
-    const out2 = fastFourierTransform(in2);
-    const invOut2 = fastFourierTransform(out2, true);
-    expect(approximatelyEqual(expOut2, out2, eps)).toBe(true);
-    expect(approximatelyEqual(in2, invOut2, eps)).toBe(true);
 
-    const in3 = [
+    const output = fastFourierTransform(input);
+    const invertedOut = fastFourierTransform(output, true);
+
+    expect(sequencesApproximatelyEqual(expectedOutput, output, delta)).toBe(true);
+    expect(sequencesApproximatelyEqual(input, invertedOut, delta)).toBe(true);
+  });
+
+  it('should calculate the radix-2 discrete fourier transform after zero padding', () => {
+    const input = [
       new ComplexNumber({ re: -83656.9359385182, im: 98724.08038374918 }),
       new ComplexNumber({ re: -47537.415125808424, im: 88441.58381765135 }),
       new ComplexNumber({ re: -24849.657029355192, im: -72621.79007878687 }),
@@ -58,7 +73,7 @@ describe('fastFourierTransform', () => {
       new ComplexNumber({ re: -39327.43830818355, im: 30611.949874562706 }),
     ];
 
-    const expOut3 = [
+    const expectedOutput = [
       new ComplexNumber({ re: -203215.3322151, im: -100242.4827503 }),
       new ComplexNumber({ re: 99217.0805705, im: 270646.9331932 }),
       new ComplexNumber({ re: -305990.9040412, im: 68224.8435751 }),
@@ -77,9 +92,10 @@ describe('fastFourierTransform', () => {
       new ComplexNumber({ re: -179002.5662573, im: 239821.0124341 }),
     ];
 
-    const out3 = fastFourierTransform(in3);
-    const invOut3 = fastFourierTransform(out3, true);
-    expect(approximatelyEqual(expOut3, out3, eps)).toBe(true);
-    expect(approximatelyEqual(in3, invOut3, eps)).toBe(true);
+    const output = fastFourierTransform(input);
+    const invertedOutput = fastFourierTransform(output, true);
+
+    expect(sequencesApproximatelyEqual(expectedOutput, output, delta)).toBe(true);
+    expect(sequencesApproximatelyEqual(input, invertedOutput, delta)).toBe(true);
   });
 });
