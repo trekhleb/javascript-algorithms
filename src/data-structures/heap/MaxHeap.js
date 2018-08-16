@@ -1,11 +1,6 @@
 import Heap from './Heap';
 
-/**
- * Creates a new MaxHeap
- * @class
- * @augments Heap
- */
-class MaxHeap extends Heap {
+export default class MaxHeap extends Heap {
   /**
    * @param {*} item
    * @param {Comparator} [customFindingComparator]
@@ -74,7 +69,7 @@ class MaxHeap extends Heap {
    * @param {number} [customStartIndex]
    */
   heapifyDown(customStartIndex) {
-    // Compare the root element to its children and swap root with the smallest
+    // Compare the root element to its children and swap root with the biggest
     // of children. Do the same for next children after swap.
     let currentIndex = customStartIndex || 0;
     let nextIndex = null;
@@ -100,5 +95,3 @@ class MaxHeap extends Heap {
     }
   }
 }
-
-export default MaxHeap;

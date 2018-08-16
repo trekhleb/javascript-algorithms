@@ -1,11 +1,6 @@
 import Heap from './Heap';
 
-/**
- * Creates a new MinHeap
- * @class
- * @augments Heap
- */
-class MinHeap extends Heap {
+export default class MinHeap extends Heap {
   /**
    * @param {*} item
    * @param {Comparator} [customFindingComparator]
@@ -98,5 +93,3 @@ class MinHeap extends Heap {
     }
   }
 }
-
-export default MinHeap;

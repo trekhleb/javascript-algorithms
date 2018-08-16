@@ -1,15 +1,18 @@
 import Comparator from '../../utils/comparator/Comparator';
 
 /**
- * Parent class for heaps
- * @class
+ * Parent class for Min and Max Heaps.
  */
-class Heap {
+export default class Heap {
   /**
    * @constructs Heap
    * @param {Function} [comparatorFunction]
    */
   constructor(comparatorFunction) {
+    if (new.target === Heap) {
+      throw new TypeError('Cannot construct Heap instance directly');
+    }
+
     // Array representation of the heap.
     this.heapContainer = [];
     this.compare = new Comparator(comparatorFunction);
@@ -131,7 +134,7 @@ class Heap {
 
   /**
    * @param {*} item
-   * @return {MinHeap}
+   * @return {Heap}
    */
   add(item) {
     this.heapContainer.push(item);
@@ -170,6 +173,12 @@ class Heap {
   toString() {
     return this.heapContainer.toString();
   }
-}
 
-export default Heap;
+  heapifyUp() {
+    throw new Error('You have to implement this method!');
+  }
+
+  heapifyDown() {
+    throw new Error('You have to implement this method!');
+  }
+}
