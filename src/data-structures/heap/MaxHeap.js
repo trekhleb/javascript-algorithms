@@ -1,15 +1,15 @@
 import Heap from './Heap';
 
 /**
- * Creates a new MinHeap
+ * Creates a new MaxHeap
  * @class
  * @augments Heap
  */
-class MinHeap extends Heap {
+class MaxHeap extends Heap {
   /**
    * @param {*} item
    * @param {Comparator} [customFindingComparator]
-   * @return {MinHeap}
+   * @return {MaxHeap}
    */
   remove(item, customFindingComparator) {
     // Find number of items to remove.
@@ -33,13 +33,13 @@ class MinHeap extends Heap {
         const parentItem = this.hasParent(indexToRemove) ? this.parent(indexToRemove) : null;
         const leftChild = this.hasLeftChild(indexToRemove) ? this.leftChild(indexToRemove) : null;
 
-        // If there is no parent or parent is less then node to delete then heapify down.
+        // If there is no parent or parent is greater then node to delete then heapify down.
         // Otherwise heapify up.
         if (
           leftChild !== null
           && (
             parentItem === null
-            || this.compare.lessThan(parentItem, this.heapContainer[indexToRemove])
+            || this.compare.greaterThan(parentItem, this.heapContainer[indexToRemove])
           )
         ) {
           this.heapifyDown(indexToRemove);
@@ -58,12 +58,12 @@ class MinHeap extends Heap {
   heapifyUp(customStartIndex) {
     // Take last element (last in array or the bottom left in a tree) in
     // a heap container and lift him up until we find the parent element
-    // that is less then the current new one.
+    // that is greater then the current new one.
     let currentIndex = customStartIndex || this.heapContainer.length - 1;
 
     while (
       this.hasParent(currentIndex)
-      && this.compare.lessThan(this.heapContainer[currentIndex], this.parent(currentIndex))
+      && this.compare.greaterThan(this.heapContainer[currentIndex], this.parent(currentIndex))
     ) {
       this.swap(currentIndex, this.getParentIndex(currentIndex));
       currentIndex = this.getParentIndex(currentIndex);
@@ -82,14 +82,16 @@ class MinHeap extends Heap {
     while (this.hasLeftChild(currentIndex)) {
       if (
         this.hasRightChild(currentIndex)
-        && this.compare.lessThan(this.rightChild(currentIndex), this.leftChild(currentIndex))
+        && this.compare.greaterThan(this.rightChild(currentIndex), this.leftChild(currentIndex))
       ) {
         nextIndex = this.getRightChildIndex(currentIndex);
       } else {
         nextIndex = this.getLeftChildIndex(currentIndex);
       }
 
-      if (this.compare.lessThan(this.heapContainer[currentIndex], this.heapContainer[nextIndex])) {
+      if (
+        this.compare.greaterThan(this.heapContainer[currentIndex], this.heapContainer[nextIndex])
+      ) {
         break;
       }
 
@@ -99,4 +101,4 @@ class MinHeap extends Heap {
   }
 }
 
-export default MinHeap;
+export default MaxHeap;
