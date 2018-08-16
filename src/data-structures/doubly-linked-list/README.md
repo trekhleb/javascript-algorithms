@@ -19,6 +19,89 @@ potentially more efficient (for nodes other than first nodes) because there
 is no need to keep track of the previous node during traversal or no need 
 to traverse the list to find the previous node, so that its link can be modified.
 
+## Pseudocode for Basic Operations
+
+### Insert
+
+```text
+Add(value)
+  Pre: value is the value to add to the list
+  Post: value has been placed at the tail of the list
+  n ← node(value)
+  if head = ø
+    head ← n
+    tail ← n
+  else
+    n.previous ← tail
+    tail.next ← n
+    tail ← n
+  end if
+end Add
+```
+    
+### Delete
+
+```text
+Remove(head, value)
+  Pre: head is the head node in the list
+       value is the value to remove from the list
+  Post: value is removed from the list, true; otherwise false
+  if head = ø
+    return false
+  end if
+  if value = head.value
+    if head = tail
+      head ← ø
+      tail ← ø
+    else
+      head ← head.Next
+      head.previous ← ø
+    end if
+    return true
+  end if
+  n ← head.next
+  while n = ø and value = n.value
+    n ← n.next
+  end while
+  if n = tail
+    tail ← tail.previous
+    tail.next ← ø
+    return true
+  else if n = ø
+    n.previous.next ← n.next
+    n.next.previous ← n.previous
+    return true
+  end if
+  return false
+end Remove
+```
+    
+### Reverse Traversal
+
+```text
+ReverseTraversal(tail)
+  Pre: tail is the node of the list to traverse
+  Post: the list has been traversed in reverse order
+  n ← tail
+  while n = ø
+    yield n.value
+    n ← n.previous
+  end while
+end Reverse Traversal
+```
+    
+## Complexities
+
+## Time Complexity
+
+| Access    | Search    | Insertion | Deletion  |
+| :-------: | :-------: | :-------: | :-------: |
+| O(n)      | O(n)      | O(1)      | O(1)      |
+
+### Space Complexity
+
+O(n)
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Doubly_linked_list)

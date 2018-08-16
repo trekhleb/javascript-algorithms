@@ -70,8 +70,10 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Is Power of Two](src/algorithms/math/is-power-of-two) - check if the number is power of two (naive and bitwise algorithms)
   * `B` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
   * `B` [Complex Number](src/algorithms/math/complex-number) - complex numbers and basic operations with them
+  * `B` [Radian & Degree](src/algorithms/math/radian) - radians to degree and backwards conversion
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
+  * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up 
 * **Sets**
   * `B` [Cartesian Product](src/algorithms/sets/cartesian-product) - product of multiple sets
   * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
@@ -148,6 +150,7 @@ algorithm is an abstraction higher than a computer program.
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
+  * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up
 * **Greedy** - choose the best option at the current time, without any consideration for the future
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `A` [Unbound Knapsack Problem](src/algorithms/sets/knapsack-problem)
