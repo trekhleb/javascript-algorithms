@@ -3,12 +3,14 @@ import ComplexNumber from '../complex-number/ComplexNumber';
 const CLOSE_TO_ZERO_THRESHOLD = 1e-10;
 
 /**
- * Discrete Fourier Transform.
+ * Discrete Fourier Transform (DFT): time to frequencies.
  *
  * Time complexity: O(N^2)
  *
- * @param {ComplexNumber[]} complexInputAmplitudes - Input signal amplitudes over time (complex
+ * @param {number[]} inputAmplitudes - Input signal amplitudes over time (complex
  * numbers with real parts only).
+ * @param {number} zeroThreshold - Threshold that is used to convert real and imaginary numbers
+ * to zero in case if they are smaller then this.
  *
  * @return {ComplexNumber[]} - Array of complex number. Each of the number represents the frequency
  * or signal. All signals together will form input signal over discrete time periods. Each signal's
@@ -17,10 +19,7 @@ const CLOSE_TO_ZERO_THRESHOLD = 1e-10;
  * @see https://gist.github.com/anonymous/129d477ddb1c8025c9ac
  * @see https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/
  */
-export default function dft(complexInputAmplitudes) {
-  // Convert complex amplitudes into real ones.
-  const inputAmplitudes = complexInputAmplitudes.map(complexAmplitude => complexAmplitude.re);
-
+export default function dft(inputAmplitudes, zeroThreshold = CLOSE_TO_ZERO_THRESHOLD) {
   const N = inputAmplitudes.length;
   const signals = [];
 
@@ -48,11 +47,11 @@ export default function dft(complexInputAmplitudes) {
     }
 
     // Close to zero? You're zero.
-    if (Math.abs(frequencySignal.re) < CLOSE_TO_ZERO_THRESHOLD) {
+    if (Math.abs(frequencySignal.re) < zeroThreshold) {
       frequencySignal.re = 0;
     }
 
-    if (Math.abs(frequencySignal.im) < CLOSE_TO_ZERO_THRESHOLD) {
+    if (Math.abs(frequencySignal.im) < zeroThreshold) {
       frequencySignal.im = 0;
     }
 
