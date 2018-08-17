@@ -8,7 +8,7 @@ pattern like `0001`.  This clears all bits from the original
 number except the relevant one. If the relevant bit is one, 
 the result is `1`, otherwise the result is `0`.
 
-> See `getBit` function for further details.
+> See [getBit.js](getBit.js) for further details.
 
 #### Set Bit
 
@@ -17,7 +17,7 @@ value that looks like `00100`. Then we perform `OR` operation
 that sets specific bit into `1` but it does not affect on
 other bits of the number.
 
-> See `setBit` function for further details.
+> See [setBit.js](setBit.js) for further details.
 
 #### Clear Bit
 
@@ -27,13 +27,13 @@ the number that looks like `11011`. Then `AND` operation is
 being applied to both the number and the mask. That operation 
 unsets the bit.
 
-> See `clearBit` function for further details.
+> See [clearBit.js](clearBit.js) for further details.
 
 #### Update Bit
 
 This method is a combination of "Clear Bit" and "Set Bit" methods.
 
-> See `updateBit` function for further details.
+> See [updateBit.js](updateBit.js) for further details.
 
 #### Multiply By Two
 
@@ -52,7 +52,7 @@ Number: 0b1010 = 10
 Powers of two: 2^3 + 0 + 2^1 + 0 
 ```
 
-> See `multiplyByTwo` function for further details.
+> See [multiplyByTwo.js](multiplyByTwo.js) for further details.
 
 #### Divide By Two
 
@@ -71,7 +71,7 @@ Number: 0b0010 = 2
 Powers of two: 0 + 0 + 2^1 + 0 
 ```
 
-> See `divideByTwo` function for further details.
+> See [divideByTwo.js](divideByTwo.js) for further details.
 
 #### Switch Sign
 
@@ -89,7 +89,7 @@ inverting all of the bits of the number and adding 1 to it.
 0011  3
 ``` 
 
-> See `switchSign` function for further details.
+> See [switchSign.js](switchSign.js) for further details.
 
 #### Multiply Two Numbers
 
@@ -114,7 +114,7 @@ x * 19 = x * 2^4 + x * 2^1 + x * 2^0
 Now we need to remember that `x * 2^4` is equivalent of shifting `x` left 
 by `4` bits (`x << 4`).
 
-> See `multiplyUnsigned` function for further details.
+> See [multiplyUnsigned.js](multiplyUnsigned.js) for further details.
 
 #### Count Set Bits
 
@@ -127,7 +127,7 @@ Number: 5 = 0b0101
 Count of set bits = 2
 ```
 
-> See `countSetBits` function for further details.
+> See [countSetBits.js](countSetBits.js) for further details.
 
 #### Count Bits to Flip One Number to Another
 
@@ -141,7 +141,7 @@ of different bits.
 Count of Bits to be Flipped: 1
 ```
 
-> See `bitsDiff` function for further details.
+> See [bitsDiff.js](bitsDiff.js) for further details.
 
 #### Count Bits of a Number
 
@@ -154,7 +154,7 @@ Count of valuable bits is: 3
 When we shift 1 four times it will become bigger than 5.
 ```
 
-> See [bitLength](bitLength.js) function for further details.
+> See [bitLength.js](bitLength.js) for further details.
 
 ## References
 
