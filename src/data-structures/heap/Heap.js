@@ -257,9 +257,9 @@ export default class Heap {
         nextIndex = this.getLeftChildIndex(currentIndex);
       }
 
-      if (!this.pairIsInCorrectOrder(
-        this.heapContainer[nextIndex],
+      if (this.pairIsInCorrectOrder(
         this.heapContainer[currentIndex],
+        this.heapContainer[nextIndex],
       )) {
         break;
       }
