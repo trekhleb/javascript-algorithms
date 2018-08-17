@@ -144,6 +144,52 @@ export default class Heap {
 
   /**
    * @param {*} item
+   * @param {Comparator} [customFindingComparator]
+   * @return {Heap}
+   */
+  remove(item, customFindingComparator) {
+    // Find number of items to remove.
+    const customComparator = customFindingComparator || this.compare;
+    const numberOfItemsToRemove = this.find(item, customComparator).length;
+
+    for (let iteration = 0; iteration < numberOfItemsToRemove; iteration += 1) {
+      // We need to find item index to remove each time after removal since
+      // indices are being change after each heapify process.
+      const indexToRemove = this.find(item, customComparator).pop();
+
+      // If we need to remove last child in the heap then just remove it.
+      // There is no need to heapify the heap afterwards.
+      if (indexToRemove === (this.heapContainer.length - 1)) {
+        this.heapContainer.pop();
+      } else {
+        // Move last element in heap to the vacant (removed) position.
+        this.heapContainer[indexToRemove] = this.heapContainer.pop();
+
+        // Get parent.
+        const parentItem = this.hasParent(indexToRemove) ? this.parent(indexToRemove) : null;
+        const leftChild = this.hasLeftChild(indexToRemove) ? this.leftChild(indexToRemove) : null;
+
+        // If there is no parent or parent is in incorrect order with the node
+        // we're going to delete then heapify down. Otherwise heapify up.
+        if (
+          leftChild !== null
+          && (
+            parentItem === null
+            || !this.pairIsInCorrectOrder(parentItem, this.heapContainer[indexToRemove])
+          )
+        ) {
+          this.heapifyDown(indexToRemove);
+        } else {
+          this.heapifyUp(indexToRemove);
+        }
+      }
+    }
+
+    return this;
+  }
+
+  /**
+   * @param {*} item
    * @param {Comparator} [customComparator]
    * @return {Number[]}
    */
@@ -174,11 +220,69 @@ export default class Heap {
     return this.heapContainer.toString();
   }
 
-  heapifyUp() {
-    throw new Error('You have to implement this method!');
+  /**
+   * @param {number} [customStartIndex]
+   */
+  heapifyUp(customStartIndex) {
+    // Take last element (last in array or the bottom left in a tree) in
+    // a heap container and lift him up until we find the parent element
+    // that is less then the current new one.
+    let currentIndex = customStartIndex || this.heapContainer.length - 1;
+
+    while (
+      this.hasParent(currentIndex)
+      && !this.pairIsInCorrectOrder(this.parent(currentIndex), this.heapContainer[currentIndex])
+    ) {
+      this.swap(currentIndex, this.getParentIndex(currentIndex));
+      currentIndex = this.getParentIndex(currentIndex);
+    }
   }
 
-  heapifyDown() {
-    throw new Error('You have to implement this method!');
+  /**
+   * @param {number} [customStartIndex]
+   */
+  heapifyDown(customStartIndex) {
+    // Compare the root element to its children and swap root with the smallest
+    // of children. Do the same for next children after swap.
+    let currentIndex = customStartIndex || 0;
+    let nextIndex = null;
+
+    while (this.hasLeftChild(currentIndex)) {
+      if (
+        this.hasRightChild(currentIndex)
+        && this.pairIsInCorrectOrder(this.rightChild(currentIndex), this.leftChild(currentIndex))
+      ) {
+        nextIndex = this.getRightChildIndex(currentIndex);
+      } else {
+        nextIndex = this.getLeftChildIndex(currentIndex);
+      }
+
+      if (!this.pairIsInCorrectOrder(
+        this.heapContainer[nextIndex],
+        this.heapContainer[currentIndex],
+      )) {
+        break;
+      }
+
+      this.swap(currentIndex, nextIndex);
+      currentIndex = nextIndex;
+    }
+  }
+
+  /**
+   * Checks if pair of heap elements is in correct order.
+   * For MinHeap the first element must be always smaller or equal.
+   * For MaxHeap the first element must be always bigger or equal.
+   *
+   * @param {*} firstElement
+   * @param {*} secondElement
+   * @return {boolean}
+   */
+  /* istanbul ignore next */
+  pairIsInCorrectOrder(firstElement, secondElement) {
+    throw new Error(`
+      You have to implement heap pair comparision method
+      for ${firstElement} and ${secondElement} values.
+    `);
   }
 }
