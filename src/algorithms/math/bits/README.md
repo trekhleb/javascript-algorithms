@@ -154,7 +154,7 @@ Count of valuable bits is: 3
 When we shift 1 four times it will become bigger than 5.
 ```
 
-> See `bitsDiff` function for further details.
+> See [bitLength](bitLength.js) function for further details.
 
 ## References
 
