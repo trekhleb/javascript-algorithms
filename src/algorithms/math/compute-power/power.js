@@ -16,7 +16,7 @@ export default function computePower(number1, number2) {
     res = computePower(number1, number2 / 2);
     val = res * res;
   } else { // if number2 is odd
-    res = computePower(number1, number2 / 2);
+    res = computePower(number1, Math.floor(number2 / 2));
     val = res * res * number1;
   }
   return val;
