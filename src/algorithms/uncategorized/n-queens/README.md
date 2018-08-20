@@ -65,9 +65,53 @@ and return false.
     backtracking.
 ```
 
+## Bitwise Solution
+
+Bitwise algorithm basically approaches the problem like this:
+
+- Queens can attack diagonally, vertically, or horizontally. As a result, there 
+can only be one queen in each row, one in each column, and at most one on each 
+diagonal.
+- Since we know there can only one queen per row, we will start at the first row,
+place a queen, then move to the second row, place a second queen, and so on until
+either a) we reach a valid solution or b) we reach a dead end (ie. we can't place
+a queen such that it is "safe" from the other queens).
+- Since we are only placing one queen per row, we don't need to worry about
+horizontal attacks, since no queen will ever be on the same row as another queen.
+- That means we only need to check three things before placing a queen on a
+certain square: 1) The square's column doesn't have any other queens on it, 2)
+the square's left diagonal doesn't have any other queens on it, and 3) the
+square's right diagonal doesn't have any other queens on it.
+- If we ever reach a point where there is nowhere safe to place a queen, we can
+give up on our current attempt and immediately test out the next possibility.
+
+First let's talk about the recursive function. You'll notice that it accepts 
+3 parameters: `leftDiagonal`, `column`, and `rightDiagonal`. Each of these is 
+technically an integer, but the algorithm takes advantage of the fact that an 
+integer is represented by a sequence of bits. So, think of each of these 
+parameters as a sequence of `N` bits.
+
+Each bit in each of the parameters represents whether the corresponding location
+on the current row is "available".
+
+For example:
+- For `N=4`, column having a value of `0010` would mean that the 3rd column is 
+already occupied by a queen.
+- For `N=8`, ld having a value of `00011000` at row 5 would mean that the 
+top-left-to-bottom-right diagonals that pass through columns 4 and 5 of that 
+row are already occupied by queens.
+
+Below is a visual aid for `leftDiagonal`, `column`, and `rightDiagonal`.
+
+![](http://gregtrowbridge.com/content/images/2014/Jul/Screenshot-from-2014-06-17-19-46-20.png)
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Eight_queens_puzzle)
 - [GeeksForGeeks](https://www.geeksforgeeks.org/backtracking-set-3-n-queen-problem/)
 - [On YouTube by Abdul Bari](https://www.youtube.com/watch?v=xFv_Hl4B83A&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 - [On YouTube by Tushar Roy](https://www.youtube.com/watch?v=xouin83ebxE&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+- Bitwise Solution
+  - [Wikipedia](https://en.wikipedia.org/wiki/Eight_queens_puzzle)
+  - [Solution by Greg Trowbridge](http://gregtrowbridge.com/a-bitwise-solution-to-the-n-queens-problem-in-javascript/)
+  
