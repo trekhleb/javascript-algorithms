@@ -121,6 +121,25 @@ describe('MinHeap', () => {
     expect(minHeap.remove(3).peek()).toEqual(10);
     expect(minHeap.remove(11).toString()).toEqual('10,12');
     expect(minHeap.remove(3).peek()).toEqual(10);
+
+
+    const minHeap2 = new MinHeap();
+
+    minHeap2.add(5);
+    minHeap2.add(3);
+    minHeap2.add(2);
+
+    expect(minHeap2.toString()).toBe('2,5,3');
+    minHeap2.remove(3);
+    expect(minHeap2.toString()).toBe('2,5');
+
+    minHeap2.add(4);
+    minHeap2.add(1);
+    minHeap2.add(6);
+    expect(minHeap2.toString()).toBe('1,2,4,5,6');
+
+    minHeap2.remove(2);
+    expect(minHeap2.toString()).toBe('1,5,4,6');
   });
 
   it('should be possible to remove items from heap with heapify up', () => {
