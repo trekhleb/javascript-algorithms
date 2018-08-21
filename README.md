@@ -77,7 +77,7 @@ a set of rules that precisely define a sequence of operations.
 * **Sets**
   * `B` [Cartesian Product](src/algorithms/sets/cartesian-product) - product of multiple sets
   * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
-  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set
+  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set (bitwise and backtracking solutions)
   * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
   * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
   * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
@@ -190,6 +190,7 @@ if it satisfies all conditions, and only then continue generating subsequent sol
 different path of finding a solution. Normally the DFS traversal of state-space is being used.
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
+  * `B` [Power Set](src/algorithms/sets/power-set) - all subsets of a set
   * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
