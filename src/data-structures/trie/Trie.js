@@ -39,6 +39,8 @@ export default class Trie {
   }
 
   /**
+   * Check if complete word exists in Trie.
+   *
    * @param {string} word
    * @return {boolean}
    */
