@@ -45,7 +45,8 @@ describe('Trie', () => {
     trie.addWord('caption');
 
     expect(trie.doesWordExist('cat')).toBe(true);
-    expect(trie.doesWordExist('cap')).toBe(true);
+    expect(trie.doesWordExist('cats')).toBe(true);
+    expect(trie.doesWordExist('cap')).toBe(false);
     expect(trie.doesWordExist('call')).toBe(false);
   });
 });
