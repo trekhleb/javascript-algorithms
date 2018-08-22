@@ -39,11 +39,15 @@ export default class Trie {
   }
 
   /**
+   * Check if complete word exists in Trie.
+   *
    * @param {string} word
    * @return {boolean}
    */
   doesWordExist(word) {
-    return !!this.getLastCharacterNode(word);
+    const lastCharacter = this.getLastCharacterNode(word);
+
+    return !!lastCharacter && lastCharacter.isCompleteWord;
   }
 
   /**
