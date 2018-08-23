@@ -19,10 +19,6 @@ _Leia isto em outros idiomas:_
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md)
 
-> Nós estamos escrevendo um livro que explicará claramente, em datalhes, os principais algoritmos.
-Se você deseja ser notificado quando o livro "Algoritmos em JavaScript” 
-for lançado, [clique aqui](https://upscri.be/402324/).
-
 ## Data Structures
 
 Uma estrutura de dados é uma maneira particular de organizar e armazenar dados em um computador para que ele possa
