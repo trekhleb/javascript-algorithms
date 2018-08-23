@@ -19,11 +19,6 @@ _Read this in other languages:_
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md)
 
-> Jesteśmy w trakcie pisania książki, która w jasny i specyficzny sposób, 
-wyjaśni główne algorytmy. Jeżeli chcesz dostać powiadomienie o tym kiedy 
-książka â€œJavaScript Algorithmsâ€ zostanie wydana,[kliknij tutaj](https://upscri.be/402324/).
-
-
 ## Struktury Danych
 
 Struktura danych to sposób uporządkowania i przechowywania informacji w 
