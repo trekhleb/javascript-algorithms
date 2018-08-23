@@ -241,7 +241,9 @@ npm test -- 'playground'
 
 ### Big O Notation
 
-Order of growth of algorithms specified in Big O notation.
+*Big O notation* is used to classify algorithms according to how their running time or space requirements grow as the input size grows.
+
+On the chart below you may find most common orders of growth of algorithms specified in Big O notation.
 
 ![Big O graphs](./assets/big-o-graph.png)
 
