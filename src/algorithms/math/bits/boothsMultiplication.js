@@ -3,7 +3,14 @@
  * @return bool
  */
 export default function boothsMultiplication(A, B) {
-  return A;
+  const Brn = 4;
+  complement(Mt, Brn);
+  const Qrn = 4;
+  for (let i = Brn - 1; i >= 0; --i)
+  {
+    Mt[i] = Br[i];
+  }
+  return boothAlgorithm(A, B, Mt, Brn, sc);
 }
 
 function add(A, B, C) {
@@ -36,24 +43,21 @@ function rightShift(A, Cq, Cn) {
 }
 
 function boothAlgorithm(B, Cr, multiplier, Cn, sc) {
-	let Cn = 0;
   let Cq = new Array(10);
 	while (sc != 0) {
 		if ((Cn + Cr[0]) == 1) {
 			if (temp == 0) {
 				add(A, multiplier, Cn);
-				for (let i = Cn - 1; i >= 0; --i)
-					temp = 1;
-				else if (temp == 1) {
-					add(A, B, Cn);
-					for (let i = Cn - 1; i >= 0; --i)
-						temp = 0;
-				}
-				rightShift(A, Cr, Cn, Cq);
-
-        else if (Cn - Cq[0] == 0)
-					rightShift(A, Cr, Cn, Cq);
-        --sc;
+				temp = 1;
+      }
+			else if (temp == 1) {
+        add(A, B, Cn);
+        temp = 0;
+			}
+			rightShift(A, Cr, Cn, Cq);
+    }
+    else if (Cn - Cq[0] == 0)
+			rightShift(A, Cr, Cn, Cq);
+    --sc;
     }
 }
-
