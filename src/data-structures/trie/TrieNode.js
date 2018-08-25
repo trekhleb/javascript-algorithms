@@ -29,7 +29,10 @@ export default class TrieNode {
       this.children.set(character, new TrieNode(character, isCompleteWord));
     }
 
-    return this.children.get(character);
+    const childNode = this.children.get(character);
+    childNode.isCompleteWord = childNode.isCompleteWord || isCompleteWord;
+
+    return childNode;
   }
 
   /**

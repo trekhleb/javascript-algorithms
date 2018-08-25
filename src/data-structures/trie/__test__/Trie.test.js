@@ -41,11 +41,14 @@ describe('Trie', () => {
 
     trie.addWord('cat');
     trie.addWord('cats');
+    trie.addWord('carpet');
     trie.addWord('car');
     trie.addWord('caption');
 
     expect(trie.doesWordExist('cat')).toBe(true);
     expect(trie.doesWordExist('cats')).toBe(true);
+    expect(trie.doesWordExist('carpet')).toBe(true);
+    expect(trie.doesWordExist('car')).toBe(true);
     expect(trie.doesWordExist('cap')).toBe(false);
     expect(trie.doesWordExist('call')).toBe(false);
   });
