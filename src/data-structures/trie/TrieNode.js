@@ -30,6 +30,8 @@ export default class TrieNode {
     }
 
     const childNode = this.children.get(character);
+
+    // In cases similar to adding "car" after "carpet" we need to mark "r" character as complete.
     childNode.isCompleteWord = childNode.isCompleteWord || isCompleteWord;
 
     return childNode;
