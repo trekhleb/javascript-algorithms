@@ -1,4 +1,4 @@
-/**
+/**Contributed By Ujjwal Aryal
  * Multiply to unsigned numbers using bitwise operator.
  *
  * The main idea of bitwise multiplication is that every number may be split
