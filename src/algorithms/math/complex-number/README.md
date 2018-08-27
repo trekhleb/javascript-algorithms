@@ -39,6 +39,38 @@ a vector on a diagram called an *Argand diagram*, representing the *complex plan
 imaginary, together form a complex, just like a building complex (buildings 
 joined together).
 
+## Polar Form
+
+An alternative way of defining a point `P` in the complex plane, other than using 
+the x- and y-coordinates, is to use the distance of the point from `O`, the point
+whose coordinates are `(0, 0)` (the origin), together with the angle subtended 
+between the positive real axis and the line segment `OP` in a counterclockwise 
+direction. This idea leads to the polar form of complex numbers.
+
+![Polar Form](https://upload.wikimedia.org/wikipedia/commons/7/7a/Complex_number_illustration_modarg.svg)
+
+The *absolute value* (or modulus or magnitude) of a complex number `z = x + yi` is:
+
+![Radius](https://wikimedia.org/api/rest_v1/media/math/render/svg/b59629c801aa0ddcdf17ee489e028fb9f8d4ea75)
+
+The argument of `z` (in many applications referred to as the "phase") is the angle
+of the radius `OP` with the positive real axis, and is written as `arg(z)`. As 
+with the modulus, the argument can be found from the rectangular form `x+yi`:
+
+![Phase](https://wikimedia.org/api/rest_v1/media/math/render/svg/7cbbdd9bb1dd5df86dd2b820b20f82995023e566)
+
+Together, `r` and `φ` give another way of representing complex numbers, the 
+polar form, as the combination of modulus and argument fully specify the 
+position of a point on the plane. Recovering the original rectangular 
+co-ordinates from the polar form is done by the formula called trigonometric 
+form:
+
+![Polar Form](https://wikimedia.org/api/rest_v1/media/math/render/svg/b03de1e1b7b049880b5e4870b68a57bc180ff6ce)
+
+Using Euler's formula this can be written as:
+
+![Euler's Form](https://wikimedia.org/api/rest_v1/media/math/render/svg/0a087c772212e7375cb321d83fc1fcc715cd0ed2)
+
 ## Basic Operations
 
 ### Adding

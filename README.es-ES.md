@@ -18,10 +18,6 @@ _Léelo en otros idiomas:_
 [_Français_](README.fr-FR.md),
 [_Português_](README.pt-BR.md)
 
-> Estamos escribiendo un libro que explicará claramente, en detalle, los principales algoritmos.
-Si desea ser notificado cuando se publique el libro "Algoritmos JavaScript
-lanzamientos, [haga clic aquí](https://upscri.be/402324/).
-
 ## Estructuras de Datos
 
 Una estructura de datos es una forma particular de organizar y almacenar datos en un ordenador para que pueda

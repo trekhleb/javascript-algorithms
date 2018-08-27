@@ -1,3 +1,9 @@
+/**
+ * Find power-set of a set using BITWISE approach.
+ *
+ * @param {*[]} originalSet
+ * @return {*[][]}
+ */
 export default function powerSet(originalSet) {
   const subSets = [];
 
@@ -7,8 +13,8 @@ export default function powerSet(originalSet) {
   const numberOfCombinations = 2 ** originalSet.length;
 
   // Each number in binary representation in a range from 0 to 2^n does exactly what we need:
-  // it shoes by its bits (0 or 1) whether to include related element from the set or not.
-  // For example, for the set {1, 2, 3} the binary number of 010 would mean that we need to
+  // it shows by its bits (0 or 1) whether to include related element from the set or not.
+  // For example, for the set {1, 2, 3} the binary number of 0b010 would mean that we need to
   // include only "2" to the current set.
   for (let combinationIndex = 0; combinationIndex < numberOfCombinations; combinationIndex += 1) {
     const subSet = [];

@@ -55,7 +55,7 @@ describe('prim', () => {
     expect(minimumSpanningTree.getWeight()).toBe(24);
     expect(minimumSpanningTree.getAllVertices().length).toBe(graph.getAllVertices().length);
     expect(minimumSpanningTree.getAllEdges().length).toBe(graph.getAllVertices().length - 1);
-    expect(minimumSpanningTree.toString()).toBe('A,B,D,C,E,F,G');
+    expect(minimumSpanningTree.toString()).toBe('A,B,C,E,D,F,G');
   });
 
   it('should find minimum spanning tree for simple graph', () => {

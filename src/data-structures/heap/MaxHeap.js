@@ -1,6 +1,6 @@
 import Heap from './Heap';
 
-export default class MinHeap extends Heap {
+export default class MaxHeap extends Heap {
   /**
    * Checks if pair of heap elements is in correct order.
    * For MinHeap the first element must be always smaller or equal.
@@ -11,6 +11,6 @@ export default class MinHeap extends Heap {
    * @return {boolean}
    */
   pairIsInCorrectOrder(firstElement, secondElement) {
-    return this.compare.lessThanOrEqual(firstElement, secondElement);
+    return this.compare.greaterThanOrEqual(firstElement, secondElement);
   }
 }
