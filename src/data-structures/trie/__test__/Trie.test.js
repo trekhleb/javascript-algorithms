@@ -28,11 +28,31 @@ describe('Trie', () => {
 
     trie.addWord('carpet');
     trie.addWord('car');
+    trie.addWord('cat');
+    trie.addWord('cart');
     expect(trie.doesWordExist('carpet')).toBe(true);
+    expect(trie.doesWordExist('car')).toBe(true);
+    expect(trie.doesWordExist('cart')).toBe(true);
+    expect(trie.doesWordExist('cat')).toBe(true);
 
     trie.deleteWord('carpet');
     expect(trie.doesWordExist('carpet')).toEqual(false);
     expect(trie.doesWordExist('car')).toEqual(true);
+    expect(trie.doesWordExist('cart')).toBe(true);
+    expect(trie.doesWordExist('cat')).toBe(true);
+
+    trie.deleteWord('cat');
+    expect(trie.doesWordExist('car')).toEqual(true);
+    expect(trie.doesWordExist('cart')).toBe(true);
+    expect(trie.doesWordExist('cat')).toBe(false);
+
+    trie.deleteWord('car');
+    expect(trie.doesWordExist('car')).toEqual(false);
+    expect(trie.doesWordExist('cart')).toBe(true);
+
+    trie.deleteWord('cart');
+    expect(trie.doesWordExist('car')).toEqual(false);
+    expect(trie.doesWordExist('cart')).toBe(false);
   });
 
   it('should suggests next characters', () => {

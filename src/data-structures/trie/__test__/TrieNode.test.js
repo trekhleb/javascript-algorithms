@@ -18,36 +18,6 @@ describe('TrieNode', () => {
     expect(trieNode.toString()).toBe('c:a,o');
   });
 
-  describe('removing child nodes', () => {
-    it('should delete child node if the child node has NO children', () => {
-      const trieNode = new TrieNode('c');
-      trieNode.addChild('a');
-      expect(trieNode.hasChild('a')).toBe(true);
-
-      trieNode.removeChild('a');
-      expect(trieNode.hasChild('a')).toBe(false);
-    });
-
-    it('should NOT delete child node if the child node has children', () => {
-      const trieNode = new TrieNode('c');
-      trieNode.addChild('a');
-      const childNode = trieNode.getChild('a');
-      childNode.addChild('r');
-
-      trieNode.removeChild('a');
-      expect(trieNode.hasChild('a')).toEqual(true);
-    });
-
-    it('should NOT delete child node if the child node completes a word', () => {
-      const trieNode = new TrieNode('c');
-      const IS_COMPLETE_WORD = true;
-      trieNode.addChild('a', IS_COMPLETE_WORD);
-
-      trieNode.removeChild('a');
-      expect(trieNode.hasChild('a')).toEqual(true);
-    });
-  });
-
   it('should get child nodes', () => {
     const trieNode = new TrieNode('c');
 
@@ -78,5 +48,33 @@ describe('TrieNode', () => {
     trieNode.addChild('o');
 
     expect(trieNode.suggestChildren()).toEqual(['a', 'o']);
+  });
+
+  it('should delete child node if the child node has NO children', () => {
+    const trieNode = new TrieNode('c');
+    trieNode.addChild('a');
+    expect(trieNode.hasChild('a')).toBe(true);
+
+    trieNode.removeChild('a');
+    expect(trieNode.hasChild('a')).toBe(false);
+  });
+
+  it('should NOT delete child node if the child node has children', () => {
+    const trieNode = new TrieNode('c');
+    trieNode.addChild('a');
+    const childNode = trieNode.getChild('a');
+    childNode.addChild('r');
+
+    trieNode.removeChild('a');
+    expect(trieNode.hasChild('a')).toEqual(true);
+  });
+
+  it('should NOT delete child node if the child node completes a word', () => {
+    const trieNode = new TrieNode('c');
+    const IS_COMPLETE_WORD = true;
+    trieNode.addChild('a', IS_COMPLETE_WORD);
+
+    trieNode.removeChild('a');
+    expect(trieNode.hasChild('a')).toEqual(true);
   });
 });
