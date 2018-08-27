@@ -18,6 +18,16 @@ describe('TrieNode', () => {
     expect(trieNode.toString()).toBe('c:a,o');
   });
 
+  it('should delete child nodes', () => {
+    const trieNode = new TrieNode('c');
+
+    trieNode.addChild('a', true);
+    trieNode.addChild('o');
+    trieNode.removeChild('a')
+
+    expect(trieNode.toString()).toBe('c:o');
+  });
+
   it('should get child nodes', () => {
     const trieNode = new TrieNode('c');
 

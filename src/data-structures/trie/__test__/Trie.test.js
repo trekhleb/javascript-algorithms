@@ -52,4 +52,25 @@ describe('Trie', () => {
     expect(trie.doesWordExist('cap')).toBe(false);
     expect(trie.doesWordExist('call')).toBe(false);
   });
+
+  it('should delete words from trie', () => {
+    const trie = new Trie();
+
+    //Nothing should happen
+    trie.deleteWord('a')
+
+    //Delete word for only one key that exists in trie
+    trie.addWord('cat');
+    trie.deleteWord('cat')
+    expect(trie.head.toString()).toBe('*')
+
+    //Deletes word for a key that shares similar characters
+    trie.addWord('cat');
+    trie.addWord('car');
+    trie.deleteWord('car');
+    expect(trie.head.toString()).toBe('*:c');
+    expect(trie.head.getChild('c').toString()).toBe('c:a');
+
+    
+  });
 });
