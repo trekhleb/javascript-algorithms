@@ -91,6 +91,23 @@ inverting all of the bits of the number and adding 1 to it.
 
 > See [switchSign.js](switchSign.js) for further details.
 
+#### Power of 2
+
+This method checks if a number provided is power of two. It uses the property that when
+a power of 2 is `&` with power of 2 minus 1, it would return 0 implying that the provided
+number is power of 2.
+
+```
+Number: 4
+Power of 2: True
+
+Number: 1
+Power of 2: False
+```
+
+> See `ifPowerof2` function for further details.
+
+
 #### Multiply Two Numbers
 
 This method multiplies two integer numbers using bitwise operators.
@@ -155,6 +172,7 @@ When we shift 1 four times it will become bigger than 5.
 ```
 
 > See [bitLength.js](bitLength.js) for further details.
+
 
 ## References
 
