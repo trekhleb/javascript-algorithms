@@ -35,6 +35,13 @@ describe('Trie', () => {
     expect(trie.doesWordExist('cart')).toBe(true);
     expect(trie.doesWordExist('cat')).toBe(true);
 
+    // Try to delete not-existing word first.
+    trie.deleteWord('carpool');
+    expect(trie.doesWordExist('carpet')).toBe(true);
+    expect(trie.doesWordExist('car')).toBe(true);
+    expect(trie.doesWordExist('cart')).toBe(true);
+    expect(trie.doesWordExist('cat')).toBe(true);
+
     trie.deleteWord('carpet');
     expect(trie.doesWordExist('carpet')).toEqual(false);
     expect(trie.doesWordExist('car')).toEqual(true);
