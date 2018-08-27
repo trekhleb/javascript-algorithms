@@ -42,20 +42,16 @@ export default class TrieNode {
    * @return {TrieNode}
    */
   removeChild(character) {
-    function isSafeToDelete(node) {
-      return (
-        node
-        && !node.isCompleteWord
-        && node.children.getKeys().length === 0
-      );
-    }
-
     const childNode = this.getChild(character);
 
-    // delete childNode only if:
-    // - childNode has NO children
-    // - childNode.isCompleteWord === false
-    if (isSafeToDelete(childNode)) {
+    // Delete childNode only if:
+    // - childNode has NO children,
+    // - childNode.isCompleteWord === false.
+    if (
+      childNode
+      && !childNode.isCompleteWord
+      && !childNode.hasChildren()
+    ) {
       this.children.delete(character);
     }
 
@@ -68,6 +64,14 @@ export default class TrieNode {
    */
   hasChild(character) {
     return this.children.has(character);
+  }
+
+  /**
+   * Check whether current TrieNode has children or not.
+   * @return {boolean}
+   */
+  hasChildren() {
+    return this.children.getKeys().length !== 0;
   }
 
   /**

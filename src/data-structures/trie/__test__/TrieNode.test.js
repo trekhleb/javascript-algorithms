@@ -30,6 +30,16 @@ describe('TrieNode', () => {
     expect(trieNode.getChild('b')).toBeUndefined();
   });
 
+  it('should check if node has children', () => {
+    const trieNode = new TrieNode('c');
+
+    expect(trieNode.hasChildren()).toBe(false);
+
+    trieNode.addChild('a');
+
+    expect(trieNode.hasChildren()).toBe(true);
+  });
+
   it('should check if node has specific child', () => {
     const trieNode = new TrieNode('c');
 
