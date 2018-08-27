@@ -23,6 +23,18 @@ describe('Trie', () => {
     expect(trie.head.getChild('c').getChild('a').getChild('t').toString()).toBe('t*');
   });
 
+  it('should delete words from trie', () => {
+    const trie = new Trie();
+
+    trie.addWord('carpet');
+    trie.addWord('car');
+    expect(trie.doesWordExist('carpet')).toBe(true);
+
+    trie.deleteWord('carpet');
+    expect(trie.doesWordExist('carpet')).toEqual(false);
+    expect(trie.doesWordExist('car')).toEqual(true);
+  });
+
   it('should suggests next characters', () => {
     const trie = new Trie();
 
