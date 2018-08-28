@@ -22,12 +22,12 @@ _Read this in other languages:_
 
 `B` - 初学者, `A` - 进阶
 
-* `B` [链表](src/data-structures/linked-list)
-* `B` [双向链表](src/data-structures/doubly-linked-list)
-* `B` [队列](src/data-structures/queue)
-* `B` [栈](src/data-structures/stack)
-* `B` [哈希表](src/data-structures/hash-table)
-* `B` [堆](src/data-structures/heap)
+* `B` [链表](src/data-structures/linked-list/README.zh-CN.md)
+* `B` [双向链表](src/data-structures/doubly-linked-list/README.zh-CN.md)
+* `B` [队列](src/data-structures/queue/README.zh-CN.md)
+* `B` [栈](src/data-structures/stack/README.zh-CN.md)
+* `B` [哈希表](src/data-structures/hash-table/README.zh-CN.md)
+* `B` [堆](src/data-structures/heap/README.zh-CN.md)
 * `B` [优先队列](src/data-structures/priority-queue)
 * `A` [字典树](src/data-structures/trie)
 * `A` [树](src/data-structures/tree)
