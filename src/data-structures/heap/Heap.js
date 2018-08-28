@@ -47,7 +47,7 @@ export default class Heap {
    * @return {boolean}
    */
   hasParent(childIndex) {
-    return this.getParentIndex(childIndex) >= 0;
+    return childIndex > 0;
   }
 
   /**
@@ -144,17 +144,16 @@ export default class Heap {
 
   /**
    * @param {*} item
-   * @param {Comparator} [customFindingComparator]
+   * @param {Comparator} [customComparator]
    * @return {Heap}
    */
-  remove(item, customFindingComparator) {
+  remove(item, customComparator = this.compare) {
     // Find number of items to remove.
-    const customComparator = customFindingComparator || this.compare;
     const numberOfItemsToRemove = this.find(item, customComparator).length;
 
     for (let iteration = 0; iteration < numberOfItemsToRemove; iteration += 1) {
       // We need to find item index to remove each time after removal since
-      // indices are being change after each heapify process.
+      // indices are being changed after each heapify process.
       const indexToRemove = this.find(item, customComparator).pop();
 
       // If we need to remove last child in the heap then just remove it.
@@ -165,16 +164,14 @@ export default class Heap {
         // Move last element in heap to the vacant (removed) position.
         this.heapContainer[indexToRemove] = this.heapContainer.pop();
 
-        // Get parent.
-        const parentItem = this.hasParent(indexToRemove) ? this.parent(indexToRemove) : null;
-        const leftChild = this.hasLeftChild(indexToRemove) ? this.leftChild(indexToRemove) : null;
+        const parentItem = this.parent(indexToRemove);
 
-        // If there is no parent or parent is in incorrect order with the node
+        // If there is no parent or parent is in correct order with the node
         // we're going to delete then heapify down. Otherwise heapify up.
         if (
-          leftChild !== null
+          this.hasLeftChild(indexToRemove)
           && (
-            parentItem === null
+            parentItem == null
             || this.pairIsInCorrectOrder(parentItem, this.heapContainer[indexToRemove])
           )
         ) {
@@ -193,12 +190,11 @@ export default class Heap {
    * @param {Comparator} [customComparator]
    * @return {Number[]}
    */
-  find(item, customComparator) {
+  find(item, customComparator = this.compare) {
     const foundItemIndices = [];
-    const comparator = customComparator || this.compare;
 
     for (let itemIndex = 0; itemIndex < this.heapContainer.length; itemIndex += 1) {
-      if (comparator.equal(item, this.heapContainer[itemIndex])) {
+      if (customComparator.equal(item, this.heapContainer[itemIndex])) {
         foundItemIndices.push(itemIndex);
       }
     }
@@ -224,9 +220,9 @@ export default class Heap {
    * @param {number} [customStartIndex]
    */
   heapifyUp(customStartIndex) {
-    // Take last element (last in array or the bottom left in a tree) in
-    // a heap container and lift him up until we find the parent element
-    // that is less then the current new one.
+    // Take the last element (last in array or the bottom left in a tree)
+    // in the heap container and lift it up until it is in the correct
+    // order with respect to its parent element.
     let currentIndex = customStartIndex || this.heapContainer.length - 1;
 
     while (
@@ -241,10 +237,11 @@ export default class Heap {
   /**
    * @param {number} [customStartIndex]
    */
-  heapifyDown(customStartIndex) {
-    // Compare the root element to its children and swap root with the smallest
-    // of children. Do the same for next children after swap.
-    let currentIndex = customStartIndex || 0;
+  heapifyDown(customStartIndex = 0) {
+    // Compare the parent element to its children and swap parent with the appropriate
+    // child (smallest child for MinHeap, largest child for MaxHeap).
+    // Do the same for next children after swap.
+    let currentIndex = customStartIndex;
     let nextIndex = null;
 
     while (this.hasLeftChild(currentIndex)) {
