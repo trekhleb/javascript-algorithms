@@ -36,7 +36,7 @@ _Read this in other languages:_
   * `A` [红黑树](src/data-structures/tree/red-black-tree)
   * `A` [线段树](src/data-structures/tree/segment-tree) - 使用 最小/最大/总和 范围查询示例
   * `A` [树状数组](src/data-structures/tree/fenwick-tree) (二叉索引树)
-* `A` [图](src/data-structures/graph) (有向图与无向图)
+* `A` [图](src/data-structures/graph/README.zh-CN.md) (有向图与无向图)
 * `A` [并查集](src/data-structures/disjoint-set)
 * `A` [布隆过滤器](src/data-structures/bloom-filter)
 
