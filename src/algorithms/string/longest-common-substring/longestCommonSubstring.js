@@ -4,17 +4,20 @@
  * @return {string}
  */
 export default function longestCommonSubstring(s1, s2) {
+  // transform s1 & s2 into arrays to allow handling unicodes as single caracter.
+  const [a1, a2] = [s1, s2].map(s => Array.from(s));
+
   // Init the matrix of all substring lengths to use Dynamic Programming approach.
-  const substringMatrix = Array(s2.length + 1).fill(null).map(() => {
-    return Array(s1.length + 1).fill(null);
+  const substringMatrix = Array(a2.length + 1).fill(null).map(() => {
+    return Array(a1.length + 1).fill(null);
   });
 
   // Fill the first row and first column with zeros to provide initial values.
-  for (let columnIndex = 0; columnIndex <= s1.length; columnIndex += 1) {
+  for (let columnIndex = 0; columnIndex <= a1.length; columnIndex += 1) {
     substringMatrix[0][columnIndex] = 0;
   }
 
-  for (let rowIndex = 0; rowIndex <= s2.length; rowIndex += 1) {
+  for (let rowIndex = 0; rowIndex <= a2.length; rowIndex += 1) {
     substringMatrix[rowIndex][0] = 0;
   }
 
@@ -23,9 +26,9 @@ export default function longestCommonSubstring(s1, s2) {
   let longestSubstringColumn = 0;
   let longestSubstringRow = 0;
 
-  for (let rowIndex = 1; rowIndex <= s2.length; rowIndex += 1) {
-    for (let columnIndex = 1; columnIndex <= s1.length; columnIndex += 1) {
-      if (s1[columnIndex - 1] === s2[rowIndex - 1]) {
+  for (let rowIndex = 1; rowIndex <= a2.length; rowIndex += 1) {
+    for (let columnIndex = 1; columnIndex <= a1.length; columnIndex += 1) {
+      if (a1[columnIndex - 1] === a2[rowIndex - 1]) {
         substringMatrix[rowIndex][columnIndex] = substringMatrix[rowIndex - 1][columnIndex - 1] + 1;
       } else {
         substringMatrix[rowIndex][columnIndex] = 0;
@@ -50,7 +53,7 @@ export default function longestCommonSubstring(s1, s2) {
   let longestSubstring = '';
 
   while (substringMatrix[longestSubstringRow][longestSubstringColumn] > 0) {
-    longestSubstring = s1[longestSubstringColumn - 1] + longestSubstring;
+    longestSubstring = a1[longestSubstringColumn - 1] + longestSubstring;
     longestSubstringRow -= 1;
     longestSubstringColumn -= 1;
   }

@@ -7,5 +7,6 @@ describe('longestCommonSubstring', () => {
     expect(longestCommonSubstring('', 'ABC')).toBe('');
     expect(longestCommonSubstring('ABABC', 'BABCA')).toBe('BABC');
     expect(longestCommonSubstring('BABCA', 'ABCBA')).toBe('ABC');
+    expect(longestCommonSubstring('𐌵𐌵**ABC', '𐌵𐌵--ABC')).toBe('ABC');
   });
 });
