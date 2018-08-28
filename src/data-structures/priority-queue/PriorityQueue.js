@@ -4,34 +4,17 @@ import Comparator from '../../utils/comparator/Comparator';
 // It is the same as min heap except that when comparing to elements
 // we take into account not element's value but rather its priority.
 export default class PriorityQueue extends MinHeap {
-  constructor() {
+  /**
+   * @constructor
+   * @param {function|undefined} compareValueFunction
+   */
+  constructor(compareValueFunction) {
     super();
-    this.priorities = {};
+    // Map data structure supports using any value for key type
+    // e.g. functions, objects, or primitives
+    this.priorities = new Map();
     this.compare = new Comparator(this.comparePriority.bind(this));
-  }
-
-  /**
-   * @param {*} item
-   * @param {number} [priority]
-   * @return {PriorityQueue}
-   */
-  add(item, priority = 0) {
-    this.priorities[item] = priority;
-    super.add(item);
-
-    return this;
-  }
-
-  /**
-   * @param {*} item
-   * @param {Comparator} [customFindingComparator]
-   * @return {PriorityQueue}
-   */
-  remove(item, customFindingComparator) {
-    super.remove(item, customFindingComparator);
-    delete this.priorities[item];
-
-    return this;
+    this.compareValue = new Comparator(compareValueFunction);
   }
 
   /**
@@ -39,8 +22,35 @@ export default class PriorityQueue extends MinHeap {
    * @param {number} priority
    * @return {PriorityQueue}
    */
-  changePriority(item, priority) {
-    this.remove(item, new Comparator(this.compareValue));
+  add(item, priority = 0) {
+    this.priorities.set(item, priority);
+    super.add(item);
+
+    return this;
+  }
+
+  /**
+   * @param {*} item
+   * @param {Comparator|function|undefined} maybeComparator
+   * @return {PriorityQueue}
+   */
+  remove(item, maybeComparator) {
+    const comparator = this.getValueComparator(maybeComparator);
+    super.remove(item, comparator);
+    this.priorities.delete(item);
+
+    return this;
+  }
+
+  /**
+   * @param {*} item
+   * @param {number} priority
+   * @param {Comparator|function|undefined} maybeComparator
+   * @return {PriorityQueue}
+   */
+  changePriority(item, priority, maybeComparator) {
+    const comparator = this.getValueComparator(maybeComparator);
+    this.remove(item, comparator);
     this.add(item, priority);
 
     return this;
@@ -48,18 +58,46 @@ export default class PriorityQueue extends MinHeap {
 
   /**
    * @param {*} item
+   * @param {Comparator|function|undefined} maybeComparator
    * @return {Number[]}
    */
-  findByValue(item) {
-    return this.find(item, new Comparator(this.compareValue));
+  findByValue(item, maybeComparator) {
+    const comparator = this.getValueComparator(maybeComparator);
+    return this.find(item, comparator);
   }
 
   /**
    * @param {*} item
+   * @param {Comparator|function|undefined} maybeComparator
    * @return {boolean}
    */
-  hasValue(item) {
-    return this.findByValue(item).length > 0;
+  hasValue(item, maybeComparator) {
+    const comparator = this.getValueComparator(maybeComparator);
+    return this.findByValue(item, comparator).length > 0;
+  }
+
+  /**
+   * @param {Comparator|function|undefined} maybeComparator
+   * @return {Comparator}
+   */
+  getValueComparator(maybeComparator) {
+    if (maybeComparator == null) {
+      return this.compareValue;
+    }
+
+    if (maybeComparator instanceof Comparator) {
+      return maybeComparator;
+    }
+
+    if (maybeComparator instanceof Function) {
+      return new Comparator(maybeComparator);
+    }
+
+    throw new TypeError(
+      'Invalid comparator type\n'
+      + 'Must be one of: Comparator | Function | undefined\n'
+      + `Given: ${typeof maybeComparator}`,
+    );
   }
 
   /**
@@ -68,23 +106,10 @@ export default class PriorityQueue extends MinHeap {
    * @return {number}
    */
   comparePriority(a, b) {
-    if (this.priorities[a] === this.priorities[b]) {
+    if (this.priorities.get(a) === this.priorities.get(b)) {
       return 0;
     }
 
-    return this.priorities[a] < this.priorities[b] ? -1 : 1;
-  }
-
-  /**
-   * @param {*} a
-   * @param {*} b
-   * @return {number}
-   */
-  compareValue(a, b) {
-    if (a === b) {
-      return 0;
-    }
-
-    return a < b ? -1 : 1;
+    return this.priorities.get(a) < this.priorities.get(b) ? -1 : 1;
   }
 }
