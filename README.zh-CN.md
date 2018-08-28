@@ -28,7 +28,7 @@ _Read this in other languages:_
 * `B` [栈](src/data-structures/stack/README.zh-CN.md)
 * `B` [哈希表](src/data-structures/hash-table/README.zh-CN.md)
 * `B` [堆](src/data-structures/heap/README.zh-CN.md)
-* `B` [优先队列](src/data-structures/priority-queue)
+* `B` [优先队列](src/data-structures/priority-queue/README.zh-CN.md)
 * `A` [字典树](src/data-structures/trie)
 * `A` [树](src/data-structures/tree)
   * `A` [二叉查找树](src/data-structures/tree/binary-search-tree)
