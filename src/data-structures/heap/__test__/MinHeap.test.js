@@ -169,4 +169,26 @@ describe('MinHeap', () => {
     minHeap.remove('hey', comparator);
     expect(minHeap.toString()).toBe('a,bb,dddd');
   });
+
+  it('should remove values from heap and correctly re-order the tree', () => {
+    const minHeap = new MinHeap();
+
+    minHeap.add(1);
+    minHeap.add(2);
+    minHeap.add(3);
+    minHeap.add(4);
+    minHeap.add(5);
+    minHeap.add(6);
+    minHeap.add(7);
+    minHeap.add(8);
+    minHeap.add(9);
+
+    expect(minHeap.toString()).toBe('1,2,3,4,5,6,7,8,9');
+
+    minHeap.remove(2);
+    expect(minHeap.toString()).toBe('1,4,3,8,5,6,7,9');
+
+    minHeap.remove(4);
+    expect(minHeap.toString()).toBe('1,5,3,8,9,6,7');
+  });
 });
