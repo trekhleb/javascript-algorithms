@@ -39,10 +39,39 @@ export default class TrieNode {
 
   /**
    * @param {string} character
+   * @return {TrieNode}
+   */
+  removeChild(character) {
+    const childNode = this.getChild(character);
+
+    // Delete childNode only if:
+    // - childNode has NO children,
+    // - childNode.isCompleteWord === false.
+    if (
+      childNode
+      && !childNode.isCompleteWord
+      && !childNode.hasChildren()
+    ) {
+      this.children.delete(character);
+    }
+
+    return this;
+  }
+
+  /**
+   * @param {string} character
    * @return {boolean}
    */
   hasChild(character) {
     return this.children.has(character);
+  }
+
+  /**
+   * Check whether current TrieNode has children or not.
+   * @return {boolean}
+   */
+  hasChildren() {
+    return this.children.getKeys().length !== 0;
   }
 
   /**

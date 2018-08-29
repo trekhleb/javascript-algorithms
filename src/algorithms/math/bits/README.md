@@ -156,6 +156,25 @@ When we shift 1 four times it will become bigger than 5.
 
 > See [bitLength.js](bitLength.js) for further details.
 
+#### Is Power of Two
+
+This method checks if a number provided is power of two. It uses the following 
+property. Let's say that `powerNumber` is a number that has been formed as a power
+of two (i.e. 2, 4, 8, 16 etc.). Then if we'll do `&` operation between `powerNumber`
+and `powerNumber - 1` it will return `0` (in case if number is power of two).
+
+```
+Number: 4 = 0b0100
+Number: 3 = (4 - 1) = 0b0011
+4 & 3 = 0b0100 & 0b0011 = 0b0000 <-- Equal to zero, is power of two.
+
+Number: 10 = 0b01010
+Number: 9 = (10 - 1) = 0b01001
+10 & 9 = 0b01010 & 0b01001 = 0b01000 <-- Not equal to zero, not a power of two.
+```
+
+> See [isPowerOfTwo.js](isPowerOfTwo.js) for further details.
+
 ## References
 
 - [Bit Manipulation on YouTube](https://www.youtube.com/watch?v=NLKQEOgBAnw&t=0s&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
