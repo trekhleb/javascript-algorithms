@@ -76,10 +76,10 @@ Remove(head, value)
     end if
     return true
   end if
-  while n.next = ø and n.next.value = value
+  while n.next != ø and n.next.value != value
     n ← n.next
   end while
-  if n.next = ø
+  if n.next != ø
     if n.next = tail
       tail ← n
     end if
