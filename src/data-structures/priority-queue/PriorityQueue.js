@@ -50,8 +50,22 @@ export default class PriorityQueue extends MinHeap {
    */
   changePriority(item, priority, maybeComparator) {
     const comparator = this.getValueComparator(maybeComparator);
-    this.remove(item, comparator);
-    this.add(item, priority);
+    const numberOfItemsToRemove = this.find(item, comparator).length;
+    const itemsToUpdate = [];
+
+    for (let iteration = 0; iteration < numberOfItemsToRemove; iteration += 1) {
+      // We need to find item index to remove each time after removal since
+      // indices are being changed after each heapify process.
+      const indexToRemove = this.find(item, comparator).pop();
+      const itemToUpdate = this.getElementAtIndex(indexToRemove);
+      itemsToUpdate.push(itemToUpdate);
+      this.priorities.delete(itemToUpdate);
+      this.removeIndex(indexToRemove);
+    }
+
+    itemsToUpdate.forEach((itemToUpdate) => {
+      this.add(itemToUpdate, priority);
+    });
 
     return this;
   }

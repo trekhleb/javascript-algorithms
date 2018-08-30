@@ -155,31 +155,40 @@ export default class Heap {
       // We need to find item index to remove each time after removal since
       // indices are being changed after each heapify process.
       const indexToRemove = this.find(item, comparator).pop();
+      this.removeIndex(indexToRemove);
+    }
 
-      // If we need to remove last child in the heap then just remove it.
-      // There is no need to heapify the heap afterwards.
-      if (indexToRemove === (this.heapContainer.length - 1)) {
-        this.heapContainer.pop();
+    return this;
+  }
+
+  /**
+   * @param {number} indexToRemove
+   * @return {Heap}
+   */
+  removeIndex(indexToRemove) {
+    // If we need to remove last child in the heap then just remove it.
+    // There is no need to heapify the heap afterwards.
+    if (indexToRemove === (this.heapContainer.length - 1)) {
+      this.heapContainer.pop();
+    } else {
+      // Move last element in heap to the vacant (removed) position.
+      this.heapContainer[indexToRemove] = this.heapContainer.pop();
+
+      // Get parent.
+      const parentItem = this.parent(indexToRemove);
+
+      // If there is no parent or parent is in correct order with the node
+      // we're going to delete then heapify down. Otherwise heapify up.
+      if (
+        this.hasLeftChild(indexToRemove)
+        && (
+          !parentItem
+          || this.pairIsInCorrectOrder(parentItem, this.heapContainer[indexToRemove])
+        )
+      ) {
+        this.heapifyDown(indexToRemove);
       } else {
-        // Move last element in heap to the vacant (removed) position.
-        this.heapContainer[indexToRemove] = this.heapContainer.pop();
-
-        // Get parent.
-        const parentItem = this.parent(indexToRemove);
-
-        // If there is no parent or parent is in correct order with the node
-        // we're going to delete then heapify down. Otherwise heapify up.
-        if (
-          this.hasLeftChild(indexToRemove)
-          && (
-            !parentItem
-            || this.pairIsInCorrectOrder(parentItem, this.heapContainer[indexToRemove])
-          )
-        ) {
-          this.heapifyDown(indexToRemove);
-        } else {
-          this.heapifyUp(indexToRemove);
-        }
+        this.heapifyUp(indexToRemove);
       }
     }
 
@@ -201,6 +210,15 @@ export default class Heap {
     }
 
     return foundItemIndices;
+  }
+
+  /**
+   *
+   * @param {number} index
+   * @return {*}
+   */
+  getElementAtIndex(index) {
+    return this.heapContainer[index];
   }
 
   /**

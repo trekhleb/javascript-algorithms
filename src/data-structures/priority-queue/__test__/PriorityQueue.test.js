@@ -94,6 +94,35 @@ describe('PriorityQueue', () => {
     expect(priorityQueue.poll()).toBe(JOB1);
   });
 
+  it('should be possible to change the priority of a group of elements', () => {
+    const A = 'a';
+    const B = 'b';
+    const jobA1 = { type: A, id: 1 };
+    const jobB1 = { type: B, id: 2 };
+    const jobB2 = { type: B, id: 3 };
+
+    const priorityQueue = new PriorityQueue();
+
+    priorityQueue.add(jobA1, 2);
+    priorityQueue.add(jobB1, 8);
+    priorityQueue.add(jobB2, 9);
+
+    expect(priorityQueue.peek()).toBe(jobA1);
+
+    const compareByType = (a, b) => {
+      if (a.type === b.type) {
+        return 0;
+      }
+
+      return a.type < b.type ? -1 : 1;
+    };
+
+    priorityQueue.changePriority({ type: B }, 1, compareByType);
+
+    expect(priorityQueue.poll().type).toBe(B);
+    expect(priorityQueue.poll().type).toBe(B);
+  });
+
   it('should be possible to search in priority queue by value', () => {
     const priorityQueue = new PriorityQueue();
 
