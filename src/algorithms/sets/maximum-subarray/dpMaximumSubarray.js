@@ -34,8 +34,8 @@ export default function dpMaximumSubarray(inputArray) {
       maxEndIndex = currentIndex + 1;
     }
 
-    // Reset currentMaxSum and currentStartIndex
-    // if our local max drops below 0
+    // Reset currentSum and currentStartIndex
+    // if currentSum drops below 0
     if (currentSum < 0) {
       currentSum = 0;
       currentStartIndex = currentIndex + 1;
