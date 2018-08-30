@@ -47,7 +47,7 @@ export default class Heap {
    * @return {boolean}
    */
   hasParent(childIndex) {
-    return childIndex > 0;
+    return this.getParentIndex(childIndex) >= 0;
   }
 
   /**
@@ -144,17 +144,17 @@ export default class Heap {
 
   /**
    * @param {*} item
-   * @param {Comparator} [customComparator]
+   * @param {Comparator} [comparator]
    * @return {Heap}
    */
-  remove(item, customComparator = this.compare) {
+  remove(item, comparator = this.compare) {
     // Find number of items to remove.
-    const numberOfItemsToRemove = this.find(item, customComparator).length;
+    const numberOfItemsToRemove = this.find(item, comparator).length;
 
     for (let iteration = 0; iteration < numberOfItemsToRemove; iteration += 1) {
       // We need to find item index to remove each time after removal since
       // indices are being changed after each heapify process.
-      const indexToRemove = this.find(item, customComparator).pop();
+      const indexToRemove = this.find(item, comparator).pop();
 
       // If we need to remove last child in the heap then just remove it.
       // There is no need to heapify the heap afterwards.
@@ -164,6 +164,7 @@ export default class Heap {
         // Move last element in heap to the vacant (removed) position.
         this.heapContainer[indexToRemove] = this.heapContainer.pop();
 
+        // Get parent.
         const parentItem = this.parent(indexToRemove);
 
         // If there is no parent or parent is in correct order with the node
@@ -171,7 +172,7 @@ export default class Heap {
         if (
           this.hasLeftChild(indexToRemove)
           && (
-            parentItem == null
+            !parentItem
             || this.pairIsInCorrectOrder(parentItem, this.heapContainer[indexToRemove])
           )
         ) {
@@ -187,14 +188,14 @@ export default class Heap {
 
   /**
    * @param {*} item
-   * @param {Comparator} [customComparator]
+   * @param {Comparator} [comparator]
    * @return {Number[]}
    */
-  find(item, customComparator = this.compare) {
+  find(item, comparator = this.compare) {
     const foundItemIndices = [];
 
     for (let itemIndex = 0; itemIndex < this.heapContainer.length; itemIndex += 1) {
-      if (customComparator.equal(item, this.heapContainer[itemIndex])) {
+      if (comparator.equal(item, this.heapContainer[itemIndex])) {
         foundItemIndices.push(itemIndex);
       }
     }
