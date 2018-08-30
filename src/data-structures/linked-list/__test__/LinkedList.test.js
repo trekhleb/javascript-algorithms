@@ -16,6 +16,7 @@ describe('LinkedList', () => {
     linkedList.append(2);
 
     expect(linkedList.toString()).toBe('1,2');
+    expect(linkedList.tail.next).toBeNull();
   });
 
   it('should prepend node to linked list', () => {
