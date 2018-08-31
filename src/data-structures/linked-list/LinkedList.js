@@ -207,4 +207,25 @@ export default class LinkedList {
   toString(callback) {
     return this.toArray().map(node => node.toString(callback)).toString();
   }
+
+  /**
+   * Traverse through all nodes of the list from head to tail
+   * @param {*} callback
+   */
+  traverse(callback = undefined) {
+    const traversedNodes = [];
+    let currentNode = this.head;
+
+    while (currentNode) {
+      // If callback is specified then try to call the callback.
+      if (callback) {
+        callback(currentNode);
+      } else {
+        traversedNodes.push(currentNode);
+      }
+      currentNode = currentNode.next;
+    }
+
+    return traversedNodes;
+  }
 }

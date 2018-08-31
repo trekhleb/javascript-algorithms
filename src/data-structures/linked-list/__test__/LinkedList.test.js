@@ -217,4 +217,33 @@ describe('LinkedList', () => {
     expect(node.value.customValue).toBe('test2');
     expect(linkedList.find({ value: 2, customValue: 'test5' })).toBeNull();
   });
+
+  it('should traverse through all nodes of the list from head to tail', () => {
+    const linkedList = new LinkedList();
+
+    linkedList
+      .append(1)
+      .append(2)
+      .append(3);
+
+    const traversedNodes = linkedList.traverse();
+    const traversedNodeValues = [];
+    traversedNodes.map(node => traversedNodeValues.push(node.value));
+
+    expect(traversedNodeValues).toEqual([1, 2, 3]);
+  });
+
+  it('should traverse through all nodes with callback', () => {
+    const linkedList = new LinkedList();
+
+    linkedList
+      .append(1)
+      .append(2)
+      .append(3);
+
+    const traversedNodes = [];
+    linkedList.traverse(node => traversedNodes.push(node.value));
+
+    expect(traversedNodes).toEqual([1, 2, 3]);
+  });
 });
