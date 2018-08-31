@@ -211,6 +211,7 @@ export default class LinkedList {
   /**
    * Traverse through all nodes of the list from head to tail
    * @param {*} callback
+   * @return {LinkedListNode[]}
    */
   traverse(callback = undefined) {
     const traversedNodes = [];
@@ -227,5 +228,67 @@ export default class LinkedList {
     }
 
     return traversedNodes;
+  }
+
+  /**
+   * The items in the list have been traversed in reverse order
+   */
+  reverseTraversal(callback = undefined) {
+    const reversedNodes = [];
+    if (this.tail) {
+      let currNode = this.tail;
+
+      while (currNode !== this.head) {
+        let prevNode = this.head;
+
+        while (prevNode.next !== currNode) {
+          prevNode = prevNode.next;
+        }
+
+        if (callback) {
+          callback(currNode.value);
+        } else {
+          reversedNodes.push(currNode.value);
+        }
+
+        currNode = prevNode;
+      }
+
+      if (callback) {
+        callback(currNode.value);
+      } else {
+        reversedNodes.push(currNode.value);
+      }
+    }
+
+    return reversedNodes;
+  }
+
+  /**
+   * Reverse a singly linked list use to three variables
+   * @returns {ReservedLinkedList}
+   */
+  reverse() {
+    let currNode = this.head;
+    let prevNode = null;
+    let nextNode = null;
+
+    while (currNode) {
+      // Store next node
+      nextNode = currNode.next;
+
+      // Change next node of the current
+      currNode.next = prevNode;
+
+      // Move forward prev and current nodes one step
+      prevNode = currNode;
+      currNode = nextNode;
+    }
+
+    // Reset head, tail
+    this.tail = this.head;
+    this.head = prevNode;
+
+    return this;
   }
 }

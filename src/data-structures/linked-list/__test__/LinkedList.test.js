@@ -246,4 +246,42 @@ describe('LinkedList', () => {
 
     expect(traversedNodes).toEqual([1, 2, 3]);
   });
+
+  it('should reverse traversal the linked list with callback', () => {
+    const linkedList = new LinkedList();
+
+    linkedList
+      .append(1)
+      .append(2)
+      .append(3);
+
+    expect(linkedList.toString()).toBe('1,2,3');
+    const reversedNodes = [];
+    linkedList.reverseTraversal(value => reversedNodes.push(value));
+    expect(reversedNodes).toEqual([3, 2, 1]);
+  });
+
+  it('should reverse traversal the linked list', () => {
+    const linkedList = new LinkedList();
+
+    linkedList
+      .append(1)
+      .append(2)
+      .append(3);
+
+    expect(linkedList.toString()).toBe('1,2,3');
+    expect(linkedList.reverseTraversal()).toEqual([3, 2, 1]);
+  });
+
+  it('should reverse the singly linked list', () => {
+    const linkedList = new LinkedList();
+
+    linkedList
+      .append(1)
+      .append(2)
+      .append(3);
+
+    expect(linkedList.toString()).toBe('1,2,3');
+    expect(linkedList.reverse().toString()).toBe('3,2,1');
+  });
 });

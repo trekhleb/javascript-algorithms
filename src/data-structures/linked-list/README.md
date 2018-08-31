@@ -110,24 +110,24 @@ Traverse(head)
   Pre: head is the head node in the list
   Post: the items in the list have been traversed
   n ← head
-  while n = 0
+  while n != ø
     yield n.value
     n ← n.next
   end while
 end Traverse
 ```
-    
+
 ### Traverse in Reverse
 
 ```text
 ReverseTraversal(head, tail)
   Pre: head and tail belong to the same list
   Post: the items in the list have been traversed in reverse order
-  if tail = ø
+  if tail != ø
     curr ← tail
-    while curr = head
+    while curr != head
       prev ← head
-      while prev.next = curr
+      while prev.next != curr
         prev ← prev.next
       end while
       yield curr.value
