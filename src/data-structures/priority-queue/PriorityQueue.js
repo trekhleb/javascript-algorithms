@@ -6,7 +6,7 @@ import Comparator from '../../utils/comparator/Comparator';
 export default class PriorityQueue extends MinHeap {
   /**
    * @constructor
-   * @param {function|undefined} compareValueFunction
+   * @param {function} [compareValueFunction]
    */
   constructor(compareValueFunction) {
     super();
@@ -19,7 +19,7 @@ export default class PriorityQueue extends MinHeap {
 
   /**
    * @param {*} item
-   * @param {number} priority
+   * @param {number} [priority = 0]
    * @return {PriorityQueue}
    */
   add(item, priority = 0) {
@@ -31,7 +31,7 @@ export default class PriorityQueue extends MinHeap {
 
   /**
    * @param {*} item
-   * @param {Comparator|function|undefined} maybeComparator
+   * @param {Comparator|function} [maybeComparator]
    * @return {PriorityQueue}
    */
   remove(item, maybeComparator) {
@@ -45,7 +45,7 @@ export default class PriorityQueue extends MinHeap {
   /**
    * @param {*} item
    * @param {number} priority
-   * @param {Comparator|function|undefined} maybeComparator
+   * @param {Comparator|function} [maybeComparator]
    * @return {PriorityQueue}
    */
   changePriority(item, priority, maybeComparator) {
@@ -72,8 +72,8 @@ export default class PriorityQueue extends MinHeap {
 
   /**
    * @param {*} item
-   * @param {Comparator|function|undefined} maybeComparator
-   * @return {Number[]}
+   * @param {Comparator|function} [maybeComparator]
+   * @return {*[]}
    */
   findByValue(item, maybeComparator) {
     const comparator = this.getValueComparator(maybeComparator);
@@ -82,7 +82,7 @@ export default class PriorityQueue extends MinHeap {
 
   /**
    * @param {*} item
-   * @param {Comparator|function|undefined} maybeComparator
+   * @param {Comparator|function} [maybeComparator]
    * @return {boolean}
    */
   hasValue(item, maybeComparator) {
@@ -91,7 +91,7 @@ export default class PriorityQueue extends MinHeap {
   }
 
   /**
-   * @param {Comparator|function|undefined} maybeComparator
+   * @param {Comparator|function} [maybeComparator]
    * @return {Comparator}
    */
   getValueComparator(maybeComparator) {
