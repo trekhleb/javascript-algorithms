@@ -1,9 +1,16 @@
 /**
- * @param {string} s1
- * @param {string} s2
+ * @param {string} string1
+ * @param {string} string2
  * @return {string}
  */
-export default function longestCommonSubstring(s1, s2) {
+export default function longestCommonSubstring(string1, string2) {
+  // Convert strings to arrays to treat unicode symbols length correctly.
+  // For example:
+  // '𐌵'.length === 2
+  // [...'𐌵'].length === 1
+  const s1 = [...string1];
+  const s2 = [...string2];
+
   // Init the matrix of all substring lengths to use Dynamic Programming approach.
   const substringMatrix = Array(s2.length + 1).fill(null).map(() => {
     return Array(s1.length + 1).fill(null);

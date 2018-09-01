@@ -8,7 +8,7 @@ pattern like `0001`.  This clears all bits from the original
 number except the relevant one. If the relevant bit is one, 
 the result is `1`, otherwise the result is `0`.
 
-> See `getBit` function for further details.
+> See [getBit.js](getBit.js) for further details.
 
 #### Set Bit
 
@@ -17,7 +17,7 @@ value that looks like `00100`. Then we perform `OR` operation
 that sets specific bit into `1` but it does not affect on
 other bits of the number.
 
-> See `setBit` function for further details.
+> See [setBit.js](setBit.js) for further details.
 
 #### Clear Bit
 
@@ -27,13 +27,13 @@ the number that looks like `11011`. Then `AND` operation is
 being applied to both the number and the mask. That operation 
 unsets the bit.
 
-> See `clearBit` function for further details.
+> See [clearBit.js](clearBit.js) for further details.
 
 #### Update Bit
 
 This method is a combination of "Clear Bit" and "Set Bit" methods.
 
-> See `updateBit` function for further details.
+> See [updateBit.js](updateBit.js) for further details.
 
 #### Multiply By Two
 
@@ -52,7 +52,7 @@ Number: 0b1010 = 10
 Powers of two: 2^3 + 0 + 2^1 + 0 
 ```
 
-> See `multiplyByTwo` function for further details.
+> See [multiplyByTwo.js](multiplyByTwo.js) for further details.
 
 #### Divide By Two
 
@@ -71,7 +71,7 @@ Number: 0b0010 = 2
 Powers of two: 0 + 0 + 2^1 + 0 
 ```
 
-> See `divideByTwo` function for further details.
+> See [divideByTwo.js](divideByTwo.js) for further details.
 
 #### Switch Sign
 
@@ -89,7 +89,91 @@ inverting all of the bits of the number and adding 1 to it.
 0011  3
 ``` 
 
-> See `switchSign` function for further details.
+> See [switchSign.js](switchSign.js) for further details.
+
+#### Multiply Two Numbers
+
+This method multiplies two integer numbers using bitwise operators.
+This method is based on that "Every number can be denoted as the sum of powers of 2".
+
+The main idea of bitwise multiplication is that every number may be split
+to the sum of powers of two:
+
+I.e.
+
+```text
+19 = 2^4 + 2^1 + 2^0
+```
+
+Then multiplying number `x` by `19` is equivalent of:
+
+```text
+x * 19 = x * 2^4 + x * 2^1 + x * 2^0
+```
+
+Now we need to remember that `x * 2^4` is equivalent of shifting `x` left 
+by `4` bits (`x << 4`).
+
+> See [multiplyUnsigned.js](multiplyUnsigned.js) for further details.
+
+#### Count Set Bits
+
+This method counts the number of set bits in a number using bitwise operators.
+The main idea is that we shift the number right by one bit at a time and check
+the result of `&` operation that is `1` if bit is set and `0` otherwise.
+
+```text
+Number: 5 = 0b0101
+Count of set bits = 2
+```
+
+> See [countSetBits.js](countSetBits.js) for further details.
+
+#### Count Bits to Flip One Number to Another
+
+This methods outputs the number of bits required to convert one number to another.
+This makes use of property that when numbers are `XOR`-ed the result will be number
+of different bits.
+
+```
+5 = 0b0101
+1 = 0b0001
+Count of Bits to be Flipped: 1
+```
+
+> See [bitsDiff.js](bitsDiff.js) for further details.
+
+#### Count Bits of a Number
+
+To calculate the number of valuable bits we need to shift `1` one bit left each
+time and see if shifted number is bigger than the input number.
+
+```
+5 = 0b0101
+Count of valuable bits is: 3
+When we shift 1 four times it will become bigger than 5.
+```
+
+> See [bitLength.js](bitLength.js) for further details.
+
+#### Is Power of Two
+
+This method checks if a number provided is power of two. It uses the following 
+property. Let's say that `powerNumber` is a number that has been formed as a power
+of two (i.e. 2, 4, 8, 16 etc.). Then if we'll do `&` operation between `powerNumber`
+and `powerNumber - 1` it will return `0` (in case if number is power of two).
+
+```
+Number: 4 = 0b0100
+Number: 3 = (4 - 1) = 0b0011
+4 & 3 = 0b0100 & 0b0011 = 0b0000 <-- Equal to zero, is power of two.
+
+Number: 10 = 0b01010
+Number: 9 = (10 - 1) = 0b01001
+10 & 9 = 0b01010 & 0b01001 = 0b01000 <-- Not equal to zero, not a power of two.
+```
+
+> See [isPowerOfTwo.js](isPowerOfTwo.js) for further details.
 
 ## References
 

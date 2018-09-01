@@ -15,11 +15,9 @@ _Read this in other languages:_
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
 [_Polski_](README.pl-PL.md),
-[_Français_](README.fr-FR.md)
-
-> We’re writing a book that will clearly explain, in detail, the main algorithms. 
-If you’d like to be notified when the “JavaScript Algorithms” book 
-launches, [click here](https://upscri.be/402324/).
+[_Français_](README.fr-FR.md),
+[_Español_](README.es-ES.md),
+[_Português_](README.pt-BR.md)
 
 ## Data Structures
 
@@ -35,15 +33,15 @@ the data.
 * `B` [Queue](src/data-structures/queue)
 * `B` [Stack](src/data-structures/stack)
 * `B` [Hash Table](src/data-structures/hash-table)
-* `B` [Heap](src/data-structures/heap)
+* `B` [Heap](src/data-structures/heap) - max and min heap versions
 * `B` [Priority Queue](src/data-structures/priority-queue)
 * `A` [Trie](src/data-structures/trie)
 * `A` [Tree](src/data-structures/tree)
-    * `A` [Binary Search Tree](src/data-structures/tree/binary-search-tree)
-    * `A` [AVL Tree](src/data-structures/tree/avl-tree)
-    * `A` [Red-Black Tree](src/data-structures/tree/red-black-tree)
-    * `A` [Segment Tree](src/data-structures/tree/segment-tree) - with min/max/sum range queries examples
-    * `A` [Fenwick Tree](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
+  * `A` [Binary Search Tree](src/data-structures/tree/binary-search-tree)
+  * `A` [AVL Tree](src/data-structures/tree/avl-tree)
+  * `A` [Red-Black Tree](src/data-structures/tree/red-black-tree)
+  * `A` [Segment Tree](src/data-structures/tree/segment-tree) - with min/max/sum range queries examples
+  * `A` [Fenwick Tree](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
 * `A` [Graph](src/data-structures/graph) (both directed and undirected)
 * `A` [Disjoint Set](src/data-structures/disjoint-set)
 * `A` [Bloom Filter](src/data-structures/bloom-filter)
@@ -67,12 +65,15 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Sieve of Eratosthenes](src/algorithms/math/sieve-of-eratosthenes) - finding all prime numbers up to any given limit
   * `B` [Is Power of Two](src/algorithms/math/is-power-of-two) - check if the number is power of two (naive and bitwise algorithms)
   * `B` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
+  * `B` [Complex Number](src/algorithms/math/complex-number) - complex numbers and basic operations with them
+  * `B` [Radian & Degree](src/algorithms/math/radian) - radians to degree and backwards conversion
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
+  * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up 
 * **Sets**
   * `B` [Cartesian Product](src/algorithms/sets/cartesian-product) - product of multiple sets
   * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
-  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set
+  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set (bitwise and backtracking solutions)
   * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
   * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
   * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
@@ -123,6 +124,8 @@ a set of rules that precisely define a sequence of operations.
   * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * `A` [Strongly Connected Components](src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
+* **Cryptography**
+  * `B` [Polynomial Hash](src/algorithms/cryptography/polynomial-hash) - rolling hash function based on polynomial
 * **Uncategorized**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
@@ -143,6 +146,7 @@ algorithm is an abstraction higher than a computer program.
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
+  * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up
 * **Greedy** - choose the best option at the current time, without any consideration for the future
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `A` [Unbound Knapsack Problem](src/algorithms/sets/knapsack-problem)
@@ -182,6 +186,7 @@ if it satisfies all conditions, and only then continue generating subsequent sol
 different path of finding a solution. Normally the DFS traversal of state-space is being used.
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
+  * `B` [Power Set](src/algorithms/sets/power-set) - all subsets of a set
   * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
@@ -236,7 +241,8 @@ npm test -- 'playground'
 
 ### Big O Notation
 
-Order of growth of algorithms specified in Big O notation.
+*Big O notation* is used to classify algorithms according to how their running time or space requirements grow as the input size grows.
+On the chart below you may find most common orders of growth of algorithms specified in Big O notation.
 
 ![Big O graphs](./assets/big-o-graph.png)
 
@@ -282,3 +288,9 @@ Below is the list of some of the most used Big O notations and their performance
 | **Shell sort**        | n&nbsp;log(n)   | depends on gap sequence   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
 | **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - biggest number in array |
 | **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Yes       | k - length of longest key |
+
+## The Book
+
+We’re writing a book that will clearly explain, in detail, the main algorithms. 
+If you’d like to be notified when the “JavaScript Algorithms” book 
+launches, [click here](https://upscri.be/402324/).

@@ -16,6 +16,7 @@ describe('LinkedList', () => {
     linkedList.append(2);
 
     expect(linkedList.toString()).toBe('1,2');
+    expect(linkedList.tail.next).toBeNull();
   });
 
   it('should prepend node to linked list', () => {
@@ -182,6 +183,13 @@ describe('LinkedList', () => {
     expect(node.value.value).toBe(2);
     expect(node.value.key).toBe('test2');
     expect(linkedList.find({ callback: value => value.key === 'test5' })).toBeNull();
+  });
+
+  it('should create linked list from array', () => {
+    const linkedList = new LinkedList();
+    linkedList.fromArray([1, 1, 2, 3, 3, 3, 4, 5]);
+
+    expect(linkedList.toString()).toBe('1,1,2,3,3,3,4,5');
   });
 
   it('should find node by means of custom compare function', () => {
