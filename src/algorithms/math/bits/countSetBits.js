@@ -7,11 +7,11 @@ export default function countSetBits(originalNumber) {
   let number = originalNumber;
 
   while (number) {
-    // Add last bit of the number to the sum of set bits.
-    setBitsCount += number & 1;
+    // Using And operation on number with previous number.
+    number &= (number - 1);
 
-    // Shift number right by one bit to investigate other bits.
-    number >>= 1;
+    // Increamenting number by 1.
+    setBitsCount += 1;
   }
 
   return setBitsCount;
