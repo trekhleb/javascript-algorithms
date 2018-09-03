@@ -1,7 +1,6 @@
 /**
  * @param {number} number
- * @param {number} bitPosition - zero based.
- * @return {number}
+ * @return {Boolean}
  */
 export default function isEven(number) {
   return ((number & 1) === 0);
