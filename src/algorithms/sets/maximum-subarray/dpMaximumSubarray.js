@@ -18,10 +18,10 @@ export default function dpMaximumSubarray(inputArray) {
   let currentSum = 0;
 
   // We need to keep track of the starting and ending indices that contributed to our maxSum
-  // so that we can return the actual subarray.
+  // so that we can return the actual subarray. From the beginning let's assume that whole array
+  // is contributing to maxSum.
   let maxStartIndex = 0;
-  let maxEndIndex = inputArray.length;
-
+  let maxEndIndex = inputArray.length - 1;
   let currentStartIndex = 0;
 
   inputArray.forEach((currentNumber, currentIndex) => {
@@ -31,7 +31,7 @@ export default function dpMaximumSubarray(inputArray) {
     if (maxSum < currentSum) {
       maxSum = currentSum;
       maxStartIndex = currentStartIndex;
-      maxEndIndex = currentIndex + 1;
+      maxEndIndex = currentIndex;
     }
 
     // Reset currentSum and currentStartIndex if currentSum drops below 0.
@@ -41,5 +41,5 @@ export default function dpMaximumSubarray(inputArray) {
     }
   });
 
-  return inputArray.slice(maxStartIndex, maxEndIndex);
+  return inputArray.slice(maxStartIndex, maxEndIndex + 1);
 }
