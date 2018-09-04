@@ -17,10 +17,6 @@ _Read this in other languages:_
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md)
 
-> 우리는 주요 알고리즘에 대해 더 자세한 설명을 담은 책을 제작 중입니다.
-만약 “JavaScript Algorithms” 책이 언제 출시되는지 알고 싶다면
-, [여기를 클릭하세요.](https://upscri.be/402324/).
-
 ## 자료 구조
 
 자료 구조는 데이터를 특정 방식으로 구성하고 저장함으로써 더 효율적으로

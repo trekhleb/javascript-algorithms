@@ -19,10 +19,6 @@ _Read this in other languages:_
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md)
 
-> We’re writing a book that will clearly explain, in detail, the main algorithms. 
-If you’d like to be notified when the “JavaScript Algorithms” book 
-launches, [click here](https://upscri.be/402324/).
-
 ## Data Structures
 
 A data structure is a particular way of organizing and storing data in a computer so that it can
@@ -77,7 +73,7 @@ a set of rules that precisely define a sequence of operations.
 * **Sets**
   * `B` [Cartesian Product](src/algorithms/sets/cartesian-product) - product of multiple sets
   * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
-  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set
+  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set (bitwise and backtracking solutions)
   * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
   * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
   * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
@@ -190,6 +186,7 @@ if it satisfies all conditions, and only then continue generating subsequent sol
 different path of finding a solution. Normally the DFS traversal of state-space is being used.
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
+  * `B` [Power Set](src/algorithms/sets/power-set) - all subsets of a set
   * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
@@ -244,7 +241,8 @@ npm test -- 'playground'
 
 ### Big O Notation
 
-Order of growth of algorithms specified in Big O notation.
+*Big O notation* is used to classify algorithms according to how their running time or space requirements grow as the input size grows.
+On the chart below you may find most common orders of growth of algorithms specified in Big O notation.
 
 ![Big O graphs](./assets/big-o-graph.png)
 
@@ -290,3 +288,9 @@ Below is the list of some of the most used Big O notations and their performance
 | **Shell sort**        | n&nbsp;log(n)   | depends on gap sequence   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
 | **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - biggest number in array |
 | **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Yes       | k - length of longest key |
+
+## The Book
+
+We’re writing a book that will clearly explain, in detail, the main algorithms. 
+If you’d like to be notified when the “JavaScript Algorithms” book 
+launches, [click here](https://upscri.be/402324/).

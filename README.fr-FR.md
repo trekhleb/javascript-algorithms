@@ -19,10 +19,6 @@ _Lisez ceci dans d'autres langues:_
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md)
 
-> Nous écrivons actuellement un livre qui expliquera clairement, en détail, les 
-principaux algorithmes. Si vous souhaitez être notifié lorsque le livre 
-“JavaScript Algorithms” paraîtra, [cliquez ici](https://upscri.be/402324/).
-
 ## Data Structures
 
 Une structure de données est une manière spéciale d'organiser et de stocker 

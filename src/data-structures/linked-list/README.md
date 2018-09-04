@@ -46,7 +46,7 @@ Contains(head, value)
        value is the value to search for
   Post: the item is either in the linked list, true; otherwise false
   n ← head
-  while n = ø and n.value = value
+  while n != ø and n.value != value
     n ← n.next
   end while
   if n = ø
