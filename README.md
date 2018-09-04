@@ -67,6 +67,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
   * `B` [Complex Number](src/algorithms/math/complex-number) - complex numbers and basic operations with them
   * `B` [Radian & Degree](src/algorithms/math/radian) - radians to degree and backwards conversion
+  * `B` [Fast Powering](src/algorithms/math/fast-powering)
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
   * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up 
@@ -163,6 +164,7 @@ algorithm is an abstraction higher than a computer program.
   * `B` [Tree Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [Graph Depth-First Search](src/algorithms/graph/depth-first-search) (DFS)
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
+  * `B` [Fast Powering](src/algorithms/math/fast-powering)
   * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
   * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
 * **Dynamic Programming** - build up a solution using previously found sub-solutions

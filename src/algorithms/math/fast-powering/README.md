@@ -1,4 +1,4 @@
-# Power(a,b)
+# Fast Powering Algorithm
 
 This computes power of (a,b)
 eg: power(2,3) = 8
@@ -33,3 +33,7 @@ power(2,5) = 2 * power(2,2) * power(2,2) = 2 * 4 * 4 = 32
 Complexity relation: T(n) = T(n/2) + 1
 
 Time complexity of the algorithm: O(logn)
+
+## References
+
+
