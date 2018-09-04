@@ -10,7 +10,6 @@ export default function countSetBits(originalNumber) {
     // Using And operation on number with previous number.
     number &= (number - 1);
 
-    // Increamenting number by 1.
     setBitsCount += 1;
   }
 
