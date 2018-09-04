@@ -1,27 +1,18 @@
-# Linked List
+# 链表
 
-In computer science, a **linked list** is a linear collection 
-of data elements, in which linear order is not given by 
-their physical placement in memory. Instead, each 
-element points to the next. It is a data structure 
-consisting of a group of nodes which together represent 
-a sequence. Under the simplest form, each node is 
-composed of data and a reference (in other words, 
-a link) to the next node in the sequence. This structure
-allows for efficient insertion or removal of elements 
-from any position in the sequence during iteration. 
-More complex variants add additional links, allowing 
-efficient insertion or removal from arbitrary element 
-references. A drawback of linked lists is that access 
-time is linear (and difficult to pipeline). Faster 
-access, such as random access, is not feasible. Arrays 
-have better cache locality as compared to linked lists.
+在计算机科学中, 一个 **链表** 是数据元素的线性集合, 元素的线性顺序不是由它们在内存中的物理位置给出的。 相反, 每个元素指向下一个元素。它是由一组节点组成的数据结构,这些节点一起,表示序列。
+
+在最简单的形式下，每个节点由数据和到序列中下一个节点的引用(换句话说，链接)组成。这种结构允许在迭代期间有效地从序列中的任何位置插入或删除元素。
+
+更复杂的变体添加额外的链接，允许有效地插入或删除任意元素引用。链表的一个缺点是访问时间是线性的(而且难以管道化)。
+
+更快的访问，如随机访问，是不可行的。与链表相比，数组具有更好的缓存位置。
 
 ![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
-## Pseudocode for Basic Operations
+## 基本操作的伪代码
 
-### Insert
+### 插入
 
 ```text
 Add(value)
@@ -37,21 +28,8 @@ Add(value)
   end if
 end Add
 ```
-
-```text
-Prepend(value)
- Pre: value is the value to add to the list
- Post: value has been placed at the head of the list
- n ← node(value)
- n.next ← head
- head ← n
- if tail = ø
-   tail ← n
- end
-end Prepend
-```
-
-### Search
+    
+### 搜索
 
 ```text
 Contains(head, value)
@@ -69,7 +47,7 @@ Contains(head, value)
 end Contains
 ```
     
-### Delete
+### 删除
 
 ```text
 Remove(head, value)
@@ -89,10 +67,10 @@ Remove(head, value)
     end if
     return true
   end if
-  while n.next != ø and n.next.value != value
+  while n.next = ø and n.next.value = value
     n ← n.next
   end while
-  if n.next != ø
+  if n.next = ø
     if n.next = tail
       tail ← n
     end if
@@ -103,7 +81,7 @@ Remove(head, value)
 end Remove
 ```
 
-### Traverse
+### 遍历
 
 ```text
 Traverse(head)
@@ -117,7 +95,7 @@ Traverse(head)
 end Traverse
 ```
     
-### Traverse in Reverse
+### 反向遍历
 
 ```text
 ReverseTraversal(head, tail)
@@ -138,19 +116,19 @@ ReverseTraversal(head, tail)
 end ReverseTraversal
 ```
 
-## Complexities
+## 复杂度
 
-### Time Complexity
+### 时间复杂度
 
 | Access    | Search    | Insertion | Deletion  |
 | :-------: | :-------: | :-------: | :-------: |
 | O(n)      | O(n)      | O(1)      | O(1)      |
 
-### Space Complexity
+### 空间复杂度
 
 O(n)
 
-## References
+## 参考
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
 - [YouTube](https://www.youtube.com/watch?v=njTh_OwMljA&index=2&t=1s&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
