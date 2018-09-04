@@ -1,39 +1,68 @@
 # Fast Powering Algorithm
 
-This computes power of (a,b)
-eg: power(2,3) = 8
-power(10,0) = 1
+**The power of a number** says how many times to use the number in a 
+multiplication.
 
-The algorithm uses divide and conquer approach to compute power.
-Currently the algorithm work for two positive integers X and Y
-Lets say there are two numbers X and Y.
-At each step of the algorithm:
-  1. if Y is even
-      then power(X, Y/2) * power(X, Y/2) is computed
-  2. if Y is odd  
-      then X * power(X, Y/2) * power(X, Y/2) is computed
+It is written as a small number to the right and above the base number.
 
-At each step since power(X,Y/2) is called twice, this is optimised by saving the result of power(X, Y/2) in a variable (lets say res).
-And then res is multiplied by self.
+![Power](https://www.mathsisfun.com/algebra/images/exponent-8-2.svg)
 
-Illustration through example
-power (2,5)
-  - 2 * power(2,2) * power(2,2)
-  power(2,2)
-    - power(2,1) * power(2,1)
-    power(2,1)
-      - return 2
+## Naive Algorithm Complexity
 
-Going up the tree once the end values are computed
-    power(2,1) = 2
-  power(2,2) = power(2,1) * power(2,1) = 2 * 2 = 4  
-power(2,5) = 2 * power(2,2) * power(2,2) = 2 * 4 * 4 = 32
+How to find `a` raised to the power `b`?
 
+We multiply `a` to itself, `b` times. That 
+is, `a^b = a * a * a * ... * a` (`b` occurrences of `a`).
 
-Complexity relation: T(n) = T(n/2) + 1
+This operation will take `O(n)` time since we need to do multiplication operation
+exactly `n` times.
 
-Time complexity of the algorithm: O(logn)
+## Fast Power Algorithm
+
+Can we do better than naive algorithm does? Yes we may solve the task of
+ powering in `O(log(n))` time.
+
+The algorithm uses divide and conquer approach to compute power. Currently the 
+algorithm work for two positive integers `X` and `Y`.
+
+The idea behind the algorithm is based on the fact that:
+
+For **even** `Y`:
+
+```text
+X^Y = X^(Y/2) * X^(Y/2) 
+```
+
+For **odd** `Y`:
+
+```text
+X^Y = X^(Y//2) * X^(Y//2) * X
+where Y//2 is result of division of Y by 2 without reminder.
+```
+
+**For example**
+
+```text
+2^4 = (2 * 2) * (2 * 2) = (2^2) * (2^2)
+```
+
+```text
+2^5 = (2 * 2) * (2 * 2) * 2 = (2^2) * (2^2) * (2)
+```
+
+Now, since on each step we need to compute the same `X^(Y/2)` power twice we may optimise 
+it by saving it to some intermediate variable to avoid its duplicate calculation. 
+
+**Time Complexity**
+
+Since each iteration we split the power by half then we will call function 
+recursively `log(n)` times. This the time complexity of the algorithm is reduced to:
+
+```text
+O(log(n))
+``` 
 
 ## References
 
-
+- [YouTube](https://www.youtube.com/watch?v=LUWavfN9zEo&index=80&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&t=0s)
+- [Wikipedia](https://en.wikipedia.org/wiki/Exponentiation_by_squaring)

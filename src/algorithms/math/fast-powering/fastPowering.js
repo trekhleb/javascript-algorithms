@@ -1,23 +1,30 @@
 /**
+ * Fast Powering Algorithm.
  * Recursive implementation to compute power.
  *
- * @param {number} number1
- * @param {number} number2
+ * Complexity: log(n)
+ *
+ * @param {number} base - Number that will be raised to the power.
+ * @param {number} power - The power that number will be raised to.
  * @return {number}
  */
-export default function fastPowering(number1, number2) {
-  let val = 0;
-  let res = 0;
-  if (number2 === 0) { // if number2 is 0
-    val = 1;
-  } else if (number2 === 1) { // if number2 is 1 return number 1 as it is
-    val = number1;
-  } else if (number2 % 2 === 0) { // if number2 is even
-    res = fastPowering(number1, number2 / 2);
-    val = res * res;
-  } else { // if number2 is odd
-    res = fastPowering(number1, Math.floor(number2 / 2));
-    val = res * res * number1;
+export default function fastPowering(base, power) {
+  if (power === 0) {
+    // Anything that is raised to the power of zero is 1.
+    return 1;
   }
-  return val;
+
+  if (power % 2 === 0) {
+    // If the power is even...
+    // we may recursively redefine the result via twice smaller powers:
+    // x^8 = x^4 * x^4.
+    const multiplier = fastPowering(base, power / 2);
+    return multiplier * multiplier;
+  }
+
+  // If the power is odd...
+  // we may recursively redefine the result via twice smaller powers:
+  // x^9 = x^4 * x^4 * x.
+  const multiplier = fastPowering(base, Math.floor(power / 2));
+  return multiplier * multiplier * base;
 }
