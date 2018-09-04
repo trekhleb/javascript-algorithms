@@ -5,4 +5,4 @@ In computer science, `binary search`, also known as `half-interval search`, `log
 ![Nth Root](https://upload.wikimedia.org/wikipedia/commons/8/83/Binary_Search_Depiction.svg)
 
 ## References
-[Wikipedia](https://en.wikipedia.org/wiki/Binary_search_algorithm)
+- [Wikipedia](https://en.wikipedia.org/wiki/Binary_search_algorithm)

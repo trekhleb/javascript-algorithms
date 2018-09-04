@@ -1,22 +1,32 @@
 /**
- * @param {number} number
+ * @param {number} num
  * @param {number} power
  * @return {number}
  */
 
-function difference(num, mid, p) {
-  return Math.abs(num - (mid ** p));
-}
+export default function nthRoot(num, power) {
+  const E = 0.000000001;
+  const roundToMargin = (x) => {
+    return Math.round(x / E) * E;
+  };
 
-export default function nthRoot(number, p) {
-  let start = 0.0;
-  let end = number;
-  const e = 0.000000001;
-  while (true) {
-    const mid = (start + end) / 2;
-    const error = difference(number, mid, p);
-    if (error <= e) return mid;
-    if (mid ** p > number) end = mid;
-    else start = mid;
+  let guess;
+  const calculateError = () => Math.abs(num - (guess ** power));
+
+  let start = 0;
+  let end = num;
+  let error = 1;
+
+  while (error > E) {
+    guess = (start + end) / 2;
+    error = calculateError();
+
+    if (guess ** power > num) {
+      end = guess;
+    } else {
+      start = guess;
+    }
   }
+
+  return roundToMargin(guess);
 }
