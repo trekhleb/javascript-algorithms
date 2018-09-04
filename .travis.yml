@@ -5,6 +5,7 @@ node_js:
   - node
 install:
   - npm install -g codecov
+  - npm install
 script:
   - npm run ci
   - codecov
