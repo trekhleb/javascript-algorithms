@@ -214,16 +214,17 @@ export default class LinkedList {
    * @return {LinkedListNode[]}
    */
   traverse(callback = undefined) {
-    const traversedNodes = [];
+    if (typeof callback !== 'function') {
+      throw new TypeError(
+        `traverse method requires a callback function as an argument.\nArgument given: ${typeof callback}`
+      )
+    }
+
     let currentNode = this.head;
+    const traversedNodes = [];
 
     while (currentNode) {
-      // If callback is specified then try to call the callback.
-      if (callback) {
-        callback(currentNode);
-      } else {
-        traversedNodes.push(currentNode);
-      }
+      traversedNodes.push(callback(currentNode.value));
       currentNode = currentNode.next;
     }
 
