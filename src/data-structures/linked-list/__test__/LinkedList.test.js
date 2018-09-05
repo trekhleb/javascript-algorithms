@@ -226,25 +226,9 @@ describe('LinkedList', () => {
       .append(2)
       .append(3);
 
-    const traversedNodes = linkedList.traverse();
-    const traversedNodeValues = [];
-    traversedNodes.map(node => traversedNodeValues.push(node.value));
+    const traversedNodes = linkedList.traverse(value => value * 2);
 
-    expect(traversedNodeValues).toEqual([1, 2, 3]);
-  });
-
-  it('should traverse through all nodes with callback', () => {
-    const linkedList = new LinkedList();
-
-    linkedList
-      .append(1)
-      .append(2)
-      .append(3);
-
-    const traversedNodes = [];
-    linkedList.traverse(node => traversedNodes.push(node.value));
-
-    expect(traversedNodes).toEqual([1, 2, 3]);
+    expect(traversedNodes).toEqual([2, 4, 6]);
   });
 
   it('should reverse traversal the linked list with callback', () => {
@@ -256,21 +240,8 @@ describe('LinkedList', () => {
       .append(3);
 
     expect(linkedList.toString()).toBe('1,2,3');
-    const reversedNodes = [];
-    linkedList.reverseTraversal(value => reversedNodes.push(value));
-    expect(reversedNodes).toEqual([3, 2, 1]);
-  });
-
-  it('should reverse traversal the linked list', () => {
-    const linkedList = new LinkedList();
-
-    linkedList
-      .append(1)
-      .append(2)
-      .append(3);
-
-    expect(linkedList.toString()).toBe('1,2,3');
-    expect(linkedList.reverseTraversal()).toEqual([3, 2, 1]);
+    const reversedNodes = linkedList.reverseTraversal(linkedList.head, value => value * 2);
+    expect(reversedNodes).toEqual([6, 4, 2]);
   });
 
   it('should reverse the singly linked list', () => {

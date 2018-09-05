@@ -215,9 +215,7 @@ export default class LinkedList {
    */
   traverse(callback = undefined) {
     if (typeof callback !== 'function') {
-      throw new TypeError(
-        `traverse method requires a callback function as an argument.\nArgument given: ${typeof callback}`
-      )
+      throw new TypeError(`traverse method requires a callback function as an argument.\nArgument given: ${typeof callback}`);
     }
 
     let currentNode = this.head;
@@ -234,35 +232,14 @@ export default class LinkedList {
   /**
    * The items in the list have been traversed in reverse order
    */
-  reverseTraversal(callback = undefined) {
-    const reversedNodes = [];
-    if (this.tail) {
-      let currNode = this.tail;
-
-      while (currNode !== this.head) {
-        let prevNode = this.head;
-
-        while (prevNode.next !== currNode) {
-          prevNode = prevNode.next;
-        }
-
-        if (callback) {
-          callback(currNode.value);
-        } else {
-          reversedNodes.push(currNode.value);
-        }
-
-        currNode = prevNode;
-      }
-
-      if (callback) {
-        callback(currNode.value);
-      } else {
-        reversedNodes.push(currNode.value);
-      }
+  reverseTraversal(node, callback = undefined) {
+    if (typeof callback !== 'function') {
+      throw new TypeError(`reverseTraverse method requires a callback function as an argument.\nArgument given: ${typeof callback}`);
     }
 
-    return reversedNodes;
+    if (!node) return [];
+
+    return this.reverseTraversal(node.next, callback).concat(callback(node.value));
   }
 
   /**
