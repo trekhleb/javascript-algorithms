@@ -19,6 +19,9 @@ _Read this in other languages:_
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md)
 
+*Note that this project is meant to be used for learning and researching purposes 
+only and it is **not meant** to be used for production.*
+
 ## Data Structures
 
 A data structure is a particular way of organizing and storing data in a computer so that it can
