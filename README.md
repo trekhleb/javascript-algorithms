@@ -20,7 +20,7 @@ _Read this in other languages:_
 [_Português_](README.pt-BR.md)
 
 *Note that this project is meant to be used for learning and researching purposes 
-only and it is **not meant** to be used for production.*
+only and it is **not** meant to be used for production.*
 
 ## Data Structures
 
