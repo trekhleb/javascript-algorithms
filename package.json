@@ -6,8 +6,7 @@
   "scripts": {
     "lint": "eslint ./src/*",
     "test": "jest",
-    "ci": "npm run lint && npm run test -- --coverage",
-    "codecov": "codecov"
+    "ci": "npm run lint && npm run test -- --coverage"
   },
   "pre-commit": [
     "lint",
@@ -27,7 +26,9 @@
     "javascript-algorithms",
     "sorting-algorithms",
     "graph",
-    "tree"
+    "tree",
+    "interview",
+    "interview-preparation"
   ],
   "author": "Oleksii Trekhleb (https://www.linkedin.com/in/trekhleb/)",
   "license": "MIT",
@@ -39,7 +40,6 @@
     "@types/jest": "^23.1.4",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
-    "codecov": "^3.0.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^17.0.0",
     "eslint-plugin-import": "^2.13.0",
