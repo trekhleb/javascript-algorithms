@@ -207,4 +207,66 @@ export default class LinkedList {
   toString(callback) {
     return this.toArray().map(node => node.toString(callback)).toString();
   }
+
+  /**
+   * Traverse through all nodes of the list from head to tail
+   * @param {*} callback
+   * @return {LinkedListNode[]}
+   */
+  traverse(callback = undefined) {
+    if (typeof callback !== 'function') {
+      throw new TypeError(`traverse method requires a callback function as an argument.\nArgument given: ${typeof callback}`);
+    }
+
+    let currentNode = this.head;
+    const traversedNodes = [];
+
+    while (currentNode) {
+      traversedNodes.push(callback(currentNode.value));
+      currentNode = currentNode.next;
+    }
+
+    return traversedNodes;
+  }
+
+  /**
+   * The items in the list have been traversed in reverse order
+   */
+  reverseTraversal(node, callback = undefined) {
+    if (typeof callback !== 'function') {
+      throw new TypeError(`reverseTraverse method requires a callback function as an argument.\nArgument given: ${typeof callback}`);
+    }
+
+    if (!node) return [];
+
+    return this.reverseTraversal(node.next, callback).concat(callback(node.value));
+  }
+
+  /**
+   * Reverse a singly linked list use to three variables
+   * @returns {ReservedLinkedList}
+   */
+  reverse() {
+    let currNode = this.head;
+    let prevNode = null;
+    let nextNode = null;
+
+    while (currNode) {
+      // Store next node
+      nextNode = currNode.next;
+
+      // Change next node of the current
+      currNode.next = prevNode;
+
+      // Move forward prev and current nodes one step
+      prevNode = currNode;
+      currNode = nextNode;
+    }
+
+    // Reset head, tail
+    this.tail = this.head;
+    this.head = prevNode;
+
+    return this;
+  }
 }
