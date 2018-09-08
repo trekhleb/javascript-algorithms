@@ -218,31 +218,6 @@ describe('LinkedList', () => {
     expect(linkedList.find({ value: 2, customValue: 'test5' })).toBeNull();
   });
 
-  it('should traverse through all nodes of the list from head to tail with callback', () => {
-    const linkedList = new LinkedList();
-
-    linkedList
-      .append(1)
-      .append(2)
-      .append(3);
-
-    expect(linkedList.traverse(value => value * 2)).toEqual([2, 4, 6]);
-    expect(() => linkedList.traverse()).toThrow();
-  });
-
-  it('should reverse traversal the linked list with callback', () => {
-    const linkedList = new LinkedList();
-
-    linkedList
-      .append(1)
-      .append(2)
-      .append(3);
-
-    expect(linkedList.toString()).toBe('1,2,3');
-    expect(linkedList.reverseTraversal(linkedList.head, value => value * 2)).toEqual([6, 4, 2]);
-    expect(() => linkedList.reverseTraversal(linkedList.head)).toThrow();
-  });
-
   it('should reverse linked list', () => {
     const linkedList = new LinkedList();
 
@@ -258,9 +233,14 @@ describe('LinkedList', () => {
 
     // Reverse linked list.
     linkedList.reverse();
-
     expect(linkedList.toString()).toBe('3,2,1');
     expect(linkedList.head.value).toBe(3);
     expect(linkedList.tail.value).toBe(1);
+
+    // Reverse linked list back to initial state.
+    linkedList.reverse();
+    expect(linkedList.toString()).toBe('1,2,3');
+    expect(linkedList.head.value).toBe(1);
+    expect(linkedList.tail.value).toBe(3);
   });
 });

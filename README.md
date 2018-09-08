@@ -109,6 +109,9 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Shellsort](src/algorithms/sorting/shell-sort)
   * `B` [Counting Sort](src/algorithms/sorting/counting-sort)
   * `B` [Radix Sort](src/algorithms/sorting/radix-sort)
+* **Linked Lists**
+  * `B` [Straight Traversal](src/algorithms/linked-list/traversal)
+  * `B` [Reverse Traversal](src/algorithms/linked-list/reverse-traversal)
 * **Trees**
   * `B` [Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [Breadth-First Search](src/algorithms/tree/breadth-first-search) (BFS)
