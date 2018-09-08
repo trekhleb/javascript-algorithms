@@ -12,5 +12,7 @@ describe('multiply', () => {
     expect(multiply(4, -2)).toBe(-8);
     expect(multiply(-4, -4)).toBe(16);
     expect(multiply(4, -5)).toBe(-20);
+    expect(multiply(2, 121)).toBe(242);
+    expect(multiply(121, 2)).toBe(242);
   });
 });

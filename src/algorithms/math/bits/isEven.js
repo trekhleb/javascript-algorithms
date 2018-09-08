@@ -1,6 +1,6 @@
 /**
  * @param {number} number
- * @return bool
+ * @return {boolean}
  */
 export default function isEven(number) {
   return (number & 1) === 0;

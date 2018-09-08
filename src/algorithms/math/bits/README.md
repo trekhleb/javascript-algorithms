@@ -38,12 +38,14 @@ This method is a combination of "Clear Bit" and "Set Bit" methods.
 #### isEven
 
 This method determines if the number provided is even.
+It is based on the fact that odd numbers have their last
+right bit to be set to 1.
 
-```
-Number: 5
+```text
+Number: 5 = 0b0101
 isEven: false
 
-Number: 4
+Number: 4 = 0b0100
 isEven: true
 ```
 
@@ -108,18 +110,19 @@ inverting all of the bits of the number and adding 1 to it.
 #### Multiply Two Signed Numbers
 
 This method multiplies two signed integer numbers using bitwise operators.
-This method is based on the following :
+This method is based on the following facts:
 
 ```text
-a * b can be written in the below formats
+a * b can be written in the below formats:
   0                     if a is zero or b is zero or both a and b are zeroes
   2a * (b/2)            if b is even
   2a * (b - 1)/2 + a    if b is odd and positive
   2a * (b + 1)/2 - a    if b is odd and negative
 ```
 
-The advantage of this approach is that in each recursive step one of the operands reduces to half its original value.
-Hence, the run time complexity is O(log b) where b is the operand that reduces to half on each recursive step.
+The advantage of this approach is that in each recursive step one of the operands
+reduces to half its original value. Hence, the run time complexity is `O(log(b)` where `b` is
+the operand that reduces to half on each recursive step.
 
 > See [multiply.js](multiply.js) for further details.
 
