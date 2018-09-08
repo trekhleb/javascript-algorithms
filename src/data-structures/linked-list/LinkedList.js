@@ -243,8 +243,8 @@ export default class LinkedList {
   }
 
   /**
-   * Reverse a singly linked list use to three variables
-   * @returns {ReservedLinkedList}
+   * Reverse a linked list.
+   * @returns {LinkedList}
    */
   reverse() {
     let currNode = this.head;
@@ -252,18 +252,18 @@ export default class LinkedList {
     let nextNode = null;
 
     while (currNode) {
-      // Store next node
+      // Store next node.
       nextNode = currNode.next;
 
-      // Change next node of the current
+      // Change next node of the current node so it would link to previous node.
       currNode.next = prevNode;
 
-      // Move forward prev and current nodes one step
+      // Move prevNode and currNode nodes one step forward.
       prevNode = currNode;
       currNode = nextNode;
     }
 
-    // Reset head, tail
+    // Reset head and tail.
     this.tail = this.head;
     this.head = prevNode;
 
