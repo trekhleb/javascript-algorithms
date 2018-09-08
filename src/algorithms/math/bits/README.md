@@ -2,10 +2,10 @@
 
 #### Get Bit
 
-This method shifts the relevant bit to the zeroth position. 
-Then we perform `AND` operation with one which has bit 
+This method shifts the relevant bit to the zeroth position.
+Then we perform `AND` operation with one which has bit
 pattern like `0001`.  This clears all bits from the original
-number except the relevant one. If the relevant bit is one, 
+number except the relevant one. If the relevant bit is one,
 the result is `1`, otherwise the result is `0`.
 
 > See [getBit.js](getBit.js) for further details.
@@ -24,7 +24,7 @@ other bits of the number.
 This method shifts `1` over by `bitPosition` bits, creating a
 value that looks like `00100`. Than it inverts this mask to get
 the number that looks like `11011`. Then `AND` operation is
-being applied to both the number and the mask. That operation 
+being applied to both the number and the mask. That operation
 unsets the bit.
 
 > See [clearBit.js](clearBit.js) for further details.
@@ -35,21 +35,35 @@ This method is a combination of "Clear Bit" and "Set Bit" methods.
 
 > See [updateBit.js](updateBit.js) for further details.
 
+#### isEven
+
+This method determines if the number provided is even.
+
+```
+Number: 5
+isEven: false
+
+Number: 4
+isEven: true
+```
+
+> See [isEven.js](isEven.js) for further details.
+
 #### Multiply By Two
 
 This method shifts original number by one bit to the left.
 Thus all binary number components (powers of two) are being
-multiplying by two and thus the number itself is being 
+multiplying by two and thus the number itself is being
 multiplied by two.
 
 ```
 Before the shift
 Number: 0b0101 = 5
-Powers of two: 0 + 2^2 + 0 + 2^0 
+Powers of two: 0 + 2^2 + 0 + 2^0
 
 After the shift
 Number: 0b1010 = 10
-Powers of two: 2^3 + 0 + 2^1 + 0 
+Powers of two: 2^3 + 0 + 2^1 + 0
 ```
 
 > See [multiplyByTwo.js](multiplyByTwo.js) for further details.
@@ -58,17 +72,17 @@ Powers of two: 2^3 + 0 + 2^1 + 0
 
 This method shifts original number by one bit to the right.
 Thus all binary number components (powers of two) are being
-divided by two and thus the number itself is being 
+divided by two and thus the number itself is being
 divided by two without remainder.
 
 ```
 Before the shift
 Number: 0b0101 = 5
-Powers of two: 0 + 2^2 + 0 + 2^0 
+Powers of two: 0 + 2^2 + 0 + 2^0
 
 After the shift
 Number: 0b0010 = 2
-Powers of two: 0 + 0 + 2^1 + 0 
+Powers of two: 0 + 0 + 2^1 + 0
 ```
 
 > See [divideByTwo.js](divideByTwo.js) for further details.
@@ -87,11 +101,29 @@ inverting all of the bits of the number and adding 1 to it.
 0001  1
 0010  2
 0011  3
-``` 
+```
 
 > See [switchSign.js](switchSign.js) for further details.
 
-#### Multiply Two Numbers
+#### Multiply Two Signed Numbers
+
+This method multiplies two signed integer numbers using bitwise operators.
+This method is based on the following :
+
+```text
+a * b can be written in the below formats
+  0                     if a is zero or b is zero or both a and b are zeroes
+  2a * (b/2)            if b is even
+  2a * (b - 1)/2 + a    if b is odd and positive
+  2a * (b + 1)/2 - a    if b is odd and negative
+```
+
+The advantage of this approach is that in each recursive step one of the operands reduces to half its original value.
+Hence, the run time complexity is O(log b) where b is the operand that reduces to half on each recursive step.
+
+> See [multiply.js](multiply.js) for further details.
+
+#### Multiply Two Unsigned Numbers
 
 This method multiplies two integer numbers using bitwise operators.
 This method is based on that "Every number can be denoted as the sum of powers of 2".
@@ -111,7 +143,7 @@ Then multiplying number `x` by `19` is equivalent of:
 x * 19 = x * 2^4 + x * 2^1 + x * 2^0
 ```
 
-Now we need to remember that `x * 2^4` is equivalent of shifting `x` left 
+Now we need to remember that `x * 2^4` is equivalent of shifting `x` left
 by `4` bits (`x << 4`).
 
 > See [multiplyUnsigned.js](multiplyUnsigned.js) for further details.
@@ -158,7 +190,7 @@ When we shift 1 four times it will become bigger than 5.
 
 #### Is Power of Two
 
-This method checks if a number provided is power of two. It uses the following 
+This method checks if a number provided is power of two. It uses the following
 property. Let's say that `powerNumber` is a number that has been formed as a power
 of two (i.e. 2, 4, 8, 16 etc.). Then if we'll do `&` operation between `powerNumber`
 and `powerNumber - 1` it will return `0` (in case if number is power of two).
