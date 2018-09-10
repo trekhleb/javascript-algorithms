@@ -21,7 +21,7 @@ first element of the array.
 
 // step 1
 
-a = -1
+a = -1,
 b = -1
 
 Starting the loop from the first index, it then checks if 5 is 
