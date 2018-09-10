@@ -38,12 +38,12 @@ b = 5
 
 // step 3
 
-a = 1
+a = 1,
 b = 5
 
 // step 4
 
-a = 10
+a = 10,
 b = 10
 
 return 10
