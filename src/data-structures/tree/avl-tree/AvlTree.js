@@ -16,12 +16,73 @@ export default class AvlTree extends BinarySearchTree {
     }
   }
 
+  findMin(){
+    // console.log(this.root.left.value)
+    let tree = this.root
+    let min_value = this.find_minimum(tree)
+    return min_value
+    
+  }
+  find_minimum(tree){
+    if (!tree.left) {
+      return tree.value;
+    }
+    return this.find_minimum(tree.left)
+  }
+
   /**
    * @param {*} value
    * @return {boolean}
    */
+
   remove(value) {
-    throw new Error(`Can't remove ${value}. Remove method is not implemented yet`);
+    let tree = this.root
+    this.remove_node(tree, value)
+  }
+  
+  remove_node(tree, value) {
+    if (!tree) return null 
+    if (tree.value == value){
+      if (!tree.left && !tree.right){ return null }
+      if (!tree.left){ return tree.right } 
+      if (!tree.right){ return tree.left } 
+      let temp_node = this.find_minimum_value(tree.right)
+      tree.value = temp_node 
+      tree.right = this.remove_node(tree.right, temp_node)
+    } else if (tree.value > value){
+      tree.left = this.remove_node(tree.left, value)
+    } else if (tree.value < value){
+      tree.right = this.remove_node(tree.right, value)
+    }
+    if (tree.balanceFactor > 1) {
+      // Left rotation.
+      if (tree.left.balanceFactor > 0) {
+        // Left-Left rotation
+        this.rotateLeftLeft(tree);
+      } else if (tree.left.balanceFactor < 0) {
+        // Left-Right rotation.
+        this.rotateLeftRight(tree);
+      }
+    } else if (tree.balanceFactor < -1) {
+      // Right rotation.
+      if (tree.right.balanceFactor < 0) {
+        // Right-Right rotation
+        this.rotateRightRight(tree);
+      } else if (tree.right.balanceFactor > 0) {
+        // Right-Left rotation.
+        this.rotateRightLeft(tree);
+      }
+    }
+    return tree
+  }
+  
+
+  // helper function for finding the minimum value
+  find_minimum_value(tree){
+    if (!tree.left) {
+      return tree.value;
+    }
+    return this.find_minimum_value(tree.left)
   }
 
   /**
