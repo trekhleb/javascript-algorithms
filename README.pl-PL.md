@@ -15,12 +15,9 @@ _Read this in other languages:_
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
-[_Français_](README.fr-FR.md)
-
-> Jesteśmy w trakcie pisania książki, która w jasny i specyficzny sposób, 
-wyjaśni główne algorytmy. Jeżeli chcesz dostać powiadomienie o tym kiedy 
-książka â€œJavaScript Algorithmsâ€ zostanie wydana,[kliknij tutaj](https://upscri.be/402324/).
-
+[_Français_](README.fr-FR.md),
+[_Español_](README.es-ES.md),
+[_Português_](README.pt-BR.md)
 
 ## Struktury Danych
 
@@ -40,11 +37,11 @@ pomiędzy nimi, zadaniami lub działaniami, które mogą dotyczyć danych.
 * `B` [Kolejka Priorytetowa](src/data-structures/priority-queue)
 * `A` [Trie](src/data-structures/trie)
 * `A` [Drzewo](src/data-structures/tree)
-    * `A` [Wyszukiwanie Binarne](src/data-structures/tree/binary-search-tree)
-    * `A` [AVL Drzewo](src/data-structures/tree/avl-tree)
-    * `A` [Drzewa czerwono-czarne](src/data-structures/tree/red-black-tree)
-    * `A` [Drzewo Segmentu](src/data-structures/tree/segment-tree) - z przykładami zapytań o min / max / sumie sum
-    * `A` [Drzewo Fenwicka](src/data-structures/tree/fenwick-tree) (Drzewo Indeksowane Binarnie)
+  * `A` [Wyszukiwanie Binarne](src/data-structures/tree/binary-search-tree)
+  * `A` [AVL Drzewo](src/data-structures/tree/avl-tree)
+  * `A` [Drzewa czerwono-czarne](src/data-structures/tree/red-black-tree)
+  * `A` [Drzewo Segmentu](src/data-structures/tree/segment-tree) - z przykładami zapytań o min / max / sumie sum
+  * `A` [Drzewo Fenwicka](src/data-structures/tree/fenwick-tree) (Drzewo Indeksowane Binarnie)
 * `A` [Graf](src/data-structures/graph) (zarówno skierowane i nieukierunkowane)
 * `A` [Rozłączny Zestaw](src/data-structures/disjoint-set)
 * `A` [Filtr Blooma](src/data-structures/bloom-filter)

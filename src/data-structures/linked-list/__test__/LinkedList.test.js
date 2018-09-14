@@ -16,6 +16,7 @@ describe('LinkedList', () => {
     linkedList.append(2);
 
     expect(linkedList.toString()).toBe('1,2');
+    expect(linkedList.tail.next).toBeNull();
   });
 
   it('should prepend node to linked list', () => {
@@ -184,6 +185,13 @@ describe('LinkedList', () => {
     expect(linkedList.find({ callback: value => value.key === 'test5' })).toBeNull();
   });
 
+  it('should create linked list from array', () => {
+    const linkedList = new LinkedList();
+    linkedList.fromArray([1, 1, 2, 3, 3, 3, 4, 5]);
+
+    expect(linkedList.toString()).toBe('1,1,2,3,3,3,4,5');
+  });
+
   it('should find node by means of custom compare function', () => {
     const comparatorFunction = (a, b) => {
       if (a.customValue === b.customValue) {
@@ -208,5 +216,31 @@ describe('LinkedList', () => {
     expect(node.value.value).toBe(2);
     expect(node.value.customValue).toBe('test2');
     expect(linkedList.find({ value: 2, customValue: 'test5' })).toBeNull();
+  });
+
+  it('should reverse linked list', () => {
+    const linkedList = new LinkedList();
+
+    // Add test values to linked list.
+    linkedList
+      .append(1)
+      .append(2)
+      .append(3);
+
+    expect(linkedList.toString()).toBe('1,2,3');
+    expect(linkedList.head.value).toBe(1);
+    expect(linkedList.tail.value).toBe(3);
+
+    // Reverse linked list.
+    linkedList.reverse();
+    expect(linkedList.toString()).toBe('3,2,1');
+    expect(linkedList.head.value).toBe(3);
+    expect(linkedList.tail.value).toBe(1);
+
+    // Reverse linked list back to initial state.
+    linkedList.reverse();
+    expect(linkedList.toString()).toBe('1,2,3');
+    expect(linkedList.head.value).toBe(1);
+    expect(linkedList.tail.value).toBe(3);
   });
 });

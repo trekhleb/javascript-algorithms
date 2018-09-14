@@ -15,11 +15,9 @@ _Lisez ceci dans d'autres langues:_
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
-[_Polski_](README.pl-PL.md)
-
-> Nous écrivons actuellement un livre qui expliquera clairement, en détail, les 
-principaux algorithmes. Si vous souhaitez être notifié lorsque le livre 
-“JavaScript Algorithms” paraîtra, [cliquez ici](https://upscri.be/402324/).
+[_Polski_](README.pl-PL.md),
+[_Español_](README.es-ES.md),
+[_Português_](README.pt-BR.md)
 
 ## Data Structures
 
@@ -41,11 +39,11 @@ fonctions ou d'opérations pouvant être appliquées sur ces données.
 * `B` [Queue de Priorité](src/data-structures/priority-queue)
 * `A` [Trie](src/data-structures/trie)
 * `A` [Arbre](src/data-structures/tree)
-    * `A` [Arbre de recherche Binaire](src/data-structures/tree/binary-search-tree)
-    * `A` [Arbre AVL](src/data-structures/tree/avl-tree)
-    * `A` [Arbre Red-Black](src/data-structures/tree/red-black-tree)
-    * `A` [Arbre de Segments](src/data-structures/tree/segment-tree) - avec exemples de requêtes de type min/max/somme sur intervalles
-    * `A` [Arbre de Fenwick](src/data-structures/tree/fenwick-tree) (Arbre Binaire Indexé)
+  * `A` [Arbre de recherche Binaire](src/data-structures/tree/binary-search-tree)
+  * `A` [Arbre AVL](src/data-structures/tree/avl-tree)
+  * `A` [Arbre Red-Black](src/data-structures/tree/red-black-tree)
+  * `A` [Arbre de Segments](src/data-structures/tree/segment-tree) - avec exemples de requêtes de type min/max/somme sur intervalles
+  * `A` [Arbre de Fenwick](src/data-structures/tree/fenwick-tree) (Arbre Binaire Indexé)
 * `A` [Graphe](src/data-structures/graph) (orienté et non orienté)
 * `A` [Ensembles Disjoints](src/data-structures/disjoint-set)
 * `A` [Filtre de Bloom](src/data-structures/bloom-filter)

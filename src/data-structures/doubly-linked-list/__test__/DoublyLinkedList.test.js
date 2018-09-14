@@ -36,6 +36,13 @@ describe('DoublyLinkedList', () => {
     expect(linkedList.toString()).toBe('3,2,1');
   });
 
+  it('should create linked list from array', () => {
+    const linkedList = new DoublyLinkedList();
+    linkedList.fromArray([1, 1, 2, 3, 3, 3, 4, 5]);
+
+    expect(linkedList.toString()).toBe('1,1,2,3,3,3,4,5');
+  });
+
   it('should delete node by value from linked list', () => {
     const linkedList = new DoublyLinkedList();
 
@@ -220,5 +227,31 @@ describe('DoublyLinkedList', () => {
     expect(node.value.value).toBe(2);
     expect(node.value.customValue).toBe('test2');
     expect(linkedList.find({ value: 2, customValue: 'test5' })).toBeNull();
+  });
+
+  it('should reverse linked list', () => {
+    const linkedList = new DoublyLinkedList();
+
+    // Add test values to linked list.
+    linkedList
+      .append(1)
+      .append(2)
+      .append(3);
+
+    expect(linkedList.toString()).toBe('1,2,3');
+    expect(linkedList.head.value).toBe(1);
+    expect(linkedList.tail.value).toBe(3);
+
+    // Reverse linked list.
+    linkedList.reverse();
+    expect(linkedList.toString()).toBe('3,2,1');
+    expect(linkedList.head.value).toBe(3);
+    expect(linkedList.tail.value).toBe(1);
+
+    // Reverse linked list back to initial state.
+    linkedList.reverse();
+    expect(linkedList.toString()).toBe('1,2,3');
+    expect(linkedList.head.value).toBe(1);
+    expect(linkedList.tail.value).toBe(3);
   });
 });
