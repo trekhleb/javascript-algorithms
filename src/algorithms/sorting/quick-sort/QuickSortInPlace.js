@@ -6,10 +6,11 @@ export default class QuickSortInPlace extends Sort {
    * This process is difficult to describe, but much clearer with a visualization:
    * @see: http://www.algomation.com/algorithm/quick-sort-visualization
    *
-   * @param {*[]} originalArray
+   * @param {*[]} originalArray - Not sorted array.
    * @param {number} inputLowIndex
    * @param {number} inputHighIndex
-   * @return {*[]}
+   * @param {boolean} recursiveCall
+   * @return {*[]} - Sorted array.
    */
   sort(
     originalArray,
@@ -21,18 +22,19 @@ export default class QuickSortInPlace extends Sort {
     const array = recursiveCall ? originalArray : [...originalArray];
 
     /**
-     * `partition` operates on the subarray between lowIndex and highIndex, inclusive.
-     * it arbitrarily chooses the last element in the subarray as the pivot.
-     * then, it partially sorts the subarray into elements than are less than the pivot,
+     * The partitionArray() operates on the subarray between lowIndex and highIndex, inclusive.
+     * It arbitrarily chooses the last element in the subarray as the pivot.
+     * Then, it partially sorts the subarray into elements than are less than the pivot,
      * and elements that are greater than or equal to the pivot.
-     * each time `partition` is executed, the pivot element is in its final sorted position.
+     * Each time partitionArray() is executed, the pivot element is in its final sorted position.
      *
      * @param {number} lowIndex
      * @param {number} highIndex
      * @return {number}
      */
-    const partition = (lowIndex, highIndex) => {
+    const partitionArray = (lowIndex, highIndex) => {
       /**
+       * Swaps two elements in array.
        * @param {number} leftIndex
        * @param {number} rightIndex
        */
@@ -43,7 +45,7 @@ export default class QuickSortInPlace extends Sort {
       };
 
       const pivot = array[highIndex];
-      // visitingCallback is used for time-complexity analysis
+      // visitingCallback is used for time-complexity analysis.
       this.callbacks.visitingCallback(array[pivot]);
 
       let partitionIndex = lowIndex;
@@ -63,9 +65,9 @@ export default class QuickSortInPlace extends Sort {
       return partitionIndex;
     };
 
-    // Base case is when low and high converge
+    // Base case is when low and high converge.
     if (inputLowIndex < inputHighIndex) {
-      const partitionIndex = partition(inputLowIndex, inputHighIndex);
+      const partitionIndex = partitionArray(inputLowIndex, inputHighIndex);
       const RECURSIVE_CALL = true;
       this.sort(array, inputLowIndex, partitionIndex - 1, RECURSIVE_CALL);
       this.sort(array, partitionIndex + 1, inputHighIndex, RECURSIVE_CALL);
