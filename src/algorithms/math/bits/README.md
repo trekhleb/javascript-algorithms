@@ -51,6 +51,29 @@ isEven: true
 
 > See [isEven.js](isEven.js) for further details.
 
+#### isPositive
+
+This method determines if the number provided is positive.
+It is based on the fact that all positive numbers have their last
+left bit to be set to 0. However, if the number provided is zero
+or negative zero, it should still return false.
+
+```text
+Number: 1 = 0b0001
+isPositive: true
+
+Number: -1 = -0b0001
+isPositive: false
+
+Number: 0 = 0b0000
+isPositive: false
+
+Number: -0 = 0b0000
+isPositive: false
+```
+
+> See [isPositive.js](isPositive.js) for further details.
+
 #### Multiply By Two
 
 This method shifts original number by one bit to the left.
