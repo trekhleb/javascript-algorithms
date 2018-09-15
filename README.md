@@ -61,7 +61,7 @@ a set of rules that precisely define a sequence of operations.
 * **Math**
   * `B` [Bit Manipulation](src/algorithms/math/bits) - set/get/update/clear bits, multiplication/division by two, make negative etc.
   * `B` [Factorial](src/algorithms/math/factorial) 
-  * `B` [Fibonacci Number](src/algorithms/math/fibonacci) - classic and closed-form versions.
+  * `B` [Fibonacci Number](src/algorithms/math/fibonacci) - classic and closed-form versions
   * `B` [Primality Test](src/algorithms/math/primality-test) (trial division method)
   * `B` [Euclidean Algorithm](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
   * `B` [Least Common Multiple](src/algorithms/math/least-common-multiple) (LCM)
