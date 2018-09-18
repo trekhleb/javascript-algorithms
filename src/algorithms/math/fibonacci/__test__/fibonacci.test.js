@@ -10,5 +10,7 @@ describe('fibonacci', () => {
     expect(fibonacci(6)).toEqual([1, 1, 2, 3, 5, 8]);
     expect(fibonacci(7)).toEqual([1, 1, 2, 3, 5, 8, 13]);
     expect(fibonacci(8)).toEqual([1, 1, 2, 3, 5, 8, 13, 21]);
+    expect(fibonacci(9)).toEqual([1, 1, 2, 3, 5, 8, 13, 21, 34]);
+    expect(fibonacci(10)).toEqual([1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
   });
 });

@@ -17,4 +17,4 @@ The Fibonacci spiral: an approximation of the golden spiral created by drawing c
 
 ## References
 
-[Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_number)
+- [Wikipedia](https://en.wikipedia.org/wiki/Fibonacci_number)
