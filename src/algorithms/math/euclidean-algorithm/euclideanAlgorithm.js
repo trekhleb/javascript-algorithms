@@ -1,25 +1,15 @@
 /**
+ * Recursive version of Euclidean Algorithm of finding greatest common divisor (GCD).
  * @param {number} originalA
  * @param {number} originalB
  * @return {number}
  */
-
-/*Method 1: A bit Complex to understand*/
 export default function euclideanAlgorithm(originalA, originalB) {
+  // Make input numbers positive.
   const a = Math.abs(originalA);
   const b = Math.abs(originalB);
 
+  // To make algorithm work faster instead of subtracting one number from the other
+  // we may use modulo operation.
   return (b === 0) ? a : euclideanAlgorithm(b, a % b);
-}
-
-/*Method 2: Easy to evaluate*/
-export default function euclideanAlgorithm2(originalA, originalB) {
-  const a = Math.abs(originalA);
-  const b = Math.abs(originalB);
-  
-  while(a != b){
-    [a,b] = a>b : [a-b, b] : [a, b-a]
-  }
-  
-  return a || b;
 }
