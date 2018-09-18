@@ -16,43 +16,29 @@ export default class AvlTree extends BinarySearchTree {
     }
   }
 
-  findMin(){
-    // console.log(this.root.left.value)
-    let tree = this.root
-    let min_value = this.find_minimum(tree)
-    return min_value
-    
-  }
-  find_minimum(tree){
-    if (!tree.left) {
-      return tree.value;
-    }
-    return this.find_minimum(tree.left)
-  }
-
   /**
    * @param {*} value
    * @return {boolean}
    */
 
   remove(value) {
-    let tree = this.root
-    this.remove_node(tree, value)
+    const tree = this.root;
+    this.remove_node(tree, value);
   }
   
   remove_node(tree, value) {
-    if (!tree) return null 
+    if (!tree) return null;
     if (tree.value == value){
-      if (!tree.left && !tree.right){ return null }
-      if (!tree.left){ return tree.right } 
-      if (!tree.right){ return tree.left } 
-      let temp_node = this.find_minimum_value(tree.right)
-      tree.value = temp_node 
-      tree.right = this.remove_node(tree.right, temp_node)
+      if (!tree.left && !tree.right){ return null; }
+      if (!tree.left){ return tree.right; } 
+      if (!tree.right){ return tree.left;} 
+      let temp_node = this.find_minimum_value(tree.right);
+      tree.value = temp_node;
+      tree.right = this.remove_node(tree.right, temp_node);
     } else if (tree.value > value){
-      tree.left = this.remove_node(tree.left, value)
+      tree.left = this.remove_node(tree.left, value);
     } else if (tree.value < value){
-      tree.right = this.remove_node(tree.right, value)
+      tree.right = this.remove_node(tree.right, value);
     }
     if (tree.balanceFactor > 1) {
       // Left rotation.
@@ -73,7 +59,7 @@ export default class AvlTree extends BinarySearchTree {
         this.rotateRightLeft(tree);
       }
     }
-    return tree
+    return tree;
   }
   
 
@@ -82,7 +68,7 @@ export default class AvlTree extends BinarySearchTree {
     if (!tree.left) {
       return tree.value;
     }
-    return this.find_minimum_value(tree.left)
+    return this.find_minimum_value(tree.left);
   }
 
   /**
