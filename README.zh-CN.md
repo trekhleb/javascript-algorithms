@@ -51,10 +51,10 @@ _Read this in other languages:_
   * `B` [阶乘](src/algorithms/math/factorial)
   * `B` [斐波那契数](src/algorithms/math/fibonacci)
   * `B` [素数检测](src/algorithms/math/primality-test) (排除法)
-  * `B` [欧几里得算法](src/algorithms/math/euclidean-algorithm) - 计算最大公约数 (GCD) 
+  * `B` [欧几里得算法](src/algorithms/math/euclidean-algorithm) - 计算最大公约数 (GCD)
   * `B` [最小公倍数](src/algorithms/math/least-common-multiple) (LCM)
   * `B` [素数筛](src/algorithms/math/sieve-of-eratosthenes) - 查找所有素数达到任何给定限制
-  * `B` [判断2次方数](src/algorithms/math/is-power-of-two) - 检查数字是否为2的幂 (原生和按位算法) 
+  * `B` [判断2次方数](src/algorithms/math/is-power-of-two) - 检查数字是否为2的幂 (原生和按位算法)
   * `B` [杨辉三角形](src/algorithms/math/pascal-triangle)
   * `A` [整数拆分](src/algorithms/math/integer-partition)
   * `A` [割圆术](src/algorithms/math/liu-hui) - 基于N-gons的近似π计算
@@ -73,7 +73,7 @@ _Read this in other languages:_
 * **字符串**
   * `A` [莱温斯坦距离](src/algorithms/string/levenshtein-distance) - 两个序列之间的最小编辑距离
   * `B` [汉明距离](src/algorithms/string/hamming-distance) - 符号不同的位置数
-  * `A` [克努斯-莫里斯-普拉特算法](src/algorithms/string/knuth-morris-pratt) - 子串搜索
+  * `A` [KMP算法](src/algorithms/string/knuth-morris-pratt) (克努斯-莫里斯-普拉特算法) - 子串搜索 (模式匹配)
   * `A` [字符串快速查找](src/algorithms/string/rabin-karp) - 子串搜索
   * `A` [最长公共子串](src/algorithms/string/longest-common-substring)
   *  `A` [正则表达式匹配](src/algorithms/string/regular-expression-matching)
@@ -101,11 +101,11 @@ _Read this in other languages:_
   * `A` [戴克斯特拉算法](src/algorithms/graph/dijkstra) - 找到图中所有顶点的最短路径
   * `A` [贝尔曼-福特算法](src/algorithms/graph/bellman-ford) - 找到图中所有顶点的最短路径
   * `A` [弗洛伊德算法](src/algorithms/graph/floyd-warshall) - 找到所有顶点对 之间的最短路径
-  * `A` [判圈算法](src/algorithms/graph/detect-cycle) - 对于有向图和无向图 (基于DFS和不相交集的版本) 
-  * `A` [普林演算法](src/algorithms/graph/prim) - 寻找加权无向图的最小生成树 (MST) 
-  * `B` [克鲁斯克尔演算法](src/algorithms/graph/kruskal) - 寻找加权无向图的最小生成树 (MST) 
+  * `A` [判圈算法](src/algorithms/graph/detect-cycle) - 对于有向图和无向图 (基于DFS和不相交集的版本)
+  * `A` [普林演算法](src/algorithms/graph/prim) - 寻找加权无向图的最小生成树 (MST)
+  * `B` [克鲁斯克尔演算法](src/algorithms/graph/kruskal) - 寻找加权无向图的最小生成树 (MST)
   * `A` [拓扑排序](src/algorithms/graph/topological-sorting) - DFS 方法
-  * `A` [关节点](src/algorithms/graph/articulation-points) - Tarjan算法 (基于DFS) 
+  * `A` [关节点](src/algorithms/graph/articulation-points) - Tarjan算法 (基于DFS)
   * `A` [桥](src/algorithms/graph/bridges) - 基于DFS的算法
   * `A` [欧拉回径与一笔画问题](src/algorithms/graph/eulerian-path) - Fleury的算法 - 一次访问每个边
   * `A` [哈密顿图](src/algorithms/graph/hamiltonian-cycle) - 恰好访问每个顶点一次
@@ -116,7 +116,7 @@ _Read this in other languages:_
   * `B` [旋转矩阵](src/algorithms/uncategorized/square-matrix-rotation) - 原地算法
   * `B` [跳跃 游戏](src/algorithms/uncategorized/jump-game) - 回溯, 动态编程 (自上而下+自下而上) 和贪婪的例子
   * `B` [独特(唯一) 路径](src/algorithms/uncategorized/unique-paths) - 回溯, 动态编程和基于Pascal三角形的例子
-  * `B` [雨水收集](src/algorithms/uncategorized/rain-terraces) - 诱捕雨水问题 (动态编程和暴力版本) 
+  * `B` [雨水收集](src/algorithms/uncategorized/rain-terraces) - 诱捕雨水问题 (动态编程和暴力版本)
   * `A` [八皇后问题](src/algorithms/uncategorized/n-queens)
   * `A` [骑士巡逻](src/algorithms/uncategorized/knight-tour)
 
