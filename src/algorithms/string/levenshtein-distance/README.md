@@ -50,7 +50,7 @@ to assist natural language translation based on translation memory.
 
 Let’s take a simple example of finding minimum edit distance between 
 strings `ME` and `MY`. Intuitively you already know that minimum edit distance 
-here is `1` operation and this operation. And it is a replacing `E` with `Y`. But 
+here is `1` operation and this operation. And it is replacing `E` with `Y`. But 
 let’s try to formalize it in a form of the algorithm in order to be able to 
 do more complex examples like transforming `Saturday` into `Sunday`.
 
@@ -75,12 +75,12 @@ to transform an empty string to `MY`. And it is by inserting `Y` and  `M`.
 - Cell `(1:1)` contains number 0. It means that it costs nothing 
 to transform `M` into `M`.
 - Cell `(1:2)` contains red number 1. It means that we need 1 operation 
-to transform `ME` to `M`. And it is be deleting `E`.
+to transform `ME` to `M`. And it is by deleting `E`.
 - And so on...
 
 This looks easy for such small matrix as ours (it is only `3x3`). But here you
 may find basic concepts that may be applied to calculate all those numbers for
-bigger matrices (let’s say `9x7` one, for `Saturday → Sunday` transformation).
+bigger matrices (let’s say a `9x7` matrix for `Saturday → Sunday` transformation).
 
 According to the formula you only need three adjacent cells `(i-1:j)`, `(i-1:j-1)`, and `(i:j-1)` to
 calculate the number for current cell `(i:j)`. All we need to do is to find the 
@@ -97,13 +97,13 @@ Let's draw a decision graph for this problem.
 
 You may see a number of overlapping sub-problems on the picture that are marked 
 with red. Also there is no way to reduce the number of operations and make it 
-less then a minimum of those three adjacent cells from the formula. 
+less than a minimum of those three adjacent cells from the formula. 
 
 Also you may notice that each cell number in the matrix is being calculated 
 based on previous ones. Thus the tabulation technique (filling the cache in 
 bottom-up direction) is being applied here.
 
-Applying this principles further we may solve more complicated cases like 
+Applying this principle further we may solve more complicated cases like 
 with `Saturday → Sunday` transformation.
 
 ![Levenshtein distance](https://cdn-images-1.medium.com/max/1600/1*fPEHiImYLKxSTUhrGbYq3g.jpeg)
