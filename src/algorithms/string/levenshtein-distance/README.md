@@ -62,7 +62,7 @@ is being calculated based on three previously possible transformations.
 
 To explain this further let’s draw the following matrix:
 
-![Levenshtein Matrix](https://cdn-images-1.medium.com/max/1600/1*2d46ug_PL5LfeqztckoYGw.jpeg)
+![Levenshtein Matrix](https://cdn-images-1.medium.com/max/1600/1*aTunSUoy0BJyYBVn4tWGrA.png)
 
 - Cell `(0:1)` contains red number 1. It means that we need 1 operation to 
 transform `M` to an empty string. And it is by deleting `M`. This is why this number is red.
@@ -89,11 +89,11 @@ letters in `i`'s row and `j`'s column.
 
 You may clearly see the recursive nature of the problem.
 
-![Levenshtein Matrix](https://cdn-images-1.medium.com/max/2000/1*JdHQ5TeKiDlE-iKK1s_2vw.jpeg)
+![Levenshtein Matrix](https://cdn-images-1.medium.com/max/1600/1*w8UB4DSvBnAK6mBXRGQDjw.png)
 
 Let's draw a decision graph for this problem.
 
-![Minimum Edit Distance Decision Graph](https://cdn-images-1.medium.com/max/1600/1*SGwYUpXH9H1xUeTvJk0e7Q.jpeg)
+![Minimum Edit Distance Decision Graph](https://cdn-images-1.medium.com/max/1600/1*8jD0qvr5B9PwRFM_9z7q9A.png)
 
 You may see a number of overlapping sub-problems on the picture that are marked 
 with red. Also there is no way to reduce the number of operations and make it 
@@ -106,7 +106,7 @@ bottom-up direction) is being applied here.
 Applying this principle further we may solve more complicated cases like 
 with `Saturday → Sunday` transformation.
 
-![Levenshtein distance](https://cdn-images-1.medium.com/max/1600/1*fPEHiImYLKxSTUhrGbYq3g.jpeg)
+![Levenshtein distance](https://cdn-images-1.medium.com/max/1600/1*geMdmZcdU1bZbHIoh6KO3Q.png)
 
 ## References
 
