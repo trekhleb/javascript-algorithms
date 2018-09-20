@@ -5,4 +5,4 @@ describe('palindrome', () => {
     expect(palindrome('racecar')).toBe(true);
     expect(palindrome('car')).toBe(false);
   });
-}
+});
