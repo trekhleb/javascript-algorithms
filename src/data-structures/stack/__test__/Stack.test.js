@@ -13,7 +13,7 @@ describe('Stack', () => {
     stack.push(1);
     stack.push(2);
 
-    expect(stack.toString()).toBe('1,2');
+    expect(stack.toString()).toBe('2,1');
   });
 
   it('should peek data from stack', () => {
@@ -58,7 +58,7 @@ describe('Stack', () => {
 
     const stringifier = value => `${value.key}:${value.value}`;
 
-    expect(stack.toString(stringifier)).toBe('key1:test1,key2:test2');
+    expect(stack.toString(stringifier)).toBe('key2:test2,key1:test1');
     expect(stack.pop().value).toBe('test2');
     expect(stack.pop().value).toBe('test1');
   });
