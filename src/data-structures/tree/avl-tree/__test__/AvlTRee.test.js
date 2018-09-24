@@ -186,6 +186,31 @@ describe('AvlTree', () => {
     expect(tree.toString()).toBe('6,8,9,18,21,22,43');
   });
 
+  it('should keep balance after removal', () => {
+    const tree = new AvlTree();
+
+    tree.insert(1);
+    tree.insert(2);
+    tree.insert(3);
+    tree.insert(4);
+    tree.insert(5);
+    tree.insert(6);
+    tree.insert(7);
+    tree.insert(8);
+    tree.insert(9);
+
+    expect(tree.toString()).toBe('1,2,3,4,5,6,7,8,9');
+    expect(tree.root.height).toBe(3);
+
+    tree.remove(8);
+    tree.remove(9);
+
+    expect(tree.contains(8)).toBeFalsy();
+    expect(tree.contains(9)).toBeFalsy();
+    expect(tree.toString()).toBe('1,2,3,4,5,6,7');
+    expect(tree.root.height).toBe(2);
+  });
+
   it('should do left right rotation and keeping left right node safe', () => {
     const tree = new AvlTree();
 
