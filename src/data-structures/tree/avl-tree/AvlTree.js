@@ -16,54 +16,16 @@ export default class AvlTree extends BinarySearchTree {
     }
   }
 
-  remove(value) {
-    const nodeToRemove = this.root.find(value);
-
-    if (!nodeToRemove) {
-      throw new Error('Item not found in the tree');
-    }
-
-    // Recursively find target node, if found then delete and balance.
-    // return nodeToRemove.value;
-    this.root = this.removeRecv(this.root, nodeToRemove);
-  }
-
-  removeRecv(origin, node) {
-    let newOrigin = origin;
-    if (origin.value > node.value) {
-      // Recursively traversing from left
-      newOrigin.left = this.removeRecv(origin.left, node);
-    } else if (origin.value < node.value) {
-      // Recursively traversing from right
-      newOrigin.right = this.removeRecv(origin.right, node);
-    } else {
-      if (origin.left == null) {
-        // Forget right node
-        return origin.right;
-      }
-      if (origin.right == null) {
-        // Forget left node
-        return origin.left;
-      }
-
-      // Recursively find min node from left subtree
-      // more efficient traversing
-      const parent = Object.assign({}, origin);
-      newOrigin = parent.right.findMin();
-      newOrigin.right = this.deleteMin(parent.right);
-      newOrigin.left = parent.left;
-    }
-
-    // Balance and return root node
-    return this.balance(newOrigin);
-  }
-
   /**
    * @param {*} value
    * @return {boolean}
    */
   remove(value) {
-    throw new Error(`Can't remove ${value}. Remove method is not implemented yet`);
+    // Do standard BST removal.
+    super.remove(value);
+
+    // Balance the tree starting from the root node.
+    this.balance(this.root);
   }
 
   /**
@@ -90,8 +52,6 @@ export default class AvlTree extends BinarySearchTree {
         this.rotateRightLeft(node);
       }
     }
-    // Return the heap to avoid referenceError
-    return node;
   }
 
   /**
@@ -199,16 +159,5 @@ export default class AvlTree extends BinarySearchTree {
 
     // Attach rootNode to the left of rightNode.
     rightNode.setLeft(rootNode);
-  }
-
-  deleteMin(node) {
-    // Forget right node if has value
-    if (node.left == null) return node.right;
-
-    const newNode = node;
-    newNode.left = this.deleteMin(node.left);
-
-    // Balance and return root node
-    return this.balance(newNode);
   }
 }
