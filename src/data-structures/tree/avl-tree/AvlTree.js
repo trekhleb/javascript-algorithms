@@ -21,7 +21,11 @@ export default class AvlTree extends BinarySearchTree {
    * @return {boolean}
    */
   remove(value) {
-    throw new Error(`Can't remove ${value}. Remove method is not implemented yet`);
+    // Do standard BST removal.
+    super.remove(value);
+
+    // Balance the tree starting from the root node.
+    this.balance(this.root);
   }
 
   /**

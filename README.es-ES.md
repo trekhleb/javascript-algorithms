@@ -67,7 +67,7 @@ definen con precisión una secuencia de operaciones.
   * `A` [Particion Entera](src/algorithms/math/integer-partition)
   * `A` [Algortimo π de Liu Hui ](src/algorithms/math/liu-hui) - aproximado π cálculos basados en N-gons
 * **Conjuntos**
-  * `P` [Producto Cartesiano](src/algorithms/sets/cartesian-product) - pproducto de múltiples conjuntos
+  * `P` [Producto Cartesiano](src/algorithms/sets/cartesian-product) - producto de múltiples conjuntos
   * `P` [Permutación de Fisher–Yates](src/algorithms/sets/fisher-yates) - permutación aleatoria de una secuencia finita
   * `A` [Conjunto Potencia](src/algorithms/sets/power-set) - todos los subconjuntos de un conjunto
   * `A` [Permutaciones](src/algorithms/sets/permutations) (con y sin repeticiones)
@@ -151,7 +151,7 @@ Es una abstracción superior a la noción de algoritmo, del mismo modo que un al
   * `P` [Búsqueda Binaria](src/algorithms/search/binary-search)
   * `P` [Torre de Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `P` [Triangulo de Pascal](src/algorithms/math/pascal-triangle)
-  * `P` [Algoritmo Euclideo](src/algorithms/math/euclidean-algorithm) - ccalcular el Maximo Comun Divisor (MCD)
+  * `P` [Algoritmo Euclideo](src/algorithms/math/euclidean-algorithm) - calcular el Maximo Comun Divisor (MCD)
   * `P` [Clasificacion por Fusión](src/algorithms/sorting/merge-sort)
   * `P` [Quicksort](src/algorithms/sorting/quick-sort)
   * `P` [Busqueda por Profundidad](src/algorithms/tree/depth-first-search) - (DFS)
@@ -159,7 +159,7 @@ Es una abstracción superior a la noción de algoritmo, del mismo modo que un al
   * `P` [Juego de los Saltos](src/algorithms/uncategorized/jump-game)
   * `A` [Permutaciones](src/algorithms/sets/permutations) - (con y sin repeticiones)
   * `A` [Combinaciones](src/algorithms/sets/combinations) - (con y sin repeticiones)
-* **Programacion Dinamica** - onstruya una solución usando sub-soluciones previamente encontradas
+* **Programacion Dinamica** - construya una solución usando sub-soluciones previamente encontradas
   * `P` [Numero de Fibonacci](src/algorithms/math/fibonacci)
   * `P` [Juego de los Saltos](src/algorithms/uncategorized/jump-game)
   * `P` [Unicos Caminos](src/algorithms/uncategorized/unique-paths)
@@ -173,9 +173,9 @@ Es una abstracción superior a la noción de algoritmo, del mismo modo que un al
   * `A` [Particion Entera](src/algorithms/math/integer-partition)
   * `A` [Subarreglo Macima](src/algorithms/sets/maximum-subarray)
   * `A` [Algoritmo de Bellman-Ford](src/algorithms/graph/bellman-ford) - encontrar el camino más corto a todos los vértices del grafo
-  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) -encuentra los caminos más cortos entre todos los pares de vértices
+  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - encuentra los caminos más cortos entre todos los pares de vértices
   * `A` [Coincidencia por Expresiones regulares](src/algorithms/string/regular-expression-matching)
-* **De Retorceso** - de manera similar a la fuerza bruta, trate de generar todas las soluciones posibles, pero cada vez que genere la siguiente solución, compruebe si cumple con todas las condiciones, y sólo entonces continúe generando soluciones posteriores. De lo contrario, retroceda y siga un camino diferente para encontrar una solución. Normalmente se utiliza la travesía del espacio estatal.
+* **De Retorceso** - De manera similar a la fuerza bruta, trate de generar todas las soluciones posibles, pero cada vez que genere la siguiente solución, compruebe si cumple con todas las condiciones, y sólo entonces continúe generando soluciones posteriores. De lo contrario, retroceda y siga un camino diferente para encontrar una solución. Normalmente se utiliza la travesía del espacio estatal.
   * `P` [Juego de Saltos](src/algorithms/uncategorized/jump-game)
   * `P` [Camino Unico](src/algorithms/uncategorized/unique-paths)
   * `A` [Ciclo Hamiltoniano](src/algorithms/graph/hamiltonian-cycle) - Visite cada vértice exactamente una vez
