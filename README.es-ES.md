@@ -27,13 +27,13 @@ los datos.
 
 `P` - Principiante, `A` - Avanzado
 
-* `P` [Lista Enlazada](src/data-structures/linked-list)
-* `P` [Lista Doblemente Enlazada](src/data-structures/doubly-linked-list)
+* `P` [Lista enlazada](src/data-structures/linked-list)
+* `P` [Lista doblemente enlazada](src/data-structures/doubly-linked-list)
 * `P` [Cola](src/data-structures/queue)
 * `P` [Pila](src/data-structures/stack)
 * `P` [Tabla hash](src/data-structures/hash-table)
 * `P` [Heap](src/data-structures/heap) - versiones máx y mín
-* `P` [Cola de Prioridad](src/data-structures/priority-queue)
+* `P` [Cola de prioridad](src/data-structures/priority-queue)
 * `A` [Trie](src/data-structures/trie)
 * `A` [Árbol](src/data-structures/tree)
   * `A` [Árbol de búsqueda binaria](src/data-structures/tree/binary-search-tree)
@@ -59,7 +59,7 @@ definen con precisión una secuencia de operaciones.
   * `P` [Factorial](src/algorithms/math/factorial)
   * `P` [Número de Fibonacci](src/algorithms/math/fibonacci)
   * `P` [Prueba de primalidad](src/algorithms/math/primality-test) (método de división de prueba)
-  * `P` [Algoritmo de Euclides](src/algorithms/math/euclidean-algorithm) - calcular el Máximo Común Divisor (MCD)
+  * `P` [Algoritmo de Euclides](src/algorithms/math/euclidean-algorithm) - calcular el Máximo común divisor (MCD)
   * `P` [Mínimo común múltiplo](src/algorithms/math/least-common-multiple) (MCM)
   * `P` [Criba de Eratóstenes](src/algorithms/math/sieve-of-eratosthenes) - encontrar todos los números primos hasta un límite dado
   * `P` [Es una potencia de dos?](src/algorithms/math/is-power-of-two) - comprobar si el número es una potencia de dos (algoritmos ingenuos y de bits)
@@ -67,34 +67,34 @@ definen con precisión una secuencia de operaciones.
   * `A` [Partición entera](src/algorithms/math/integer-partition)
   * `A` [Algortimo π de Liu Hui ](src/algorithms/math/liu-hui) - aproximar el cálculo de  π basado en polígonos de N lados
 * **Conjuntos**
-  * `P` [Producto Cartesiano](src/algorithms/sets/cartesian-product) - producto de múltiples conjuntos
+  * `P` [Producto cartesiano](src/algorithms/sets/cartesian-product) - producto de múltiples conjuntos
   * `P` [Permutación de Fisher–Yates](src/algorithms/sets/fisher-yates) - permutación aleatoria de una secuencia finita
-  * `A` [Conjunto Potencia](src/algorithms/sets/power-set) - todos los subconjuntos de un conjunto
+  * `A` [Conjunto potencia](src/algorithms/sets/power-set) - todos los subconjuntos de un conjunto
   * `A` [Permutaciones](src/algorithms/sets/permutations) (con y sin repeticiones)
   * `A` [Combinaciones](src/algorithms/sets/combinations) (con y sin repeticiones)
-  * `A` [Subsecuencia Común más Larga](src/algorithms/sets/longest-common-subsequence) (SCL)
-  * `A` [Subsecuencia Creciente más Larga](src/algorithms/sets/longest-increasing-subsequence)
+  * `A` [Subsecuencia común más larga](src/algorithms/sets/longest-common-subsequence) (LCS)
+  * `A` [Subsecuencia creciente más larga](src/algorithms/sets/longest-increasing-subsequence)
   * `A` [Supersecuencia común más corta](src/algorithms/sets/shortest-common-supersequence) (SCS)
   * `A` [Problema de la mochila](src/algorithms/sets/knapsack-problem) - "0/1" y "sin límite"
   * `A` [Máximo subarreglo](src/algorithms/sets/maximum-subarray) - versiones de "fuerza bruta" y "programación dinámica" (de Kadane)
-  * `A` [Suma Combinada](src/algorithms/sets/combination-sum) - encuentra todas las combinaciones que forman una suma específica.
-* **Cadenas de Caracteres**
+  * `A` [Suma combinada](src/algorithms/sets/combination-sum) - encuentra todas las combinaciones que forman una suma específica
+* **Cadenas de caracteres**
   * `P` [Distancia de Hamming](src/algorithms/string/hamming-distance) - número de posiciones en las que los símbolos son diferentes
   * `A` [Distancia de Levenshtein](src/algorithms/string/levenshtein-distance) - distancia mínima de edición entre dos secuencias
   * `A` [Algoritmo Knuth-Morris-Pratt](src/algorithms/string/knuth-morris-pratt) (Algoritmo KMP) - búsqueda de subcadenas (coincidencia de patrones)
   * `A` [Algoritmo Z](src/algorithms/string/z-algorithm) - búsqueda de subcadenas (coincidencia de patrones)
   * `A` [Algoritmo de Rabin Karp](src/algorithms/string/rabin-karp) - búsqueda de subcadenas
-  * `A` [Subcadena Común Más Larga](src/algorithms/string/longest-common-substring)
-  * `A` [Coincidencia por Expresiones Regulares](src/algorithms/string/regular-expression-matching)
+  * `A` [Subcadena común más larga](src/algorithms/string/longest-common-substring)
+  * `A` [Coincidencia por expresiones regulares](src/algorithms/string/regular-expression-matching)
 * **Búsquedas**
-  * `P` [Búsqueda Lineal](src/algorithms/search/linear-search)
-  * `P` [Búsqueda de Salto](src/algorithms/search/jump-search) (o Búsqueda de Bloque) - búsqueda en una lista ordenada
+  * `P` [Búsqueda lineal](src/algorithms/search/linear-search)
+  * `P` [Búsqueda de salto](src/algorithms/search/jump-search) (o Búsqueda de bloque) - búsqueda en una lista ordenada
   * `P` [Búsqueda binaria](src/algorithms/search/binary-search) - búsqueda en una lista ordenada
   * `P` [Búsqueda por interpolación](src/algorithms/search/interpolation-search) - búsqueda en una lista ordenada uniformemente distribuida
 * **Ordenamiento**
-  * `P` [Ordenamiento de Burbuja](src/algorithms/sorting/bubble-sort)
-  * `P` [Ordenamiento por Selección](src/algorithms/sorting/selection-sort)
-  * `P` [Ordenamiento por Inserción](src/algorithms/sorting/insertion-sort)
+  * `P` [Ordenamiento de burbuja](src/algorithms/sorting/bubble-sort)
+  * `P` [Ordenamiento por selección](src/algorithms/sorting/selection-sort)
+  * `P` [Ordenamiento por inserción](src/algorithms/sorting/insertion-sort)
   * `P` [Ordenamiento por Heap](src/algorithms/sorting/heap-sort)
   * `P` [Ordenamiento por mezcla](src/algorithms/sorting/merge-sort)
   * `P` [Quicksort](src/algorithms/sorting/quick-sort) - implementaciones in situ y no in situ
@@ -114,14 +114,14 @@ definen con precisión una secuencia de operaciones.
   * `A` [Detectar ciclos](src/algorithms/graph/detect-cycle) - para grafos dirigidos y no dirigidos (versiones basadas en DFS y conjuntos disjuntos)
   * `A` [Algoritmo de Prim](src/algorithms/graph/prim) - encontrar el árbol de cubrimiento mínimo (MST) para un grafo no dirigido ponderado
   * `A` [Ordenamiento topológico](src/algorithms/graph/topological-sorting) - método DFS
-  * `A` [Puntos de Articulación](src/algorithms/graph/articulation-points) - Algoritmo de Tarjan (basado en DFS)
-  * `A` [Puentes](src/algorithms/graph/bridges) - Algoritmo basado en DFS
+  * `A` [Puntos de articulación](src/algorithms/graph/articulation-points) - algoritmo de Tarjan (basado en DFS)
+  * `A` [Puentes](src/algorithms/graph/bridges) - algoritmo basado en DFS
   * `A` [Camino euleriano y circuito euleriano](src/algorithms/graph/eulerian-path) - algoritmo de Fleury - visitar cada arista exactamente una vez
   * `A` [Ciclo hamiltoniano](src/algorithms/graph/hamiltonian-cycle) - visitar cada vértice exactamente una vez
   * `A` [Componentes fuertemente conexos](src/algorithms/graph/strongly-connected-components) - algoritmo de Kosaraju
   * `A` [Problema del viajante](src/algorithms/graph/travelling-salesman) - la ruta más corta posible que visita cada ciudad y vuelve a la ciudad de origen
 * **Criptografia**
-  * `P` [Hash Polinomial](src/algorithms/cryptography/polynomial-hash) - función de hash rodante basada en polinomio
+  * `P` [Hash polinomial](src/algorithms/cryptography/polynomial-hash) - función de hash rodante basada en polinomio
 * **Sin categoría**
   * `P` [Torre de Hanói](src/algorithms/uncategorized/hanoi-tower)
   * `P` [Rotación de matriz cuadrada](src/algorithms/uncategorized/square-matrix-rotation) - algoritmo in situ
@@ -131,14 +131,14 @@ definen con precisión una secuencia de operaciones.
   * `A` [Problema de las N Reinas](src/algorithms/uncategorized/n-queens)
   * `A` [Problema del caballo (Knight tour)](src/algorithms/uncategorized/knight-tour)
 
-### Algoritmos por Paradigma
+### Algoritmos por paradigma
 
 Un paradigma algorítmico es un método o enfoque genérico que subyace al diseño de una clase de algoritmos.
 Es una abstracción superior a la noción de algoritmo, del mismo modo que un algoritmo es una abstracción superior a un programa de ordenador.
 
 * **Fuerza Bruta** - mira todas las posibilidades y selecciona la mejor solución
   * `P` [Búsqueda lineal](src/algorithms/search/linear-search)
-  * `P` [Terrazas Pluviales](src/algorithms/uncategorized/rain-terraces) - el problema de la retención del agua de lluvia
+  * `P` [Terrazas pluviales](src/algorithms/uncategorized/rain-terraces) - el problema de la retención del agua de lluvia
   * `A` [Máximo subarreglo](src/algorithms/sets/maximum-subarray)
   * `A` [Problema del viajante](src/algorithms/graph/travelling-salesman) - la ruta más corta posible que visita cada ciudad y vuelve a la ciudad de origen
 * **Voraces** - escoge la mejor opción en el momento actual, sin ninguna consideración sobre el futuro
@@ -148,7 +148,7 @@ Es una abstracción superior a la noción de algoritmo, del mismo modo que un al
   * `A` [Algortimo de Prim](src/algorithms/graph/prim) - encontrar el árbol de cubrimiento mínimo (MST) para un grafo no dirigido ponderado
   * `A` [Algoritmo de Kruskal](src/algorithms/graph/kruskal) - encontrar el árbol de cubrimiento mínimo (MST) para un grafo no dirigido ponderado
 * **Divide y Vencerás** - divide el problema en partes más pequeñas y luego resuelve esas partes
-  * `P` [Búsqueda Binaria](src/algorithms/search/binary-search)
+  * `P` [Búsqueda binaria](src/algorithms/search/binary-search)
   * `P` [Torre de Hanói](src/algorithms/uncategorized/hanoi-tower)
   * `P` [Triángulo de Pascal](src/algorithms/math/pascal-triangle)
   * `P` [Algoritmo de Euclides](src/algorithms/math/euclidean-algorithm) - calcular el Máximo Común Divisor (MCD)
@@ -163,26 +163,26 @@ Es una abstracción superior a la noción de algoritmo, del mismo modo que un al
   * `P` [Número de Fibonacci](src/algorithms/math/fibonacci)
   * `P` [Juego de los saltos](src/algorithms/uncategorized/jump-game)
   * `P` [Caminos únicos](src/algorithms/uncategorized/unique-paths)
-  * `P` [Terrazas Pluviales](src/algorithms/uncategorized/rain-terraces) - el problema de la retención del agua de lluvia
+  * `P` [Terrazas pluviales](src/algorithms/uncategorized/rain-terraces) - el problema de la retención del agua de lluvia
   * `A` [Distancia de Levenshtein](src/algorithms/string/levenshtein-distance) - distancia mínima de edición entre dos secuencias
-  * `A` [Subsecuencia Comun más Larga](src/algorithms/sets/longest-common-subsequence) (LCS)
+  * `A` [Subsecuencia común más larga](src/algorithms/sets/longest-common-subsequence) (LCS)
   * `A` [Subcadena común más larga](src/algorithms/string/longest-common-substring)
-  * `A` [Subsecuencia Creciente más Larga](src/algorithms/sets/longest-increasing-subsequence)
+  * `A` [Subsecuencia creciente más larga](src/algorithms/sets/longest-increasing-subsequence)
   * `A` [Supersecuencia común más corta](src/algorithms/sets/shortest-common-supersequence)
   * `A` [Problema de la mochila 0/1](src/algorithms/sets/knapsack-problem)
   * `A` [Partición entera](src/algorithms/math/integer-partition)
   * `A` [Máximo subarreglo](src/algorithms/sets/maximum-subarray)
   * `A` [Algoritmo de Bellman-Ford](src/algorithms/graph/bellman-ford) - encontrar los caminos más cortos a todos los vértices del grafo desde un solo vértice
   * `A` [Algoritmo de Floyd-Warshall](src/algorithms/graph/floyd-warshall) - encontrar los caminos más cortos entre todos los pares de vértices
-  * `A` [Coincidencia por Expresiones regulares](src/algorithms/string/regular-expression-matching)
+  * `A` [Coincidencia por expresiones regulares](src/algorithms/string/regular-expression-matching)
 * **De Retorceso (Backtracking)** - De manera similar a la fuerza bruta, trata de generar todas las soluciones posibles, pero cada vez que genere la siguiente solución, comprueba si cumple con todas las condiciones, y sólo entonces continúa generando soluciones posteriores. De lo contrario, retrocede y sigue un camino diferente para encontrar una solución. Normalmente se utiliza un recorrido en profundidad (DFS) del espacio de estados.
   * `P` [Juego de los saltos](src/algorithms/uncategorized/jump-game)
   * `P` [Caminos únicos](src/algorithms/uncategorized/unique-paths)
   * `A` [Ciclo hamiltoniano](src/algorithms/graph/hamiltonian-cycle) - visitar cada vértice exactamente una vez
   * `A` [Problema de las N Reinas](src/algorithms/uncategorized/n-queens)
   * `A` [Problema del caballo (Knight tour)](src/algorithms/uncategorized/knight-tour)
-  * `A` [Suma Combinada](src/algorithms/sets/combination-sum) - encuentra todas las combinaciones que forman una suma específica
-* **Ramas y Limites** - recuerda la solución de menor costo encontrada en cada etapa de la búsqueda de rastreo, y utiliza el costo de la solución de menor costo encontrada hasta el momento como un límite inferior del costo de una solución de menor costo para el problema, a fin de descartar soluciones parciales con costos mayores que la solución de menor costo encontrada hasta el momento. Normalmente se utiliza un recorrido BFS en combinación con un recorrido DFS del árbol del espacio de estados.
+  * `A` [Suma combinada](src/algorithms/sets/combination-sum) - encuentra todas las combinaciones que forman una suma específica
+* **Ramas y Limites** - recuerda la solución de menor costo encontrada en cada etapa de la búsqueda de rastreo, y utilizar el costo de la solución de menor costo encontrada hasta el momento como un límite inferior del costo de una solución de menor costo para el problema, a fin de descartar soluciones parciales con costos mayores que la solución de menor costo encontrada hasta el momento. Normalmente se utiliza un recorrido BFS en combinación con un recorrido DFS del árbol del espacio de estados.
 
 ## Cómo usar este repositorio
 
@@ -212,7 +212,7 @@ npm test
 npm test -- 'LinkedList'
 ```
 
-**Campo de Juegos**
+**Campo de juegos**
 
 Puede jugar con estructuras de datos y algoritmos en el archivo `./src/playground/playground.js` y escribir 
 pruebas para ello en `./src/playground/__test__/playground.test.js`.
@@ -227,7 +227,7 @@ npm test -- 'playground'
 
 ### Refrencias
 
-[▶ Estructuras de datos y Algoritmos en YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+[▶ Estructuras de datos y algoritmos en YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 
 ### Notación O Grande
 
