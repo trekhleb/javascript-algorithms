@@ -18,6 +18,9 @@ _Léelo en otros idiomas:_
 [_Français_](README.fr-FR.md),
 [_Português_](README.pt-BR.md)
 
+*☝ Nótese que este proyecto está pensado con fines de aprendizaje e investigación,
+y **no** para ser usado en producción.*
+
 ## Estructuras de Datos
 
 Una estructura de datos es una forma particular de organizar y almacenar datos en un ordenador para que puedan accederse
@@ -40,7 +43,7 @@ los datos.
   * `A` [Árbol AVL](src/data-structures/tree/avl-tree)
   * `A` [Árbol Rojo-Negro](src/data-structures/tree/red-black-tree)
   * `A` [Árbol de segmentos](src/data-structures/tree/segment-tree) - con ejemplos de consultas de rango mín/máx/suma
-  * `A` [Árbol de Fenwick ](src/data-structures/tree/fenwick-tree) (Árbol binario indexado)
+  * `A` [Árbol de Fenwick](src/data-structures/tree/fenwick-tree) (Árbol binario indexado)
 * `A` [Grafo](src/data-structures/graph) (dirigido y no dirigido)
 * `A` [Conjuntos disjuntos](src/data-structures/disjoint-set)
 * `A` [Filtro de Bloom](src/data-structures/bloom-filter)
@@ -64,8 +67,12 @@ definen con precisión una secuencia de operaciones.
   * `P` [Criba de Eratóstenes](src/algorithms/math/sieve-of-eratosthenes) - encontrar todos los números primos hasta un límite dado
   * `P` [Es una potencia de dos?](src/algorithms/math/is-power-of-two) - comprobar si el número es una potencia de dos (algoritmos ingenuos y de bits)
   * `P` [Triángulo de Pascal](src/algorithms/math/pascal-triangle)
+  * `P` [Números complejos](src/algorithms/math/complex-number) - números complejos y operaciones con ellos
+  * `P` [Radianes & Grados](src/algorithms/math/radian) - conversión de radianes a grados y viceversa
+  * `P` [Exponenciación rápida](src/algorithms/math/fast-powering)
   * `A` [Partición entera](src/algorithms/math/integer-partition)
-  * `A` [Algortimo π de Liu Hui ](src/algorithms/math/liu-hui) - aproximar el cálculo de  π basado en polígonos de N lados
+  * `A` [Algortimo π de Liu Hui](src/algorithms/math/liu-hui) - aproximar el cálculo de  π basado en polígonos de N lados
+  * `A` [Transformada discreta de Fourier](src/algorithms/math/fourier-transform) - descomponer una función de tiempo (señal) en las frecuencias que la componen
 * **Conjuntos**
   * `P` [Producto cartesiano](src/algorithms/sets/cartesian-product) - producto de múltiples conjuntos
   * `P` [Permutación de Fisher–Yates](src/algorithms/sets/fisher-yates) - permutación aleatoria de una secuencia finita
@@ -101,6 +108,9 @@ definen con precisión una secuencia de operaciones.
   * `P` [Shellsort](src/algorithms/sorting/shell-sort)
   * `P` [Ordenamiento por cuentas](src/algorithms/sorting/counting-sort)
   * `P` [Ordenamiento Radix](src/algorithms/sorting/radix-sort)
+* **Listas enlazadas**
+  * `P` [Recorrido directo](src/algorithms/linked-list/traversal)
+  * `P` [Recorrido inverso](src/algorithms/linked-list/reverse-traversal)
 * **Árboles**
   * `P` [Búsqueda en profundidad](src/algorithms/tree/depth-first-search) (DFS)
   * `P` [Búsqueda en anchura](src/algorithms/tree/breadth-first-search) (BFS)
@@ -141,6 +151,7 @@ Es una abstracción superior a la noción de algoritmo, del mismo modo que un al
   * `P` [Terrazas pluviales](src/algorithms/uncategorized/rain-terraces) - el problema de la retención del agua de lluvia
   * `A` [Máximo subarreglo](src/algorithms/sets/maximum-subarray)
   * `A` [Problema del viajante](src/algorithms/graph/travelling-salesman) - la ruta más corta posible que visita cada ciudad y vuelve a la ciudad de origen
+  * `A` [Transformada discreta de Fourier](src/algorithms/math/fourier-transform) - descomponer una función de tiempo (señal) en las frecuencias que la componen
 * **Voraces** - escoge la mejor opción en el momento actual, sin ninguna consideración sobre el futuro
   * `P` [Juego de los saltos](src/algorithms/uncategorized/jump-game)
   * `A` [Problema de la mochila sin límite](src/algorithms/sets/knapsack-problem)
@@ -154,9 +165,10 @@ Es una abstracción superior a la noción de algoritmo, del mismo modo que un al
   * `P` [Algoritmo de Euclides](src/algorithms/math/euclidean-algorithm) - calcular el Máximo Común Divisor (MCD)
   * `P` [Ordenamiento por mezcla](src/algorithms/sorting/merge-sort)
   * `P` [Quicksort](src/algorithms/sorting/quick-sort)
-  * `P` [Búsqueda en profundidad](src/algorithms/tree/depth-first-search) - (DFS)
-  * `P` [Búsqueda en anchura](src/algorithms/graph/depth-first-search) - (DFS)
+  * `P` [Búsqueda en profundidad (árboles)](src/algorithms/tree/depth-first-search) - (DFS)
+  * `P` [Búsqueda en profundidad (grafos)](src/algorithms/graph/depth-first-search) - (DFS)
   * `P` [Juego de los saltos](src/algorithms/uncategorized/jump-game)
+  * `P` [Exponenciación rápida](src/algorithms/math/fast-powering)
   * `A` [Permutaciones](src/algorithms/sets/permutations) - (con y sin repeticiones)
   * `A` [Combinaciones](src/algorithms/sets/combinations) - (con y sin repeticiones)
 * **Programación Dinámica** - construye una solución usando sub-soluciones previamente encontradas
@@ -178,6 +190,7 @@ Es una abstracción superior a la noción de algoritmo, del mismo modo que un al
 * **De Retorceso (Backtracking)** - De manera similar a la fuerza bruta, trata de generar todas las soluciones posibles, pero cada vez que genere la siguiente solución, comprueba si cumple con todas las condiciones, y sólo entonces continúa generando soluciones posteriores. De lo contrario, retrocede y sigue un camino diferente para encontrar una solución. Normalmente se utiliza un recorrido en profundidad (DFS) del espacio de estados.
   * `P` [Juego de los saltos](src/algorithms/uncategorized/jump-game)
   * `P` [Caminos únicos](src/algorithms/uncategorized/unique-paths)
+  * `P` [Conjunto potencia](src/algorithms/sets/power-set) - todos los subconjuntos de un conjunto
   * `A` [Ciclo hamiltoniano](src/algorithms/graph/hamiltonian-cycle) - visitar cada vértice exactamente una vez
   * `A` [Problema de las N Reinas](src/algorithms/uncategorized/n-queens)
   * `A` [Problema del caballo (Knight tour)](src/algorithms/uncategorized/knight-tour)
