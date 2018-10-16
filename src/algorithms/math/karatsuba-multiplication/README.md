@@ -27,7 +27,7 @@ d = 78
 
 3. Combine subexpressions to calculate the product
 ```
-A = ac * 1000
+A = ac * 10000
 B = (abcd - ac - bd) * 100
 C = bd
 

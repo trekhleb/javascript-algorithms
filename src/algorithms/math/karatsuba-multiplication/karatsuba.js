@@ -15,7 +15,7 @@ export default function karatsuba(x, y) {
   // SCALE FACTOR:
   // scaleFactor is used to split the numbers
   // into smaller numbers for recursion.
-  // when combining the subcomputations back
+  // when combining the subexpressions back
   // together, the scaleFactor is used to
   // recreate the magnitude of the original numbers
   const minDigits = Math.min(
@@ -48,14 +48,14 @@ export default function karatsuba(x, y) {
   // d = 5678 - (56 * 100) = 5678 - 5600 = 78
   const d = y - (c * scaleFactor);
 
-  // COMPUTE SUB-EXPRESSIONS:
+  // COMPUTE SUBEXPRESSIONS:
   // since a + b is less than x, and c + d is less than y
   // the recursion is guaranteed to reach the base case
   const ac = karatsuba(a, c);
   const bd = karatsuba(b, d);
   const abcd = karatsuba(a + b, c + d);
 
-  // COMBINE SUB-EXPRESSIONS:
+  // COMBINE SUBEXPRESSIONS:
   // since the scaleFactor was used to
   // reduce the size of the components,
   // the scaleFactor must be applied in reverse
