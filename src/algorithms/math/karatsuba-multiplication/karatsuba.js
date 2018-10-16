@@ -12,28 +12,30 @@ export default function karatsuba(x, y) {
     return x * y;
   }
 
-  const minDigits = Math.min(
-    String(x).length,
-    String(y).length,
-  );
-
+  // SCALE FACTOR:
   // scaleFactor is used to split the numbers
   // into smaller numbers for recursion.
   // when combining the subcomputations back
   // together, the scaleFactor is used to
-  // recreate the components of the original number
+  // recreate the magnitude of the original numbers
+  const minDigits = Math.min(
+    String(x).length,
+    String(y).length,
+  );
   const scaleFactor = 10 ** Math.floor(minDigits / 2);
 
+  // PARAMETER COMPONENTS:
   // a b are the two components of x
   // c d are the two components of y
   //
   // e.g.
   // x = 1234 -> a = 12, b = 34
   // y = 5678 -> c = 56, d = 78
-  //
+
   // example of component computations:
   // x = 1234, y = 5678
   // scaleFactor = 100
+
   // a = floor(1234 / 100) = floor(12.34) = 12
   const a = Math.floor(x / scaleFactor);
 
@@ -46,18 +48,18 @@ export default function karatsuba(x, y) {
   // d = 5678 - (56 * 100) = 5678 - 5600 = 78
   const d = y - (c * scaleFactor);
 
-  // compute sub-expressions:
+  // COMPUTE SUB-EXPRESSIONS:
   // since a + b is less than x, and c + d is less than y
   // the recursion is guaranteed to reach the base case
   const ac = karatsuba(a, c);
   const bd = karatsuba(b, d);
   const abcd = karatsuba(a + b, c + d);
 
-  // combine sub-expressions:
+  // COMBINE SUB-EXPRESSIONS:
   // since the scaleFactor was used to
-  // artificially reduce the size of the components,
+  // reduce the size of the components,
   // the scaleFactor must be applied in reverse
-  // to reconstruct the original components
+  // to reconstruct the magnitude of the original components
   const A = ac * (scaleFactor ** 2);
   const B = (abcd - ac - bd) * scaleFactor;
   const C = bd;
