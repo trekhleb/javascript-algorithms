@@ -1,33 +1,36 @@
 import Sort from '../Sort';
 
 export default class OddEvenSort extends Sort {
-  swap(array, i, j){
-    var temp = array[i];
-    array[i] = array[j];
-    array[j] = temp;
-  }
-
   sort(originalArray) {
     // Clone original array to prevent its modification.
     const array = [...originalArray];
-    const sorted = false;
+    let sorted = false;
 
     // Go through all array elements...
     while (!sorted) {
       sorted = true;
-      for(let i = 1; i < array.length; i+2){
+      // Sort all the odd indexes
+      for (let i = 1; i < array.length - 1; i += 2) {
         // Call visiting callback.
         this.callbacks.visitingCallback(array[i]);
-        if(array[i] > array[i+1]){
-          swap(array, i, i+1);
+
+        // Swap elements if they are in wrong order.
+        if (this.comparator.lessThan(array[i + 1], array[i])) {
+          // Swap the values
+          [array[i], array[i + 1]] = [array[i + 1], array[i]];
           sorted = false;
         }
       }
-      for(let i = 0; i < array.length - 1; i+2){
+
+      // Sort all the even indexes
+      for (let i = 0; i < array.length - 1; i += 2) {
         // Call visiting callback.
         this.callbacks.visitingCallback(array[i]);
-        if(array[i] > array[i+1]){
-          swap(array, i, i+1);
+
+        // Swap elements if they are in wrong order.
+        if (this.comparator.lessThan(array[i + 1], array[i])) {
+          // Swap the values
+          [array[i], array[i + 1]] = [array[i + 1], array[i]];
           sorted = false;
         }
       }
