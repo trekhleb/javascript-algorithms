@@ -10,9 +10,12 @@ function btPowerSetRecursive(originalSet, allSubsets = [[]], currentSubSet = [],
   // subset. If we will start from zero then we'll have duplicates like {3, 3, 3}.
   for (let position = startAt; position < originalSet.length; position += 1) {
     // Let's push current element to the subset.
-    currentSubSet.push(originalSet[position]);
+    // currentSubSet.push(originalSet[position]);
     // Current subset is already valid so let's memorize it.
-    allSubsets.push([...currentSubSet]);
+    // allSubsets.push([...currentSubSet]);
+    
+    allSubsets = [...allSubsets, ...originalSet[position]];
+    
     // Let's try to form all other subsets for the current subset.
     btPowerSetRecursive(originalSet, allSubsets, currentSubSet, position + 1);
     // BACKTRACK. Exclude last element from the subset and try the next one.
