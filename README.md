@@ -232,8 +232,54 @@ npm test -- 'LinkedList'
 
 **Playground**
 
-You may play with data-structures and algorithms in `./src/playground/playground.js` file and write
-tests for it in `./src/playground/__test__/playground.test.js`.
+You may play with data-structures and algorithms in `./src/playground/playground.js` file.
+For example:  
+```
+const myTestObj = {
+  myFibonacci: (n) => {
+    const resSequence = [1];
+
+    let currentVal = 1;
+    let previousVal = 0;
+
+    if (n === 1) {
+      return resSequence;
+    }
+
+    let counter = n - 1;
+
+    while (counter) {
+      currentVal += previousVal;
+      previousVal = currentVal - previousVal;
+
+      resSequence.push(currentVal);
+      counter -= 1;
+    }
+
+    return resSequence;
+  },
+};
+
+export default myTestObj;
+
+```
+
+Then, write your test for it in `./src/playground/__test__/playground.test.js`.
+```
+import myTestObj from '../playground';
+
+describe('playground', () => {
+  it('should perform playground tasks', () => {
+    expect(myTestObj.myFibonacci(10)).toEqual([1, 1, 2, 3, 5, 8, 13, 21, 34, 55]);
+  });
+});
+
+```
+
+
+
+
+
 
 Then just simply run the following command to test if your playground code works as expected:
 
