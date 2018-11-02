@@ -276,12 +276,7 @@ describe('playground', () => {
 
 ```
 
-
-
-
-
-
-Then just simply run the following command to test if your playground code works as expected:
+Finally, just simply run the following command to test if your playground code works as expected:
 
 ```
 npm test -- 'playground'
