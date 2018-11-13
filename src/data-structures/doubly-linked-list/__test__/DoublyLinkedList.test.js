@@ -241,17 +241,23 @@ describe('DoublyLinkedList', () => {
     expect(linkedList.toString()).toBe('1,2,3');
     expect(linkedList.head.value).toBe(1);
     expect(linkedList.tail.value).toBe(3);
+    expect(linkedList.head.previous).toBeNull();
+    expect(linkedList.tail.next).toBeNull();
 
     // Reverse linked list.
     linkedList.reverse();
     expect(linkedList.toString()).toBe('3,2,1');
     expect(linkedList.head.value).toBe(3);
     expect(linkedList.tail.value).toBe(1);
+    expect(linkedList.head.previous).toBeNull();
+    expect(linkedList.tail.next).toBeNull();
 
     // Reverse linked list back to initial state.
     linkedList.reverse();
     expect(linkedList.toString()).toBe('1,2,3');
     expect(linkedList.head.value).toBe(1);
     expect(linkedList.tail.value).toBe(3);
+    expect(linkedList.head.previous).toBeNull();
+    expect(linkedList.tail.next).toBeNull();
   });
 });

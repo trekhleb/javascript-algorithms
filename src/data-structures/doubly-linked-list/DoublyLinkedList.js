@@ -245,6 +245,7 @@ export default class DoublyLinkedList {
       nextNode = currNode.next;
 
       // Change next node of the current node so it would link to previous node.
+      currNode.previous = nextNode;
       currNode.next = prevNode;
 
       // Move prevNode and currNode nodes one step forward.
