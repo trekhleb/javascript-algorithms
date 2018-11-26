@@ -124,18 +124,6 @@ export default class Graph {
   }
 
   /**
-   * @param {string} vertexKey
-   * @returns {GraphVertex}
-   */
-  findVertexByKey(vertexKey) {
-    if (this.vertices[vertexKey]) {
-      return this.vertices[vertexKey];
-    }
-
-    return null;
-  }
-
-  /**
    * @return {number}
    */
   getWeight() {

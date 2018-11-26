@@ -32,14 +32,14 @@ describe('Graph', () => {
     expect(graph.getAllVertices()[0]).toEqual(vertexA);
     expect(graph.getAllVertices()[1]).toEqual(vertexB);
 
-    const graphVertexA = graph.findVertexByKey(vertexA.getKey());
-    const graphVertexB = graph.findVertexByKey(vertexB.getKey());
+    const graphVertexA = graph.getVertexByKey(vertexA.getKey());
+    const graphVertexB = graph.getVertexByKey(vertexB.getKey());
 
     expect(graph.toString()).toBe('A,B');
     expect(graphVertexA).toBeDefined();
     expect(graphVertexB).toBeDefined();
 
-    expect(graph.findVertexByKey('not existing')).toBeNull();
+    expect(graph.getVertexByKey('not existing')).toBeUndefined();
 
     expect(graphVertexA.getNeighbors().length).toBe(1);
     expect(graphVertexA.getNeighbors()[0]).toEqual(vertexB);
@@ -60,8 +60,8 @@ describe('Graph', () => {
 
     graph.addEdge(edgeAB);
 
-    const graphVertexA = graph.findVertexByKey(vertexA.getKey());
-    const graphVertexB = graph.findVertexByKey(vertexB.getKey());
+    const graphVertexA = graph.getVertexByKey(vertexA.getKey());
+    const graphVertexB = graph.getVertexByKey(vertexB.getKey());
 
     expect(graph.toString()).toBe('A,B');
     expect(graphVertexA).toBeDefined();
