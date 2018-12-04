@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
-이 저장소에는 많이 알려진 알고리즘 및 자료 구조의 Javascript 기반 예제를 담고 있습니다.
+이 저장소에는 Javascript 버전의 저명한 알고리즘 및 자료 구조의 예제를 담고 있습니다.
 
 각 알고리즘과 자료 구조에 대해 연관되어있는 설명이 README에 작성되어 있으며,
 링크를 통해 더 자세한 설명을 만날 수 있습니다. (관련된 YouTube 영상도 포함).
@@ -19,25 +19,26 @@ _Read this in other languages:_
 
 ## 자료 구조
 
-자료 구조는 데이터를 특정 방식으로 구성하고 저장함으로써 더 효율적으로
-접근하고 수정할 수 있게 해줍니다. 간단히 말해, 자료 구조는 데이터 값들,
-데이터 간의 관계, 그리고 데이터를 다룰 수 있는 함수와 작업의 모임입니다. 
+자료 구조는 데이터 값들, 데이터 값들 간의 관계, 
+그리고 데이터를 다룰 수 있는 함수와 연산들의 집합으로, 
+데이터를 특정 방식으로 구성하고 저장함으로써 더 효율적으로
+접근하고 수정할 수 있게 해줍니다.   
 
 
 `B` - 입문자, `A` - 숙련자
 
 * `B` [연결 리스트](src/data-structures/linked-list)
 * `B` [이중 연결 리스트](src/data-structures/doubly-linked-list)
-* `B` [큐](src/data-structures/queue)
-* `B` [스택](src/data-structures/stack)
+* `B` [큐](src/data-structures/queue) - 선입선출 방식
+* `B` [스택](src/data-structures/stack) - 후입선출 방식
 * `B` [해시 테이블](src/data-structures/hash-table)
 * `B` [힙](src/data-structures/heap)
 * `B` [우선순위 큐](src/data-structures/priority-queue)
 * `A` [트라이](src/data-structures/trie)
 * `A` [트리](src/data-structures/tree)
   * `A` [이진 탐색 트리](src/data-structures/tree/binary-search-tree)
-  * `A` [AVL 트리](src/data-structures/tree/avl-tree)
-  * `A` [Red-Black 트리](src/data-structures/tree/red-black-tree)
+  * `A` [AVL 트리](src/data-structures/tree/avl-tree) - 균형 잡힌 이진 탐색 트리
+  * `A` [Red-Black 트리](src/data-structures/tree/red-black-tree) - 자가 균형 이진 탐색 트리
   * `A` [세그먼트 트리](src/data-structures/tree/segment-tree) - min/max/sum range 쿼리 예제.
   * `A` [Fenwick 트리](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
 * `A` [그래프](src/data-structures/graph) (유방향, 무방향)
@@ -46,23 +47,24 @@ _Read this in other languages:_
 
 ## 알고리즘
 
-알고리즘은 어떤 종류의 문제를 풀 수 있는 정확한 방법이며, 
-일련의 작업을 정확하게 정의해 놓은 규칙들입니다. 
+알고리즘은 어떠한 문제를 해결하기 위해 정해진 
+일련의 절차나 방법을 공식화한 형태로 표현한 것을 말한다.
+
 
 `B` - 입문자, `A` - 숙련자
 
 ### 주제별 알고리즘
 
 * **Math**
-  * `B` [Bit Manipulation](src/algorithms/math/bits) - set/get/update/clear bits, 2의 곱 / 나누기, 음수로 만들기 etc.
-  * `B` [팩토리얼](src/algorithms/math/factorial) 
-  * `B` [피보나치 수](src/algorithms/math/fibonacci)
+  * `B` [비트 조작](src/algorithms/math/bits) - set/get/update/clear bits, 2의 곱 / 나누기, 음수로 만들기 etc.
+  * `B` [팩토리얼](src/algorithms/math/factorial) - 그 수보다 작거나 같은 모든 양의 정수의 곱
+  * `B` [피보나치 수](src/algorithms/math/fibonacci) - 첫째 및 둘째 항이 1이며 그 뒤의 모든 항은 바로 앞 두 항의 합인 수열
   * `B` [소수 판별](src/algorithms/math/primality-test) (trial division 방식)
   * `B` [유클리드 호제법](src/algorithms/math/euclidean-algorithm) - 최대공약수 (GCD)
-  * `B` [최소 공배수](src/algorithms/math/least-common-multiple) - LCM
+  * `B` [최소 공배수](src/algorithms/math/least-common-multiple) - LCM(Least Common Multiple)
   * `B` [에라토스테네스의 체](src/algorithms/math/sieve-of-eratosthenes) - 특정수 이하의 모든 소수 찾기
   * `B` [2의 거듭제곱 판별법](src/algorithms/math/is-power-of-two) - 어떤 수가 2의 거듭제곱인지 판별 (naive 와 bitwise 알고리즘)
-  * `B` [파스칼 삼각형](src/algorithms/math/pascal-triangle)
+  * `B` [파스칼 삼각형](src/algorithms/math/pascal-triangle) - 이항계수를 삼각형 모양의 기하학적 형태로 배열한 것
   * `A` [자연수 분할](src/algorithms/math/integer-partition)
   * `A` [리우 후이 π 알고리즘](src/algorithms/math/liu-hui) - N-각형을 기반으로 π 근사치 구하기
 * **Sets**
@@ -73,7 +75,7 @@ _Read this in other languages:_
   * `A` [조합](src/algorithms/sets/combinations) (반복 유,무)
   * `A` [최장 공통 부분수열](src/algorithms/sets/longest-common-subsequence) (LCS)
   * `A` [최장 증가 수열](src/algorithms/sets/longest-increasing-subsequence)
-  * `A` [Shortest Common Supersequence](src/algorithms/sets/shortest-common-supersequence) (SCS)
+  * `A` [최단 공통 상위수열](src/algorithms/sets/shortest-common-supersequence) (SCS)
   * `A` [배낭 문제](src/algorithms/sets/knapsack-problem) - "0/1" 과 "Unbound"
   * `A` [최대 구간합](src/algorithms/sets/maximum-subarray) - "브루트 포스" 과 "동적 계획법" (Kadane's) 버전
   * `A` [조합 합](src/algorithms/sets/combination-sum) - 특정 합을 구성하는 모든 조합 찾기
@@ -83,7 +85,7 @@ _Read this in other languages:_
   * `A` [커누스-모리스-프랫 알고리즘](src/algorithms/string/knuth-morris-pratt) (KMP 알고리즘) - 부분 문자열 탐색 (패턴 매칭)
   * `A` [Z 알고리즘](src/algorithms/string/z-algorithm) - 부분 문자열 탐색 (패턴 매칭)
   * `A` [라빈 카프 알고리즘](src/algorithms/string/rabin-karp) - 부분 문자열 탐색
-  * `A` [최장 공통 부분 문자열](src/algorithms/string/longest-common-substring)
+  * `A` [최장 공통 부분 문자열](src/algorithms/string/longest-common-substring) - 부분 문자열 탐색
   * `A` [정규 표현식 매칭](src/algorithms/string/regular-expression-matching)
 * **Searches**
   * `B` [선형 탐색](src/algorithms/search/linear-search)
@@ -91,15 +93,15 @@ _Read this in other languages:_
   * `B` [이진 탐색](src/algorithms/search/binary-search) - 정렬된 배열에서 탐색
   * `B` [보간 탐색](src/algorithms/search/interpolation-search) - 균등한 분포를 이루는 정렬된 배열에서 탐색
 * **Sorting**
-  * `B` [거품 정렬](src/algorithms/sorting/bubble-sort)
-  * `B` [선택 정렬](src/algorithms/sorting/selection-sort)
-  * `B` [삽입 정렬](src/algorithms/sorting/insertion-sort)
-  * `B` [힙 정렬](src/algorithms/sorting/heap-sort)
-  * `B` [병합 정렬](src/algorithms/sorting/merge-sort)
+  * `B` [거품 정렬](src/algorithms/sorting/bubble-sort) (bubble-sort)
+  * `B` [선택 정렬](src/algorithms/sorting/selection-sort) (selection sort)
+  * `B` [삽입 정렬](src/algorithms/sorting/insertion-sort) (insertion sort)
+  * `B` [힙 정렬](src/algorithms/sorting/heap-sort) (heap sort)
+  * `B` [병합 정렬](src/algorithms/sorting/merge-sort) (merge sort)
   * `B` [퀵 정렬](src/algorithms/sorting/quick-sort) - 제자리(in-place)와 제자리가 아닌(non-in-place) 구현
-  * `B` [셸 정렬](src/algorithms/sorting/shell-sort)
-  * `B` [계수 정렬](src/algorithms/sorting/counting-sort)
-  * `B` [기수 정렬](src/algorithms/sorting/radix-sort)
+  * `B` [셸 정렬](src/algorithms/sorting/shell-sort) (shell sort)
+  * `B` [계수 정렬](src/algorithms/sorting/counting-sort) (counting sort)
+  * `B` [기수 정렬](src/algorithms/sorting/radix-sort) (radix sort)
 * **Trees**
   * `B` [깊이 우선 탐색](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [너비 우선 탐색](src/algorithms/tree/breadth-first-search) (BFS)
@@ -120,13 +122,13 @@ _Read this in other languages:_
   * `A` [강결합 컴포넌트](src/algorithms/graph/strongly-connected-components) - Kosaraju의 알고리즘
   * `A` [외판원 문제](src/algorithms/graph/travelling-salesman) - 각 도시를 다 방문하고 다시 출발점으로 돌아오는 최단 경로 찾기
 * **Uncategorized**
-  * `B` [하노이 탑](src/algorithms/uncategorized/hanoi-tower)
+  * `B` [하노이 탑](src/algorithms/uncategorized/hanoi-tower) - 재귀 호출을 이용한 알고리즘 예제
   * `B` [정방 행렬 회전](src/algorithms/uncategorized/square-matrix-rotation) - 제자리(in-place) 알고리즘
   * `B` [점프 게임](src/algorithms/uncategorized/jump-game) - 백트래킹, 동적계획법 (top-down + bottom-up), 탐욕 알고리즘 예제 
   * `B` [Unique 경로](src/algorithms/uncategorized/unique-paths) - 백트래킹, 동적계획법, 파스칼 삼각형에 기반한 예제
   * `B` [빗물 담기 문제](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem (동적계획법, 브루트포스 버전)
-  * `A` [N-Queens 문제](src/algorithms/uncategorized/n-queens)
-  * `A` [기사의 여행 문제](src/algorithms/uncategorized/knight-tour)
+  * `A` [N개의 퀸 문제](src/algorithms/uncategorized/n-queens) - NXN 체스판에 N개의 퀸을 배치하는 문제
+  * `A` [기사의 여행 문제](src/algorithms/uncategorized/knight-tour) - 체스 보드의 기사 말에 대한 수학적 알고리즘
 
 ### 패러다임별 알고리즘
 
@@ -141,32 +143,32 @@ _Read this in other languages:_
   * `A` [외판원 문제](src/algorithms/graph/travelling-salesman) - 각 도시를 다 방문하고 다시 출발점으로 돌아오는 최단 경로 찾기
 * **탐욕 알고리즘(Greedy)** - 이후를 고려하지 않고 현재 시점에서 가장 최적인 선택을 하는 방식입니다.
   * `B` [점프 게임](src/algorithms/uncategorized/jump-game)
-  * `A` [쪼갤수 있는 배낭 문제](src/algorithms/sets/knapsack-problem)
+  * `A` [쪼갤수 있는 배낭 문제](src/algorithms/sets/knapsack-problem) - 짐들을 배낭에 넣을 때, 가치의 합이 최대가 되도록 짐을 고르는 방법을 찾는 문제
   * `A` [다익스트라 알고리즘](src/algorithms/graph/dijkstra) - 모든 점 까지의 최단거리 찾기
   * `A` [프림 알고리즘](src/algorithms/graph/prim) - 무방향 가중치 그래프에서 최소 신창 트리 (MST) 찾기
   * `A` [크루스칼 알고리즘](src/algorithms/graph/kruskal) - 무방향 가중치 그래프에서 최소 신창 트리 (MST) 찾기
 * **분할 정복법(Divide and Conquer)** - 문제를 여러 작은 문제로 분할한 뒤 해결하는 방식입니다.
-  * `B` [이진 탐색](src/algorithms/search/binary-search)
-  * `B` [하노이 탑](src/algorithms/uncategorized/hanoi-tower)
-  * `B` [파스칼 삼각형](src/algorithms/math/pascal-triangle)
+  * `B` [이진 탐색](src/algorithms/search/binary-search) - 정렬된 배열에서 탐색
+  * `B` [하노이 탑](src/algorithms/uncategorized/hanoi-tower) - 재귀 호출을 이용한 알고리즘 예제
+  * `B` [파스칼 삼각형](src/algorithms/math/pascal-triangle) - 이항계수를 삼각형 모양의 기하학적 형태로 배열한 것
   * `B` [유클리드 호제법](src/algorithms/math/euclidean-algorithm) - 최대공약수 계산 (GCD)
-  * `B` [병합 정렬](src/algorithms/sorting/merge-sort)
-  * `B` [퀵 정렬](src/algorithms/sorting/quick-sort)
+  * `B` [병합 정렬](src/algorithms/sorting/merge-sort) (merge sort)
+  * `B` [퀵 정렬](src/algorithms/sorting/quick-sort) - 제자리(in-place)와 제자리가 아닌(non-in-place) 구현
   * `B` [트리 깊이 우선 탐색](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [그래프 깊이 우선 탐색](src/algorithms/graph/depth-first-search) (DFS)
   * `B` [점프 게임](src/algorithms/uncategorized/jump-game)
   * `A` [순열](src/algorithms/sets/permutations) (반복 유,무)
   * `A` [조합](src/algorithms/sets/combinations) (반복 유,무)
 * **동적 계획법(Dynamic Programming)** - 이전에 찾은 결과를 이용하여 최종적으로 해결하는 방식입니다.
-  * `B` [피보나치 수](src/algorithms/math/fibonacci)
+  * `B` [피보나치 수](src/algorithms/math/fibonacci) - 첫째 및 둘째 항이 1이며 그 뒤의 모든 항은 바로 앞 두 항의 합인 수열
   * `B` [점프 게임](src/algorithms/uncategorized/jump-game)
-  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
+  * `B` [Unique 경로](src/algorithms/uncategorized/unique-paths) - 백트래킹, 동적계획법, 파스칼 삼각형에 기반한 예제
   * `B` [빗물 담기 문제](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
   * `A` [편집 거리](src/algorithms/string/levenshtein-distance) - 두 시퀀스 간의 최소 편집 거리
   * `A` [최장 공통 부분 수열](src/algorithms/sets/longest-common-subsequence) (LCS)
   * `A` [최장 공통 부분 문자열](src/algorithms/string/longest-common-substring)
   * `A` [최장 증가 수열](src/algorithms/sets/longest-increasing-subsequence)
-  * `A` [Shortest Common Supersequence](src/algorithms/sets/shortest-common-supersequence)
+  * `A` [최단 공통 상위수열](src/algorithms/sets/shortest-common-supersequence) (SCS)
   * `A` [0/1 배낭 문제](src/algorithms/sets/knapsack-problem)
   * `A` [자연수 분할](src/algorithms/math/integer-partition)
   * `A` [최대 구간합](src/algorithms/sets/maximum-subarray)
@@ -175,10 +177,10 @@ _Read this in other languages:_
   * `A` [정규 표현식 매칭](src/algorithms/string/regular-expression-matching)
 * **백트래킹(Backtracking)** - 모든 가능한 경우를 고려한다는 점에서 브루트 포스와 유사합니다. 하지만 다음 단계로 넘어갈때 마다 모든 조건을 만족했는지 확인하고 진행합니다. 만약 조건을 만족하지 못했다면 뒤로 돌아갑니다 (백트래킹). 그리고 다른 경로를 선택합니다. 보통 상태를  유지한 DFS 탐색을 많이 사용합니다.
   * `B` [점프 게임](src/algorithms/uncategorized/jump-game)
-  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
+  * `B` [Unique 경로](src/algorithms/uncategorized/unique-paths) - 백트래킹, 동적계획법, 파스칼 삼각형에 기반한 예제
   * `A` [해밀턴 경로](src/algorithms/graph/hamiltonian-cycle) - 모든 점을 한번씩 방문
-  * `A` [N-Queens 문제](src/algorithms/uncategorized/n-queens)
-  * `A` [기사의 여행](src/algorithms/uncategorized/knight-tour)
+  * `A` [N개의 퀸 문제](src/algorithms/uncategorized/n-queens) - NXN 체스판에 N개의 퀸을 배치하는 문제
+  * `A` [기사의 여행 문제](src/algorithms/uncategorized/knight-tour) - 체스 보드의 기사 말에 대한 수학적 알고리즘
   * `A` [조합 합](src/algorithms/sets/combination-sum) - 특정 합을 구성하는 모든 조합 찾기
 * **분기 한정법** - 백트래킹으로 찾은 각 단계의 최소 비용 해결법을 기억해 두고 있다가, 이 비용을 이용해서 더 낮은 최소 비용을 찾습니다. 기억해둔 최소 비용을 이용해 더 높은 비용이 드는 해결법은 더이상 탐색하지 않습니다. 보통 상태 정보를 사진 DFS 를 이용한 BFS 방식에서 사용됩니다.
 
