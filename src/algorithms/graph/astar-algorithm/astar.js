@@ -6,14 +6,14 @@ import PriorityQueue from '../../../data-structures/priority-queue/PriorityQueue
  */
 
 // calculate heuristic cost(number of hop from start to end)
-function heuristicCost(graph, startNode, endNode){
+function heuristicCost(graph, startNode, endNode) {
   const arr = [];
-  const count = 1;
+  let count = 1;
   graph.getNeighbors(startNode).forEach((vertex) => {
     arr.push(vertex);
   });
-  while(true){
-    if(arr.indexOf(endNode)!=-1){
+  while (true) {
+    if (arr.indexOf(endNode)!==-1) {
       break;
     }
     arr.forEach((vertex) => {
@@ -33,7 +33,7 @@ export default function astar(graph, startVertex, endVertex) {
   const previousVertices = {};
   const closed = {};
   const open = new PriorityQueue();
-  const currentVertex = null;
+  let currentVertex = null;
   // Init all distances with infinity assuming that currently we can't reach
   // any of the vertices except start one.
   graph.getAllVertices().forEach((vertex) => {
@@ -47,19 +47,19 @@ export default function astar(graph, startVertex, endVertex) {
   // Init vertices queue.
   open.add(startVertex, distances[startVertex.getKey] + heuristic[startVertex.getKey()]);
   while (!open.isEmpty()) {
-    while(1){
+    while (true) {
       currentVertex = open.poll();
+      const currentKey = currentVertex.getKey();
       open.remove(currentVertex);
-      if (!closed[currentVertex.getKey()]){
+      if (!closed[currentVertex.getKey()]) {
         break;
-      }else if (closed[currentVertex.getKey()] > distances[currentVertex.getKey()] + heuristic[currentVertex.getKey()]){
-        closed[currentVertex.getKey()] = distances[currentVertex.getKey()] + heuristic[currentVertex.getKey()];
+      }else if (closed[currentKey] > distances[currentKey] + heuristic[currentKey]){
+        closed[currentKey] = distances[currentKey] + heuristic[currentKey];
         break;
       }
     }
     // Add current vertex to visited ones.
-    closed[currentVertex.getKey()] = currentVertex;
-    heuristic[currentVertex.getKey()] = distances[currentVertex.getKey()] + heuristic[currentVertex.getKey()];
+    closed[currentVertex.getKey()] = distances[currentVertex.getKey()];
     graph.getNeighbors(currentVertex).forEach((neighbor) => {
       // Update distances to every neighbor from current vertex.
       const edge = graph.findEdge(currentVertex, neighbor);
