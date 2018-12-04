@@ -50,7 +50,7 @@ export default function astar(graph, startVertex, endVertex) {
       open.remove(currentVertex);
       if (!closed[currentVertex.getKey()]) {
         break;
-      } else if (closed[currentKey] > distances[currentKey] + heuristic[currentKey]){
+      } else if (closed[currentKey] > distances[currentKey] + heuristic[currentKey]) {
         closed[currentKey] = distances[currentKey] + heuristic[currentKey];
         break;
       }
@@ -83,4 +83,3 @@ export default function astar(graph, startVertex, endVertex) {
     previousVertices,
   };
 }
-
