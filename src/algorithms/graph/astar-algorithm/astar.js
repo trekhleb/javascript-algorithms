@@ -1,10 +1,8 @@
 import PriorityQueue from '../../../data-structures/priority-queue/PriorityQueue';
-
 /**
  * @param {Graph} graph
  * @param {GraphVertex} startVertex
  */
-
 // calculate heuristic cost(number of hop from start to end)
 function heuristicCost(graph, startNode, endNode) {
   const arr = [];
@@ -13,7 +11,7 @@ function heuristicCost(graph, startNode, endNode) {
     arr.push(vertex);
   });
   while (true) {
-    if (arr.indexOf(endNode)!==-1) {
+    if (arr.indexOf(endNode) !== -1) {
       break;
     }
     arr.forEach((vertex) => {
@@ -26,7 +24,6 @@ function heuristicCost(graph, startNode, endNode) {
   }
   return count;
 }
-
 export default function astar(graph, startVertex, endVertex) {
   const distances = {};
   const heuristic = {};
@@ -45,7 +42,7 @@ export default function astar(graph, startVertex, endVertex) {
   distances[startVertex.getKey()] = 0;
   heuristic[startVertex.getKey()] = 0;
   // Init vertices queue.
-  open.add(startVertex, distances[startVertex.getKey] + heuristic[startVertex.getKey()]);
+  open.add(startVertex, distances[startVertex.getKey()] + heuristic[startVertex.getKey()]);
   while (!open.isEmpty()) {
     while (true) {
       currentVertex = open.poll();
@@ -53,7 +50,7 @@ export default function astar(graph, startVertex, endVertex) {
       open.remove(currentVertex);
       if (!closed[currentVertex.getKey()]) {
         break;
-      }else if (closed[currentKey] > distances[currentKey] + heuristic[currentKey]){
+      } else if (closed[currentKey] > distances[currentKey] + heuristic[currentKey]){
         closed[currentKey] = distances[currentKey] + heuristic[currentKey];
         break;
       }
@@ -65,18 +62,19 @@ export default function astar(graph, startVertex, endVertex) {
       const edge = graph.findEdge(currentVertex, neighbor);
       const existingDistanceToNeighbor = distances[neighbor.getKey()];
       const distanceToNeighborFromCurrent = distances[currentVertex.getKey()] + edge.weight;
+      const neighborKey = neighbor.getKey();
       if (distanceToNeighborFromCurrent < existingDistanceToNeighbor) {
-        distances[neighbor.getKey()] = distanceToNeighborFromCurrent;
+        distances[neighborKey] = distanceToNeighborFromCurrent;
         // Change priority.
         if (open.hasValue(neighbor)) {
-          open.changePriority(neighbor, distances[neighbor.getKey()] + heuristic[neighbor.getKey()]);
+          open.changePriority(neighbor, distances[neighborKey] + heuristic[neighborKey]);
         }
         // Remember previous vertex.
-        previousVertices[neighbor.getKey()] = currentVertex;
+        previousVertices[neighborKey] = currentVertex;
       }
       // Add neighbor to the queue for further visiting.
       if (!open.hasValue(neighbor)) {
-        open.add(neighbor, distances[neighbor.getKey()] + heuristic[neighbor.getKey()]);
+        open.add(neighbor, distances[neighborKey] + heuristic[neighborKey]);
       }
     });
   }
