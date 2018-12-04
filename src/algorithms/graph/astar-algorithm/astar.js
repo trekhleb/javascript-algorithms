@@ -33,7 +33,7 @@ export default function astar(graph, startVertex, endVertex) {
   const previousVertices = {};
   const closed = {};
   const open = new PriorityQueue();
-  const currentVertex;
+  const currentVertex = null;
   // Init all distances with infinity assuming that currently we can't reach
   // any of the vertices except start one.
   graph.getAllVertices().forEach((vertex) => {
