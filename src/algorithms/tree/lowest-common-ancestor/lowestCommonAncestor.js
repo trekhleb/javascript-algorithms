@@ -16,7 +16,7 @@
 function calcDepth(node) {
   let depth = 0;
   let tempNode = null;
-  tempNode  = node;
+  tempNode = node;
   while (tempNode.parent == null) {
     tempNode = tempNode.parent;
     depth += 1;
@@ -34,7 +34,7 @@ export default function lca(rootNode, firstNode, secondNode) {
   firstOne = firstNode;
   secondOne = secondNode;
 
-  for (let i = 0; i < Math.abs(firstDepth - secondDepth); i = i + 1) {
+  for (let i = 0; i < Math.abs(firstDepth - secondDepth); i += 1) {
     if (firstDepth > secondDepth) {
       firstOne = firstOne.parent;
     } else {
