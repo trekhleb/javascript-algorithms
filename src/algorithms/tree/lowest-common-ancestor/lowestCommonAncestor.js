@@ -15,8 +15,10 @@
  */
 function calcDepth(node) {
   let depth = 0;
-  while (node.parent == null) {
-    node = node.parent;
+  let tempNode = null;
+  tempNode  = node;
+  while (tempNode.parent == null) {
+    tempNode = tempNode.parent;
     depth += 1;
   }
 
@@ -27,9 +29,11 @@ function calcDepth(node) {
 export default function lca(rootNode, firstNode, secondNode) {
   const firstDepth = calcDepth(firstNode);
   const secondDepth = calcDepth(secondNode);
-  let firstOne = firstNode;
-  let secondOne = secondNode;
-  
+  let firstOne = null;
+  let secondOne = null;
+  firstOne = firstNode;
+  secondOne = secondNode;
+
   for (let i = 0; i < Math.abs(firstDepth - secondDepth); i = i + 1) {
     if (firstDepth > secondDepth) {
       firstOne = firstOne.parent;
@@ -38,8 +42,9 @@ export default function lca(rootNode, firstNode, secondNode) {
     }
   }
 
-  if (firstNode === secondNode)
+  if (firstNode === secondNode) {
     return firstOne;
+  }
 
   while (firstOne !== secondOne) {
     firstOne = firstOne.parent;
