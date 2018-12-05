@@ -53,4 +53,3 @@ export default function lca(rootNode, firstNode, secondNode) {
 
   return firstOne;
 }
-
