@@ -28,7 +28,7 @@ export default function lca(rootNode, firstNode, secondNode) {
 	const firstDepth = calcDepth(firstNode);
 	const secondDepth = calcDepth(secondNode);
 	
-	for (int i = 0; i < Math.abs(firstDepth - secondDepth); i++) {
+	for (let i = 0; i < Math.abs(firstDepth - secondDepth); i++) {
 		if (firstDepth > secondDepth) 
 			firstNode = firstNode.parent;
 		else
