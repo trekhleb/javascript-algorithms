@@ -13,7 +13,7 @@
  * @param {BinaryTreeNode} rootNode
  * @param {Callbacks} [originalCallbacks]
  */
-function calcDepth = var function(node) {
+function calcDepth(node) {
   let depth = 0;
   while (node.parent == null) {
     node = node.parent;
