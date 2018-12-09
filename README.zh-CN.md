@@ -31,7 +31,7 @@ _Read this in other languages:_
 * `B` [哈希表](src/data-structures/hash-table/README.zh-CN.md)
 * `B` [堆](src/data-structures/heap/README.zh-CN.md) - 最大堆 & 最小堆
 * `B` [优先队列](src/data-structures/priority-queue/README.zh-CN.md)
-* `A` [字典树](src/data-structures/trie)
+* `A` [字典树](src/data-structures/trie/README.zh-CN.md)
 * `A` [树](src/data-structures/tree/README.zh-CN.md)
   * `A` [二叉查找树](src/data-structures/tree/binary-search-tree)
   * `A` [AVL 树](src/data-structures/tree/avl-tree)
