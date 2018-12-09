@@ -103,19 +103,31 @@ remove(value)
     else
       parent.right ← nodeToRemove.right
     end if
-  else if nodeToRemove.left = ø and nodeToRemove.right = ø
-   if nodeToRemove.value < parent.value
-     parent.left ←  nodeToRemove.left
-   else
-     parent.right ← nodeToRemove.left
-   end if
+  else if nodeToRemove.left != ø and nodeToRemove.right != ø
+    next ← nodeToRemove.right
+    while next.left != ø
+      next ← next.left
+    end while
+    if next != nodeToRemove.right
+      remove(next.value)
+      nodeToRemove.value ← next.value
+    else
+      nodeToRemove.value ← next.value
+      nodeToRemove.right ← nodeToRemove.right.right
+    end if
   else
-   largestValue ← nodeToRemove.left
-   while largestValue.right = ø
-     largestValue ← largestValue.right
-   end while
-   findParent(largestValue.value).right ← ø
-   nodeToRemove.value ← largestValue.value
+    if nodeToRemove.left = ø
+      next ← nodeToRemove.right
+    else
+      next ← nodeToRemove.left
+    end if
+    if root = nodeToRemove
+      root = next
+    else if parent.left = nodeToRemove
+      parent.left = next
+    else if parent.right = nodeToRemove
+      parent.right = next
+    end if
   end if
   count ← count - 1
   return true
