@@ -245,6 +245,7 @@ describe('DoublyLinkedList', () => {
 
     // Reverse linked list.
     linkedList.reverse();
+
     expect(linkedList.toString()).toBe('4,3,2,1');
 
     expect(linkedList.head.previous).toBeNull();
@@ -261,6 +262,7 @@ describe('DoublyLinkedList', () => {
 
     // Reverse linked list back to initial state.
     linkedList.reverse();
+
     expect(linkedList.toString()).toBe('1,2,3,4');
 
     expect(linkedList.head.previous).toBeNull();
