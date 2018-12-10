@@ -3,7 +3,6 @@
 [![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
-
 このリポジトリには、JavaScriptベースの多数のサンプル
 一般的なアルゴリズムとデータ構造。
 
@@ -72,7 +71,7 @@ _Read this in other languages:_
   * `A` [整数パーティション](src/algorithms/math/integer-partition)
   * `A` [Liu Hui π アルゴリズム](src/algorithms/math/liu-hui) - N-gonsに基づく近似π計算
   * `A` [離散フーリエ変換](src/algorithms/math/fourier-transform) - 時間（信号）の関数をそれを構成する周波数に分解する
-  * **セット**
+* **セット**
   * `B` [デカルト積 ](src/algorithms/sets/cartesian-product) - 複数の積の積
   * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - 有限シーケンスのランダム置換
   * `A` [パワーセット](src/algorithms/sets/power-set) - セットのすべてのサブセット（ビットごとのソリューションとバックトラッキングソリューション）
@@ -84,7 +83,7 @@ _Read this in other languages:_
   * `A` [ナップザック問題 ](src/algorithms/sets/knapsack-problem) - 「0/1」と「非結合」問題
   * `A` [最大サブアレイ](src/algorithms/sets/maximum-subarray) - 「ブルートフォース」と「ダイナミックプログラミング」（Kadane's版）
   * `A` [組み合わせ合計](src/algorithms/sets/combination-sum) - 特定の合計を構成するすべての組み合わせを見つける
-  * **文字列**
+* **文字列**
   * `B` [ハミング距離](src/algorithms/string/hamming-distance) - シンボルが異なる位置の数
   * `A` [レーベンシュタイン距離](src/algorithms/string/levenshtein-distance) - 2つのシーケンス間の最小編集距離
   * `A` [Knuth-Morris-Prattアルゴリズム](src/algorithms/string/knuth-morris-pratt) (KMP Algorithm) - 部分文字列検索 (pattern matching)
@@ -92,12 +91,12 @@ _Read this in other languages:_
   * `A` [Rabin Karpアルゴリズム](src/algorithms/string/rabin-karp) - 部分文字列検索
   * `A` [最長共通部分文字列](src/algorithms/string/longest-common-substring)
   * `A` [正規表現マッチング](src/algorithms/string/regular-expression-matching)
-  * **検索**
+* **検索**
   * `B` [リニアサーチ](src/algorithms/search/linear-search)
   * `B` [ジャンプ検索](src/algorithms/search/jump-search) (or Block Search) - ソートされた配列で検索
   * `B` [バイナリ検索](src/algorithms/search/binary-search) - ソートされた配列で検索
   * `B` [補間探索](src/algorithms/search/interpolation-search) - 一様分布のソート配列で検索する
-  * **並べ替え**
+* **並べ替え**
   * `B` [バブルソート](src/algorithms/sorting/bubble-sort)
   * `B` [選択ソート](src/algorithms/sorting/selection-sort)
   * `B` [挿入ソート](src/algorithms/sorting/insertion-sort)
@@ -107,13 +106,13 @@ _Read this in other languages:_
   * `B` [シェルソート](src/algorithms/sorting/shell-sort)
   * `B` [並べ替えを数える](src/algorithms/sorting/counting-sort)
   * `B` [基数ソート](src/algorithms/sorting/radix-sort)
-  * **リンクされたリスト**
+* **リンクされたリスト**
   * `B` [ストレートトラバーサル](src/algorithms/linked-list/traversal)
   * `B` [逆方向のトラバーサル](src/algorithms/linked-list/reverse-traversal)
-  * **ツリー**
+* **ツリー**
   * `B` [深度優先検索](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [幅優先検索](src/algorithms/tree/breadth-first-search) (BFS)
-  * **グラフ**
+* **グラフ**
   * `B` [深度優先検索](src/algorithms/graph/depth-first-search) (DFS)
   * `B` [幅優先検索](src/algorithms/graph/breadth-first-search) (BFS)
   * `B` [Kruskalのアルゴリズム](src/algorithms/graph/kruskal) - 重み付き無向グラフの最小スパニングツリー（MST）の発見 
@@ -129,9 +128,9 @@ _Read this in other languages:_
   * `A` [ハミルトニアンサイクル](src/algorithms/graph/hamiltonian-cycle) - すべての頂点を正確に1回訪問する
   * `A` [強連結成分](src/algorithms/graph/strongly-connected-components) - コサラジュのアルゴリズム
   * `A` [トラベリングセールスマン問題](src/algorithms/graph/travelling-salesman) - 各都市を訪問し、起点都市に戻る最短経路
-  * **暗号**
+* **暗号**
   * `B` [多項式ハッシュ](src/algorithms/cryptography/polynomial-hash) - 関数多項式に基づくハッシュ関数
-  * **未分類**
+* **未分類**
   * `B` [ハノイの塔](src/algorithms/uncategorized/hanoi-tower)
   * `B` [正方行列回転](src/algorithms/uncategorized/square-matrix-rotation) - インプレイスアルゴリズム
   * `B` [ジャンプゲーム](src/algorithms/uncategorized/jump-game) - バックトラック、ダイナミックプログラミング（トップダウン+ボトムアップ）、欲張りの例
@@ -187,7 +186,7 @@ _Read this in other languages:_
   * `A` [Bellman-Fordアルゴリズム](src/algorithms/graph/bellman-ford) - すべてのグラフ頂点への最短経路を見つける
   * `A` [Floyd-Warshallアルゴリズム](src/algorithms/graph/floyd-warshall) - すべての頂点ペア間の最短経路を見つける
   * `A` [正規表現マッチング](src/algorithms/string/regular-expression-matching)
-  * **バックトラッキング** - ブルートフォースと同様に、可能なすべてのソリューションを生成しようとしますが、
+* **バックトラッキング** - ブルートフォースと同様に、可能なすべてのソリューションを生成しようとしますが、
   次のソリューションを生成するたびにすべての条件を満たすかどうかをテストし、それ以降は引き続きソリューションを生成します。
   それ以外の場合は、バックトラックして、解決策を見つける別の経路に進みます。
   通常、状態空間のDFSトラバーサルが使用されています。
