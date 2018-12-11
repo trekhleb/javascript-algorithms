@@ -14,14 +14,14 @@ _Read this in other languages:_
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
+[_日本語_](README.ja-JP.md),
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md)
 
-> We’re writing a book that will clearly explain, in detail, the main algorithms. 
-If you’d like to be notified when the “JavaScript Algorithms” book 
-launches, [click here](https://upscri.be/402324/).
+*☝ Note that this project is meant to be used for learning and researching purposes 
+only and it is **not** meant to be used for production.*
 
 ## Data Structures
 
@@ -37,7 +37,7 @@ the data.
 * `B` [Queue](src/data-structures/queue)
 * `B` [Stack](src/data-structures/stack)
 * `B` [Hash Table](src/data-structures/hash-table)
-* `B` [Heap](src/data-structures/heap)
+* `B` [Heap](src/data-structures/heap) - max and min heap versions
 * `B` [Priority Queue](src/data-structures/priority-queue)
 * `A` [Trie](src/data-structures/trie)
 * `A` [Tree](src/data-structures/tree)
@@ -62,7 +62,7 @@ a set of rules that precisely define a sequence of operations.
 * **Math**
   * `B` [Bit Manipulation](src/algorithms/math/bits) - set/get/update/clear bits, multiplication/division by two, make negative etc.
   * `B` [Factorial](src/algorithms/math/factorial) 
-  * `B` [Fibonacci Number](src/algorithms/math/fibonacci)
+  * `B` [Fibonacci Number](src/algorithms/math/fibonacci) - classic and closed-form versions
   * `B` [Primality Test](src/algorithms/math/primality-test) (trial division method)
   * `B` [Euclidean Algorithm](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
   * `B` [Least Common Multiple](src/algorithms/math/least-common-multiple) (LCM)
@@ -71,13 +71,14 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
   * `B` [Complex Number](src/algorithms/math/complex-number) - complex numbers and basic operations with them
   * `B` [Radian & Degree](src/algorithms/math/radian) - radians to degree and backwards conversion
+  * `B` [Fast Powering](src/algorithms/math/fast-powering)
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
-  * `A` [Fourier Transform (DFT, FFT)](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up 
+  * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up 
 * **Sets**
   * `B` [Cartesian Product](src/algorithms/sets/cartesian-product) - product of multiple sets
   * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
-  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set
+  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set (bitwise and backtracking solutions)
   * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
   * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
   * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
@@ -109,6 +110,9 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Shellsort](src/algorithms/sorting/shell-sort)
   * `B` [Counting Sort](src/algorithms/sorting/counting-sort)
   * `B` [Radix Sort](src/algorithms/sorting/radix-sort)
+* **Linked Lists**
+  * `B` [Straight Traversal](src/algorithms/linked-list/traversal)
+  * `B` [Reverse Traversal](src/algorithms/linked-list/reverse-traversal)
 * **Trees**
   * `B` [Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [Breadth-First Search](src/algorithms/tree/breadth-first-search) (BFS)
@@ -136,6 +140,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples 
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples 
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem (dynamic programming and brute force versions)
+  * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top (4 solutions)
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
 
@@ -148,6 +153,7 @@ algorithm is an abstraction higher than a computer program.
 * **Brute Force** - look at all the possibilities and selects the best solution
   * `B` [Linear Search](src/algorithms/search/linear-search)
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
+  * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
   * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up
@@ -167,6 +173,7 @@ algorithm is an abstraction higher than a computer program.
   * `B` [Tree Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [Graph Depth-First Search](src/algorithms/graph/depth-first-search) (DFS)
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
+  * `B` [Fast Powering](src/algorithms/math/fast-powering)
   * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
   * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
 * **Dynamic Programming** - build up a solution using previously found sub-solutions
@@ -174,6 +181,7 @@ algorithm is an abstraction higher than a computer program.
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
+  * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top
   * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
   * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
@@ -190,6 +198,7 @@ if it satisfies all conditions, and only then continue generating subsequent sol
 different path of finding a solution. Normally the DFS traversal of state-space is being used.
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
+  * `B` [Power Set](src/algorithms/sets/power-set) - all subsets of a set
   * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
@@ -244,7 +253,8 @@ npm test -- 'playground'
 
 ### Big O Notation
 
-Order of growth of algorithms specified in Big O notation.
+*Big O notation* is used to classify algorithms according to how their running time or space requirements grow as the input size grows.
+On the chart below you may find most common orders of growth of algorithms specified in Big O notation.
 
 ![Big O graphs](./assets/big-o-graph.png)
 

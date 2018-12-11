@@ -2,6 +2,9 @@ import LinkedList from '../linked-list/LinkedList';
 
 export default class Stack {
   constructor() {
+    // We're going to implement Stack based on LinkedList since these
+    // structures are quite similar. Compare push/pop operations of the Stack
+    // with prepend/deleteHead operations of LinkedList.
     this.linkedList = new LinkedList();
   }
 
@@ -9,7 +12,8 @@ export default class Stack {
    * @return {boolean}
    */
   isEmpty() {
-    return !this.linkedList.tail;
+    // The stack is empty if its linked list doesn't have a head.
+    return !this.linkedList.head;
   }
 
   /**
@@ -17,25 +21,31 @@ export default class Stack {
    */
   peek() {
     if (this.isEmpty()) {
+      // If the linked list is empty then there is nothing to peek from.
       return null;
     }
 
-    return this.linkedList.tail.value;
+    // Just read the value from the start of linked list without deleting it.
+    return this.linkedList.head.value;
   }
 
   /**
    * @param {*} value
    */
   push(value) {
-    this.linkedList.append(value);
+    // Pushing means to lay the value on top of the stack. Therefore let's just add
+    // the new value at the start of the linked list.
+    this.linkedList.prepend(value);
   }
 
   /**
    * @return {*}
    */
   pop() {
-    const removedTail = this.linkedList.deleteTail();
-    return removedTail ? removedTail.value : null;
+    // Let's try to delete the first node (the head) from the linked list.
+    // If there is no head (the linked list is empty) just return null.
+    const removedHead = this.linkedList.deleteHead();
+    return removedHead ? removedHead.value : null;
   }
 
   /**
@@ -44,8 +54,7 @@ export default class Stack {
   toArray() {
     return this.linkedList
       .toArray()
-      .map(linkedListNode => linkedListNode.value)
-      .reverse();
+      .map(linkedListNode => linkedListNode.value);
   }
 
   /**

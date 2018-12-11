@@ -15,13 +15,10 @@ _Leia isto em outros idiomas:_
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
+[_日本語_](README.ja-JP.md),
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md)
-
-> Nós estamos escrevendo um livro que explicará claramente, em datalhes, os principais algoritmos.
-Se você deseja ser notificado quando o livro "Algoritmos em JavaScript” 
-for lançado, [clique aqui](https://upscri.be/402324/).
 
 ## Data Structures
 
