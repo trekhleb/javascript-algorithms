@@ -22,11 +22,15 @@ export default class QuickSort extends Sort {
     // Take the median element of first, mid, and last elements.
     let pivotElement = array[0];
     const mid = Math.floor(array.length / 2);
-    if ((array[mid] < array[array.length - 1] && array[mid] > array[0])
-        || (array[mid] > array[array.length - 1] && array[mid] < array[0])) {
+    if ((this.comparator.lessThan(array[mid], array[array.length - 1])
+        && this.comparator.greaterThan(array[mid], array[0]))
+      || (this.comparator.greaterThan(array[mid], array[array.length - 1])
+        && this.comparator.lessThan(array[mid], array[0]))) {
       pivotElement = array[mid];
-    } else if ((array[array.length - 1] < array[mid] && array[array.length - 1] > array[0])
-        || (array[array.length - 1] > array[mid] && array[array.length - 1] < array[0])) {
+    } else if ((this.comparator.lessThan(array[array.length - 1], array[mid])
+        && this.comparator.greaterThan(array[array.length - 1], array[0]))
+      || (this.comparator.greaterThan(array[array.length - 1], array[mid])
+        && this.comparator.lessThan(array[array.length - 1], array[0]))) {
       pivotElement = array[array.length - 1];
     }
 
