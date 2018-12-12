@@ -1,5 +1,5 @@
 /*  memoize function use a Map to store function arguments 
-    and results, which are returned if found inside cache */
+and results, which are returned if found inside cache */
 const memoize = (fn) => {
   const cache = new Map();
 
@@ -13,7 +13,7 @@ const memoize = (fn) => {
 };
 
 /*  fibonacci function decorated with the memoize function, every call 
-    will first pass through the cache before it's computed  */
+will first pass through the cache before it's computed  */
 const fibonacci = memoize((n) => {
   if (n === 0 || n === 1) return n;
 
