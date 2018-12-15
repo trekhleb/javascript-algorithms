@@ -15,6 +15,7 @@ _Lisez ceci dans d'autres langues:_
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
+[_日本語_](README.ja-JP.md),
 [_Polski_](README.pl-PL.md),
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md)

@@ -12,6 +12,7 @@ _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
+[_日本語_](README.ja-JP.md),
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
@@ -130,9 +131,7 @@ _Read this in other languages:_
 
 ### 패러다임별 알고리즘
 
-알고리즘의 패러다임은 어떤 종류의 알고리즘을 설계할 때 기초가 되는 일반적인 방법 혹은 접근법입니다.
-알고리즘이 컴퓨터의 프로그램 보다 더 추상적인 것처럼 알고리즘의 패러다임은 어떤 알고리즘의 
-개념보다 추상적인 것입니다.
+알고리즘 패러다임 이란, 알고리즘이 주어진 문제를 해결하기 위해 채택한 기초가 되는 일반적인 방법 혹은 접근법입니다. 알고리즘이 해결하는 문제나 알고리즘의 동작 방식이 완전히 다르더라도,알고리즘의 동작 원칙이 같으면 같은 패러다음을 사용했다고 말할 수 있으며, 주로 알고리즘을 구분하는 기준으로 쓰인다. 알고리즘이 일반적인 컴퓨터의 프로그램에 대한 개념보다 보다 더 추상적인 개념인 것처럼 알고리즘의 패러다임은 명확히 정의된 수학적 실체가 있는 것이 아니기 때문에 그 어떤 알고리즘의 개념보다도 훨씬 추상적인 개념이다.
 
 * **브루트 포스(Brute Force)** - 가능한 모든 경우를 탐색한 뒤 최적을 찾아내는 방식입니다.
   * `B` [선형 탐색](src/algorithms/search/linear-search)
@@ -180,11 +179,11 @@ _Read this in other languages:_
   * `A` [N-Queens 문제](src/algorithms/uncategorized/n-queens)
   * `A` [기사의 여행](src/algorithms/uncategorized/knight-tour)
   * `A` [조합 합](src/algorithms/sets/combination-sum) - 특정 합을 구성하는 모든 조합 찾기
-* **분기 한정법** - 백트래킹으로 찾은 각 단계의 최소 비용 해결법을 기억해 두고 있다가, 이 비용을 이용해서 더 낮은 최소 비용을 찾습니다. 기억해둔 최소 비용을 이용해 더 높은 비용이 드는 해결법은 더이상 탐색하지 않습니다. 보통 상태 정보를 사진 DFS 를 이용한 BFS 방식에서 사용됩니다.
+* **분기 한정법** - 백트래킹으로 찾은 각 단계의 최소 비용이 드는 해를 기억해 두고 있다가, 이 비용을 이용해서 더 낮은 최적의 해를 찾습니다. 기억해둔 최소 비용들을 이용해 더 높은 비용이 드는 해결법을 탐색 안함으로써 불필요한 시간 소모를 줄입니다. 보통 상태 공간 트리의 DFS 탐색을 이용한 BFS 탐색 방식에서 사용됩니다.
 
 ## 이 저장소의 사용법
 
-**모든 의존성 설치**
+**모든 종속 모듈들 설치**
 ```
 npm install
 ```
