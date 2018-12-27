@@ -1,6 +1,7 @@
 # Linked List
 
 _Read this in other languages:_
+[_简体中文_](README.zh-CN.md),
 [_Русский_](README.ru-RU.md)
 
 In computer science, a **linked list** is a linear collection 

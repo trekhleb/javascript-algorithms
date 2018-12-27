@@ -17,7 +17,7 @@
 (и затруднительно для реализации конвейеров). Быстрый доступ(случайный)
 невозможен.
 
-![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+![Связный список](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
 ## Псевдокод основных операций
 
