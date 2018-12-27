@@ -1,5 +1,8 @@
 # Linked List
 
+_Read this in other languages:_
+[_Русский_](README.ru-RU.md)
+
 In computer science, a **linked list** is a linear collection 
 of data elements, in which linear order is not given by 
 their physical placement in memory. Instead, each 
