@@ -1,5 +1,8 @@
 # Factorial
 
+_Read this in other languages:_
+[_简体中文_](README.zh-CN.md),
+
 In mathematics, the factorial of a non-negative integer `n`, 
 denoted by `n!`, is the product of all positive integers less 
 than or equal to `n`. For example:
