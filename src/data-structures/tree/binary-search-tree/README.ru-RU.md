@@ -1,38 +1,37 @@
-# Binary Search Tree
+# Двоичное дерево поиска
 
-_Read this in other languages:_
-[_Русский_](README.ru-RU.md)
+Двоичное дерево — иерархическая структура данных, в которой каждый узел имеет не более двух потомков (детей). Как
+правило, первый называется родительским узлом, а дети называются левым и правым наследниками. Двоичное дерево не
+является упорядоченным ориентированным деревом.
 
-In computer science, **binary search trees** (BST), sometimes called 
-ordered or sorted binary trees, are a particular type of container: 
-data structures that store "items" (such as numbers, names etc.) 
-in memory. They allow fast lookup, addition and removal of 
-items, and can be used to implement either dynamic sets of 
-items, or lookup tables that allow finding an item by its key 
-(e.g., finding the phone number of a person by name).
+Двоичное дерево поиска — это двоичное дерево, для которого выполняются следующие дополнительные условия (свойства дерева
+поиска):
 
-Binary search trees keep their keys in sorted order, so that lookup 
-and other operations can use the principle of binary search: 
-when looking for a key in a tree (or a place to insert a new key), 
-they traverse the tree from root to leaf, making comparisons to 
-keys stored in the nodes of the tree and deciding, on the basis 
-of the comparison, to continue searching in the left or right 
-subtrees. On average, this means that each comparison allows 
-the operations to skip about half of the tree, so that each 
-lookup, insertion or deletion takes time proportional to the 
-logarithm of the number of items stored in the tree. This is 
-much better than the linear time required to find items by key 
-in an (unsorted) array, but slower than the corresponding 
-operations on hash tables.
+* Оба поддерева — левое и правое — являются двоичными деревьями поиска,
+* У всех узлов левого поддерева произвольного узла X значения ключей данных меньше, нежели значение ключа данных самого
+узла X,
+* У всех узлов правого поддерева произвольного узла X значения ключей данных больше либо равны, нежели значение ключа
+данных самого узла X.
 
-A binary search tree of size 9 and depth 3, with 8 at the root.
-The leaves are not drawn.
+Двоичное дерево поиска позволяет осуществлять быстрый поиск, добавление и удаление элементов и может использоваться для
+реализации либо динамических наборов элементов, либо таблиц поиска, которые позволяют найти элемент по его ключу
+(например, найти номер телефона человека по имени).
 
-![Binary Search Tree](https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg)
+Двоичное дерево поиска хранит свои ключи в отсортированном порядке, так что поиск и другие операции могут использовать
+принцип бинарного поиска: при поиске ключа в дереве (или места для вставки нового ключа) происходит обход дерева от корня
+до листа. В процессе обхода сопоставляются ключи хранящиеся в узлах дерева, и принимается решение - продолжить поиск в
+левом или правом поддеревьях. В среднем это означает, что каждое сравнение позволяет операциям пропустить около половины
+дерева. Так что каждый поиск, вставка или удаление занимает время, пропорциональное логарифму числа элементов,
+хранящихся в дереве. Это намного лучше, чем линейное время, необходимое для поиска элементов по ключу в
+(несортированном) массиве. Но медленнее, чем соответствующие операции с хеш-таблицами.
 
-## Pseudocode for Basic Operations
+Двоичное дерево поиска размером 9 и глубиной 3, 8 в корне. 
 
-### Insertion
+![Двоичное дерево поиска](https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg)
+
+## Псевдокод базовых операций
+
+### Вставка
 
 ```text
 insert(value)
@@ -66,7 +65,7 @@ insertNode(current, value)
 end insertNode
 ```
 
-### Searching
+### Поиск
 
 ```text
 contains(root, value)
@@ -86,7 +85,7 @@ end contains
 ```
     
      
-### Deletion
+### Удаление
 
 ```text
 remove(value)
@@ -137,7 +136,7 @@ remove(value)
 end remove
 ```
 
-### Find Parent of Node
+### Поиск родителя
 
 ```text
 findParent(value, root)
@@ -167,7 +166,7 @@ findParent(value, root)
 end findParent
 ```
 
-### Find Node
+### Поиск узла
 
 ```text
 findNode(root, value)
@@ -187,7 +186,7 @@ findNode(root, value)
 end findNode
 ```
     
-### Find Minimum
+### Поиск минимума
 
 ```text
 findMin(root)
@@ -201,7 +200,7 @@ findMin(root)
 end findMin
 ```
     
-### Find Maximum
+### Поиск максимума
 
 ```text
 findMax(root)
@@ -215,9 +214,9 @@ findMax(root)
 end findMax
 ```
     
-### Traversal
+### Обход
 
-#### InOrder Traversal
+#### Симметричный обход
 
 ```text
 inorder(root)
@@ -231,7 +230,7 @@ inorder(root)
 end inorder
 ```
 
-#### PreOrder Traversal
+#### Прямой обход
 
 ```text
 preorder(root)
@@ -245,7 +244,7 @@ preorder(root)
 end preorder
 ```
    
-#### PostOrder Traversal
+#### Обратный обход
 
 ```text
 postorder(root)
@@ -259,20 +258,19 @@ postorder(root)
 end postorder
 ```
      
-## Complexities
+## Сложность
 
-### Time Complexity
+### Временная сложность
 
 | Access    | Search    | Insertion | Deletion  |
 | :-------: | :-------: | :-------: | :-------: |
 | O(log(n)) | O(log(n)) | O(log(n)) | O(log(n)) |
 
-### Space Complexity
+### Пространственная сложность
 
 O(n)
 
-## References
+## Ссылки
 
-- [Wikipedia](https://en.wikipedia.org/wiki/Binary_search_tree)
-- [Inserting to BST on YouTube](https://www.youtube.com/watch?v=wcIRPqTR3Kc&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=9&t=0s)
-- [BST Interactive Visualisations](https://www.cs.usfca.edu/~galles/visualization/BST.html)
+- [Wikipedia](https://ru.wikipedia.org/wiki/%D0%94%D0%B2%D0%BE%D0%B8%D1%87%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE_%D0%BF%D0%BE%D0%B8%D1%81%D0%BA%D0%B0)
+- [YouTube](https://www.youtube.com/watch?v=VddwdRVYpuw)
