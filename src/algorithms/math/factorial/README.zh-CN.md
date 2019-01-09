@@ -1,11 +1,6 @@
-# Factorial
+# 阶乘
 
-_Read this in other languages:_
-[_简体中文_](README.zh-CN.md),
-
-In mathematics, the factorial of a non-negative integer `n`, 
-denoted by `n!`, is the product of all positive integers less 
-than or equal to `n`. For example:
+在数学上, 一个正整数 `n` 的阶乘 (写作 `n!`), 就是所有小于等于 `n` 的正整数的乘积. 比如:
 
 ```
 5! = 5 * 4 * 3 * 2 * 1 = 120
@@ -30,6 +25,3 @@ than or equal to `n`. For example:
 | 14    | 87 178 291 200              |
 | 15    | 1 307 674 368 000           |
 
-## References
-
-[Wikipedia](https://en.wikipedia.org/wiki/Factorial)
