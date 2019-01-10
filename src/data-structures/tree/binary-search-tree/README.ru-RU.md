@@ -262,7 +262,7 @@ end postorder
 
 ### Временная сложность
 
-| Access    | Search    | Insertion | Deletion  |
+| Чтение    | Поиск     | Вставка   | Удаление  |
 | :-------: | :-------: | :-------: | :-------: |
 | O(log(n)) | O(log(n)) | O(log(n)) | O(log(n)) |
 

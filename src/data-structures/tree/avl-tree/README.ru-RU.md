@@ -20,17 +20,17 @@
 Большое левое вращение. Данное вращение используется тогда, когда (высота b-поддерева — высота L) = 2 и высота
 с-поддерева > высота R.
 
-![АВЛ дерево](https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:AVL_BR.GIF)
+![АВЛ дерево](https://upload.wikimedia.org/wikipedia/ru/1/16/AVL_BR.GIF)
 
 Малое правое вращение. Данное вращение используется тогда, когда (высота b-поддерева — высота R) = 2 и высота
 С <= высота L.
 
-![АВЛ дерево](https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:AVL_LL.GIF)
+![АВЛ дерево](https://upload.wikimedia.org/wikipedia/ru/e/e8/AVL_LL.GIF)
 
 Большое правое вращение. Данное вращение используется тогда, когда (высота b-поддерева — высота R) = 2 и высота
 c-поддерева > высота L.
 
-![АВЛ дерево](https://ru.wikipedia.org/wiki/%D0%A4%D0%B0%D0%B9%D0%BB:AVL_BL.GIF)
+![АВЛ дерево](https://upload.wikimedia.org/wikipedia/ru/7/74/AVL_BL.GIF)
 
 ## Ссылки
 
