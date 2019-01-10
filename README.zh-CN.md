@@ -53,7 +53,7 @@ _Read this in other languages:_
 
 * **数学**
   * `B` [Bit 操控](src/algorithms/math/bits) - set/get/update/clear 位、乘以/除以二进制位 、变负等
-  * `B` [阶乘](src/algorithms/math/factorial)
+  * `B` [阶乘](src/algorithms/math/factorial/README.zh-CN.md)
   * `B` [斐波那契数](src/algorithms/math/fibonacci) - `经典` 和 `闭式` 版本
   * `B` [素数检测](src/algorithms/math/primality-test) (排除法)
   * `B` [欧几里得算法](src/algorithms/math/euclidean-algorithm) - 计算最大公约数 (GCD)
