@@ -154,6 +154,47 @@ end ReverseTraversal
 
 O(n)
 
+
+### Examples
+Some of real live usages are liste below:
+
+  - Snake Game
+    You start the game with one node on the list which in thime and place is both the head and tail
+
+      [] <- (single node)
+
+    As the snake keeps eating those items are being added to the tail, and as such, becoming the tail for the list
+
+     (food)-> *  [] <-(snake)
+                /  \ 
+              head tail
+
+        [][] (snake has eaten and it grew by one)
+        /  \
+      head tail
+
+    And so on and so forth
+      (food)-> *  [][] <-(snake)
+                  /   \ 
+                head  tail
+
+          [][][] (snake has eaten and it grew by one)
+          /     \
+        head   tail
+
+
+
+      (food)-> *  [][][] <-(snake)
+                  /     \ 
+                head    tail
+
+          [][][][] (snake has eaten and it grew by one)
+          /       \
+        head     tail
+
+  
+  
+ 
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
