@@ -156,7 +156,7 @@ O(n)
 
 
 ### Examples
-Some of real live usages are liste below:
+Some of real live usages are listed below:
 
   - Snake Game
     You start the game with one node on the list which in thime and place is both the head and tail
