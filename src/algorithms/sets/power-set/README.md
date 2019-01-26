@@ -47,6 +47,17 @@ what we need: it shows by its bits (`0` or `1`) whether to include related
 element from the set or not. For example, for the set `{1, 2, 3}` the binary 
 number of `0b010` would mean that we need to include only `2` to the current set.
 
+|       | `abc` | Subset        |
+| :---: | :---: | :-----------: |
+| `0`   | `000` | `{}`          |
+| `1`   | `001` | `{c}`         |
+| `2`   | `010` | `{b}`         | 
+| `3`   | `011` | `{c, b}`      |
+| `4`   | `100` | `{a}`         |
+| `5`   | `101` | `{a, c}`      |
+| `6`   | `110` | `{a, b}`      |
+| `7`   | `111` | `{a, b, c}`   |
+
 > See [bwPowerSet.js](./bwPowerSet.js) file for bitwise solution.
 
 ### Backtracking Solution

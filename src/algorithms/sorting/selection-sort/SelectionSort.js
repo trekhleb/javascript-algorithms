@@ -23,9 +23,7 @@ export default class SelectionSort extends Sort {
 
       // If new minimum element has been found then swap it with current i-th element.
       if (minIndex !== i) {
-        const tmp = array[i];
-        array[i] = array[minIndex];
-        array[minIndex] = tmp;
+        [array[i], array[minIndex]] = [array[minIndex], array[i]];
       }
     }
 

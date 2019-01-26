@@ -14,13 +14,14 @@ export default function permutateWithRepetitions(
   // Init permutations array.
   const permutations = [];
 
+  // Get smaller permutations.
+  const smallerPermutations = permutateWithRepetitions(
+    permutationOptions,
+    permutationLength - 1,
+  );
+
   // Go through all options and join it to the smaller permutations.
   permutationOptions.forEach((currentOption) => {
-    const smallerPermutations = permutateWithRepetitions(
-      permutationOptions,
-      permutationLength - 1,
-    );
-
     smallerPermutations.forEach((smallerPermutation) => {
       permutations.push([currentOption].concat(smallerPermutation));
     });

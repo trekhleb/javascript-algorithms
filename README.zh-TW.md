@@ -10,6 +10,7 @@ _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
 [_简体中文_](README.zh-CN.md),
 [_한국어_](README.ko-KR.md),
+[_日本語_](README.ja-JP.md),
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),

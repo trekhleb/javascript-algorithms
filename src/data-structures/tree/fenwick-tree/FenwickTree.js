@@ -60,7 +60,7 @@ export default class FenwickTree {
    */
   queryRange(leftIndex, rightIndex) {
     if (leftIndex > rightIndex) {
-      throw new Error('Left index can not be greater then right one');
+      throw new Error('Left index can not be greater than right one');
     }
 
     if (leftIndex === 1) {
