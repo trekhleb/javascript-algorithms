@@ -36,7 +36,7 @@ _Read this in other languages:_
 * `B` [ヒープ](src/data-structures/heap) - max and min heap versions
 * `B` [優先度キュー](src/data-structures/priority-queue)
 * `A` [トライ](src/data-structures/trie)
-* `A` [リー](src/data-structures/tree)
+* `A` [ツリー](src/data-structures/tree)
   * `A` [バイナリ検索ツリー](src/data-structures/tree/binary-search-tree)
   * `A` [AVLツリー](src/data-structures/tree/avl-tree)
   * `A` [赤黒のリー](src/data-structures/tree/red-black-tree)
