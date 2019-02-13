@@ -46,6 +46,7 @@
     "eslint-plugin-jest": "^22.1.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
+    "fast-check": "^1.10.1",
     "jest": "^23.6.0",
     "pre-commit": "^1.2.2"
   },

@@ -1,40 +1,35 @@
+import fc from 'fast-check';
 import SimplePolynomialHash from '../SimplePolynomialHash';
 
-describe('PolynomialHash', () => {
+describe('SimplePolynomialHash', () => {
   it('should calculate new hash based on previous one', () => {
-    const bases = [3, 5];
-    const frameSizes = [5, 10];
+    fc.assert(
+      fc.property(
+        fc.constantFrom(3, 79, 101, 3251, 13229, 122743, 3583213),
+        fc.integer(1, 10),
+        fc.unicodeString(0, 100), // no surrogate pairs
+        (base, frameSize, text) => {
+          fc.pre(0xffff * (base ** (frameSize - 1)) < 0x7fffffff); // avoid overflows
+          const polynomialHash = new SimplePolynomialHash(base);
 
-    const text = 'Lorem Ipsum is simply dummy text of the printing and '
-      + 'typesetting industry. Lorem Ipsum has been the industry\'s standard '
-      + 'galley of type and \u{ffff} scrambled it to make a type specimen book. It '
-      + 'electronic 耀 typesetting, remaining essentially unchanged. It was '
-      + 'popularised in the 1960s with the release of Letraset sheets '
-      + 'publishing software like Aldus 耀 PageMaker including versions of Lorem.';
+          let previousWord = text.substr(0, frameSize);
+          let previousHash = polynomialHash.hash(previousWord);
 
-    // Check hashing for different prime base.
-    bases.forEach((base) => {
-      const polynomialHash = new SimplePolynomialHash(base);
+          // Shift frame through the whole text.
+          for (let frameShift = 1; frameShift < (text.length - frameSize); frameShift += 1) {
+            const currentWord = text.substr(frameShift, frameSize);
+            const currentHash = polynomialHash.hash(currentWord);
+            const currentRollingHash = polynomialHash.roll(previousHash, previousWord, currentWord);
 
-      // Check hashing for different word lengths.
-      frameSizes.forEach((frameSize) => {
-        let previousWord = text.substr(0, frameSize);
-        let previousHash = polynomialHash.hash(previousWord);
+            // Check that rolling hash is the same as directly calculated hash.
+            expect(currentRollingHash).toBe(currentHash);
 
-        // Shift frame through the whole text.
-        for (let frameShift = 1; frameShift < (text.length - frameSize); frameShift += 1) {
-          const currentWord = text.substr(frameShift, frameSize);
-          const currentHash = polynomialHash.hash(currentWord);
-          const currentRollingHash = polynomialHash.roll(previousHash, previousWord, currentWord);
-
-          // Check that rolling hash is the same as directly calculated hash.
-          expect(currentRollingHash).toBe(currentHash);
-
-          previousWord = currentWord;
-          previousHash = currentHash;
-        }
-      });
-    });
+            previousWord = currentWord;
+            previousHash = currentHash;
+          }
+        },
+      ),
+    );
   });
 
   it('should generate numeric hashed', () => {

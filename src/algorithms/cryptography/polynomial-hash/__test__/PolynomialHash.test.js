@@ -1,26 +1,18 @@
+import fc from 'fast-check';
 import PolynomialHash from '../PolynomialHash';
 
 describe('PolynomialHash', () => {
   it('should calculate new hash based on previous one', () => {
-    const bases = [3, 79, 101, 3251, 13229, 122743, 3583213];
-    const mods = [79, 101];
-    const frameSizes = [5, 20];
+    fc.assert(
+      fc.property(
+        fc.constantFrom(3, 79, 101, 3251, 13229, 122743, 3583213),
+        fc.integer(2, 0x7fffffff),
+        fc.integer(1, 50),
+        fc.unicodeString(0, 100), // no surrogate pairs
+        (base, modulus, frameSize, text) => {
+          fc.pre(base * modulus < 0x7fffffff); // avoid overflows
+          const polynomialHash = new PolynomialHash({ base, modulus });
 
-    // @TODO: Provide Unicode support.
-    const text = 'Lorem Ipsum is simply dummy text of the printing and '
-      + 'typesetting industry. Lorem Ipsum has been the industry\'s standard '
-      + 'galley of type and \u{ffff} scrambled it to make a type specimen book. It '
-      + 'electronic 耀 typesetting, remaining essentially unchanged. It was '
-      // + 'popularised in the \u{20005} \u{20000}1960s with the release of Letraset sheets '
-      + 'publishing software like Aldus PageMaker 耀 including versions of Lorem.';
-
-    // Check hashing for different prime base.
-    bases.forEach((base) => {
-      mods.forEach((modulus) => {
-        const polynomialHash = new PolynomialHash({ base, modulus });
-
-        // Check hashing for different word lengths.
-        frameSizes.forEach((frameSize) => {
           let previousWord = text.substr(0, frameSize);
           let previousHash = polynomialHash.hash(previousWord);
 
@@ -36,9 +28,9 @@ describe('PolynomialHash', () => {
             previousWord = currentWord;
             previousHash = currentHash;
           }
-        });
-      });
-    });
+        },
+      ),
+    );
   });
 
   it('should generate numeric hashed less than 100', () => {
