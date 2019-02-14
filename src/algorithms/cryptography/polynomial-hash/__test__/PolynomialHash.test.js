@@ -7,9 +7,9 @@ describe('PolynomialHash', () => {
       fc.property(
         fc.constantFrom(3, 79, 101, 3251, 13229, 122743, 3583213),
         fc.integer(2, 0x7fffffff),
-        fc.string(0, 50),
-        fc.char(),
-        fc.char(),
+        fc.fullUnicodeString(0, 50),
+        fc.fullUnicode(),
+        fc.fullUnicode(),
         (base, modulus, commonWord, previousChar, newChar) => {
           fc.pre(base * modulus + 0x10ffff < 0x7fffffff); // avoid overflows
 
@@ -41,6 +41,6 @@ describe('PolynomialHash', () => {
     expect(polynomialHash.hash('ab')).toBe(87);
 
     // @TODO: Provide Unicode support.
-    expect(polynomialHash.hash('\u{20000}')).toBe(92);
+    expect(polynomialHash.hash('\u{20000}')).toBe(72);
   });
 });
