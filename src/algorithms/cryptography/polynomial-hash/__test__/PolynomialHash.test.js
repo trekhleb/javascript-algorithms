@@ -7,27 +7,22 @@ describe('PolynomialHash', () => {
       fc.property(
         fc.constantFrom(3, 79, 101, 3251, 13229, 122743, 3583213),
         fc.integer(2, 0x7fffffff),
-        fc.integer(1, 50),
-        fc.unicodeString(0, 100), // no surrogate pairs
-        (base, modulus, frameSize, text) => {
-          fc.pre(base * modulus < 0x7fffffff); // avoid overflows
+        fc.string(0, 50),
+        fc.char(),
+        fc.char(),
+        (base, modulus, commonWord, previousChar, newChar) => {
+          fc.pre(base * modulus + 0x10ffff < 0x7fffffff); // avoid overflows
+
           const polynomialHash = new PolynomialHash({ base, modulus });
+          const previousWord = previousChar + commonWord;
+          const currentWord = commonWord + newChar;
+          const previousHash = polynomialHash.hash(previousWord);
 
-          let previousWord = text.substr(0, frameSize);
-          let previousHash = polynomialHash.hash(previousWord);
+          const currentHash = polynomialHash.hash(currentWord);
+          const currentRollingHash = polynomialHash.roll(previousHash, previousWord, currentWord);
 
-          // Shift frame through the whole text.
-          for (let frameShift = 1; frameShift < (text.length - frameSize); frameShift += 1) {
-            const currentWord = text.substr(frameShift, frameSize);
-            const currentHash = polynomialHash.hash(currentWord);
-            const currentRollingHash = polynomialHash.roll(previousHash, previousWord, currentWord);
-
-            // Check that rolling hash is the same as directly calculated hash.
-            expect(currentRollingHash).toBe(currentHash);
-
-            previousWord = currentWord;
-            previousHash = currentHash;
-          }
+          // Check that rolling hash is the same as directly calculated hash.
+          expect(currentRollingHash).toBe(currentHash);
         },
       ),
     );
