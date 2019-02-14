@@ -6,9 +6,9 @@ describe('SimplePolynomialHash', () => {
     fc.assert(
       fc.property(
         fc.constantFrom(3, 79, 101, 3251, 13229, 122743, 3583213),
-        fc.string(0, 50),
-        fc.char(),
-        fc.char(),
+        fc.fullUnicodeString(0, 50),
+        fc.fullUnicode(),
+        fc.fullUnicode(),
         (base, commonWord, previousChar, newChar) => {
           fc.pre(0xffff * (base ** commonWord.length) < 0x7fffffff); // avoid overflows
 

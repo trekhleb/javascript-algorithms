@@ -22,9 +22,11 @@ export default class SimplePolynomialHash {
    * @return {number}
    */
   hash(word) {
+    const charCodes = Array.from(word).map(char => char.codePointAt(0));
+
     let hash = 0;
-    for (let charIndex = 0; charIndex < word.length; charIndex += 1) {
-      hash += word.charCodeAt(charIndex) * (this.base ** charIndex);
+    for (let charIndex = 0; charIndex < charCodes.length; charIndex += 1) {
+      hash += charCodes[charIndex] * (this.base ** charIndex);
     }
 
     return hash;
@@ -51,12 +53,13 @@ export default class SimplePolynomialHash {
   roll(prevHash, prevWord, newWord) {
     let hash = prevHash;
 
-    const prevValue = prevWord.charCodeAt(0);
-    const newValue = newWord.charCodeAt(newWord.length - 1);
+    const prevValue = prevWord.codePointAt(0);
+    const newWordChars = Array.from(newWord);
+    const newValue = newWordChars[newWordChars.length - 1].codePointAt(0);
 
     hash -= prevValue;
     hash /= this.base;
-    hash += newValue * (this.base ** (newWord.length - 1));
+    hash += newValue * (this.base ** (newWordChars.length - 1));
 
     return hash;
   }
