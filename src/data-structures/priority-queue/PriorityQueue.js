@@ -4,19 +4,26 @@ import Comparator from '../../utils/comparator/Comparator';
 // It is the same as min heap except that when comparing to elements
 // we take into account not element's value but rather its priority.
 export default class PriorityQueue extends MinHeap {
-  constructor() {
+  /**
+   * @constructor
+   * @param {function} [compareValueFunction]
+   */
+  constructor(compareValueFunction) {
     super();
-    this.priorities = {};
+    // Map data structure supports using any value for key type
+    // e.g. functions, objects, or primitives
+    this.priorities = new Map();
     this.compare = new Comparator(this.comparePriority.bind(this));
+    this.compareValue = new Comparator(compareValueFunction);
   }
 
   /**
    * @param {*} item
-   * @param {number} [priority]
+   * @param {number} [priority = 0]
    * @return {PriorityQueue}
    */
   add(item, priority = 0) {
-    this.priorities[item] = priority;
+    this.priorities.set(item, priority);
     super.add(item);
 
     return this;
@@ -24,12 +31,13 @@ export default class PriorityQueue extends MinHeap {
 
   /**
    * @param {*} item
-   * @param {Comparator} [customFindingComparator]
+   * @param {Comparator|function} [maybeComparator]
    * @return {PriorityQueue}
    */
-  remove(item, customFindingComparator) {
-    super.remove(item, customFindingComparator);
-    delete this.priorities[item];
+  remove(item, maybeComparator) {
+    const comparator = this.getValueComparator(maybeComparator);
+    super.remove(item, comparator);
+    this.priorities.delete(item);
 
     return this;
   }
@@ -37,29 +45,73 @@ export default class PriorityQueue extends MinHeap {
   /**
    * @param {*} item
    * @param {number} priority
+   * @param {Comparator|function} [maybeComparator]
    * @return {PriorityQueue}
    */
-  changePriority(item, priority) {
-    this.remove(item, new Comparator(this.compareValue));
-    this.add(item, priority);
+  changePriority(item, priority, maybeComparator) {
+    const comparator = this.getValueComparator(maybeComparator);
+    const numberOfItemsToRemove = this.find(item, comparator).length;
+    const itemsToUpdate = [];
+
+    for (let iteration = 0; iteration < numberOfItemsToRemove; iteration += 1) {
+      // We need to find item index to remove each time after removal since
+      // indices are being changed after each heapify process.
+      const indexToRemove = this.find(item, comparator).pop();
+      const itemToUpdate = this.getElementAtIndex(indexToRemove);
+      itemsToUpdate.push(itemToUpdate);
+      this.priorities.delete(itemToUpdate);
+      this.removeIndex(indexToRemove);
+    }
+
+    itemsToUpdate.forEach((itemToUpdate) => {
+      this.add(itemToUpdate, priority);
+    });
 
     return this;
   }
 
   /**
    * @param {*} item
-   * @return {Number[]}
+   * @param {Comparator|function} [maybeComparator]
+   * @return {*[]}
    */
-  findByValue(item) {
-    return this.find(item, new Comparator(this.compareValue));
+  findByValue(item, maybeComparator) {
+    const comparator = this.getValueComparator(maybeComparator);
+    return this.find(item, comparator);
   }
 
   /**
    * @param {*} item
+   * @param {Comparator|function} [maybeComparator]
    * @return {boolean}
    */
-  hasValue(item) {
-    return this.findByValue(item).length > 0;
+  hasValue(item, maybeComparator) {
+    const comparator = this.getValueComparator(maybeComparator);
+    return this.findByValue(item, comparator).length > 0;
+  }
+
+  /**
+   * @param {Comparator|function} [maybeComparator]
+   * @return {Comparator}
+   */
+  getValueComparator(maybeComparator) {
+    if (maybeComparator == null) {
+      return this.compareValue;
+    }
+
+    if (maybeComparator instanceof Comparator) {
+      return maybeComparator;
+    }
+
+    if (maybeComparator instanceof Function) {
+      return new Comparator(maybeComparator);
+    }
+
+    throw new TypeError(
+      'Invalid comparator type\n'
+      + 'Must be one of: Comparator | Function | undefined\n'
+      + `Given: ${typeof maybeComparator}`,
+    );
   }
 
   /**
@@ -68,23 +120,10 @@ export default class PriorityQueue extends MinHeap {
    * @return {number}
    */
   comparePriority(a, b) {
-    if (this.priorities[a] === this.priorities[b]) {
+    if (this.priorities.get(a) === this.priorities.get(b)) {
       return 0;
     }
 
-    return this.priorities[a] < this.priorities[b] ? -1 : 1;
-  }
-
-  /**
-   * @param {*} a
-   * @param {*} b
-   * @return {number}
-   */
-  compareValue(a, b) {
-    if (a === b) {
-      return 0;
-    }
-
-    return a < b ? -1 : 1;
+    return this.priorities.get(a) < this.priorities.get(b) ? -1 : 1;
   }
 }
