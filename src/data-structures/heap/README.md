@@ -1,5 +1,9 @@
 # Heap (data-structure)
 
+_Read this in other languages:_
+[_简体中文_](README.zh-CN.md),
+[_Русский_](README.ru-RU.md)
+
 In computer science, a **heap** is a specialized tree-based 
 data structure that satisfies the heap property described
 below.
