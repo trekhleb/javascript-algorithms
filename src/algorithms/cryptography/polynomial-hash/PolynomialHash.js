@@ -20,7 +20,7 @@ export default class PolynomialHash {
    * @return {number}
    */
   hash(word) {
-    const charCodes = Array.from(word).map(char => this.charToNumber(char));
+    const charCodes = Array.from(word).map(char => char.codePointAt(0));
 
     let hash = 0;
     for (let charIndex = 0; charIndex < charCodes.length; charIndex += 1) {
@@ -49,11 +49,12 @@ export default class PolynomialHash {
   roll(prevHash, prevWord, newWord) {
     let hash = prevHash;
 
-    const prevValue = this.charToNumber(prevWord[0]);
-    const newValue = this.charToNumber(newWord[newWord.length - 1]);
+    const prevValue = prevWord.codePointAt(0);
+    const newWordChars = Array.from(newWord);
+    const newValue = newWordChars[newWordChars.length - 1].codePointAt(0);
 
     let prevValueMultiplier = 1;
-    for (let i = 1; i < prevWord.length; i += 1) {
+    for (let i = 1; i < newWordChars.length; i += 1) {
       prevValueMultiplier *= this.base;
       prevValueMultiplier %= this.modulus;
     }
@@ -66,24 +67,5 @@ export default class PolynomialHash {
     hash %= this.modulus;
 
     return hash;
-  }
-
-  /**
-   * Converts char to number.
-   *
-   * @param {string} char
-   * @return {number}
-   */
-  charToNumber(char) {
-    let charCode = char.codePointAt(0);
-
-    // Check if character has surrogate pair.
-    const surrogate = char.codePointAt(1);
-    if (surrogate !== undefined) {
-      const surrogateShift = 2 ** 16;
-      charCode += surrogate * surrogateShift;
-    }
-
-    return charCode;
   }
 }
