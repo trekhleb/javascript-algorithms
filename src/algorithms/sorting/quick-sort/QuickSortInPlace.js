@@ -46,7 +46,7 @@ export default class QuickSortInPlace extends Sort {
 
       const pivot = array[highIndex];
       // visitingCallback is used for time-complexity analysis.
-      this.callbacks.visitingCallback(array[pivot]);
+      this.callbacks.visitingCallback(pivot);
 
       let partitionIndex = lowIndex;
       for (let currentIndex = lowIndex; currentIndex < highIndex; currentIndex += 1) {
