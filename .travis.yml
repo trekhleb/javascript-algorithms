@@ -2,7 +2,7 @@ sudo: required
 dist: trusty
 language: node_js
 node_js:
-  - node
+  - "11"
 install:
   - npm install -g codecov
   - npm install

@@ -137,7 +137,7 @@ ReverseTraversal(head, tail)
       yield curr.value
       curr ← prev
     end while
-   yeild curr.value
+   yield curr.value
   end if
 end ReverseTraversal
 ```
@@ -148,7 +148,7 @@ end ReverseTraversal
 
 | Access    | Search    | Insertion | Deletion  |
 | :-------: | :-------: | :-------: | :-------: |
-| O(n)      | O(n)      | O(1)      | O(1)      |
+| O(n)      | O(n)      | O(1)      | O(n)      |
 
 ### Space Complexity
 
