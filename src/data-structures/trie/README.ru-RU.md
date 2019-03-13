@@ -18,6 +18,8 @@
 
 ![Префиксное дерево](https://upload.wikimedia.org/wikipedia/commons/b/be/Trie_example.svg)
 
+На рисунке представлено префиксное дерево, содержащее ключи «A», «to», «tea», «ted», «ten», «i», «in», «inn».
+
 ## Ссылки
 
 - [Wikipedia](https://ru.wikipedia.org/wiki/%D0%9F%D1%80%D0%B5%D1%84%D0%B8%D0%BA%D1%81%D0%BD%D0%BE%D0%B5_%D0%B4%D0%B5%D1%80%D0%B5%D0%B2%D0%BE)
