@@ -53,7 +53,7 @@ isEven: true
 
 #### isPositive
 
-This method determines if the number is positive. It is based on the fact that all positive 
+This method determines if the number is positive. It is based on the fact that all positive
 numbers have their leftmost bit to be set to `0`. However, if the number provided is zero
 or negative zero, it should still return `false`.
 
@@ -226,6 +226,18 @@ Number: 9 = (10 - 1) = 0b01001
 
 > See [isPowerOfTwo.js](isPowerOfTwo.js) for further details.
 
+#### Bit Partitioning
+
+This method rewrites a number in a base which is a power of 2.
+For example:
+
+```
+509 = 7 * ((2 ** 3) ** 2) + 7 * ((2 ** 3) ** 1)  + 5 * ((2 ** 3) ** 0)
+```
+
+Therefore 509 (in base 10) == 775 (in base (2 ** 3))
+
+> See [bitPartition.js](bitPartition.js) for further details.
 ## References
 
 - [Bit Manipulation on YouTube](https://www.youtube.com/watch?v=NLKQEOgBAnw&t=0s&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
