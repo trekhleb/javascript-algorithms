@@ -64,7 +64,11 @@ export default class AvlTree extends BinarySearchTree {
 
     // Make left node to be a child of rootNode's parent.
     if (rootNode.parent) {
-      rootNode.parent.setLeft(leftNode);
+      if (rootNode.parent.left === rootNode) {
+        rootNode.parent.setLeft(leftNode);
+      } else {
+        rootNode.parent.setRight(leftNode);
+      }
     } else if (rootNode === this.root) {
       // If root node is root then make left node to be a new root.
       this.root = leftNode;
@@ -145,7 +149,11 @@ export default class AvlTree extends BinarySearchTree {
 
     // Make right node to be a child of rootNode's parent.
     if (rootNode.parent) {
-      rootNode.parent.setRight(rightNode);
+      if (rootNode.parent.left === rootNode) {
+        rootNode.parent.setLeft(rightNode);
+      } else {
+        rootNode.parent.setRight(rightNode);
+      }
     } else if (rootNode === this.root) {
       // If root node is root then make right node to be a new root.
       this.root = rightNode;
