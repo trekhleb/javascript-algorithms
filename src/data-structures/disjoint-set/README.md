@@ -1,5 +1,9 @@
 # Disjoint Set
 
+_Read this in other languages:_
+[_简体中文_](README.zh-CN.md),
+[_Русский_](README.ru-RU.md)
+
 **Disjoint-set** data structure (also called a union–find data structure or merge–find set) is a data 
 structure that tracks a set of elements partitioned into a number of disjoint (non-overlapping) subsets. 
 It provides near-constant-time operations (bounded by the inverse Ackermann function) to *add new sets*, 
