@@ -9,10 +9,10 @@ sort is not limited to integers.
 
 *Where does the name come from?*
 
-In numeral systems, the word **radix** represents how many digits are possible. 
+In mathematical numeral systems, the *radix* or base is the number of unique digits,
+including the digit zero, used to represent numbers in a positional numeral system. 
 For example, a binary system (using numbers 0 and 1) has a radix of 2 and a decimal 
 system (using numbers 0 to 9) has a radix of 10.
-
 
 ## Efficiency
 

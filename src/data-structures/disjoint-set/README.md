@@ -1,7 +1,6 @@
 # Disjoint Set
 
 _Read this in other languages:_
-[_简体中文_](README.zh-CN.md),
 [_Русский_](README.ru-RU.md)
 
 **Disjoint-set** data structure (also called a union–find data structure or merge–find set) is a data 

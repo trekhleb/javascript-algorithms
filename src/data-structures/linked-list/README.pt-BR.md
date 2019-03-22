@@ -1,10 +1,5 @@
 # Linked List
 
-_Leia em outros idiomas:_
-[_简体中文_](README.zh-CN.md),
-[_Русский_](README.ru-RU.md)
-[_Português_](README.pt-BR.md)
-
 Em ciência da computação, uma **lista ligada** é uma coleção linear
 de elementos de dados, em que a ordem linear não é fornecida pelo seu
 posicionamento físico na memória. Em vez disso, cada elemento aponta para o próximo.
