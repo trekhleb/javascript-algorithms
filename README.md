@@ -73,6 +73,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Radian & Degree](src/algorithms/math/radian) - radians to degree and backwards conversion
   * `B` [Fast Powering](src/algorithms/math/fast-powering)
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
+  * `A` [Square Root](src/algorithms/math/square-root) - Newton's method
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
   * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up 
 * **Sets**
