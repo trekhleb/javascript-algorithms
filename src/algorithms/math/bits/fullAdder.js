@@ -3,7 +3,7 @@ import getBit from './getBit';
 /**
  * Add two numbers using only binary operators.
  *
- * This is an implementation of full adders logic circut.
+ * This is an implementation of full adders logic circuit.
  * https://en.wikipedia.org/wiki/Adder_(electronics)
  * Inspired by: https://www.youtube.com/watch?v=wvJc9CZcvBc
  *
@@ -65,5 +65,6 @@ export default function fullAdder(a, b) {
     // Set ith least significant bit of the result to bitSum.
     result |= bitSum << i;
   }
+
   return result;
 }
