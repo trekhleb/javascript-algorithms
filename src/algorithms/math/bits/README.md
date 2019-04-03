@@ -233,8 +233,8 @@ This method adds up two integer numbers using bitwise operators.
 
 It implements [full adder](https://en.wikipedia.org/wiki/Adder_(electronics))
 electronics circut logic to sum two 32-bit integers in two's complement format.
-It's using the boolean logic to cover all possible cases of adding input two bits,
-with and without a "carry bit" from adding a previous register.
+It's using the boolean logic to cover all possible cases of adding two input bits:
+with and without a "carry bit" from adding the previous less-significant stage.
 
 Legend:
 - `A`: Number `A`
