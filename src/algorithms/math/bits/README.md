@@ -226,13 +226,12 @@ Number: 9 = (10 - 1) = 0b01001
 
 > See [isPowerOfTwo.js](isPowerOfTwo.js) for further details.
 
-
 #### Full Adder
 
 This method adds up two integer numbers using bitwise operators.
 
 It implements [full adder](https://en.wikipedia.org/wiki/Adder_(electronics))
-electronics circut logic to sum two 32-bit integers in two's complement format.
+electronics circuit logic to sum two 32-bit integers in two's complement format.
 It's using the boolean logic to cover all possible cases of adding two input bits:
 with and without a "carry bit" from adding the previous less-significant stage.
 
@@ -245,7 +244,8 @@ Legend:
 - `carryOut`: a bit to carry to the next most-significant stage
 - `bitSum`: The sum of `ai`, `bi`, and `carryIn`
 - `resultBin`: The full result of adding current stage with all less-significant stages (in binary)
-- `resultBin`: The full result of adding current stage with all less-significant stages (in decimal)
+- `resultDec`: The full result of adding current stage with all less-significant stages (in decimal)
+
 ```
 A = 3: 011
 B = 6: 110
@@ -260,7 +260,7 @@ B = 6: 110
 ```
 
 > See [fullAdder.js](fullAdder.js) for further details.  
-> See [Full Adder on YouTube](https://www.youtube.com/watch?v=wvJc9CZcvBc).
+> See [Full Adder on YouTube](https://www.youtube.com/watch?v=wvJc9CZcvBc&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8).
 
 ## References
 
