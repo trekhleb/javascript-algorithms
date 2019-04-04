@@ -1,6 +1,6 @@
-# Linked List
+# Lista encadeada
 
-Em ciência da computação, uma **lista ligada** é uma coleção linear
+Em ciência da computação, uma **lista encadeada** é uma coleção linear
 de elementos de dados, em que a ordem linear não é fornecida pelo seu
 posicionamento físico na memória. Em vez disso, cada elemento aponta para o próximo.
 É uma estrutura de dados consistente de um grupo de nós que juntos
@@ -9,7 +9,7 @@ e uma referência (em outras palavras, um link) para o próximo nó na sequênci
 Essa estrutura permite uma inserção eficiente ou uma remoção de elementos
 apartir de qualquer posição na sequência durante a iteração. Variantes
 mais complexas adicionam links adicionais, permitindo inserção eficiente ou remoção
-arbitrária de referências do elemento. Uma desvantagem da lista ligada é que o tempo de acesso é linear (e dificulta para pipeline) Acesso rápido, assim como acesso randômico, não é viável. Arrays têm um melhor cache de localidade quando comparado com listas ligadas.
+arbitrária de referências do elemento. Uma desvantagem da lista encadeada é que o tempo de acesso é linear (e dificulta para pipeline) Acesso rápido, assim como acesso randômico, não é viável. Arrays têm um melhor cache de localidade quando comparado com listas encadeadas.
 
 ![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
@@ -136,9 +136,9 @@ end ReverseTraversal
 
 ### Tempo de complexidade
 
-| Access | Search | Insertion | Deletion |
-| :----: | :----: | :-------: | :------: |
-|  O(n)  |  O(n)  |   O(1)    |   O(n)   |
+| Acesso | Busca | Inserção | Deleção |
+| :----: | :---: | :------: | :-----: |
+|  O(n)  | O(n)  |   O(1)   |  O(n)   |
 
 ### Spaço de complexidade
 
