@@ -2,7 +2,8 @@
 
 _Read this in other languages:_
 [_简体中文_](README.zh-CN.md),
-[_Русский_](README.ru-RU.md)
+[_Русский_](README.ru-RU.md),
+[_日本語_](README.ja-JP.md)
 
 In computer science, a **stack** is an abstract data type that serves 
 as a collection of elements, with two principal operations:
