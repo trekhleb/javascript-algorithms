@@ -1,33 +1,12 @@
-# Linked List
+# リンクリスト
 
-_Read this in other languages:_
-[_简体中文_](README.zh-CN.md),
-[_Русский_](README.ru-RU.md),
-[_Português_](README.pt-BR.md),
-[_日本語_](README.ja-JP.md)
-
-In computer science, a **linked list** is a linear collection 
-of data elements, in which linear order is not given by 
-their physical placement in memory. Instead, each 
-element points to the next. It is a data structure 
-consisting of a group of nodes which together represent 
-a sequence. Under the simplest form, each node is 
-composed of data and a reference (in other words, 
-a link) to the next node in the sequence. This structure
-allows for efficient insertion or removal of elements 
-from any position in the sequence during iteration. 
-More complex variants add additional links, allowing 
-efficient insertion or removal from arbitrary element 
-references. A drawback of linked lists is that access 
-time is linear (and difficult to pipeline). Faster 
-access, such as random access, is not feasible. Arrays 
-have better cache locality as compared to linked lists.
+コンピュータサイエンスにおいて、**リンクリスト**はデータ要素の線形コレクションです。要素の順番はメモリ内の物理的な配置によっては決まりません。代わりに、各要素が次の要素を指しています。リンクリストはノードのグループからなるデータ構造です。最も単純な形式では、各ノードはデータとシーケンス内における次のノードへの参照(つまり、リンク)で構成されています。この構造はイテレーションにおいて任意の位置へ要素を効率的に挿入、削除することを可能にしています。より複雑なリンクリストではリンクをさらに追加することで、任意の要素の参照から要素を効率的に挿入、削除することを可能にしています。リンクリストの欠点はアクセスタイムが線形である(そして、パイプライン処理が難しい)ことです。ランダムアクセスのような高速なアクセスは実現不可能です。配列の方がリンクリストと比較して参照の局所性が優れています。
 
 ![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
-## Pseudocode for Basic Operations
+## 基本操作の擬似コード
 
-### Insert
+### 挿入
 
 ```text
 Add(value)
@@ -57,7 +36,7 @@ Prepend(value)
 end Prepend
 ```
 
-### Search
+### 検索
 
 ```text
 Contains(head, value)
@@ -75,7 +54,7 @@ Contains(head, value)
 end Contains
 ```
     
-### Delete
+### 削除
 
 ```text
 Remove(head, value)
@@ -109,7 +88,7 @@ Remove(head, value)
 end Remove
 ```
 
-### Traverse
+### トラバース
 
 ```text
 Traverse(head)
@@ -123,7 +102,7 @@ Traverse(head)
 end Traverse
 ```
 
-### Traverse in Reverse
+### 逆トラバース
 
 ```text
 ReverseTraversal(head, tail)
@@ -144,19 +123,19 @@ ReverseTraversal(head, tail)
 end ReverseTraversal
 ```
 
-## Complexities
+## 計算量
 
-### Time Complexity
+### 時間計算量
 
 | Access    | Search    | Insertion | Deletion  |
 | :-------: | :-------: | :-------: | :-------: |
 | O(n)      | O(n)      | O(1)      | O(n)      |
 
-### Space Complexity
+### 空間計算量
 
 O(n)
 
-## References
+## 参考
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
 - [YouTube](https://www.youtube.com/watch?v=njTh_OwMljA&index=2&t=1s&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
