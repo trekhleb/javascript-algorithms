@@ -137,7 +137,7 @@ a * b can be written in the below formats:
 ```
 
 The advantage of this approach is that in each recursive step one of the operands
-reduces to half its original value. Hence, the run time complexity is `O(log(b)` where `b` is
+reduces to half its original value. Hence, the run time complexity is `O(log(b))` where `b` is
 the operand that reduces to half on each recursive step.
 
 > See [multiply.js](multiply.js) for further details.
