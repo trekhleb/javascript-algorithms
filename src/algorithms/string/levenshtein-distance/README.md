@@ -106,7 +106,7 @@ bottom-up direction) is being applied here.
 Applying this principle further we may solve more complicated cases like 
 with `Saturday → Sunday` transformation.
 
-![Levenshtein distance](https://user-images.githubusercontent.com/1153337/54865681-9457b380-4dac-11e9-959a-01c8ca00a85f.png)
+![Levenshtein distance](https://cdn-images-1.medium.com/max/2600/1*497gMaFErzJpCXG7kS_7dw.png)
 
 ## References
 
