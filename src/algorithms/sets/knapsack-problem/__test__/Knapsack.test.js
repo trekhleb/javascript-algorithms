@@ -22,7 +22,7 @@ describe('Knapsack', () => {
     expect(knapsack.selectedItems[0].toString()).toBe('v5 w4 x 1');
     expect(knapsack.selectedItems[1].toString()).toBe('v4 w3 x 1');
   });
-  
+
   it('should solve 0/1 knapsack problem in another trivial case', () => {
     const possibleKnapsackItems = [
       new KnapsackItem({ value: 3, weight: 2 }),
