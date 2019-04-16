@@ -18,7 +18,7 @@ e formadas a partir dos mesmos itens, mas em ordem sequencial opostas.
 
 Os dois nós ligados permitem a travessia da lista em qualquer direção.
 Enquanto adicionar ou remover um nó de uma lista duplamente vinculada requer
-alterar mais ligações (conexões) do que em uma lista ligada individualmente
+alterar mais ligações (conexões) do que em uma lista encadeada individualmente
 (singly linked list), as operações são mais simples e potencialmente mais
 eficientes (para nós que não sejam nós iniciais) porque não há necessidade
 de se manter rastreamento do nó anterior durante a travessia ou não há

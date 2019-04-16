@@ -16,7 +16,7 @@ Enquanto as filas de prioridade são frequentemente implementadas com
 pilhas (heaps), elas são conceitualmente distintas das pilhas (heaps).
 A fila de prioridade é um conceito abstrato como uma "lista" (list) ou
 um "mapa" (map); assim como uma lista pode ser implementada com uma
-lista ligada (liked list) ou um array, a fila de prioridade pode ser
+lista encadeada (liked list) ou um array, a fila de prioridade pode ser
 implementada com uma pilha (heap) ou com uima variedade de outros métodos,
 como um array não ordenado (unordered array).
 

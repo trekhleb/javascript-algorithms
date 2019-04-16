@@ -1,9 +1,9 @@
-# Lista Ligada (Linked List)
+# Lista Encadeada (Linked List)
 
 _Leia em outro idioma:_
 [_English_](README.md) | [_简体中文_](README.zh-CN.md) | [_Русский_](README.ru-RU.md) 
 
-Na ciência da computação, uma **lista ligada** é uma coleção linear de
+Na ciência da computação, uma **lista encadeada** é uma coleção linear de
 elementos de dado, em que a ordem linear não é dada por sua locação
 física na memória. Em vez disso, cada elemento aponta para o próximo.
 É uma estrutura de dados consistindo em um grupo de nós
@@ -19,7 +19,7 @@ de elementos arbitrárias. Uma desvantagem das listas vinculadas
 é que o tempo de acesso é linear (e difícil de inserir em uma
 pipeline). Acessos mais rápidos, como acesso aleatório, não é viável.
 Arrays possuem uma melhor localização de cache em comparação
-com lista ligada (linked list).
+com lista encadeada (linked list).
 
 ![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 

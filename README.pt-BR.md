@@ -29,7 +29,7 @@ os dados.
 
 `B` - Iniciante, `A` - Avançado
 
-* `B` [Lista Ligada (Linked List)](src/data-structures/linked-list.pt-BR)
+* `B` [Lista Encadeada (Linked List)](src/data-structures/linked-list.pt-BR)
 * `B` [Lista Duplamente Ligada (Doubly Linked List)](src/data-structures/doubly-linked-list.pt-BR)
 * `B` [Fila (Queue)](src/data-structures/queue.pt-BR)
 * `B` [Stack](src/data-structures/stack.pt-BR)
