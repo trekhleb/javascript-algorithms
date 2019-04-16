@@ -1,8 +1,5 @@
 # Árvore de Segmento (Segment Tree)
 
-_Read this in other languages:_
-[_Português_](README.md)
-
 Na ciência da computação, uma **árvore de segmento** também conhecida como
 árvore estatística é uma árvore de estrutura de dados utilizadas para
 armazenar informações sobre intervalores ou segmentos. Ela permite pesquisas

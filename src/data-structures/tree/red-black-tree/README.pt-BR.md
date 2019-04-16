@@ -1,8 +1,5 @@
 # Árvore Vermelha-Preta (Red-Black Tree)
 
-_Read this in other languages:_
-[_Português_](README.md)
-
 Uma **árvore vermelha-preta** é um tipo de árvore de pesquisa
 binária auto balanceada na ciência da computação. Cada nó da 
 árvore binária possui um _bit_ extra, e este _bit_ é frequentemente

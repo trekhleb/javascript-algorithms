@@ -1,8 +1,5 @@
 # Árvore de Pesquisa Binária (Binary Search Tree)
 
-_Leia em outro idioma:_
-[_English_](README.md) 
-
 Na ciência da computação **binary search trees** (BST), algumas vezes
 chamadas de árvores binárias ordenadas (_ordered or sorted binary trees_),
 é um tipo particular de container: estruturas de dados que armazenam

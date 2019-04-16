@@ -1,8 +1,5 @@
 # Conjunto Disjuntor (Disjoint Set)
 
-_Leia em outro idioma:_
-[_English_](README.md) | [_Русский_](README.ru-RU.md) 
-
 **Conjunto Disjuntor**
 
 **Conjunto Disjuntor** é uma estrutura de dados (também chamado de
@@ -16,7 +13,6 @@ estão no mesmo conjunto*.
 Além de muitos outros usos (veja a seção Applications), conjunto disjuntor
 desempenham um papel fundamental no algoritmo de Kruskal para encontrar a
 árvore geradora mínima de um gráfico (graph).
-
 
 ![disjoint set](https://upload.wikimedia.org/wikipedia/commons/6/67/Dsu_disjoint_sets_init.svg)
 

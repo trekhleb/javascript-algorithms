@@ -1,8 +1,5 @@
 # Árvore Fenwick / Árvore Binária Indexada (Fenwick Tree / Binary Indexed Tree)
 
-_Read this in other languages:_
-[_Português_](README.md)
-
 Uma **árvore Fenwick** ou **árvore binária indexada** é um tipo de
 estrutura de dados que consegue eficiemente atualizar elementos e
 calcular soma dos prefixos em uma tabela de números.

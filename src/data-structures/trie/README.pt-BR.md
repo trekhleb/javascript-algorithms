@@ -1,8 +1,5 @@
 # Trie
 
-_Leia em outro idioma:_
-[_English_](README.md) | [_简体中文_](README.zh-CN.md) | [_Русский_](README.ru-RU.md) 
-
 Na ciência da computação, uma **trie**, também chamada de árvore digital (digital tree)
 e algumas vezes de _radix tree_ ou _prefix tree_ (tendo em vista que eles
 podem ser pesquisados por prefixos), é um tipo de árvore de pesquisa, uma

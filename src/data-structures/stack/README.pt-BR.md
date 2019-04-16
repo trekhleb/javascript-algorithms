@@ -1,8 +1,5 @@
 # Stack
 
-_Leia em outro idioma:_
-[_English_](README.md) | [_简体中文_](README.zh-CN.md) | [_Русский_](README.ru-RU.md)
-
 Na ciência da computação, um **stack** é uma estrutura de dados abstrata
 que serve como uma coleção de elementos com duas operações principais:
 

@@ -1,8 +1,5 @@
 # Árvore AVL (AVL Tree)
 
-_Leia em outro idioma:_
-[_English_](README.md) 
-
 Na ciência da computação, uma **árvore AVL** (em homenagem aos
 inventores Adelson-Velsky e Landis) é uma árvore de pesquisa
 binária auto balanceada. Foi a primeira estrutura de dados a

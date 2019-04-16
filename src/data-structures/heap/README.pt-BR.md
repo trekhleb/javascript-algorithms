@@ -1,8 +1,5 @@
 # Heap (estrutura de dados)
 
-_Leia em outro idioma:_
-[_English_](README.md) | [_简体中文_](README.zh-CN.md) | [_Русский_](README.ru-RU.md)
-
 Na ciência da computação, um **heap** é uma estrutura de dados
 baseada em uma árvore especializada que satisfaz a propriedade _heap_ descrita abaixo.
 

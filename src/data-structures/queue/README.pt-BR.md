@@ -1,8 +1,5 @@
 # Fila (Queue)
 
-_Leia em outro idioma:_
-[_English_](README.md) | [_简体中文_](README.zh-CN.md) | [_Русский_](README.ru-RU.md) 
-
 Na ciência da computação, uma **fila** é um tipo particular de abstração
 de tipo de dado ou coleção em que as entidades na coleção são mantidas em
 ordem e a causa primária (ou única) de operações na coleção são a

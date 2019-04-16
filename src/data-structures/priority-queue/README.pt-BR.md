@@ -1,8 +1,5 @@
 # Fila de Prioridade (Priority Queue)
 
-_Leia em outro idioma:_
-[_English_](README.md) | [_简体中文_](README.zh-CN.md) | [_Русский_](README.ru-RU.md) 
-
 Na ciência da computação, uma **fila de prioridade** é um tipo de dados
 abastrato que é como uma fila regular (regular queue) ou estrutura de
 dados de pilha (stack), mas adicionalmente cada elemento possui uma

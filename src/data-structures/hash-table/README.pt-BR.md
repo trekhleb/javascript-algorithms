@@ -1,8 +1,5 @@
 # Tabela de Hash (Hash Table)
 
-_Leia em outro idioma:_
-[_English_](README.md) | [_简体中文_](README.zh-CN.md) | [_Русский_](README.ru-RU.md)
- 
 Na ciência da computação, uma **tabela de hash** (hash map) é uma
 estrutura de dados pela qual implementa um tipo de dado abstrado de
 *array associativo*, uma estrutura que pode *mapear chaves para valores*.

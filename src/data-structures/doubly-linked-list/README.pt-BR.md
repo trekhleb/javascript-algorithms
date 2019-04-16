@@ -1,8 +1,5 @@
 # Lista Duplamente Ligada (Doubly Linked List)
 
-_Leia em outro idioma:_
-[_English_](README.md) | [_简体中文_](README.zh-CN.md) | [_Русский_](README.ru-RU.md) 
-
 Na ciência da computação, uma **lista duplamente conectada** é uma estrutura
 de dados vinculada que se consistem em um conjunto de registros
 sequencialmente vinculados chamados de nós (nodes). Em cada nó contém dois

@@ -1,8 +1,5 @@
 # Filtro Bloom (Bloom Filter)
 
-_Leia em outro idioma:_
-[_English_](README.md) | [_Русский_](README.ru-RU.md) 
-
 O **bloom filter** é uma estrutura de dados probabilística
 espaço-eficiente designada para testar se um elemento está
 ou não presente em um conjunto de dados. Foi projetado para ser

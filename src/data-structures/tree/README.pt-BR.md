@@ -1,8 +1,5 @@
 # Árvore (Tree)
 
-_Leia em outro idioma:_
-[_English_](README.md) | [_简体中文_](README.zh-CN.md)
- 
 * [Árvore de Pesquisa Binária (Binary Search Tree)](binary-search-tree/README.pt-BR.md)
 * [Árvore AVL (AVL Tree)](avl-tree/README.pt-BR.md)
 * [Árvore Vermelha-Preta (Red-Black Tree)](red-black-tree/README.pt-BR.md)

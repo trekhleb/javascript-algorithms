@@ -1,8 +1,5 @@
 # Lista Encadeada (Linked List)
 
-_Leia em outro idioma:_
-[_English_](README.md) | [_简体中文_](README.zh-CN.md) | [_Русский_](README.ru-RU.md) 
-
 Na ciência da computação, uma **lista encadeada** é uma coleção linear de
 elementos de dado, em que a ordem linear não é dada por sua locação
 física na memória. Em vez disso, cada elemento aponta para o próximo.
@@ -146,15 +143,9 @@ end ReverseTraversal
 
 ### Complexidade de Tempo
 
-<<<<<<< HEAD
-| Acesso | Busca | Inserção | Deleção |
-| :----: | :---: | :------: | :-----: |
-|  O(n)  | O(n)  |   O(1)   |  O(n)   |
-=======
 | Acesso | Pesquisa | Inserção | Remoção |
 | :----: | :------: | :------: | :-----: |
 |  O(n)  |  O(n)    |  O(1)    |  O(n)   |
->>>>>>> create portuguese translations
 
 ### Complexidade de Espaçø
 

@@ -1,8 +1,5 @@
 # Gráfico (Graph)
 
-_Read this in other languages:_
-[_English_](README.md) | [_简体中文_](README.zh-CN.md) | [_Русский_](README.ru-RU.md) 
-
 Na ciência da computação, um **gráfico** é uma abstração de estrutura
 de dados que se destina a implementar os conceitos da matemática de
 gráficos direcionados e não direcionados, especificamente o campo da
