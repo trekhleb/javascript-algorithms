@@ -1,15 +1,25 @@
-# Lista encadeada
+# Lista Encadeada (Linked List)
 
-Em ciência da computação, uma **lista encadeada** é uma coleção linear
-de elementos de dados, em que a ordem linear não é fornecida pelo seu
-posicionamento físico na memória. Em vez disso, cada elemento aponta para o próximo.
-É uma estrutura de dados consistente de um grupo de nós que juntos
-representam uma sequência. De forma simples, cada nó é composto de dado
-e uma referência (em outras palavras, um link) para o próximo nó na sequência.
-Essa estrutura permite uma inserção eficiente ou uma remoção de elementos
-apartir de qualquer posição na sequência durante a iteração. Variantes
-mais complexas adicionam links adicionais, permitindo inserção eficiente ou remoção
-arbitrária de referências do elemento. Uma desvantagem da lista encadeada é que o tempo de acesso é linear (e dificulta para pipeline) Acesso rápido, assim como acesso randômico, não é viável. Arrays têm um melhor cache de localidade quando comparado com listas encadeadas.
+_Leia em outro idioma:_
+[_English_](README.md) | [_简体中文_](README.zh-CN.md) | [_Русский_](README.ru-RU.md) 
+
+Na ciência da computação, uma **lista encadeada** é uma coleção linear de
+elementos de dado, em que a ordem linear não é dada por sua locação
+física na memória. Em vez disso, cada elemento aponta para o próximo.
+É uma estrutura de dados consistindo em um grupo de nós
+que juntos representam uma sequência. Sob a forma mais simples,
+cada nó é composto de dados e uma referência (em outras palavras,
+uma ligação/conexão) para o próximo nó na sequência. Esta estrutua
+permite uma eficiente inserção e remoção de elementos de qualquer
+posição na sequência durante a iteração.
+
+Variantes mais complexas adicionam ligações adicionais, permitindo
+uma inserção ou remoção mais eficiente a partir de referências
+de elementos arbitrárias. Uma desvantagem das listas vinculadas
+é que o tempo de acesso é linear (e difícil de inserir em uma
+pipeline). Acessos mais rápidos, como acesso aleatório, não é viável.
+Arrays possuem uma melhor localização de cache em comparação
+com lista encadeada (linked list).
 
 ![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
@@ -45,7 +55,7 @@ Prepend(value)
 end Prepend
 ```
 
-### Busca
+### Pesquisa
 
 ```text
 Contains(head, value)
@@ -63,7 +73,7 @@ Contains(head, value)
 end Contains
 ```
 
-### Deleção
+### Remoção
 
 ```text
 Remove(head, value)
@@ -97,7 +107,7 @@ Remove(head, value)
 end Remove
 ```
 
-### Traverse
+### Travessia
 
 ```text
 Traverse(head)
@@ -111,7 +121,7 @@ Traverse(head)
 end Traverse
 ```
 
-### Traverse in Reverse
+### Travessia Reversa
 
 ```text
 ReverseTraversal(head, tail)
@@ -134,13 +144,19 @@ end ReverseTraversal
 
 ## Complexidades
 
-### Tempo de complexidade
+### Complexidade de Tempo
 
+<<<<<<< HEAD
 | Acesso | Busca | Inserção | Deleção |
 | :----: | :---: | :------: | :-----: |
 |  O(n)  | O(n)  |   O(1)   |  O(n)   |
+=======
+| Acesso | Pesquisa | Inserção | Remoção |
+| :----: | :------: | :------: | :-----: |
+|  O(n)  |  O(n)    |  O(1)    |  O(n)   |
+>>>>>>> create portuguese translations
 
-### Spaço de complexidade
+### Complexidade de Espaçø
 
 O(n)
 

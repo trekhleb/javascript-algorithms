@@ -29,23 +29,23 @@ os dados.
 
 `B` - Iniciante, `A` - Avançado
 
-* `B` [Linked List](src/data-structures/linked-list)
-* `B` [Doubly Linked List](src/data-structures/doubly-linked-list)
-* `B` [Queue](src/data-structures/queue)
-* `B` [Stack](src/data-structures/stack)
-* `B` [Hash Table](src/data-structures/hash-table)
-* `B` [Heap](src/data-structures/heap)
-* `B` [Priority Queue](src/data-structures/priority-queue)
-* `A` [Trie](src/data-structures/trie)
-* `A` [Tree](src/data-structures/tree)
-  * `A` [Binary Search Tree](src/data-structures/tree/binary-search-tree)
-  * `A` [AVL Tree](src/data-structures/tree/avl-tree)
-  * `A` [Red-Black Tree](src/data-structures/tree/red-black-tree)
-  * `A` [Segment Tree](src/data-structures/tree/segment-tree) - com exemplos de consultas min / max / sum range
-  * `A` [Fenwick Tree](src/data-structures/tree/fenwick-tree) (Árvore indexada binária)
-* `A` [Graph](src/data-structures/graph) (ambos dirigidos e não direcionados)
-* `A` [Disjoint Set](src/data-structures/disjoint-set)
-* `A` [Bloom Filter](src/data-structures/bloom-filter)
+* `B` [Lista Encadeada (Linked List)](src/data-structures/linked-list.pt-BR)
+* `B` [Lista Duplamente Ligada (Doubly Linked List)](src/data-structures/doubly-linked-list.pt-BR)
+* `B` [Fila (Queue)](src/data-structures/queue.pt-BR)
+* `B` [Stack](src/data-structures/stack.pt-BR)
+* `B` [Tabela de Hash (Hash Table)](src/data-structures/hash-table.pt-BR)
+* `B` [Heap](src/data-structures/heap.pt-BR)
+* `B` [Fila de Prioridade (Priority Queue)](src/data-structures/priority-queue.pt-BR)
+* `A` [Trie](src/data-structures/trie.pt-BR)
+* `A` [Árvore (Tree)](src/data-structures/tree.pt-BR)
+  * `A` [Árvore de Pesquisa Binária (Binary Search Tree)](src/data-structures/tree/binary-search-tree.pt-BR)
+  * `A` [Árvore AVL (AVL Tree)](src/data-structures/tree/avl-tree.pt-BR)
+  * `A` [Árvore Vermelha-Preta (Red-Black Tree)](src/data-structures/tree/red-black-tree.pt-BR)
+  * `A` [Árvore de Segmento (Segment Tree)](src/data-structures/tree/segment-tree.pt-BR) - com exemplos de consultas min / max / sum range
+  * `A` [Árvore Fenwick (Fenwick Tree)](src/data-structures/tree/fenwick-tree.pt-BR) (Árvore indexada binária)
+* `A` [Gráfico (Graph)](src/data-structures/graph.pt-BR) (ambos dirigidos e não direcionados)
+* `A` [Conjunto Disjuntor (Disjoint Set)](src/data-structures/disjoint-set.pt-BR)
+* `A` [Filtro Bloom (Bloom Filter)](src/data-structures/bloom-filter.pt-BR)
 
 ## Algoritmos
 
