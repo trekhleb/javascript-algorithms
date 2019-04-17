@@ -1,7 +1,8 @@
 # Bloom Filter
 
 _Read this in other languages:_
-[_Русский_](README.ru-RU.md)
+[_Русский_](README.ru-RU.md),
+[_Português_](README.pt-BR.md)
 
 A **bloom filter** is a space-efficient probabilistic 
 data structure designed to test whether an element 
