@@ -13,3 +13,4 @@ along each branch before backtracking.
 - [Wikipedia](https://en.wikipedia.org/wiki/Depth-first_search)
 - [Tree Traversals (Inorder, Preorder and Postorder)](https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/)
 - [BFS vs DFS](https://www.geeksforgeeks.org/bfs-vs-dfs-binary-tree/)
+- [DFS Visualization](https://www.cs.usfca.edu/~galles/visualization/DFS.html)

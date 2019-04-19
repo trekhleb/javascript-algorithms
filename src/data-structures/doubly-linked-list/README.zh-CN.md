@@ -45,7 +45,7 @@ Remove(head, value)
       head ← ø
       tail ← ø
     else
-      head ← head.Next
+      head ← head.next
       head.previous ← ø
     end if
     return true
