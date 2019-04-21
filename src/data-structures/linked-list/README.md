@@ -53,7 +53,7 @@ Prepend(value)
  head ← n
  if tail = ø
    tail ← n
- end
+ end if
 end Prepend
 ```
 
