@@ -1,5 +1,11 @@
 # Stack
 
+_Read this in other languages:_
+[_简体中文_](README.zh-CN.md),
+[_Русский_](README.ru-RU.md),
+[_日本語_](README.ja-JP.md),
+[_Português_](README.pt-BR.md)
+
 In computer science, a **stack** is an abstract data type that serves 
 as a collection of elements, with two principal operations:
 
@@ -13,7 +19,7 @@ the stack. The name "stack" for this type of structure comes
 from the analogy to a set of physical items stacked on top of 
 each other, which makes it easy to take an item off the top 
 of the stack, while getting to an item deeper in the stack 
-may require taking off multiple other items first
+may require taking off multiple other items first.
 
 Simple representation of a stack runtime with push and pop operations.
 

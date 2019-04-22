@@ -14,6 +14,7 @@ _Read this in other languages:_
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
+[_日本語_](README.ja-JP.md),
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
@@ -72,6 +73,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Radian & Degree](src/algorithms/math/radian) - radians to degree and backwards conversion
   * `B` [Fast Powering](src/algorithms/math/fast-powering)
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
+  * `A` [Square Root](src/algorithms/math/square-root) - Newton's method
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
   * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up 
 * **Sets**
@@ -140,6 +142,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples 
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples 
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem (dynamic programming and brute force versions)
+  * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top (4 solutions)
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
 
@@ -152,6 +155,7 @@ algorithm is an abstraction higher than a computer program.
 * **Brute Force** - look at all the possibilities and selects the best solution
   * `B` [Linear Search](src/algorithms/search/linear-search)
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
+  * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
   * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up
@@ -179,6 +183,7 @@ algorithm is an abstraction higher than a computer program.
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
+  * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top
   * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
   * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
@@ -276,7 +281,7 @@ Below is the list of some of the most used Big O notations and their performance
 | **Array**               | 1         | n         | n         | n         |           |
 | **Stack**               | n         | n         | 1         | 1         |           |
 | **Queue**               | n         | n         | 1         | 1         |           |
-| **Linked List**         | n         | n         | 1         | 1         |           |
+| **Linked List**         | n         | n         | 1         | n         |           |
 | **Hash Table**          | -         | n         | n         | n         | In case of perfect hash function costs would be O(1) |
 | **Binary Search Tree**  | n         | n         | n         | n         | In case of balanced tree costs would be O(log(n)) |
 | **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
