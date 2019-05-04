@@ -3,11 +3,11 @@
 [![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
-このリポジトリには、JavaScriptベースの多数のサンプル
-一般的なアルゴリズムとデータ構造。
+このリポジトリには、JavaScriptベースの一般的なアルゴリズムとデータ構造に関する多数のサンプルが含まれています。
 
-各アルゴリズムとデータ構造には独自のREADMEがあります
-関連する説明と、さらに読むためのリンク (関連YouTubeのビデオも含まれてい).
+
+各アルゴリズムとデータ構造には独自のREADMEがあります。
+関連する説明と、さらに読むためのリンク (関連YouTubeのビデオ)も含まれています。
 
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
@@ -36,10 +36,10 @@ _Read this in other languages:_
 * `B` [ヒープ](src/data-structures/heap) - max and min heap versions
 * `B` [優先度キュー](src/data-structures/priority-queue)
 * `A` [トライ](src/data-structures/trie)
-* `A` [リー](src/data-structures/tree)
+* `A` [ツリー](src/data-structures/tree)
   * `A` [バイナリ検索ツリー](src/data-structures/tree/binary-search-tree)
   * `A` [AVLツリー](src/data-structures/tree/avl-tree)
-  * `A` [赤黒のリー](src/data-structures/tree/red-black-tree)
+  * `A` [赤黒のツリー](src/data-structures/tree/red-black-tree)
   * `A` [セグメントツリー](src/data-structures/tree/segment-tree) - with min/max/sum range queries examples
   * `A` [フェンウィック・ツリー](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
 * `A` [グラフ](src/data-structures/graph) (both directed and undirected)
