@@ -28,7 +28,7 @@ export default function levenshteinDistance(a, b) {
       distanceMatrix[j][i] = Math.min(
         distanceMatrix[j][i - 1] + 1, // deletion
         distanceMatrix[j - 1][i] + 1, // insertion
-        distanceMatrix[j - 1][i - 1] + indicator, // substitution
+        distanceMatrix[j - 1][i - 1] + indicator // substitution
       );
     }
   }
