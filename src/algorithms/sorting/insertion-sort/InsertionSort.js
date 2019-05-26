@@ -23,7 +23,7 @@ export default class InsertionSort extends Sort {
         // Swap the elements.
         [
           array[currentIndex - 1],
-          array[currentIndex]
+          array[currentIndex],
         ] = [array[currentIndex], array[currentIndex - 1]];
 
         // Shift current index left.
