@@ -21,10 +21,15 @@ export default class InsertionSort extends Sort {
         this.callbacks.visitingCallback(array[currentIndex - 1]);
 
         // Swap the elements.
+<<<<<<< HEAD
         const tmp = array[currentIndex - 1];
         array[currentIndex - 1] = array[currentIndex];
         array[currentIndex] = tmp;
         
+=======
+        [array[currentIndex - 1], array[currentIndex]] = [array[currentIndex], array[currentIndex - 1]];
+
+>>>>>>> e89ba10a58312ed8e94c59d4a0251513d71c052f
         // Shift current index left.
         currentIndex -= 1;
       }
