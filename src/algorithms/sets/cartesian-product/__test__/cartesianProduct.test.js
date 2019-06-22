@@ -16,4 +16,12 @@ describe('cartesianProduct', () => {
     expect(product1).toEqual([[1, 1]]);
     expect(product2).toEqual([[1, 3], [1, 5], [2, 3], [2, 5]]);
   });
+
+  it('should return an empty set if one or both of the source is empty', () => {
+    const product1 = cartesianProduct([], [1, 2, 3]);
+    const product2 = cartesianProduct([], []);
+
+    expect(product1).toEqual([]);
+    expect(product2).toEqual([]);
+  });
 });
