@@ -6,7 +6,7 @@
  * @return {number}
  */
 export default function fibonacciClosedForm(position) {
-  const topMaxValidPosition = 75;
+  const topMaxValidPosition = 70;
 
   // Check that position is valid.
   if (position < 1 || position > topMaxValidPosition) {
