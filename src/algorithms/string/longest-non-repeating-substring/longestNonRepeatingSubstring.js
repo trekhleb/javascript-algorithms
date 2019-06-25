@@ -21,5 +21,6 @@ export default function lengthOfLongestSubstring(s) {
           maxLength = result.length
       }
   });
+  
   return maxLength;
 }
