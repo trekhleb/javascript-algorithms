@@ -8,6 +8,8 @@ If the binary number is 111.
 decimal_value = 1*(2^2) + 1*(2^1) + 1*(2^0) = 7
 
 ![](images/binaryToDecimal.PNG)
+
+
 ## Reference
 <a href="https://www.youtube.com/watch?v=meGcdIoTYgw">Youtube</a>
 
