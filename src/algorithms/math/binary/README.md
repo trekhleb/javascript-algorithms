@@ -7,8 +7,7 @@ For Example:
 If the binary number is 111.
 decimal_value = 1*(2^2) + 1*(2^1) + 1*(2^0) = 7
 
-<img href="images/binaryToDecimal.PNG">
-
+![](images/binaryToDecimal.PNG)
 ## Reference
 <a href="https://www.youtube.com/watch?v=meGcdIoTYgw">Youtube</a>
 
@@ -33,7 +32,7 @@ Step 7: Remainder when 1 is divided by 2 is 1. Therefore, arr[3] = 1.
 Step 8: Divide 1 by 2. New number is 1/2 = 0.
 Step 9: Since number becomes = 0. Print the array in reverse order. Therefore the equivalent binary number is 1010.
 
-<img href="images/decimalToBinary.PNG">
+![](images/decimalToBinary.PNG)
 
 ## Reference
 <a href="https://www.youtube.com/watch?v=mW8NIJ6Ns8k">Youtube</a>
