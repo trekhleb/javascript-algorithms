@@ -24,5 +24,4 @@ export default function decimalToBinary(decimalNumbers) {
   } else {
     return 'Enter a valid decimal number';
   }
-  return parseInt(binaryNumber.reverse().join(''), 10);
 }
