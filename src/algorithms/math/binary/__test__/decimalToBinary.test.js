@@ -7,6 +7,6 @@ describe('Convert a decimal number to binary number', () => {
     expect(decimalToBinary(0)).toBe(0);
     expect(decimalToBinary(10)).toBe(1010);
     expect(decimalToBinary(853)).toBe(1101010101);
-    expect(decimalToBinary('adkjfb')).toBe('Enter a valid decimal number');
+    expect(decimalToBinary('abc1230')).toBe('Enter a valid decimal number');
   });
 });
