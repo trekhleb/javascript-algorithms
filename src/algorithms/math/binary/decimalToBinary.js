@@ -18,10 +18,11 @@ export default function decimalToBinary(decimalNumbers) {
         decimalNumber = parseInt(decimalNumber / 2, 10);
       } else {
         binaryNumber.push(decimalNumber);
-        return parseInt(binaryNumber.reverse().join(''), 10);
+        break;
       }
     }
   } else {
     return 'Enter a valid decimal number';
   }
+  return parseInt(binaryNumber.reverse().join(''), 10);
 }
