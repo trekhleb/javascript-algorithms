@@ -80,6 +80,8 @@ export default class LinkedList {
         if (this.compare.equal(currentNode.next.value, value)) {
           deletedNode = currentNode.next;
           currentNode.next = currentNode.next.next;
+          // Make sure the deletedNode's next DO NOT link to the node after the deletedNode.
+          deletedNode.next = null;
         } else {
           currentNode = currentNode.next;
         }
