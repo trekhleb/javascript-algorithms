@@ -10,7 +10,6 @@ export default function fibonacci(n) {
   let currentValue = 1;
   let previousValue = 0;
 
-  
   // Throw error if index is not correct
   if (n < 1) {
     throw new Error('Cannot have values less than 1');
