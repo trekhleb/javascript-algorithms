@@ -10,8 +10,8 @@ export default function fibonacci(n) {
   let currentValue = 1;
   let previousValue = 0;
 
-  if (n === 1) {
-    return fibSequence;
+  if (n < 1) {
+    throw new Error("Cannot have values less than 1");
   }
 
   let iterationsCounter = n - 1;
