@@ -33,7 +33,7 @@ Our last and final step is to compine all of our buckets to one array so we can 
 
 | Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
 | --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
-| **Counting sort**     | n               | n + k               | n^{2}               | n + k     | Yes       | k - number of buckets |
+| **Counting sort**     | n               | n + k               | n^2                 | n + k     | Yes       | k - number of buckets |
 
 ## References
 
