@@ -25,7 +25,7 @@ Next step we do the sorting, we find the index of the bucket we want to add our 
 
 **Step III**
 
-
+Our last and final step is to compine all of our buckets to one array so we can return the sorted array. 
  
 <!-- ![Counting Sort](https://1.bp.blogspot.com/-xPqylngqASY/WLGq3p9n9vI/AAAAAAAAAHM/JHdtXAkJY8wYzDMBXxqarjmhpPhM0u8MACLcB/s1600/ResultArrayCS.gif) -->
 
@@ -33,7 +33,7 @@ Next step we do the sorting, we find the index of the bucket we want to add our 
 
 | Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
 | --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
-| **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - biggest number in array |
+| **Counting sort**     | n               | n + k               | n^{2}               | n + k     | Yes       | k - number of buckets |
 
 ## References
 
