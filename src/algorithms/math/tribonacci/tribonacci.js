@@ -6,11 +6,13 @@
  */
 export default function tribonacci(n) {
   const tribSequence = [0];
-  let currentValue = 1;
+  let currentValue = 0;
 
   if (n >= 2) {
     tribSequence.push(currentValue);
   }
+
+  currentValue += 1;
 
   for (let i = 2; i < n; i += 1) {
     tribSequence.push(currentValue);
