@@ -7,16 +7,15 @@
 export default function tribonacci(n) {
   const tribSequence = [0];
   let currentValue = 1;
-  
-  if(n >= 2) {
+
+  if (n >= 2) {
     tribSequence.push(currentValue);
   }
-    
-  for (let i = 2; i < n; i++) {
+
+  for (let i = 2; i < n; i += 1) {
     tribSequence.push(currentValue);
-    currentValue += tribSequence[i - 1] + tribSequence[i - 2];       
+    currentValue += tribSequence[i - 1] + tribSequence[i - 2];
   }
-  
+
   return tribSequence;
 }
-  
