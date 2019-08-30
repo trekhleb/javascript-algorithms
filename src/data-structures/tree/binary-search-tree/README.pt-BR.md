@@ -1,38 +1,37 @@
-# Binary Search Tree
+# Árvore de Pesquisa Binária (Binary Search Tree)
 
-_Read this in other languages:_
-[_Português_](README.pt-BR.md)
+Na ciência da computação **binary search trees** (BST), algumas vezes
+chamadas de árvores binárias ordenadas (_ordered or sorted binary trees_),
+é um tipo particular de container: estruturas de dados que armazenam
+"itens" (como números, nomes, etc.) na memória. Permite pesquisa rápida,
+adição e remoção de itens além de poder ser utilizado para implementar
+tanto conjuntos dinâmicos de itens ou, consultar tabelas que permitem
+encontrar um item por seu valor chave. E.g. encontrar o número de
+telefone de uma pessoa pelo seu nome.
 
-In computer science, **binary search trees** (BST), sometimes called 
-ordered or sorted binary trees, are a particular type of container: 
-data structures that store "items" (such as numbers, names etc.) 
-in memory. They allow fast lookup, addition and removal of 
-items, and can be used to implement either dynamic sets of 
-items, or lookup tables that allow finding an item by its key 
-(e.g., finding the phone number of a person by name).
+Árvore de Pesquisa Binária mantem seus valores chaves ordenados, para
+que uma pesquisa e outras operações possam usar o princípio da pesquisa
+binária: quando pesquisando por um valor chave na árvore (ou um lugar
+para inserir uma nova chave), eles atravessam a árvore da raiz para a folha,
+fazendo comparações com chaves armazenadas nos nós da árvore e decidindo então,
+com base nas comparações, continuar pesquisando nas sub-árvores a direita ou
+a esquerda. Em média isto significa que cara comparação permite as operações
+pular metade da árvore, para que então, cada pesquisa, inserção ou remoção
+consuma tempo proporcional ao logaritmo do número de itens armazenados na
+árvore. Isto é muito melhor do que um tempo linear necessário para encontrar
+itens por seu valor chave em um array (desorndenado - _unsorted_), mas muito
+mais lento do que operações similares em tableas de hash (_hash tables_).
 
-Binary search trees keep their keys in sorted order, so that lookup 
-and other operations can use the principle of binary search: 
-when looking for a key in a tree (or a place to insert a new key), 
-they traverse the tree from root to leaf, making comparisons to 
-keys stored in the nodes of the tree and deciding, on the basis 
-of the comparison, to continue searching in the left or right 
-subtrees. On average, this means that each comparison allows 
-the operations to skip about half of the tree, so that each 
-lookup, insertion or deletion takes time proportional to the 
-logarithm of the number of items stored in the tree. This is 
-much better than the linear time required to find items by key 
-in an (unsorted) array, but slower than the corresponding 
-operations on hash tables.
+Uma pesquisa de árvore binária de tamanho 9 e profundidade 3, com valor 8
+na raíz.
+As folhas não foram desenhadas.
 
-A binary search tree of size 9 and depth 3, with 8 at the root.
-The leaves are not drawn.
 
 ![Binary Search Tree](https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg)
 
-## Pseudocode for Basic Operations
+## Pseudocódigo para Operações Básicas
 
-### Insertion
+### Inserção
 
 ```text
 insert(value)
@@ -66,7 +65,7 @@ insertNode(current, value)
 end insertNode
 ```
 
-### Searching
+### Pesquisa
 
 ```text
 contains(root, value)
@@ -86,7 +85,7 @@ end contains
 ```
     
      
-### Deletion
+### Remoção
 
 ```text
 remove(value)
@@ -137,7 +136,7 @@ remove(value)
 end remove
 ```
 
-### Find Parent of Node
+### Encontrar o Nó Pai
 
 ```text
 findParent(value, root)
@@ -167,7 +166,7 @@ findParent(value, root)
 end findParent
 ```
 
-### Find Node
+### Encontrar um Nó
 
 ```text
 findNode(root, value)
@@ -187,7 +186,7 @@ findNode(root, value)
 end findNode
 ```
     
-### Find Minimum
+### Encontrar Mínimo
 
 ```text
 findMin(root)
@@ -201,7 +200,7 @@ findMin(root)
 end findMin
 ```
     
-### Find Maximum
+### Encontrar Máximo
 
 ```text
 findMax(root)
@@ -217,7 +216,7 @@ end findMax
     
 ### Traversal
 
-#### InOrder Traversal
+#### Na Ordem Traversal (InOrder Traversal)
 
 ```text
 inorder(root)
@@ -231,7 +230,7 @@ inorder(root)
 end inorder
 ```
 
-#### PreOrder Traversal
+#### Pré Ordem Traversal (PreOrder Traversal)
 
 ```text
 preorder(root)
@@ -245,7 +244,7 @@ preorder(root)
 end preorder
 ```
    
-#### PostOrder Traversal
+#### Pós Ordem Traversal (PostOrder Traversal)
 
 ```text
 postorder(root)
@@ -259,19 +258,19 @@ postorder(root)
 end postorder
 ```
      
-## Complexities
+## Complexidades
 
-### Time Complexity
+### Complexidade de Tempo
 
 | Access    | Search    | Insertion | Deletion  |
 | :-------: | :-------: | :-------: | :-------: |
 | O(log(n)) | O(log(n)) | O(log(n)) | O(log(n)) |
 
-### Space Complexity
+### Complexidade de Espaço
 
 O(n)
 
-## References
+## Referências
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Binary_search_tree)
 - [Inserting to BST on YouTube](https://www.youtube.com/watch?v=wcIRPqTR3Kc&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=9&t=0s)
