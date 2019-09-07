@@ -1,4 +1,4 @@
-# JavaScript Алгоритмы и Структуры Данных
+# JavaScript: Алгоритмы и Структуры Данных
 
 [![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
@@ -77,7 +77,7 @@ _Read this in other languages:_
   * `A` [Дискретное Преобразование Фурье](src/algorithms/math/fourier-transform) - декомпозиция функции времени (сигнал) на частоты, которые составляют его
 * **Наборы**
   * `B` [Декартово Произведение](src/algorithms/sets/cartesian-product) - продукт из нескольких наборов
-  * `B` [Тасование Фишера—Йетса](src/algorithms/sets/fisher-yates) - случайная перестановка конечной последовательности
+  * `B` [Тасование Фишера-Йетса](src/algorithms/sets/fisher-yates) - случайная перестановка конечной последовательности
   * `A` [Алгоритм установки мощности](src/algorithms/sets/power-set) - все подмножества множества (побитовые и обратные решения)
   * `A` [Перестановка](src/algorithms/sets/permutations) (с повторениями и без них)
   * `A` [Комбинация](src/algorithms/sets/combinations) (с повторениями и без них)
@@ -90,15 +90,15 @@ _Read this in other languages:_
 * **Строки**
   * `B` [Расстояние Хемминга](src/algorithms/string/hamming-distance) - количество позиций, в которых символы различаются
   * `A` [Расстояние Левенштейна](src/algorithms/string/levenshtein-distance) - минимальное изменяемое расстояние между двумя последовательностями
-  * `A` [Алгоритм Кнута-Морриса-Пратта](src/algorithms/string/knuth-morris-pratt) (KMP Algorithm) - поиск подстроки (сопоставление шаблонов)
+  * `A` [Алгоритм Кнута-Морриса-Пратта](src/algorithms/string/knuth-morris-pratt) (KMP Алгоритм) - поиск подстроки (сопоставление шаблонов)
   * `A` [Алгоритм Z](src/algorithms/string/z-algorithm) - поиск подстроки (сопоставление шаблонов)
   * `A` [Алгоритм Рабина Карпа](src/algorithms/string/rabin-karp) - поиск подстроки
   * `A` [Наибольшая общая подстрока](src/algorithms/string/longest-common-substring)
   * `A` [Сопоставление Регулярных Выражений](src/algorithms/string/regular-expression-matching)
 * **Поиски**
   * `B` [Линейный Поиск](src/algorithms/search/linear-search)
-  * `B` [Прыжковый Поиск](src/algorithms/search/jump-search) (или блок поиска) - поиск в отсортированном массиве
-  * `B` [Бинарный Поиск](src/algorithms/search/binary-search) - поиск в отсортированном массиве
+  * `B` [Прыжковый Поиск](src/algorithms/search/jump-search) (или блочный поиск) - поиск в отсортированном массиве
+  * `B` [Бинарный Поиск](src/algorithms/search/binary-search) (или двоичный поиск) - поиск в отсортированном массиве
   * `B` [Интерполяционный Поиск](src/algorithms/search/interpolation-search) - поиск в равномерно распределенном отсортированном массиве
 * **Сортировки**
   * `B` [Пузырьковая Сортировка](src/algorithms/sorting/bubble-sort)
@@ -106,11 +106,11 @@ _Read this in other languages:_
   * `B` [Сортировка Вставками](src/algorithms/sorting/insertion-sort)
   * `B` [Пирамидальная Сортировка](src/algorithms/sorting/heap-sort)
   * `B` [Сортировка Слиянием](src/algorithms/sorting/merge-sort)
-  * `B` [Быстрая Сортировка](src/algorithms/sorting/quick-sort) - реализации на месте и не на месте
+  * `B` [Быстрая Сортировка](src/algorithms/sorting/quick-sort) - разные реализации
   * `B` [Сортировка Шелла](src/algorithms/sorting/shell-sort) - сортировка включениями с убывающими приращениями
   * `B` [Сортировка Подсчётом](src/algorithms/sorting/counting-sort)
   * `B` [Поразрядная Сортировка](src/algorithms/sorting/radix-sort)
-* **Связные списоки**
+* **Связные списки**
   * `B` [Прямой Обход](src/algorithms/linked-list/traversal)
   * `B` [Обратный Обход](src/algorithms/linked-list/reverse-traversal)
 * **Деревья**
@@ -203,14 +203,9 @@ _Read this in other languages:_
   * `A` [Проблема N-Queens](src/algorithms/uncategorized/n-queens)
   * `A` [Рыцарский Тур](src/algorithms/uncategorized/knight-tour)
   * `A` [Сумма Комбинаций](src/algorithms/sets/combination-sum) - найти все комбинации, которые образуют определенную сумму 
-* **Ветви И Границы** - remember the lowest-cost solution found at each stage of the backtracking
-search, and use the cost of the lowest-cost solution found so far as a lower bound on the cost of
-a least-cost solution to the problem, in order to discard partial solutions with costs larger than the
-lowest-cost solution found so far. Normally BFS traversal in combination with DFS traversal of state-space
-tree is being used.
-запомните самое дешевое решение - это решение найденное на каждом этапе возврата (бэктрекинга), используйте решение найденное до нижней границы стоимости
-решение проблемы, чтобы отказаться от решений с затратами больше, чем
-самое дешевое решение которое уже найдено. Обычно используется обход BFS в сочетании с обход DFS.
+* **Ветви И Границы** - запомните самое дешевое решение - это решение найденное на каждом этапе возврата (бэктрекинга), используйте решение найденное до нижней границы стоимости
+решения проблемы, чтобы отказаться от решений с затратами больше, чем
+самое дешевое решение которое уже найдено. Обычно используется метод BFS в сочетании с методом DFS.
 
 ## Как использовать репозиторий
 
@@ -247,24 +242,24 @@ npm test -- 'LinkedList'
 npm test -- 'playground'
 ```
 
-## Useful Information
+## Полезная Информация
 
-### References
+### Испочник
 
 [▶ Data Structures and Algorithms on YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 
-### Big O Notation
+### Big O нотации
 
-*Big O notation* is used to classify algorithms according to how their running time or space requirements grow as the input size grows.
-On the chart below you may find most common orders of growth of algorithms specified in Big O notation.
+*Big O нотации* используется для классификации алгоритмов в соответствии с тем, как их требования к времени выполнения или пространству растут по мере увеличения размера входных данных.
+На диаграмме ниже вы можете найти наиболее распространенные порядки роста алгоритмов, указанных в нотации Big O.
 
 ![Big O graphs](./assets/big-o-graph.png)
 
-Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+Источник: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
-Below is the list of some of the most used Big O notations and their performance comparisons against different sizes of the input data.
+Ниже приведен список некоторых из наиболее часто используемых обозначений Big O и их сравнение производительности с различными размерами входных данных.
 
-| Big O Notation | Computations for 10 elements | Computations for 100 elements | Computations for 1000 elements  |
+| Big O нотация | Вычисления для 10 элементов | Вычисления для 100 элементов | Вычисления для 1000 элементов  |
 | -------------- | ---------------------------- | ----------------------------- | ------------------------------- |
 | **O(1)**       | 1                            | 1                             | 1                               |
 | **O(log N)**   | 3                            | 6                             | 9                               |
@@ -274,31 +269,31 @@ Below is the list of some of the most used Big O notations and their performance
 | **O(2^N)**     | 1024                         | 1.26e+29                      | 1.07e+301                       |
 | **O(N!)**      | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
 
-### Data Structure Operations Complexity
+### Сложность операций со структурами данных
 
-| Data Structure          | Access    | Search    | Insertion | Deletion  | Comments  |
-| ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- |
-| **Array**               | 1         | n         | n         | n         |           |
-| **Stack**               | n         | n         | 1         | 1         |           |
-| **Queue**               | n         | n         | 1         | 1         |           |
-| **Linked List**         | n         | n         | 1         | n         |           |
-| **Hash Table**          | -         | n         | n         | n         | In case of perfect hash function costs would be O(1) |
-| **Binary Search Tree**  | n         | n         | n         | n         | In case of balanced tree costs would be O(log(n)) |
-| **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **Red-Black Tree**      | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **Bloom Filter**        | -         | 1         | 1         | -         | False positives are possible while searching |
+| Структура данных          | Доступ    | Поиск    | Вставка | Удаление  | Комментарий  |
+| -----------------------   | :-------: | :-------: | :-------: | :-------: | :-------- |
+| **Массив**                | 1         | n         | n         | n         |           |
+| **Стэк**                  | n         | n         | 1         | 1         |           |
+| **Очередь**               | n         | n         | 1         | 1         |           |
+| **Связный список**        | n         | n         | 1         | n         |           |
+| **Хэш таблица**           | -         | n         | n         | n         | В случае идеальной хэш-функции затраты будут O(1) |
+| **Двоичное Дерево Поиска**| n         | n         | n         | n         | В случае сбалансированного дерева затраты будут O(log(n)) |
+| **B-дерево**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **Красно-чёрное Дерево**  | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **АВЛ-дерево**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
+| **Фильтр Блума**          | -         | 1         | 1         | -         | Возможны ложные срабатывания при поиске |
 
-### Array Sorting Algorithms Complexity
+### Сложность операций сортировки
 
-| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
-| --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
-| **Bubble sort**       | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
-| **Insertion sort**    | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
-| **Selection sort**    | n<sup>2</sup>   | n<sup>2</sup>       | n<sup>2</sup>       | 1         | No        |           |
-| **Heap sort**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |           |
-| **Merge sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Yes       |           |
-| **Quick sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No        | Quicksort is usually done in-place with O(log(n)) stack space |
-| **Shell sort**        | n&nbsp;log(n)   | depends on gap sequence   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
-| **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - biggest number in array |
-| **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Yes       | k - length of longest key |
+| Name                          | Лучшее          | Среднее             | Худшее              | Память    | Стабильность| Комментарий  |
+| ---------------------         | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
+| **Пузырьковая Сортировка**    | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Да       |           |
+| **Сортировка Вставками**      | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Да       |           |
+| **Сортировка Выбором**        | n<sup>2</sup>   | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Нет        |           |
+| **Пирамидальная Сортировка**  | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | Нет        |           |
+| **Сортировка Слиянием**       | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Да       |           |
+| **Быстрая Сортировка**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | Нет        | Быстрая сортировка обычно выполняется с сложностью o(log (n)) |
+| **Сортировка Шелла**          | n&nbsp;log(n)   | зависит от последовательности   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
+| **Сортировка Подсчётом**      | n + r           | n + r               | n + r               | n + r     | Да       | r - самое большое число в массиве |
+| **Поразрядная Сортировка**    | n * k           | n * k               | n * k               | n + k     | Да       | k - длина самого длинного ключа |
