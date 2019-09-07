@@ -36,7 +36,7 @@ _Read this in other languages:_
 * `B` [Очередь](src/data-structures/queue)
 * `B` [Стек](src/data-structures/stack)
 * `B` [Хэш таблица](src/data-structures/hash-table)
-* `B` [Куча](src/data-structures/heap) - максимальные и минимальные версии кучи
+* `B` [Пирамида](src/data-structures/heap) - (куча, сортирующее дерево) максимальные и минимальные версии
 * `B` [Очередь с приоритетом](src/data-structures/priority-queue)
 * `A` [Префиксное Дерево](src/data-structures/trie)
 * `A` [Дерево](src/data-structures/tree)
@@ -45,20 +45,20 @@ _Read this in other languages:_
   * `A` [Красно-чёрное Дерево](src/data-structures/tree/red-black-tree)
   * `A` [Сегмент Дерева](src/data-structures/tree/segment-tree) - с примерами запросов диапазона min / max / sum
   * `A` [Дерево Фенвика](src/data-structures/tree/fenwick-tree) (Двоичное индексируемое дерево)
-* `A` [Диаграмма](src/data-structures/graph) (как направленная, так и ненаправленная)
+* `A` [Граф](src/data-structures/graph) (как направленный, так и ненаправленный)
 * `A` [Непересекающийся Набор](src/data-structures/disjoint-set)
 * `A` [Фильтр Блума](src/data-structures/bloom-filter)
 
 ## Алгоритмы
 
 Алгоритм - конечная совокупность точно заданных правил решения произвольного класса задач или набор инструкций, 
-описывающих порядок действий исполнителя для решения некоторой задачи.
+описывающих порядок действий исполнителя для решения задачи.
 
 `B` - Начинающий, `A` - Продвинутый
 
 ### Алгоритмы по темам
 
-* **Math**
+* **Математика**
   * `B` [Небольшая Манипуляция](src/algorithms/math/bits) - установка/получение/обновление/очистка битов, умножение/деление на два, сделать отрицательным и т.д.
   * `B` [Факториал](src/algorithms/math/factorial) 
   * `B` [Числа Фибоначчи](src/algorithms/math/fibonacci) - классический и закрытый варианты
@@ -70,176 +70,178 @@ _Read this in other languages:_
   * `B` [Треугольник Паскаля](src/algorithms/math/pascal-triangle)
   * `B` [Комплексное Число](src/algorithms/math/complex-number) - комплексные числа и основные операции с ними
   * `B` [Радиан & Степень](src/algorithms/math/radian) - радиан в степень и обратное преобразование
-  * `B` [Fast Powering](src/algorithms/math/fast-powering)
-  * `A` [Integer Partition](src/algorithms/math/integer-partition)
+  * `B` [Быстрое Включение](src/algorithms/math/fast-powering)
+  * `A` [Целочисленное Разбиение](src/algorithms/math/integer-partition)
   * `A` [Квадратный Корень](src/algorithms/math/square-root) - метод Ньютона
   * `A` [Алгоритм Лю Хуэя π ](src/algorithms/math/liu-hui) - приближенные π расчеты на основе N-gons
   * `A` [Дискретное Преобразование Фурье](src/algorithms/math/fourier-transform) - декомпозиция функции времени (сигнал) на частоты, которые составляют его
-* **Sets**
-  * `B` [Cartesian Product](src/algorithms/sets/cartesian-product) - product of multiple sets
-  * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
-  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set (bitwise and backtracking solutions)
-  * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
-  * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
-  * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
-  * `A` [Longest Increasing Subsequence](src/algorithms/sets/longest-increasing-subsequence)
-  * `A` [Shortest Common Supersequence](src/algorithms/sets/shortest-common-supersequence) (SCS)
-  * `A` [Knapsack Problem](src/algorithms/sets/knapsack-problem) - "0/1" and "Unbound" ones
-  * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray) - "Brute Force" and "Dynamic Programming" (Kadane's) versions
-  * `A` [Combination Sum](src/algorithms/sets/combination-sum) - find all combinations that form specific sum
-* **Strings**
-  * `B` [Hamming Distance](src/algorithms/string/hamming-distance) - number of positions at which the symbols are different
-  * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
-  * `A` [Knuth–Morris–Pratt Algorithm](src/algorithms/string/knuth-morris-pratt) (KMP Algorithm) - substring search (pattern matching)
-  * `A` [Z Algorithm](src/algorithms/string/z-algorithm) - substring search (pattern matching)
-  * `A` [Rabin Karp Algorithm](src/algorithms/string/rabin-karp) - substring search
-  * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
-  * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
-* **Searches**
-  * `B` [Linear Search](src/algorithms/search/linear-search)
-  * `B` [Jump Search](src/algorithms/search/jump-search) (or Block Search) - search in sorted array
-  * `B` [Binary Search](src/algorithms/search/binary-search) - search in sorted array
-  * `B` [Interpolation Search](src/algorithms/search/interpolation-search) - search in uniformly distributed sorted array
-* **Sorting**
-  * `B` [Bubble Sort](src/algorithms/sorting/bubble-sort)
-  * `B` [Selection Sort](src/algorithms/sorting/selection-sort)
-  * `B` [Insertion Sort](src/algorithms/sorting/insertion-sort)
-  * `B` [Heap Sort](src/algorithms/sorting/heap-sort)
-  * `B` [Merge Sort](src/algorithms/sorting/merge-sort)
-  * `B` [Quicksort](src/algorithms/sorting/quick-sort) - in-place and non-in-place implementations
-  * `B` [Shellsort](src/algorithms/sorting/shell-sort)
-  * `B` [Counting Sort](src/algorithms/sorting/counting-sort)
-  * `B` [Radix Sort](src/algorithms/sorting/radix-sort)
-* **Linked Lists**
-  * `B` [Straight Traversal](src/algorithms/linked-list/traversal)
-  * `B` [Reverse Traversal](src/algorithms/linked-list/reverse-traversal)
-* **Trees**
-  * `B` [Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
-  * `B` [Breadth-First Search](src/algorithms/tree/breadth-first-search) (BFS)
-* **Graphs**
-  * `B` [Depth-First Search](src/algorithms/graph/depth-first-search) (DFS)
-  * `B` [Breadth-First Search](src/algorithms/graph/breadth-first-search) (BFS)
-  * `B` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - finding shortest paths to all graph vertices from single vertex
-  * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - finding shortest paths to all graph vertices from single vertex
-  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - find shortest paths between all pairs of vertices
-  * `A` [Detect Cycle](src/algorithms/graph/detect-cycle) - for both directed and undirected graphs (DFS and Disjoint Set based versions)
-  * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * `A` [Topological Sorting](src/algorithms/graph/topological-sorting) - DFS method
-  * `A` [Articulation Points](src/algorithms/graph/articulation-points) - Tarjan's algorithm (DFS based)
-  * `A` [Bridges](src/algorithms/graph/bridges) - DFS based algorithm
-  * `A` [Eulerian Path and Eulerian Circuit](src/algorithms/graph/eulerian-path) - Fleury's algorithm - Visit every edge exactly once
-  * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
-  * `A` [Strongly Connected Components](src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
-  * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
-* **Cryptography**
-  * `B` [Polynomial Hash](src/algorithms/cryptography/polynomial-hash) - rolling hash function based on polynomial
-* **Uncategorized**
-  * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
-  * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
-  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples 
-  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples 
-  * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem (dynamic programming and brute force versions)
-  * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top (4 solutions)
-  * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
-  * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
+* **Наборы**
+  * `B` [Декартово Произведение](src/algorithms/sets/cartesian-product) - продукт из нескольких наборов
+  * `B` [Тасование Фишера—Йетса](src/algorithms/sets/fisher-yates) - случайная перестановка конечной последовательности
+  * `A` [Алгоритм установки мощности](src/algorithms/sets/power-set) - все подмножества множества (побитовые и обратные решения)
+  * `A` [Перестановка](src/algorithms/sets/permutations) (с повторениями и без них)
+  * `A` [Комбинация](src/algorithms/sets/combinations) (с повторениями и без них)
+  * `A` [Наибольшая Общая Подпоследовательность](src/algorithms/sets/longest-common-subsequence) Longest Common Subsequence (LCS)
+  * `A` [Наибольшая Возрастающая Подпоследовательность](src/algorithms/sets/longest-increasing-subsequence)
+  * `A` [Короткая Общая Суперпоследовательность](src/algorithms/sets/shortest-common-supersequence) Shortest Common Supersequence (SCS)
+  * `A` [Проблема Рюкзака](src/algorithms/sets/knapsack-problem) - "0/1" и "Свободный"
+  * `A` [Максимальный Подмассив](src/algorithms/sets/maximum-subarray) - "Грубая Сила" и "Динамическое программирование" (Kadane) версии
+  * `A` [Сумма Комбинаций](src/algorithms/sets/combination-sum) - найти все комбинации, которые образуют определенную сумму
+* **Строки**
+  * `B` [Расстояние Хемминга](src/algorithms/string/hamming-distance) - количество позиций, в которых символы различаются
+  * `A` [Расстояние Левенштейна](src/algorithms/string/levenshtein-distance) - минимальное изменяемое расстояние между двумя последовательностями
+  * `A` [Алгоритм Кнута-Морриса-Пратта](src/algorithms/string/knuth-morris-pratt) (KMP Algorithm) - поиск подстроки (сопоставление шаблонов)
+  * `A` [Алгоритм Z](src/algorithms/string/z-algorithm) - поиск подстроки (сопоставление шаблонов)
+  * `A` [Алгоритм Рабина Карпа](src/algorithms/string/rabin-karp) - поиск подстроки
+  * `A` [Наибольшая общая подстрока](src/algorithms/string/longest-common-substring)
+  * `A` [Сопоставление Регулярных Выражений](src/algorithms/string/regular-expression-matching)
+* **Поиски**
+  * `B` [Линейный Поиск](src/algorithms/search/linear-search)
+  * `B` [Прыжковый Поиск](src/algorithms/search/jump-search) (или блок поиска) - поиск в отсортированном массиве
+  * `B` [Бинарный Поиск](src/algorithms/search/binary-search) - поиск в отсортированном массиве
+  * `B` [Интерполяционный Поиск](src/algorithms/search/interpolation-search) - поиск в равномерно распределенном отсортированном массиве
+* **Сортировки**
+  * `B` [Пузырьковая Сортировка](src/algorithms/sorting/bubble-sort)
+  * `B` [Сортировка Выбором](src/algorithms/sorting/selection-sort)
+  * `B` [Сортировка Вставками](src/algorithms/sorting/insertion-sort)
+  * `B` [Пирамидальная Сортировка](src/algorithms/sorting/heap-sort)
+  * `B` [Сортировка Слиянием](src/algorithms/sorting/merge-sort)
+  * `B` [Быстрая Сортировка](src/algorithms/sorting/quick-sort) - реализации на месте и не на месте
+  * `B` [Сортировка Шелла](src/algorithms/sorting/shell-sort) - сортировка включениями с убывающими приращениями
+  * `B` [Сортировка Подсчётом](src/algorithms/sorting/counting-sort)
+  * `B` [Поразрядная Сортировка](src/algorithms/sorting/radix-sort)
+* **Связные списоки**
+  * `B` [Прямой Обход](src/algorithms/linked-list/traversal)
+  * `B` [Обратный Обход](src/algorithms/linked-list/reverse-traversal)
+* **Деревья**
+  * `B` [Поиск в глубину](src/algorithms/tree/depth-first-search) Depth-First Search (DFS)
+  * `B` [Поиск в ширину](src/algorithms/tree/breadth-first-search) Breadth-First Search (BFS)
+* **Графы**
+  * `B` [Поиск в глубину](src/algorithms/graph/depth-first-search) Depth-First Search (DFS)
+  * `B` [Поиск в ширину](src/algorithms/graph/breadth-first-search) Breadth-First Search (BFS)
+  * `B` [Алгоритм Крускала](src/algorithms/graph/kruskal) - поиск минимального остовного дерева (MST) для взвешенного неориентированного графа
+  * `A` [Алгоритм Дейкстры](src/algorithms/graph/dijkstra) - поиск кратчайших путей ко всем вершинам графа из одной вершины
+  * `A` [Алгоритм Беллмана-Форда](src/algorithms/graph/bellman-ford) - поиск кратчайших путей ко всем вершинам графа из одной вершины
+  * `A` [Алгоритм Флойда-Уоршолла](src/algorithms/graph/floyd-warshall) - найти кратчайший путь между всеми парами вершин
+  * `A` [Обнаружения Цикла](src/algorithms/graph/detect-cycle) - как для направленных, так и для неориентированных графов (версии на основе DFS и непересекающихся наборов)
+  * `A` [Алгоритм Прима](src/algorithms/graph/prim) - поиск минимального остовного дерева (MST) для взвешенного неориентированного графа
+  * `A` [Топологическая Сортировка](src/algorithms/graph/topological-sorting) - метод DFS
+  * `A` [Точки Сочленения](src/algorithms/graph/articulation-points) - Алгоритм Тарьяна (основанный на DFS)
+  * `A` [Мосты](src/algorithms/graph/bridges) - Алгоритм на основе DFS
+  * `A` [Эйлеров путь и Эйлерова цепь](src/algorithms/graph/eulerian-path) - Алгоритм Флери - посещение каждого края ровно один раз
+  * `A` [Гамильтонов Цикл](src/algorithms/graph/hamiltonian-cycle) - посещение каждой вершины ровно один раз
+  * `A` [Сильно Связные Компоненты](src/algorithms/graph/strongly-connected-components) - Алгоритм Косарайю
+  * `A` [Задача Коммивояжера](src/algorithms/graph/travelling-salesman) - кратчайший маршрут, по которому посещает каждый город и возвращается в исходный город
+* **Криптография**
+  * `B` [Полиномиальный Хэш](src/algorithms/cryptography/polynomial-hash) - хэш-функция на основе полинома
+* **Без категории**
+  * `B` [Ханойская Башня](src/algorithms/uncategorized/hanoi-tower)
+  * `B` [Квадратная Матрица Вращения](src/algorithms/uncategorized/square-matrix-rotation) - алгоритм на месте
+  * `B` [Алгоритм прыжка](src/algorithms/uncategorized/jump-game) - обратное отслеживание, динамическое программирование (сверху вниз + снизу вверх) и примеры
+  * `B` [Уникальный Путь](src/algorithms/uncategorized/unique-paths) - обратное отслеживание, динамическое программирование и примеры на основе треугольника Паскаля 
+  * `B` [Дождь Террасы](src/algorithms/uncategorized/rain-terraces) - проблема улавливания дождевой воды  (версии динамического программирования и грубой силы)
+  * `B` [Рекурсивная Лестница](src/algorithms/uncategorized/recursive-staircase) - подсчитать количество способов добраться до вершины (4 решения)
+  * `A` [Проблема N-Queens](src/algorithms/uncategorized/n-queens)
+  * `A` [Рыцарский Тур](src/algorithms/uncategorized/knight-tour)
 
-### Algorithms by Paradigm
+### Алгоритмы по парадигме
 
-An algorithmic paradigm is a generic method or approach which underlies the design of a class
-of algorithms. It is an abstraction higher than the notion of an algorithm, just as an
-algorithm is an abstraction higher than a computer program.
+Алгоритмическая парадигма - это общий метод или подход, который лежит в основе проектирования класса
+алгоритмов. Это абстракция выше, чем понятие алгоритма, так же как
+алгоритм - это абстракция выше, чем компьютерная программа.
 
-* **Brute Force** - look at all the possibilities and selects the best solution
-  * `B` [Linear Search](src/algorithms/search/linear-search)
-  * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
-  * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top
-  * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
-  * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
-  * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up
-* **Greedy** - choose the best option at the current time, without any consideration for the future
-  * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
-  * `A` [Unbound Knapsack Problem](src/algorithms/sets/knapsack-problem)
-  * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
-  * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * `A` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-* **Divide and Conquer** - divide the problem into smaller parts and then solve those parts
-  * `B` [Binary Search](src/algorithms/search/binary-search)
-  * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
-  * `B` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
-  * `B` [Euclidean Algorithm](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
-  * `B` [Merge Sort](src/algorithms/sorting/merge-sort)
-  * `B` [Quicksort](src/algorithms/sorting/quick-sort)
-  * `B` [Tree Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
-  * `B` [Graph Depth-First Search](src/algorithms/graph/depth-first-search) (DFS)
-  * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
-  * `B` [Fast Powering](src/algorithms/math/fast-powering)
-  * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
-  * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
-* **Dynamic Programming** - build up a solution using previously found sub-solutions
-  * `B` [Fibonacci Number](src/algorithms/math/fibonacci)
-  * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
-  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
-  * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
-  * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top
-  * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
-  * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
-  * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
-  * `A` [Longest Increasing Subsequence](src/algorithms/sets/longest-increasing-subsequence)
-  * `A` [Shortest Common Supersequence](src/algorithms/sets/shortest-common-supersequence)
-  * `A` [0/1 Knapsack Problem](src/algorithms/sets/knapsack-problem)
-  * `A` [Integer Partition](src/algorithms/math/integer-partition)
-  * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
-  * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
-  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - find shortest paths between all pairs of vertices
-  * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
-* **Backtracking** - similarly to brute force, try to generate all possible solutions, but each time you generate next solution you test
-if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise, backtrack, and go on a
-different path of finding a solution. Normally the DFS traversal of state-space is being used.
-  * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
-  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
-  * `B` [Power Set](src/algorithms/sets/power-set) - all subsets of a set
-  * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
-  * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
-  * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
-  * `A` [Combination Sum](src/algorithms/sets/combination-sum) - find all combinations that form specific sum
-* **Branch & Bound** - remember the lowest-cost solution found at each stage of the backtracking
+* **Грубая Сила (Полный перебор)** - посмотрите на все возможности и выберите лучшее решение
+  * `B` [Линейный Поиск](src/algorithms/search/linear-search)
+  * `B` [Дождь Террасы](src/algorithms/uncategorized/rain-terraces) - проблема улавливания дождевой воды
+  * `B` [Рекурсивная Лестница](src/algorithms/uncategorized/recursive-staircase) - подсчитать количество способов добраться до вершины
+  * `A` [Максимальный Подмассив](src/algorithms/sets/maximum-subarray)
+  * `A` [Задача Коммивояжера](src/algorithms/graph/travelling-salesman) - кратчайший маршрут, по которому посещает каждый город и возвращается в исходный город
+  * `A` [Дискретное Преобразование Фурье](src/algorithms/math/fourier-transform) - декомпозиция функции времени (сигнал) на частоты, которые составляют его
+* **Жадный алгоритм** - выбирайте оптимальный вариант на текущий момент, без каких-либо раздумий на будущее
+  * `B` [Алгоритм прыжка](src/algorithms/uncategorized/jump-game)
+  * `A` [Проблема Сободного Рюкзака](src/algorithms/sets/knapsack-problem)
+  * `A` [Алгоритм Дейкстры](src/algorithms/graph/dijkstra) - поиск кратчайших путей ко всем вершинам графа из одной вершины
+  * `A` [Алгоритм Прима](src/algorithms/graph/prim) - поиск минимального остовного дерева (MST) для взвешенного неориентированного графа
+  * `A` [Алгоритм Крускала](src/algorithms/graph/kruskal) - поиск минимального остовного дерева (MST) для взвешенного неориентированного графа
+* **Разделяй и властвуй** - разделите проблему на более мелкие части, а затем решите эти части
+  * `B` [Бинарный Поиск](src/algorithms/search/binary-search)
+  * `B` [Ханойская Башня](src/algorithms/uncategorized/hanoi-tower)
+  * `B` [Треугольник Паскаля](src/algorithms/math/pascal-triangle)
+  * `B` [Алгоритм Евклида](src/algorithms/math/euclidean-algorithm) - вычислить наибольший общий делитель (GCD)
+  * `B` [Сортировка Слиянием](src/algorithms/sorting/merge-sort)
+  * `B` [Быстрая Сортировка](src/algorithms/sorting/quick-sort)
+  * `B` [Поиск по дереву в глубину](src/algorithms/tree/depth-first-search) (DFS)
+  * `B` [Поиск по графам в глубину](src/algorithms/graph/depth-first-search) (DFS)
+  * `B` [Алгоритм прыжка](src/algorithms/uncategorized/jump-game)
+  * `B` [Быстрое Включение](src/algorithms/math/fast-powering)
+  * `A` [Перестановка](src/algorithms/sets/permutations) (с повторениями и без них)
+  * `A` [Комбинация](src/algorithms/sets/combinations) (с повторениями и без них)
+* **Динамическое Программирование** - создайте решение, используя ранее найденные подрешения
+  * `B` [Числа Фибоначчи](src/algorithms/math/fibonacci)
+  * `B` [Алгоритм прыжка](src/algorithms/uncategorized/jump-game)
+  * `B` [Уникальный Путь](src/algorithms/uncategorized/unique-paths)
+  * `B` [Дождь Террасы](src/algorithms/uncategorized/rain-terraces) - проблема улавливания дождевой воды 
+  * `B` [Рекурсивная Лестница](src/algorithms/uncategorized/recursive-staircase) - подсчитать количество способов добраться до вершины
+  * `A` [Расстояние Левенштейна](src/algorithms/string/levenshtein-distance) - минимальное изменяемое расстояние между двумя последовательностями
+  * `A` [Наибольшая Общая Подпоследовательность](src/algorithms/sets/longest-common-subsequence) (LCS)
+  * `A` [Наибольшая общая подстрока](src/algorithms/string/longest-common-substring)
+  * `A` [Наибольшая Возрастающая Подпоследовательность](src/algorithms/sets/longest-increasing-subsequence)
+  * `A` [Короткая Общая Суперпоследовательность](src/algorithms/sets/shortest-common-supersequence)
+  * `A` [0/1 Проблема Рюкзака](src/algorithms/sets/knapsack-problem)
+  * `A` [Целочисленное Разбиение](src/algorithms/math/integer-partition)
+  * `A` [Максимальный Подмассив](src/algorithms/sets/maximum-subarray)
+  * `A` [Алгоритм Беллмана-Форда](src/algorithms/graph/bellman-ford) - поиск кратчайших путей ко всем вершинам графа из одной вершины
+  * `A` [Алгоритм Флойда-Уоршолла](src/algorithms/graph/floyd-warshall) - найти кратчайший путь между всеми парами вершин
+  * `A` [Сопоставление Регулярных Выражений](src/algorithms/string/regular-expression-matching)
+* **Возврат (Бэктрекинг)** - подобно "грубой силе", попробуйте создать все возможные решения, но каждый раз, когда вы создаете следующее решение, тестируйте его
+на удовлетворение всем условиям, и только тогда продолжайте генерировать последующие решения. В противном случае, отступите и продолжайте
+искать другой путь поиска решения. Обычно используется метод DFS.
+  * `B` [Алгоритм прыжка](src/algorithms/uncategorized/jump-game)
+  * `B` [Уникальный Путь](src/algorithms/uncategorized/unique-paths)
+  * `B` [Алгоритм установки мощности](src/algorithms/sets/power-set) - все подмножества множества
+  * `A` [Гамильтонов Цикл](src/algorithms/graph/hamiltonian-cycle) - посещение каждой вершины ровно один раз
+  * `A` [Проблема N-Queens](src/algorithms/uncategorized/n-queens)
+  * `A` [Рыцарский Тур](src/algorithms/uncategorized/knight-tour)
+  * `A` [Сумма Комбинаций](src/algorithms/sets/combination-sum) - найти все комбинации, которые образуют определенную сумму 
+* **Ветви И Границы** - remember the lowest-cost solution found at each stage of the backtracking
 search, and use the cost of the lowest-cost solution found so far as a lower bound on the cost of
 a least-cost solution to the problem, in order to discard partial solutions with costs larger than the
 lowest-cost solution found so far. Normally BFS traversal in combination with DFS traversal of state-space
 tree is being used.
+запомните самое дешевое решение - это решение найденное на каждом этапе возврата (бэктрекинга), используйте решение найденное до нижней границы стоимости
+решение проблемы, чтобы отказаться от решений с затратами больше, чем
+самое дешевое решение которое уже найдено. Обычно используется обход BFS в сочетании с обход DFS.
 
-## How to use this repository
+## Как использовать репозиторий
 
-**Install all dependencies**
+**Установите все зависимости**
 ```
 npm install
 ```
 
-**Run ESLint**
+**Запуск ESLint**
 
-You may want to run it to check code quality.
+Вы можете запустить его, чтобы проверить качество кода.
 
 ```
 npm run lint
 ```
 
-**Run all tests**
+**Запуск тестов**
 ```
 npm test
 ```
 
-**Run tests by name**
+**Запуск теста по имени**
 ```
 npm test -- 'LinkedList'
 ```
 
-**Playground**
+**Песочница**
 
-You may play with data-structures and algorithms in `./src/playground/playground.js` file and write
-tests for it in `./src/playground/__test__/playground.test.js`.
+Вы можете играть с структурами данных и алгоритмами в файле `./src/playground/playground.js` и написать тесты в `./src/playground/__test__/playground.test.js`.
 
-Then just simply run the following command to test if your playground code works as expected:
+Затем просто запустите следующую команду, чтобы проверить, работает ли ваш код в песочнице так, как ожидалось:
 
 ```
 npm test -- 'playground'
