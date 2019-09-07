@@ -1,16 +1,17 @@
-# JavaScript Algorithms and Data Structures
+# JavaScript Алгоритмы и Структуры Данных
 
 [![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
-This repository contains JavaScript based examples of many
-popular algorithms and data structures.
+Этот репозиторий содержит JavaScript-примеры многих
+популярных алгоритмов и структур данных.
 
-Each algorithm and data structure has its own separate README
-with related explanations and links for further reading (including ones
-to YouTube videos).
+Каждый алгоритм и структура данных имеет собственный отдельный README файл
+с объяснением и ссылками для получения подробной информации (включая видеоролики
+на YouTube).
 
 _Read this in other languages:_
+[_English_](https://github.com/trekhleb/javascript-algorithms/),
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
@@ -18,65 +19,62 @@ _Read this in other languages:_
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
-[_Português_](README.pt-BR.md),
-[_Русский_](README.ru-RU.md)
+[_Português_](README.pt-BR.md)
 
-*☝ Note that this project is meant to be used for learning and researching purposes 
-only and it is **not** meant to be used for production.*
+*☝Обратите внимание, проект предназначен для использования только в учебных и исследовательских целях - **не** предназначен для использования в реальных проектах.*
 
-## Data Structures
+## Структуры данных
 
-A data structure is a particular way of organizing and storing data in a computer so that it can
-be accessed and modified efficiently. More precisely, a data structure is a collection of data
-values, the relationships among them, and the functions or operations that can be applied to
-the data.
+Структура данных - это особый способ организации и хранения данных в компьютере, который позволяет данным быть 
+доступными и эффективно изменяться. Также, структура данных - это коллекция данных, 
+содержащая зависимости между ними и функции или операции, работающие с данными.
 
-`B` - Beginner, `A` - Advanced
+`B` - Начинающий, `A` - Продвинутый
 
-* `B` [Linked List](src/data-structures/linked-list)
-* `B` [Doubly Linked List](src/data-structures/doubly-linked-list)
-* `B` [Queue](src/data-structures/queue)
-* `B` [Stack](src/data-structures/stack)
-* `B` [Hash Table](src/data-structures/hash-table)
-* `B` [Heap](src/data-structures/heap) - max and min heap versions
-* `B` [Priority Queue](src/data-structures/priority-queue)
-* `A` [Trie](src/data-structures/trie)
-* `A` [Tree](src/data-structures/tree)
-  * `A` [Binary Search Tree](src/data-structures/tree/binary-search-tree)
-  * `A` [AVL Tree](src/data-structures/tree/avl-tree)
-  * `A` [Red-Black Tree](src/data-structures/tree/red-black-tree)
-  * `A` [Segment Tree](src/data-structures/tree/segment-tree) - with min/max/sum range queries examples
-  * `A` [Fenwick Tree](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
-* `A` [Graph](src/data-structures/graph) (both directed and undirected)
-* `A` [Disjoint Set](src/data-structures/disjoint-set)
-* `A` [Bloom Filter](src/data-structures/bloom-filter)
+* `B` [Связный список](src/data-structures/linked-list)
+* `B` [Двусвязный список](src/data-structures/doubly-linked-list)
+* `B` [Очередь](src/data-structures/queue)
+* `B` [Стек](src/data-structures/stack)
+* `B` [Хэш таблица](src/data-structures/hash-table)
+* `B` [Куча](src/data-structures/heap) - максимальные и минимальные версии кучи
+* `B` [Очередь с приоритетом](src/data-structures/priority-queue)
+* `A` [Префиксное Дерево](src/data-structures/trie)
+* `A` [Дерево](src/data-structures/tree)
+  * `A` [Двоичное Дерево Поиска](src/data-structures/tree/binary-search-tree)
+  * `A` [АВЛ-дерево](src/data-structures/tree/avl-tree)
+  * `A` [Красно-чёрное Дерево](src/data-structures/tree/red-black-tree)
+  * `A` [Сегмент Дерева](src/data-structures/tree/segment-tree) - с примерами запросов диапазона min / max / sum
+  * `A` [Дерево Фенвика](src/data-structures/tree/fenwick-tree) (Двоичное индексируемое дерево)
+* `A` [Диаграмма](src/data-structures/graph) (как направленная, так и ненаправленная)
+* `A` [Непересекающийся Набор](src/data-structures/disjoint-set)
+* `A` [Фильтр Блума](src/data-structures/bloom-filter)
 
-## Algorithms
+## Алгоритмы
 
-An algorithm is an unambiguous specification of how to solve a class of problems. It is
-a set of rules that precisely define a sequence of operations.
+Алгоритм - конечная совокупность точно заданных правил решения произвольного класса задач или набор инструкций, 
+описывающих порядок действий исполнителя для решения некоторой задачи.
 
-`B` - Beginner, `A` - Advanced
+`B` - Начинающий, `A` - Продвинутый
 
-### Algorithms by Topic
+### Алгоритмы по темам
 
 * **Math**
-  * `B` [Bit Manipulation](src/algorithms/math/bits) - set/get/update/clear bits, multiplication/division by two, make negative etc.
-  * `B` [Factorial](src/algorithms/math/factorial) 
-  * `B` [Fibonacci Number](src/algorithms/math/fibonacci) - classic and closed-form versions
-  * `B` [Primality Test](src/algorithms/math/primality-test) (trial division method)
-  * `B` [Euclidean Algorithm](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
-  * `B` [Least Common Multiple](src/algorithms/math/least-common-multiple) (LCM)
-  * `B` [Sieve of Eratosthenes](src/algorithms/math/sieve-of-eratosthenes) - finding all prime numbers up to any given limit
-  * `B` [Is Power of Two](src/algorithms/math/is-power-of-two) - check if the number is power of two (naive and bitwise algorithms)
-  * `B` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
-  * `B` [Complex Number](src/algorithms/math/complex-number) - complex numbers and basic operations with them
-  * `B` [Radian & Degree](src/algorithms/math/radian) - radians to degree and backwards conversion
+  * `B` [Небольшая Манипуляция](src/algorithms/math/bits) - установка/получение/обновление/очистка битов, умножение/деление на два, сделать отрицательным и т.д.
+  * `B` [Факториал](src/algorithms/math/factorial) 
+  * `B` [Числа Фибоначчи](src/algorithms/math/fibonacci) - классический и закрытый варианты
+  * `B` [Тест примитивности](src/algorithms/math/primality-test) (метод пробного деления)
+  * `B` [Алгоритм Евклида](src/algorithms/math/euclidean-algorithm) - вычислить наибольший общий делитель (GCD)
+  * `B` [Наименьшее Общее Кратное](src/algorithms/math/least-common-multiple) (LCM)
+  * `B` [Решето Эратосфена](src/algorithms/math/sieve-of-eratosthenes) - поиск всех простых чисел до любого заданного предела
+  * `B` [Сила Двух](src/algorithms/math/is-power-of-two) - проверьте, является ли число силой двух (наивные и побитовые алгоритмы)
+  * `B` [Треугольник Паскаля](src/algorithms/math/pascal-triangle)
+  * `B` [Комплексное Число](src/algorithms/math/complex-number) - комплексные числа и основные операции с ними
+  * `B` [Радиан & Степень](src/algorithms/math/radian) - радиан в степень и обратное преобразование
   * `B` [Fast Powering](src/algorithms/math/fast-powering)
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
-  * `A` [Square Root](src/algorithms/math/square-root) - Newton's method
-  * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
-  * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up 
+  * `A` [Квадратный Корень](src/algorithms/math/square-root) - метод Ньютона
+  * `A` [Алгоритм Лю Хуэя π ](src/algorithms/math/liu-hui) - приближенные π расчеты на основе N-gons
+  * `A` [Дискретное Преобразование Фурье](src/algorithms/math/fourier-transform) - декомпозиция функции времени (сигнал) на частоты, которые составляют его
 * **Sets**
   * `B` [Cartesian Product](src/algorithms/sets/cartesian-product) - product of multiple sets
   * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
