@@ -244,7 +244,7 @@ npm test -- 'playground'
 
 ## Полезная Информация
 
-### Испочник
+### Ссылки на источники
 
 [▶ Data Structures and Algorithms on YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 
