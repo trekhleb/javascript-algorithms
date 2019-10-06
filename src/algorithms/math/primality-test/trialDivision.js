@@ -1,8 +1,8 @@
 /**
- * @param {number} number
+ * @param {number} x
  * @return {boolean}
  */
-export default function trialDivision(number) {
+export default function trialDivision(x) {
   // Check if number is integer.
   if (x * 0 !== 0 || x % 1 !== 0) {
     return false
