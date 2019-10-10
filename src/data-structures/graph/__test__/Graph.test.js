@@ -385,4 +385,59 @@ describe('Graph', () => {
       [Infinity, Infinity, Infinity, Infinity],
     ]);
   });
+
+  it('should generate adjacency list for undirected graph', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB, 2);
+    const edgeBC = new GraphEdge(vertexB, vertexC, 1);
+    const edgeCD = new GraphEdge(vertexC, vertexD, 5);
+    const edgeBD = new GraphEdge(vertexB, vertexD, 7);
+
+    const graph = new Graph();
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBC)
+      .addEdge(edgeCD)
+      .addEdge(edgeBD);
+
+    const adjacencyList = graph.getAdjacencyList();
+
+    expect(adjacencyList).toEqual({
+      A: [{ value: 'B', weight: 2 }],
+      B: [{ value: 'A', weight: 2 }, { value: 'C', weight: 1 }, { value: 'D', weight: 7 }],
+      C: [{ value: 'B', weight: 1 }, { value: 'D', weight: 5 }],
+      D: [{ value: 'C', weight: 5 }, { value: 'B', weight: 7 }],
+    });
+  });
+
+  it('should generate adjacency list for directed graph', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB, 2);
+    const edgeBC = new GraphEdge(vertexB, vertexC, 1);
+    const edgeCD = new GraphEdge(vertexC, vertexD, 5);
+    const edgeBD = new GraphEdge(vertexB, vertexD, 7);
+
+    const graph = new Graph(true);
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBC)
+      .addEdge(edgeCD)
+      .addEdge(edgeBD);
+
+    const adjacencyList = graph.getAdjacencyList();
+
+    expect(adjacencyList).toEqual({
+      A: [{ value: 'B', weight: 2 }],
+      B: [{ value: 'C', weight: 1 }, { value: 'D', weight: 7 }],
+      C: [{ value: 'D', weight: 5 }],
+    });
+  });
 });

@@ -189,6 +189,36 @@ export default class Graph {
   }
 
   /**
+   * @returns {*[{}]}
+   */
+  getAdjacencyList() {
+    const edges = this.getAllEdges();
+    const adjacencyList = {};
+
+    edges.forEach((edge) => {
+      const { weight } = edge;
+      const startVertexValue = edge.startVertex.value;
+      const endVertexValue = edge.endVertex.value;
+
+      if (adjacencyList[startVertexValue]) {
+        adjacencyList[edge.startVertex.value].push({ weight, value: endVertexValue });
+      } else {
+        adjacencyList[startVertexValue] = [{ weight, value: endVertexValue }];
+      }
+
+      if (!this.isDirected) {
+        if (adjacencyList[endVertexValue]) {
+          adjacencyList[endVertexValue].push({ weight, value: startVertexValue });
+        } else {
+          adjacencyList[endVertexValue] = [{ weight, value: startVertexValue }];
+        }
+      }
+    });
+
+    return adjacencyList;
+  }
+
+  /**
    * @return {string}
    */
   toString() {
