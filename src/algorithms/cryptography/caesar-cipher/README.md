@@ -11,7 +11,5 @@ Where x is the text to be encrypted/decrypted and k is the private key or the am
 
 ## References
 
-- [Where to Use Polynomial String Hashing](https://www.mii.lt/olympiads_in_informatics/pdf/INFOL119.pdf)
-- [Hashing on uTexas](https://www.cs.utexas.edu/~mitra/csSpring2017/cs313/lectures/hash.html)
-- [Hash Function on Wikipedia](https://en.wikipedia.org/wiki/Hash_function)
-- [Rolling Hash on Wikipedia](https://en.wikipedia.org/wiki/Rolling_hash)
+- [Ceasar Cipher](http://practicalcryptography.com/ciphers/caesar-cipher/)
+

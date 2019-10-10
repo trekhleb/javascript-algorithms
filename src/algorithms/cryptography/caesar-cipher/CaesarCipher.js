@@ -14,7 +14,7 @@ export default class CaesarCipher {
     }
 
     let output = '';
-    for (let i = 0; i < word.length; i + 1) {
+    for (let i = 0; i < word.length; i += 1) {
       let c = word[i];
       if (c.match(/[a-z]/i)) {
         const code = word.charCodeAt(i);
