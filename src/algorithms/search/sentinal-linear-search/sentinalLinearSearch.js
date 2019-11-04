@@ -14,14 +14,11 @@ export default function sentinalLinearSearch(array, seekElement, comparatorCallb
   const lastEle = array[array.length - 1]; // Picking the last element in the array
   const i = 0;
 
-  while (comparator.notEqual(i, array.length - 1))
-  {
-    while(comparator.notEqual(array[i], seekElement))
-    {
+  while (comparator.notEqual(i, array.length - 1)) {
+    while(comparator.notEqual(array[i], seekElement)) {
       i = i + 1;
     }
-    if(comparator.notEqual(i, array.length - 1))
-    {
+    if(comparator.notEqual(i, array.length - 1)) {
       foundIndices.push(i);
       i = i + 1;
     }
