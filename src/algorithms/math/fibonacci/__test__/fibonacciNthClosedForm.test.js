@@ -22,10 +22,5 @@ describe('fibonacciClosedForm', () => {
     expect(fibonacciNthClosedForm(30)).toBe(832040);
     expect(fibonacciNthClosedForm(50)).toBe(12586269025);
     expect(fibonacciNthClosedForm(70)).toBe(190392490709135);
-    expect(fibonacciNthClosedForm(71)).toBe(308061521170129);
-    expect(fibonacciNthClosedForm(72)).toBe(498454011879264);
-    expect(fibonacciNthClosedForm(73)).toBe(806515533049393);
-    expect(fibonacciNthClosedForm(74)).toBe(1304969544928657);
-    expect(fibonacciNthClosedForm(75)).toBe(2111485077978050);
   });
 });
