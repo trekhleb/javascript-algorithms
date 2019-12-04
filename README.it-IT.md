@@ -108,10 +108,10 @@ un insieme di regole che definiscono con precisione una sequenza di operazioni.
 * **Lista Concatenatas**
   * `P` [Attraversamento Lista Concatenata](src/algorithms/linked-list/traversal)
   * `P` [Attraversamento Lista Concatenata nel senso Contrario](src/algorithms/linked-list/reverse-traversal)
-* **Trees**
+* **Alberi**
   * `P` [Ricerca in Profondità su Alberi](src/algorithms/tree/depth-first-search) (DFS)
   * `P` [Ricerca in Ampiezza su Alberi](src/algorithms/tree/breadth-first-search) (BFS)
-* **Graphs**
+* **Grafi**
   * `P` [Ricerca in Profondità su Grafi](src/algorithms/graph/depth-first-search) (DFS)
   * `P` [Breadth-First Search su Grafi](src/algorithms/graph/breadth-first-search) (BFS)
   * `P` [Algoritmo di Kruskal](src/algorithms/graph/kruskal) - ricerca dell'Albero con Minima Distanza (MST) per grafi pesati unidirezionali
@@ -127,38 +127,37 @@ un insieme di regole che definiscono con precisione una sequenza di operazioni.
   * `A` [Ciclo di Hamiltonian](src/algorithms/graph/hamiltonian-cycle) - Visita ad ogni vertice solo una volta
   * `A` [Componenti Fortemente Connessa](src/algorithms/graph/strongly-connected-components) - algoritmo di Kosaraju
   * `A` [Problema del Commesso Viaggiatore](src/algorithms/graph/travelling-salesman) - il percorso più breve che visita ogni città e returna alla città iniziale
-* **Cryptography**
+* **Crittografia**
   * `P` [Hash Polinomiale](src/algorithms/cryptography/polynomial-hash) - Una funzione hash di rolling basata sul polinomio 
-* **Uncategorized**
+* **Senza categoria**
   * `P` [Torre di Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `P` [Rotazione Matrice Quadrata](src/algorithms/uncategorized/square-matrix-rotation) - algoritmo in memoria
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, programmazione dinamica (top-down + bottom-up) ed esempre di greeedy
   * `P` [Percorsi Unici](src/algorithms/uncategorized/unique-paths) - backtracking, programmazione dinamica and l'esempio del Triangolo di Pascal  
-  * `P` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem (dynamic programming and brute force versions)
-  * `P` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top (4 solutions)
-  * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
-  * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
+  * `P` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - problema dell'acqua piovana in trappola(versione con programmazione dinamica e brute force)
+  * `P` [Scalinata Ricorsiva](src/algorithms/uncategorized/recursive-staircase) - contare il numero di percorsi per arrivare in vetta(4 soluzioni)
+  * `A` [Rompicapo delle Otto Regine](src/algorithms/uncategorized/n-queens)
+  * `A` [Percorso del Cavallo](src/algorithms/uncategorized/knight-tour)
 
-### Algorithms by Paradigm
+### Modelli di Algoritmi
 
-An algorithmic paradigm is a generic method or approach which underlies the design of a class
-of algorithms. It is an abstraction higher than the notion of an algorithm, just as an
-algorithm is an abstraction higher than a computer program.
+ Un modello di algoritmo è un generico metodo o approcio che sta alla base della progettazione di una classe di algoritmi.
+ Si tratta di un'astrazione ancora più alta di un algoritmo, proprio come un algoritmo è un'astrazione di un programma del computer.
 
-* **Brute Force** - look at all the possibilities and selects the best solution
+* **Brute Force** - controlla tutte le possibilità e seleziona la migliore
   * `P` [Linear Search](src/algorithms/search/linear-search)
   * `P` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
   * `P` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
   * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up
-* **Greedy** - choose the best option at the current time, without any consideration for the future
+* **Greedy** - scegliere l'opzione migliore al momento d'eleborazione dell'algoritmo, senza alcuna considerazione per il futuro
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `A` [Unbound Knapsack Problem](src/algorithms/sets/knapsack-problem)
   * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
   * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
   * `A` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-* **Divide and Conquer** - divide the problem into smaller parts and then solve those parts
+* **Divide e Conquista** - divide il problema in piccole parti e risolve ogni parte 
   * `P` [Binary Search](src/algorithms/search/binary-search)
   * `P` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `P` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
@@ -171,7 +170,7 @@ algorithm is an abstraction higher than a computer program.
   * `P` [Fast Powering](src/algorithms/math/fast-powering)
   * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
   * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
-* **Dynamic Programming** - build up a solution using previously found sub-solutions
+* **Programmazione Dinamica** - creare una soluzione utilizzando le sub-solution trovate in precedenza
   * `P` [Fibonacci Number](src/algorithms/math/fibonacci)
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `P` [Unique Paths](src/algorithms/uncategorized/unique-paths)
@@ -188,9 +187,7 @@ algorithm is an abstraction higher than a computer program.
   * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
   * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - find shortest paths between all pairs of vertices
   * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
-* **Backtracking** - similarly to brute force, try to generate all possible solutions, but each time you generate next solution you test
-if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise, backtrack, and go on a
-different path of finding a solution. Normally the DFS traversal of state-space is being used.
+* **Backtracking** -  come la brute force, provate a generare tutte le soluzioni possibili, ma ogni volta che generate la prossima soluzione testate se soddisfa tutte le condizioni e solo allora continuare a generare soluzioni successive. Altrimenti, fate marcia indietro, e andate su un percorso diverso per trovare una soluzione. Normalmente si utilizza l'algoritmo DFS.
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `P` [Unique Paths](src/algorithms/uncategorized/unique-paths)
   * `P` [Power Set](src/algorithms/sets/power-set) - all subsets of a set
@@ -198,100 +195,100 @@ different path of finding a solution. Normally the DFS traversal of state-space 
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
   * `A` [Combination Sum](src/algorithms/sets/combination-sum) - find all combinations that form specific sum
-* **Branch & Bound** - remember the lowest-cost solution found at each stage of the backtracking
-search, and use the cost of the lowest-cost solution found so far as a lower bound on the cost of
-a least-cost solution to the problem, in order to discard partial solutions with costs larger than the
-lowest-cost solution found so far. Normally BFS traversal in combination with DFS traversal of state-space
-tree is being used.
+* **Branch & Bound** - ricordatevi che la soluzione meno costosa trovata ad ogni step durante il backtracking e
+il costo di usare la soluzione meno costosa trovata fino al limite inferiore al costo minimo della soluzione al problema,
+al fine di scartare soluzioni parziali con costi maggiori della soluzione meno costosa trovata .
+Di solito si usa BFS trasversale in combinazione con DFS trasversale .
 
-## How to use this repository
+## Come usare questa repository
 
-**Install all dependencies**
+**Installare tutte le dipendenze**
 ```
 npm install
 ```
 
-**Run ESLint**
+**Eseguire ESLint**
 
-You may want to run it to check code quality.
+Potresti usarlo per controllare la qualità del codice.
 
 ```
 npm run lint
 ```
 
-**Run all tests**
+**Eseguire tutti i test**
 ```
 npm test
 ```
 
-**Run tests by name**
+**Eseguire un test tramite il nome**
 ```
 npm test -- 'LinkedList'
 ```
 
 **Playground**
 
-You may play with data-structures and algorithms in `./src/playground/playground.js` file and write
-tests for it in `./src/playground/__test__/playground.test.js`.
+Se vuoi puoi giocare le strutture dati e gli algoritmi nel file ./src/playground/playground.js` e 
+scrivere test nel file `./src/playground/__test__/playground.test.js`.
 
-Then just simply run the following command to test if your playground code works as expected:
+Poi puoi semplicemente eseguire il seguente comando per testare quello che hai scritto : 
 
 ```
 npm test -- 'playground'
 ```
 
-## Useful Information
+## Informazioni Utili
 
-### References
+### Bibliografia
 
 [▶ Data Structures and Algorithms on YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 
-### Big O Notation
+### Notazione Big O 
 
-*Big O notation* is used to classify algorithms according to how their running time or space requirements grow as the input size grows.
-On the chart below you may find most common orders of growth of algorithms specified in Big O notation.
+* La notazione Big O* è usata per classificare algoritmi in base al tempo di esecuzione o ai 
+requisiti di spazio che crescono in base alla crescita dell'input .
+Nella grafico qua sotto puoi trovare gli ordini di crescita più comuni degli algoritmi usando la notazione Big O.
 
-![Big O graphs](./assets/big-o-graph.png)
+![Grafi Big O ](./assets/big-o-graph.png)
 
-Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+Riferimento: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
-Below is the list of some of the most used Big O notations and their performance comparisons against different sizes of the input data.
+Nella tabella qua sotto ci sono riportate la lista delle notazioni Big O più usate e delle loro prestazioni comparate tra differenti grandezze d'input .
 
-| Big O Notation | Computations for 10 elements | Computations for 100 elements | Computations for 1000 elements  |
-| -------------- | ---------------------------- | ----------------------------- | ------------------------------- |
-| **O(1)**       | 1                            | 1                             | 1                               |
-| **O(log N)**   | 3                            | 6                             | 9                               |
-| **O(N)**       | 10                           | 100                           | 1000                            |
-| **O(N log N)** | 30                           | 600                           | 9000                            |
-| **O(N^2)**     | 100                          | 10000                         | 1000000                         |
-| **O(2^N)**     | 1024                         | 1.26e+29                      | 1.07e+301                       |
-| **O(N!)**      | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
+| Notazione Big O | Computazione con 10 elementi | Computazione con 100 elementi | Computazione con 1000 elementi  |
+| --------------- | ---------------------------- | ----------------------------- | ------------------------------- |
+| **O(1)**        | 1                            | 1                             | 1                               |
+| **O(log N)**    | 3                            | 6                             | 9                               |
+| **O(N)**        | 10                           | 100                           | 1000                            |
+| **O(N log N)**  | 30                           | 600                           | 9000                            |
+| **O(N^2)**      | 100                          | 10000                         | 1000000                         |
+| **O(2^N)**      | 1024                         | 1.26e+29                      | 1.07e+301                       |
+| **O(N!)**       | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
 
-### Data Structure Operations Complexity
+### Complessità delle Operazion sulle Strutture Dati
 
-| Data Structure          | Access    | Search    | Insertion | Deletion  | Comments  |
-| ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- |
-| **Array**               | 1         | n         | n         | n         |           |
-| **Stack**               | n         | n         | 1         | 1         |           |
-| **Queue**               | n         | n         | 1         | 1         |           |
-| **Lista Concatenata**         | n         | n         | 1         | n         |           |
-| **Hash Table**          | -         | n         | n         | n         | In case of perfect hash function costs would be O(1) |
-| **Binary Search Tree**  | n         | n         | n         | n         | In case of balanced tree costs would be O(log(n)) |
-| **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **Red-Black Tree**      | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **Bloom Filter**        | -         | 1         | 1         | -         | False positives are possible while searching |
+| Struttura Dati          | Accesso   | Ricerca   | Inserimento | Rimozione | Commenti  |
+| ----------------------- | :-------: | :-------: | :--------:  | :-------: | :-------- |
+| **Array**               | 1         | n         | n           | n         |           |
+| **Pila**                | n         | n         | 1           | 1         |           |
+| **Coda**                | n         | n         | 1           | 1         |           |
+| **Lista Concatenata**   | n         | n         | 1           | n         |           |
+| **Tabella Hash**        | -         | n         | n           | n         | Nel caso di una funzione di hashing perfetta il costo sarebbe O(1)|
+| **Binary Search Tree**  | n         | n         | n           | n         | Nel caso di albero bilanciato il costo sarebbe O(log(n)) |
+| **B-Tree**              | log(n)    | log(n)    | log(n)      | log(n)    |           |
+| **Red-Black Tree**      | log(n)    | log(n)    | log(n)      | log(n)    |           |
+| **Albero AVL**          | log(n)    | log(n)    | log(n)      | log(n)    |           |
+| **Bloom Filter**        | -         | 1         | 1           | -         | Falsi positivi sono possibili durante la ricerca |
 
-### Array Sorting Algorithms Complexity
+### Complessità degli Algoritmi di Ordinamento di Array
 
-| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
+| Nome                  | Milgiore        | Media               | Perggiore           | Memoria   | Stabile   | Commenti  |
 | --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
 | **Bubble sort**       | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
 | **Insertion sort**    | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
 | **Selection sort**    | n<sup>2</sup>   | n<sup>2</sup>       | n<sup>2</sup>       | 1         | No        |           |
 | **Heap sort**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |           |
 | **Merge sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Yes       |           |
-| **Quick sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No        | Quicksort is usually done in-place with O(log(n)) stack space |
-| **Shell sort**        | n&nbsp;log(n)   | depends on gap sequence   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
-| **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - biggest number in array |
-| **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Yes       | k - length of longest key |
+| **Quick sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No        | Quicksort viene eseguito in memoria solitamente con una pila di O(log(n)) |
+| **Shell sort**        | n&nbsp;log(n)   | dipende dagli spazi vuoti nella sequenza  | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
+| **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - numero più grande nell'array |
+| **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Yes       | k - lunghezza della chiave più grande |
