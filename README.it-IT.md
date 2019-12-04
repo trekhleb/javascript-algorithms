@@ -126,7 +126,7 @@ un insieme di regole che definiscono con precisione una sequenza di operazioni.
   * `A` [Cammino Euleriano e Circuito Euleriano](src/algorithms/graph/eulerian-path) - Algoritmo di Fleury - Visita ogni margine esattamente una volta
   * `A` [Ciclo di Hamiltonian](src/algorithms/graph/hamiltonian-cycle) - Visita ad ogni vertice solo una volta
   * `A` [Componenti Fortemente Connessa](src/algorithms/graph/strongly-connected-components) - algoritmo di Kosaraju
-  * `A` [Problema del Commesso Viaggiatore](src/algorithms/graph/travelling-salesman) - il percorso più breve che visita ogni città e returna alla città iniziale
+  * `A` [Problema del Commesso Viaggiatore](src/algorithms/graph/travelling-salesman) - il percorso più breve che visita ogni città e ritorna alla città iniziale
 * **Crittografia**
   * `P` [Hash Polinomiale](src/algorithms/cryptography/polynomial-hash) - Una funzione hash di rolling basata sul polinomio 
 * **Senza categoria**
@@ -135,7 +135,7 @@ un insieme di regole che definiscono con precisione una sequenza di operazioni.
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, programmazione dinamica (top-down + bottom-up) ed esempre di greeedy
   * `P` [Percorsi Unici](src/algorithms/uncategorized/unique-paths) - backtracking, programmazione dinamica and l'esempio del Triangolo di Pascal  
   * `P` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - problema dell'acqua piovana in trappola(versione con programmazione dinamica e brute force)
-  * `P` [Scalinata Ricorsiva](src/algorithms/uncategorized/recursive-staircase) - contare il numero di percorsi per arrivare in vetta(4 soluzioni)
+  * `P` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - contare il numero di percorsi per arrivare in vetta(4 soluzioni)
   * `A` [Rompicapo delle Otto Regine](src/algorithms/uncategorized/n-queens)
   * `A` [Percorso del Cavallo](src/algorithms/uncategorized/knight-tour)
 
@@ -145,56 +145,56 @@ un insieme di regole che definiscono con precisione una sequenza di operazioni.
  Si tratta di un'astrazione ancora più alta di un algoritmo, proprio come un algoritmo è un'astrazione di un programma del computer.
 
 * **Brute Force** - controlla tutte le possibilità e seleziona la migliore
-  * `P` [Linear Search](src/algorithms/search/linear-search)
-  * `P` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
-  * `P` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top
-  * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
-  * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
-  * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up
+  * `P` [Ricerca Lineare](src/algorithms/search/linear-search)
+  * `P` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - problema dell'acqua piovana in trappola
+  * `P` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - contare il numero di percorsi per arrivare in vetta
+  * `A` [Massimo SubArray](src/algorithms/sets/maximum-subarray)
+  * `A` [Problema del commesso viaggiatore](src/algorithms/graph/travelling-salesman) - il percorso più breve che visita ogni città e ritorna alla città iniziale
+  * `A` [Trasformata Discreta di Fourier](src/algorithms/math/fourier-transform) - scomporre la funzione (segnale) del tempo in frequenze che la compongono 
 * **Greedy** - scegliere l'opzione migliore al momento d'eleborazione dell'algoritmo, senza alcuna considerazione per il futuro
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
-  * `A` [Unbound Knapsack Problem](src/algorithms/sets/knapsack-problem)
-  * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
-  * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
+  * `A` [Problema dello Zaino di Knapsack](src/algorithms/sets/knapsack-problem)
+  * `A` [Algoritmo di Dijkstra](src/algorithms/graph/dijkstra) - ricerca del percorso più breve tra tutti i vertici del grafo
+  * `A` [Algoritmo di Prim](src/algorithms/graph/prim) - ricerca del Minimo Albero Ricoprente per grafi pesati e unidirezionali 
   * `A` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
 * **Divide e Conquista** - divide il problema in piccole parti e risolve ogni parte 
-  * `P` [Binary Search](src/algorithms/search/binary-search)
-  * `P` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
-  * `P` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
-  * `P` [Euclidean Algorithm](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
+  * `P` [Ricerca Binaria](src/algorithms/search/binary-search)
+  * `P` [Torre di Hanoi](src/algorithms/uncategorized/hanoi-tower)
+  * `P` [Triangolo di Pascal](src/algorithms/math/pascal-triangle)
+  * `P` [Algoritmo di Euclide](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
   * `P` [Merge Sort](src/algorithms/sorting/merge-sort)
   * `P` [Quicksort](src/algorithms/sorting/quick-sort)
-  * `P` [Tree Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
-  * `P` [Graph Depth-First Search](src/algorithms/graph/depth-first-search) (DFS)
+  * `P` [Albero per Ricerca in Profondità](src/algorithms/tree/depth-first-search) (DFS)
+  * `P` [Grafo per Ricerca in Profondità](src/algorithms/graph/depth-first-search) (DFS)
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
-  * `P` [Fast Powering](src/algorithms/math/fast-powering)
-  * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
-  * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
+  * `P` [Algoritmo di Elevamento a Potenza](src/algorithms/math/fast-powering)
+  * `A` [Permutazioni](src/algorithms/sets/permutations) (con o senza ripetizioni)
+  * `A` [Combinazioni](src/algorithms/sets/combinations) (con o senza ripetizioni)
 * **Programmazione Dinamica** - creare una soluzione utilizzando le sub-solution trovate in precedenza
-  * `P` [Fibonacci Number](src/algorithms/math/fibonacci)
+  * `P` [Numero di Fibonacci](src/algorithms/math/fibonacci)
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
-  * `P` [Unique Paths](src/algorithms/uncategorized/unique-paths)
-  * `P` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
-  * `P` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top
-  * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
-  * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
-  * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
-  * `A` [Longest Increasing Subsequence](src/algorithms/sets/longest-increasing-subsequence)
-  * `A` [Shortest Common Supersequence](src/algorithms/sets/shortest-common-supersequence)
-  * `A` [0/1 Knapsack Problem](src/algorithms/sets/knapsack-problem)
-  * `A` [Integer Partition](src/algorithms/math/integer-partition)
-  * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
-  * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
-  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - find shortest paths between all pairs of vertices
-  * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
+  * `P` [Percorsi Unici](src/algorithms/uncategorized/unique-paths)
+  * `P` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - problema dell'acqua piovana in trappola
+  * `P` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - contare il numero di percorsi per arrivare in vetta
+  * `A` [Distanza di Levenshtein](src/algorithms/string/levenshtein-distance) - minima variazione tra due sequenze
+  * `A` [La Più Lunga Frequente SottoSequenza](src/algorithms/sets/longest-common-subsequence) (LCS)
+  * `A` [La Più Lunga Frequente SubString](src/algorithms/string/longest-common-substring)
+  * `A` [La Più Lunga SottoSequenza Crescente](src/algorithms/sets/longest-increasing-subsequence)
+  * `A` [La Più Corta e Frequente SuperSequenza](src/algorithms/sets/shortest-common-supersequence)
+  * `A` [Problema dello zaino](src/algorithms/sets/knapsack-problem)
+  * `A` [Partizione di un Intero](src/algorithms/math/integer-partition)
+  * `A` [Massimo SubArray](src/algorithms/sets/maximum-subarray)
+  * `A` [Algoritmo di Bellman-Ford](src/algorithms/graph/bellman-ford) - ricerca del percorso più breve per tutti i vertici del grafo
+  * `A` [Algoritmo di Floyd-Warshall](src/algorithms/graph/floyd-warshall) - ricerca del percorso più breve tra tutte le coppie di vertici 
+  * `A` [Espressioni Regolari](src/algorithms/string/regular-expression-matching)
 * **Backtracking** -  come la brute force, provate a generare tutte le soluzioni possibili, ma ogni volta che generate la prossima soluzione testate se soddisfa tutte le condizioni e solo allora continuare a generare soluzioni successive. Altrimenti, fate marcia indietro, e andate su un percorso diverso per trovare una soluzione. Normalmente si utilizza l'algoritmo DFS.
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
-  * `P` [Unique Paths](src/algorithms/uncategorized/unique-paths)
-  * `P` [Power Set](src/algorithms/sets/power-set) - all subsets of a set
-  * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
-  * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
+  * `P` [Percorsi Unici](src/algorithms/uncategorized/unique-paths)
+  * `P` [Power Set](src/algorithms/sets/power-set) - tutti i subset di un set
+  * `A` [Ciclo di Hamiltonian](src/algorithms/graph/hamiltonian-cycle) - visita di tutti i vertici solamente una volta
+  * `A` [Problema di N-Queens](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
-  * `A` [Combination Sum](src/algorithms/sets/combination-sum) - find all combinations that form specific sum
+  * `A` [Combinazioni di una Somma](src/algorithms/sets/combination-sum) - trovare tutte le combinazioni che compongono una somma
 * **Branch & Bound** - ricordatevi che la soluzione meno costosa trovata ad ogni step durante il backtracking e
 il costo di usare la soluzione meno costosa trovata fino al limite inferiore al costo minimo della soluzione al problema,
 al fine di scartare soluzioni parziali con costi maggiori della soluzione meno costosa trovata .
