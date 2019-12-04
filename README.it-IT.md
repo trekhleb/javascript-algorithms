@@ -22,7 +22,7 @@ _Leggilo in altre lingue:_
 
 ## Strutture Dati
 
-Una struttura di dati è un particolare modo di organizzare e memorizzare i dati in un computer che  permeta di accedervi e modificarli in modo efficiente. Più precisamente, una struttura dati è una raccolta di dati, le relazioni tra di essi e le funzioni o operazioni che possono essere applicate ai dati.
+Una struttura dati è un particolare modo di organizzare e memorizzare i dati in un computer che  permeta di accedervi e modificarli in modo efficiente. Più precisamente, una struttura dati è una raccolta di dati, le relazioni tra di essi e le funzioni o operazioni che possono essere applicate ai dati.
 
 `P` - Principiante, `A` - Avanzato
 
