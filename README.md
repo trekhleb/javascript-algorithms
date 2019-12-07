@@ -135,6 +135,8 @@ a set of rules that precisely define a sequence of operations.
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
 * **Cryptography**
   * `B` [Polynomial Hash](src/algorithms/cryptography/polynomial-hash) - rolling hash function based on polynomial
+* **Machine Learning**
+  * `B` [NanoNeuron](https://github.com/trekhleb/nano-neuron) - 7 simple JS functions that illustrate how machines can actually learn (forward/backward propagation)
 * **Uncategorized**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
