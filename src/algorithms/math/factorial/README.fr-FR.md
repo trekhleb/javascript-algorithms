@@ -1,12 +1,7 @@
-# Factorial
+# Factorielle
 
-_Read this in other languages:_
-[_简体中文_](README.zh-CN.md), 
-[Français](README.fr-FR.md)
-
-In mathematics, the factorial of a non-negative integer `n`, 
-denoted by `n!`, is the product of all positive integers less 
-than or equal to `n`. For example:
+En mathématique, la factorielle d'un entier naturel non négatif  `n`, 
+noté par l'expression `n!`, est le produit de tous les entiers positifs inférieurs ou égaux à  `n`. Par exemple:
 
 ```
 5! = 5 * 4 * 3 * 2 * 1 = 120
@@ -31,6 +26,6 @@ than or equal to `n`. For example:
 | 14    | 87 178 291 200              |
 | 15    | 1 307 674 368 000           |
 
-## References
+## Références
 
-[Wikipedia](https://en.wikipedia.org/wiki/Factorial)
+[Wikipédia](https://fr.wikipedia.org/wiki/Factorielle)
