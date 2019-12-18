@@ -133,6 +133,6 @@ export default class GraphVertex {
    * @returns {string}
    */
   toString(callback) {
-    return callback ? callback(this.value) : `${this.value}`;
+    return callback ? callback(this.value).toString() : this.value.toString();
   }
 }
