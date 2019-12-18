@@ -51,4 +51,15 @@ describe('GraphEdge', () => {
     expect(edge.getKey()).toEqual('custom_key');
     expect(edge.toString()).toEqual('custom_key');
   });
+
+  it('should execute toString on key  when calling toString on edge', () => {
+    const customKey = {
+      toString() { return 'custom_key'; },
+    };
+
+    const edge = new GraphEdge(new GraphVertex('A'), new GraphVertex('B'), 0, customKey);
+
+    expect(edge.getKey()).toEqual(customKey);
+    expect(edge.toString()).toEqual('custom_key');
+  });
 });
