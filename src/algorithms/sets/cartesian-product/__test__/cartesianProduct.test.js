@@ -2,11 +2,21 @@ import cartesianProduct from '../cartesianProduct';
 
 describe('cartesianProduct', () => {
   it('should return null if there is not enough info for calculation', () => {
-    const product1 = cartesianProduct([1], null);
-    const product2 = cartesianProduct([], null);
+        const product1 = cartesianProduct([1], null);
+        const product2 = cartesianProduct([], null);
 
-    expect(product1).toBeNull();
-    expect(product2).toBeNull();
+        expect(product1).toBeNull();
+        expect(product2).toBeNull();
+  });
+
+  it('should return empty set for product with one or both sets being empty', () => {
+        const product1 = cartesianProduct([1, 2], []);
+        const product2 = cartesianProduct([], [1, 2]);
+        const product3 = cartesianProduct([], []);
+
+        expect(product1).toEqual([]);
+        expect(product2).toEqual([]);
+        expect(product3).toEqual([]);
   });
 
   it('should calculate the product of two sets', () => {

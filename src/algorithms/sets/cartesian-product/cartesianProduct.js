@@ -5,10 +5,15 @@
  * @return {*[]}
  */
 export default function cartesianProduct(setA, setB) {
-  // Check if input sets are not empty.
+  // Check if inputs are sets
   // Otherwise return null since we can't generate Cartesian Product out of them.
-  if (!setA || !setB || !setA.length || !setB.length) {
+  if (!setA || !setB ) {
     return null;
+  }
+  // Check if input sets are empty
+  // If one or both sets are empty return empty set
+  if (!setA.length || !setB.length) {
+    return [];
   }
 
   // Init product set.
