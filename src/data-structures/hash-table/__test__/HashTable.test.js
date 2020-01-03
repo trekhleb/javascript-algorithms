@@ -86,4 +86,14 @@ describe('HashTable', () => {
     expect(hashTable.has('b')).toBe(true);
     expect(hashTable.has('x')).toBe(false);
   });
+
+  it('should get all the values', () => {
+    const hashTable = new HashTable(3);
+
+    hashTable.set('a', 'alpha');
+    hashTable.set('b', 'beta');
+    hashTable.set('c', 'gamma');
+
+    expect(hashTable.getValues()).toEqual(['alpha', 'beta', 'gamma']);
+  });
 });

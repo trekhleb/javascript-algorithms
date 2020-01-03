@@ -105,4 +105,16 @@ export default class HashTable {
   getKeys() {
     return Object.keys(this.keys);
   }
+
+  /**
+   * Gets the list of all the stored values in the hash table in the order of
+   * the keys map.
+   *
+   * @return {*[]}
+   */
+  getValues() {
+    const keys = this.getKeys();
+
+    return keys.map(key => this.buckets[this.hash(key)].head.value.value);
+  }
 }
