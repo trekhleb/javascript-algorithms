@@ -193,7 +193,7 @@ describe('LinkedList', () => {
     expect(linkedList.toString()).toBe('1,1,2,3,3,3,4,5');
   });
 
-  it.only('should return a linked list node array', () => {
+  it('should return a linked list node array', () => {
     const linkedList = new LinkedList();
 
     expect(linkedList.head).toBeNull();
