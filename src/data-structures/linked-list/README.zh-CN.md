@@ -124,7 +124,7 @@ ReverseTraversal(head, tail)
       yield curr.value
       curr ← prev
     end while
-   yeild curr.value
+   yield curr.value
   end if
 end ReverseTraversal
 ```

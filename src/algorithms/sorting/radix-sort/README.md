@@ -7,6 +7,13 @@ is required, but because integers can represent strings of characters
 (e.g., names or dates) and specially formatted floating point numbers, radix 
 sort is not limited to integers.
 
+*Where does the name come from?*
+
+In mathematical numeral systems, the *radix* or base is the number of unique digits,
+including the digit zero, used to represent numbers in a positional numeral system. 
+For example, a binary system (using numbers 0 and 1) has a radix of 2 and a decimal 
+system (using numbers 0 to 9) has a radix of 10.
+
 ## Efficiency
 
 The topic of the efficiency of radix sort compared to other sorting algorithms is 
