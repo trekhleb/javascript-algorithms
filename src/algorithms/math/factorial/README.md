@@ -2,6 +2,7 @@
 
 _Read this in other languages:_
 [_简体中文_](README.zh-CN.md),
+[_繁體中文_](README.zh-TW.md)
 
 In mathematics, the factorial of a non-negative integer `n`, 
 denoted by `n!`, is the product of all positive integers less 
