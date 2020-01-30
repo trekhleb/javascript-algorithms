@@ -38,21 +38,22 @@ A solution set is:
 ## Explanations
 
 Since the problem is to get all the possible results, not the best or the 
-number of result, thus we don’t need to consider DP (dynamic programming),
-backtracking approach using recursion is needed to handle it.
+number of result, we don’t need to consider dynamic programming.
+We do instead a depth-first traversal of the decision tree,
+using an iterative implementation to avoid stack overflows.
 
 Here is an example of decision tree for the situation when `candidates = [2, 3]` and `target = 6`:
 
 ```
-                0
-              /   \
-           +2      +3
-          /   \      \
-       +2       +3    +3
-      /  \     /  \     \
-    +2    ✘   ✘   ✘     ✓
-   /  \
-  ✓    ✘    
+               0
+             /   \
+           +3    +2
+          /  \     \
+        +3   +2    +2
+        /      \     \
+       ✓       +2    +2
+                 \     \
+                  ✘     ✓
 ```
 
 ## References
