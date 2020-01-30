@@ -41,7 +41,7 @@ _Read this in other languages:_
 ### 演算法議題分類
 
 * **數學類**
-  * [階層](src/algorithms/math/factorial)
+  * [階乘](src/algorithms/math/factorial)
   * [費伯納西數列](src/algorithms/math/fibonacci)
   * [Primality Test](src/algorithms/math/primality-test) (排除法)
   * [歐幾里得算法](src/algorithms/math/euclidean-algorithm) - 計算最大公因數 (GCD)
