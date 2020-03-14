@@ -29,7 +29,7 @@ _Read this in other languages:_
 * `B` [双向链表](src/data-structures/doubly-linked-list/README.zh-CN.md)
 * `B` [队列](src/data-structures/queue/README.zh-CN.md)
 * `B` [栈](src/data-structures/stack/README.zh-CN.md)
-* `B` [哈希表](src/data-structures/hash-table/README.zh-CN.md)
+* `B` [哈希表(散列)](src/data-structures/hash-table/README.zh-CN.md)
 * `B` [堆](src/data-structures/heap/README.zh-CN.md) - 最大堆 & 最小堆
 * `B` [优先队列](src/data-structures/priority-queue/README.zh-CN.md)
 * `A` [字典树](src/data-structures/trie/README.zh-CN.md)
@@ -52,7 +52,7 @@ _Read this in other languages:_
 ### 算法主题
 
 * **数学**
-  * `B` [Bit 操控](src/algorithms/math/bits) - set/get/update/clear 位、乘以/除以二进制位 、变负等
+  * `B` [位运算](src/algorithms/math/bits) - set/get/update/clear 位、乘以/除以二进制位 、变负等
   * `B` [阶乘](src/algorithms/math/factorial/README.zh-CN.md)
   * `B` [斐波那契数](src/algorithms/math/fibonacci) - `经典` 和 `闭式` 版本
   * `B` [素数检测](src/algorithms/math/primality-test) (排除法)
@@ -126,6 +126,8 @@ _Read this in other languages:_
   * `A` [旅行推销员问题](src/algorithms/graph/travelling-salesman) - 尽可能以最短的路线访问每个城市并返回原始城市
 * **加密**
   * `B` [多项式 hash](src/algorithms/cryptography/polynomial-hash) - 基于多项式的 rolling hash 函数
+* **机器学习**
+  * `B` [NanoNeuron](https://github.com/trekhleb/nano-neuron) -7个简单的JS函数，说明机器如何实际学习（向前/向后传播）
 * **未分类**
   * `B` [汉诺塔](src/algorithms/uncategorized/hanoi-tower)
   * `B` [旋转矩阵](src/algorithms/uncategorized/square-matrix-rotation) - 原地算法
