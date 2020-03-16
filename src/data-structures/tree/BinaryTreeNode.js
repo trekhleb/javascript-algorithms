@@ -1,6 +1,8 @@
 import Comparator from '../../utils/comparator/Comparator';
 import HashTable from '../hash-table/HashTable';
 
+import Stack from '../stack/Stack';
+
 export default class BinaryTreeNode {
   /**
    * @param {*} [value] - node value.
@@ -192,21 +194,18 @@ export default class BinaryTreeNode {
    * @return {*[]}
    */
   traverseInOrder() {
-    let traverse = [];
-
-    // Add left node.
-    if (this.left) {
-      traverse = traverse.concat(this.left.traverseInOrder());
+    const traverse = [];
+    const stack = new Stack();
+    let curr = this;
+    while (curr != null || !stack.isEmpty()) {
+      while (curr != null) {
+        stack.push(curr);
+        curr = curr.left;
+      }
+      curr = stack.pop();
+      traverse.push(curr.value);
+      curr = curr.right;
     }
-
-    // Add root.
-    traverse.push(this.value);
-
-    // Add right node.
-    if (this.right) {
-      traverse = traverse.concat(this.right.traverseInOrder());
-    }
-
     return traverse;
   }
 
