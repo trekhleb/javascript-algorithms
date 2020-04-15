@@ -20,7 +20,7 @@ _Leia isto em outros idiomas:_
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md)
 
-## Data Structures
+## Estrutura de Dados
 
 Uma estrutura de dados é uma maneira particular de organizar e armazenar dados em um computador para que ele possa
 ser acessado e modificado de forma eficiente. Mais precisamente, uma estrutura de dados é uma coleção de dados
