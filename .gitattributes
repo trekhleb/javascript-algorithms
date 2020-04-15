@@ -1,0 +1,15 @@
+# detect all text files and automatically normalize them (convert CRLF to LF)
+* text=auto
+
+# definitively text files
+*.js    text
+*.json  text
+*.md    text
+LICENSE text
+.*      text
+
+# definitively binary files
+*.png binary
+
+# default decisions when merge conflicts appear
+package-lock.json merge=ours
