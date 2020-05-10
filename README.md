@@ -135,6 +135,7 @@ a set of rules that precisely define a sequence of operations.
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
 * **Cryptography**
   * `B` [Polynomial Hash](src/algorithms/cryptography/polynomial-hash) - rolling hash function based on polynomial
+  * `B` [Rail Fence Cypher](src/algorithms/cryptography/rail-fence-cipher) - a transposition cipher algorithm for encoding messages
 * **Machine Learning**
   * `B` [NanoNeuron](https://github.com/trekhleb/nano-neuron) - 7 simple JS functions that illustrate how machines can actually learn (forward/backward propagation)
 * **Uncategorized**
