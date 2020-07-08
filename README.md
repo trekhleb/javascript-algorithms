@@ -314,7 +314,7 @@ You may support this project via ❤️️ [GitHub](https://github.com/sponsors/
     <tr>
         <td>
             <a href="https://www.newline.co/javascript-algorithms">
-                <img src="https://raw.githubusercontent.com/trekhleb/javascript-algorithms/master/assets/js-algorithms-book-cover-xs.png" alt="JavaScript Algorithms Book" />
+                <img src="https://raw.githubusercontent.com/trekhleb/javascript-algorithms/master/assets/js-algorithms-book-cover-xs.png" alt="JavaScript Algorithms Book" width="140" />
             </a>
         </td>
         <td>
