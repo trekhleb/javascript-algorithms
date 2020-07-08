@@ -310,15 +310,6 @@ You may support this project via ❤️️ [GitHub](https://github.com/sponsors/
 
 ## JavaScript Algorithms Book
 
-<table>
-    <tr>
-        <td style="width: 121px">
-            <a href="https://www.newline.co/javascript-algorithms">
-                <img src="https://raw.githubusercontent.com/trekhleb/javascript-algorithms/master/assets/js-algorithms-book-cover-xs.png" alt="JavaScript Algorithms Book" width="121" />
-            </a>
-        </td>
-        <td>
-            Recently we've released a <a href="https://www.newline.co/javascript-algorithms">JavaScript Algorithms Book</a> which contains detailed explanations of many popular algorithms and data structures implemented on JavaScript. You can check the full list of topics that are covered in the book and download the first chapter <a href="https://www.newline.co/javascript-algorithms">here</a>.
-        </td>
-    </tr>
-</table>
+Recently we've released a [JavaScript Algorithms Book](https://www.newline.co/javascript-algorithms) which contains detailed explanations of many popular algorithms and data structures implemented on JavaScript. You can check the full list of topics that are covered in the book and download the first chapter [here](https://www.newline.co/javascript-algorithms).
+            
+[![JavaScript Algorithms Book](https://raw.githubusercontent.com/trekhleb/javascript-algorithms/master/assets/js-algorithms-book-cover-xs.png)](https://www.newline.co/javascript-algorithms)            
