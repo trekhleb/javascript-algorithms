@@ -83,7 +83,7 @@ _Read this in other languages:_
   * `B` [汉明距离](src/algorithms/string/hamming-distance) - 符号不同的位置数
   * `A` [莱温斯坦距离](src/algorithms/string/levenshtein-distance) - 两个序列之间的最小编辑距离
   * `A` [Knuth–Morris–Pratt 算法](src/algorithms/string/knuth-morris-pratt) KMP 算法 - 子串搜索 (模式匹配)
-  * `A` [字符串快速查找](src/algorithms/string/rabin-karp) - 子串搜索 (模式匹配)
+  * `A` [字符串快速查找](src/algorithms/string/z-algorithm) - 子串搜索 (模式匹配)
   * `A` [Rabin Karp 算法](src/algorithms/string/rabin-karp) - 子串搜索
   * `A` [最长公共子串](src/algorithms/string/longest-common-substring)
   * `A` [正则表达式匹配](src/algorithms/string/regular-expression-matching)
