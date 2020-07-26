@@ -7,7 +7,7 @@ export default function combineWithoutRepetitions(comboOptions, comboLength) {
   // If the length of the combination is 1 then each element of the original array
   // is a combination itself.
   if (comboLength === 1) {
-    return comboOptions.map(comboOption => [comboOption]);
+    return comboOptions.map((comboOption) => [comboOption]);
   }
 
   // Init combinations array.

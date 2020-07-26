@@ -20,7 +20,7 @@ function isSafe(adjacencyMatrix, verticesIndices, cycle, vertexCandidate) {
   }
 
   // Check if vertexCandidate is being added to the path for the first time.
-  const candidateDuplicate = cycle.find(vertex => vertex.getKey() === vertexCandidate.getKey());
+  const candidateDuplicate = cycle.find((vertex) => vertex.getKey() === vertexCandidate.getKey());
 
   return !candidateDuplicate;
 }
@@ -61,7 +61,7 @@ function hamiltonianCycleRecursive({
   cycle,
 }) {
   // Clone cycle in order to prevent it from modification by other DFS branches.
-  const currentCycle = [...cycle].map(vertex => new GraphVertex(vertex.value));
+  const currentCycle = [...cycle].map((vertex) => new GraphVertex(vertex.value));
 
   if (vertices.length === currentCycle.length) {
     // Hamiltonian path is found.
