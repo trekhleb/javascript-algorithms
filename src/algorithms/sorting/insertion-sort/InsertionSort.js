@@ -21,7 +21,13 @@ export default class InsertionSort extends Sort {
         this.callbacks.visitingCallback(array[currentIndex - 1]);
 
         // Swap the elements.
-        [array[currentIndex - 1], array[currentIndex]] = [array[currentIndex], array[currentIndex - 1]];
+        [
+          array[currentIndex - 1],
+          array[currentIndex],
+        ] = [
+          array[currentIndex],
+          array[currentIndex - 1],
+        ];
 
         // Shift current index left.
         currentIndex -= 1;
