@@ -51,7 +51,7 @@ describe('BloomFilter', () => {
   });
 
   it('should insert strings correctly and return true when checking for inserted values', () => {
-    people.forEach(person => bloomFilter.insert(person));
+    people.forEach((person) => bloomFilter.insert(person));
 
     expect(bloomFilter.mayContain('Bruce Wayne')).toBe(true);
     expect(bloomFilter.mayContain('Clark Kent')).toBe(true);
