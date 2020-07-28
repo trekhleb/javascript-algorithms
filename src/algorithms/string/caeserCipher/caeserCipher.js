@@ -20,11 +20,11 @@ export default function caeserCipher(string, shift) {
             result += currentChar
             continue;
         }
-        // for wrap up incase the next shift is beyond the 26th character
+        //wrap up index, incase the next shift is beyond the 26th character
         const encodedIdx = (idx + shift) % 26
         result += alphabetArr[encodedIdx]
 
     }
-
+    // return the result  of the shifted string
     return result
 }
