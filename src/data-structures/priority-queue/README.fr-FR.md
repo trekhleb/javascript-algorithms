@@ -1,12 +1,5 @@
 # File de priorité
 
-_Lisez ceci dans d'autres langues:_
-[_English_](README.md),
-[_简体中文_](README.zh-CN.md),
-[_Русский_](README.ru-RU.md),
-[_日本語_](README.ja-JP.md),
-[_Português_](README.pt-BR.md)
-
 En informatique, une **file de priorité** est un type
 de données abstrait qui s'apparente à une file d'attente normale
 ou une structure de données empilées, mais où chaque élément est
