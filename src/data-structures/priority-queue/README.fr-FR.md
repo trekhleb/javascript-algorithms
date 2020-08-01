@@ -1,7 +1,7 @@
 # File de priorité
 
 _Lisez ceci dans d'autres langues:_
-[_English_](README.md)
+[_English_](README.md),
 [_简体中文_](README.zh-CN.md),
 [_Русский_](README.ru-RU.md),
 [_日本語_](README.ja-JP.md),
