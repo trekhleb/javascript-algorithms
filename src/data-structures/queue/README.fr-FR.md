@@ -24,5 +24,5 @@ Représentation d'une file PEPS (premier entré, premier sorti)
 
 ## Références
 
-- [Wikipedia](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))
+- [Wikipedia](https://fr.wikipedia.org/wiki/File_(structure_de_donn%C3%A9es))
 - [YouTube](https://www.youtube.com/watch?v=wjI1WNcIntg&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=3&)
