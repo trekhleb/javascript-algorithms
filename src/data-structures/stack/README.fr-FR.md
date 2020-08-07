@@ -14,7 +14,7 @@ une opération d'aperçu peut donner accès au sommet sans
 modifier la pile. Le nom "pile" pour ce type de structure
 vient de l'analogie avec un ensemble d'éléments physiques empilés
 les uns sur les autres, ce qui permet de retirer facilement un
-élément du haut de la pile, tout en accédant à un élément plus
+élément du haut de la pile, tout comme accéder à un élément plus
 profond dans le la pile peut nécessiter de retirer plusieurs
 autres articles en premier.
 
