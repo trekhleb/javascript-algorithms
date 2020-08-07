@@ -18,5 +18,5 @@ d'autres méthodes telles qu'un tableau non ordonné.
 
 ## Références
 
-- [Wikipedia](https://en.wikipedia.org/wiki/Priority_queue)
+- [Wikipedia](https://fr.wikipedia.org/wiki/File_de_priorit%C3%A9)
 - [YouTube](https://www.youtube.com/watch?v=wptevk0bshY&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=6)
