@@ -62,7 +62,7 @@ une séquence d'opérations.
 - **Math**
   - `B` [Manipulation de Bit](src/algorithms/math/bits) - définir/obtenir/mettre à jour/effacer les bits, multiplication/division par deux, négativiser etc.
   - `B` [Factorielle](src/algorithms/math/factorial/README.fr-FR.md)
-  - `B` [Nombre de Fibonacci](src/algorithms/math/fibonacci)
+  - `B` [Nombre de Fibonacci](src/algorithms/math/fibonacci/README.fr-FR.md)
   - `B` [Test de Primalité](src/algorithms/math/primality-test) (méthode du test de division)
   - `B` [Algorithme d'Euclide](src/algorithms/math/euclidean-algorithm) - calcule le Plus Grand Commun Diviseur (PGCD)
   - `B` [Plus Petit Commun Multiple](src/algorithms/math/least-common-multiple) (PPCM)
