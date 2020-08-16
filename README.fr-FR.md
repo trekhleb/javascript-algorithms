@@ -60,7 +60,7 @@ une séquence d'opérations.
 ### Algorithmes par topic
 
 - **Math**
-  - `B` [Manipulation de Bit](src/algorithms/math/bits) - définir/obtenir/mettre à jour/effacer les bits, multiplication/division par deux, négativiser etc.
+  - `B` [Manipulation de Bit](src/algorithms/math/bits/README.fr-FR.md) - définir/obtenir/mettre à jour/effacer les bits, multiplication/division par deux, négativiser etc.
   - `B` [Factorielle](src/algorithms/math/factorial/README.fr-FR.md)
   - `B` [Nombre de Fibonacci](src/algorithms/math/fibonacci/README.fr-FR.md)
   - `B` [Test de Primalité](src/algorithms/math/primality-test) (méthode du test de division)
