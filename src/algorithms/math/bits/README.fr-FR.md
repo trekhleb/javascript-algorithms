@@ -3,7 +3,6 @@
 _Read this in other languages:_
 [english](README.md).
 
-
 #### Vérifier un bit (_get_)
 
 Cette méthode décale le bit correspondant (_bit shifting_) à la position zéro.
@@ -289,7 +288,7 @@ B = 6: 110
 > Voir [fullAdder.js](fullAdder.js) pour plus de détails.  
 > Voir [Full Adder on YouTube](https://www.youtube.com/watch?v=wvJc9CZcvBc&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8).
 
-## References
+## Références
 
 - [Bit Manipulation on YouTube](https://www.youtube.com/watch?v=NLKQEOgBAnw&t=0s&index=28&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 - [Negative Numbers in binary on YouTube](https://www.youtube.com/watch?v=4qH4unVtJkE&t=0s&index=30&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

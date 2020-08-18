@@ -69,6 +69,7 @@ une séquence d'opérations.
   - `B` [Crible d'Eratosthène](src/algorithms/math/sieve-of-eratosthenes) - trouve tous les nombres premiers inférieurs à une certaine limite
   - `B` [Puissance de Deux](src/algorithms/math/is-power-of-two) - teste si un nombre donné est une puissance de deux (algorithmes naif et basé sur les opérations bit-à-bit)
   - `B` [Triangle de Pascal](src/algorithms/math/pascal-triangle)
+  - `B` [Nombre complexe](src/algorithms/math/complex-number/README.fr-FR.md) - nombres complexes et opérations de bases
   - `A` [Partition Entière](src/algorithms/math/integer-partition)
   - `A` [Approximation de π par l'algorithme de Liu Hui](src/algorithms/math/liu-hui) - approximation du calcul de π basé sur les N-gons
   - `B` [Exponentiation rapide](src/algorithms/math/fast-powering/README.fr-FR.md)
