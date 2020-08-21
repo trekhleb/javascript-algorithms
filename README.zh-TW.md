@@ -139,6 +139,10 @@ _Read this in other languages:_
 
 ## 如何使用本知識庫
 
+您可以按照以下步驟在本地設置此存儲庫，也可以使用[gitpod.io](https://gitpod.io）這樣的免費在線VS-IDE等VS-Code，只需單擊一下，它將啟動一個即可編寫代碼的工作區 預先安裝了所有依賴項，這樣您就可以開始研究該項目，而不會在開發設置上浪費任何寶貴的時間。
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/trekhleb/javascript-algorithms)
+
 **安裝所有必須套件**
 
 ```

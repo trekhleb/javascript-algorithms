@@ -3,11 +3,11 @@
 [![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
-Ce dépôt contient des exemples d'implémentation en JavaScript de plusieurs 
+Ce dépôt contient des exemples d'implémentation en JavaScript de plusieurs
 algorithmes et structures de données populaires.
 
-Chaque algorithme et structure de donnée possède son propre README contenant 
-les explications détaillées et liens (incluant aussi des vidéos Youtube) pour 
+Chaque algorithme et structure de donnée possède son propre README contenant
+les explications détaillées et liens (incluant aussi des vidéos Youtube) pour
 complément d'informations.
 
 _Lisez ceci dans d'autres langues:_
@@ -22,11 +22,11 @@ _Lisez ceci dans d'autres langues:_
 
 ## Data Structures
 
-Une structure de données est une manière spéciale d'organiser et de stocker 
-des données dans un ordinateur de manière à ce que l'on puisse accéder à 
-cette information et la modifier de manière efficiente. De manière plus 
-spécifique, une structure de données est un ensemble composé d'une collection 
-de valeurs, des relations entre ces valeurs ainsi que d'un ensemble de 
+Une structure de données est une manière spéciale d'organiser et de stocker
+des données dans un ordinateur de manière à ce que l'on puisse accéder à
+cette information et la modifier de manière efficiente. De manière plus
+spécifique, une structure de données est un ensemble composé d'une collection
+de valeurs, des relations entre ces valeurs ainsi que d'un ensemble de
 fonctions ou d'opérations pouvant être appliquées sur ces données.
 
 `B` - Débutant, `A` - Avancé
@@ -51,8 +51,8 @@ fonctions ou d'opérations pouvant être appliquées sur ces données.
 
 ## Algorithmes
 
-Un algorithme est une démarche non ambigüe expliquant comment résoudre une 
-classe de problèmes. C'est un ensemble de règles décrivant de manière précise 
+Un algorithme est une démarche non ambigüe expliquant comment résoudre une
+classe de problèmes. C'est un ensemble de règles décrivant de manière précise
 une séquence d'opérations.
 
 `B` - Débutant, `A` - Avancé
@@ -61,7 +61,7 @@ une séquence d'opérations.
 
 * **Math**
   * `B` [Manipulation de Bit](src/algorithms/math/bits) - définir/obtenir/mettre à jour/effacer les bits, multiplication/division par deux, négativiser etc.
-  * `B` [Factorielle](src/algorithms/math/factorial) 
+  * `B` [Factorielle](src/algorithms/math/factorial)
   * `B` [Nombre de Fibonacci](src/algorithms/math/fibonacci)
   * `B` [Test de Primalité](src/algorithms/math/primality-test) (méthode du test de division)
   * `B` [Algorithme d'Euclide](src/algorithms/math/euclidean-algorithm) - calcule le Plus Grand Commun Diviseur (PGCD)
@@ -128,16 +128,16 @@ une séquence d'opérations.
 * **Non catégorisé**
   * `B` [Tours de Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Rotation de Matrice Carrée](src/algorithms/uncategorized/square-matrix-rotation) - algorithme *in place*
-  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - retour sur trace, programmation dynamique (haut-bas + bas-haut) et exemples gourmands 
-  * `B` [Chemins Uniques](src/algorithms/uncategorized/unique-paths) - retour sur trace, programmation dynamique (haut-bas + bas-haut) et exemples basés sur le Triangle de Pascal 
+  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - retour sur trace, programmation dynamique (haut-bas + bas-haut) et exemples gourmands
+  * `B` [Chemins Uniques](src/algorithms/uncategorized/unique-paths) - retour sur trace, programmation dynamique (haut-bas + bas-haut) et exemples basés sur le Triangle de Pascal
   * `A` [Problème des N-Dames](src/algorithms/uncategorized/n-queens)
   * `A` [Problème du Cavalier](src/algorithms/uncategorized/knight-tour)
 
 ### Algorithmes par Paradigme
 
-Un paradigme algorithmique est une méthode générique ou une approche qui 
-sous-tend la conception d'une classe d'algorithmes. C'est une abstraction 
-au-dessus de la notion d'algorithme, tout comme l'algorithme est une abstraction 
+Un paradigme algorithmique est une méthode générique ou une approche qui
+sous-tend la conception d'une classe d'algorithmes. C'est une abstraction
+au-dessus de la notion d'algorithme, tout comme l'algorithme est une abstraction
 supérieure à un programme informatique.
 
 * **Force Brute** - cherche parmi toutes les possibilités et retient la meilleure
@@ -189,6 +189,10 @@ chemin différent pour tester d'autres solutions. Normalement, la traversée en 
 
 ## Comment utiliser ce dépôt
 
+Vous pouvez soit configurer ce référentiel localement en suivant les étapes ci-dessous, soit utiliser [gitpod.io](https://gitpod.io), un code VS en ligne gratuit comme l'IDE. Un simple clic permet de lancer un espace de travail prêt à coder. avec toutes les dépendances pré-installées de sorte que vous puissiez commencer à bidouiller avec le projet sans perdre un temps précieux sur la configuration du développement.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/trekhleb/javascript-algorithms)
+
 **Installer toutes les dépendances**
 ```
 npm install
@@ -214,11 +218,11 @@ npm test -- 'LinkedList'
 
 **Tests personnalisés**
 
-Vous pouvez manipuler les structures de données et algorithmes présents dans ce 
-dépôt avec le fichier `./src/playground/playground.js` et écrire vos propres 
+Vous pouvez manipuler les structures de données et algorithmes présents dans ce
+dépôt avec le fichier `./src/playground/playground.js` et écrire vos propres
 tests dans file `./src/playground/__test__/playground.test.js`.
 
-Vous pourrez alors simplement exécuter la commande suivante afin de tester si 
+Vous pourrez alors simplement exécuter la commande suivante afin de tester si
 votre code fonctionne comme escompté
 
 ```
@@ -239,7 +243,7 @@ Comparaison de la performance d'algorithmes en notation Grand O.
 
 Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
-Voici la liste de certaines des notations Grand O les plus utilisées et de leurs 
+Voici la liste de certaines des notations Grand O les plus utilisées et de leurs
 comparaisons de performance suivant différentes tailles pour les données d'entrée.
 
 | Notation Grand O | Opérations pour 10 éléments  | Opérations pour 100 éléments  | Opérations pour 1000 éléments   |

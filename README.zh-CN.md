@@ -197,6 +197,10 @@ _Read this in other languages:_
 
 ## 如何使用本仓库
 
+您可以按照以下步骤在本地设置此存储库，也可以使用[gitpod.io](https://gitpod.io）这样的免费在线VS-IDE等VS-Code，只需单击一下，它将启动一个即可编写代码的工作区 预先安装了所有依赖项，这样您就可以开始研究该项目，而不会在开发设置上浪费任何宝贵的时间。
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/trekhleb/javascript-algorithms)
+
 **安装依赖**
 ```
 npm install
