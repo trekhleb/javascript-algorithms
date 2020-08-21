@@ -64,7 +64,7 @@ une séquence d'opérations.
   - `B` [Factorielle](src/algorithms/math/factorial/README.fr-FR.md)
   - `B` [Nombre de Fibonacci](src/algorithms/math/fibonacci/README.fr-FR.md)
   - `B` [Test de Primalité](src/algorithms/math/primality-test) (méthode du test de division)
-  - `B` [Algorithme d'Euclide](src/algorithms/math/euclidean-algorithm) - calcule le Plus Grand Commun Diviseur (PGCD)
+  - `B` [Algorithme d'Euclide](src/algorithms/math/euclidean-algorithm/README.fr-FR.md) - calcule le Plus Grand Commun Diviseur (PGCD)
   - `B` [Plus Petit Commun Multiple](src/algorithms/math/least-common-multiple) (PPCM)
   - `B` [Crible d'Eratosthène](src/algorithms/math/sieve-of-eratosthenes) - trouve tous les nombres premiers inférieurs à une certaine limite
   - `B` [Puissance de Deux](src/algorithms/math/is-power-of-two) - teste si un nombre donné est une puissance de deux (algorithmes naif et basé sur les opérations bit-à-bit)
