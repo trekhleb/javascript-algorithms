@@ -15,5 +15,6 @@ describe('countSetBits', () => {
     expect(countSetBits(-21)).toBe(30);
     expect(countSetBits(-255)).toBe(25);
     expect(countSetBits(-1023)).toBe(23);
+    expect(countSetBits(-4294967296)).toBe(0);
   });
 });
