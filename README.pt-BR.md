@@ -36,7 +36,7 @@ os dados.
 * `B` [Tabela de Hash (Hash Table)](src/data-structures/hash-table/README.pt-BR.md)
 * `B` [Heap](src/data-structures/heap/README.pt-BR.md)
 * `B` [Fila de Prioridade (Priority Queue)](src/data-structures/priority-queue/README.pt-BR.md)
-* `A` [Trie](src/data-structures/trie/README.pt-BR.md)
+* `A` [Árvore de prefixos (Trie)](src/data-structures/trie/README.pt-BR.md)
 * `A` [Árvore (Tree)](src/data-structures/tree/README.pt-BR.md)
   * `A` [Árvore de Pesquisa Binária (Binary Search Tree)](src/data-structures/tree/binary-search-tree/README.pt-BR.md)
   * `A` [Árvore AVL (AVL Tree)](src/data-structures/tree/avl-tree/README.pt-BR.md)
