@@ -48,7 +48,6 @@ export default class LinkedList {
     }
 
     // Attach new node to the end of linked list.
-    this.tail.next = newNode;
     this.tail = newNode;
 
     return this;
