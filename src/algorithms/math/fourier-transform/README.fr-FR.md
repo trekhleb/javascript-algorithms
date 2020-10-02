@@ -3,50 +3,41 @@
 ## Définitions
 
 La transformation de Fourier (**ℱ**) est une opération qui transforme
-une fonction intégrale en une autre fonction qui décrit
-le spectre fréquentiel de cette dernière.
+une fonction intégrable sur ℝ en une autre fonction,
+décrivant le spectre fréquentiel de cette dernière
 
-The **Discrete Fourier Transform** (**DFT**) converts a finite sequence of
-equally-spaced samples of a function into a same-length sequence of
-equally-spaced samples of the discrete-time Fourier transform (DTFT), which is a
-complex-valued function of frequency. The interval at which the DTFT is sampled
-is the reciprocal of the duration of the input sequence. An inverse DFT is a
-Fourier series, using the DTFT samples as coefficients of complex sinusoids at
-the corresponding DTFT frequencies. It has the same sample-values as the original
-input sequence. The DFT is therefore said to be a frequency domain representation
-of the original input sequence. If the original sequence spans all the non-zero
-values of a function, its DTFT is continuous (and periodic), and the DFT provides
-discrete samples of one cycle. If the original sequence is one cycle of a periodic
-function, the DFT provides all the non-zero values of one DTFT cycle.
+La **Transformée de Fourier Discrète** (**TFD**) convertit une séquence finie d'échantillons également espacés d'une fonction, dans une séquence de même longueur d'échantillons, également espacés de la Transformée de Fourier à temps discret (TFtd), qui est une fonction complexe de la fréquence.
+L'intervalle auquel le TFtd est échantillonné est l'inverse de la durée de la séquence d'entrée.
+Une TFD inverse est une série de Fourier, utilisant les échantillons TFtd comme coefficients de sinusoïdes complexes aux fréquences TFtd correspondantes. Elle a les mêmes valeurs d'échantillonnage que la
+séquence d'entrée originale. On dit donc que la TFD est une représentation du domaine fréquentiel
+de la séquence d'entrée d'origine. Si la séquence d'origine couvre toutes les
+valeurs non nulles d'une fonction, sa TFtd est continue (et périodique), et la TFD fournit
+les échantillons discrets d'une fenêtre. Si la séquence d'origine est un cycle d'une fonction périodique, la TFD fournit toutes les valeurs non nulles d'une fenêtre TFtd.
 
-The Discrete Fourier transform transforms a sequence of `N` complex numbers:
+Transformée de Fourier Discrète converti une séquence de `N` nombres complexes:
 
 {x<sub>n</sub>} = x<sub>0</sub>, x<sub>1</sub>, x<sub>2</sub> ..., x<sub>N-1</sub>
 
-into another sequence of complex numbers:
+en une atre séquence de nombres complexes::
 
 {X<sub>k</sub>} = X<sub>0</sub>, X<sub>1</sub>, X<sub>2</sub> ..., X<sub>N-1</sub>
 
-which is defined by:
+décrite par:
 
 ![DFT](https://wikimedia.org/api/rest_v1/media/math/render/svg/1af0a78dc50bbf118ab6bd4c4dcc3c4ff8502223)
 
-The **Discrete-Time Fourier Transform** (**DTFT**) is a form of Fourier analysis
-that is applicable to the uniformly-spaced samples of a continuous function. The
-term discrete-time refers to the fact that the transform operates on discrete data
-(samples) whose interval often has units of time. From only the samples, it
-produces a function of frequency that is a periodic summation of the continuous
-Fourier transform of the original continuous function.
+The **Transformée de Fourier à temps discret** (**TFtd**) est une forme d'analyse de Fourier
+qui s'applique aux échantillons uniformément espacés d'une fonction continue. Le terme "temps discret" fait référence au fait que la transformée fonctionne sur des données discrètes
+(échantillons) dont l'intervalle a souvent des unités de temps.
+À partir des seuls échantillons, elle produit une fonction de fréquence qui est une somme périodique de la
+Transformée de Fourier continue de la fonction continue d'origine.
 
-A **Fast Fourier Transform** (**FFT**) is an algorithm that samples a signal over
-a period of time (or space) and divides it into its frequency components. These
-components are single sinusoidal oscillations at distinct frequencies each with
-their own amplitude and phase.
+A **Transformation de Fourier rapide** (**FFT** pour Fast Fourier Transform) est un algorithme de calcul de la transformation de Fourier discrète (TFD). Il est couramment utilisé en traitement numérique du signal pour transformer des données discrètes du domaine temporel dans le domaine fréquentiel, en particulier dans les oscilloscopes numériques (les analyseurs de spectre utilisant plutôt des filtres analogiques, plus précis). Son efficacité permet de réaliser des filtrages en modifiant le spectre et en utilisant la transformation inverse (filtre à réponse impulsionnelle finie).
 
-This transformation is illustrated in Diagram below. Over the time period measured
-in the diagram, the signal contains 3 distinct dominant frequencies.
+Cette transformation peut être illustée par la formule suivante. Sur la période de temps mesurée
+dans le diagramme, le signal contient 3 fréquences dominantes distinctes.
 
-View of a signal in the time and frequency domain:
+Vue d'un signal dans le domaine temporel et fréquentiel:
 
 ![FFT](https://upload.wikimedia.org/wikipedia/commons/6/61/FFT-Time-Frequency-View.png)
 
