@@ -1,5 +1,8 @@
 # Transformation de Fourier
 
+_Read this in other languages:_
+[english](README.md).
+
 ## Définitions
 
 La transformation de Fourier (**ℱ**) est une opération qui transforme

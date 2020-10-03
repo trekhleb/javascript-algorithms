@@ -73,6 +73,7 @@ une séquence d'opérations.
   - `A` [Partition Entière](src/algorithms/math/integer-partition)
   - `A` [Approximation de π par l'algorithme de Liu Hui](src/algorithms/math/liu-hui) - approximation du calcul de π basé sur les N-gons
   - `B` [Exponentiation rapide](src/algorithms/math/fast-powering/README.fr-FR.md)
+  - `A` [Transformée de Fourier Discrète](src/algorithms/math/fourier-transform/README.fr-FR.md) - décomposer une fonction du temps (un signal) en fréquences qui la composent
 - **Ensembles**
   - `B` [Produit Cartésien](src/algorithms/sets/cartesian-product) - produit de plusieurs ensembles
   - `B` [Mélange de Fisher–Yates](src/algorithms/sets/fisher-yates) - permulation aléatoire d'une séquence finie
