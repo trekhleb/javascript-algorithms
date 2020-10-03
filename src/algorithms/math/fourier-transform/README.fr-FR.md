@@ -49,73 +49,84 @@ sparse (mostly zero) factors. As a result, it manages to reduce the complexity o
 computing the DFT from O(n<sup>2</sup>), which arises if one simply applies the
 definition of DFT, to O(n log n), where n is the data size.
 
-Here a discrete Fourier analysis of a sum of cosine waves at 10, 20, 30, 40,
-and 50 Hz:
+Un algorithme FFT calcule la Transformée de Fourier discrète (TFD) d'une séquence, ou
+son inverse (IFFT). L'analyse de Fourier convertit un signal de son domaine d'origine
+en une représentation dans le domaine fréquentiel et vice versa. Une FFT
+calcule rapidement ces transformations en factorisant la matrice TFD en un produit de
+facteurs dispersés (généralement nuls). En conséquence, il parvient à réduire la complexité de
+calcul de la TFD de O (n <sup> 2 </sup>), qui survient si l'on applique simplement la
+définition de TFD, à O (n log n), où n est la taille des données.
+
+Voici une analyse de Fourier discrète d'une somme d'ondes cosinus à 10, 20, 30, 40,
+et 50 Hz:
 
 ![FFT](https://upload.wikimedia.org/wikipedia/commons/6/64/FFT_of_Cosine_Summation_Function.png)
 
 ## Explanation
 
-The Fourier Transform is one of deepest insights ever made. Unfortunately, the
-meaning is buried within dense equations:
+La Transformée de Fourier est l'une des connaissances les plus importante jamais découverte. Malheureusement, le
+son sens est enfoui dans des équations denses::
 
 ![](https://betterexplained.com/wp-content/plugins/wp-latexrender/pictures/45c088dbb767150fc0bacfeb49dd49e5.png)
 
-and
+et
 
 ![](https://betterexplained.com/wp-content/plugins/wp-latexrender/pictures/faeb9c5bf2e60add63ae4a70b293c7b4.png)
 
-Rather than jumping into the symbols, let's experience the key idea firsthand. Here's a plain-English metaphor:
+Plutôt que se noyer dans les symboles, faisons en premier lieu l'expérience de l'idée principale. Voici une métaphore en français simple:
 
-- _What does the Fourier Transform do?_ Given a smoothie, it finds the recipe.
-- _How?_ Run the smoothie through filters to extract each ingredient.
-- _Why?_ Recipes are easier to analyze, compare, and modify than the smoothie itself.
-- _How do we get the smoothie back?_ Blend the ingredients.
+- _Que fait la transformée de Fourier ?_ A partir d'un smoothie, elle trouve sa recette.
+- _Comment ?_ Elle passe le smoothie dans un filtre pour en extraire chaque ingrédient.
+- _Pourquoi ?_ Les recettes sont plus faciles à analyser, comparer et modifier que le smoothie lui-même.
+- _Comment récupérer le smoothie ?_ Re-mélanger les ingrédients.
 
-**Think With Circles, Not Just Sinusoids**
+**Pensez en cercles, pas seulement en sinusoïdes**
 
-The Fourier Transform is about circular paths (not 1-d sinusoids) and Euler's
-formula is a clever way to generate one:
+La transformée de Fourier concerne des trajectoires circulaires (pas les sinusoïdes 1-d)
+et la formuled'Euler est une manière intelligente d'en générer une:
 
 ![](https://betterexplained.com/wp-content/uploads/euler/equal_paths.png)
 
-Must we use imaginary exponents to move in a circle? Nope. But it's convenient
-and compact. And sure, we can describe our path as coordinated motion in two
-dimensions (real and imaginary), but don't forget the big picture: we're just
-moving in a circle.
+Doit-on utiliser des exposants imaginaires pour se déplacer en cercle ? Non. Mais c'est pratique
+et compact. Et bien sûr, nous pouvons décrire notre chemin comme un mouvement coordonné en deux
+dimensions (réelle et imaginaire), mais n'oubliez pas la vue d'ensemble: nous sommes juste
+en déplacement dans un cercle.
 
-**Discovering The Full Transform**
+**À la découverte de la transformation complète**
 
-The big insight: our signal is just a bunch of time spikes! If we merge the
-recipes for each time spike, we should get the recipe for the full signal.
+L'idée générale: notre signal n'est qu'un tas de pics de temps, d'instant T ! Si nous combinons les
+recettes pour chaque pic de temps, nous devrions obtenir la recette du signal complet.
 
-The Fourier Transform builds the recipe frequency-by-frequency:
+La transformée de Fourier construit cette recette fréquence par fréquence:
 
 ![](https://betterexplained.com/wp-content/uploads/images/fourier-explained-20121219-224649.png)
 
-A few notes:
+Quelques notes
 
-- N = number of time samples we have
-- n = current sample we're considering (0 ... N-1)
-- x<sub>n</sub> = value of the signal at time n
-- k = current frequency we're considering (0 Hertz up to N-1 Hertz)
-- X<sub>k</sub> = amount of frequency k in the signal (amplitude and phase, a complex number)
-- The 1/N factor is usually moved to the reverse transform (going from frequencies back to time). This is allowed, though I prefer 1/N in the forward transform since it gives the actual sizes for the time spikes. You can get wild and even use 1/sqrt(N) on both transforms (going forward and back creates the 1/N factor).
-- n/N is the percent of the time we've gone through. 2 _ pi _ k is our speed in radians / sec. e^-ix is our backwards-moving circular path. The combination is how far we've moved, for this speed and time.
-- The raw equations for the Fourier Transform just say "add the complex numbers". Many programming languages cannot handle complex numbers directly, so you convert everything to rectangular coordinates and add those.
+- N = nombre d'échantillons de temps dont nous disposons
+- n = échantillon actuellement étudié (0 ... N-1)
+- x<sub>n</sub> = valeur du signal au temps n
+- k = fréquence actuellement étudiée (0 Hertz up to N-1 Hertz)
+- X<sub>k</sub> = quantité de fréquence k dans le signal (amplitude et phase, un nombre complexe)
+- Le facteur 1 / N est généralement déplacé vers la transformée inverse (passant des fréquences au temps). Ceci est autorisé, bien que je préfère 1 / N dans la transformation directe car cela donne les tailles réelles des pics de temps. Vous pouvez être plus ambitieux et utiliser 1 / racine carrée de (N) sur les deux transformations (aller en avant et en arrière crée le facteur 1 / N).
+- n/N est le pourcentage du temps que nous avons passé. 2 _ pi _ k est notre vitesse en radians/s. e ^ -ix est notre chemin circulaire vers l'arrière. La combinaison est la distance parcourue, pour cette vitesse et ce temps.
+- Les équations brutes de la transformée de Fourier consiste simplement à "ajouter les nombres complexes". De nombreux langages de programmation ne peuvent pas gérer directement les nombres complexes, on converti donc tout en coordonnées rectangulaires, pour les ajouter.
 
-Stuart Riffle has a great interpretation of the Fourier Transform:
+Stuart Riffle a une excellente interprétation de la transformée de Fourier:
 
 ![](https://betterexplained.com/wp-content/uploads/images/DerivedDFT.png)
 
-## References
+## Références
 
-- [An Interactive Guide To The Fourier Transform](https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/)
-- [DFT on YouTube by Better Explained](https://www.youtube.com/watch?v=iN0VG9N2q0U&t=0s&index=77&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
-- [FT on YouTube by 3Blue1Brown](https://www.youtube.com/watch?v=spUNpyF58BY&t=0s&index=76&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
-- [FFT on YouTube by Simon Xu](https://www.youtube.com/watch?v=htCj9exbGo0&index=78&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&t=0s)
 - Wikipedia
-  - [FT](https://en.wikipedia.org/wiki/Fourier_transform)
-  - [DFT](https://www.wikiwand.com/en/Discrete_Fourier_transform)
-  - [DTFT](https://en.wikipedia.org/wiki/Discrete-time_Fourier_transform)
-  - [FFT](https://www.wikiwand.com/en/Fast_Fourier_transform)
+
+  - [TF](https://fr.wikipedia.org/wiki/Transformation_de_Fourier)
+  - [TFD](https://fr.wikipedia.org/wiki/Transformation_de_Fourier_discr%C3%A8te)
+  - [FFT](https://fr.wikipedia.org/wiki/Transformation_de_Fourier_rapide)
+  - [TFtd (en anglais)](https://en.wikipedia.org/wiki/Discrete-time_Fourier_transform)
+
+- en Anglais
+  - [An Interactive Guide To The Fourier Transform](https://betterexplained.com/articles/an-interactive-guide-to-the-fourier-transform/)
+  - [DFT on YouTube by Better Explained](https://www.youtube.com/watch?v=iN0VG9N2q0U&t=0s&index=77&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+  - [FT on YouTube by 3Blue1Brown](https://www.youtube.com/watch?v=spUNpyF58BY&t=0s&index=76&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+  - [FFT on YouTube by Simon Xu](https://www.youtube.com/watch?v=htCj9exbGo0&index=78&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&t=0s)
