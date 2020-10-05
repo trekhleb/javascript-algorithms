@@ -1,11 +1,11 @@
-# Factorial
+# Factorielle
 
-_Read this in other languages:_
-[_简体中文_](README.zh-CN.md), [français](README.fr-FR.md).
+_Lisez ceci dans d'autres langues:_
+[english](README.md), [_简体中文_](README.zh-CN.md).
 
-In mathematics, the factorial of a non-negative integer `n`,
-denoted by `n!`, is the product of all positive integers less
-than or equal to `n`. For example:
+En mathématiques, la factorielle d'un entier naturel `n`,
+notée avec un point d'exclamation `n!`, est le produit des nombres entiers
+strictement positifs inférieurs ou égaux à n. Par exemple:
 
 ```
 5! = 5 * 4 * 3 * 2 * 1 = 120
@@ -32,4 +32,4 @@ than or equal to `n`. For example:
 
 ## References
 
-[Wikipedia](https://en.wikipedia.org/wiki/Factorial)
+[Wikipedia](https://fr.wikipedia.org/wiki/Factorielle)
