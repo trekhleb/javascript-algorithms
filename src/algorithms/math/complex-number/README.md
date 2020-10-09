@@ -1,11 +1,14 @@
 # Complex Number
 
-A **complex number** is a number that can be expressed in the 
+_Read this in other languages:_
+[français](README.fr-FR.md).
+
+A **complex number** is a number that can be expressed in the
 form `a + b * i`, where `a` and `b` are real numbers, and `i` is a solution of
-the equation `x^2 = −1`. Because no *real number* satisfies this 
-equation, `i` is called an *imaginary number*. For the complex 
-number `a + b * i`, `a` is called the *real part*, and `b` is called 
-the *imaginary part*.
+the equation `x^2 = −1`. Because no _real number_ satisfies this
+equation, `i` is called an _imaginary number_. For the complex
+number `a + b * i`, `a` is called the _real part_, and `b` is called
+the _imaginary part_.
 
 ![Complex Number](https://www.mathsisfun.com/numbers/images/complex-example.svg)
 
@@ -13,56 +16,56 @@ A Complex Number is a combination of a Real Number and an Imaginary Number:
 
 ![Complex Number](https://www.mathsisfun.com/numbers/images/complex-number.svg)
 
-Geometrically, complex numbers extend the concept of the one-dimensional number 
-line to the *two-dimensional complex plane* by using the horizontal axis for the
-real part and the vertical axis for the imaginary part. The complex 
-number `a + b * i` can be identified with the point `(a, b)` in the complex plane.
+Geometrically, complex numbers extend the concept of the one-dimensional number
+line to the _two-dimensional complex plane_ by using the horizontal axis for the
+real part and the vertical axis for the imaginary part. The complex
+number `a + b * i` can be identified with the point `(a, b)` in the complex plane.
 
-A complex number whose real part is zero is said to be *purely imaginary*; the
+A complex number whose real part is zero is said to be _purely imaginary_; the
 points for these numbers lie on the vertical axis of the complex plane. A complex
-number whose imaginary part is zero can be viewed as a *real number*; its point 
+number whose imaginary part is zero can be viewed as a _real number_; its point
 lies on the horizontal axis of the complex plane.
 
-| Complex Number | Real Part | Imaginary Part |     |
-| :------------- | :-------: | :------------: | --- |
-| 3 + 2i         | 3         | 2              |     |
-| 5              | 5         | **0**          | Purely Real |
-| −6i            | **0**     | -6             | Purely Imaginary |
+| Complex Number | Real Part | Imaginary Part |                  |
+| :------------- | :-------: | :------------: | ---------------- |
+| 3 + 2i         |     3     |       2        |                  |
+| 5              |     5     |     **0**      | Purely Real      |
+| −6i            |   **0**   |       -6       | Purely Imaginary |
 
-A complex number can be visually represented as a pair of numbers `(a, b)` forming 
-a vector on a diagram called an *Argand diagram*, representing the *complex plane*.
+A complex number can be visually represented as a pair of numbers `(a, b)` forming
+a vector on a diagram called an _Argand diagram_, representing the _complex plane_.
 `Re` is the real axis, `Im` is the imaginary axis, and `i` satisfies `i^2 = −1`.
 
 ![Complex Number](https://upload.wikimedia.org/wikipedia/commons/a/af/Complex_number_illustration.svg)
 
-> Complex does not mean complicated. It means the two types of numbers, real and 
-imaginary, together form a complex, just like a building complex (buildings 
-joined together).
+> Complex does not mean complicated. It means the two types of numbers, real and
+> imaginary, together form a complex, just like a building complex (buildings
+> joined together).
 
 ## Polar Form
 
-An alternative way of defining a point `P` in the complex plane, other than using 
+An alternative way of defining a point `P` in the complex plane, other than using
 the x- and y-coordinates, is to use the distance of the point from `O`, the point
-whose coordinates are `(0, 0)` (the origin), together with the angle subtended 
-between the positive real axis and the line segment `OP` in a counterclockwise 
+whose coordinates are `(0, 0)` (the origin), together with the angle subtended
+between the positive real axis and the line segment `OP` in a counterclockwise
 direction. This idea leads to the polar form of complex numbers.
 
 ![Polar Form](https://upload.wikimedia.org/wikipedia/commons/7/7a/Complex_number_illustration_modarg.svg)
 
-The *absolute value* (or modulus or magnitude) of a complex number `z = x + yi` is:
+The _absolute value_ (or modulus or magnitude) of a complex number `z = x + yi` is:
 
 ![Radius](https://wikimedia.org/api/rest_v1/media/math/render/svg/b59629c801aa0ddcdf17ee489e028fb9f8d4ea75)
 
 The argument of `z` (in many applications referred to as the "phase") is the angle
-of the radius `OP` with the positive real axis, and is written as `arg(z)`. As 
+of the radius `OP` with the positive real axis, and is written as `arg(z)`. As
 with the modulus, the argument can be found from the rectangular form `x+yi`:
 
 ![Phase](https://wikimedia.org/api/rest_v1/media/math/render/svg/7cbbdd9bb1dd5df86dd2b820b20f82995023e566)
 
-Together, `r` and `φ` give another way of representing complex numbers, the 
-polar form, as the combination of modulus and argument fully specify the 
-position of a point on the plane. Recovering the original rectangular 
-co-ordinates from the polar form is done by the formula called trigonometric 
+Together, `r` and `φ` give another way of representing complex numbers, the
+polar form, as the combination of modulus and argument fully specify the
+position of a point on the plane. Recovering the original rectangular
+co-ordinates from the polar form is done by the formula called trigonometric
 form:
 
 ![Polar Form](https://wikimedia.org/api/rest_v1/media/math/render/svg/b03de1e1b7b049880b5e4870b68a57bc180ff6ce)
@@ -107,7 +110,7 @@ To subtract two complex numbers we subtract each part separately:
 
 ### Multiplying
 
-To multiply complex numbers each part of the first complex number gets multiplied 
+To multiply complex numbers each part of the first complex number gets multiplied
 by each part of the second complex number:
 
 Just use "FOIL", which stands for "**F**irsts, **O**uters, **I**nners, **L**asts" (
@@ -138,7 +141,7 @@ Use this rule:
 **Example**
 
 ```text
-(3 + 2i)(1 + 7i) 
+(3 + 2i)(1 + 7i)
 = 3×1 + 3×7i + 2i×1+ 2i×7i
 = 3 + 21i + 2i + 14i^2
 = 3 + 21i + 2i − 14   (because i^2 = −1)
@@ -164,7 +167,7 @@ ______
 5 − 3i   =   5 + 3i
 ```
 
-On the complex plane the conjugate number will be mirrored against real axes. 
+On the complex plane the conjugate number will be mirrored against real axes.
 
 ![Complex Conjugate](https://upload.wikimedia.org/wikipedia/commons/6/69/Complex_conjugate_picture.svg)
 
@@ -172,7 +175,7 @@ On the complex plane the conjugate number will be mirrored against real axes.
 
 The conjugate is used to help complex division.
 
-The trick is to *multiply both top and bottom by the conjugate of the bottom*.
+The trick is to _multiply both top and bottom by the conjugate of the bottom_.
 
 **Example**
 
@@ -207,7 +210,7 @@ In the previous example, what happened on the bottom was interesting:
 (4 − 5i)(4 + 5i) = 16 + 20i − 20i − 25i
 ```
 
-The middle terms `(20i − 20i)` cancel out!	Also `i^2 = −1` so we end up with this:
+The middle terms `(20i − 20i)` cancel out! Also `i^2 = −1` so we end up with this:
 
 ```text
 (4 − 5i)(4 + 5i) = 4^2 + 5^2
