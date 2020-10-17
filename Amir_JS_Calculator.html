@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Amir_Calculator_JS</title>
+    <style>
+      .container
+      {
+        width:800px;
+        margin: 0 auto;
+      }
+      .form
+      {
+        margin-top: 40px;
+      }
+      select
+      {
+        padding: 5px;
+      }
+    </style>
+    <meta charset="UTF-8">
+  </head>
+  <body id="body">
+    <!-- Dialog Box -->
+    <div class="container">
+      <div class="events">
+        <form name="calculator">
+           <table>
+              <tr>
+                 <td colspan="8">
+                    <input type="text" name="result" id="result" value="">
+
+                 </td>
+              </tr>
+              <tr>
+                 <td><input type="button"  value="7" onclick="calculator.result.value += '7'"></td>
+                 <td><input type="button"  value="8" onclick="calculator.result.value += '8'"></td>
+                 <td><input type="button"  value="9" onclick="calculator.result.value += '9'"></td>
+                 <td><input type="button"  value="x" onclick="calculator.result.value += '*'"></td>
+              </tr>
+              <tr>
+                 <td><input type="button"  value="4" onclick="calculator.result.value += '4'"></td>
+                 <td><input type="button"  value="5" onclick="calculator.result.value += '5'"></td>
+                 <td><input type="button"  value="6" onclick="calculator.result.value += '6'"></td>
+                 <td><input type="button"  value="-" onclick="calculator.result.value += '-'"></td>
+              </tr>
+              <tr>
+                 <td><input type="button"  value="1" onclick="calculator.result.value += '1'"></td>
+                 <td><input type="button"  value="2" onclick="calculator.result.value += '2'"></td>
+                 <td><input type="button"  value="3" onclick="calculator.result.value += '3'"></td>
+                 <td><input type="button"  value="+" onclick="calculator.result.value += '+'"></td>
+              </tr>
+              <tr>
+                 <td><input type="button"  value="0" onclick="calculator.result.value += '0'"></td>
+                 <td><input type="button"  value="/" onclick="calculator.result.value += '/'"></td>
+                 <td><input type="button"  value="." onclick="calculator.result.value += '.'"></td>
+                 <td><input type="button" value="=" onclick="calculator.result.value = eval(calculator.result.value)"></td>
+              </tr>
+              <td>
+                <input type="button" id="clear"  value="c" onclick="calculator.result.value = ''">
+              </td>
+
+            </table>
+          </form>
+
+
+      </div>
+      </div>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Amir_Task_JS</title>
+    <style>
+      .container
+      {
+        width:800px;
+        margin: 0 auto;
+      }
+      .form
+      {
+        margin-top: 40px;
+      }
+      select
+      {
+        padding: 5px;
+      }
+    </style>
+    <meta charset="UTF-8">
+  </head>
+  <body id="body">
+    <!-- Dialog Box -->
+    <div class="container">
+      <br>
+      <br>
+      <!--  <button onclick="showDate()"> Show Date </button> -->
+      <!--  <button onclick="clearDate()"> Clear Date </button> -->
+      <!--  <button onmouseover="showDate()"> Show Date </button> -->
+      <!--  <button onmouseover="clearDate()"> Clear Date </button>-->
+
+      <div id="time">
+
+      <div class="form">
+        <form name="myform" onsubmit="return validateForm()">
+
+
+          <!--  First Name -->
+          <div class="form-field">
+            <label> First Name : </label>
+            <input type="text" name="First Name">
+          </div>
+
+          <!--  Last Name -->
+          <div class="form-field">
+            <label> Last Name : </label>
+            <input type="text" name="Last Name">
+          </div>
+          <br>
+          <!--  Gender -->
+          <div class="Gender_Section">
+            <label> Gender : </label>
+            <select name="gender">
+            <option>other</option>
+            <option>male</option>
+            <option>female</option>
+          </select>
+          </div>
+          <br>
+
+          <div class="form-field">
+            <label> CNIC :  </label>
+            <input type="text" name="CNIC">
+          </div>
+          <br>
+
+          <div class="form-field">
+            <label> Date Of Birth (Date-Month-Year) : </label>
+            <input type="text" name="Date">
+            <input type="text" name="Month">
+            <input type="text" name="Year">
+          </div>
+          <br>
+          <label> Attach Your CV:  </label>
+          <input type="file" id="myFile" name="filename">
+            <br>
+            <br>
+
+
+
+          <div class="form-field">
+            <select name="background" id="background" onchange="changebackground(this)">
+              <option value="red"> Red </option>
+              <option value="blue"> Blue </option>
+
+              <option value="yellow"> Yellow </option>
+              <option value="purple"> Purple </option>
+            </select>
+          </div>
+          <br>
+
+
+          <h4> <b> Check Points </b> </h5>
+            <table border="1">
+            <tr>
+              <td>
+                <form>
+                  <label class="switch">
+                  <label> First Name </label>  <input type="checkbox" name="Check Points">
+                </form>
+              </td>
+          </tr>
+          <tr>
+            <td>
+              <form>
+                <label class="switch">
+                <label> Last Name </label>  <input type="checkbox" name="Check Points">
+              </form>
+            </td>
+          </tr>
+          <tr>
+          <td>
+            <form>
+              <label class="switch">
+              <label> CNIC </label>  <input type="checkbox" name="Check Points">
+            </form>
+          </td>
+          </tr>
+          <tr>
+          <td>
+          <form>
+            <label class="switch">
+            <label> CV Attach </label>  <input type="checkbox" name="Check Points">
+          </form>
+          </td>
+          </tr>
+          </table>
+
+          <br>
+
+          <div class="form-field">
+            <div class="events">
+              <!--          <button onclick="doclick()"> Click Me  </button> -->
+
+              <button onclick="this.innerHTML='Yes I Agree With Your Policy'"> Agree With Me </button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      </div>
+    </div>
+
+
+
+<script>
+
+function changebackground(x)
+{
+var body=document.getElementById('body');
+body.style.backgroundColor = x.value;
+}
+
+function validateForm()
+{
+  var firstName = document.forms["myform"]["First Name"].value;
+  if (firstName == null || firstName == "" )
+  {
+    alert("First Name Is Required");
+    return false;
+  }
+  var lastName = document.forms["myform"]["Last Name"].value;
+  if (lastName == null || lastName == "" )
+  {
+    alert("Last Name Is Required");
+    return false;
+  }
+  var Gender = document.forms["myform"]["gender"].value;
+  if (Gender == "other")
+  {
+    alert("Select Gender");
+    return false;
+  }
+  var cnic = document.forms["myform"]["CNIC"].value;
+  if ((cnic.length) < 15)
+  {
+    alert("Write Your CNIC With Dashes 00000-0000000-0");
+    return false;
+  }
+  var year = document.forms["myform"]["Year"].value;
+  if (year >= 2010 )
+  {
+    alert("You Are Under Age");
+    return false;
+  }
+  /*
+  This Condition Is not Working Properly
+  var check_box_points = document.forms["myform"]["Check Points"].value;
+  if (check_box_points != true)
+  {
+    alert("Check the checkpoints");
+  }*/
+}
+
+
+function doclick()
+{
+  alert("I Agree")
+}
+
+
+
+
+</script>
+  </body>
+</html>
