@@ -1,0 +1,106 @@
+import java.util.*;
+
+public class taximeter
+
+{
+
+   int taxino;
+
+   String name;
+
+   int km;
+
+   int b;
+
+   taximeter()
+
+   {
+
+       taxino=0;
+
+       name="";
+
+       km=0;
+
+       b=0;
+
+   }
+
+   void input()
+
+   {
+
+       Scanner sc=new Scanner(System.in);
+
+       System.out.println("Enter the Taxi number ");
+
+       taxino=sc.nextInt();
+
+       System.out.println("Enter the name ");
+
+       name=sc.nextLine();
+
+       System.out.println("Enter the distance travelled ");
+
+       km=sc.nextInt();
+
+   }
+
+   void calculate()
+
+   {
+
+       
+
+       if(km<=1)
+
+       b=25;
+
+       if(km>1 && km<=6)
+
+       b=10;
+
+       if(km>6 && km<=12)
+
+       b=15;
+
+       if(km>12 && km<=18)
+
+       b=20;
+
+       if(km>18)
+
+       b=25;
+
+       
+
+   }
+
+   void display()
+
+   {
+
+       System.out.println("Taxi number  Name  Kilometres travelled  Bill amount  ");
+
+       System.out.println(taxino+"  "+name+"  "+km+" "+b+"  ");
+
+       
+
+   }
+
+   public static void main(String args[])
+
+   {
+
+       taximeter ob= new taximeter();
+
+       ob.input();
+
+       ob.calculate();
+
+       ob.display();
+
+   }
+
+}
+
