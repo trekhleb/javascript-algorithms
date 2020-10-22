@@ -197,15 +197,18 @@ export default class BinaryTreeNode {
     const traverse = [];
     const stack = new Stack();
     let curr = this;
+
     while (curr != null || !stack.isEmpty()) {
       while (curr != null) {
         stack.push(curr);
         curr = curr.left;
       }
+
       curr = stack.pop();
       traverse.push(curr.value);
       curr = curr.right;
     }
+
     return traverse;
   }
 
