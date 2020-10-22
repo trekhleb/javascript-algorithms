@@ -244,7 +244,7 @@ export default class FourierTester {
       const { input, output: expectedOutput } = testCase;
 
       // Try to split input signal into sequence of pure sinusoids.
-      const formattedInput = input.map(sample => sample.amplitude);
+      const formattedInput = input.map((sample) => sample.amplitude);
       const currentOutput = fourierTransform(formattedInput);
 
       // Check the signal has been split into proper amount of sub-signals.
