@@ -18,7 +18,8 @@ _Read this in other languages:_
 [_日本語_](README.ja-JP.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),
+[_Türk_](README.tr-TR.md)
 
 ## Struktury Danych
 
