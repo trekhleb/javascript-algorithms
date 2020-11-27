@@ -1,4 +1,4 @@
-import Sort from '../Sort';
+import Sort from "../Sort";
 
 export default class MergeSort extends Sort {
   sort(originalArray) {
@@ -24,36 +24,42 @@ export default class MergeSort extends Sort {
   }
 
   mergeSortedArrays(leftArray, rightArray) {
-    let sortedArray = [];
+    const sortedArray = [];
 
-    // In case if arrays are not of size 1.
-    while (leftArray.length && rightArray.length) {
-      let minimumElement = null;
+    // Use array pointers to exclude old elements after they have been added to the sorted array
+    let leftIndex = 0;
+    let rightIndex = 0;
 
-      // Find minimum element of two arrays.
-      if (this.comparator.lessThanOrEqual(leftArray[0], rightArray[0])) {
-        minimumElement = leftArray.shift();
+    while (leftIndex < leftArray.length && rightIndex < rightArray.length) {
+      // Find the minimum element between the left and right array
+      if (
+        this.comparator.lessThanOrEqual(
+          leftArray[leftIndex],
+          rightArray[rightIndex]
+        )
+      ) {
+        sortedArray.push(leftArray[leftIndex]);
+
+        // Increment index pointer to the right
+        leftIndex += 1;
+
+        // Call visiting callback.
+        this.callbacks.visitingCallback(leftArray[leftIndex]);
       } else {
-        minimumElement = rightArray.shift();
+        sortedArray.push(rightArray[rightIndex]);
+
+        // Increment index pointer to the right
+        rightIndex += 1;
+
+        // Call visiting callback.
+        this.callbacks.visitingCallback(rightArray[rightIndex]);
       }
-
-      // Call visiting callback.
-      this.callbacks.visitingCallback(minimumElement);
-
-      // Push the minimum element of two arrays to the sorted array.
-      sortedArray.push(minimumElement);
     }
 
-    // If one of two array still have elements we need to just concatenate
-    // this element to the sorted array since it is already sorted.
-    if (leftArray.length) {
-      sortedArray = sortedArray.concat(leftArray);
-    }
-
-    if (rightArray.length) {
-      sortedArray = sortedArray.concat(rightArray);
-    }
-
-    return sortedArray;
+    // There will be one element remaining from either the left OR the right
+    // Concatenate the remaining element into the sorted array
+    return sortedArray
+      .concat(leftArray.slice(leftIndex))
+      .concat(rightArray.slice(rightIndex));
   }
 }
