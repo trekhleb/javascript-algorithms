@@ -12,4 +12,20 @@
 
 ## `O(n×log(n))` Backers
 
-- [bullwinkle](https://github.com/bullwinkle)
+<ul>
+  <li>
+    <a href="https://github.com/bullwinkle">
+      <img
+        src="https://avatars1.githubusercontent.com/u/3613558?s=60&amp;v=4"
+        alt="@bullwinkle"
+        class="avatar avatar-user"
+        style="border-radius:50%"
+        width="30"
+        height="30"
+      />
+    </a>
+    &thinsp;
+    <a href="https://github.com/bullwinkle">bullwinkle</a>
+  </li>
+</ul>
+
