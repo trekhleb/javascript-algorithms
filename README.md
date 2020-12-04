@@ -310,4 +310,4 @@ Below is the list of some of the most used Big O notations and their performance
 
 > You may support this project via ❤️️ [GitHub](https://github.com/sponsors/trekhleb) or ❤️️ [Patreon](https://www.patreon.com/trekhleb).
 
-See the [full list of backers](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md)
+[Folks that are backing this project](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md)
