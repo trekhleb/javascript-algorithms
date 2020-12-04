@@ -12,7 +12,6 @@
         width="30"
         height="30"
       /></a>
-    &thinsp;
     <a href="https://github.com/bullwinkle">bullwinkle</a>
   </li>
 </ul>
