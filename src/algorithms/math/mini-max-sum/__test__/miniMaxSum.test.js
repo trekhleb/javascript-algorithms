@@ -6,6 +6,7 @@ describe('miniMaxSum', () => {
     expect(miniMaxSum([1, 2, 3, 4, 5])).toStrictEqual([10, 14]);
     expect(miniMaxSum([-1, -2, 3, 4, 5])).toStrictEqual([4, 11]);
     expect(miniMaxSum([0, 1, 2, 3, 4, 5])).toStrictEqual([10, 15]);
+    expect(miniMaxSum([0, 1, 2, 3, 4, 5, 6, 7, 8])).toStrictEqual([28, 36]);
     expect(miniMaxSum([])).toStrictEqual([null, null]);
     expect(miniMaxSum(12)).toStrictEqual([null, null]);
     expect(miniMaxSum(null)).toStrictEqual([null, null]);
