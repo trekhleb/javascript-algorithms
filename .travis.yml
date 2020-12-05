@@ -1,10 +1,8 @@
 os:
-  - linux
   - osx
-dist: trusty
 language: node_js
 node_js:
-  - "12"
+  - 14
 install:
   - npm install -g codecov
   - npm install
