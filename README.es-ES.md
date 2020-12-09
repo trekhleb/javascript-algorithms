@@ -18,8 +18,8 @@ _Léelo en otros idiomas:_
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
 [_Português_](README.pt-BR.md),
-[_Türk_](README.tr-TR.md),
-[_Русский_](README.ru-RU.md)
+[_Русский_](README.ru-RU.md),
+[_Türk_](README.tr-TR.md)
 
 *☝ Nótese que este proyecto está pensado con fines de aprendizaje e investigación,
 y **no** para ser usado en producción.*
