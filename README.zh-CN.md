@@ -17,7 +17,8 @@ _Read this in other languages:_
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md),
 [_Русский_](README.ru-RU.md),
-[_Türk_](README.tr-TR.md)
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md)
 
 *注意：这个项目仅用于学习和研究，**不是**用于生产环境。*
 

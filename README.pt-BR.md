@@ -20,7 +20,8 @@ _Leia isto em outros idiomas:_
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
 [_Русский_](README.ru-RU.md),
-[_Türk_](README.tr-TR.md)
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md)
 
 ## Estrutura de Dados
 

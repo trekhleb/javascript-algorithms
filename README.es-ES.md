@@ -19,7 +19,8 @@ _Léelo en otros idiomas:_
 [_Français_](README.fr-FR.md),
 [_Português_](README.pt-BR.md),
 [_Русский_](README.ru-RU.md),
-[_Türk_](README.tr-TR.md)
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md)
 
 *☝ Nótese que este proyecto está pensado con fines de aprendizaje e investigación,
 y **no** para ser usado en producción.*

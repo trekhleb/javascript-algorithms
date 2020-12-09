@@ -17,7 +17,8 @@ _Читать на других языках:_
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md),
-[_Türk_](README.tr-TR.md)
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md)
 
 *☝ Замечание: этот репозиторий предназначен для учебно-исследовательских целей (**не** для использования в продакшн-системах).*
 
