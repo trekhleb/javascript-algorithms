@@ -19,10 +19,11 @@ _Read this in other languages:_
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md),
-[_Türk_](README.tr-TR.md)
+[_Türk_](README.tr-TR.md),
+[_Русский_](README.ru-RU.md)
 
 *☝ Note that this project is meant to be used for learning and researching purposes 
-only and it is **not** meant to be used for production.*
+only, and it is **not** meant to be used for production.*
 
 ## Data Structures
 

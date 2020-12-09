@@ -19,7 +19,8 @@ _Leia isto em outros idiomas:_
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
-[_Türk_](README.tr-TR.md)
+[_Türk_](README.tr-TR.md),
+[_Русский_](README.ru-RU.md)
 
 ## Estrutura de Dados
 

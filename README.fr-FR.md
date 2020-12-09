@@ -19,7 +19,8 @@ _Lisez ceci dans d'autres langues:_
 [_Polski_](README.pl-PL.md),
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md),
-[_Türk_](README.tr-TR.md)
+[_Türk_](README.tr-TR.md),
+[_Русский_](README.ru-RU.md)
 
 ## Data Structures
 
