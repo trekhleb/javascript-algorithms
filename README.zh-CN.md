@@ -228,7 +228,7 @@ npm test -- 'LinkedList'
 
 你可以在 `./src/playground/playground.js` 文件中操作数据结构与算法，并在 `./src/playground/__test__/playground.test.js` 中编写测试。
 
-然后，只需运行以下命令来测试你的 Playground 是否按无误:
+然后，只需运行以下命令来测试你的 Playground 是否无误:
 
 ```
 npm test -- 'playground'
