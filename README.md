@@ -19,10 +19,12 @@ _Read this in other languages:_
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md),
-[_Türk_](README.tr-TR.md)
+[_Русский_](README.ru-RU.md),
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md)
 
 *☝ Note that this project is meant to be used for learning and researching purposes 
-only and it is **not** meant to be used for production.*
+only, and it is **not** meant to be used for production.*
 
 ## Data Structures
 
@@ -73,6 +75,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Complex Number](src/algorithms/math/complex-number) - complex numbers and basic operations with them
   * `B` [Radian & Degree](src/algorithms/math/radian) - radians to degree and backwards conversion
   * `B` [Fast Powering](src/algorithms/math/fast-powering)
+  * `B` [Horner's method](src/algorithms/math/horner-method) - polynomial evaluation
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Square Root](src/algorithms/math/square-root) - Newton's method
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
