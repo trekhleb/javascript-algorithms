@@ -144,6 +144,7 @@ a set of rules that precisely define a sequence of operations.
 * **Machine Learning**
   * `B` [NanoNeuron](https://github.com/trekhleb/nano-neuron) - 7 simple JS functions that illustrate how machines can actually learn (forward/backward propagation)
 * **Uncategorized**
+  * `B` [Body Mass Index](src/algorithms/uncategorized/body-mass-index)
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples 
