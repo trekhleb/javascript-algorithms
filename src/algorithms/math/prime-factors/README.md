@@ -1,34 +1,34 @@
 # Prime Factors
 
-Prime factors are basically those prime numbers which multiply together to give the orignal number. For ex: 39 will have prime factors as 3 and 13 which are also prime numbers. Another example is 15 whose prime factors are 3 and 5.
+**Prime number** is a whole number greater than `1` that **cannot** be made by multiplying other whole numbers. The first few prime numbers are: `2`, `3`, `5`, `7`, `11`, `13`, `17`, `19` and so on.
 
-#### Method for finding the prime factors and their count accurately
+If we **can** make it by multiplying other whole numbers it is a **Composite Number**.
 
-The approach is to basically keep on dividing the  natural number 'n' by indexes from i = 2 to i = n by prime indexes only. This is ensured by an 'if' check. Then value of 'n' keeps on overriding by (n/i).
-The time complexity till now is O(n) in worst case since the loop run from index i = 2 to i = n even when no index 'i' is left to be divided by 'n' other than n itself. This time complexity can be reduced  to O(sqrt(n)) from O(n). This optimisation is acheivable when loop is ran from i = 2 to i = sqrt(n). Now, we go only till O(sqrt(n)) because when 'i' becomes greater than sqrt(n), we now have the confirmation there is no index 'i' left which can divide 'n' completely other than n itself.
+![Composite numbers](https://www.mathsisfun.com/numbers/images/prime-composite.svg)
 
-##### Optimised Time Complexity: O(sqrt(n))
+_Image source: [Math is Fun](https://www.mathsisfun.com/prime-factorization.html)_
 
+**Prime factors** are those [prime numbers](https://en.wikipedia.org/wiki/Prime_number) which multiply together to give the original number. For example `39` will have prime factors of `3` and `13` which are also prime numbers. Another example is `15` whose prime factors are `3` and `5`.
 
-#### Hardy-Ramanujan formula for approximate calculation of prime-factor count
+![Factors](https://www.mathsisfun.com/numbers/images/factor-2x3.svg)
 
-In 1917, a theorem was formulated by G.H Hardy and Srinivasa Ramanujan which approximately tells the total count of distinct prime factors of most 'n' natural numbers.
-The fomula is given by ln(ln(n)).
+_Image source: [Math is Fun](https://www.mathsisfun.com/prime-factorization.html)_
 
-#### Code Explaiation
+## Finding the prime factors and their count accurately
 
-There are on 4 functions used:
+The approach is to keep on dividing the natural number `n` by indexes from `i = 2` to `i = n` (by prime indexes only). The value of `n` is being overridden by `(n / i)` on each iteration.
 
-- getPrimeFactors : returns array containing all distinct prime factors for given input n.
+The time complexity till now is `O(n)` in the worst case scenario since the loop runs from index `i = 2` to `i = n`. This time complexity can be reduced from `O(n)` to `O(sqrt(n))`. The optimisation is achievable when loop runs from `i = 2` to `i = sqrt(n)`. Now, we go only till `O(sqrt(n))` because when `i` becomes greater than `sqrt(n)`, we have the confirmation that there is no index `i` left which can divide `n` completely other than `n` itself.
 
-- getPrimeFactorsCount: returns accurate total count of distinct prime factors of given input n.
+## Hardy-Ramanujan formula for approximate calculation of prime-factor count
 
-- hardyRamanujanApprox:  returns approximate total count of distinct prime factors of given input n using Hardy-Ramanujan formula.
+In 1917, a theorem was formulated by G.H Hardy and Srinivasa Ramanujan which states that the normal order of the number `ω(n)` of distinct prime factors of a number `n` is `log(log(n))`.
 
-- errorPercent : returns %age of error in approximation using formula to that of accurate result. The formula used is:   **[Modulus(accurate_val - approximate_val) / accurate_val ] * 100**. This shows deviation from accurate result.
- 
+Roughly speaking, this means that most numbers have about this number of distinct prime factors.
 
 ## References
 
-- [Youtube](https://www.youtube.com/watch?v=6PDtgHhpCHo)
-- [Wikipedia](https://en.wikipedia.org/wiki/Hardy%E2%80%93Ramanujan_theorem)
+- [Prime numbers on Math is Fun](https://www.mathsisfun.com/prime-factorization.html)
+- [Prime numbers on Wikipedia](https://en.wikipedia.org/wiki/Prime_number)
+- [Hardy–Ramanujan theorem on Wikipedia](https://en.wikipedia.org/wiki/Hardy%E2%80%93Ramanujan_theorem)
+- [Prime factorization of a number on Youtube](https://www.youtube.com/watch?v=6PDtgHhpCHo&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=82)
