@@ -107,14 +107,15 @@ export default class HashTable {
   }
 
   /**
-   * Gets the list of all the stored values in the hash table in the order of
-   * the keys map.
+   * Gets the list of all the stored values in the hash table.
    *
    * @return {*[]}
    */
   getValues() {
-    const keys = this.getKeys();
-
-    return keys.map(key => this.buckets[this.hash(key)].head.value.value);
+    return this.buckets.reduce((values, bucket) => {
+      const bucketValues = bucket.toArray()
+        .map((linkedListNode) => linkedListNode.value.value);
+      return values.concat(bucketValues);
+    }, []);
   }
 }
