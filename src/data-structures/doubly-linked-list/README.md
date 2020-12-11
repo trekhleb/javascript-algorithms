@@ -5,6 +5,7 @@ _Read this in other languages:_
 [_简体中文_](README.zh-CN.md),
 [_日本語_](README.ja-JP.md),
 [_Português_](README.pt-BR.md)
+[_한국어_](README.ko-KR.md)
 
 In computer science, a **doubly linked list** is a linked data structure that 
 consists of a set of sequentially linked records called nodes. Each node contains 
