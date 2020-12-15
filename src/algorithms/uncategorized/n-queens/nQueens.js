@@ -81,7 +81,6 @@ function nQueensRecursive(solutions, previousQueensPositions, queensCount, rowIn
   return false;
 }
 
-
 /**
  * @param {number} queensCount
  * @return {QueenPosition[][]}

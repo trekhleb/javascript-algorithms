@@ -66,7 +66,7 @@ export default function articulationPoints(graph) {
       // Get minimum low discovery time from all neighbors.
       /** @param {GraphVertex} neighbor */
       visitedSet[currentVertex.getKey()].lowDiscoveryTime = currentVertex.getNeighbors()
-        .filter(earlyNeighbor => earlyNeighbor.getKey() !== previousVertex.getKey())
+        .filter((earlyNeighbor) => earlyNeighbor.getKey() !== previousVertex.getKey())
         /**
          * @param {number} lowestDiscoveryTime
          * @param {GraphVertex} neighbor

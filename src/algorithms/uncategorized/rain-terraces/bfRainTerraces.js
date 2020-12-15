@@ -25,7 +25,7 @@ export default function bfRainTerraces(terraces) {
     if (terraceBoundaryLevel > terraces[terraceIndex]) {
       // Terrace will be able to store the water if the lowest of two left and right highest
       // terraces are still higher than the current one.
-      waterAmount += Math.min(leftHighestLevel, rightHighestLevel) - terraces[terraceIndex];
+      waterAmount += terraceBoundaryLevel - terraces[terraceIndex];
     }
   }
 
