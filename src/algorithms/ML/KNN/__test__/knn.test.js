@@ -1,13 +1,12 @@
 import KNN from '../knn';
 
 describe('KNN', () => {
-  it('should throw an error on invalid data', () => {
-    const nodata = () => {
+  test('should throw an error on invalid data', () => {
+    expect(() => {
       KNN();
-    };
-    expect(nodata).toThrowError();
+    }).toThrowError();
   });
-  it('should throw an error on invalid labels', () => {
+  test('should throw an error on invalid labels', () => {
     const nolabels = () => {
       KNN([[1, 1]]);
     };
@@ -34,5 +33,10 @@ describe('KNN', () => {
     dataY = [1, 2, 1, 2, 1, 2, 1];
     expect(KNN(dataX, dataY, [1.25, 1.25]))
       .toBe(1);
+
+    dataX = [[1, 1], [6, 2], [3, 3], [4, 5], [9, 2], [2, 4], [8, 7]];
+    dataY = [1, 2, 1, 2, 1, 2, 1];
+    expect(KNN(dataX, dataY, [1.25, 1.25], 5))
+      .toBe(2);
   });
 });
