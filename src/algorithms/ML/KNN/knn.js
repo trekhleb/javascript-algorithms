@@ -7,18 +7,6 @@
  */
 export default function KNN(dataX, dataY, toClassify, K) {
   let k = -1;
-  // checking errors
-
-  // if no data given, data object is blank, no class data given, notify and return
-  if (dataX.length < 1) throw new Error('Error: data invalid/empty/number of classes less than 1.');
-  else if (dataX[0].length < 1) throw new Error('Error: data invalid/empty/number of classes less than 1.');
-
-  // if no class lables given or number of x_vectors dont match with number of y vectors, error
-  else if (dataY.length < 1) throw new Error('Error: labels invalid/empty/size of data and labels dont match');
-  else if (!(dataX.length === dataY.length)) throw new Error('Error: labels invalid/empty/size of data and labels dont match');
-
-  // if no vector/data point is given to make prediction, algorithm cannot be proceeded, error
-  else if (!toClassify.length === dataX[0].length) throw new Error('Error: no vector given to classify/classification point invalid.');
 
   if (K === undefined) {
     k = 3;
