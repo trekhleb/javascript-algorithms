@@ -1,6 +1,6 @@
 # Estrutura de Dados e Algoritmos em JavaScript
 
-[![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
+[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
 Este repositório contém exemplos baseados em JavaScript de muitos
@@ -18,9 +18,12 @@ _Leia isto em outros idiomas:_
 [_日本語_](README.ja-JP.md),
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
-[_Español_](README.es-ES.md)
+[_Español_](README.es-ES.md),
+[_Русский_](README.ru-RU.md),
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md)
 
-## Data Structures
+## Estrutura de Dados
 
 Uma estrutura de dados é uma maneira particular de organizar e armazenar dados em um computador para que ele possa
 ser acessado e modificado de forma eficiente. Mais precisamente, uma estrutura de dados é uma coleção de dados
@@ -36,7 +39,7 @@ os dados.
 * `B` [Tabela de Hash (Hash Table)](src/data-structures/hash-table/README.pt-BR.md)
 * `B` [Heap](src/data-structures/heap/README.pt-BR.md)
 * `B` [Fila de Prioridade (Priority Queue)](src/data-structures/priority-queue/README.pt-BR.md)
-* `A` [Trie](src/data-structures/trie/README.pt-BR.md)
+* `A` [Árvore de prefixos (Trie)](src/data-structures/trie/README.pt-BR.md)
 * `A` [Árvore (Tree)](src/data-structures/tree/README.pt-BR.md)
   * `A` [Árvore de Pesquisa Binária (Binary Search Tree)](src/data-structures/tree/binary-search-tree/README.pt-BR.md)
   * `A` [Árvore AVL (AVL Tree)](src/data-structures/tree/avl-tree/README.pt-BR.md)
