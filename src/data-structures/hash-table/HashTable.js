@@ -105,4 +105,17 @@ export default class HashTable {
   getKeys() {
     return Object.keys(this.keys);
   }
+
+  /**
+   * Gets the list of all the stored values in the hash table.
+   *
+   * @return {*[]}
+   */
+  getValues() {
+    return this.buckets.reduce((values, bucket) => {
+      const bucketValues = bucket.toArray()
+        .map((linkedListNode) => linkedListNode.value.value);
+      return values.concat(bucketValues);
+    }, []);
+  }
 }

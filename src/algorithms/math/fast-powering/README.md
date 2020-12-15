@@ -1,6 +1,9 @@
 # Fast Powering Algorithm
 
-**The power of a number** says how many times to use the number in a 
+_Read this in other languages:_
+[français](README.fr-FR.md).
+
+**The power of a number** says how many times to use the number in a
 multiplication.
 
 It is written as a small number to the right and above the base number.
@@ -11,7 +14,7 @@ It is written as a small number to the right and above the base number.
 
 How to find `a` raised to the power `b`?
 
-We multiply `a` to itself, `b` times. That 
+We multiply `a` to itself, `b` times. That
 is, `a^b = a * a * a * ... * a` (`b` occurrences of `a`).
 
 This operation will take `O(n)` time since we need to do multiplication operation
@@ -20,9 +23,9 @@ exactly `n` times.
 ## Fast Power Algorithm
 
 Can we do better than naive algorithm does? Yes we may solve the task of
- powering in `O(log(n))` time.
+powering in `O(log(n))` time.
 
-The algorithm uses divide and conquer approach to compute power. Currently the 
+The algorithm uses divide and conquer approach to compute power. Currently the
 algorithm work for two positive integers `X` and `Y`.
 
 The idea behind the algorithm is based on the fact that:
@@ -30,7 +33,7 @@ The idea behind the algorithm is based on the fact that:
 For **even** `Y`:
 
 ```text
-X^Y = X^(Y/2) * X^(Y/2) 
+X^Y = X^(Y/2) * X^(Y/2)
 ```
 
 For **odd** `Y`:
@@ -50,17 +53,17 @@ where Y//2 is result of division of Y by 2 without reminder.
 2^5 = (2 * 2) * (2 * 2) * 2 = (2^2) * (2^2) * (2)
 ```
 
-Now, since on each step we need to compute the same `X^(Y/2)` power twice we may optimise 
-it by saving it to some intermediate variable to avoid its duplicate calculation. 
+Now, since on each step we need to compute the same `X^(Y/2)` power twice we may optimise
+it by saving it to some intermediate variable to avoid its duplicate calculation.
 
 **Time Complexity**
 
-Since each iteration we split the power by half then we will call function 
+Since each iteration we split the power by half then we will call function
 recursively `log(n)` times. This the time complexity of the algorithm is reduced to:
 
 ```text
 O(log(n))
-``` 
+```
 
 ## References
 

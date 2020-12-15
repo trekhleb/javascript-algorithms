@@ -1,6 +1,6 @@
 # JavaScript 算法与数据结构
 
-[![build status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
+[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
 本仓库包含了多种基于 JavaScript 的算法与数据结构。
@@ -15,7 +15,10 @@ _Read this in other languages:_
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),
+[_Русский_](README.ru-RU.md),
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md)
 
 *注意：这个项目仅用于学习和研究，**不是**用于生产环境。*
 
@@ -225,7 +228,7 @@ npm test -- 'LinkedList'
 
 你可以在 `./src/playground/playground.js` 文件中操作数据结构与算法，并在 `./src/playground/__test__/playground.test.js` 中编写测试。
 
-然后，只需运行以下命令来测试你的 Playground 是否按无误:
+然后，只需运行以下命令来测试你的 Playground 是否无误:
 
 ```
 npm test -- 'playground'
