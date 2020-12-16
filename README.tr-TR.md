@@ -6,8 +6,8 @@
 Bu repository JavaScript'e ait popüler
 algoritma ve veri yapılarını içermektedir.
 
-Her bir algoritma ve veri yapısı kendine 
-ait açıklama ve videoya sahip README dosyası içerir. 
+Her bir algoritma ve veri yapısı kendine
+ait açıklama ve videoya sahip README dosyası içerir.
 
 _Read this in other languages:_
 [_简体中文_](README.zh-CN.md),
@@ -21,7 +21,7 @@ _Read this in other languages:_
 [_Русский_](README.ru-RU.md),
 [_Italiana_](README.it-IT.md)
 
-*☝ Not, bu proje araştırma ve öğrenme amacı ile yapılmış 
+*☝ Not, bu proje araştırma ve öğrenme amacı ile yapılmış
 olup üretim için **yaplılmamıştır**.*
 
 ## Veri Yapıları
@@ -63,7 +63,7 @@ bir işlem dizisini kesin olarak tanımlayan bir dizi kural.
 
 * **Matematik**
   * `B` [Bit Manipülasyonu](src/algorithms/math/bits) - set/get/update/clear bits, multiplication/division by two, make negative etc.
-  * `B` [Faktöriyel](src/algorithms/math/factorial) 
+  * `B` [Faktöriyel](src/algorithms/math/factorial)
   * `B` [Fibonacci Sayısı](src/algorithms/math/fibonacci) - klasik ve kapalı-form versiyonları
   * `B` [Asallık Testi](src/algorithms/math/primality-test) (trial division method)
   * `B` [Öklid Algoritması](src/algorithms/math/euclidean-algorithm) - En büyük ortak bölen hesaplama (EBOB)
@@ -143,8 +143,8 @@ bir işlem dizisini kesin olarak tanımlayan bir dizi kural.
 * **Kategoriye Ayrılmayanlar**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
-  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples 
-  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples 
+  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples
+  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem (dynamic programming and brute force versions)
   * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - tepeye ulaşmanın yollarını sayma (4 çözüm)
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
@@ -152,8 +152,8 @@ bir işlem dizisini kesin olarak tanımlayan bir dizi kural.
 
 ### Algoritmik Paradigma
 
-Algoritmik paradigma, bir sınıfın tasarımının altında yatan genel bir yöntem veya yaklaşımdır. 
-Algoritma dizayn tekniği olarak düşünülebilir. Her bir altproblemi (subproblem) asıl problemle 
+Algoritmik paradigma, bir sınıfın tasarımının altında yatan genel bir yöntem veya yaklaşımdır.
+Algoritma dizayn tekniği olarak düşünülebilir. Her bir altproblemi (subproblem) asıl problemle
 benzerlik gösteren problemlere uygulanabilir.
 
 * **Brute Force** - mümkün olan tüm çözümleri tara ve en iyisini seç
@@ -198,7 +198,7 @@ benzerlik gösteren problemlere uygulanabilir.
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
   * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - tüm grafik köşelerine giden en kısa yolu bulmak
   * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - tüm köşe çiftleri arasındaki en kısa yolları bulun
-  * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching) 
+  * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
 * **Backtracking** - brute forceye benzer, mümkün tüm sonuçları tara, ancak bir sonraki çözümü her ürettiğinizde test edersiniz
 tüm koşulları karşılıyorsa ve ancak o zaman sonraki çözümleri üretmeye devam edin. Aksi takdirde, geri dönün ve farklı bir çözüm arayın(?).
 Normally the DFS traversal of state-space is being used.
@@ -242,7 +242,7 @@ npm test -- 'LinkedList'
 
 **Deneme Alanı**
 
-data-structures ve algorithms içerisinde `./src/playground/playground.js` 
+data-structures ve algorithms içerisinde `./src/playground/playground.js`
 yazarak `./src/playground/__test__/playground.test.js` için test edebilirsin.
 
 
@@ -310,4 +310,4 @@ Altta Big O notations ve farklı input boyutlarına karşın yapılmış perform
 
 ## Projeyi Destekleme
 
-Bu projeyi buradan destekleyebilirsiniz ❤️️ [GitHub](https://github.com/sponsors/trekhleb) veya ❤️️ [Patreon](https://www.patreon.com/trekhleb).          
+Bu projeyi buradan destekleyebilirsiniz ❤️️ [GitHub](https://github.com/sponsors/trekhleb) veya ❤️️ [Patreon](https://www.patreon.com/trekhleb).

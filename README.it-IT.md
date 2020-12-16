@@ -56,7 +56,7 @@ un insieme di regole che definiscono con precisione una sequenza di operazioni.
 
 * **Matematica**
   * `P` [Manipolazione dei Bit](src/algorithms/math/bits) - set/get/update/clear bits, moltiplicazione/divisione per due, gestire numeri negativi etc.
-  * `P` [Fattoriale](src/algorithms/math/factorial) 
+  * `P` [Fattoriale](src/algorithms/math/factorial)
   * `P` [Numeri di Fibonacci](src/algorithms/math/fibonacci) - classico e forma chiusa
   * `P` [Test di Primalità](src/algorithms/math/primality-test) (metodo del divisore)
   * `P` [Algoritmo di Euclide](src/algorithms/math/euclidean-algorithm) - trova il massimo comune divisore (MCD)
@@ -64,13 +64,13 @@ un insieme di regole che definiscono con precisione una sequenza di operazioni.
   * `P` [Crivello di Eratostene](src/algorithms/math/sieve-of-eratosthenes) - trova i numeri i primi fino al limite indicato
   * `P` [Potenza di due](src/algorithms/math/is-power-of-two) - controlla se il numero è una potenza di due
   * `P` [Triangolo di Pascal](src/algorithms/math/pascal-triangle)
-  * `P` [Numeri Complessi](src/algorithms/math/complex-number) - numeri complessi e operazioni 
+  * `P` [Numeri Complessi](src/algorithms/math/complex-number) - numeri complessi e operazioni
   * `P` [Radiante & Gradi](src/algorithms/math/radian) - conversione da radiante a gradi e viceversa
   * `P` [Potenza di un Numero](src/algorithms/math/fast-powering)
   * `A` [Partizione di un Intero](src/algorithms/math/integer-partition)
   * `A` [Radice Quadrata](src/algorithms/math/square-root) - Metodo di Newton
   * `A` [Algoritmo di Liu Hui π](src/algorithms/math/liu-hui) - calcolare π usando un poligono
-  * `A` [Trasformata Discreta di Fourier ](src/algorithms/math/fourier-transform) -decomporre una funzione di tempo (un segnale) nelle frequenze che lo compongono 
+  * `A` [Trasformata Discreta di Fourier ](src/algorithms/math/fourier-transform) -decomporre una funzione di tempo (un segnale) nelle frequenze che lo compongono
 * **Set**
   * `P` [Prodotto Cartesiano](src/algorithms/sets/cartesian-product) - moltiplicazione multipla di set
   * `P` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - permutazione casuale di un sequenza finita
@@ -116,8 +116,8 @@ un insieme di regole che definiscono con precisione una sequenza di operazioni.
   * `P` [Ricerca in Profondità su Grafi](src/algorithms/graph/depth-first-search) (DFS)
   * `P` [Breadth-First Search su Grafi](src/algorithms/graph/breadth-first-search) (BFS)
   * `P` [Algoritmo di Kruskal](src/algorithms/graph/kruskal) - ricerca dell'Albero con Minima Distanza (MST) per grafi pesati unidirezionali
-  * `A` [Algoritmo di Dijkstra](src/algorithms/graph/dijkstra) - ricerca dei percorsi più breve per raggiungere tutti i vertici del grafo da un singolo vertice 
-  * `A` [Algoritmo di Bellman-Ford](src/algorithms/graph/bellman-ford) - ricerca dei percorsi più breve per raggiungere tutti i vertici del grafo da un singolo vertice 
+  * `A` [Algoritmo di Dijkstra](src/algorithms/graph/dijkstra) - ricerca dei percorsi più breve per raggiungere tutti i vertici del grafo da un singolo vertice
+  * `A` [Algoritmo di Bellman-Ford](src/algorithms/graph/bellman-ford) - ricerca dei percorsi più breve per raggiungere tutti i vertici del grafo da un singolo vertice
   * `A` [Algoritmo di Floyd-Warshall](src/algorithms/graph/floyd-warshall) -  ricerca dei percorsi più brevi tra tutte le coppie di vertici
   * `A` [Rivelamento dei Cicli](src/algorithms/graph/detect-cycle) - per grafici diretti e non diretti (basate su partizioni DFS e Disjoint Set)
   * `A` [Algoritmo di Prim](src/algorithms/graph/prim) - ricerca dell'Albero Ricoprente Minimo (MST) per grafi unidirezionali pesati
@@ -129,12 +129,12 @@ un insieme di regole che definiscono con precisione una sequenza di operazioni.
   * `A` [Componenti Fortemente Connessa](src/algorithms/graph/strongly-connected-components) - algoritmo di Kosaraju
   * `A` [Problema del Commesso Viaggiatore](src/algorithms/graph/travelling-salesman) - il percorso più breve che visita ogni città e ritorna alla città iniziale
 * **Crittografia**
-  * `P` [Hash Polinomiale](src/algorithms/cryptography/polynomial-hash) - Una funzione hash di rolling basata sul polinomio 
+  * `P` [Hash Polinomiale](src/algorithms/cryptography/polynomial-hash) - Una funzione hash di rolling basata sul polinomio
 * **Senza categoria**
   * `P` [Torre di Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `P` [Rotazione Matrice Quadrata](src/algorithms/uncategorized/square-matrix-rotation) - algoritmo in memoria
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, programmazione dinamica (top-down + bottom-up) ed esempre di greeedy
-  * `P` [Percorsi Unici](src/algorithms/uncategorized/unique-paths) - backtracking, programmazione dinamica and l'esempio del Triangolo di Pascal  
+  * `P` [Percorsi Unici](src/algorithms/uncategorized/unique-paths) - backtracking, programmazione dinamica and l'esempio del Triangolo di Pascal
   * `P` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - problema dell'acqua piovana in trappola(versione con programmazione dinamica e brute force)
   * `P` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - contare il numero di percorsi per arrivare in vetta(4 soluzioni)
   * `A` [Rompicapo delle Otto Regine](src/algorithms/uncategorized/n-queens)
@@ -151,14 +151,14 @@ un insieme di regole che definiscono con precisione una sequenza di operazioni.
   * `P` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - contare il numero di percorsi per arrivare in vetta
   * `A` [Massimo SubArray](src/algorithms/sets/maximum-subarray)
   * `A` [Problema del commesso viaggiatore](src/algorithms/graph/travelling-salesman) - il percorso più breve che visita ogni città e ritorna alla città iniziale
-  * `A` [Trasformata Discreta di Fourier](src/algorithms/math/fourier-transform) - scomporre la funzione (segnale) del tempo in frequenze che la compongono 
+  * `A` [Trasformata Discreta di Fourier](src/algorithms/math/fourier-transform) - scomporre la funzione (segnale) del tempo in frequenze che la compongono
 * **Greedy** - scegliere l'opzione migliore al momento d'eleborazione dell'algoritmo, senza alcuna considerazione per il futuro
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `A` [Problema dello Zaino di Knapsack](src/algorithms/sets/knapsack-problem)
   * `A` [Algoritmo di Dijkstra](src/algorithms/graph/dijkstra) - ricerca del percorso più breve tra tutti i vertici del grafo
-  * `A` [Algoritmo di Prim](src/algorithms/graph/prim) - ricerca del Minimo Albero Ricoprente per grafi pesati e unidirezionali 
+  * `A` [Algoritmo di Prim](src/algorithms/graph/prim) - ricerca del Minimo Albero Ricoprente per grafi pesati e unidirezionali
   * `A` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-* **Divide e Conquista** - divide il problema in piccole parti e risolve ogni parte 
+* **Divide e Conquista** - divide il problema in piccole parti e risolve ogni parte
   * `P` [Ricerca Binaria](src/algorithms/search/binary-search)
   * `P` [Torre di Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `P` [Triangolo di Pascal](src/algorithms/math/pascal-triangle)
@@ -186,7 +186,7 @@ un insieme di regole che definiscono con precisione una sequenza di operazioni.
   * `A` [Partizione di un Intero](src/algorithms/math/integer-partition)
   * `A` [Massimo SubArray](src/algorithms/sets/maximum-subarray)
   * `A` [Algoritmo di Bellman-Ford](src/algorithms/graph/bellman-ford) - ricerca del percorso più breve per tutti i vertici del grafo
-  * `A` [Algoritmo di Floyd-Warshall](src/algorithms/graph/floyd-warshall) - ricerca del percorso più breve tra tutte le coppie di vertici 
+  * `A` [Algoritmo di Floyd-Warshall](src/algorithms/graph/floyd-warshall) - ricerca del percorso più breve tra tutte le coppie di vertici
   * `A` [Espressioni Regolari](src/algorithms/string/regular-expression-matching)
 * **Backtracking** -  come la brute force, provate a generare tutte le soluzioni possibili, ma ogni volta che generate la prossima soluzione testate se soddisfa tutte le condizioni e solo allora continuare a generare soluzioni successive. Altrimenti, fate marcia indietro, e andate su un percorso diverso per trovare una soluzione. Normalmente si utilizza l'algoritmo DFS.
   * `P` [Jump Game](src/algorithms/uncategorized/jump-game)
@@ -228,10 +228,10 @@ npm test -- 'LinkedList'
 
 **Playground**
 
-Se vuoi puoi giocare le strutture dati e gli algoritmi nel file ./src/playground/playground.js` e 
+Se vuoi puoi giocare le strutture dati e gli algoritmi nel file ./src/playground/playground.js` e
 scrivere test nel file `./src/playground/__test__/playground.test.js`.
 
-Poi puoi semplicemente eseguire il seguente comando per testare quello che hai scritto : 
+Poi puoi semplicemente eseguire il seguente comando per testare quello che hai scritto :
 
 ```
 npm test -- 'playground'
@@ -243,9 +243,9 @@ npm test -- 'playground'
 
 [▶ Data Structures and Algorithms on YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 
-### Notazione Big O 
+### Notazione Big O
 
-* La notazione Big O* è usata per classificare algoritmi in base al tempo di esecuzione o ai 
+* La notazione Big O* è usata per classificare algoritmi in base al tempo di esecuzione o ai
 requisiti di spazio che crescono in base alla crescita dell'input .
 Nella grafico qua sotto puoi trovare gli ordini di crescita più comuni degli algoritmi usando la notazione Big O.
 
