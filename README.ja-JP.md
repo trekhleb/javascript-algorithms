@@ -60,7 +60,7 @@ _Read this in other languages:_
 
 * **数学**
   * `B` [ビット操作](src/algorithms/math/bits) - set/get/update/clear bits, 2つの乗算/除算, 否定的にする. 等
-  * `B` [因果関係](src/algorithms/math/factorial) 
+  * `B` [因果関係](src/algorithms/math/factorial)
   * `B` [フィボナッチ数](src/algorithms/math/fibonacci) - クラシックとクローズドフォームのバージョン
   * `B` [素数性テスト](src/algorithms/math/primality-test) (trial division 方法)
   * `B` [ユークリッドアルゴリズム](src/algorithms/math/euclidean-algorithm) - 最大公約数を計算する (GCD)
@@ -118,7 +118,7 @@ _Read this in other languages:_
 * **グラフ**
   * `B` [深度優先検索](src/algorithms/graph/depth-first-search) (DFS)
   * `B` [幅優先検索](src/algorithms/graph/breadth-first-search) (BFS)
-  * `B` [Kruskalのアルゴリズム](src/algorithms/graph/kruskal) - 重み付き無向グラフの最小スパニングツリー（MST）の発見 
+  * `B` [Kruskalのアルゴリズム](src/algorithms/graph/kruskal) - 重み付き無向グラフの最小スパニングツリー（MST）の発見
   * `A` [Dijkstraアルゴリズム](src/algorithms/graph/dijkstra) - 単一の頂点からすべてのグラフ頂点への最短経路を見つける
   * `A` [Bellman-Fordアルゴリズム](src/algorithms/graph/bellman-ford) - 単一の頂点からすべてのグラフ頂点への最短経路を見つける
   * `A` [Floyd-Warshallアルゴリズム](src/algorithms/graph/floyd-warshall) - すべての頂点ペア間の最短経路を見つける

@@ -6,7 +6,7 @@
 Este repositorio contiene ejemplos basados en JavaScript de muchos
 algoritmos y estructuras de datos populares.
 
-Cada algoritmo y estructura de datos tiene su propio LÉAME con explicaciones relacionadas y 
+Cada algoritmo y estructura de datos tiene su propio LÉAME con explicaciones relacionadas y
 enlaces para lecturas adicionales (incluyendo algunas a vídeos de YouTube).
 
 _Léelo en otros idiomas:_
@@ -54,7 +54,7 @@ los datos.
 
 ## Algoritmos
 
-Un algoritmo es una especificación inequívoca de cómo resolver una clase de problemas. Es un conjunto de reglas que 
+Un algoritmo es una especificación inequívoca de cómo resolver una clase de problemas. Es un conjunto de reglas que
 definen con precisión una secuencia de operaciones.
 
 `P` - Principiante, `A` - Avanzado
@@ -231,7 +231,7 @@ npm test -- 'LinkedList'
 
 **Campo de juegos**
 
-Puede jugar con estructuras de datos y algoritmos en el archivo `./src/playground/playground.js` y escribir 
+Puede jugar con estructuras de datos y algoritmos en el archivo `./src/playground/playground.js` y escribir
 pruebas para ello en `./src/playground/__test__/playground.test.js`.
 
 A continuación, simplemente ejecute el siguiente comando para comprobar si el código funciona como se espera:
@@ -254,7 +254,7 @@ Orden de crecimiento de los algoritmos especificados en la notación O grande.
 
 Fuente: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
-A continuación se muestra la lista de algunas de las notaciones de Big O más utilizadas y sus comparaciones de rendimiento 
+A continuación se muestra la lista de algunas de las notaciones de Big O más utilizadas y sus comparaciones de rendimiento
 frente a diferentes tamaños de los datos de entrada.
 
 | Notación O grande | Cálculos para 10 elementos | Cálculos para 100 elementos | Cálculos para 1000 elementos |
