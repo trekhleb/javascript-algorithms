@@ -143,7 +143,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Caesar Cipher](src/algorithms/cryptography/caesar-cipher) - simple substitution cipher
 * **Machine Learning**
   * `B` [NanoNeuron](https://github.com/trekhleb/nano-neuron) - 7 simple JS functions that illustrate how machines can actually learn (forward/backward propagation)
-  * `B` [KNN](src/algorithms/ML/KNN) - K Nearest Neighbors
+  * `B` [k-NN](src/algorithms/ml/knn) - k-nearest neighbors classification algorithm
 * **Uncategorized**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
