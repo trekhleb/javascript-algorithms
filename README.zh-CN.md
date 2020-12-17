@@ -7,6 +7,8 @@
 
 每种算法和数据结构都有自己的 README，包含相关说明和链接，以便进一步阅读 (还有 YouTube 视频) 。
 
+> [中文版支持下载](https://www.geekxh.com/0.0.%E5%AD%A6%E4%B9%A0%E9%A1%BB%E7%9F%A5/03.html)
+
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
 [_繁體中文_](README.zh-TW.md),
