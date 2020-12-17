@@ -141,7 +141,7 @@ a set of rules that precisely define a sequence of operations.
 * **Cryptography**
   * `B` [Polynomial Hash](src/algorithms/cryptography/polynomial-hash) - rolling hash function based on polynomial
   * `B` [Caesar Cipher](src/algorithms/cryptography/caesar-cipher) - simple substitution cipher
-  * `B` [Hill Cipher](src/algorithms/cryptography/hill-cipher) - polygraphic substitution cipher
+  * `B` [Hill Cipher](src/algorithms/cryptography/hill-cipher) - substitution cipher based on linear algebra
 * **Machine Learning**
   * `B` [NanoNeuron](https://github.com/trekhleb/nano-neuron) - 7 simple JS functions that illustrate how machines can actually learn (forward/backward propagation)
   * `B` [k-NN](src/algorithms/ml/knn) - k-nearest neighbors classification algorithm
