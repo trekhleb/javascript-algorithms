@@ -10,12 +10,18 @@ import Comparator from '../../../utils/comparator/Comparator';
  */
 
 export default function binarySearch(sortedArray, seekElement, comparatorCallback) {
+  // Let's create comparator from the comparatorCallback function.
+  // Comparator object will give us common comparison methods like equal() and lessThen().
   const comparator = new Comparator(comparatorCallback);
 
+  // These two indices will contain current array (sub-array) boundaries.
   let startIndex = 0;
   let endIndex = sortedArray.length - 1;
 
+  // Let's continue to split array until boundaries are collapsed
+  // and there is nothing to split anymore.
   while (startIndex <= endIndex) {
+    // Let's calculate the index of the middle element.
     const middleIndex = startIndex + Math.floor((endIndex - startIndex) / 2);
 
     // If we've found the element just return its position.
@@ -33,5 +39,6 @@ export default function binarySearch(sortedArray, seekElement, comparatorCallbac
     }
   }
 
+  // Return -1 if we have not found anything.
   return -1;
 }

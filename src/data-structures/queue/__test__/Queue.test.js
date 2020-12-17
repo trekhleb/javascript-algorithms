@@ -22,7 +22,7 @@ describe('Queue', () => {
     queue.enqueue({ value: 'test1', key: 'key1' });
     queue.enqueue({ value: 'test2', key: 'key2' });
 
-    const stringifier = value => `${value.key}:${value.value}`;
+    const stringifier = (value) => `${value.key}:${value.value}`;
 
     expect(queue.toString(stringifier)).toBe('key1:test1,key2:test2');
     expect(queue.dequeue().value).toBe('test1');

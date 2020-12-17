@@ -1,5 +1,8 @@
 # AVL Tree
 
+_Read this in other languages:_
+[_Português_](README.pt-BR.md)
+
 In computer science, an **AVL tree** (named after inventors 
 Adelson-Velsky and Landis) is a self-balancing binary search 
 tree. It was the first such data structure to be invented. 
@@ -25,24 +28,24 @@ AVL tree with balance factors (green)
 
 **Left-Left Rotation**
 
-![Left-Left Rotation](http://btechsmartclass.com/DS/images/LL%20Rotation.png)
+![Left-Left Rotation](http://btechsmartclass.com/data_structures/ds_images/LL%20Rotation.png)
 
 **Right-Right Rotation**
 
-![Right-Right Rotation](http://btechsmartclass.com/DS/images/RR%20Rotation.png)
+![Right-Right Rotation](http://btechsmartclass.com/data_structures/ds_images/RR%20Rotation.png)
 
 **Left-Right Rotation**
 
-![Left-Right Rotation](http://btechsmartclass.com/DS/images/LR%20Rotation.png)
+![Left-Right Rotation](http://btechsmartclass.com/data_structures/ds_images/LR%20Rotation.png)
 
 **Right-Left Rotation**
 
-![Right-Right Rotation](http://btechsmartclass.com/DS/images/RL%20Rotation.png)
+![Right-Right Rotation](http://btechsmartclass.com/data_structures/ds_images/RL%20Rotation.png)
 
 ## References
 
 * [Wikipedia](https://en.wikipedia.org/wiki/AVL_tree)
 * [Tutorials Point](https://www.tutorialspoint.com/data_structures_algorithms/avl_tree_algorithm.htm)
-* [BTech](http://btechsmartclass.com/DS/U5_T2.html)
+* [BTech](http://btechsmartclass.com/data_structures/avl-trees.html)
 * [AVL Tree Insertion on YouTube](https://www.youtube.com/watch?v=rbg7Qf8GkQ4&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=12&)
 * [AVL Tree Interactive Visualisations](https://www.cs.usfca.edu/~galles/visualization/AVLtree.html)

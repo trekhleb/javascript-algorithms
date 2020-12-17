@@ -6,57 +6,40 @@
  * @return {Number[]}
  */
 export default function dpMaximumSubarray(inputArray) {
-  // Check if all elements of inputArray are negative ones and return the highest
-  // one in this case.
-  let allNegative = true;
-  let highestElementValue = null;
-  for (let i = 0; i < inputArray.length; i += 1) {
-    if (inputArray[i] >= 0) {
-      allNegative = false;
-    }
+  // We iterate through the inputArray once, using a greedy approach to keep track of the maximum
+  // sum we've seen so far and the current sum.
+  //
+  // The currentSum variable gets reset to 0 every time it drops below 0.
+  //
+  // The maxSum variable is set to -Infinity so that if all numbers are negative, the highest
+  // negative number will constitute the maximum subarray.
 
-    if (highestElementValue === null || highestElementValue < inputArray[i]) {
-      highestElementValue = inputArray[i];
-    }
-  }
-
-  if (allNegative && highestElementValue !== null) {
-    return [highestElementValue];
-  }
-
-  // Let's assume that there is at list one positive integer exists in array.
-  // And thus the maximum sum will for sure be grater then 0. Thus we're able
-  // to always reset max sum to zero.
-  let maxSum = 0;
-
-  // This array will keep a combination that gave the highest sum.
-  let maxSubArray = [];
-
-  // Current sum and subarray that will memoize all previous computations.
+  let maxSum = -Infinity;
   let currentSum = 0;
-  let currentSubArray = [];
 
-  for (let i = 0; i < inputArray.length; i += 1) {
-    // Let's add current element value to the current sum.
-    currentSum += inputArray[i];
+  // We need to keep track of the starting and ending indices that contributed to our maxSum
+  // so that we can return the actual subarray. From the beginning let's assume that whole array
+  // is contributing to maxSum.
+  let maxStartIndex = 0;
+  let maxEndIndex = inputArray.length - 1;
+  let currentStartIndex = 0;
 
-    if (currentSum < 0) {
-      // If the sum went below zero then reset it and don't add current element to max subarray.
-      currentSum = 0;
-      // Reset current subarray.
-      currentSubArray = [];
-    } else {
-      // If current sum stays positive then add current element to current sub array.
-      currentSubArray.push(inputArray[i]);
+  inputArray.forEach((currentNumber, currentIndex) => {
+    currentSum += currentNumber;
 
-      if (currentSum > maxSum) {
-        // If current sum became greater then max registered sum then update
-        // max sum and max subarray.
-        maxSum = currentSum;
-        maxSubArray = currentSubArray.slice();
-      }
+    // Update maxSum and the corresponding indices if we have found a new max.
+    if (maxSum < currentSum) {
+      maxSum = currentSum;
+      maxStartIndex = currentStartIndex;
+      maxEndIndex = currentIndex;
     }
-  }
 
-  return maxSubArray;
+    // Reset currentSum and currentStartIndex if currentSum drops below 0.
+    if (currentSum < 0) {
+      currentSum = 0;
+      currentStartIndex = currentIndex + 1;
+    }
+  });
+
+  return inputArray.slice(maxStartIndex, maxEndIndex + 1);
 }

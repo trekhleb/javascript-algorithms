@@ -16,6 +16,7 @@ describe('LinkedList', () => {
     linkedList.append(2);
 
     expect(linkedList.toString()).toBe('1,2');
+    expect(linkedList.tail.next).toBeNull();
   });
 
   it('should prepend node to linked list', () => {
@@ -145,7 +146,7 @@ describe('LinkedList', () => {
       .append(nodeValue1)
       .prepend(nodeValue2);
 
-    const nodeStringifier = value => `${value.key}:${value.value}`;
+    const nodeStringifier = (value) => `${value.key}:${value.value}`;
 
     expect(linkedList.toString(nodeStringifier)).toBe('key2:2,key1:1');
   });
@@ -176,12 +177,12 @@ describe('LinkedList', () => {
       .append({ value: 2, key: 'test2' })
       .append({ value: 3, key: 'test3' });
 
-    const node = linkedList.find({ callback: value => value.key === 'test2' });
+    const node = linkedList.find({ callback: (value) => value.key === 'test2' });
 
     expect(node).toBeDefined();
     expect(node.value.value).toBe(2);
     expect(node.value.key).toBe('test2');
-    expect(linkedList.find({ callback: value => value.key === 'test5' })).toBeNull();
+    expect(linkedList.find({ callback: (value) => value.key === 'test5' })).toBeNull();
   });
 
   it('should create linked list from array', () => {
@@ -238,5 +239,31 @@ describe('LinkedList', () => {
     linkedList.append(3);
 
     expect(linkedList.toArray().join(',')).toBe('1,2,3');
+  });
+  
+  it('should reverse linked list', () => {
+    const linkedList = new LinkedList();
+
+    // Add test values to linked list.
+    linkedList
+      .append(1)
+      .append(2)
+      .append(3);
+
+    expect(linkedList.toString()).toBe('1,2,3');
+    expect(linkedList.head.value).toBe(1);
+    expect(linkedList.tail.value).toBe(3);
+
+    // Reverse linked list.
+    linkedList.reverse();
+    expect(linkedList.toString()).toBe('3,2,1');
+    expect(linkedList.head.value).toBe(3);
+    expect(linkedList.tail.value).toBe(1);
+
+    // Reverse linked list back to initial state.
+    linkedList.reverse();
+    expect(linkedList.toString()).toBe('1,2,3');
+    expect(linkedList.head.value).toBe(1);
+    expect(linkedList.tail.value).toBe(3);
   });
 });

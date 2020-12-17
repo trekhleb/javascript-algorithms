@@ -218,7 +218,7 @@ export default class DoublyLinkedList {
    * @return {DoublyLinkedList}
    */
   fromArray(values) {
-    values.forEach(value => this.append(value));
+    values.forEach((value) => this.append(value));
 
     return this;
   }
@@ -228,6 +228,36 @@ export default class DoublyLinkedList {
    * @return {string}
    */
   toString(callback) {
-    return this.toArray().map(node => node.toString(callback)).toString();
+    return this.toArray().map((node) => node.toString(callback)).toString();
+  }
+
+  /**
+   * Reverse a linked list.
+   * @returns {DoublyLinkedList}
+   */
+  reverse() {
+    let currNode = this.head;
+    let prevNode = null;
+    let nextNode = null;
+
+    while (currNode) {
+      // Store next node.
+      nextNode = currNode.next;
+      prevNode = currNode.previous;
+
+      // Change next node of the current node so it would link to previous node.
+      currNode.next = prevNode;
+      currNode.previous = nextNode;
+
+      // Move prevNode and currNode nodes one step forward.
+      prevNode = currNode;
+      currNode = nextNode;
+    }
+
+    // Reset head and tail.
+    this.tail = this.head;
+    this.head = prevNode;
+
+    return this;
   }
 }

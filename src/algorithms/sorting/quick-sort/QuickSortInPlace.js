@@ -6,69 +6,71 @@ export default class QuickSortInPlace extends Sort {
    * This process is difficult to describe, but much clearer with a visualization:
    * @see: http://www.algomation.com/algorithm/quick-sort-visualization
    *
-   * @param {*[]} originalArray
+   * @param {*[]} originalArray - Not sorted array.
    * @param {number} inputLowIndex
    * @param {number} inputHighIndex
-   * @return {*[]}
+   * @param {boolean} recursiveCall
+   * @return {*[]} - Sorted array.
    */
-  sort(originalArray, inputLowIndex, inputHighIndex) {
-    // Destructures array on initial passthrough, and then sorts in place.
-    const array = inputLowIndex === undefined ? [...originalArray] : originalArray;
+  sort(
+    originalArray,
+    inputLowIndex = 0,
+    inputHighIndex = originalArray.length - 1,
+    recursiveCall = false,
+  ) {
+    // Copies array on initial call, and then sorts in place.
+    const array = recursiveCall ? originalArray : [...originalArray];
 
     /**
-     * Partition array segment and return index of last swap
+     * The partitionArray() operates on the subarray between lowIndex and highIndex, inclusive.
+     * It arbitrarily chooses the last element in the subarray as the pivot.
+     * Then, it partially sorts the subarray into elements than are less than the pivot,
+     * and elements that are greater than or equal to the pivot.
+     * Each time partitionArray() is executed, the pivot element is in its final sorted position.
      *
      * @param {number} lowIndex
      * @param {number} highIndex
      * @return {number}
      */
-    const partition = (lowIndex, highIndex) => {
+    const partitionArray = (lowIndex, highIndex) => {
       /**
+       * Swaps two elements in array.
        * @param {number} leftIndex
        * @param {number} rightIndex
        */
       const swap = (leftIndex, rightIndex) => {
-        const tempVariable = array[leftIndex];
+        const temp = array[leftIndex];
         array[leftIndex] = array[rightIndex];
-        array[rightIndex] = tempVariable;
+        array[rightIndex] = temp;
       };
 
       const pivot = array[highIndex];
-      this.callbacks.visitingCallback(array[pivot]);
+      // visitingCallback is used for time-complexity analysis.
+      this.callbacks.visitingCallback(pivot);
 
-      let firstRunner = lowIndex - 1;
-      for (let secondRunner = lowIndex; secondRunner < highIndex; secondRunner += 1) {
-        if (this.comparator.lessThan(array[secondRunner], pivot)) {
-          firstRunner += 1;
-          swap(firstRunner, secondRunner);
+      let partitionIndex = lowIndex;
+      for (let currentIndex = lowIndex; currentIndex < highIndex; currentIndex += 1) {
+        if (this.comparator.lessThan(array[currentIndex], pivot)) {
+          swap(partitionIndex, currentIndex);
+          partitionIndex += 1;
         }
       }
 
-      if (this.comparator.lessThan(pivot, array[firstRunner + 1])) {
-        swap(firstRunner + 1, highIndex);
-      }
+      // The element at the partitionIndex is guaranteed to be greater than or equal to pivot.
+      // All elements to the left of partitionIndex are guaranteed to be less than pivot.
+      // Swapping the pivot with the partitionIndex therefore places the pivot in its
+      // final sorted position.
+      swap(partitionIndex, highIndex);
 
-      return firstRunner + 1;
+      return partitionIndex;
     };
 
-    /*
-     * While we can use a default parameter to set `low` to 0, we would
-     * still have to set `high`'s default within the function as we
-     * don't have access to `array.length - 1` when declaring parameters
-     */
-    const lowIndex = inputLowIndex === undefined ? 0 : inputLowIndex;
-    const highIndex = inputHighIndex === undefined ? array.length - 1 : inputHighIndex;
-
-    // Base case is when low and high converge
-    if (lowIndex < highIndex) {
-      const partitionIndex = partition(lowIndex, highIndex);
-      /*
-       * `partition()` swaps elements of the array based on their comparison to the `hi` parameter,
-       * and then returns the index where swapping is no longer necessary, which can be best thought
-       * of as the pivot used to split an array in a non-in-place quicksort
-       */
-      this.sort(array, lowIndex, partitionIndex - 1);
-      this.sort(array, partitionIndex + 1, highIndex);
+    // Base case is when low and high converge.
+    if (inputLowIndex < inputHighIndex) {
+      const partitionIndex = partitionArray(inputLowIndex, inputHighIndex);
+      const RECURSIVE_CALL = true;
+      this.sort(array, inputLowIndex, partitionIndex - 1, RECURSIVE_CALL);
+      this.sort(array, partitionIndex + 1, inputHighIndex, RECURSIVE_CALL);
     }
 
     return array;
