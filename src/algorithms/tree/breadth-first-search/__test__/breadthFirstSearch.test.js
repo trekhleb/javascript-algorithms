@@ -2,7 +2,7 @@ import BinaryTreeNode from '../../../../data-structures/tree/BinaryTreeNode';
 import breadthFirstSearch from '../breadthFirstSearch';
 
 describe('breadthFirstSearch', () => {
-  it('should perform DFS operation on tree', () => {
+  it('should perform BFS operation on tree', () => {
     const nodeA = new BinaryTreeNode('A');
     const nodeB = new BinaryTreeNode('B');
     const nodeC = new BinaryTreeNode('C');
