@@ -4,7 +4,7 @@
 
 Например, для следующего связного списка:
 
-![](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+![Singly linked list](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
 Порядок обхода будет такой:
 

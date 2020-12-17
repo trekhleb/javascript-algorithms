@@ -7,7 +7,7 @@ The task is to traverse the given linked list in straight order.
 
 For example for the following linked list:
 
-![](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+![Singly linked list](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
 The order of traversal should be:
 

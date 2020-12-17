@@ -227,20 +227,18 @@ describe('LinkedList', () => {
     let node = linkedList.find({ value: 3 });
     expect(node.value).toBe(4);
 
-    node = linkedList.find({ callback: value => value < 3 });
+    node = linkedList.find({ callback: (value) => value < 3 });
     expect(node.value).toBe(1);
   });
 
   it('should convert to array', () => {
     const linkedList = new LinkedList();
-
     linkedList.append(1);
     linkedList.append(2);
     linkedList.append(3);
-
     expect(linkedList.toArray().join(',')).toBe('1,2,3');
   });
-  
+
   it('should reverse linked list', () => {
     const linkedList = new LinkedList();
 
