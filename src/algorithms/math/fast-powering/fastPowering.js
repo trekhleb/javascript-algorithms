@@ -13,6 +13,13 @@ export default function fastPowering(base, power) {
     // Anything that is raised to the power of zero is 1.
     return 1;
   }
+  
+  if (power < 0 ) {
+    const powerNext = power * -1;
+    const baseNext = 1 / base;
+   // console.log("sssss")
+     return  fastPowering(baseNext, powerNext);
+  }
 
   if (power % 2 === 0) {
     // If the power is even...
