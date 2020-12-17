@@ -1,6 +1,6 @@
 # JavaScript Algorithms and Data Structures
 
-[![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
+[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
 This repository contains JavaScript based examples of many
@@ -18,10 +18,13 @@ _Read this in other languages:_
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),
+[_Русский_](README.ru-RU.md),
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md)
 
-*☝ Note that this project is meant to be used for learning and researching purposes 
-only and it is **not** meant to be used for production.*
+*☝ Note that this project is meant to be used for learning and researching purposes
+only, and it is **not** meant to be used for production.*
 
 ## Data Structures
 
@@ -61,8 +64,9 @@ a set of rules that precisely define a sequence of operations.
 
 * **Math**
   * `B` [Bit Manipulation](src/algorithms/math/bits) - set/get/update/clear bits, multiplication/division by two, make negative etc.
-  * `B` [Factorial](src/algorithms/math/factorial) 
+  * `B` [Factorial](src/algorithms/math/factorial)
   * `B` [Fibonacci Number](src/algorithms/math/fibonacci) - classic and closed-form versions
+  * `B` [Prime Factors](src/algorithms/math/prime-factors) - finding prime factors and counting them using Hardy-Ramanujan's theorem
   * `B` [Primality Test](src/algorithms/math/primality-test) (trial division method)
   * `B` [Euclidean Algorithm](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
   * `B` [Least Common Multiple](src/algorithms/math/least-common-multiple) (LCM)
@@ -72,10 +76,11 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Complex Number](src/algorithms/math/complex-number) - complex numbers and basic operations with them
   * `B` [Radian & Degree](src/algorithms/math/radian) - radians to degree and backwards conversion
   * `B` [Fast Powering](src/algorithms/math/fast-powering)
+  * `B` [Horner's method](src/algorithms/math/horner-method) - polynomial evaluation
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Square Root](src/algorithms/math/square-root) - Newton's method
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
-  * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up 
+  * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up
 * **Sets**
   * `B` [Cartesian Product](src/algorithms/sets/cartesian-product) - product of multiple sets
   * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
@@ -135,11 +140,16 @@ a set of rules that precisely define a sequence of operations.
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
 * **Cryptography**
   * `B` [Polynomial Hash](src/algorithms/cryptography/polynomial-hash) - rolling hash function based on polynomial
+  * `B` [Caesar Cipher](src/algorithms/cryptography/caesar-cipher) - simple substitution cipher
+  * `B` [Hill Cipher](src/algorithms/cryptography/hill-cipher) - substitution cipher based on linear algebra
+* **Machine Learning**
+  * `B` [NanoNeuron](https://github.com/trekhleb/nano-neuron) - 7 simple JS functions that illustrate how machines can actually learn (forward/backward propagation)
+  * `B` [k-NN](src/algorithms/ml/knn) - k-nearest neighbors classification algorithm
 * **Uncategorized**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
-  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples 
-  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples 
+  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples
+  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem (dynamic programming and brute force versions)
   * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top (4 solutions)
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
@@ -301,3 +311,9 @@ Below is the list of some of the most used Big O notations and their performance
 | **Shell sort**        | n&nbsp;log(n)   | depends on gap sequence   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
 | **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - biggest number in array |
 | **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Yes       | k - length of longest key |
+
+## Project Backers
+
+> You may support this project via ❤️️ [GitHub](https://github.com/sponsors/trekhleb) or ❤️️ [Patreon](https://www.patreon.com/trekhleb).
+
+[Folks who are backing this project](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 1`

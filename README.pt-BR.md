@@ -1,10 +1,10 @@
 # Estrutura de Dados e Algoritmos em JavaScript
 
-[![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
+[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
 Este repositório contém exemplos baseados em JavaScript de muitos
-algoritmos e estruturas de dados populares. 
+algoritmos e estruturas de dados populares.
 
 Cada algoritmo e estrutura de dado possui seu próprio README
 com explicações relacionadas e links para leitura adicional (incluindo
@@ -18,9 +18,12 @@ _Leia isto em outros idiomas:_
 [_日本語_](README.ja-JP.md),
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
-[_Español_](README.es-ES.md)
+[_Español_](README.es-ES.md),
+[_Русский_](README.ru-RU.md),
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md)
 
-## Data Structures
+## Estrutura de Dados
 
 Uma estrutura de dados é uma maneira particular de organizar e armazenar dados em um computador para que ele possa
 ser acessado e modificado de forma eficiente. Mais precisamente, uma estrutura de dados é uma coleção de dados
@@ -36,7 +39,7 @@ os dados.
 * `B` [Tabela de Hash (Hash Table)](src/data-structures/hash-table/README.pt-BR.md)
 * `B` [Heap](src/data-structures/heap/README.pt-BR.md)
 * `B` [Fila de Prioridade (Priority Queue)](src/data-structures/priority-queue/README.pt-BR.md)
-* `A` [Trie](src/data-structures/trie/README.pt-BR.md)
+* `A` [Árvore de prefixos (Trie)](src/data-structures/trie/README.pt-BR.md)
 * `A` [Árvore (Tree)](src/data-structures/tree/README.pt-BR.md)
   * `A` [Árvore de Pesquisa Binária (Binary Search Tree)](src/data-structures/tree/binary-search-tree/README.pt-BR.md)
   * `A` [Árvore AVL (AVL Tree)](src/data-structures/tree/avl-tree/README.pt-BR.md)
@@ -58,7 +61,7 @@ um conjunto de regras que define precisamente uma sequência de operações.
 
 * **Matemática**
   * `B` [Manipulação Bit](src/algorithms/math/bits) - set/get/update/clear bits, multiplicação / divisão por dois, tornar negativo etc.
-  * `B` [Fatorial](src/algorithms/math/factorial) 
+  * `B` [Fatorial](src/algorithms/math/factorial)
   * `B` [Número de Fibonacci](src/algorithms/math/fibonacci)
   * `B` [Teste de Primalidade](src/algorithms/math/primality-test) (método de divisão experimental)
   * `B` [Algoritmo Euclidiano](src/algorithms/math/euclidean-algorithm) - calcular o maior divisor comum (GCD)
@@ -116,7 +119,7 @@ um conjunto de regras que define precisamente uma sequência de operações.
   * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - encontrar caminhos mais curtos entre todos os pares de vértices
   * `A` [Detect Cycle](src/algorithms/graph/detect-cycle) - para gráficos direcionados e não direcionados (versões baseadas em DFS e Conjunto Disjuntivo)
   * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - encontrando Árvore Mínima de Abrangência (MST) para grafo não direcionado ponderado
-  * `A` [Topological Sorting](src/algorithms/graph/topological-sorting) - Métodos DFS 
+  * `A` [Topological Sorting](src/algorithms/graph/topological-sorting) - Métodos DFS
   * `A` [Articulation Points](src/algorithms/graph/articulation-points) -O algoritmo de Tarjan (baseado em DFS)
   * `A` [Bridges](src/algorithms/graph/bridges) - Algoritmo baseado em DFS
   * `A` [Eulerian Path and Eulerian Circuit](src/algorithms/graph/eulerian-path) - Algoritmo de Fleury - Visite todas as bordas exatamente uma vez

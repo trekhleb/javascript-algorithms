@@ -39,7 +39,7 @@ A implementação atual da Árvore de Segmentos implica que você pode passar
 qualquer função binária (com dois parâmetros de entradas) e então, você
 será capaz de realizar consultas de intervalos para uma variedade de funções.
 Nos testes você poderá encontrar exemplos realizando `min`, `max` e consultas de
-intervalo `sam` na árvore segmentada (SegmentTree).
+intervalo `sum` na árvore segmentada (SegmentTree).
  
 ## Referências
 
