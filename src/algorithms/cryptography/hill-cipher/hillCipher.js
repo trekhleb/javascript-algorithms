@@ -1,18 +1,28 @@
+// The code of an 'A' character (equals to 65).
+const alphabetCodeShift = 'A'.codePointAt(0);
+const englishAlphabetSize = 26;
 
 /**
- * generate key matrix from given keyString
+ * Generates key matrix from given keyString.
  *
- * @param {integer} length
- * @param {string} keyString
- * @return {Array[][]} keyMatrix
+ * @param {string} keyString - a string to build a key matrix (must be of matrixSize^2 length).
+ * @return {number[][]} keyMatrix
  */
-const generateKeyMatrix = (length, keyString) => {
+const generateKeyMatrix = (keyString) => {
+  const matrixSize = Math.sqrt(keyString.length);
+  if (!Number.isInteger(matrixSize)) {
+    throw new Error(
+      'Invalid key string length. The square root of the key string must be an integer',
+    );
+  }
   const keyMatrix = [];
   let keyStringIndex = 0;
-  for (let i = 0; i < length; i += 1) {
+  for (let i = 0; i < matrixSize; i += 1) {
     const keyMatrixRow = [];
-    for (let j = 0; j < length; j += 1) {
-      keyMatrixRow.push((keyString.codePointAt(keyStringIndex)) % 65);
+    for (let j = 0; j < matrixSize; j += 1) {
+      // A → 0, B → 1, ..., a → 32, b → 33, ...
+      const charCodeShifted = (keyString.codePointAt(keyStringIndex)) % alphabetCodeShift;
+      keyMatrixRow.push(charCodeShifted);
       keyStringIndex += 1;
     }
     keyMatrix.push(keyMatrixRow);
@@ -21,48 +31,54 @@ const generateKeyMatrix = (length, keyString) => {
 };
 
 /**
- * generate message vector from given message
+ * Generates a message vector from a given message.
  *
- * @param {*} message
- * @return {Array} messageVector
+ * @param {string} message - the message to encrypt.
+ * @return {number[]} messageVector
  */
 const generateMessageVector = (message) => {
   const messageVector = [];
   for (let i = 0; i < message.length; i += 1) {
-    messageVector.push(message.codePointAt(i) % 65);
+    messageVector.push(message.codePointAt(i) % alphabetCodeShift);
   }
   return messageVector;
 };
 
 /**
- * validate data and encrypt message from given message and keyString
+ * Encrypts the given message using Hill Cipher.
  *
  * @param {string} message plaintext
  * @param {string} keyString
  * @return {string} cipherString
- *
  */
+export function hillCipherEncrypt(message, keyString) {
+  // The keyString and message can only contain letters.
+  const onlyLettersRegExp = /^[a-zA-Z]+$/;
+  if (!onlyLettersRegExp.test(message) || !onlyLettersRegExp.test(keyString)) {
+    throw new Error('The message and key string can only contain letters');
+  }
 
-export default function hillCipherEncrypt(message, keyString) {
-  const length = keyString.length ** (0.5);
+  const keyMatrix = generateKeyMatrix(keyString);
+
   // keyString.length must equal to square of message.length
-  if (!Number.isInteger(length) && length !== message.length) {
-    throw new Error('invalid key string length');
-  }
-  // keyString and messange can only contain letters
-  if (!(/^[a-zA-Z]+$/.test(message)) || !(/^[A-Za-z]+$/.test(keyString))) {
-    throw new Error('messange and key string can only contain letters');
+  if (keyMatrix.length !== message.length) {
+    throw new Error('Invalid key string length. The key length must be a square of message length');
   }
 
-  const keyMatrix = generateKeyMatrix(length, keyString);
   const messageVector = generateMessageVector(message);
-  let ciperString = '';
-  for (let row = 0; row < length; row += 1) {
+  let cipherString = '';
+  for (let row = 0; row < keyMatrix.length; row += 1) {
     let item = 0;
-    for (let column = 0; column < length; column += 1) {
+    for (let column = 0; column < keyMatrix.length; column += 1) {
       item += keyMatrix[row][column] * messageVector[column];
     }
-    ciperString += String.fromCharCode((item % 26) + 65);
+    cipherString += String.fromCharCode((item % englishAlphabetSize) + alphabetCodeShift);
   }
-  return ciperString;
+
+  return cipherString;
 }
+
+// @TODO: Implement this method.
+export const hillCipherDecrypt = () => {
+  throw new Error('This method is not implemented yet');
+};
