@@ -1,6 +1,6 @@
 # Algorithmes et Structures de Données en JavaScript
 
-[![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
+[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
 Ce dépôt contient des exemples d'implémentation en JavaScript de plusieurs
@@ -19,7 +19,9 @@ _Lisez ceci dans d'autres langues:_
 [_Polski_](README.pl-PL.md),
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md),
-[_Türk_](README.tr-TR.md)
+[_Русский_](README.ru-RU.md),
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md)
 
 ## Data Structures
 
