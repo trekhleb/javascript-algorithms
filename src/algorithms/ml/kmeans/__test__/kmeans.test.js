@@ -14,20 +14,16 @@ describe('kMeans', () => {
   });
 
   it('should find the nearest neighbour', () => {
-    let dataSet;
-    let k;
-    let expectedCluster;
-
-    dataSet = [[1, 1], [6, 2], [3, 3], [4, 5], [9, 2], [2, 4], [8, 7]];
-    k = 2;
-    expectedCluster = [0, 1, 0, 1, 1, 0, 1];
+    const dataSet = [[1, 1], [6, 2], [3, 3], [4, 5], [9, 2], [2, 4], [8, 7]];
+    const k = 2;
+    const expectedCluster = [0, 1, 0, 1, 1, 0, 1];
     expect(kMeans(dataSet, k)).toEqual(expectedCluster);
   });
 
   it('should find the clusters with equal distances', () => {
     const dataSet = [[0, 0], [1, 1], [2, 2]];
     const k = 3;
-    const expectedCluster = Array(0, 1, 2);
+    const expectedCluster = [0, 1, 2];
     expect(kMeans(dataSet, k)).toEqual(expectedCluster);
   });
 

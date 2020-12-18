@@ -25,9 +25,10 @@ function euclideanDistance(x1, x2) {
  * @return {number[]} - the class of the point
  */
 export default function kMeans(
-  dataSet,
+  dataSetm,
   k = 1,
 ) {
+  const dataSet = dataSetm;
   if (!dataSet) {
     throw new Error('Either dataSet or labels or toClassify were not set');
   }
@@ -36,7 +37,7 @@ export default function kMeans(
   // assign k clusters locations equal to the location of initial k points
   const clusterCenters = [];
   const nDim = dataSet[0].length;
-  for (let i = 0; i < k; i++) {
+  for (let i = 0; i < k; i += 1) {
     clusterCenters[clusterCenters.length] = Array.from(dataSet[i]);
   }
 
@@ -48,24 +49,30 @@ export default function kMeans(
   while (flag) {
     flag = false;
     // calculate and store distance of each dataSet point from each cluster
-    for (let i = 0; i < dataSet.length; i++) {
+    for (let i = 0; i < dataSet.length; i += 1) {
       for (let n = 0; n < k; n += 1) {
-        dataSet[i][nDim + n] = Number(euclideanDistance(clusterCenters[n], dataSet[i].slice(0, nDim)));
+        dataSet[i][nDim + n] = euclideanDistance(clusterCenters[n], dataSet[i].slice(0, nDim));
       }
 
       // assign the cluster number to each dataSet point
       const sliced = dataSet[i].slice(nDim, nDim + k);
-      let minm_dist_cluster = Math.min(...sliced);
+      let minmDistCluster = Math.min(...sliced);
       for (let j = 0; j < sliced.length; j += 1) {
-        if (minm_dist_cluster === sliced[j]) {
-          minm_dist_cluster = j;
+        if (minmDistCluster === sliced[j]) {
+          minmDistCluster = j;
           break;
         }
       }
 
-      if (dataSet[i].length != nDim + k + 1) { flag = true; dataSet[i][nDim + k] = minm_dist_cluster; } else if (dataSet[i][nDim + k] != minm_dist_cluster) { flag = true; dataSet[i][nDim + k] = minm_dist_cluster; }
+      if (dataSet[i].length !== nDim + k + 1) {
+        flag = true;
+        dataSet[i][nDim + k] = minmDistCluster;
+      } else if (dataSet[i][nDim + k] !== minmDistCluster) {
+        flag = true;
+        dataSet[i][nDim + k] = minmDistCluster;
+      }
     }
-    // recalculate cluster centriod values via calculating mean of all dimensions of the points under it
+    // recalculate cluster centriod values via all dimensions of the points under it
     for (let i = 0; i < k; i += 1) {
       clusterCenters[i] = Array(nDim).fill(0);
       let classCount = 0;
