@@ -35,7 +35,7 @@ os dados.
 * `B` [Lista Encadeada (Linked List)](src/data-structures/linked-list/README.pt-BR.md)
 * `B` [Lista Duplamente Ligada (Doubly Linked List)](src/data-structures/doubly-linked-list/README.pt-BR.md)
 * `B` [Fila (Queue)](src/data-structures/queue/README.pt-BR.md)
-* `B` [Stack](src/data-structures/stack/README.pt-BR.md)
+* `B` [Pilha (Stack)](src/data-structures/stack/README.pt-BR.md)
 * `B` [Tabela de Hash (Hash Table)](src/data-structures/hash-table/README.pt-BR.md)
 * `B` [Heap](src/data-structures/heap/README.pt-BR.md)
 * `B` [Fila de Prioridade (Priority Queue)](src/data-structures/priority-queue/README.pt-BR.md)
@@ -46,7 +46,7 @@ os dados.
   * `A` [Árvore Vermelha-Preta (Red-Black Tree)](src/data-structures/tree/red-black-tree/README.pt-BR.md)
   * `A` [Árvore de Segmento (Segment Tree)](src/data-structures/tree/segment-tree/README.pt-BR.md) - com exemplos de consultas min / max / sum range
   * `A` [Árvore Fenwick (Fenwick Tree)](src/data-structures/tree/fenwick-tree/README.pt-BR.md) (Árvore indexada binária)
-* `A` [Gráfico (Graph)](src/data-structures/graph/README.pt-BR.md) (ambos dirigidos e não direcionados)
+* `A` [Grafo (Graph)](src/data-structures/graph/README.pt-BR.md) (ambos dirigidos e não direcionados)
 * `A` [Conjunto Disjuntor (Disjoint Set)](src/data-structures/disjoint-set/README.pt-BR.md)
 * `A` [Filtro Bloom (Bloom Filter)](src/data-structures/bloom-filter/README.pt-BR.md)
 
@@ -110,7 +110,7 @@ um conjunto de regras que define precisamente uma sequência de operações.
 * **Arvóres**
   * `B` [Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [Breadth-First Search](src/algorithms/tree/breadth-first-search) (BFS)
-* **Gráficos**
+* **Grafos**
   * `B` [Depth-First Search](src/algorithms/graph/depth-first-search) (DFS)
   * `B` [Breadth-First Search](src/algorithms/graph/breadth-first-search) (BFS)
   * `B` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - encontrando Árvore Mínima de Abrangência (MST) para grafo não direcionado ponderado
@@ -154,8 +154,8 @@ algoritmo é uma abstração maior que um programa de computador.
   * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
   * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - encontrando Árvore Mínima de Abrangência (MST) para grafo não direcionado ponderado
   * `A` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - encontrando Árvore Mínima de Abrangência (MST) para grafo não direcionado ponderado
-* **Divide and Conquer** - dividir o problema em partes menores e depois resolver essas partes
-  * `B` [Binary Search](src/algorithms/search/binary-search)
+* **Dividir p/ Conquistar** - dividir o problema em partes menores e depois resolver essas partes
+  * `B` [Busca binária (Binary Search)](src/algorithms/search/binary-search)
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
   * `B` [Euclidean Algorithm](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
@@ -166,7 +166,7 @@ algoritmo é uma abstração maior que um programa de computador.
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `A` [Permutations](src/algorithms/sets/permutations) (com e sem repetições)
   * `A` [Combinations](src/algorithms/sets/combinations) (com e sem repetições)
-* **Dynamic Programming** - criar uma solução usando sub-soluções encontradas anteriormente
+* **Programação Dinâmica** - criar uma solução usando sub-soluções encontradas anteriormente
   * `B` [Fibonacci Number](src/algorithms/math/fibonacci)
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
