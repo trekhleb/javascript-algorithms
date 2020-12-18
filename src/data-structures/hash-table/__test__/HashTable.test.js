@@ -12,18 +12,18 @@ describe('HashTable', () => {
   it('should generate proper hash for specified keys', () => {
     const hashTable = new HashTable();
 
-    expect(hashTable.hash('a')).toBe(1);
-    expect(hashTable.hash('b')).toBe(2);
-    expect(hashTable.hash('abc')).toBe(6);
+    expect(hashTable.hash('a')).toBe(9);
+    expect(hashTable.hash('b')).toBe(26);
+    expect(hashTable.hash('abc')).toBe(26);
   });
 
   it('should set, read and delete data with collisions', () => {
     const hashTable = new HashTable(3);
 
-    expect(hashTable.hash('a')).toBe(1);
+    expect(hashTable.hash('a')).toBe(2);
     expect(hashTable.hash('b')).toBe(2);
-    expect(hashTable.hash('c')).toBe(0);
-    expect(hashTable.hash('d')).toBe(1);
+    expect(hashTable.hash('c')).toBe(1);
+    expect(hashTable.hash('d')).toBe(2);
 
     hashTable.set('a', 'sky-old');
     hashTable.set('a', 'sky');
@@ -37,9 +37,9 @@ describe('HashTable', () => {
 
     const stringifier = (value) => `${value.key}:${value.value}`;
 
-    expect(hashTable.buckets[0].toString(stringifier)).toBe('c:earth');
-    expect(hashTable.buckets[1].toString(stringifier)).toBe('a:sky,d:ocean');
-    expect(hashTable.buckets[2].toString(stringifier)).toBe('b:sea');
+    expect(hashTable.buckets[0].toString(stringifier)).toBe('');
+    expect(hashTable.buckets[1].toString(stringifier)).toBe('c:earth');
+    expect(hashTable.buckets[2].toString(stringifier)).toBe('a:sky,b:sea,d:ocean');
 
     expect(hashTable.get('a')).toBe('sky');
     expect(hashTable.get('d')).toBe('ocean');
@@ -105,13 +105,12 @@ describe('HashTable', () => {
   it('should get all the values in case of hash collision', () => {
     const hashTable = new HashTable(3);
 
-    // Keys `ab` and `ba` in current implementation should result in one hash (one bucket).
     // We need to make sure that several items from one bucket will be serialized.
     hashTable.set('ab', 'one');
     hashTable.set('ba', 'two');
 
     hashTable.set('ac', 'three');
 
-    expect(hashTable.getValues()).toEqual(['one', 'two', 'three']);
+    expect(hashTable.getValues()).toEqual(['one', 'three', 'two']);
   });
 });
