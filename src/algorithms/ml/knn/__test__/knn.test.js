@@ -25,7 +25,7 @@ describe('kNN', () => {
     const inconsistent = () => {
       kNN([[1, 1]], [1], [1]);
     };
-    expect(inconsistent).toThrowError('Inconsistent vector lengths');
+    expect(inconsistent).toThrowError('Matrices have different shapes');
   });
 
   it('should find the nearest neighbour', () => {

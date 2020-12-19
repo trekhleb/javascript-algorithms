@@ -77,6 +77,8 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Radian & Degree](src/algorithms/math/radian) - radians to degree and backwards conversion
   * `B` [Fast Powering](src/algorithms/math/fast-powering)
   * `B` [Horner's method](src/algorithms/math/horner-method) - polynomial evaluation
+  * `B` [Matrices](src/algorithms/math/matrix) - matrices and basic matrix operations (multiplication, transposition, etc.)
+  * `B` [Euclidean Distance](src/algorithms/math/euclidean-distance) - distance between two points/vectors/matrices
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Square Root](src/algorithms/math/square-root) - Newton's method
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
