@@ -1,6 +1,6 @@
 # JavaScript 算法与数据结构
 
-[![build status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
+[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
 本仓库包含了多种基于 JavaScript 的算法与数据结构。
@@ -15,7 +15,10 @@ _Read this in other languages:_
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),
+[_Русский_](README.ru-RU.md),
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md)
 
 *注意：这个项目仅用于学习和研究，**不是**用于生产环境。*
 
@@ -29,7 +32,7 @@ _Read this in other languages:_
 * `B` [双向链表](src/data-structures/doubly-linked-list/README.zh-CN.md)
 * `B` [队列](src/data-structures/queue/README.zh-CN.md)
 * `B` [栈](src/data-structures/stack/README.zh-CN.md)
-* `B` [哈希表](src/data-structures/hash-table/README.zh-CN.md)
+* `B` [哈希表(散列)](src/data-structures/hash-table/README.zh-CN.md)
 * `B` [堆](src/data-structures/heap/README.zh-CN.md) - 最大堆 & 最小堆
 * `B` [优先队列](src/data-structures/priority-queue/README.zh-CN.md)
 * `A` [字典树](src/data-structures/trie/README.zh-CN.md)
@@ -52,7 +55,7 @@ _Read this in other languages:_
 ### 算法主题
 
 * **数学**
-  * `B` [Bit 操控](src/algorithms/math/bits) - set/get/update/clear 位、乘以/除以二进制位 、变负等
+  * `B` [位运算](src/algorithms/math/bits) - set/get/update/clear 位、乘以/除以二进制位 、变负等
   * `B` [阶乘](src/algorithms/math/factorial/README.zh-CN.md)
   * `B` [斐波那契数](src/algorithms/math/fibonacci) - `经典` 和 `闭式` 版本
   * `B` [素数检测](src/algorithms/math/primality-test) (排除法)
@@ -83,7 +86,7 @@ _Read this in other languages:_
   * `B` [汉明距离](src/algorithms/string/hamming-distance) - 符号不同的位置数
   * `A` [莱温斯坦距离](src/algorithms/string/levenshtein-distance) - 两个序列之间的最小编辑距离
   * `A` [Knuth–Morris–Pratt 算法](src/algorithms/string/knuth-morris-pratt) KMP 算法 - 子串搜索 (模式匹配)
-  * `A` [字符串快速查找](src/algorithms/string/rabin-karp) - 子串搜索 (模式匹配)
+  * `A` [字符串快速查找](src/algorithms/string/z-algorithm) - 子串搜索 (模式匹配)
   * `A` [Rabin Karp 算法](src/algorithms/string/rabin-karp) - 子串搜索
   * `A` [最长公共子串](src/algorithms/string/longest-common-substring)
   * `A` [正则表达式匹配](src/algorithms/string/regular-expression-matching)
@@ -126,6 +129,8 @@ _Read this in other languages:_
   * `A` [旅行推销员问题](src/algorithms/graph/travelling-salesman) - 尽可能以最短的路线访问每个城市并返回原始城市
 * **加密**
   * `B` [多项式 hash](src/algorithms/cryptography/polynomial-hash) - 基于多项式的 rolling hash 函数
+* **机器学习**
+  * `B` [NanoNeuron](https://github.com/trekhleb/nano-neuron) -7个简单的JS函数，说明机器如何实际学习（向前/向后传播）
 * **未分类**
   * `B` [汉诺塔](src/algorithms/uncategorized/hanoi-tower)
   * `B` [旋转矩阵](src/algorithms/uncategorized/square-matrix-rotation) - 原地算法
@@ -223,7 +228,7 @@ npm test -- 'LinkedList'
 
 你可以在 `./src/playground/playground.js` 文件中操作数据结构与算法，并在 `./src/playground/__test__/playground.test.js` 中编写测试。
 
-然后，只需运行以下命令来测试你的 Playground 是否按无误:
+然后，只需运行以下命令来测试你的 Playground 是否无误:
 
 ```
 npm test -- 'playground'

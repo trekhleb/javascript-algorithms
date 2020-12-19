@@ -35,7 +35,7 @@ describe('HashTable', () => {
     expect(hashTable.has('b')).toBe(true);
     expect(hashTable.has('c')).toBe(true);
 
-    const stringifier = value => `${value.key}:${value.value}`;
+    const stringifier = (value) => `${value.key}:${value.value}`;
 
     expect(hashTable.buckets[0].toString(stringifier)).toBe('c:earth');
     expect(hashTable.buckets[1].toString(stringifier)).toBe('a:sky,d:ocean');
@@ -85,5 +85,33 @@ describe('HashTable', () => {
     expect(hashTable.has('a')).toBe(false);
     expect(hashTable.has('b')).toBe(true);
     expect(hashTable.has('x')).toBe(false);
+  });
+
+  it('should get all the values', () => {
+    const hashTable = new HashTable(3);
+
+    hashTable.set('a', 'alpha');
+    hashTable.set('b', 'beta');
+    hashTable.set('c', 'gamma');
+
+    expect(hashTable.getValues()).toEqual(['gamma', 'alpha', 'beta']);
+  });
+
+  it('should get all the values from empty hash table', () => {
+    const hashTable = new HashTable();
+    expect(hashTable.getValues()).toEqual([]);
+  });
+
+  it('should get all the values in case of hash collision', () => {
+    const hashTable = new HashTable(3);
+
+    // Keys `ab` and `ba` in current implementation should result in one hash (one bucket).
+    // We need to make sure that several items from one bucket will be serialized.
+    hashTable.set('ab', 'one');
+    hashTable.set('ba', 'two');
+
+    hashTable.set('ac', 'three');
+
+    expect(hashTable.getValues()).toEqual(['one', 'two', 'three']);
   });
 });

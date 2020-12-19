@@ -31,7 +31,7 @@ export default function interpolationSearch(sortedArray, seekElement) {
     }
 
     // Do interpolation of the middle index.
-    const middleIndex = leftIndex + Math.floor(valueDelta * indexDelta / rangeDelta);
+    const middleIndex = leftIndex + Math.floor((valueDelta * indexDelta) / rangeDelta);
 
     // If we've found the element just return its position.
     if (sortedArray[middleIndex] === seekElement) {
