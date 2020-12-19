@@ -185,7 +185,7 @@ algorithm is an abstraction higher than a computer program.
   * `B` [Quicksort](src/algorithms/sorting/quick-sort)
   * `B` [Tree Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [Graph Depth-First Search](src/algorithms/graph/depth-first-search) (DFS)
-  * `B` [Matrices](src/algorithms/math/matrix) - generating and traversing the matrices of different depths
+  * `B` [Matrices](src/algorithms/math/matrix) - generating and traversing the matrices of different shapes
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `B` [Fast Powering](src/algorithms/math/fast-powering)
   * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
