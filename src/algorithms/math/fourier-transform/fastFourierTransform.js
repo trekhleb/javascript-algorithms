@@ -46,8 +46,8 @@ export default function fastFourierTransform(inputData, inverse = false) {
   for (let blockLength = 2; blockLength <= N; blockLength *= 2) {
     const imaginarySign = inverse ? -1 : 1;
     const phaseStep = new ComplexNumber({
-      re: Math.cos(2 * Math.PI / blockLength),
-      im: imaginarySign * Math.sin(2 * Math.PI / blockLength),
+      re: Math.cos((2 * Math.PI) / blockLength),
+      im: imaginarySign * Math.sin((2 * Math.PI) / blockLength),
     });
 
     for (let blockStart = 0; blockStart < N; blockStart += blockLength) {

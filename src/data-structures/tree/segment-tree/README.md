@@ -43,7 +43,7 @@ and geographic information systems.
 Current implementation of Segment Tree implies that you may
 pass any binary (with two input params) function to it and 
 thus you're able to do range query for variety of functions.
-In tests you may find examples of doing `min`, `max` and `sam` range
+In tests you may find examples of doing `min`, `max` and `sum` range
 queries on SegmentTree.
  
 ## References

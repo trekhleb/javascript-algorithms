@@ -64,7 +64,7 @@ export default class GraphVertex {
    * @return {GraphEdge[]}
    */
   getEdges() {
-    return this.edges.toArray().map(linkedListNode => linkedListNode.value);
+    return this.edges.toArray().map((linkedListNode) => linkedListNode.value);
   }
 
   /**
@@ -80,7 +80,7 @@ export default class GraphVertex {
    */
   hasEdge(requiredEdge) {
     const edgeNode = this.edges.find({
-      callback: edge => edge === requiredEdge,
+      callback: (edge) => edge === requiredEdge,
     });
 
     return !!edgeNode;
@@ -92,7 +92,7 @@ export default class GraphVertex {
    */
   hasNeighbor(vertex) {
     const vertexNode = this.edges.find({
-      callback: edge => edge.startVertex === vertex || edge.endVertex === vertex,
+      callback: (edge) => edge.startVertex === vertex || edge.endVertex === vertex,
     });
 
     return !!vertexNode;
@@ -123,7 +123,7 @@ export default class GraphVertex {
    * @return {GraphVertex}
    */
   deleteAllEdges() {
-    this.getEdges().forEach(edge => this.deleteEdge(edge));
+    this.getEdges().forEach((edge) => this.deleteEdge(edge));
 
     return this;
   }
