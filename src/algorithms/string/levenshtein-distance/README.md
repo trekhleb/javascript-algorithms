@@ -50,7 +50,7 @@ to assist natural language translation based on translation memory.
 
 Let’s take a simple example of finding minimum edit distance between 
 strings `ME` and `MY`. Intuitively you already know that minimum edit distance 
-here is `1` operation and this operation. And it is replacing `E` with `Y`. But 
+here is `1` operation, which is replacing `E` with `Y`. But 
 let’s try to formalize it in a form of the algorithm in order to be able to 
 do more complex examples like transforming `Saturday` into `Sunday`.
 
