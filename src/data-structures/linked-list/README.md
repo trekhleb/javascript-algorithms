@@ -102,6 +102,7 @@ Remove(head, value)
   if n.next != ø
     if n.next = tail
       tail ← n
+      tail.next = null
     end if
     n.next ← n.next.next
     return true
