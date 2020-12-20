@@ -46,7 +46,7 @@ export default class BucketSort extends Sort {
           this.callbacks.visitingCallback(buckets[bucketIndex][0]);
           // Insert originalArray[i]
           buckets[bucketIndex].unshift(originalArray[i]);
-        } else if (originalArray[i] >= buckets[bucketIndex][-1]) {
+        } else if (originalArray[i] >= buckets[bucketIndex][buckets[bucketIndex].length - 1]) {
           // Call visiting callback.
           this.callbacks.visitingCallback(buckets[bucketIndex][-1]);
           // Insert originalArray[i]
