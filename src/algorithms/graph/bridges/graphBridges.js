@@ -53,7 +53,7 @@ export default function graphBridges(graph) {
 
       // Check if current node is connected to any early node other then previous one.
       visitedSet[currentVertex.getKey()].lowDiscoveryTime = currentVertex.getNeighbors()
-        .filter(earlyNeighbor => earlyNeighbor.getKey() !== previousVertex.getKey())
+        .filter((earlyNeighbor) => earlyNeighbor.getKey() !== previousVertex.getKey())
         .reduce(
           /**
            * @param {number} lowestDiscoveryTime

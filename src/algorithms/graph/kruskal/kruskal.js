@@ -33,7 +33,7 @@ export default function kruskal(graph) {
   const sortedEdges = new QuickSort(sortingCallbacks).sort(graph.getAllEdges());
 
   // Create disjoint sets for all graph vertices.
-  const keyCallback = graphVertex => graphVertex.getKey();
+  const keyCallback = (graphVertex) => graphVertex.getKey();
   const disjointSet = new DisjointSet(keyCallback);
 
   graph.getAllVertices().forEach((graphVertex) => {

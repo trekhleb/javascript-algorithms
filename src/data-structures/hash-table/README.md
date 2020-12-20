@@ -1,5 +1,12 @@
 # Hash Table
 
+_Read this in other languages:_
+[_简体中文_](README.zh-CN.md),
+[_Русский_](README.ru-RU.md),
+[_日本語_](README.ja-JP.md),
+[_Français_](README.fr-FR.md),
+[_Português_](README.pt-BR.md)
+ 
 In computing, a **hash table** (hash map) is a data 
 structure which implements an *associative array* 
 abstract data type, a structure that can *map keys 

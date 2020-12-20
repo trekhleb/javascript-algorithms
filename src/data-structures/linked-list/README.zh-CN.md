@@ -101,7 +101,7 @@ Traverse(head)
   Pre: head is the head node in the list
   Post: the items in the list have been traversed
   n ← head
-  while n != 0
+  while n != ø
     yield n.value
     n ← n.next
   end while
@@ -124,7 +124,7 @@ ReverseTraversal(head, tail)
       yield curr.value
       curr ← prev
     end while
-   yeild curr.value
+   yield curr.value
   end if
 end ReverseTraversal
 ```
