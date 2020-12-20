@@ -28,26 +28,39 @@ export default class BucketSort extends Sort {
     // Bucketing values.
     const buckets = [];
     for (let i = 0; i < originalArray.length; i += 1) {
+      // Call visiting callback.
+      this.callbacks.visitingCallback(originalArray[i]);
+
+      // Find bucket index.
       const bucketIndex = Math.floor(((originalArray[i] - lowerBound)
         / (upperBound - lowerBound)) * (bucketCount - 1));
+
+      // Insert originalArray[i] in related bucket.
       if (buckets[bucketIndex] === undefined) {
         buckets[bucketIndex] = [];
         buckets[bucketIndex].push(originalArray[i]);
       } else {
         // Perform insertion sort step.
         if (originalArray[i] <= buckets[bucketIndex][0]) {
+          // Call visiting callback.
+          this.callbacks.visitingCallback(buckets[bucketIndex][0]);
+          // Insert originalArray[i]
           buckets[bucketIndex].unshift(originalArray[i]);
         } else if (originalArray[i] >= buckets[bucketIndex][-1]) {
+          // Call visiting callback.
+          this.callbacks.visitingCallback(buckets[bucketIndex][-1]);
+          // Insert originalArray[i]
           buckets[bucketIndex].push(originalArray[i]);
         } else {
-          let inBucketIndex = 1;
-          while (buckets[bucketIndex][inBucketIndex - 1] <= originalArray[i]
-            && originalArray[i] <= bucketCount[bucketCount][inBucketIndex]) {
-            inBucketIndex += 1;
+          let inBucketIndex = buckets[bucketIndex].length;
+          while (buckets[bucketIndex][inBucketIndex - 1] > originalArray[i]) {
+            // Call visiting callback.
+            this.callbacks.visitingCallback(buckets[bucketIndex][inBucketIndex - 1]);
+            // Shift current index left.
+            buckets[bucketIndex][inBucketIndex] = buckets[bucketIndex][inBucketIndex - 1];
+            inBucketIndex -= 1;
           }
-          for (let j = buckets[bucketIndex].length; j >= inBucketIndex; j -= 1) {
-            buckets[bucketIndex][j + 1] = buckets[bucketIndex][j];
-          }
+          // Insert current value.
           buckets[bucketIndex][inBucketIndex] = originalArray[i];
         }
       }
