@@ -1,6 +1,6 @@
 # JavaScript Algorithms and Data Structures
 
-[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions)
+[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
 This repository contains JavaScript based examples of many
@@ -21,9 +21,10 @@ _Read this in other languages:_
 [_Português_](README.pt-BR.md),
 [_Русский_](README.ru-RU.md),
 [_Türk_](README.tr-TR.md),
-[_Italiana_](README.it-IT.md)
+[_Italiana_](README.it-IT.md),
+[_Bahasa Indonesia_](README.id-ID.md)
 
-*☝ Note that this project is meant to be used for learning and researching purposes 
+*☝ Note that this project is meant to be used for learning and researching purposes
 only, and it is **not** meant to be used for production.*
 
 ## Data Structures
@@ -64,9 +65,9 @@ a set of rules that precisely define a sequence of operations.
 
 * **Math**
   * `B` [Bit Manipulation](src/algorithms/math/bits) - set/get/update/clear bits, multiplication/division by two, make negative etc.
-  * `B` [Factorial](src/algorithms/math/factorial) 
+  * `B` [Factorial](src/algorithms/math/factorial)
   * `B` [Fibonacci Number](src/algorithms/math/fibonacci) - classic and closed-form versions
-  * `B` [Prime Factors](src/algorithms/math/prime-factors) - finding prime factors and counting them using Hardy-Ramanujan's theorem  
+  * `B` [Prime Factors](src/algorithms/math/prime-factors) - finding prime factors and counting them using Hardy-Ramanujan's theorem
   * `B` [Primality Test](src/algorithms/math/primality-test) (trial division method)
   * `B` [Euclidean Algorithm](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
   * `B` [Least Common Multiple](src/algorithms/math/least-common-multiple) (LCM)
@@ -77,10 +78,12 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Radian & Degree](src/algorithms/math/radian) - radians to degree and backwards conversion
   * `B` [Fast Powering](src/algorithms/math/fast-powering)
   * `B` [Horner's method](src/algorithms/math/horner-method) - polynomial evaluation
+  * `B` [Matrices](src/algorithms/math/matrix) - matrices and basic matrix operations (multiplication, transposition, etc.)
+  * `B` [Euclidean Distance](src/algorithms/math/euclidean-distance) - distance between two points/vectors/matrices
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Square Root](src/algorithms/math/square-root) - Newton's method
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
-  * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up 
+  * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up
 * **Sets**
   * `B` [Cartesian Product](src/algorithms/sets/cartesian-product) - product of multiple sets
   * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
@@ -142,13 +145,16 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Polynomial Hash](src/algorithms/cryptography/polynomial-hash) - rolling hash function based on polynomial
   * `B` [Rail Fence Cypher](src/algorithms/cryptography/rail-fence-cipher) - a transposition cipher algorithm for encoding messages
   * `B` [Caesar Cipher](src/algorithms/cryptography/caesar-cipher) - simple substitution cipher
+  * `B` [Hill Cipher](src/algorithms/cryptography/hill-cipher) - substitution cipher based on linear algebra
 * **Machine Learning**
   * `B` [NanoNeuron](https://github.com/trekhleb/nano-neuron) - 7 simple JS functions that illustrate how machines can actually learn (forward/backward propagation)
+  * `B` [k-NN](src/algorithms/ml/knn) - k-nearest neighbors classification algorithm
+  * `B` [k-Means](src/algorithms/ml/k-means) - k-Means clustering algorithm
 * **Uncategorized**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
-  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples 
-  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples 
+  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples
+  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem (dynamic programming and brute force versions)
   * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top (4 solutions)
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
@@ -182,6 +188,7 @@ algorithm is an abstraction higher than a computer program.
   * `B` [Quicksort](src/algorithms/sorting/quick-sort)
   * `B` [Tree Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [Graph Depth-First Search](src/algorithms/graph/depth-first-search) (DFS)
+  * `B` [Matrices](src/algorithms/math/matrix) - generating and traversing the matrices of different shapes
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `B` [Fast Powering](src/algorithms/math/fast-powering)
   * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)

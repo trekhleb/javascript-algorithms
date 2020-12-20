@@ -1,15 +1,6 @@
 # Bubble Sort
 
-_Read this in other languages:_
-[_Português_](README.pt-BR.md)
-
-Bubble sort, sometimes referred to as sinking sort, is a
-simple sorting algorithm that repeatedly steps through
-the list to be sorted, compares each pair of adjacent
-items and swaps them if they are in the wrong order
-(ascending or descending arrangement). The pass through
-the list is repeated until no swaps are needed, which
-indicates that the list is sorted.
+O bubble sort, ou ordenação por flutuação (literalmente "por bolha"), é um algoritmo de ordenação dos mais simples. A ideia é percorrer o vetor diversas vezes, e a cada passagem fazer flutuar para o topo o maior elemento da sequência. Essa movimentação lembra a forma como as bolhas em um tanque de água procuram seu próprio nível, e disso vem o nome do algoritmo.
 
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
 
@@ -21,5 +12,6 @@ indicates that the list is sorted.
 
 ## References
 
-- [Wikipedia](https://en.wikipedia.org/wiki/Bubble_sort)
+- [Wikipedia](https://pt.wikipedia.org/wiki/Bubble_sort)
 - [YouTube](https://www.youtube.com/watch?v=6Gv8vg0kcHc&index=27&t=0s&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+

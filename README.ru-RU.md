@@ -1,6 +1,6 @@
 # Алгоритмы и структуры данных на JavaScript
 
-[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions)
+[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
 В этом репозитории содержатся базовые JavaScript-примеры многих популярных алгоритмов и структур данных.
@@ -18,7 +18,8 @@ _Читать на других языках:_
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md),
 [_Türk_](README.tr-TR.md),
-[_Italiana_](README.it-IT.md)
+[_Italiana_](README.it-IT.md),
+[_Bahasa Indonesia_](README.id-ID.md)
 
 *☝ Замечание: этот репозиторий предназначен для учебно-исследовательских целей (**не** для использования в продакшн-системах).*
 
@@ -56,7 +57,7 @@ _Читать на других языках:_
 
 * **Математика**
   * `B` [Битовые манипуляции](src/algorithms/math/bits) — получение/запись/сброс/обновление битов, умножение/деление на 2, сделать отрицательным и т.п.
-  * `B` [Факториал](src/algorithms/math/factorial) 
+  * `B` [Факториал](src/algorithms/math/factorial)
   * `B` [Числа Фибоначчи](src/algorithms/math/fibonacci) — классическое решение, решение в замкнутой форме
   * `B` [Тест простоты](src/algorithms/math/primality-test) (метод пробного деления)
   * `B` [Алгоритм Евклида](src/algorithms/math/euclidean-algorithm) — нахождение наибольшего общего делителя (НОД)
@@ -70,7 +71,7 @@ _Читать на других языках:_
   * `A` [Разбиение числа](src/algorithms/math/integer-partition)
   * `A` [Квадратный корень](src/algorithms/math/square-root) — метод Ньютона
   * `A` [Алгоритм Лю Хуэя](src/algorithms/math/liu-hui) — расчёт числа π с заданной точностью методом вписанных правильных многоугольников
-  * `A` [Дискретное преобразование Фурье](src/algorithms/math/fourier-transform) — разложение временной функции (сигнала) на частотные составляющие 
+  * `A` [Дискретное преобразование Фурье](src/algorithms/math/fourier-transform) — разложение временной функции (сигнала) на частотные составляющие
 * **Множества**
   * `B` [Декартово произведение](src/algorithms/sets/cartesian-product) — результат перемножения множеств
   * `B` [Тасование Фишера — Йетса](src/algorithms/sets/fisher-yates) — создание случайных перестановок конечного множества
@@ -135,7 +136,7 @@ _Читать на других языках:_
 * **Прочие алгоритмы**
   * `B` [Ханойская башня](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Поворот квадратной матрицы](src/algorithms/uncategorized/square-matrix-rotation) — используется дополнительная память
-  * `B` [Прыжки](src/algorithms/uncategorized/jump-game) — на основе бэктрекинга, динамического программирования (сверху-вниз + снизу-вверх) и жадных алгоритмов 
+  * `B` [Прыжки](src/algorithms/uncategorized/jump-game) — на основе бэктрекинга, динамического программирования (сверху-вниз + снизу-вверх) и жадных алгоритмов
   * `B` [Поиск уникальных путей](src/algorithms/uncategorized/unique-paths) — на основе бэктрекинга, динамического программирования и треугольника Паскаля
   * `B` [Подсчёт дождевой воды](src/algorithms/uncategorized/rain-terraces) — на основе перебора и динамического программирования
   * `B` [Задача о рекурсивной лестнице](src/algorithms/uncategorized/recursive-staircase) — подсчёт количества путей, по которым можно достичь верха лестницы (4 способа)
@@ -153,7 +154,7 @@ _Читать на других языках:_
   * `A` [Максимальный подмассив](src/algorithms/sets/maximum-subarray)
   * `A` [Задача коммивояжёра](src/algorithms/graph/travelling-salesman) — кратчайший маршрут, проходящий через указанные города с последующим возвратом в исходный город
   * `A` [Дискретное преобразование Фурье](src/algorithms/math/fourier-transform) — разложение временной функции (сигнала) на частотные составляющие
-* **Жадные алгоритмы** — принятие локально оптимальных решений с учётом допущения об оптимальности конечного решения 
+* **Жадные алгоритмы** — принятие локально оптимальных решений с учётом допущения об оптимальности конечного решения
   * `B` [Прыжки](src/algorithms/uncategorized/jump-game)
   * `A` [Задача о неограниченном рюкзаке](src/algorithms/sets/knapsack-problem)
   * `A` [Алгоритм Дейкстры](src/algorithms/graph/dijkstra) — нахождение кратчайших путей от одной из вершин графа до всех остальных
@@ -228,7 +229,7 @@ npm test -- 'LinkedList'
 
 **Песочница**
 
-Вы можете экспериментировать с алгоритмами и структурами данных в файле `./src/playground/playground.js` 
+Вы можете экспериментировать с алгоритмами и структурами данных в файле `./src/playground/playground.js`
 (файл `./src/playground/__test__/playground.test.js` предназначен для написания тестов).
 
 Для проверки работоспособности вашего кода используйте команду:
