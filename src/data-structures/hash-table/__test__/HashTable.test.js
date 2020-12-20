@@ -12,18 +12,18 @@ describe('HashTable', () => {
   it('should generate proper hash for specified keys', () => {
     const hashTable = new HashTable();
 
-    expect(hashTable.hash('a')).toBe(9);
-    expect(hashTable.hash('b')).toBe(26);
-    expect(hashTable.hash('abc')).toBe(26);
+    expect(hashTable.hash('a')).toBe(18);
+    expect(hashTable.hash('b')).toBe(21);
+    expect(hashTable.hash('abc')).toBe(21);
   });
 
   it('should set, read and delete data with collisions', () => {
     const hashTable = new HashTable(3);
 
-    expect(hashTable.hash('a')).toBe(2);
+    expect(hashTable.hash('a')).toBe(1);
     expect(hashTable.hash('b')).toBe(2);
-    expect(hashTable.hash('c')).toBe(1);
-    expect(hashTable.hash('d')).toBe(2);
+    expect(hashTable.hash('c')).toBe(2);
+    expect(hashTable.hash('d')).toBe(1);
 
     hashTable.set('a', 'sky-old');
     hashTable.set('a', 'sky');
@@ -38,8 +38,8 @@ describe('HashTable', () => {
     const stringifier = (value) => `${value.key}:${value.value}`;
 
     expect(hashTable.buckets[0].toString(stringifier)).toBe('');
-    expect(hashTable.buckets[1].toString(stringifier)).toBe('c:earth');
-    expect(hashTable.buckets[2].toString(stringifier)).toBe('a:sky,b:sea,d:ocean');
+    expect(hashTable.buckets[1].toString(stringifier)).toBe('a:sky,d:ocean');
+    expect(hashTable.buckets[2].toString(stringifier)).toBe('b:sea,c:earth');
 
     expect(hashTable.get('a')).toBe('sky');
     expect(hashTable.get('d')).toBe('ocean');
@@ -94,7 +94,7 @@ describe('HashTable', () => {
     hashTable.set('b', 'beta');
     hashTable.set('c', 'gamma');
 
-    expect(hashTable.getValues()).toEqual(['gamma', 'alpha', 'beta']);
+    expect(hashTable.getValues()).toEqual(['alpha', 'beta', 'gamma']);
   });
 
   it('should get all the values from empty hash table', () => {
@@ -111,6 +111,6 @@ describe('HashTable', () => {
 
     hashTable.set('ac', 'three');
 
-    expect(hashTable.getValues()).toEqual(['one', 'three', 'two']);
+    expect(hashTable.getValues()).toEqual(['three', 'one', 'two']);
   });
 });

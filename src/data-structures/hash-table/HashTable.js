@@ -70,8 +70,9 @@ export default class HashTable {
       hash = (hash << 8) | hashPerRound;
     }
 
-    // Unsigned right shift to avoid negative number.
-    hash >>>= 1;
+    // Bit mask to clear the left most bit,
+    // so the result will be a positive number.
+    hash &= 0x7FFFFFFF;
 
     // Reduce hash number so it would fit hash table size.
     return hash % this.buckets.length;
