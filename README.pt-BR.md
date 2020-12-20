@@ -21,7 +21,8 @@ _Leia isto em outros idiomas:_
 [_Español_](README.es-ES.md),
 [_Русский_](README.ru-RU.md),
 [_Türk_](README.tr-TR.md),
-[_Italiana_](README.it-IT.md)
+[_Italiana_](README.it-IT.md),
+[_Bahasa Indonesia_](README.id-ID.md)
 
 ## Estrutura de Dados
 

@@ -58,7 +58,7 @@ const validate2D = (m) => {
  * @param {Matrix} b
  * @trows {Error}
  */
-const validateSameShape = (a, b) => {
+export const validateSameShape = (a, b) => {
   validateType(a);
   validateType(b);
 
@@ -177,7 +177,7 @@ export const t = (m) => {
  * @param {Matrix} m
  * @param {function(indices: CellIndices, c: Cell)} visit
  */
-const walk = (m, visit) => {
+export const walk = (m, visit) => {
   /**
    * Traverses the matrix recursively.
    *
@@ -208,7 +208,7 @@ const walk = (m, visit) => {
  * @param {CellIndices} cellIndices - Array of cell indices
  * @return {Cell}
  */
-const getCellAtIndex = (m, cellIndices) => {
+export const getCellAtIndex = (m, cellIndices) => {
   // We start from the row at specific index.
   let cell = m[cellIndices[0]];
   // Going deeper into the next dimensions but not to the last one to preserve
@@ -227,7 +227,7 @@ const getCellAtIndex = (m, cellIndices) => {
  * @param {CellIndices} cellIndices - Array of cell indices
  * @param {Cell} cellValue - New cell value
  */
-const updateCellAtIndex = (m, cellIndices, cellValue) => {
+export const updateCellAtIndex = (m, cellIndices, cellValue) => {
   // We start from the row at specific index.
   let cell = m[cellIndices[0]];
   // Going deeper into the next dimensions but not to the last one to preserve

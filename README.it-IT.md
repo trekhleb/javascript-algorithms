@@ -17,7 +17,8 @@ _Leggilo in altre lingue:_
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md),
 [_Русский_](README.ru-RU.md),
-[_Türk_](README.tr-TR.md)
+[_Türk_](README.tr-TR.md),
+[_Bahasa Indonesia_](README.id-ID.md)
 
 *☝ Si noti che questo progetto è destinato ad essere utilizzato solo per l'apprendimento e la ricerca e non è destinato ad essere utilizzato per il commercio.*
 
