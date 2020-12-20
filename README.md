@@ -143,6 +143,7 @@ a set of rules that precisely define a sequence of operations.
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
 * **Cryptography**
   * `B` [Polynomial Hash](src/algorithms/cryptography/polynomial-hash) - rolling hash function based on polynomial
+  * `B` [Rail Fence Cypher](src/algorithms/cryptography/rail-fence-cipher) - a transposition cipher algorithm for encoding messages
   * `B` [Caesar Cipher](src/algorithms/cryptography/caesar-cipher) - simple substitution cipher
   * `B` [Hill Cipher](src/algorithms/cryptography/hill-cipher) - substitution cipher based on linear algebra
 * **Machine Learning**
