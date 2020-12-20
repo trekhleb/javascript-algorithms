@@ -1,5 +1,4 @@
 import Sort from '../Sort';
-import InsertionSort from '../insertion-sort/InsertionSort';
 
 export default class BucketSort extends Sort {
   sort(originalArray, originalLowerBound, originalUpperBound, originalBucketsCount) {
@@ -33,16 +32,32 @@ export default class BucketSort extends Sort {
         / (upperBound - lowerBound)) * (bucketCount - 1));
       if (buckets[bucketIndex] === undefined) {
         buckets[bucketIndex] = [];
+        buckets[bucketIndex].push(originalArray[i]);
+      } else {
+        // Perform insertion sort step.
+        if (originalArray[i] <= buckets[bucketIndex][0]) {
+          buckets[bucketIndex].unshift(originalArray[i]);
+        } else if (originalArray[i] >= buckets[bucketIndex][-1]) {
+          buckets[bucketIndex].push(originalArray[i]);
+        } else {
+          let inBucketIndex = 1;
+          while (buckets[bucketIndex][inBucketIndex - 1] <= originalArray[i]
+            && originalArray[i] <= bucketCount[bucketCount][inBucketIndex]) {
+            inBucketIndex += 1;
+          }
+          for (let j = buckets[bucketIndex].length; j >= inBucketIndex; j -= 1) {
+            buckets[bucketIndex][j + 1] = buckets[bucketIndex][j];
+          }
+          buckets[bucketIndex][inBucketIndex] = originalArray[i];
+        }
       }
-      buckets[bucketIndex].push(originalArray[i]);
     }
 
-    // Sort and merge buckets
+    // Merge buckets
     let sorted = [];
-    const sorter = new InsertionSort();
     for (let i = 0; i < buckets.length; i += 1) {
       if (buckets[i] !== undefined) {
-        sorted = sorted.concat(sorter.sort(buckets[i]));
+        sorted = sorted.concat(buckets[i]);
       }
     }
     return sorted;
