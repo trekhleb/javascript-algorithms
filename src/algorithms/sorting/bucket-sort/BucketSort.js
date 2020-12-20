@@ -54,10 +54,12 @@ export default class BucketSort extends Sort {
     }
 
     // Merge buckets
-    let sorted = [];
+    const sorted = [];
     for (let i = 0; i < buckets.length; i += 1) {
       if (buckets[i] !== undefined) {
-        sorted = sorted.concat(buckets[i]);
+        for (let j = 0; j < buckets[i].length; j += 1) {
+          sorted.push(buckets[i][j]);
+        }
       }
     }
     return sorted;
