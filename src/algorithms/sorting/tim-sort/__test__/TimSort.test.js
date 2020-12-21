@@ -1,5 +1,5 @@
 /* eslint-disable linebreak-style */
-import TimSort from "../TimSort";
+import TimSort from '../TimSort';
 
 import {
   equalArr,
@@ -7,7 +7,7 @@ import {
   reverseArr,
   sortedArr,
   SortTester,
-} from "../../SortTester";
+} from '../../SortTester';
 
 // Complexity constants.
 const SORTED_ARRAY_VISITING_COUNT = 20;
@@ -15,52 +15,52 @@ const NOT_SORTED_ARRAY_VISITING_COUNT = 101;
 const REVERSE_SORTED_ARRAY_VISITING_COUNT = 210;
 const EQUAL_ARRAY_VISITING_COUNT = 20;
 
-describe("TimSort", () => {
-  it("should sort array", () => {
+describe('TimSort', () => {
+  it('should sort array', () => {
     SortTester.testSort(TimSort);
   });
 
-  it("should sort array with custom comparator", () => {
+  it('should sort array with custom comparator', () => {
     SortTester.testSortWithCustomComparator(TimSort);
   });
 
-  it("should do stable sorting", () => {
+  it('should do stable sorting', () => {
     SortTester.testSortStability(TimSort);
   });
 
-  it("should sort negative numbers", () => {
+  it('should sort negative numbers', () => {
     SortTester.testNegativeNumbersSort(TimSort);
   });
 
-  it("should visit EQUAL array element specified number of times", () => {
+  it('should visit EQUAL array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
       TimSort,
       equalArr,
-      EQUAL_ARRAY_VISITING_COUNT
+      EQUAL_ARRAY_VISITING_COUNT,
     );
   });
 
-  it("should visit SORTED array element specified number of times", () => {
+  it('should visit SORTED array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
       TimSort,
       sortedArr,
-      SORTED_ARRAY_VISITING_COUNT
+      SORTED_ARRAY_VISITING_COUNT,
     );
   });
 
-  it("should visit NOT SORTED array element specified number of times", () => {
+  it('should visit NOT SORTED array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
       TimSort,
       notSortedArr,
-      NOT_SORTED_ARRAY_VISITING_COUNT
+      NOT_SORTED_ARRAY_VISITING_COUNT,
     );
   });
 
-  it("should visit REVERSE SORTED array element specified number of times", () => {
+  it('should visit REVERSE SORTED array element specified number of times', () => {
     SortTester.testAlgorithmTimeComplexity(
       TimSort,
       reverseArr,
-      REVERSE_SORTED_ARRAY_VISITING_COUNT
+      REVERSE_SORTED_ARRAY_VISITING_COUNT,
     );
   });
 });
