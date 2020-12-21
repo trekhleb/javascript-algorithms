@@ -1,4 +1,9 @@
-import Sort from "../Sort";
+/* eslint-disable linebreak-style */
+/* eslint-disable operator-assignment */
+/* eslint-disable no-param-reassign */
+/* eslint-disable linebreak-style */
+/* eslint-disable no-plusplus */
+import Sort from '../Sort';
 
 export default class TimSort extends Sort {
   sort(originalArray) {
@@ -6,21 +11,21 @@ export default class TimSort extends Sort {
     const array = [...originalArray];
 
     for (let i = 0; i < array.length; i += RUN) {
-      this.insertionSort(array, i, Math.min(i + 31, n - 1));
+      this.insertionSort(array, i, Math.min(i + 31, array.length - 1));
     }
 
-    for (let size = RUN; size < n; size = 2 * size) {
-      for (let left = 0; left < n; left += 2 * size) {
+    for (let size = RUN; size < array.length; size = 2 * size) {
+      for (let left = 0; left < array.length; left += 2 * size) {
         // find ending point of
         // left sub array
         // mid+1 is starting point
         // of right sub array
-        let mid = left + size - 1;
-        let right = Math.min(left + 2 * size - 1, n - 1);
+        const mid = left + size - 1;
+        const right = Math.min(left + 2 * size - 1, array.length - 1);
 
         // merge sub array arr[left.....mid] &
         // arr[mid+1....right]
-        merge(array, left, mid, right);
+        this.merge(array, left, mid, right);
       }
     }
 
@@ -29,7 +34,7 @@ export default class TimSort extends Sort {
 
   insertionSort(originalArray, leftIndex, rightIndex) {
     // Go through leftIndex to rightIndex Elements
-    for (let i = leftIndex; i < rightIndex; i += 1) {
+    for (let i = leftIndex; i <= rightIndex; i += 1) {
       let currentIndex = i;
 
       // Call visiting callback.
@@ -38,10 +43,10 @@ export default class TimSort extends Sort {
       // Go and check if previous elements and greater then current one.
       // If this is the case then swap that elements.
       while (
-        array[currentIndex - 1] !== undefined &&
-        this.comparator.lessThan(
+        originalArray[currentIndex - 1] !== undefined
+        && this.comparator.lessThan(
           originalArray[currentIndex],
-          originalArray[currentIndex - 1]
+          originalArray[currentIndex - 1],
         )
       ) {
         // Call visiting callback.
@@ -62,11 +67,11 @@ export default class TimSort extends Sort {
   merge(originalArray, l, m, r) {
     // Original array is broken in two parts
     // left and right array
-    let len1 = m - l + 1;
-    let len2 = r - m;
+    const len1 = m - l + 1;
+    const len2 = r - m;
 
-    let left = [];
-    let right = [];
+    const left = [];
+    const right = [];
 
     for (let i = 0; i < len1; i++) left[i] = originalArray[l + i];
     for (let i = 0; i < len2; i++) right[i] = originalArray[m + 1 + i];
