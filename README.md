@@ -120,6 +120,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Counting Sort](src/algorithms/sorting/counting-sort)
   * `B` [Radix Sort](src/algorithms/sorting/radix-sort)
 * **Linked Lists**
+  * `B` [Floyd's Tortoise And Hare](src/algorithms/linked-list/tortoise-and-hare) - find a cycle in a linked list
   * `B` [Straight Traversal](src/algorithms/linked-list/traversal)
   * `B` [Reverse Traversal](src/algorithms/linked-list/reverse-traversal)
 * **Trees**
