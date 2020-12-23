@@ -37,7 +37,7 @@ _Explanation:_ In this case, no transaction is done, i.e. max `profit = 0`.
 
 ## Possible Solutions
 
-### Divide and conquer approach
+### Divide and conquer approach `O(2^n)`
 
 We may try **all** combinations of buying and selling and find out the most profitable one by applying _divide and conquer approach_.
 
@@ -62,7 +62,7 @@ As you may see, this is very inefficient. For example for just `20` prices the n
 
 If we avoid cloning the prices array between recursive function calls and will use the array pointer then additional space complexity will be proportional to the depth of the recursion: `O(n)`
 
-## Peak Valley Approach
+## Peak Valley Approach `O(n)`
 
 If we plot the prices array (i.e. `[7, 1, 5, 3, 6, 4]`) we may notice that the points of interest are the consecutive valleys and peaks
 
@@ -82,7 +82,7 @@ Since the algorithm requires only one pass through the prices array, the time co
 
 Except of the prices array itself the algorithm consumes the constant amount of memory. Thus, additional space complexity is `O(1)`.
 
-## Accumulator Approach
+## Accumulator Approach `O(n)`
 
 There is even simpler approach exists. Let's say we have the prices array which looks like this `[1, 7, 2, 3, 6, 7, 6, 7]`:
 
