@@ -157,7 +157,7 @@ _Вивчення матеріалу на інших мовах:_
 
 * **Метод «грубої сили» або повний перебір** - метод рішення криптографічної задачі шляхом перебору всіх можливих варіантів ключа
   * `B` [Лінійний пошук](src/algorithms/search/linear-search)
-  * `B` [Дощові тераси](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
+  * `B` [Дощові тераси](src/algorithms/uncategorized/rain-terraces) - задача про дощові тераси
   * `B` [Завдання про рекурсивні сходи](src/algorithms/uncategorized/recursive-staircase) - підрахунок кількості способів досягти вершини
   * `A` [Максимальний підмасив](src/algorithms/sets/maximum-subarray)
   * `A` [Задача комівояжера](src/algorithms/graph/travelling-salesman) - знаходження найвигіднішого маршруту, що проходить через вказані міста хоча б по одному разу
@@ -217,7 +217,7 @@ npm install
 
 **Запустіть ESLint**
 
-You may want to run it to check code quality.
+Запустіть для перевірки якості коду
 
 ```
 npm run lint
@@ -293,7 +293,7 @@ npm test -- 'playground'
 | **Пірамідальне сортування**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | Ні        |           |
 | **Сортування злиттям**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Так       |           |
 | **Швидке сортування**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | Ні        | Швидке сортування зазвичай виконується на місці з використанням O (log (n)) додаткової пам'яті |
-| **Сортування Шелла**        | n&nbsp;log(n)   | depends on gap sequence   | n&nbsp;(log(n))<sup>2</sup>  | 1         | Ні         |           |
+| **Сортування Шелла**        | n&nbsp;log(n)   | залежить від послідовності проміжків   | n&nbsp;(log(n))<sup>2</sup>  | 1         | Ні         |           |
 | **Сортування підрахунком**     | n + r           | n + r               | n + r               | n + r     | Так       | Де r - найбільше число в масиві |
 | **Сортування за розрядами**        | n * k           | n * k               | n * k               | n + k     | Так       | Де k - довжина найдовшого ключа |
 
