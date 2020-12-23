@@ -22,7 +22,8 @@ _Read this in other languages:_
 [_Русский_](README.ru-RU.md),
 [_Türk_](README.tr-TR.md),
 [_Italiana_](README.it-IT.md),
-[_Bahasa Indonesia_](README.id-ID.md)
+[_Bahasa Indonesia_](README.id-ID.md),
+[_Українська_](README.uk-UA.md)
 
 ## Struktury Danych
 
