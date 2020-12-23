@@ -1,35 +1,35 @@
-# Linked List
+# Lista Enlazada (Linked List)
 
-_Read this in other languages:_
+_Lee esto en otros idiomas:_
 [_简体中文_](README.zh-CN.md),
 [_Русский_](README.ru-RU.md),
 [_日本語_](README.ja-JP.md),
-[_Português_](README.pt-BR.md),
-[_한국어_](README.ko-KR.md),
-[_Español_](README.es-ES.md),
+[_Português_](README.pt-BR.md)
+[_English_](README.md)
 
-In computer science, a **linked list** is a linear collection
-of data elements, in which linear order is not given by
-their physical placement in memory. Instead, each
-element points to the next. It is a data structure
-consisting of a group of nodes which together represent
-a sequence. Under the simplest form, each node is
-composed of data and a reference (in other words,
-a link) to the next node in the sequence. This structure
-allows for efficient insertion or removal of elements
-from any position in the sequence during iteration.
-More complex variants add additional links, allowing
-efficient insertion or removal from arbitrary element
-references. A drawback of linked lists is that access
-time is linear (and difficult to pipeline). Faster
-access, such as random access, is not feasible. Arrays
-have better cache locality as compared to linked lists.
+En ciencias de la computaciòn una **lista enlazada** es una  coleccion linear 
+de elemntos de datos, en los cuales el orden linear no es dado por
+su posciòn fisica en memoria. En cambio, cada 
+elemento señala al siguiente. Es una estructura de datos 
+que consiste en un grupo de nodos los cuales juntos representan
+una secuencia. Bajo la forma mas simple, cada nodo es 
+compuesto de datos y una referencia (en otras palabras, 
+un lazo) al siguiente nodo en la secuencia. Esta estructura
+permite la insercion o remocion de elementos 
+desde cualquier posicion en la secuencia durante la iteracion. 
+Variantes mas complejas agregan lazos adicionales, permitiendo 
+una eficiente insercion o remocion desde referencias arbitrarias
+del elemento. Una desventaja de las listas lazadas es que el tiempo de
+acceso es linear (y dificil de canalizar) Un acceso
+mas rapido, como un acceso aleatorio, no es factible. Los arreglos
+tienen una mejor locazion comparados con las listas lazadas.
+
 
 ![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
-## Pseudocode for Basic Operations
+## Pseudocodigo para operacones basicas
 
-### Insert
+### Insertar
 
 ```text
 Add(value)
@@ -59,7 +59,7 @@ Prepend(value)
 end Prepend
 ```
 
-### Search
+### Buscar
 
 ```text
 Contains(head, value)
@@ -76,8 +76,8 @@ Contains(head, value)
   return true
 end Contains
 ```
-
-### Delete
+    
+### Borrar
 
 ```text
 Remove(head, value)
@@ -103,7 +103,6 @@ Remove(head, value)
   if n.next != ø
     if n.next = tail
       tail ← n
-      tail.next = null
     end if
     n.next ← n.next.next
     return true
@@ -112,7 +111,7 @@ Remove(head, value)
 end Remove
 ```
 
-### Traverse
+### Atrevesar
 
 ```text
 Traverse(head)
@@ -126,7 +125,7 @@ Traverse(head)
 end Traverse
 ```
 
-### Traverse in Reverse
+### Atravesar en Reversa
 
 ```text
 ReverseTraversal(head, tail)

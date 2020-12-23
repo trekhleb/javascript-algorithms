@@ -1,3 +1,5 @@
+import * as mtrx from '../../math/matrix/Matrix';
+
 // The code of an 'A' character (equals to 65).
 const alphabetCodeShift = 'A'.codePointAt(0);
 const englishAlphabetSize = 26;
@@ -15,33 +17,36 @@ const generateKeyMatrix = (keyString) => {
       'Invalid key string length. The square root of the key string must be an integer',
     );
   }
-  const keyMatrix = [];
   let keyStringIndex = 0;
-  for (let i = 0; i < matrixSize; i += 1) {
-    const keyMatrixRow = [];
-    for (let j = 0; j < matrixSize; j += 1) {
+  return mtrx.generate(
+    [matrixSize, matrixSize],
+    // Callback to get a value of each matrix cell.
+    // The order the matrix is being filled in is from left to right, from top to bottom.
+    () => {
       // A → 0, B → 1, ..., a → 32, b → 33, ...
       const charCodeShifted = (keyString.codePointAt(keyStringIndex)) % alphabetCodeShift;
-      keyMatrixRow.push(charCodeShifted);
       keyStringIndex += 1;
-    }
-    keyMatrix.push(keyMatrixRow);
-  }
-  return keyMatrix;
+      return charCodeShifted;
+    },
+  );
 };
 
 /**
  * Generates a message vector from a given message.
  *
  * @param {string} message - the message to encrypt.
- * @return {number[]} messageVector
+ * @return {number[][]} messageVector
  */
 const generateMessageVector = (message) => {
-  const messageVector = [];
-  for (let i = 0; i < message.length; i += 1) {
-    messageVector.push(message.codePointAt(i) % alphabetCodeShift);
-  }
-  return messageVector;
+  return mtrx.generate(
+    [message.length, 1],
+    // Callback to get a value of each matrix cell.
+    // The order the matrix is being filled in is from left to right, from top to bottom.
+    (cellIndices) => {
+      const rowIndex = cellIndices[0];
+      return message.codePointAt(rowIndex) % alphabetCodeShift;
+    },
+  );
 };
 
 /**
@@ -59,19 +64,17 @@ export function hillCipherEncrypt(message, keyString) {
   }
 
   const keyMatrix = generateKeyMatrix(keyString);
+  const messageVector = generateMessageVector(message);
 
   // keyString.length must equal to square of message.length
   if (keyMatrix.length !== message.length) {
     throw new Error('Invalid key string length. The key length must be a square of message length');
   }
 
-  const messageVector = generateMessageVector(message);
+  const cipherVector = mtrx.dot(keyMatrix, messageVector);
   let cipherString = '';
-  for (let row = 0; row < keyMatrix.length; row += 1) {
-    let item = 0;
-    for (let column = 0; column < keyMatrix.length; column += 1) {
-      item += keyMatrix[row][column] * messageVector[column];
-    }
+  for (let row = 0; row < cipherVector.length; row += 1) {
+    const item = cipherVector[row];
     cipherString += String.fromCharCode((item % englishAlphabetSize) + alphabetCodeShift);
   }
 
