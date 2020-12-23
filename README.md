@@ -129,9 +129,9 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Depth-First Search](src/algorithms/graph/depth-first-search) (DFS)
   * `B` [Breadth-First Search](src/algorithms/graph/breadth-first-search) (BFS)
   * `B` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - finding shortest paths to all graph vertices from single vertex
-  * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - finding shortest paths to all graph vertices from single vertex
-  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - find shortest paths between all pairs of vertices
+  * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - finding the shortest paths to all graph vertices from single vertex
+  * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - finding the shortest paths to all graph vertices from single vertex
+  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - find the shortest paths between all pairs of vertices
   * `A` [Detect Cycle](src/algorithms/graph/detect-cycle) - for both directed and undirected graphs (DFS and Disjoint Set based versions)
   * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
   * `A` [Topological Sorting](src/algorithms/graph/topological-sorting) - DFS method
@@ -157,6 +157,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem (dynamic programming and brute force versions)
   * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top (4 solutions)
+  * `B` [Best Time To Buy Sell Stocks](src/algorithms/uncategorized/best-time-to-buy-sell-stocks) - divide and conquer and one-pass examples
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
 
@@ -176,7 +177,7 @@ algorithm is an abstraction higher than a computer program.
 * **Greedy** - choose the best option at the current time, without any consideration for the future
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `A` [Unbound Knapsack Problem](src/algorithms/sets/knapsack-problem)
-  * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
+  * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - finding the shortest path to all graph vertices
   * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
   * `A` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
 * **Divide and Conquer** - divide the problem into smaller parts and then solve those parts
@@ -191,6 +192,7 @@ algorithm is an abstraction higher than a computer program.
   * `B` [Matrices](src/algorithms/math/matrix) - generating and traversing the matrices of different shapes
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `B` [Fast Powering](src/algorithms/math/fast-powering)
+  * `B` [Best Time To Buy Sell Stocks](src/algorithms/uncategorized/best-time-to-buy-sell-stocks) - divide and conquer and one-pass examples
   * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
   * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
 * **Dynamic Programming** - build up a solution using previously found sub-solutions
@@ -207,8 +209,8 @@ algorithm is an abstraction higher than a computer program.
   * `A` [0/1 Knapsack Problem](src/algorithms/sets/knapsack-problem)
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
-  * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
-  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - find shortest paths between all pairs of vertices
+  * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - finding the shortest path to all graph vertices
+  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - find the shortest paths between all pairs of vertices
   * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
 * **Backtracking** - similarly to brute force, try to generate all possible solutions, but each time you generate next solution you test
 if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise, backtrack, and go on a
