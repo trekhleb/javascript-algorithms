@@ -12,8 +12,6 @@ _Read this in other languages:_
 
 #### Set Bit
 
-> 查看[setBit.js](setBit.js)了解更多细节。
-
 该方法把`1`向左移动了`bitPosition`位，生成了一个二进制形如`00100`的值。然后我们拿该值与目标数字进行`OR`操作，就能把目标位设置位`1`而不影响其它位。
 
 > 查看[setBit.js](setBit.js)了解更多细节。
