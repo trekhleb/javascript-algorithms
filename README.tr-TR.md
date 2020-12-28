@@ -20,7 +20,8 @@ _Read this in other languages:_
 [_Português_](README.pt-BR.md),
 [_Русский_](README.ru-RU.md),
 [_Italiana_](README.it-IT.md),
-[_Bahasa Indonesia_](README.id-ID.md)
+[_Bahasa Indonesia_](README.id-ID.md),
+[_Українська_](README.uk-UA.md)
 
 *☝ Not, bu proje araştırma ve öğrenme amacı ile yapılmış
 olup üretim için **yaplılmamıştır**.*
