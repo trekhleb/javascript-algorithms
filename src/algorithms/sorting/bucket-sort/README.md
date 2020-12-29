@@ -2,7 +2,7 @@
 Bucket sort, or bin sort, is a sorting algorithm that works by distributing the elements of an array into a number of
 buckets. Bucket sort perform well on uniformly distributed lists.
 
-Note that due to the need for arithmetic operations, this type of sorting can only be used for numeric arrays. so comrator will be ignored.
+Note that due to the need for arithmetic operations, this type of sorting can only be used for numeric arrays. so comparator will be ignored.
 
 ## Complexity
 
