@@ -21,7 +21,7 @@ _Read this in other languages:_
 [_Português_](README.pt-BR.md),
 [_Русский_](README.ru-RU.md),
 [_Türk_](README.tr-TR.md),
-[_Italiana_](README.it-IT.md)
+[_Italiana_](README.it-IT.md),
 [_Arabic_](README.ar-ar.md)
 
 
