@@ -288,7 +288,7 @@ npm test -- 'playground'
 | **O(2^N)**     | 1024                         | 1.26e+29                      | 1.07e+301                       |
 | **O(N!)**      | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
 
-### Data Structure Operations Complexity
+### تعقيد عمليات بنية البيانات
 
 | Data Structure          | Access    | Search    | Insertion | Deletion  | Comments  |
 | ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- |
@@ -303,22 +303,22 @@ npm test -- 'playground'
 | **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
 | **Bloom Filter**        | -         | 1         | 1         | -         |الإيجابيات الكاذبة ممكنة أثناء البحث|
 
-### Array Sorting Algorithms Complexity
+### تعقيد خوارزميات فرز الصفيف
 
 | Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
 | --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
-| **Bubble sort**       | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
-| **Insertion sort**    | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
-| **Selection sort**    | n<sup>2</sup>   | n<sup>2</sup>       | n<sup>2</sup>       | 1         | No        |           |
-| **Heap sort**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |           |
-| **Merge sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Yes       |           |
+| **Bubble sort**       | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | نعم       |           |
+| **Insertion sort**    | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | نعم       |           |
+| **Selection sort**    | n<sup>2</sup>   | n<sup>2</sup>       | n<sup>2</sup>       | 1         | لا        |           |
+| **Heap sort**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | لا        |           |
+| **Merge sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | نعم       |           |
 | **Quick sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No        | عادةً ما يتم إجراء الفرز السريع في مكانه مع مساحة مكدس O (log (n))|
 | **Shell sort**        | n&nbsp;log(n)   | depends on gap sequence   | n&nbsp;(log(n))<sup>2</sup>  | 1         | لا       |           |
 | **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       |r - أكبر رقم في المجموعة|
 | **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Yes       | ك - طول أطول مفتاح |
 
-## Project Backers
+## مؤيدو المشروع
 
-> You may support this project via ❤️️ [GitHub](https://github.com/sponsors/trekhleb) or ❤️️ [Patreon](https://www.patreon.com/trekhleb).
+> يمكنك دعم هذا المشروع عبر ❤️️ [GitHub] (https://github.com/sponsors/trekhleb) أو ❤️️ [Patreon] (https://www.patreon.com/trekhleb).
 
-[Folks who are backing this project](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 1`
+[الناس الذين يدعمون هذا المشروع](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 1`
