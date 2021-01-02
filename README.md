@@ -22,7 +22,7 @@ _Read this in other languages:_
 [_Русский_](README.ru-RU.md),
 [_Türk_](README.tr-TR.md),
 [_Italiana_](README.it-IT.md),
-[_Arabic_](README.ar-ar.md)
+[_Arabic_](README.ar.AR.md)
 
 
 *☝ Note that this project is meant to be used for learning and researching purposes 
