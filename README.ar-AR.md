@@ -317,6 +317,6 @@ npm test -- 'playground'
 
 ## مؤيدو المشروع
 
-> يمكنك دعم هذا المشروع عبر ❤️️ [GitHub] (https://github.com/sponsors/trekhleb) أو ❤️️ [Patreon] (https://www.patreon.com/trekhleb).
+> يمكنك دعم هذا المشروع عبر ❤️️ [GitHub](https://github.com/sponsors/trekhleb) أو ❤️️ [Patreon](https://www.patreon.com/trekhleb).
 
 [الناس الذين يدعمون هذا المشروع](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 0`
