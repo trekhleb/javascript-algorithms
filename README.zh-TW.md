@@ -1,6 +1,6 @@
 # JavaScript 演算法與資料結構
 
-[![build status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
+[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
 這個知識庫包含許多 JavaScript 的資料結構與演算法的基礎範例。
@@ -17,7 +17,9 @@ _Read this in other languages:_
 [_Português_](README.pt-BR.md),
 [_Русский_](README.ru-RU.md),
 [_Türk_](README.tr-TR.md),
-[_Italiana_](README.it-IT.md)
+[_Italiana_](README.it-IT.md),
+[_Bahasa Indonesia_](README.id-ID.md),
+[_Українська_](README.uk-UA.md)
 
 ## 資料結構
 
