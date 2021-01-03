@@ -1,7 +1,7 @@
 # Bit Manipulation
 
 _Read this in other languages:_
-[français](README.fr-FR.md).
+[français](README.fr-FR.md),[简体中文](README.zh-CN.md).
 
 #### Get Bit
 

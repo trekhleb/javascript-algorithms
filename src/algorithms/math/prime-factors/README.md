@@ -1,5 +1,8 @@
 # Prime Factors
 
+_Read this in other languages:_
+[简体中文](README.zh-CN.md).
+
 **Prime number** is a whole number greater than `1` that **cannot** be made by multiplying other whole numbers. The first few prime numbers are: `2`, `3`, `5`, `7`, `11`, `13`, `17`, `19` and so on.
 
 If we **can** make it by multiplying other whole numbers it is a **Composite Number**.
