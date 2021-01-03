@@ -21,7 +21,8 @@ _Read this in other languages:_
 [_Русский_](README.ru-RU.md),
 [_Italiana_](README.it-IT.md),
 [_Bahasa Indonesia_](README.id-ID.md),
-[_Українська_](README.uk-UA.md)
+[_Українська_](README.uk-UA.md),
+[_Arabic_](README.ar-AR.md)
 
 *☝ Not, bu proje araştırma ve öğrenme amacı ile yapılmış
 olup üretim için **yaplılmamıştır**.*

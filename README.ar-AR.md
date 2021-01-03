@@ -67,7 +67,7 @@ _اقرأ هذا في لغات أخرى:_
 
 * **رياضيات**
   * `B` [معالجة البت](src/algorithms/math/bits)
-  * `B` [عاملي](src/algorithms/math/factorial) 
+  * `B` [عاملي](src/algorithms/math/factorial)
   * `B` [رقم فيبوناتشي](src/algorithms/math/fibonacci) - الإصدارات الكلاسيكية والمغلقة
   * `B` [اختبار البدائية](src/algorithms/math/primality-test) (طريقة تقسيم المحاكمة)
   * `B` [الخوارزمية الإقليدية](src/algorithms/math/euclidean-algorithm) - احسب القاسم المشترك الأكبر (GCD)
@@ -265,8 +265,6 @@ npm test -- 'playground'
 
 [▶ هياكل البيانات والخوارزميات على موقع يوتيوب](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 
-[▶ دورة كاملة في هياكل البيانات باللغة العربية](https://youtu.be/owCqVRbZlbg)
-
 ### Big O Notation
 
 * يتم استخدام **Big O notation** لتصنيف الخوارزميات وفقًا لكيفية نمو متطلبات وقت التشغيل أو المساحة مع نمو حجم الإدخال.
@@ -321,4 +319,4 @@ npm test -- 'playground'
 
 > يمكنك دعم هذا المشروع عبر ❤️️ [GitHub] (https://github.com/sponsors/trekhleb) أو ❤️️ [Patreon] (https://www.patreon.com/trekhleb).
 
-[الناس الذين يدعمون هذا المشروع](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 1`
+[الناس الذين يدعمون هذا المشروع](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 0`
