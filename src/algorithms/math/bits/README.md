@@ -1,7 +1,8 @@
 # Bit Manipulation
 
 _Read this in other languages:_
-[français](README.fr-FR.md).
+[français](README.fr-FR.md),
+[简体中文](README.zh-CN.md).
 
 #### Get Bit
 
@@ -263,7 +264,7 @@ B = 6: 110
 └──────┴────┴────┴─────────┴──────────┴─────────┴───────────┴───────────┘
 ```
 
-> See [fullAdder.js](fullAdder.js) for further details.  
+> See [fullAdder.js](fullAdder.js) for further details.
 > See [Full Adder on YouTube](https://www.youtube.com/watch?v=wvJc9CZcvBc&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8).
 
 ## References
