@@ -1,6 +1,6 @@
 # JavaScript 알고리즘 및 자료 구조
 
-[![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
+[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
 이 저장소에는 많이 알려진 알고리즘 및 자료 구조의 Javascript 기반 예제를 담고 있습니다.
@@ -16,13 +16,19 @@ _Read this in other languages:_
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),
+[_Русский_](README.ru-RU.md),
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md),
+[_Bahasa Indonesia_](README.id-ID.md),
+[_Українська_](README.uk-UA.md),
+[_Arabic_](README.ar-AR.md)
 
 ## 자료 구조
 
 자료 구조는 데이터를 특정 방식으로 구성하고 저장함으로써 더 효율적으로
 접근하고 수정할 수 있게 해줍니다. 간단히 말해, 자료 구조는 데이터 값들,
-데이터 간의 관계, 그리고 데이터를 다룰 수 있는 함수와 작업의 모임입니다. 
+데이터 간의 관계, 그리고 데이터를 다룰 수 있는 함수와 작업의 모임입니다.
 
 
 `B` - 입문자, `A` - 숙련자
@@ -47,8 +53,8 @@ _Read this in other languages:_
 
 ## 알고리즘
 
-알고리즘은 어떤 종류의 문제를 풀 수 있는 정확한 방법이며, 
-일련의 작업을 정확하게 정의해 놓은 규칙들입니다. 
+알고리즘은 어떤 종류의 문제를 풀 수 있는 정확한 방법이며,
+일련의 작업을 정확하게 정의해 놓은 규칙들입니다.
 
 `B` - 입문자, `A` - 숙련자
 
@@ -56,7 +62,7 @@ _Read this in other languages:_
 
 * **Math**
   * `B` [Bit Manipulation](src/algorithms/math/bits) - set/get/update/clear bits, 2의 곱 / 나누기, 음수로 만들기 etc.
-  * `B` [팩토리얼](src/algorithms/math/factorial) 
+  * `B` [팩토리얼](src/algorithms/math/factorial)
   * `B` [피보나치 수](src/algorithms/math/fibonacci)
   * `B` [소수 판별](src/algorithms/math/primality-test) (trial division 방식)
   * `B` [유클리드 호제법](src/algorithms/math/euclidean-algorithm) - 최대공약수 (GCD)
@@ -123,7 +129,7 @@ _Read this in other languages:_
 * **Uncategorized**
   * `B` [하노이 탑](src/algorithms/uncategorized/hanoi-tower)
   * `B` [정방 행렬 회전](src/algorithms/uncategorized/square-matrix-rotation) - 제자리(in-place) 알고리즘
-  * `B` [점프 게임](src/algorithms/uncategorized/jump-game) - 백트래킹, 동적계획법 (top-down + bottom-up), 탐욕 알고리즘 예제 
+  * `B` [점프 게임](src/algorithms/uncategorized/jump-game) - 백트래킹, 동적계획법 (top-down + bottom-up), 탐욕 알고리즘 예제
   * `B` [Unique 경로](src/algorithms/uncategorized/unique-paths) - 백트래킹, 동적계획법, 파스칼 삼각형에 기반한 예제
   * `B` [빗물 담기 문제](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem (동적계획법, 브루트포스 버전)
   * `A` [N-Queens 문제](src/algorithms/uncategorized/n-queens)

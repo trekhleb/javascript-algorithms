@@ -51,7 +51,7 @@ Remove(head, value)
     return true
   end if
   n ← head.next
-  while n = ø and value = n.value
+  while n = ø and value !== n.value
     n ← n.next
   end while
   if n = tail
