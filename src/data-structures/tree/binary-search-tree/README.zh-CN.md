@@ -1,43 +1,27 @@
-# Binary Search Tree
+# 二叉查找树（Binary Search Tree）
 
-_Read this in other languages:_
-[_Português_、[_简体中文_](README.zh-CN.md)](README.pt-BR.md)
+在计算机科学中, **二叉搜索树** (BST), 又称二叉查找树或二叉排序树, 是一种特殊的容器:
+来存储（如数字、名称等）“节点” 的数据结构.在存储中。它可以快速查找、添加和删除节点,可被用于动态添加节点,或者在表中通过键值查找项目 (例如: 通过名字查找一个人的手机号)
 
-In computer science, **binary search trees** (BST), sometimes called 
-ordered or sorted binary trees, are a particular type of container: 
-data structures that store "items" (such as numbers, names etc.) 
-in memory. They allow fast lookup, addition and removal of 
-items, and can be used to implement either dynamic sets of 
-items, or lookup tables that allow finding an item by its key 
-(e.g., finding the phone number of a person by name).
+二叉搜索树将它们的键按排序顺序保存，以便可以使用二分法的原理进行查找其他操作。
+在树中查找或插入新键时，从树的根遍历到叶，与存储在树的节点中的键进行比较，
+并根据比较结果决定继续在左子树或右子树中搜索。
+平均而言，这意味着每次比较都允许跳过大约一半树的操作，以便每次查找、插入或删除所需的时间与树中存储的项数的对数成正比。
+这比在（未排序的）数组中按键查找项所需的线性时间要好得多，但比哈希表上相应的操作要慢。
 
-Binary search trees keep their keys in sorted order, so that lookup 
-and other operations can use the principle of binary search: 
-when looking for a key in a tree (or a place to insert a new key), 
-they traverse the tree from root to leaf, making comparisons to 
-keys stored in the nodes of the tree and deciding, on the basis 
-of the comparison, to continue searching in the left or right 
-subtrees. On average, this means that each comparison allows 
-the operations to skip about half of the tree, so that each 
-lookup, insertion or deletion takes time proportional to the 
-logarithm of the number of items stored in the tree. This is 
-much better than the linear time required to find items by key 
-in an (unsorted) array, but slower than the corresponding 
-operations on hash tables.
 
-A binary search tree of size 9 and depth 3, with 8 at the root.
-The leaves are not drawn.
+这是一个深度为 **3**,数量为 **9**,根节点为**8**的二叉搜索树.叶子节点没有画出来。
 
 ![Binary Search Tree](https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg)
 
-## Pseudocode for Basic Operations
+## 基础操作的伪代码
 
-### Insertion
+### 插入（Insertion）
 
 ```text
 insert(value)
-  Pre: value has passed custom type checks for type T
-  Post: value has been placed in the correct location in the tree
+  Pre: value 已经通过自定义类型 T 检查
+  期望结果: value 已经被插入到树种正确位置
   if root = ø
     root ← node(value)
   else
@@ -48,8 +32,8 @@ end insert
 
 ```text
 insertNode(current, value)
-  Pre: current is the node to start from
-  Post: value has been placed in the correct location in the tree
+  Pre: current 是起始node
+  Post: value 已经被插入到树种正确位置
   if value < current.value
     if current.left = ø
       current.left ← node(value)
@@ -66,12 +50,12 @@ insertNode(current, value)
 end insertNode
 ```
 
-### Searching
+### 查找（Searching）
 
 ```text
 contains(root, value)
-  Pre: root is the root node of the tree, value is what we would like to locate
-  Post: value is either located or not
+  Pre: root 是树的根节点, value 是我们要查找的值
+  Post: value 是否查找到
   if root = ø
     return false
   end if
@@ -86,13 +70,12 @@ end contains
 ```
 
 
-### Deletion
+### 删除（Deletion）
 
 ```text
 remove(value)
-  Pre: value is the value of the node to remove, root is the node of the BST
-      count is the number of items in the BST
-  Post: node with value is removed if found in which case yields true, otherwise false
+  Pre: value 是我们要删除的值, root 是BST的节点, count 是BST 项 的数量
+  Post: value 节点如果被找到且被删除,结果为 true, 否则为 false
   nodeToRemove ← findNode(value)
   if nodeToRemove = ø
     return false
@@ -137,13 +120,13 @@ remove(value)
 end remove
 ```
 
-### Find Parent of Node
+### 查找父节点
 
 ```text
 findParent(value, root)
-  Pre: value is the value of the node we want to find the parent of
-       root is the root node of the BST and is != ø
-  Post: a reference to the parent node of value if found; otherwise ø
+  Pre: value 是我们要查找其父节点的节点值
+       root 是BST的根节点且不为 ø
+  Post: 如果找到找到父节点,返回其引用, 否则返回 ø
   if value = root.value
     return ø
   end if
@@ -167,13 +150,13 @@ findParent(value, root)
 end findParent
 ```
 
-### Find Node
+### 查找节点
 
 ```text
 findNode(root, value)
-  Pre: value is the value of the node we want to find the parent of
-       root is the root node of the BST
-  Post: a reference to the node of value if found; otherwise ø
+  Pre: value 要查找其父节点的节点的值
+       root 是BST的根节点
+  Post: 如果找到节点返回其引用, 否则返回 ø
   if root = ø
     return ø
   end if
@@ -187,13 +170,13 @@ findNode(root, value)
 end findNode
 ```
 
-### Find Minimum
+### 查找最小值
 
 ```text
 findMin(root)
-  Pre: root is the root node of the BST
-    root = ø
-  Post: the smallest value in the BST is located
+  Pre: root是BST的根节点
+       root = ø
+  Post: BST中的最小值位置
   if root.left = ø
     return root.value
   end if
@@ -201,13 +184,13 @@ findMin(root)
 end findMin
 ```
 
-### Find Maximum
+### 查找最大值
 
 ```text
 findMax(root)
-  Pre: root is the root node of the BST
+  Pre: root是BST的根节点
     root = ø
-  Post: the largest value in the BST is located
+  Post: BST中的最大值位置
   if root.right = ø
     return root.value
   end if
@@ -215,29 +198,33 @@ findMax(root)
 end findMax
 ```
 
-### Traversal
+### 遍历(Traversal)
 
-#### InOrder Traversal
+
+#### 中序遍历（Inorder traversal）
+> 中序遍历是从当前节点（节点 c）的左孩子开始访问，再访问当前节点，最后是其右节点。开始时，节点 c 为 BST 的根节点。算法如下：
 
 ```text
 inorder(root)
-  Pre: root is the root node of the BST
-  Post: the nodes in the BST have been visited in inorder
-  if root != ø
+  Pre: root是BST的根节点
+  Post: 中序遍历BST中的所有节点
+  if root = ø
     inorder(root.left)
     yield root.value
     inorder(root.right)
   end if
 end inorder
 ```
+则上图中树的遍历结果为：1, 3, 4, 6, 7, 8, 10, 13, 14
 
-#### PreOrder Traversal
+#### 前序遍历（Perorder traversal）
+> 前序遍历从当前节点（节点 c）开始访问，然后访问其左孩子，再访问右孩子。开始时，节点 c 为 BST 的根节点。算法如下：
 
 ```text
 preorder(root)
-  Pre: root is the root node of the BST
-  Post: the nodes in the BST have been visited in preorder
-  if root != ø
+  Pre: root是BST的根节点
+  Post: 前序遍历BST中的所有节点
+  if root = ø
     yield root.value
     preorder(root.left)
     preorder(root.right)
@@ -245,33 +232,37 @@ preorder(root)
 end preorder
 ```
 
-#### PostOrder Traversal
+则上图中树的遍历结果为：8, 3, 1, 6, 4, 7, 10, 13, 14
+
+#### 后序遍历（Postorder traversal）
+> 后序遍历首先从当前节点（节点 c）的左孩子开始访问，然后是右孩子，最后才是当前节点本身。开始时，节点 c 为 BST 的根节点。算法如下：
 
 ```text
 postorder(root)
-  Pre: root is the root node of the BST
-  Post: the nodes in the BST have been visited in postorder
-  if root != ø
+  Pre: root是BST的根节点
+  Post: 后序遍历BST中的所有节点
+  if root = ø
     postorder(root.left)
     postorder(root.right)
     yield root.value
   end if
 end postorder
 ```
+则上图中树的遍历结果为：1, 4, 7, 6, 3, 13, 14, 10, 8
 
-## Complexities
+## 复杂度（Complexities）
 
-### Time Complexity
+### 时间复杂度（Time Complexities）
 
-| Access    | Search    | Insertion | Deletion  |
+| 访问（Access）| 查找（Search）| 插入（Insertion） | 删除（Deletion）|
 | :-------: | :-------: | :-------: | :-------: |
 | O(log(n)) | O(log(n)) | O(log(n)) | O(log(n)) |
 
-### Space Complexity
+### 空间复杂度（Space Complexities）
 
 O(n)
 
-## References
+## 参考文档
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Binary_search_tree)
 - [Inserting to BST on YouTube](https://www.youtube.com/watch?v=wcIRPqTR3Kc&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=9&t=0s)
