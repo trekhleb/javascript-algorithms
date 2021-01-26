@@ -150,7 +150,6 @@ export default class Knapsack {
     }
   }
 
-
   // Solve unbounded knapsack problem.
   // Greedy approach.
   solveUnboundedKnapsackProblem() {

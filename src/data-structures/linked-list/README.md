@@ -4,23 +4,25 @@ _Read this in other languages:_
 [_简体中文_](README.zh-CN.md),
 [_Русский_](README.ru-RU.md),
 [_日本語_](README.ja-JP.md),
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),
+[_한국어_](README.ko-KR.md),
+[_Español_](README.es-ES.md),
 
-In computer science, a **linked list** is a linear collection 
-of data elements, in which linear order is not given by 
-their physical placement in memory. Instead, each 
-element points to the next. It is a data structure 
-consisting of a group of nodes which together represent 
-a sequence. Under the simplest form, each node is 
-composed of data and a reference (in other words, 
+In computer science, a **linked list** is a linear collection
+of data elements, in which linear order is not given by
+their physical placement in memory. Instead, each
+element points to the next. It is a data structure
+consisting of a group of nodes which together represent
+a sequence. Under the simplest form, each node is
+composed of data and a reference (in other words,
 a link) to the next node in the sequence. This structure
-allows for efficient insertion or removal of elements 
-from any position in the sequence during iteration. 
-More complex variants add additional links, allowing 
-efficient insertion or removal from arbitrary element 
-references. A drawback of linked lists is that access 
-time is linear (and difficult to pipeline). Faster 
-access, such as random access, is not feasible. Arrays 
+allows for efficient insertion or removal of elements
+from any position in the sequence during iteration.
+More complex variants add additional links, allowing
+efficient insertion or removal from arbitrary element
+references. A drawback of linked lists is that access
+time is linear (and difficult to pipeline). Faster
+access, such as random access, is not feasible. Arrays
 have better cache locality as compared to linked lists.
 
 ![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
@@ -74,7 +76,7 @@ Contains(head, value)
   return true
 end Contains
 ```
-    
+
 ### Delete
 
 ```text
@@ -101,6 +103,7 @@ Remove(head, value)
   if n.next != ø
     if n.next = tail
       tail ← n
+      tail.next = null
     end if
     n.next ← n.next.next
     return true

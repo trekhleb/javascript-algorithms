@@ -5,14 +5,14 @@ export default class InsertionSort extends Sort {
     const array = [...originalArray];
 
     // Go through all array elements...
-    for (let i = 0; i < array.length; i += 1) {
+    for (let i = 1; i < array.length; i += 1) {
       let currentIndex = i;
 
       // Call visiting callback.
       this.callbacks.visitingCallback(array[i]);
 
-      // Go and check if previous elements and greater then current one.
-      // If this is the case then swap that elements.
+      // Check if previous element is greater than current element.
+      // If so, swap the two elements.
       while (
         array[currentIndex - 1] !== undefined
         && this.comparator.lessThan(array[currentIndex], array[currentIndex - 1])
@@ -21,9 +21,13 @@ export default class InsertionSort extends Sort {
         this.callbacks.visitingCallback(array[currentIndex - 1]);
 
         // Swap the elements.
-        const tmp = array[currentIndex - 1];
-        array[currentIndex - 1] = array[currentIndex];
-        array[currentIndex] = tmp;
+        [
+          array[currentIndex - 1],
+          array[currentIndex],
+        ] = [
+          array[currentIndex],
+          array[currentIndex - 1],
+        ];
 
         // Shift current index left.
         currentIndex -= 1;

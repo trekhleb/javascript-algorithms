@@ -94,7 +94,7 @@ describe('DisjointSet', () => {
   });
 
   it('should do basic manipulations on disjoint set with custom key extractor', () => {
-    const keyExtractor = value => value.key;
+    const keyExtractor = (value) => value.key;
 
     const disjointSet = new DisjointSet(keyExtractor);
 

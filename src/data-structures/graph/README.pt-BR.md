@@ -1,20 +1,20 @@
-# Gráfico (Graph)
+# Grafo (Graph)
 
-Na ciência da computação, um **gráfico** é uma abstração de estrutura
+Na ciência da computação, um **grafo** é uma abstração de estrutura
 de dados que se destina a implementar os conceitos da matemática de
-gráficos direcionados e não direcionados, especificamente o campo da
-teoria dos gráficos.
+grafos direcionados e não direcionados, especificamente o campo da
+teoria dos grafos.
 
-Uma estrutura de dados gráficos consiste em um finito (e possivelmente
+Uma estrutura de dados grafos consiste em um finito (e possivelmente
 mutável) conjunto de vértices, nós ou pontos, juntos com um
-conjunto de pares não ordenados desses vértices para um gráfico não
-direcionado ou para um conjunto de pares ordenados para um gráfico
+conjunto de pares não ordenados desses vértices para um grafo não
+direcionado ou para um conjunto de pares ordenados para um grafo
 direcionado. Esses pares são conhecidos como arestas, arcos
-ou linhas diretas para um gráfico não direcionado e como setas,
+ou linhas diretas para um grafo não direcionado e como setas,
 arestas direcionadas, arcos direcionados ou linhas direcionadas
-para um gráfico direcionado.
+para um grafo direcionado.
 
-Os vértices podem fazer parte a estrutura do gráfico, ou podem
+Os vértices podem fazer parte a estrutura do grafo, ou podem
 ser entidades externas representadas por índices inteiros ou referências.
 
 ![Graph](https://www.tutorialspoint.com/data_structures_algorithms/images/graph.jpg)
