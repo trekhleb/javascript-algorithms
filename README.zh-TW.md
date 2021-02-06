@@ -17,7 +17,10 @@ _Read this in other languages:_
 [_Português_](README.pt-BR.md),
 [_Русский_](README.ru-RU.md),
 [_Türk_](README.tr-TR.md),
-[_Italiana_](README.it-IT.md)
+[_Italiana_](README.it-IT.md),
+[_Bahasa Indonesia_](README.id-ID.md),
+[_Українська_](README.uk-UA.md),
+[_Arabic_](README.ar-AR.md)
 
 ## 資料結構
 
