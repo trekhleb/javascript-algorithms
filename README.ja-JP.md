@@ -1,6 +1,6 @@
 # JavaScriptアルゴリズムとデータ構造
 
-[![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
+[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
 このリポジトリには、JavaScriptベースの一般的なアルゴリズムとデータ構造に関する多数のサンプルが含まれています。
@@ -17,7 +17,13 @@ _Read this in other languages:_
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),
+[_Русский_](README.ru-RU.md),
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md),
+[_Bahasa Indonesia_](README.id-ID.md),
+[_Українська_](README.uk-UA.md),
+[_Arabic_](README.ar-AR.md)
 
 ## データ構造
 
@@ -57,7 +63,7 @@ _Read this in other languages:_
 
 * **数学**
   * `B` [ビット操作](src/algorithms/math/bits) - set/get/update/clear bits, 2つの乗算/除算, 否定的にする. 等
-  * `B` [因果関係](src/algorithms/math/factorial) 
+  * `B` [因果関係](src/algorithms/math/factorial)
   * `B` [フィボナッチ数](src/algorithms/math/fibonacci) - クラシックとクローズドフォームのバージョン
   * `B` [素数性テスト](src/algorithms/math/primality-test) (trial division 方法)
   * `B` [ユークリッドアルゴリズム](src/algorithms/math/euclidean-algorithm) - 最大公約数を計算する (GCD)
@@ -115,7 +121,7 @@ _Read this in other languages:_
 * **グラフ**
   * `B` [深度優先検索](src/algorithms/graph/depth-first-search) (DFS)
   * `B` [幅優先検索](src/algorithms/graph/breadth-first-search) (BFS)
-  * `B` [Kruskalのアルゴリズム](src/algorithms/graph/kruskal) - 重み付き無向グラフの最小スパニングツリー（MST）の発見 
+  * `B` [Kruskalのアルゴリズム](src/algorithms/graph/kruskal) - 重み付き無向グラフの最小スパニングツリー（MST）の発見
   * `A` [Dijkstraアルゴリズム](src/algorithms/graph/dijkstra) - 単一の頂点からすべてのグラフ頂点への最短経路を見つける
   * `A` [Bellman-Fordアルゴリズム](src/algorithms/graph/bellman-ford) - 単一の頂点からすべてのグラフ頂点への最短経路を見つける
   * `A` [Floyd-Warshallアルゴリズム](src/algorithms/graph/floyd-warshall) - すべての頂点ペア間の最短経路を見つける

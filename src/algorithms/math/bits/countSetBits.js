@@ -11,7 +11,7 @@ export default function countSetBits(originalNumber) {
     setBitsCount += number & 1;
 
     // Shift number right by one bit to investigate other bits.
-    number >>= 1;
+    number >>>= 1;
   }
 
   return setBitsCount;

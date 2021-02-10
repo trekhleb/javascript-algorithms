@@ -1,13 +1,13 @@
 # JavaScript Algorytmy i Struktury Danych
 
-[![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
+[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
-To repozytorium zawiera wiele przykładów JavaScript opartych na 
+To repozytorium zawiera wiele przykładów JavaScript opartych na
 znanych algorytmach i strukturach danych.
 
 Każdy algorytm i struktura danych zawiera osobny plik README
-wraz z powiązanymi wyjaśnieniami i odnośnikami do dalszego czytania 
+wraz z powiązanymi wyjaśnieniami i odnośnikami do dalszego czytania
 (włącznie z tymi do YouTube videos).
 
 _Read this in other languages:_
@@ -18,14 +18,20 @@ _Read this in other languages:_
 [_日本語_](README.ja-JP.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),
+[_Русский_](README.ru-RU.md),
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md),
+[_Bahasa Indonesia_](README.id-ID.md),
+[_Українська_](README.uk-UA.md),
+[_Arabic_](README.ar-AR.md)
 
 ## Struktury Danych
 
-Struktura danych to sposób uporządkowania i przechowywania informacji w 
+Struktura danych to sposób uporządkowania i przechowywania informacji w
 komputerze żeby mogłaby być sprawnie dostępna i efektywnie zmodyfikowana.
-Dokładniej, struktura danych jest zbiorem wartości danych, relacjami 
-pomiędzy nimi, zadaniami lub działaniami, które mogą dotyczyć danych. 
+Dokładniej, struktura danych jest zbiorem wartości danych, relacjami
+pomiędzy nimi, zadaniami lub działaniami, które mogą dotyczyć danych.
 
 `B` - Początkujący, `A` - Zaawansowany
 
@@ -49,8 +55,8 @@ pomiędzy nimi, zadaniami lub działaniami, które mogą dotyczyć danych.
 
 ## Algorytmy
 
-Algorytm jest to skończony ciąg jasno zdefiniowanych czynności, koniecznych 
-do wykonania pewnego rodzaju zadań. Sposób postępowania prowadzący do 
+Algorytm jest to skończony ciąg jasno zdefiniowanych czynności, koniecznych
+do wykonania pewnego rodzaju zadań. Sposób postępowania prowadzący do
 rozwiązania problemu.
 
 `B` - Początkujący, `A` - Zaawansowany
@@ -59,7 +65,7 @@ rozwiązania problemu.
 
 * **Matematyka**
   * `B` [Manipulacja Bitami](src/algorithms/math/bits) - ustaw / uzyskaj / aktualizuj / usuwaj bity, mnożenie / dzielenie przez dwa, tworzenie negatywów itp.
-  * `B` [Silna](src/algorithms/math/factorial) 
+  * `B` [Silna](src/algorithms/math/factorial)
   * `B` [Ciąg Fibonacciego](src/algorithms/math/fibonacci)
   * `B` [Test Pierwszorzędności](src/algorithms/math/primality-test) (metoda podziału na próby)
   * `B` [Algorytm Euclideana](src/algorithms/math/euclidean-algorithm) - obliczyć Największy Wspólny Dzielnik (GCD)
@@ -78,9 +84,9 @@ rozwiązania problemu.
   * `A` [Najdłuższa Wspólna Podsekwencja](src/algorithms/sets/longest-common-subsequence) (LCS)
   * `A` [Najdłuższa Wzrostająca Podsekwencja](src/algorithms/sets/longest-increasing-subsequence)
   * `A` [Najkrótsza Wspólna Supersekwencja](src/algorithms/sets/shortest-common-supersequence) (SCS)
-  * `A` [Problem Knapsacka](src/algorithms/sets/knapsack-problem) - "0/1" i "Rozwiązany" 
+  * `A` [Problem Knapsacka](src/algorithms/sets/knapsack-problem) - "0/1" i "Rozwiązany"
   * `A` [Maksymalna Podtablica](src/algorithms/sets/maximum-subarray) - "Metoda Siłowa" i "Dynamiczne Programowanie" (Kadane-a) wersje
-  * `A` [Suma Kombinacji](src/algorithms/sets/combination-sum) - 
+  * `A` [Suma Kombinacji](src/algorithms/sets/combination-sum) -
 znajdź wszystkie kombinacje, które tworzą określoną sumę
 * **Łańcuchy**
   * `B` [Odległość Hamminga](src/algorithms/string/hamming-distance) - liczba pozycji, w których symbole są różne
@@ -117,26 +123,26 @@ znajdź wszystkie kombinacje, które tworzą określoną sumę
   * `A` [Algorytm Floyd-Warshalla](src/algorithms/graph/floyd-warshall) - znajdź najkrótsze ścieżki między wszystkimi parami wierzchołków
   * `A` [Detect Cycle](src/algorithms/graph/detect-cycle) - zarówno dla wykresów skierowanych, jak i nieukierunkowanych(wersje oparte na DFS i Rozłączny Zestaw)
   * `A` [Algorytm Prima](src/algorithms/graph/prim) - znalezienie Minimalnego Drzewa Opinającego (MST) dla ważonego nieukierunkowanego wykresu
-  * `A` [Sortowanie Topologiczne](src/algorithms/graph/topological-sorting) - metoda DFS 
+  * `A` [Sortowanie Topologiczne](src/algorithms/graph/topological-sorting) - metoda DFS
   * `A` [Punkty Artykulacji](src/algorithms/graph/articulation-points) - Algorytm Tarjana (oparty o DFS)
-  * `A` [Mosty](src/algorithms/graph/bridges) - Oparty na algorytmie DFS 
+  * `A` [Mosty](src/algorithms/graph/bridges) - Oparty na algorytmie DFS
   * `A` [Ścieżka Euleriana i Obwód Euleriana](src/algorithms/graph/eulerian-path) - Algorytm Fleurya - Odwiedź każdą krawędź dokładnie raz
   * `A` [Cykl Hamiltoniana](src/algorithms/graph/hamiltonian-cycle) - Odwiedź każdy wierzchołek dokładnie raz
-  * `A` [Silnie Połączone Komponenty](src/algorithms/graph/strongly-connected-components) - Algorytm Kosaraja 
+  * `A` [Silnie Połączone Komponenty](src/algorithms/graph/strongly-connected-components) - Algorytm Kosaraja
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - najkrótsza ścieżka która odwiedza każde miasto i wraca miasta początkującego
 * **Niezkategorizowane**
   * `B` [Wieża Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Kwadratowa Matryca Obrotu](src/algorithms/uncategorized/square-matrix-rotation) - algorytm w miejscu
-  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - cofanie, dynamiczne programowanie (od góry do dołu + od dołu do góry) i przykłady chciwego  
+  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - cofanie, dynamiczne programowanie (od góry do dołu + od dołu do góry) i przykłady chciwego
   * `B` [Unikatowe Ścieżki](src/algorithms/uncategorized/unique-paths) - cofanie, dynamiczne programowanie i przykłady oparte na Trójkącie Pascala
   * `A` [Problem N-Queens](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
 
 ### Algorytmy według paradygmatu
 
-Paradygmat algorytmiczny jest ogólną metodą lub podejściem, które jest 
-podstawą projektowania klasy algorytmów. Jest abstrakcją wyższą niż 
-pojęcie algorytmu, podobnie jak algorytm jest abstrakcją wyższą niż 
+Paradygmat algorytmiczny jest ogólną metodą lub podejściem, które jest
+podstawą projektowania klasy algorytmów. Jest abstrakcją wyższą niż
+pojęcie algorytmu, podobnie jak algorytm jest abstrakcją wyższą niż
 program komputerowy.
 
 * **Metoda Siłowa** - Sprawdza wszystkie możliwosci i wybiera  najlepsze rozwiązanie.
@@ -146,7 +152,7 @@ program komputerowy.
 * **Chciwy** - wybierz najlepszą opcję w obecnym czasie, bez względu na przyszłość
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `A` [Niezwiązany Problem Knapsacka ](src/algorithms/sets/knapsack-problem)
-  * `A` [Algorytm Dijkstry](src/algorithms/graph/dijkstra) - 
+  * `A` [Algorytm Dijkstry](src/algorithms/graph/dijkstra) -
 znalezienie najkrótszej ścieżki do wszystkich wierzchołków grafu
   * `A` [Algorytm Prima](src/algorithms/graph/prim) - znalezienie Minimalnego Drzewa Opinającego (MST) dla ważonego nieukierunkowanego wykresu
   * `A` [Algorytm Kruskala](src/algorithms/graph/kruskal) - znalezienie Minimalnego Drzewa Opinającego (MST) dla ważonego nieukierunkowanego wykresu
@@ -175,7 +181,7 @@ znalezienie najkrótszej ścieżki do wszystkich wierzchołków grafu
   * `A` [Partycja Całkowita](src/algorithms/math/integer-partition)
   * `A` [Maksymalne Podtablice](src/algorithms/sets/maximum-subarray)
   * `A` [Algorytm Bellman-Forda](src/algorithms/graph/bellman-ford) - znalezienie najkrótszej ścieżki wszystkich wierzchołków wykresu
-  * `A` [Algorytm Floyd-Warshalla](src/algorithms/graph/floyd-warshall) - 
+  * `A` [Algorytm Floyd-Warshalla](src/algorithms/graph/floyd-warshall) -
 znajdź najkrótsze ścieżki między wszystkimi parami wierzchołków
   * `A` [Dopasowanie Wyrażeń Regularnych](src/algorithms/string/regular-expression-matching)
 * **Algorytm z nawrotami** - podobny do metody siłowej, próbuje wygenerować wszystkie możliwe rozwiązania, jednak za każdym razem generujesz następne rozwiązanie które testujesz
@@ -189,7 +195,7 @@ jeżeli zaspokaja wszystkie warunki, tylko wtedy generuje kolejne rozwiązania. 
 * **Metoda Podziału i Ograniczeń** - Pamięta o niskonakładowym rozwiązaniu znalezionym na każdym etapie szukania nawrotu,
 używa kosztu niskonakładowego kosztu, które dotychczas zostało znalezione jako niska granica najmniejszego kosztu
 do rozwiązanie problemu, aby odrzucić cząstkowe rozwiązania o kosztach większych niż niskonakładowe
-rozwiązanie znalezione do tej pory. 
+rozwiązanie znalezione do tej pory.
 Zazwyczan trajektoria BFS, w połączeniu z trajektorią Przeszukiwania W Głąb (DFS) drzewa przestrzeni stanów jest użyte.
 
 ## Jak używać repozytorium
@@ -222,7 +228,7 @@ npm test -- 'LinkedList'
 Możesz pociwiczyć ze strukturą danych i algorytmami w `./src/playground/playground.js` zakartotekuj i napisz
 testy do tego w `./src/playground/__test__/playground.test.js`.
 
-Następnie uruchom następującą komendę w celu przetestowania czy twoje kod działa według oczekiwań: 
+Następnie uruchom następującą komendę w celu przetestowania czy twoje kod działa według oczekiwań:
 
 ```
 npm test -- 'playground'
@@ -236,7 +242,7 @@ npm test -- 'playground'
 
 ### Big O Notacja
 
-Kolejność wzrastania algorytmów według Big O notacji. 
+Kolejność wzrastania algorytmów według Big O notacji.
 
 ![Big O grafy](./assets/big-o-graph.png)
 
