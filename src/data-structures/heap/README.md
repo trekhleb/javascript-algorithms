@@ -20,7 +20,7 @@ key of `C`.
 In a *max heap*, the key of `P` is greater than or equal
 to the key of `C`
 
-![Heap](https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg)
+![Heap](https://user-images.githubusercontent.com/17690376/107872731-50a35100-6ed2-11eb-93bc-0a8a25243e18.jpg)
 
 The node at the "top" of the heap with no parents is 
 called the root node.

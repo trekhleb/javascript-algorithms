@@ -8,7 +8,7 @@
 
 在一个  *最大堆(max heap)* 中,  `P` 的key(或value)大于 `C` 的对应值。
 
-![堆](https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg)
+![堆](https://user-images.githubusercontent.com/17690376/107872731-50a35100-6ed2-11eb-93bc-0a8a25243e18.jpg)
 
 
 在堆“顶部”的没有父级节点的节点,被称之为根节点。
