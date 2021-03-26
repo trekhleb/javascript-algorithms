@@ -352,7 +352,7 @@ export const power = (m, n) => {
   let e = n;
   let P = identity(m.length);
   while (e !== 0) {
-    if (n % 2 === 1) {
+    if (e % 2 === 1) {
       P = dot(P, base);
     }
     base = dot(base, base);

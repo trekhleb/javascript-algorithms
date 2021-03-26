@@ -277,16 +277,6 @@ describe('Matrix', () => {
     ]);
   });
 
-  it('should not power a matrix that is not squared', () => {
-    expect(mtrx.power([
-      [1, 2],
-      [2, 3],
-    ], 4)).toEqual([
-      [89, 144],
-      [144, 233],
-    ]);
-  });
-
   it('should throw when trying to transpose non 2D matrix', () => {
     expect(() => {
       mtrx.t([[[1]]]);
