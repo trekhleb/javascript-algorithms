@@ -1,7 +1,23 @@
 {
   "root": true,
-  "extends": "airbnb",
-  "plugins": ["jest"],
+  "extends": ["airbnb", "plugin:markdown/recommended"],
+  "plugins": ["jest", "markdown"],
+  "overrides": [
+    {
+        // 2. Enable the Markdown processor for all .md files.
+        "files": ["**/*.md"],
+        "processor": "markdown/markdown"
+    },
+    {
+        // 3. Optionally, customize the configuration ESLint uses for ```js
+        // fenced code blocks inside .md files.
+        "files": ["**/*.md/*.js"],
+        // ...
+        "rules": {
+            // ...
+        }
+    }
+],
   "env": {
     "jest/globals": true
   },
@@ -12,4 +28,6 @@
     "arrow-body-style": "off",
     "no-loop-func": "off"
   }
+
 }
+
