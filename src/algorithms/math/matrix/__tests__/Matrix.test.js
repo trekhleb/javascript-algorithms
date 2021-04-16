@@ -480,4 +480,10 @@ describe('Matrix', () => {
       'Matrices have different shapes',
     );
   });
+
+  it('should throw when raising matrix to negative power', () => {
+    expect(() => mtrx.power([[1, 2], [3, 4]], -2)).toThrowError(
+      'Negative exponent not supported',
+    );
+  });
 });

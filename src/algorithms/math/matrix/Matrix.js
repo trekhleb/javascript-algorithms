@@ -337,6 +337,13 @@ export const sub = (a, b) => {
 };
 
 /**
+ * Computes the inverse of square matrix
+ *
+ * @param {Matrix} m
+ * @return {Matrix}
+ */
+
+/**
  * Power a square matrix by a number n
  *
  * @param {Matrix} m
@@ -344,12 +351,10 @@ export const sub = (a, b) => {
  * @return {Matrix}
  */
 export const power = (m, n) => {
+  if (n < 0) throw new Error('Negative exponent not supported');
   validate2DSquare(m);
-  if (n < 0) {
-    throw new Error('Cannot raise Matrix to negative power');
-  }
-  let base = m;
   let e = n;
+  let base = m;
   let P = identity(m.length);
   while (e !== 0) {
     if (e % 2 === 1) {
@@ -358,6 +363,5 @@ export const power = (m, n) => {
     base = dot(base, base);
     e >>= 1;
   }
-
   return P;
 };
