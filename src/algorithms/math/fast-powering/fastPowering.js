@@ -14,6 +14,13 @@ export default function fastPowering(base, power) {
     return 1;
   }
 
+  if (power < 0) {
+    // if power is negative, then powerNext must be inverted
+    const powerNext = power * -1;
+    const baseNext = 1 / base;
+    return fastPowering(baseNext, powerNext);
+  }
+
   if (power % 2 === 0) {
     // If the power is even...
     // we may recursively redefine the result via twice smaller powers:
