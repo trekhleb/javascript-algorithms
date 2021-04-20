@@ -7,7 +7,8 @@
     "lint": "eslint ./src/**",
     "test": "jest",
     "coverage": "npm run test -- --coverage",
-    "ci": "npm run lint && npm run coverage"
+    "ci": "npm run lint && npm run coverage",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
