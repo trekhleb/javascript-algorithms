@@ -79,7 +79,8 @@ describe('resizeImageWidth', () => {
       expect(imgDataTest.width).toBe(imgAfter.width);
       expect(imgDataTest.height).toBe(imgAfter.height);
 
-      const colorThreshold = 50;
+      const pixelsTreshold = 50;
+      const colorThreshold = 100;
       const differentPixels = pixelsDiff(imgDataTest, imgDataAfter, colorThreshold);
       expect(differentPixels).toBe(0);
     });
