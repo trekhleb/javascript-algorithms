@@ -79,10 +79,13 @@ describe('resizeImageWidth', () => {
       expect(imgDataTest.width).toBe(imgAfter.width);
       expect(imgDataTest.height).toBe(imgAfter.height);
 
-      const pixelsTreshold = 50;
-      const colorThreshold = 100;
+      const colorThreshold = 50;
       const differentPixels = pixelsDiff(imgDataTest, imgDataAfter, colorThreshold);
-      expect(differentPixels).toBe(0);
+
+      // Allow 10% of pixels to be different
+      const pixelsThreshold = Math.floor(imgAfter.width * imgAfter.height);
+
+      expect(differentPixels).toBeLessThanOrEqual(pixelsThreshold);
     });
   });
 });
