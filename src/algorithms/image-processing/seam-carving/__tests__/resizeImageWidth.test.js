@@ -83,7 +83,7 @@ describe('resizeImageWidth', () => {
       const differentPixels = pixelsDiff(imgDataTest, imgDataAfter, colorThreshold);
 
       // Allow 10% of pixels to be different
-      const pixelsThreshold = Math.floor(imgAfter.width * imgAfter.height);
+      const pixelsThreshold = Math.floor((imgAfter.width * imgAfter.height) / 10);
 
       expect(differentPixels).toBeLessThanOrEqual(pixelsThreshold);
     });
