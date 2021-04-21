@@ -236,6 +236,7 @@ tree is being used.
 ## How to use this repository
 
 **Install all dependencies**
+
 ```
 npm install
 ```
@@ -249,13 +250,24 @@ npm run lint
 ```
 
 **Run all tests**
+
 ```
 npm test
 ```
 
 **Run tests by name**
+
 ```
 npm test -- 'LinkedList'
+```
+
+**Troubleshooting**
+
+In case if linting or testing is failing try to delete the `node_modules` folder and re-install npm packages:
+
+```
+rm -rf ./node_modules
+npm i
 ```
 
 **Playground**
