@@ -1,5 +1,6 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+# @TODO: Implement the pre-commit checks.
 # npm run lint
 # npm run test
