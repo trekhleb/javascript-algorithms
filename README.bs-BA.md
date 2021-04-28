@@ -1,14 +1,15 @@
-# JavaScript Algoritmi i Strukture podataka
+# JavaScript Algoritmi i Strukture podataka 
+# IN PROGRESS...
 
 [![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
-This repository contains JavaScript based examples of many
-popular algorithms and data structures.
 
-Each algorithm and data structure has its own separate README
-with related explanations and links for further reading (including ones
-to YouTube videos).
+Ovaj repozitorij sadrzi JavaScript bazirane primjere od vise
+popularnih Algoritama i Struktura podataka.
+
+Svaki Algoritam i Struktura podataka ima svoj vlastiti, poseban README
+koji je povezan sa objasnjenjima i linkovima za dalje citanje (ukljucujuci i Youtube video materijale).
 
 _Read this in other languages:_
 [_简体中文_](README.zh-CN.md),
@@ -28,8 +29,9 @@ _Read this in other languages:_
 
 *☝ Note that this project is meant to be used for learning and researching purposes
 only, and it is **not** meant to be used for production.*
+*☝ Ovaj projekt je osmisljen da se koristi iskljucivo u svrhe ucenja i nacunog istrazivanja, i **nije** osmisljen da bude koristen u produkciji.*
 
-## Data Structures
+## Strukture Podataka 
 
 A data structure is a particular way of organizing and storing data in a computer so that it can
 be accessed and modified efficiently. More precisely, a data structure is a collection of data
