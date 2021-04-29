@@ -11,32 +11,31 @@ popularnih Algoritama i Struktura podataka.
 Svaki Algoritam i Struktura podataka ima svoj vlastiti, poseban README
 koji je povezan sa objasnjenjima i linkovima za dalje citanje (ukljucujuci i Youtube video materijale).
 
-_Read this in other languages:_
+_procitajte na drugim jezicima:_
+[_Arabic_](README.ar-AR.md),
+[_Türk_](README.tr-TR.md),
+[_Русский_](README.ru-RU.md),
+[_Français_](README.fr-FR.md),
+[_Italiana_](README.it-IT.md),
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
 [_日本語_](README.ja-JP.md),
 [_Polski_](README.pl-PL.md),
-[_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md),
-[_Русский_](README.ru-RU.md),
-[_Türk_](README.tr-TR.md),
-[_Italiana_](README.it-IT.md),
 [_Bahasa Indonesia_](README.id-ID.md),
 [_Українська_](README.uk-UA.md),
-[_Arabic_](README.ar-AR.md)
 
-*☝ Note that this project is meant to be used for learning and researching purposes
-only, and it is **not** meant to be used for production.*
+
 *☝ Ovaj projekt je osmisljen da se koristi iskljucivo u svrhe ucenja i nacunog istrazivanja, i **nije** osmisljen da bude koristen u produkciji.*
 
 ## Strukture Podataka 
 
-A data structure is a particular way of organizing and storing data in a computer so that it can
-be accessed and modified efficiently. More precisely, a data structure is a collection of data
-values, the relationships among them, and the functions or operations that can be applied to
-the data.
+Struktura podataka je poseban način organiziranja i pohranjivanja podataka u računar kako bi istim
+mogloe ofikasno pristupiti i mijenjati. Preciznije, struktura podataka je zbirka podataka
+vrijednosti, odnosa među njima, funkcije ili operacije koje se mogu primijeniti na
+podatke.
 
 `B` - Beginner, `A` - Advanced
 
@@ -58,20 +57,20 @@ the data.
 * `A` [Disjoint Set](src/data-structures/disjoint-set)
 * `A` [Bloom Filter](src/data-structures/bloom-filter)
 
-## Algorithms
+## Algoritmi
 
-An algorithm is an unambiguous specification of how to solve a class of problems. It is
-a set of rules that precisely define a sequence of operations.
+Algoritam je nedvosmislena specifikacija kako riješiti klasu problema. To je
+skup pravila koja precizno definiraju niz operacija.
 
 `B` - Beginner, `A` - Advanced
 
-### Algorithms by Topic
+### Algoritmi po temama
 
 * **Math**
-  * `B` [Bit Manipulation](src/algorithms/math/bits) - set/get/update/clear bits, multiplication/division by two, make negative etc.
+  * `B` [Bit Manipulation](src/algorithms/math/bits) - postaviti / dobiti / ažurirati / očistiti bitove, množenje / dijeljenje sa dva, napraviti negativne itd
   * `B` [Factorial](src/algorithms/math/factorial)
-  * `B` [Fibonacci Number](src/algorithms/math/fibonacci) - classic and closed-form versions
-  * `B` [Prime Factors](src/algorithms/math/prime-factors) - finding prime factors and counting them using Hardy-Ramanujan's theorem
+  * `B` [Fibonacci Number](src/algorithms/math/fibonacci) - klasične verzije i verzije zatvorenog oblika
+  * `B` [Prime Factors](src/algorithms/math/prime-factors) - pronalaženje glavnih faktora i njihovo brojanje pomoću Hardy-Ramanujanove teoreme
   * `B` [Primality Test](src/algorithms/math/primality-test) (trial division method)
   * `B` [Euclidean Algorithm](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
   * `B` [Least Common Multiple](src/algorithms/math/least-common-multiple) (LCM)
