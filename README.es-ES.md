@@ -23,7 +23,8 @@ _Léelo en otros idiomas:_
 [_Italiana_](README.it-IT.md),
 [_Bahasa Indonesia_](README.id-ID.md),
 [_Українська_](README.uk-UA.md),
-[_Arabic_](README.ar-AR.md)
+[_Arabic_](README.ar-AR.md),
+[_Deutsch_](README.de-DE.md)
 
 *☝ Nótese que este proyecto está pensado con fines de aprendizaje e investigación,
 y **no** para ser usado en producción.*
