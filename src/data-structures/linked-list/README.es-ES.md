@@ -145,19 +145,19 @@ ReverseTraversal(head, tail)
 end ReverseTraversal
 ```
 
-## Complexities
+## Complejidades
 
-### Time Complexity
+### Complejidad del Tiempo
 
 | Access | Search | Insertion | Deletion |
 | :----: | :----: | :-------: | :------: |
 |  O(n)  |  O(n)  |   O(1)    |   O(n)   |
 
-### Space Complexity
+### Complejidad Espacial
 
 O(n)
 
-## References
+## Referencias
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
 - [YouTube](https://www.youtube.com/watch?v=njTh_OwMljA&index=2&t=1s&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
