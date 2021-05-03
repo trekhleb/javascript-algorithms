@@ -152,6 +152,8 @@ a set of rules that precisely define a sequence of operations.
   * `B` [NanoNeuron](https://github.com/trekhleb/nano-neuron) - 7 simple JS functions that illustrate how machines can actually learn (forward/backward propagation)
   * `B` [k-NN](src/algorithms/ml/knn) - k-nearest neighbors classification algorithm
   * `B` [k-Means](src/algorithms/ml/k-means) - k-Means clustering algorithm
+* **Image Processing**
+  * `B` [Seam Carving](src/algorithms/image-processing/seam-carving) - content-aware image resizing algorithm
 * **Uncategorized**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
@@ -203,6 +205,7 @@ algorithm is an abstraction higher than a computer program.
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
   * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top
+  * `B` [Seam Carving](src/algorithms/image-processing/seam-carving) - content-aware image resizing algorithm
   * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
   * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
@@ -233,6 +236,7 @@ tree is being used.
 ## How to use this repository
 
 **Install all dependencies**
+
 ```
 npm install
 ```
@@ -246,13 +250,24 @@ npm run lint
 ```
 
 **Run all tests**
+
 ```
 npm test
 ```
 
 **Run tests by name**
+
 ```
 npm test -- 'LinkedList'
+```
+
+**Troubleshooting**
+
+In case if linting or testing is failing try to delete the `node_modules` folder and re-install npm packages:
+
+```
+rm -rf ./node_modules
+npm i
 ```
 
 **Playground**
