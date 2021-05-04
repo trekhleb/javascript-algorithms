@@ -37,7 +37,7 @@ mogloe ofikasno pristupiti i mijenjati. Preciznije, struktura podataka je zbirka
 vrijednosti, odnosa među njima, funkcije ili operacije koje se mogu primijeniti na
 podatke.
 
-`B` - Beginner, `A` - Advanced
+`B` - Pocetnik - Beginner, `A` - Napredni - Advanced
 
 * `B` [Linked List](src/data-structures/linked-list)
 * `B` [Doubly Linked List](src/data-structures/doubly-linked-list)
@@ -62,11 +62,11 @@ podatke.
 Algoritam je nedvosmislena specifikacija kako riješiti klasu problema. To je
 skup pravila koja precizno definiraju niz operacija.
 
-`B` - Beginner, `A` - Advanced
+`B` - Pocetnik - Beginner, `A` - Napredni - Advanced
 
 ### Algoritmi po temama
 
-* **Math**
+* **Matematika**
   * `B` [Bit Manipulation](src/algorithms/math/bits) - postaviti / dobiti / ažurirati / očistiti bitove, množenje / dijeljenje sa dva, napraviti negativne itd
   * `B` [Factorial](src/algorithms/math/factorial)
   * `B` [Fibonacci Number](src/algorithms/math/fibonacci) - klasične verzije i verzije zatvorenog oblika
@@ -87,7 +87,7 @@ skup pravila koja precizno definiraju niz operacija.
   * `A` [Square Root](src/algorithms/math/square-root) - Newton's method
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
   * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up
-* **Sets**
+* **Setovi**
   * `B` [Cartesian Product](src/algorithms/sets/cartesian-product) - product of multiple sets
   * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
   * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set (bitwise and backtracking solutions)
@@ -99,7 +99,7 @@ skup pravila koja precizno definiraju niz operacija.
   * `A` [Knapsack Problem](src/algorithms/sets/knapsack-problem) - "0/1" and "Unbound" ones
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray) - "Brute Force" and "Dynamic Programming" (Kadane's) versions
   * `A` [Combination Sum](src/algorithms/sets/combination-sum) - find all combinations that form specific sum
-* **Strings**
+* **Stringovi**
   * `B` [Hamming Distance](src/algorithms/string/hamming-distance) - number of positions at which the symbols are different
   * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * `A` [Knuth–Morris–Pratt Algorithm](src/algorithms/string/knuth-morris-pratt) (KMP Algorithm) - substring search (pattern matching)
@@ -107,12 +107,12 @@ skup pravila koja precizno definiraju niz operacija.
   * `A` [Rabin Karp Algorithm](src/algorithms/string/rabin-karp) - substring search
   * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
   * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
-* **Searches**
+* **Pretrage**
   * `B` [Linear Search](src/algorithms/search/linear-search)
   * `B` [Jump Search](src/algorithms/search/jump-search) (or Block Search) - search in sorted array
   * `B` [Binary Search](src/algorithms/search/binary-search) - search in sorted array
   * `B` [Interpolation Search](src/algorithms/search/interpolation-search) - search in uniformly distributed sorted array
-* **Sorting**
+* **Sortiranje**
   * `B` [Bubble Sort](src/algorithms/sorting/bubble-sort)
   * `B` [Selection Sort](src/algorithms/sorting/selection-sort)
   * `B` [Insertion Sort](src/algorithms/sorting/insertion-sort)
@@ -122,13 +122,13 @@ skup pravila koja precizno definiraju niz operacija.
   * `B` [Shellsort](src/algorithms/sorting/shell-sort)
   * `B` [Counting Sort](src/algorithms/sorting/counting-sort)
   * `B` [Radix Sort](src/algorithms/sorting/radix-sort)
-* **Linked Lists**
+* **Linkovane Liste**
   * `B` [Straight Traversal](src/algorithms/linked-list/traversal)
   * `B` [Reverse Traversal](src/algorithms/linked-list/reverse-traversal)
 * **Trees**
   * `B` [Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [Breadth-First Search](src/algorithms/tree/breadth-first-search) (BFS)
-* **Graphs**
+* **Grafovi**
   * `B` [Depth-First Search](src/algorithms/graph/depth-first-search) (DFS)
   * `B` [Breadth-First Search](src/algorithms/graph/breadth-first-search) (BFS)
   * `B` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
@@ -144,18 +144,18 @@ skup pravila koja precizno definiraju niz operacija.
   * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * `A` [Strongly Connected Components](src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
-* **Cryptography**
+* **Kriptografija**
   * `B` [Polynomial Hash](src/algorithms/cryptography/polynomial-hash) - rolling hash function based on polynomial
   * `B` [Rail Fence Cipher](src/algorithms/cryptography/rail-fence-cipher) - a transposition cipher algorithm for encoding messages
   * `B` [Caesar Cipher](src/algorithms/cryptography/caesar-cipher) - simple substitution cipher
   * `B` [Hill Cipher](src/algorithms/cryptography/hill-cipher) - substitution cipher based on linear algebra
-* **Machine Learning**
+* **Masinsko ucenje**
   * `B` [NanoNeuron](https://github.com/trekhleb/nano-neuron) - 7 simple JS functions that illustrate how machines can actually learn (forward/backward propagation)
   * `B` [k-NN](src/algorithms/ml/knn) - k-nearest neighbors classification algorithm
   * `B` [k-Means](src/algorithms/ml/k-means) - k-Means clustering algorithm
-* **Image Processing**
+* **Procesiranje slika**
   * `B` [Seam Carving](src/algorithms/image-processing/seam-carving) - content-aware image resizing algorithm
-* **Uncategorized**
+* **Nekategorizirani**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples
@@ -166,26 +166,26 @@ skup pravila koja precizno definiraju niz operacija.
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
 
-### Algorithms by Paradigm
+### Algoritmi Paradigme
 
-An algorithmic paradigm is a generic method or approach which underlies the design of a class
-of algorithms. It is an abstraction higher than the notion of an algorithm, just as an
-algorithm is an abstraction higher than a computer program.
+Algoritmička paradigma je generička metoda ili pristup koji leži u osnovi dizajna klase
+algoritama. To je apstrakcija viša od pojma algoritma, baš kao i
+sto je i algoritam viša apstrakcija od računarskog programa.
 
-* **Brute Force** - look at all the possibilities and selects the best solution
+* ** Brute Force ** - sagledajte sve mogućnosti i odaberite najbolje rješenje
   * `B` [Linear Search](src/algorithms/search/linear-search)
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
   * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
   * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up
-* **Greedy** - choose the best option at the current time, without any consideration for the future
+* **Greedy** - odaberite najbolju opciju u ovom trenutku, bez ikakvog razmatranja za budućnost
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `A` [Unbound Knapsack Problem](src/algorithms/sets/knapsack-problem)
   * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - finding the shortest path to all graph vertices
   * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
   * `A` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-* **Divide and Conquer** - divide the problem into smaller parts and then solve those parts
+* **Divide and Conquer** - podijeli problem na manje dijelove, a zatim riješi te dijelove
   * `B` [Binary Search](src/algorithms/search/binary-search)
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
@@ -200,7 +200,7 @@ algorithm is an abstraction higher than a computer program.
   * `B` [Best Time To Buy Sell Stocks](src/algorithms/uncategorized/best-time-to-buy-sell-stocks) - divide and conquer and one-pass examples
   * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
   * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
-* **Dynamic Programming** - build up a solution using previously found sub-solutions
+* **Dynamic Programming** - izgraditi rješenje koristeći prethodno pronađena podrešenja
   * `B` [Fibonacci Number](src/algorithms/math/fibonacci)
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
@@ -218,9 +218,8 @@ algorithm is an abstraction higher than a computer program.
   * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - finding the shortest path to all graph vertices
   * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - find the shortest paths between all pairs of vertices
   * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
-* **Backtracking** - similarly to brute force, try to generate all possible solutions, but each time you generate next solution you test
-if it satisfies all conditions, and only then continue generating subsequent solutions. Otherwise, backtrack, and go on a
-different path of finding a solution. Normally the DFS traversal of state-space is being used.
+* **Backtracking** - slično kao brute force, pokušaj generirati sva moguća rješenja, ali svaki put kada generiramo sljedeće rješenje testiramo
+da li zadovoljava sve uvjete, a tek onda nastavimo s generiranjem sljedećih rješenja. U suprotnom, vrati se i idi dalje trazeci drugi put pronalaženja rješenja. Uobičajeno se koristi DFS traversal of state-space.
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
   * `B` [Power Set](src/algorithms/sets/power-set) - all subsets of a set
@@ -228,13 +227,13 @@ different path of finding a solution. Normally the DFS traversal of state-space 
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
   * `A` [Combination Sum](src/algorithms/sets/combination-sum) - find all combinations that form specific sum
-* **Branch & Bound** - remember the lowest-cost solution found at each stage of the backtracking
-search, and use the cost of the lowest-cost solution found so far as a lower bound on the cost of
-a least-cost solution to the problem, in order to discard partial solutions with costs larger than the
-lowest-cost solution found so far. Normally BFS traversal in combination with DFS traversal of state-space
-tree is being used.
+* **Branch & Bound** - pamti se najjefikasnije rješenje pronađeno u svakoj fazi povratka unatrag,
+pretraži i upotrijebi cijenu tog rješenja pronađenog do sada kao donju granicu cijene
+za najjeftinije/najefikasnije (koje trosi najmanje resursa) rješenje problema, kako bi se odbacila djelomična rješenja s troškovima većim od
+do sada pronađenog najjeftinijeg/najefikasnijeg rješenja. Uobicajeno se koristi BFS traversal u kombinaciji sa DFS traversal of state-space
+tree.
 
-## How to use this repository
+## Kako koristiti ovaj repozitorij
 
 **Install all dependencies**
 
