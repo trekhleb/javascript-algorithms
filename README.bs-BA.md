@@ -235,13 +235,13 @@ tree.
 
 ## Kako koristiti ovaj repozitorij
 
-**Install all dependencies**
+**Instaliraj dependencies**
 
 ```
 npm install
 ```
 
-**Run ESLint**
+**Pokreni ESLint**
 
 You may want to run it to check code quality.
 
@@ -249,19 +249,19 @@ You may want to run it to check code quality.
 npm run lint
 ```
 
-**Run all tests**
+**Pokreni sve tests**
 
 ```
 npm test
 ```
 
-**Run tests by name**
+**Pokreni testove po imenu**
 
 ```
 npm test -- 'LinkedList'
 ```
 
-**Troubleshooting**
+**Problematika i kako je rijesiti**
 
 In case if linting or testing is failing try to delete the `node_modules` folder and re-install npm packages:
 
