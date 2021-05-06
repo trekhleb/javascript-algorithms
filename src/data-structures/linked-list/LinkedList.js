@@ -65,7 +65,7 @@ export default class LinkedList {
 
     let deletedNode = null;
 
-    // If the head must be deleted then make next node that is differ
+    // If the head must be deleted then make next node that is different
     // from the head to be a new head.
     while (this.head && this.compare.equal(this.head.value, value)) {
       deletedNode = this.head;
