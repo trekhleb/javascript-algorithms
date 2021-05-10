@@ -20,7 +20,8 @@ _Read this in other languages:_
 [_Italiana_](README.it-IT.md),
 [_Bahasa Indonesia_](README.id-ID.md),
 [_Українська_](README.uk-UA.md),
-[_Arabic_](README.ar-AR.md)
+[_Arabic_](README.ar-AR.md),
+[_Deutsch_](README.de-DE.md)
 
 ## 資料結構
 
@@ -214,7 +215,7 @@ npm test -- 'playground'
 
 | 名稱                   | 最佳      | 平均      | 最差          | 記憶體    | 穩定      |
 | ---------------------- | :-------: | :-------: | :-----------: | :-------: | :-------: |
-| **氣派排序**           | n         | n^2       | n^2           | 1         | Yes       |
+| **氣泡排序**           | n         | n^2       | n^2           | 1         | Yes       |
 | **插入排序**           | n         | n^2       | n^2           | 1         | Yes       |
 | **選擇排序**           | n^2       | n^2       | n^2           | 1         | No        |
 | **Heap 排序**          | n log(n)  | n log(n)  | n log(n)      | 1         | No        |
