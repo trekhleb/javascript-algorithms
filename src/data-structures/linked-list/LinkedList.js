@@ -132,7 +132,8 @@ export default class LinkedList {
 
     if (this.head === this.tail) {
       // There is only one node in linked list.
-      this.head = this.tail = null;
+      this.head = null;
+      this.tail = null;
       return deletedTail;
     }
 
@@ -146,7 +147,6 @@ export default class LinkedList {
 
     currentNode.next = null;
     this.tail = currentNode;
-    
     return deletedTail;
   }
 
