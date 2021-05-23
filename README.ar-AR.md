@@ -21,7 +21,8 @@ _اقرأ هذا في لغات أخرى:_
 [_Português_](README.pt-BR.md),
 [_Русский_](README.ru-RU.md),
 [_Türk_](README.tr-TR.md),
-[_Italiana_](README.it-IT.md)
+[_Italiana_](README.it-IT.md),
+[_Deutsch_](README.de-DE.md)
 
  ☝ ملاحضة هذا المشروع مخصص للاستخدام لأغراض التعلم والبحث
 فقط ، و ** ليست ** معدة للاستخدام في **الإنتاج**

@@ -21,7 +21,8 @@ _Read this in other languages:_
 [_Italiana_](README.it-IT.md),
 [_Bahasa Indonesia_](README.id-ID.md),
 [_Українська_](README.uk-UA.md),
-[_Arabic_](README.ar-AR.md)
+[_Arabic_](README.ar-AR.md),
+[_Deutsch_](README.de-DE.md)
 
 *注意：这个项目仅用于学习和研究，**不是**用于生产环境。*
 
