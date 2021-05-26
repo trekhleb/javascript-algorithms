@@ -222,3 +222,5 @@ npm test -- 'playground'
 | **合併排序**           | n log(n)  | n log(n)  | n log(n)      | n         | Yes       |
 | **快速排序**           | n log(n)  | n log(n)  | n^2           | log(n)    | No        |
 | **希爾排序**           | n log(n)  | 由gap sequence決定   | n (log(n))^2  | 1         | No        |
+
+> ℹ️ Some more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

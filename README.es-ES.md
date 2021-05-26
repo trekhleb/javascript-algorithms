@@ -299,3 +299,5 @@ frente a diferentes tamaños de los datos de entrada.
 | **Shellsort**                    | n&nbsp;log(n) | depende de la secuencia de huecos | n&nbsp;(log(n))<sup>2</sup> |   1   |   No   |                                                               |
 | **Ordenamiento por cuentas**     |     n + r     |          n + r          |            n + r            | n + r   |  Si     | r - mayor número en el arreglo                                |
 | **Ordenamiento Radix**           |    n \* k     |         n \* k          |           n \* k            | n + k   |  Si     | k - largo de la llave más larga                                     |
+
+> ℹ️ Some more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

@@ -289,3 +289,5 @@ Poniżej umieszczamy listę najbardziej używanych Big O notacji i ich porównan
 | **Sortowanie Shella**               | n&nbsp;log(n)   | zależy od luki w układzie   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
 | **Sortowanie przez zliczanie**      | n + r           | n + r               | n + r               | n + r     | Yes         | r - największy numer w tablicy|
 | **Sortowanie Radix**                | n * k           | n * k               | n * k               | n + k     | Yes         | k -długość najdłuższego klucza |
+
+> ℹ️ Some more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

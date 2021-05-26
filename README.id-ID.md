@@ -304,3 +304,5 @@ Di bawah ini adalah daftar dari beberapa notasi _Bog O_ yang sering digunakan da
 > Anda dapat mendukung proyek ini via ❤️️ [GitHub](https://github.com/sponsors/trekhleb) atau ❤️️ [Patreon](https://www.patreon.com/trekhleb).
 
 [Orang-orang yang mendukung proyek ini](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 1`
+
+> ℹ️ Some more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

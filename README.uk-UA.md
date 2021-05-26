@@ -305,3 +305,5 @@ npm test -- 'playground'
 > Ви можете підтримати цей проект через ❤️️ [GitHub](https://github.com/sponsors/trekhleb) або ❤️️ [Patreon](https://www.patreon.com/trekhleb).
 
 [Люди, які підтримують цей проект](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 1`
+
+> ℹ️ Some more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

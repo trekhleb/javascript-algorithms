@@ -331,3 +331,6 @@ Nachfolgend finden Sie eine Liste einiger der am häufigsten verwendeten Big O-N
 > Du kannst dieses Projekt unterstützen über ❤️️ [GitHub](https://github.com/sponsors/trekhleb) or ❤️️ [Patreon](https://www.patreon.com/trekhleb).
 
 [Leute, die dieses Projekt unterstützen](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 0`
+
+> ℹ️ Some more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
+
