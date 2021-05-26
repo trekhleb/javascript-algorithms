@@ -293,4 +293,5 @@ comparaisons de performance suivant différentes tailles pour les données d'ent
 | **Tri Shell**     | n&nbsp;log(n) | dépend du gap séquence | n&nbsp;(log(n))<sup>2</sup> |    1    |  Non   |                                                                                      |
 | **Tri Comptage**  |     n + r     |         n + r          |            n + r            |  n + r  |  Oui   | r - le plus grand nombre dans la liste                                               |
 | **Tri Radix**     |    n \* k     |         n \* k         |           n \* k            |  n + k  |  Non   | k - longueur du plus long index                                                      |
-> ℹ️ Some more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
+
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

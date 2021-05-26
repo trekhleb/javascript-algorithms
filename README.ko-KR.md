@@ -278,4 +278,4 @@ Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 | **계수 정렬**          | n + r           | n + r               | n + r               | n + r     | Yes              | r - 배열내 가장 큰 수 |
 | **기수 정렬**          | n * k           | n * k               | n * k               | n + k     | Yes              | k - 키값의 최대 길이 |
 
-> ℹ️ Some more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

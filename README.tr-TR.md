@@ -316,4 +316,4 @@ Altta Big O notations ve farklı input boyutlarına karşın yapılmış perform
 
 Bu projeyi buradan destekleyebilirsiniz ❤️️ [GitHub](https://github.com/sponsors/trekhleb) veya ❤️️ [Patreon](https://www.patreon.com/trekhleb).
 
-> ℹ️ Some more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

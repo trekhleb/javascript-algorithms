@@ -290,4 +290,4 @@ Poniżej umieszczamy listę najbardziej używanych Big O notacji i ich porównan
 | **Sortowanie przez zliczanie**      | n + r           | n + r               | n + r               | n + r     | Yes         | r - największy numer w tablicy|
 | **Sortowanie Radix**                | n * k           | n * k               | n * k               | n + k     | Yes         | k -długość najdłuższego klucza |
 
-> ℹ️ Some more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

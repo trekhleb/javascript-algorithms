@@ -291,4 +291,4 @@ Abaixo está a lista de algumas das notações Big O mais usadas e suas compara�
 | **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Sim       | r - maior número na matriz          |
 | **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Sim       | k - comprimento da chave mais longa |
 
-> ℹ️ Some more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
