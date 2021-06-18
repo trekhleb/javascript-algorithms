@@ -20,7 +20,8 @@ _Leggilo in altre lingue:_
 [_Türk_](README.tr-TR.md),
 [_Bahasa Indonesia_](README.id-ID.md),
 [_Українська_](README.uk-UA.md),
-[_Arabic_](README.ar-AR.md)
+[_Arabic_](README.ar-AR.md),
+[_Deutsch_](README.de-DE.md)
 
 *☝ Si noti che questo progetto è destinato ad essere utilizzato solo per l'apprendimento e la ricerca e non è destinato ad essere utilizzato per il commercio.*
 
@@ -296,3 +297,5 @@ Nella tabella qua sotto ci sono riportate la lista delle notazioni Big O più us
 | **Shell sort**        | n&nbsp;log(n)   | dipende dagli spazi vuoti nella sequenza  | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
 | **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - numero più grande nell'array |
 | **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Yes       | k - lunghezza della chiave più grande |
+
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

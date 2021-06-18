@@ -21,7 +21,8 @@ _Вивчення матеріалу на інших мовах:_
 [_Türk_](README.tr-TR.md),
 [_Italiana_](README.it-IT.md),
 [_Bahasa Indonesia_](README.id-ID.md),
-[_Arabic_](README.ar-AR.md)
+[_Arabic_](README.ar-AR.md),
+[_Deutsch_](README.de-DE.md)
 
 *☝ Зверніть увагу! Даний проект призначений лише для навчальних та дослідницьких цілей, і він **не** призначений для виробництва (продакшн).*
 
@@ -304,3 +305,5 @@ npm test -- 'playground'
 > Ви можете підтримати цей проект через ❤️️ [GitHub](https://github.com/sponsors/trekhleb) або ❤️️ [Patreon](https://www.patreon.com/trekhleb).
 
 [Люди, які підтримують цей проект](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 1`
+
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

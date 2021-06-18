@@ -7,27 +7,26 @@ _Lee esto en otros idiomas:_
 [_Português_](README.pt-BR.md)
 [_English_](README.md)
 
-En ciencias de la computaciòn una **lista enlazada** es una  coleccion linear 
+En ciencias de la computación una **lista enlazada** es una colección linear
 de elemntos de datos, en los cuales el orden linear no es dado por
-su posciòn fisica en memoria. En cambio, cada 
-elemento señala al siguiente. Es una estructura de datos 
+su posción física en memoria. En cambio, cada
+elemento señala al siguiente. Es una estructura de datos
 que consiste en un grupo de nodos los cuales juntos representan
-una secuencia. Bajo la forma mas simple, cada nodo es 
-compuesto de datos y una referencia (en otras palabras, 
+una secuencia. Bajo la forma más simple, cada nodo es
+compuesto de datos y una referencia (en otras palabras,
 un lazo) al siguiente nodo en la secuencia. Esta estructura
-permite la insercion o remocion de elementos 
-desde cualquier posicion en la secuencia durante la iteracion. 
-Variantes mas complejas agregan lazos adicionales, permitiendo 
-una eficiente insercion o remocion desde referencias arbitrarias
+permite la inserción o remoción de elementos
+desde cualquier posición en la secuencia durante la iteración.
+Variantes más complejas agregan lazos adicionales, permitiendo
+una eficiente inserción o remoción desde referencias arbitrarias
 del elemento. Una desventaja de las listas lazadas es que el tiempo de
-acceso es linear (y dificil de canalizar) Un acceso
-mas rapido, como un acceso aleatorio, no es factible. Los arreglos
+acceso es linear (y difícil de canalizar). Un acceso
+más rápido, como un acceso aleatorio, no es factible. Los arreglos
 tienen una mejor locazion comparados con las listas lazadas.
-
 
 ![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
-## Pseudocodigo para operacones basicas
+## Pseudocódigo para operacones básicas
 
 ### Insertar
 
@@ -76,7 +75,7 @@ Contains(head, value)
   return true
 end Contains
 ```
-    
+
 ### Borrar
 
 ```text
@@ -146,19 +145,19 @@ ReverseTraversal(head, tail)
 end ReverseTraversal
 ```
 
-## Complexities
+## Complejidades
 
-### Time Complexity
+### Complejidad del Tiempo
 
-| Access    | Search    | Insertion | Deletion  |
-| :-------: | :-------: | :-------: | :-------: |
-| O(n)      | O(n)      | O(1)      | O(n)      |
+| Access | Search | Insertion | Deletion |
+| :----: | :----: | :-------: | :------: |
+|  O(n)  |  O(n)  |   O(1)    |   O(n)   |
 
-### Space Complexity
+### Complejidad Espacial
 
 O(n)
 
-## References
+## Referencias
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
 - [YouTube](https://www.youtube.com/watch?v=njTh_OwMljA&index=2&t=1s&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
