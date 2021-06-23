@@ -17,7 +17,6 @@ export default function fastPowering(base, power) {
   if (power < 0) {
     const powerNext = power * -1;
     const baseNext = 1 / base;
-    //negative powers handled here
     return fastPowering(baseNext, powerNext);
   }
 
