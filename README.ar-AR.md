@@ -21,7 +21,8 @@ _اقرأ هذا في لغات أخرى:_
 [_Português_](README.pt-BR.md),
 [_Русский_](README.ru-RU.md),
 [_Türk_](README.tr-TR.md),
-[_Italiana_](README.it-IT.md)
+[_Italiana_](README.it-IT.md),
+[_Deutsch_](README.de-DE.md)
 
  ☝ ملاحضة هذا المشروع مخصص للاستخدام لأغراض التعلم والبحث
 فقط ، و ** ليست ** معدة للاستخدام في **الإنتاج**
@@ -320,3 +321,5 @@ npm test -- 'playground'
 > يمكنك دعم هذا المشروع عبر ❤️️ [GitHub](https://github.com/sponsors/trekhleb) أو ❤️️ [Patreon](https://www.patreon.com/trekhleb).
 
 [الناس الذين يدعمون هذا المشروع](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 0`
+
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

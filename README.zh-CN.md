@@ -21,7 +21,8 @@ _Read this in other languages:_
 [_Italiana_](README.it-IT.md),
 [_Bahasa Indonesia_](README.id-ID.md),
 [_Українська_](README.uk-UA.md),
-[_Arabic_](README.ar-AR.md)
+[_Arabic_](README.ar-AR.md),
+[_Deutsch_](README.de-DE.md)
 
 *注意：这个项目仅用于学习和研究，**不是**用于生产环境。*
 
@@ -291,3 +292,5 @@ npm test -- 'playground'
 | **希尔排序**          | n log(n)  | 取决于差距序列   | n (log(n))^2  | 1         | No        |  |
 | **计数排序**          | n + r     | n + r     | n + r         | n + r     | Yes       | r - 数组里最大的数    |
 | **基数排序**          | n * k     | n * k     | n * k         | n + k     | Yes       | k - 最长 key 的升序   |
+
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

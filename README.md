@@ -24,7 +24,8 @@ _Read this in other languages:_
 [_Italiana_](README.it-IT.md),
 [_Bahasa Indonesia_](README.id-ID.md),
 [_Українська_](README.uk-UA.md),
-[_Arabic_](README.ar-AR.md)
+[_Arabic_](README.ar-AR.md),
+[_Deutsch_](README.de-DE.md)
 
 *☝ Note that this project is meant to be used for learning and researching purposes
 only, and it is **not** meant to be used for production.*
@@ -342,3 +343,5 @@ Below is the list of some of the most used Big O notations and their performance
 > You may support this project via ❤️️ [GitHub](https://github.com/sponsors/trekhleb) or ❤️️ [Patreon](https://www.patreon.com/trekhleb).
 
 [Folks who are backing this project](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 0`
+
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
