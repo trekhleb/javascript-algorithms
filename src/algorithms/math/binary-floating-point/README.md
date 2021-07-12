@@ -1,0 +1,21 @@
+# Binary representation of floating point numbers
+
+TODO
+
+## References
+
+Check out the following resources to get deeper understanding of the binary representation of floating point numbers.
+
+Articles:
+- [Here is what you need to know about JavaScript’s Number type](https://indepth.dev/posts/1139/here-is-what-you-need-to-know-about-javascripts-number-type)
+
+Interactive tools:
+- [Float Toy](http://evanw.github.io/float-toy/)
+- [IEEE754 Visualization](https://bartaz.github.io/ieee754-visualization/)
+- [Float Exposed](https://float.exposed/)
+
+Specifications:
+- [IEEE Standard for Floating-Point Arithmetic (IEEE 754)](https://en.wikipedia.org/wiki/IEEE_754)
+- [Half-precision floating-point format](https://en.wikipedia.org/wiki/Half-precision_floating-point_format)
+- [Single-precision floating-point format](https://en.wikipedia.org/wiki/Single-precision_floating-point_format)
+- [Double-precision floating-point format](https://en.wikipedia.org/wiki/Double-precision_floating-point_format)
