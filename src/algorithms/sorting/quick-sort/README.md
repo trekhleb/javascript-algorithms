@@ -1,5 +1,8 @@
 # Quicksort
 
+_Read this in other languages:_
+[_Português_](README.pt-BR.md)
+
 Quicksort is a divide and conquer algorithm.
 Quicksort first divides a large array into two smaller 
 sub-arrays: the low elements and the high elements.
