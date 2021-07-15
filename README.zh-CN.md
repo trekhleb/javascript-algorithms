@@ -24,7 +24,7 @@ _Read this in other languages:_
 [_Arabic_](README.ar-AR.md),
 [_Deutsch_](README.de-DE.md)
 
-*注意：这个项目仅用于学习和研究，**不是**用于生产环境。*
+*注意：这个项目仅用于学习和研究，**不适用**于生产环境。*
 
 ## 数据结构
 
