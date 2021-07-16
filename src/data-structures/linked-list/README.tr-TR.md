@@ -8,21 +8,16 @@ _Bunu diğer dillerde okuyun:_
 [_한국어_](README.ko-KR.md),
 [_Español_](README.es-ES.md),
 
-**Bağlantılı liste**, bilgisayar bilimlerinde, her biri hem gerçek verileri
-hem de listedeki bir sonraki düğümün bir bağlantısını içeren düğümlerden oluşan
-dinamik bir veri yapısıdır. Bu yapı, yineleme sırasında rastgele bir konumda
+Bilgisayar bilimlerinde, **Bağlantılı liste**, her biri hem gerçek verileri
+hem de listedeki bir sonraki düğümün bir bağlantısını içeren dinamik bir
+veri yapısıdır. Bu yapı, yineleme sırasında rastgele bir konumda
 öğeleri verimli bir şekilde eklemenize ve kaldırmanıza olanak tanır.
-Daha karmaşık seçenekler, isteğe bağlı öğeleri verimli bir şekilde
+Daha karmaşık seçenekler için, isteğe bağlı öğeleri verimli bir şekilde
 eklemek ve kaldırmak için ek bağlantılar içerir.
 
-Bir diziye göre temel avantajı yapısal esnekliğidir: bağlantılı listenin öğelerinin
-sırası, bilgisayarın belleğindeki veri öğelerinin sırası ile çakışmayabilir ve listeyi
-geçme sırası her zaman iç bağlantıları tarafından açıkça belirtilir. Sonuç olarak,
-birçok dilde bir dizi oluşturmak, boyutunun önceden belirtilmesini gerektirir.
-Bağlantılı bir liste bu sınırlamayı çözebilir.
-
-Bağlantılı listelerin dezavantajı, erişim sürelerinin doğrusal olmasıdır
-(ve işlem hatlarının uygulanması zordur). Hızlı erişim (rastgele) mümkün değildir.
+Bağlantılı listelerin bir dezavantajı, erişim süresinin doğrusal olmasıdır
+(ve ardışık düzene geçirilmesi zordur). Rastgele erişim gibi daha hızlı erişim
+mümkün değildir. Diziler, bağlantılı listelere kıyasla daha iyi önbellek konumuna sahiptir.
 
 ![Bağlantılı Liste](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
