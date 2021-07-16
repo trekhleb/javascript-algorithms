@@ -17,7 +17,7 @@ eklemek ve kaldırmak için ek bağlantılar içerir.
 
 Bir diziye göre temel avantajı yapısal esnekliğidir: bağlantılı listenin öğelerinin
 sırası, bilgisayarın belleğindeki veri öğelerinin sırası ile çakışmayabilir ve listeyi
-geçme sırası her zaman iç bağlantıları tarafından açıkça belirtilir.Sonuç olarak,
+geçme sırası her zaman iç bağlantıları tarafından açıkça belirtilir. Sonuç olarak,
 birçok dilde bir dizi oluşturmak, boyutunun önceden belirtilmesini gerektirir.
 Bağlantılı bir liste bu sınırlamayı çözebilir.
 
