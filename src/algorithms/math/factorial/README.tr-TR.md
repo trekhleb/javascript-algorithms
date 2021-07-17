@@ -1,11 +1,14 @@
-# Factorial
+# Faktöriyel
 
-_Read this in other languages:_
-[_简体中文_](README.zh-CN.md), [français](README.fr-FR.md), [turkish](README.tr-TR.md).
+_Bunu diğer dillerde okuyun:_
+[_简体中文_](README.zh-CN.md), [français](README.fr-FR.md).
 
-In mathematics, the factorial of a non-negative integer `n`,
-denoted by `n!`, is the product of all positive integers less
-than or equal to `n`. For example:
+Faktöriyel, matematikte, sağına ünlem işareti konulmuş sayıya
+verilen isim, daha genel olan Gama fonksiyonunun tam sayılarla
+sınırlanmış özel bir durumudur. 1'den başlayarak belirli bir
+sayma sayısına kadar olan sayıların çarpımına o sayının
+faktöriyeli denir. Basit bir şekilde faktöriyel, n tane ayrık
+elemanın kaç farklı şekilde sıralanabileceğidir.
 
 ```
 5! = 5 * 4 * 3 * 2 * 1 = 120
@@ -30,6 +33,6 @@ than or equal to `n`. For example:
 | 14  |    87 178 291 200 |
 | 15  | 1 307 674 368 000 |
 
-## References
+## Referanslar
 
 [Wikipedia](https://en.wikipedia.org/wiki/Factorial)
