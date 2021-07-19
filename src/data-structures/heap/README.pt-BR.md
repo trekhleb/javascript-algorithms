@@ -11,7 +11,7 @@ Em um *heap mínimo* (min heap), caso `P` é um nó pai de `C`, então a chave
 Em uma *heap máximo* (max heap), a chave de `P` é maior ou igual
 a chave de `C`.
 
-![Heap](https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg)
+![Heap](https://user-images.githubusercontent.com/17690376/107872731-50a35100-6ed2-11eb-93bc-0a8a25243e18.jpg)
 
 O nó no "topo" do _heap_, cujo não possui pais, é chamado de nó raiz.
 
