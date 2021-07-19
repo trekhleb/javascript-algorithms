@@ -79,7 +79,7 @@ definen con precisión una secuencia de operaciones.
   * `P` [Radianes & Grados](src/algorithms/math/radian) - conversión de radianes a grados y viceversa
   * `P` [Exponenciación rápida](src/algorithms/math/fast-powering)
   * `A` [Partición entera](src/algorithms/math/integer-partition)
-  * `A` [Algortimo π de Liu Hui](src/algorithms/math/liu-hui) - aproximar el cálculo de  π basado en polígonos de N lados
+  * `A` [Algoritmo π de Liu Hui](src/algorithms/math/liu-hui) - aproximar el cálculo de  π basado en polígonos de N lados
   * `A` [Transformada discreta de Fourier](src/algorithms/math/fourier-transform) - descomponer una función de tiempo (señal) en las frecuencias que la componen
 * **Conjuntos**
   * `P` [Producto cartesiano](src/algorithms/sets/cartesian-product) - producto de múltiples conjuntos
@@ -128,7 +128,7 @@ definen con precisión una secuencia de operaciones.
   * `P` [Algoritmo de Kruskal](src/algorithms/graph/kruskal) - encontrar el árbol de cubrimiento mínimo (MST) para un grafo no dirigido ponderado
   * `A` [Algoritmo de Dijkstra](src/algorithms/graph/dijkstra) - encontrar los caminos más cortos a todos los vértices del grafo desde un solo vértice
   * `A` [Algoritmo de Bellman-Ford](src/algorithms/graph/bellman-ford) - encontrar los caminos más cortos a todos los vértices del grafo desde un solo vértice
-  * `A` [Algortimo de Floyd-Warshall](src/algorithms/graph/floyd-warshall) - encontrar los caminos más cortos entre todos los pares de vértices
+  * `A` [Algoritmo de Floyd-Warshall](src/algorithms/graph/floyd-warshall) - encontrar los caminos más cortos entre todos los pares de vértices
   * `A` [Detectar ciclos](src/algorithms/graph/detect-cycle) - para grafos dirigidos y no dirigidos (versiones basadas en DFS y conjuntos disjuntos)
   * `A` [Algoritmo de Prim](src/algorithms/graph/prim) - encontrar el árbol de cubrimiento mínimo (MST) para un grafo no dirigido ponderado
   * `A` [Ordenamiento topológico](src/algorithms/graph/topological-sorting) - método DFS
@@ -164,7 +164,7 @@ Es una abstracción superior a la noción de algoritmo, del mismo modo que un al
   * `P` [Juego de los saltos](src/algorithms/uncategorized/jump-game)
   * `A` [Problema de la mochila sin límite](src/algorithms/sets/knapsack-problem)
   * `A` [Algoritmo de Dijkstra](src/algorithms/graph/dijkstra) - encontrar los caminos más cortos a todos los vértices del grafo desde un solo vértice
-  * `A` [Algortimo de Prim](src/algorithms/graph/prim) - encontrar el árbol de cubrimiento mínimo (MST) para un grafo no dirigido ponderado
+  * `A` [Algoritmo de Prim](src/algorithms/graph/prim) - encontrar el árbol de cubrimiento mínimo (MST) para un grafo no dirigido ponderado
   * `A` [Algoritmo de Kruskal](src/algorithms/graph/kruskal) - encontrar el árbol de cubrimiento mínimo (MST) para un grafo no dirigido ponderado
 * **Divide y Vencerás** - divide el problema en partes más pequeñas y luego resuelve esas partes
   * `P` [Búsqueda binaria](src/algorithms/search/binary-search)
@@ -246,7 +246,7 @@ npm test -- 'playground'
 
 ## Información útil
 
-### Refrencias
+### Referencias
 
 [▶ Estructuras de datos y algoritmos en YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 
