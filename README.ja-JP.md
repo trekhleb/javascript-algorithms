@@ -35,8 +35,8 @@ _Read this in other languages:_
 
 `B` - 初心者, `A` - 上級
 
-* `B` [リンクされたリスト](src/data-structures/linked-list)
-* `B` [二重リンクリスト](src/data-structures/doubly-linked-list)
+* `B` [連結リスト](src/data-structures/linked-list)
+* `B` [双方向リスト](src/data-structures/doubly-linked-list)
 * `B` [キュー](src/data-structures/queue)
 * `B` [スタック](src/data-structures/stack)
 * `B` [ハッシュ表](src/data-structures/hash-table)
