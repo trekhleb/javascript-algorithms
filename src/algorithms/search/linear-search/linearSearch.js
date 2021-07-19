@@ -10,13 +10,11 @@ import Comparator from '../../../utils/comparator/Comparator';
  */
 export default function linearSearch(array, seekElement, comparatorCallback) {
   const comparator = new Comparator(comparatorCallback);
-  const foundIndices = [];
 
-  array.forEach((element, index) => {
-    if (comparator.equal(element, seekElement)) {
-      foundIndices.push(index);
+  return array.reduce((accumulator, currentValue, index) => {
+    if (comparator.equal(currentValue, seekElement)) {
+      accumulator.push(index);
     }
-  });
-
-  return foundIndices;
+    return accumulator;
+  }, []);
 }
