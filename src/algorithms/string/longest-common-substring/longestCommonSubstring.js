@@ -12,18 +12,7 @@ export default function longestCommonSubstring(string1, string2) {
   const s2 = [...string2];
 
   // Init the matrix of all substring lengths to use Dynamic Programming approach.
-  const substringMatrix = Array(s2.length + 1).fill(null).map(() => {
-    return Array(s1.length + 1).fill(null);
-  });
-
-  // Fill the first row and first column with zeros to provide initial values.
-  for (let columnIndex = 0; columnIndex <= s1.length; columnIndex += 1) {
-    substringMatrix[0][columnIndex] = 0;
-  }
-
-  for (let rowIndex = 0; rowIndex <= s2.length; rowIndex += 1) {
-    substringMatrix[rowIndex][0] = 0;
-  }
+  const substringMatrix = Array(s2.length + 1).fill(0).map(() => Array(s1.length + 1).fill(0));
 
   // Build the matrix of all substring lengths to use Dynamic Programming approach.
   let longestSubstringLength = 0;
