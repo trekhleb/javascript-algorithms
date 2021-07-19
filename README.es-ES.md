@@ -51,6 +51,7 @@ los datos.
   * `A` [Árbol AVL](src/data-structures/tree/avl-tree)
   * `A` [Árbol Rojo-Negro](src/data-structures/tree/red-black-tree)
   * `A` [Árbol de segmentos](src/data-structures/tree/segment-tree) - con ejemplos de consultas de rango mín/máx/suma
+  * `A` [Árbol de segmentos (Implementación no recursiva)](src/data-structures/tree/non-recursive-segment-tree) - con actualización y ejemplos de consultas de rango mín/máx/suma
   * `A` [Árbol de Fenwick](src/data-structures/tree/fenwick-tree) (Árbol binario indexado)
 * `A` [Grafo](src/data-structures/graph) (dirigido y no dirigido)
 * `A` [Conjuntos disjuntos](src/data-structures/disjoint-set)
