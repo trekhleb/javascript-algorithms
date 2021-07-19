@@ -249,6 +249,34 @@ describe('Matrix', () => {
     ]);
   });
 
+  it('should generate a square identity matrix', () => {
+    expect(mtrx.identity(3)).toEqual([
+      [1, 0, 0],
+      [0, 1, 0],
+      [0, 0, 1],
+    ]);
+  });
+
+  it('should throw when powering a non 2D squared Matrix', () => {
+    expect(() => {
+      mtrx.power([
+        [1, 2],
+        [3, 4],
+        [5, 6],
+      ], 2);
+    }).toThrow('Matrix is not 2D squared');
+  });
+
+  it('should power a square matrix', () => {
+    expect(mtrx.power([
+      [1, 2],
+      [2, 3],
+    ], 4)).toEqual([
+      [89, 144],
+      [144, 233],
+    ]);
+  });
+
   it('should throw when trying to transpose non 2D matrix', () => {
     expect(() => {
       mtrx.t([[[1]]]);
@@ -450,6 +478,12 @@ describe('Matrix', () => {
 
     expect(() => mtrx.sub([[0]], [[0, 0]])).toThrowError(
       'Matrices have different shapes',
+    );
+  });
+
+  it('should throw when raising matrix to negative power', () => {
+    expect(() => mtrx.power([[1, 2], [3, 4]], -2)).toThrowError(
+      'Negative exponent not supported',
     );
   });
 });
