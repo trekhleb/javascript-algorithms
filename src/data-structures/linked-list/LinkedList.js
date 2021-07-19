@@ -134,7 +134,6 @@ export default class LinkedList {
       // There is only one node in linked list.
       this.head = null;
       this.tail = null;
-
       return deletedTail;
     }
 
@@ -142,16 +141,12 @@ export default class LinkedList {
 
     // Rewind to the last node and delete "next" link for the node before the last one.
     let currentNode = this.head;
-    while (currentNode.next) {
-      if (!currentNode.next.next) {
-        currentNode.next = null;
-      } else {
-        currentNode = currentNode.next;
-      }
+    while (currentNode.next.next) {
+      currentNode = currentNode.next;
     }
 
+    currentNode.next = null;
     this.tail = currentNode;
-
     return deletedTail;
   }
 
