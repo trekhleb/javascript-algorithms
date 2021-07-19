@@ -1,11 +1,11 @@
 # Factorial
 
-_Read this in other languages:_
-[_简体中文_](README.zh-CN.md), [français](README.fr-FR.md), [Português brasileiro](README.pt-BR.md).
+_Leia isso em outras línguas:_
+[english](README.md), [_简体中文_](README.zh-CN.md), [français](README.fr-FR.md).
 
-In mathematics, the factorial of a non-negative integer `n`,
-denoted by `n!`, is the product of all positive integers less
-than or equal to `n`. For example:
+Na matemática, o fatorial de um número natural `n`,
+representado por `n!`, é o produto de todos os inteiros positivos
+menores ou iguais a `n`. Por exemplo:
 
 ```
 5! = 5 * 4 * 3 * 2 * 1 = 120
@@ -30,6 +30,6 @@ than or equal to `n`. For example:
 | 14  |    87 178 291 200 |
 | 15  | 1 307 674 368 000 |
 
-## References
+## Referências
 
-[Wikipedia](https://en.wikipedia.org/wiki/Factorial)
+[Wikipedia](https://pt.wikipedia.org/wiki/Fatorial)
