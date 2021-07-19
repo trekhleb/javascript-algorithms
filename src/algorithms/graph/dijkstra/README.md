@@ -1,5 +1,8 @@
 # Dijkstra's Algorithm
 
+_Read this in other languages:_
+[_한국어_](README.ko-KR.md)
+
 Dijkstra's algorithm is an algorithm for finding the shortest 
 paths between nodes in a graph, which may represent, for example, 
 road networks. 
