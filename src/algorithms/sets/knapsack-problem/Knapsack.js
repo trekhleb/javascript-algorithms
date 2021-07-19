@@ -75,6 +75,9 @@ export default class Knapsack {
     const knapsackMatrix = Array(numberOfRows).fill(null).map(() => {
       return Array(numberOfColumns + 1).fill(null);
     });
+    const isItemTaken = Array(numberOfRows).fill(false).map(() => {
+      return Array(numberOfColumns + 1).fill(false);
+    });
 
     // Fill the first column with zeros since it would mean that there is
     // no items we can add to knapsack in case if weight limitation is zero.
@@ -89,6 +92,7 @@ export default class Knapsack {
       const itemWeight = this.possibleItems[itemIndex].weight;
       const itemValue = this.possibleItems[itemIndex].value;
       knapsackMatrix[itemIndex][weightIndex] = itemWeight <= weightIndex ? itemValue : 0;
+      isItemTaken[itemIndex][weightIndex] = (knapsackMatrix[itemIndex][weightIndex] !== 0);
     }
 
     // Go through combinations of how we may add items to knapsack and
@@ -111,42 +115,19 @@ export default class Knapsack {
             currentItemValue + knapsackMatrix[itemIndex - 1][weightIndex - currentItemWeight],
             knapsackMatrix[itemIndex - 1][weightIndex],
           );
+
+          isItemTaken[itemIndex][weightIndex] = (knapsackMatrix[itemIndex][weightIndex]
+                                                  !== knapsackMatrix[itemIndex - 1][weightIndex]);
         }
       }
     }
 
-    // Now let's trace back the knapsack matrix to see what items we're going to add
-    // to the knapsack.
-    let itemIndex = this.possibleItems.length - 1;
-    let weightIndex = this.weightLimit;
-
-    while (itemIndex > 0) {
-      const currentItem = this.possibleItems[itemIndex];
-      const prevItem = this.possibleItems[itemIndex - 1];
-
-      // Check if matrix value came from top (from previous item).
-      // In this case this would mean that we need to include previous item
-      // to the list of selected items.
-      if (
-        knapsackMatrix[itemIndex][weightIndex]
-        && knapsackMatrix[itemIndex][weightIndex] === knapsackMatrix[itemIndex - 1][weightIndex]
-      ) {
-        // Check if there are several items with the same weight but with the different values.
-        // We need to add highest item in the matrix that is possible to get the highest value.
-        const prevSumValue = knapsackMatrix[itemIndex - 1][weightIndex];
-        const prevPrevSumValue = knapsackMatrix[itemIndex - 2][weightIndex];
-        if (
-          !prevSumValue
-          || (prevSumValue && prevPrevSumValue !== prevSumValue)
-        ) {
-          this.selectedItems.push(prevItem);
-        }
-      } else if (knapsackMatrix[itemIndex - 1][weightIndex - currentItem.weight]) {
-        this.selectedItems.push(prevItem);
-        weightIndex -= currentItem.weight;
+    let capacity = this.weightLimit;
+    for (let itemIndex = this.possibleItems.length - 1; itemIndex >= 0; itemIndex -= 1) {
+      if (isItemTaken[itemIndex][capacity]) {
+        this.selectedItems.push(this.possibleItems[itemIndex]);
+        capacity -= this.possibleItems[itemIndex].weight;
       }
-
-      itemIndex -= 1;
     }
   }
 
