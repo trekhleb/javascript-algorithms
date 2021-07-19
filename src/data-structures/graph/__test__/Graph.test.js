@@ -246,6 +246,9 @@ describe('Graph', () => {
     expect(graph.getAllEdges().length).toBe(2);
     expect(graph.getAllEdges()[0].getKey()).toBe(edgeBC.getKey());
     expect(graph.getAllEdges()[1].getKey()).toBe(edgeAC.getKey());
+    
+    expect(vertexA.hasEdge(edgeAB)).toBe(false);
+    expect(vertexB.hasEdge(edgeAB)).toBe(false)
   });
 
   it('should should throw an error when trying to delete not existing edge', () => {
