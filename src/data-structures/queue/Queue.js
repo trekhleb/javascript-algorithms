@@ -21,7 +21,7 @@ export default class Queue {
    * @return {*}
    */
   peek() {
-    if (!this.linkedList.head) {
+    if (this.isEmpty()) {
       return null;
     }
 
