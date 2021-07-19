@@ -1,4 +1,5 @@
 import LinkedList from '../LinkedList';
+import LinkedListNode from '../LinkedListNode';
 
 describe('LinkedList', () => {
   it('should create empty linked list', () => {
@@ -190,6 +191,23 @@ describe('LinkedList', () => {
     linkedList.fromArray([1, 1, 2, 3, 3, 3, 4, 5]);
 
     expect(linkedList.toString()).toBe('1,1,2,3,3,3,4,5');
+  });
+
+  it('should return a linked list node array', () => {
+    const linkedList = new LinkedList();
+
+    expect(linkedList.head).toBeNull();
+    expect(linkedList.tail).toBeNull();
+
+    linkedList.append(1);
+    linkedList.append(2);
+
+    expect(linkedList.toArray().length).toBe(2);
+
+    const linkedListNode2 = new LinkedListNode(2);
+    const linkedListNode1 = new LinkedListNode(1, linkedListNode2);
+
+    expect(linkedList.toArray()).toEqual([linkedListNode1, linkedListNode2]);
   });
 
   it('should find node by means of custom compare function', () => {
