@@ -56,6 +56,59 @@ export default class LinkedList {
 
   /**
    * @param {*} value
+   * @param {*} index
+   * @return {LinkedList}
+   */
+  insert(value,index) {
+    // index needs to be positive
+    if (index < 0) {
+      return this;
+    }
+
+    // If linked list is empty...
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = newNode;
+      return this;
+    }
+
+    if (index === 0) {
+      // Make new node to be a head.
+      const newNode = new LinkedListNode(value, this.head);
+      this.head = newNode;
+
+      // If there is no tail yet let's make new node a tail.
+      if (!this.tail) {
+        this.tail = newNode;
+      }
+
+      return this;
+    }
+
+    // If there are many nodes in linked list...
+
+    // Rewind to the node before required index then link it to new node
+    // and link the new node to next node
+    const newNode = new LinkedListNode(value);
+    let i = 0;
+    let currentNode = this.head;
+    while (i < index - 1 && currentNode.next) {
+      currentNode = currentNode.next;
+      i++;
+    }
+    // If index > length let's make new node a tail.
+    if (!currentNode.next) {
+      currentNode.next = newNode;
+      this.tail = newNode;
+      return this;
+    }
+    newNode.next = currentNode.next;
+    currentNode.next = newNode;
+    return this;
+  }
+
+  /**
+   * @param {*} value
    * @return {LinkedListNode}
    */
   delete(value) {
