@@ -235,4 +235,21 @@ export default class LinkedList {
 
     return this;
   }
+
+  /**
+   * make the linked list iterable
+   * @return {iterator}
+   */
+  [Symbol.iterator]() {
+    let currentNode = this.head;
+
+    return {
+      next: () => {
+        if (!currentNode) return { done: true };
+        const { value, next } = currentNode;
+        currentNode = next;
+        return { value, done: false };
+      },
+    };
+  }
 }
