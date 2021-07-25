@@ -59,7 +59,7 @@ Algoritme adalah sebuah perincian yang jelas tentang cara untuk memecahkan suatu
 ### Algoritme Berdasarkanan Topik
 
 - **Matematika**
-  - `P` [Manipulasi Bit](src/algorithms/math/bits) - menetapkan/mendapatkan/memperbarui/mengahpus bit, perkalian/pembagian dengan angka 2, membuat bilangan negatif etc.
+  - `P` [Manipulasi Bit](src/algorithms/math/bits) - menetapkan/mendapatkan/memperbarui/menghapus bit, perkalian/pembagian dengan angka 2, membuat bilangan negatif etc.
   - `P` [Faktorial](src/algorithms/math/Faktorial)
   - `P` [Bilangan Fibonacci](src/algorithms/math/fibonacci) - versi klasik dan bentuk tertutup
   - `P` [Faktor Prima](src/algorithms/math/prime-factors) - menemukan faktor prima dan menghitungnya menggunakan teorema Hardy-Ramanujan
