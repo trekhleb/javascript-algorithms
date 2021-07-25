@@ -93,7 +93,7 @@ Algoritma adalah sebuah perincian yang jelas tentang cara untuk memecahkan suatu
   - `P` [Jarak Hamming](src/algorithms/string/hamming-distance) - jumlah posisi di mana ditemukan simbol-simbol yang berbeda
   - `L` [Algoritma Jarak Levenshtein](src/algorithms/string/levenshtein-distance) - _edit distance_ minimum antara dua urutan
   - `L` [Algoritma Knuth–Morris–Pratt](src/algorithms/string/knuth-morris-pratt) (Algoritma KMP) - pencarian substring (pencocokan pola)
-  - `L` [AlgoritmaZ](src/algorithms/string/z-algorithm) - pencarian substring (pencocokan pola)
+  - `L` [Algoritma Z](src/algorithms/string/z-algorithm) - pencarian substring (pencocokan pola)
   - `L` [Algoritma Rabin Karp](src/algorithms/string/rabin-karp) - pencarian substring
   - `L` [_Longest Common Substring_](src/algorithms/string/longest-common-substring)
   - `L` [Pencocokan Ekspresi Reguler](src/algorithms/string/regular-expression-matching)
