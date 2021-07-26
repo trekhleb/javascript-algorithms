@@ -79,6 +79,13 @@ I've tried to describe the logic behind the converting of floating-point numbers
 
 > Checkout the [interactive version of this diagram](https://trekhleb.dev/blog/2021/binary-floating-point/) to play around with setting bits on and off, and seeing how it would influence the final result
 
+Here is the number ranges that different floating-point formats support:
+
+| Floating-point format | Exp min | Exp max | Range            | Min positive |
+| :-------------------- | :------ | :------ | :--------------- | :----------- |
+| Half-precision        | −14     | +15     | ±65,504          | 6.10 × 10⁻⁵  |
+| Single-precision      | −126    | +127    | ±3.4028235 × 10³⁸| 1.18 × 10⁻³⁸ |
+
 Be aware that this is by no means a complete and sufficient overview of the IEEE 754 standard. It is rather a simplified and basic overview. Several corner cases were omitted in the examples above for simplicity of presentation (i.e. `-0`, `-∞`, `+∞` and `NaN` (not a number) values)
 
 ## Code examples
