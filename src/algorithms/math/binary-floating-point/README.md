@@ -97,6 +97,7 @@ Be aware that this is by no means a complete and sufficient overview of the IEEE
 
 You might also want to check out the following resources to get a deeper understanding of the binary representation of floating-point numbers:
 
+- [Interactive version of this article](https://trekhleb.dev/blog/2021/binary-floating-point/) (allows setting the bits manually and seeing the resulting floating number)
 - [Here is what you need to know about JavaScript’s Number type](https://indepth.dev/posts/1139/here-is-what-you-need-to-know-about-javascripts-number-type)
 - [Float Exposed](https://float.exposed/)
 - [IEEE754 Visualization](https://bartaz.github.io/ieee754-visualization/)
