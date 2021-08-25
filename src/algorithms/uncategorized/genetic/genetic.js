@@ -126,11 +126,9 @@ function initialize(populationSize, target, mutationRate, generations) {
   const membersKeys = population.members.map((m) => m.keys.join(''));
   const perfectCandidatesNum = membersKeys.filter((w) => w === target);
 
-  // Print the results
+  // test the results
   let numOfPerfectCandidates = perfectCandidatesNum ? perfectCandidatesNum.length : 0;
-  console.log(membersKeys);
-  console.log(`${numOfPerfectCandidates} member(s) typed "${target}"`);
-
+  
   perfectCandidateFound = Boolean(numOfPerfectCandidates > 0);
 
   return perfectCandidateFound;
