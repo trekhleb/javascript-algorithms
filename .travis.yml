@@ -1,14 +1,14 @@
 language: node_js
 
 node_js:
-  - 14.x
+  - node
 
-# blacklist
+
 branches:
   except:
     - master
 
-#whitelist
+
   braches:
     only:
       - test_travis
@@ -17,9 +17,9 @@ before_install:
   - npm i
 
 jobs:
-  include:
-    - stage: "run linting"
-     script:  npm run lint
+    include:
+        - stage: "run linting"
+          script:  npm run lint
 
-    - stage: "run tests"
-      script: npm run coverage 
+        - stage: "run tests"
+          script: npm run coverage 
