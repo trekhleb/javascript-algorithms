@@ -11,7 +11,7 @@ branches:
 #whitelist
   braches:
     only:
-      - travis_test
+      - test_travis
 
 before_install:
   - npm i
