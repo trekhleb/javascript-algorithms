@@ -1,0 +1,26 @@
+language: node_js
+
+node_js:
+  - node
+
+
+branches:
+  except:
+    - master
+
+
+  braches:
+    only:
+      - test_travis
+      - Milton-Choo-Xin-Hong
+      - sharvin
+before_install:
+  - npm i
+
+jobs:
+    include:
+        - stage: "run linting"
+          script:  npm run lint
+
+        - stage: "run tests"
+          script: npm run coverage 
