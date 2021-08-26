@@ -6,7 +6,7 @@ node_js:
 
 branches:
   except:
-    - master
+
 
 
   braches:
@@ -14,6 +14,7 @@ branches:
       - test_travis
       - Milton-Choo-Xin-Hong
       - sharvin
+      - master
 before_install:
   - npm i
 
