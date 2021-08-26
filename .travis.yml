@@ -21,7 +21,7 @@ before_install:
 jobs:
     include:
         - stage: "run linting"
-          script:  npm run lint
+          script:  npm run lint -- --fix
 
         - stage: "run tests"
           script: npm run coverage 
