@@ -12,7 +12,8 @@ branches:
   braches:
     only:
       - test_travis
-
+      - Milton-Choo-Xin-Hong
+      - sharvin
 before_install:
   - npm i
 
