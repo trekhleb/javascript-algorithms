@@ -1,145 +1,154 @@
-'use strict';
+function Toolbox() {
+  this.genIndv = function() {};
+  this.getFitness = function() {};
+  this.mutate = function() {};
+  this.goalFitness = Toolbox.fitnessMax;
+};
 
-// Src: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-function random(min, max) {
-  min = Math.ceil(min);
-  max = Math.floor(max);
+Toolbox.fitnessMax = 1;
+Toolbox.fitnessMin = -1;
 
-  // The maximum is exclusive and the minimum is inclusive
-  return Math.floor(Math.random() * (max - min)) + min;
-}
+function GeneticAlgorithm(toolbox, popSize, mutProb, breedFunction, verbose = false) {
 
-function generateLetter() {
-  const code = random(97, 123); // ASCII char codes
-  return String.fromCharCode(code);
-}
+  checkConstructorVars(toolbox, popSize, mutProb, breedFunction);
 
-class Member {
-  constructor(target) {
-    this.target = target;
-    this.keys = [];
-
-    for (let i = 0; i < target.length; i += 1) {
-      this.keys[i] = generateLetter();
-    }
-  }
-
-  fitness() {
-    let matches = 0;
-
-    for (let i = 0; i < this.keys.length; i += 1) {
-      if (this.keys[i] === this.target[i]) {
-        matches += 1;
+  function checkConstructorVars(toolbox, popsize, mutProb, breedFunction) {
+      if(toolbox === undefined) {
+          throw 'Toolbox must be defined';
       }
-    }
 
-    return matches / this.target.length;
-  }
-
-  crossover(partner) {
-    const { length } = this.target;
-    const child = new Member(this.target);
-    const midpoint = random(0, length);
-
-    for (let i = 0; i < length; i += 1) {
-      if (i > midpoint) {
-        child.keys[i] = this.keys[i];
-      } else {
-        child.keys[i] = partner.keys[i];
+      if(popSize === undefined) {
+          throw 'Population size must be defined';
       }
-    }
 
-    return child;
-  }
-
-  mutate(mutationRate) {
-    for (let i = 0; i < this.keys.length; i += 1) {
-      // If below predefined mutation rate,
-      // generate a new random letter on this position.
-      if (Math.random() < mutationRate) {
-        this.keys[i] = generateLetter();
+      if (popSize <= 2) {
+          throw 'Population size must be greater than 2. Current size: ' + popSize;
       }
-    }
-  }
-}
 
-class Population {
-  constructor(size, target, mutationRate) {
-    size = size || 1;
-    this.members = [];
-    this.mutationRate = mutationRate;
-
-    for (let i = 0; i < size; i += 1) {
-      this.members.push(new Member(target));
-    }
-  }
-
-  evolve(generations) {
-    for (let i = 0; i < generations; i += 1) {
-      const pool = this._selectMembersForMating();
-      this._reproduce(pool);
-    }
-  }
-
-  _selectMembersForMating() {
-    const matingPool = [];
-
-    this.members.forEach((m) => {
-      // The fitter he/she is, the more often will be present in the mating pool
-      // i.e. increasing the chances of selection
-      // If fitness == 0, add just one member
-      const f = Math.floor(m.fitness() * 100) || 1;
-
-      for (let i = 0; i < f; i += 1) {
-        matingPool.push(m);
+      if(mutProb === undefined) {
+          throw 'Mutability probability must be defined';
       }
-    });
 
-    return matingPool;
-  }
+      if(breedFunction === undefined) {
+          throw 'Breed function must be defined';
+      }
+  };
 
-  _reproduce(matingPool) {
-    for (let i = 0; i < this.members.length; i += 1) {
-      // Pick 2 random members/parent from the mating pool
-      const parentA = matingPool[random(0, matingPool.length)];
-      const parentB = matingPool[random(0, matingPool.length)];
-
-      // Perform crossover
-      const child = parentA.crossover(parentB);
-
-      // Perform mutation
-      child.mutate(this.mutationRate);
-
-      this.members[i] = child;
-    }
-  }
-}
-
-// Init function
-function initialize(populationSize, target, mutationRate, generations) {
-  let perfectCandidateFound = false;
-  // Create a population and evolve for N generations
-  const population = new Population(populationSize, target, mutationRate);
-  population.evolve(generations);
-
-  // Get the typed words from all members and find if someone was able to type the target
-  const membersKeys = population.members.map((m) => m.keys.join(''));
-  const perfectCandidatesNum = membersKeys.filter((w) => w === target);
-
-  // test the results
-  let numOfPerfectCandidates = perfectCandidatesNum ? perfectCandidatesNum.length : 0;
   
-  perfectCandidateFound = Boolean(numOfPerfectCandidates > 0);
 
-  return perfectCandidateFound;
+  this.evolve = function(generations) {
+      let population = this.generatePopulation(toolbox.genIndv, popSize);
+
+      for (var i = 0; i < generations; i++) {
+          population = this.getFitness(population, toolbox.getFitness);
+          population = this.sortByFitness(population, toolbox.getFitness, toolbox.goalFitness);
+
+          if (verbose) printUpdate(population, i);
+          population = breed(population, toolbox.mutate, mutProb, breedFunction);
+      }
+      population = this.getFitness(population, toolbox.getFitness);
+      population = this.sortByFitness(population, toolbox.getFitness, toolbox.goalFitness);
+      if (verbose) printUpdate(population, generations);
+
+      let results = getResults(population, toolbox.getFitness, generations);
+      return results;
+  };
+
+
+  // Generate a population with the given individual 
+  // generation strategy and population size
+  this.generatePopulation = function(genIndv, popSize) {
+      let pop = [];
+      for (var i = 0; i < popSize; i++) {
+          let indv = { individual: genIndv() }
+          pop.push(indv);
+      }
+      return pop;
+  };
+
+  this.getFitness = function(population, getFitness) {
+      for (var i = 0; i < population.length; i++){
+          let indv = population[i];
+          indv.fitness = getFitness(indv.individual);
+          population[i] = indv;
+      }
+      return population;
+  }
+
+  // Sort the population array
+  this.sortByFitness = function(population, getFitness, goalFitness) {
+      population.sort(function(a, b) {
+          return (b.fitness - a.fitness) * goalFitness;
+      });
+      return population;
+  };
+
+  // breed population and apply mutation if probability met
+  function breed(population, mutate, mutProb, breedFunction) {
+
+      // Select best individuals and remove bottom half of population
+      let breeders = Math.round(population.length / 2);
+      let newPopulation = population.slice(0, breeders);
+
+      // Select parents
+      while (newPopulation.length != population.length) {
+          let parentAIndex = Math.floor(Math.random() * breeders);
+          let parentBIndex = Math.floor(Math.random() * breeders);
+
+          while (parentAIndex == parentBIndex) {
+              parentBIndex = Math.floor(Math.random() * breeders);
+          }
+
+          let parentA = population[parentAIndex].individual;
+          let parentB = population[parentBIndex].individual;
+
+          // Create newborn
+          let newborn = breedFunction(parentA, parentB);
+
+          // Mutate newborn
+          if (Math.random() <= mutProb) {
+              newborn = mutate(newborn);
+          }
+          newPopulation.push({ individual: newborn });
+      }
+      return newPopulation;
+  };
+
+  function getResults(population, getFitness, generations) {
+      let results = {
+          generations: generations,
+          population: []
+      };
+      for (var i = 0; i < population.length; i++) {
+          let indv = population[i];
+          results.population.push(indv);
+      }
+      return results;
+  };
+
+  function printUpdate(population, generation) {
+      let fittestScore = population[0].fitness;
+      let sum = 0;
+      for (var i = 0; i < population.length; i++) {
+          sum += population[i].fitness;
+      }
+      let average = sum / population.length;
+      console.log("Generation:", generation, "Fittest:", fittestScore, "Average:", average);
+  };
+};
+
+function Algorithms() {};
+
+Algorithms.crossBreed = function(parentA, parentB) {
+  // Select cutOff point and create newborn
+  let cutOff = Math.floor(Math.random() * parentA.length);
+  let newborn = parentA.slice(0, cutOff + 1);
+  let parentBChrom = parentB.slice(cutOff + 1, parentB.length);
+
+  for (var i = 0; i < parentBChrom.length; i++) {
+      newborn.push(parentBChrom[i]);
+  }
+  return newborn;
 }
 
-function genetic() {
-  let foundStatus = false;
-  foundStatus = initialize(80, 'hit', 0.05, 20);
-  return foundStatus;
-}
-
-genetic();
-
-export default genetic;
+export {Toolbox, GeneticAlgorithm, Algorithms};
