@@ -12,7 +12,7 @@ branches:
   braches:
     only:
       - test_travis
-      - Milton-Choo-Xin-Hong
+      - MiltonChooXinHong
       - sharvin
       - master
 before_install:
