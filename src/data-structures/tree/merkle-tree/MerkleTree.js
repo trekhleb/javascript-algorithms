@@ -86,6 +86,12 @@ class MerkleTree {
         const hash = crypto.createHash(method)
         return hash.update(node, 'utf8').digest('hex')
     }
+    _toString(node) {
+        if (node.constructor === String) return node
+        if (node.constructor === Number) return node.toString()
+        if (node.constructor === Object) return JSON.stringify(node)
+        throw new Error('Input object only takes string, number, object')
+    }
 
 
 }
