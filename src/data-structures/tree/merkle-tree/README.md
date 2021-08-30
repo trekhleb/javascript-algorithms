@@ -28,6 +28,7 @@ Merkle trees produce an overall digital fingerprint of the entire set of transac
 ## Algorithm and Implementation
 
 ![Algorithm](https://media-exp1.licdn.com/dms/image/C5112AQEehgC6XD-20Q/article-inline_image-shrink_1000_1488/0/1537618459684?e=1635984000&v=beta&t=jRQinfqEPZvstqnlzklZvUXwyLIjWy6uFkCK3TsMcKQ)
+
 A Merkle tree is constructed by recursively hashing pairs of nodes until there is only one hash.
 
 a, b, c, and d are some data elements (files, JSON, etc) and H is a hash function.
@@ -40,7 +41,7 @@ Note: Merkle tree are mostly a binary tree but there are also Trees. Platforms l
 
 ## Complexity
  Merkle trees have very little overhead when compared with hash lists. Binary Merkle trees, like the one pictured above, operate similarly to binary search trees in that their depth is bounded by their branching factor, 2. Included below is worst-case analysis for a Merkle tree with a branching factor of kk.
-![Complexity](https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40skj48817%2Fmerkle-trees-introduction-to-blockchain-c80c0247046&psig=AOvVaw3kakSbcvZ_Np71aiixWGfK&ust=1630408818280000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKi2p5nd2PICFQAAAAAdAAAAABAD)
+![Complexity](https://miro.medium.com/max/875/1*AghVi4KgVsnxjXNKZBJu9Q.png)
  
 ## References
 
