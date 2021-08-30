@@ -70,6 +70,23 @@ class MerkleTree {
         // Set the final hash as root
         this.root = currentRow[0]
     }
+    inputHash(node) {
+        return this.hashBase(node, this.option.inputHash)
+    }
+
+    hash(node) {
+        return this.hashBase(node, this.option.hash)
+    }
+
+    hashBase(node, method = this.option.hash) {
+        node = this._toString(node)
+        if (method && (typeof method === 'function')) {
+            return method(node)
+        }
+        const hash = crypto.createHash(method)
+        return hash.update(node, 'utf8').digest('hex')
+    }
+
 
 }
 
