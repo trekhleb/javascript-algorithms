@@ -5,7 +5,9 @@
   "env": {
     "jest/globals": true
   },
+  "parser": "@babel/eslint-parser",
   "rules": {
+    "linebreak-style": 0,
     "no-bitwise": "off",
     "no-lonely-if": "off",
     "class-methods-use-this": "off",
