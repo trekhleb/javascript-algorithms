@@ -43,6 +43,33 @@ class MerkleTree {
         this.originalArray = array
         this.buildTree()
     }
+    buildTree() {
+        // Hash all the inputs with inputHash()
+        this.hashedArray = this.originalArray.map(item => {
+            return this.inputHash(item)
+        })
+        // Initiate a 2D map to store all the hash values
+        this.fullPath = []
+        // Hash first row
+        let currentRow = this.hashedArray.map(item => {
+            return this.hash(item)
+        })
+        while (currentRow.length > 1) {
+            let nextRow = []
+            if ((currentRow.length % 2) !== 0) {
+                // Duplicate last node in the row if the node is alone
+                currentRow.push(currentRow[currentRow.length-1])
+            }
+            for (let i = 0; i < currentRow.length; i += 2) {
+                nextRow.push(this.hash(currentRow[i]+currentRow[i+1]))
+            }
+            this.fullPath.unshift(currentRow)
+            currentRow = nextRow
+        }
+        this.fullPath.unshift(currentRow)
+        // Set the final hash as root
+        this.root = currentRow[0]
+    }
 
 }
 
