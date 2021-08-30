@@ -1,6 +1,5 @@
 # Merkle - Tree
-
-_Read this in other languages:_
+- [Role](https://media-exp1.licdn.com/dms/image/C5112AQHbQzs-tGzrsQ/article-cover_image-shrink_720_1280/0/1537618109250?e=1635984000&v=beta&t=cATJRvRamNOSOdEFDi9EyH1ls3aQ1r_FHD9RXJIPmKY)
 
 ## What Is a Merkle Tree?
 A Merkle tree is a data structure that is used in computer science applications. In bitcoin and other cryptocurrencies​, Merkle trees serve to encode blockchain data more efficiently and securely.
@@ -26,9 +25,22 @@ Merkle Tree is one of the core data structures which is used in the Bitcoin bloc
 
 Merkle trees produce an overall digital fingerprint of the entire set of transactions, providing a very efficient process to verify whether a transaction is included in a block.
 
+## Algorithm and Implementation
+
+- [Role](https://media-exp1.licdn.com/dms/image/C5112AQEehgC6XD-20Q/article-inline_image-shrink_1000_1488/0/1537618459684?e=1635984000&v=beta&t=jRQinfqEPZvstqnlzklZvUXwyLIjWy6uFkCK3TsMcKQ)
+A Merkle tree is constructed by recursively hashing pairs of nodes until there is only one hash.
+
+a, b, c, and d are some data elements (files, JSON, etc) and H is a hash function.
+
+a hash function acts as a “digital fingerprint” of some piece of data by mapping it to a simple string with a low probability that any other piece of data will map to the same string.
+
+Each node is created by hashing the concatenation of its “parents” in the tree.
+
+Note: Merkle tree are mostly a binary tree but there are also Trees. Platforms like Ethereum use non binary tree. 
+
 ## Complexity
  Merkle trees have very little overhead when compared with hash lists. Binary Merkle trees, like the one pictured above, operate similarly to binary search trees in that their depth is bounded by their branching factor, 2. Included below is worst-case analysis for a Merkle tree with a branching factor of kk.
-![MerkleTree](https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40skj48817%2Fmerkle-trees-introduction-to-blockchain-c80c0247046&psig=AOvVaw3kakSbcvZ_Np71aiixWGfK&ust=1630408818280000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKi2p5nd2PICFQAAAAAdAAAAABAD)
+- [Complexity](https://www.google.com/url?sa=i&url=https%3A%2F%2Fmedium.com%2F%40skj48817%2Fmerkle-trees-introduction-to-blockchain-c80c0247046&psig=AOvVaw3kakSbcvZ_Np71aiixWGfK&ust=1630408818280000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCKi2p5nd2PICFQAAAAAdAAAAABAD)
  
 ## References
 
