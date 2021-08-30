@@ -92,6 +92,59 @@ class MerkleTree {
         if (node.constructor === Object) return JSON.stringify(node)
         throw new Error('Input object only takes string, number, object')
     }
+    
+    addNode(node) {
+        this.originalArray.push(node)
+        // Rebuild tree
+        this.buildTree()
+    }
+
+    getRoot() {
+        return this.root
+    }
+
+    /**
+     * getProof
+     * @desc Returns the proof for a node.
+     * @param {} node
+     * @param {Number} [index] - claimed node index of the input array.
+     * If not provided, getProof will set it default to first found index in the input array
+     * @return {Object} - An object provides the claim of the proof including: 
+     * {
+     *    node - the original input node,
+     *    index - the original input index(if valid/applicable for the current tree), -1 otherwise,
+     *    path - an array contains the coordinates of a  bottom-up merkle path
+     * }
+     *@example
+     * ```js
+     *const tree = new MerkleTree(['a', 'b', 'c', 'd', 'e']);
+     *console.log(tree.getProof('b'))
+     * // {node: 'b', index: 1, path: [[3,0],[2,1],[1,1]]}
+     *```
+     */
+
+    getProof(node, index) {
+        const result = {node, index: -1, path: []}
+        // Filter out invalid inputs
+        if (node === undefined || node === null) return result
+        if (index && (!Number.isInteger(index) || index < 0) || index >= this.originalArray.length) return result
+        // Set the index to real index if not provided
+        if (index === undefined || index === null) index = this.hashedArray.indexOf(this.inputHash(node))
+        if (index === -1) return result
+        result.index = index
+
+        // Build a path array bottom up based on the current full hash map by calculating indexes
+        for (let j=this.fullPath.length - 1; j>0;j--) {
+            // If the index indicates it is a left node, push right sibling to the path array, left otherwise.
+            if ((index % 2) == 0) {
+                result.path.push([j, index + 1])
+            } else {
+                result.path.push([j, index - 1])
+            }
+            index = Math.floor(index/2)
+        }
+        return result
+    }
 
 
 }
