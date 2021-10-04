@@ -7,7 +7,7 @@
 
 
 各アルゴリズムとデータ構造には独自のREADMEがあります。
-関連する説明と、そして参考資料 (YouTube動画)も含まれています。
+関連する説明、そして参考資料 (YouTube動画)も含まれています。
 
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
