@@ -66,6 +66,7 @@ the value in our bloom filter to `true`.
 
 ### Search
 
+don't understand it too well
 During a search, the same hash functions are called
 and used to hash the input. We then check if the
 indexes received _all_ have a value of `true` inside
