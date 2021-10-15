@@ -15,6 +15,7 @@ export default class LinkedList {
     this.compare = new Comparator(comparatorFunction);
   }
 
+  
   /**
    * @param {*} value
    * @return {LinkedList}
@@ -32,6 +33,7 @@ export default class LinkedList {
     return this;
   }
 
+  
   /**
    * @param {*} value
    * @return {LinkedList}
@@ -54,6 +56,7 @@ export default class LinkedList {
     return this;
   }
 
+  
   /**
    * @param {*} value
    * @return {LinkedListNode}
@@ -94,6 +97,7 @@ export default class LinkedList {
     return deletedNode;
   }
 
+  
   /**
    * @param {Object} findParams
    * @param {*} findParams.value
@@ -124,6 +128,7 @@ export default class LinkedList {
     return null;
   }
 
+  
   /**
    * @return {LinkedListNode}
    */
@@ -155,6 +160,7 @@ export default class LinkedList {
     return deletedTail;
   }
 
+  
   /**
    * @return {LinkedListNode}
    */
@@ -175,6 +181,7 @@ export default class LinkedList {
     return deletedHead;
   }
 
+  
   /**
    * @param {*[]} values - Array of values that need to be converted to linked list.
    * @return {LinkedList}
@@ -185,6 +192,7 @@ export default class LinkedList {
     return this;
   }
 
+  
   /**
    * @return {LinkedListNode[]}
    */
@@ -200,6 +208,7 @@ export default class LinkedList {
     return nodes;
   }
 
+  
   /**
    * @param {function} [callback]
    * @return {string}
