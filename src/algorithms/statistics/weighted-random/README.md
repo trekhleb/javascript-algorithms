@@ -1,5 +1,7 @@
 # Weighted Random
 
+![Weighted Random](images/cover.png)
+
 ## What is "Weighted Random"
 
 Let's say you have a list of **items**. Item could be anything. For example, we may have a list of fruits and vegetables that you like to eat: `[ '🍌', '🍎', '🥕' ]`.
