@@ -7,8 +7,8 @@ Let's say you have a list of **items**. Item could be anything. For example, we 
 The list of **weights** represent the weight (or probability, or importance) of each item. Weights are numbers. For example, the weights like `[3, 7, 1]` would say that:
 
 - you would like to eat `🍎 apples` more often (`7` out of `3 + 7 + 1 = 11` times),
-- then you would like to eat `bananas 🍌` less often (only `3` out of `11` times)
-- and the `carrots 🥕` you really don't like (want to eat it only `1` out of `11` times)
+- then you would like to eat `bananas 🍌` less often (only `3` out of `11` times),
+- and the `carrots 🥕` you really don't like (want to eat it only `1` out of `11` times).
 
 > If we speak in terms of probabilities than the weights list might be an array of floats that sum up to `1` (i.e. `[0.1, 0.5, 0.2, 0.2]`).
 
