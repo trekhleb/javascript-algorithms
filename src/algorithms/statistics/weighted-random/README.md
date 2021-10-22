@@ -24,7 +24,7 @@ function weightedRandom(items, weights) {
   // implementation goes here ...
 }
 
-const nextSnackToEat = weightedRandom(items, weights);
+const nextSnackToEat = weightedRandom(items, weights); // Could be '🍎'
 ```
 
 ## Applications of Weighted Random
