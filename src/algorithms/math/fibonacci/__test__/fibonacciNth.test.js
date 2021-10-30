@@ -21,5 +21,6 @@ describe('fibonacciNth', () => {
     expect(fibonacciNth(75)).toBe(2111485077978050);
     expect(fibonacciNth(80)).toBe(23416728348467685);
     expect(fibonacciNth(90)).toBe(2880067194370816120);
+    expect(() => fibonacciNth(-2)).toThrowError(new Error('Cannot have values less than 1'));
   });
 });
