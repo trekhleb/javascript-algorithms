@@ -51,14 +51,14 @@ Remove(head, value)
     return true
   end if
   n ← head.next
-  while n = ø and value !== n.value
+  while n = !ø and value !== n.value
     n ← n.next
   end while
   if n = tail
     tail ← tail.previous
     tail.next ← ø
     return true
-  else if n = ø
+  else if n != ø
     n.previous.next ← n.next
     n.next.previous ← n.previous
     return true
