@@ -59,7 +59,7 @@ const weightedItems = [
 // And now just pick the random item from weightedItems array.
 ```
 
-However, as you may see, this approach may require a lot of memory, in case if the objects are heavy, and in case if we have a lot of them to repeat in `weightedItems` list.
+However, as you may see, this approach may require a lot of memory, in case if we have a lot of items to repeat in `weightedItems` list. Think of it as if you would need to repeat a string like `"some-random-string"` (`18` bytes) a ten million times. You will need to allocate around `180Mb` of additional memory space just for this array.
 
 The **more efficient approach** would be to:
 
