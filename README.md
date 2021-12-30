@@ -156,6 +156,10 @@ a set of rules that precisely define a sequence of operations.
   * `B` [k-Means](src/algorithms/ml/k-means) - k-Means clustering algorithm
 * **Image Processing**
   * `B` [Seam Carving](src/algorithms/image-processing/seam-carving) - content-aware image resizing algorithm
+* **Statistics**
+  * `B` [Weighted Random](src/algorithms/statistics/weighted-random) - select the random item from the list based on items' weights
+* **Evolutionary algorithms**
+  * `A` [Genetic algorithm](https://github.com/trekhleb/self-parking-car-evolution) - example of how the genetic algorithm may be applied for training the self-parking cars
 * **Uncategorized**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
