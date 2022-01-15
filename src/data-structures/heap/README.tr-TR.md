@@ -1,12 +1,5 @@
 # Heap (data-structure)
 
-_Bunu diğer dillerde okuyun:_
-[_简体中文_](README.zh-CN.md),
-[_Русский_](README.ru-RU.md),
-[_日本語_](README.ja-JP.md),
-[_Français_](README.fr-FR.md),
-[_Português_](README.pt-BR.md)
-
 Bilgisayar biliminde, **yığın (heap)** aşağıda açıklanan özellikleri karşılayan ağaç tabanlı(tree-based) özel bir veri yapısıdır.
 
 *min heap*, Eğer `P`, `C`'nin üst düğümü ise, `P`'nin anahtarı (değeri)  `C`'nin anahtarından (değerinden) küçük veya ona eşittir.
