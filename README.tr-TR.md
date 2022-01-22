@@ -25,7 +25,7 @@ _Read this in other languages:_
 [_Deutsch_](README.de-DE.md)
 
 *☝ Not, bu proje araştırma ve öğrenme amacı ile yapılmış
-olup üretim için **yaplılmamıştır**.*
+olup üretim için **yapılmamıştır**.*
 
 ## Veri Yapıları
 
