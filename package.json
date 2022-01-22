@@ -2,14 +2,6 @@
   "name": "javascript-algorithms-and-data-structures",
   "version": "0.0.4",
   "description": "Algorithms and data-structures implemented on JavaScript",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint ./src/**",
-    "test": "jest",
-    "coverage": "npm run test -- --coverage",
-    "ci": "npm run lint && npm run coverage",
-    "prepare": "husky install"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trekhleb/javascript-algorithms.git"
@@ -28,28 +20,36 @@
     "interview",
     "interview-preparation"
   ],
-  "author": "Oleksii Trekhleb (https://www.linkedin.com/in/trekhleb/)",
+  "author": "Oleksii Trekhleb (https://trekhleb.dev)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/trekhleb/javascript-algorithms/issues"
   },
   "homepage": "https://github.com/trekhleb/javascript-algorithms#readme",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ./src/**",
+    "test": "jest",
+    "coverage": "npm run test -- --coverage",
+    "ci": "npm run lint && npm run coverage",
+    "prepare": "husky install"
+  },
   "devDependencies": {
-    "@babel/cli": "7.15.7",
-    "@babel/preset-env": "7.15.8",
-    "@types/jest": "27.0.2",
-    "canvas": "2.8.0",
-    "eslint": "8.0.1",
-    "eslint-config-airbnb": "18.2.1",
-    "eslint-plugin-import": "2.25.2",
-    "eslint-plugin-jest": "25.2.2",
-    "eslint-plugin-jsx-a11y": "6.4.1",
-    "eslint-plugin-react": "7.26.1",
-    "husky": "7.0.2",
-    "jest": "27.3.0"
+    "@babel/cli": "7.16.8",
+    "@babel/preset-env": "7.16.11",
+    "@types/jest": "27.4.0",
+    "canvas": "2.9.0",
+    "eslint": "8.7.0",
+    "eslint-config-airbnb": "19.0.4",
+    "eslint-plugin-import": "2.25.4",
+    "eslint-plugin-jest": "25.7.0",
+    "eslint-plugin-jsx-a11y": "6.5.1",
+    "eslint-plugin-react": "7.28.0",
+    "husky": "7.0.4",
+    "jest": "27.4.7"
   },
   "engines": {
-    "node": ">=12.0.0",
-    "npm": ">=6.9.0"
+    "node": ">=14.16.0",
+    "npm": ">=6.14.0"
   }
 }
