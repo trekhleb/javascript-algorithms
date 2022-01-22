@@ -1,7 +1,7 @@
 # Lista Encadeada (Linked List)
 
 Na ciência da computação, uma **lista encadeada** é uma coleção linear de
-elementos de dado, em que a ordem linear não é dada por sua locação
+elementos de dados, em que a ordem linear não é dada por sua locação
 física na memória. Em vez disso, cada elemento aponta para o próximo.
 É uma estrutura de dados consistindo em um grupo de nós
 que juntos representam uma sequência. Sob a forma mais simples,
