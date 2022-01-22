@@ -1,5 +1,8 @@
 # Reversed Linked List Traversal
 
+_Read this in other languages:_
+[中文](README.zh-CN.md)
+
 The task is to traverse the given linked list in reversed order.
 
 For example for the following linked list: 
