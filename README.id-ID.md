@@ -59,7 +59,7 @@ Algoritme adalah sebuah perincian yang jelas tentang cara untuk memecahkan suatu
 ### Algoritme Berdasarkanan Topik
 
 - **Matematika**
-  - `P` [Manipulasi Bit](src/algorithms/math/bits) - menetapkan/mendapatkan/memperbarui/mengahpus bit, perkalian/pembagian dengan angka 2, membuat bilangan negatif etc.
+  - `P` [Manipulasi Bit](src/algorithms/math/bits) - menetapkan/mendapatkan/memperbarui/menghapus bit, perkalian/pembagian dengan angka 2, membuat bilangan negatif dsb.
   - `P` [Faktorial](src/algorithms/math/Faktorial)
   - `P` [Bilangan Fibonacci](src/algorithms/math/fibonacci) - versi klasik dan bentuk tertutup
   - `P` [Faktor Prima](src/algorithms/math/prime-factors) - menemukan faktor prima dan menghitungnya menggunakan teorema Hardy-Ramanujan
@@ -258,7 +258,7 @@ Notasi _Big O_ digunakan untuk mengklasifikasikan algoritme berdasarkan durasi a
 
 Sumber: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
-Di bawah ini adalah daftar dari beberapa notasi _Bog O_ yang sering digunakan dan perbandingan kinerjanya terhadap berbagai ukuran _input data_.
+Di bawah ini adalah daftar dari beberapa notasi _Big O_ yang sering digunakan dan perbandingan kinerjanya terhadap berbagai ukuran _input data_.
 
 | Notasi _Big O_ | Komputasi untuk 10 elemen | Komputasi untuk 100 elemen | Komputasi untuk 1000 elemen |
 | -------------- | ------------------------- | -------------------------- | --------------------------- |
