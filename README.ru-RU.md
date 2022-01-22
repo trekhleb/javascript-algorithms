@@ -60,8 +60,10 @@ _Читать на других языках:_
 
 * **Математика**
   * `B` [Битовые манипуляции](src/algorithms/math/bits) — получение/запись/сброс/обновление битов, умножение/деление на 2, сделать отрицательным и т.п.
+  * `B` [Двоичное число с плавающей запятой](src/algorithms/math/binary-floating-point) - двоичное представление чисел с плавающей запятой
   * `B` [Факториал](src/algorithms/math/factorial)
   * `B` [Числа Фибоначчи](src/algorithms/math/fibonacci) — классическое решение, решение в замкнутой форме
+  * `B` [Простые множители](src/algorithms/math/prime-factors) - нахождение простых множителей и их подсчёт с использованием теоремы Харди-Рамануджана
   * `B` [Тест простоты](src/algorithms/math/primality-test) (метод пробного деления)
   * `B` [Алгоритм Евклида](src/algorithms/math/euclidean-algorithm) — нахождение наибольшего общего делителя (НОД)
   * `B` [Наименьшее общее кратное](src/algorithms/math/least-common-multiple) (НОК)
@@ -71,6 +73,9 @@ _Читать на других языках:_
   * `B` [Комплексные числа](src/algorithms/math/complex-number) — комплексные числа, базовые операции над ними
   * `B` [Радианы и градусы](src/algorithms/math/radian) — конвертирование радианов в градусы и наоборот
   * `B` [Быстрое возведение в степень](src/algorithms/math/fast-powering)
+  * `B` [Схема Горнера](src/algorithms/math/horner-method) - оценка полиномов
+  * `B` [Матрицы](src/algorithms/math/matrix) - матрицы и основные операции с матрицами (умножение, транспонирование и т.д.)
+  * `B` [Евклидово расстояние](src/algorithms/math/euclidean-distance) - расстояние между двумя точками/векторами/матрицами
   * `A` [Разбиение числа](src/algorithms/math/integer-partition)
   * `A` [Квадратный корень](src/algorithms/math/square-root) — метод Ньютона
   * `A` [Алгоритм Лю Хуэя](src/algorithms/math/liu-hui) — расчёт числа π с заданной точностью методом вписанных правильных многоугольников
@@ -134,8 +139,19 @@ _Читать на других языках:_
   * `A` [Задача коммивояжёра](src/algorithms/graph/travelling-salesman) — кратчайший маршрут, проходящий через указанные города с последующим возвратом в исходный город
 * **Криптография**
   * `B` [Полиноминальный хэш](src/algorithms/cryptography/polynomial-hash) — функция кольцевого хэша, основанная на полиноме
+  * `B` [Шифр ​​ограждения рельсов](src/algorithms/cryptography/rail-fence-cipher) - алгоритм транспозиционного шифра для кодирования сообщений
+  * `B` [Шифр Цезаря](src/algorithms/cryptography/caesar-cipher) - простой подстановочный шифр
+  * `B` [Шифр Хилла](src/algorithms/cryptography/hill-cipher) - подстановочный шифр на основе линейной алгебры
 * **Машинное обучение**
   * `B` [Нано-нейрон](https://github.com/trekhleb/nano-neuron) — 7 простых JavaScript функций, отображающих способности машины к обучению (прямое и обратное распространение)
+  * `B` [k-NN](src/algorithms/ml/knn) - алгоритм классификации k-ближайших соседей
+  * `B` [k-Means](src/algorithms/ml/k-means) - алгоритм кластеризации по методу k-средних
+* **Обработка изображений**
+  * `B` [Резьба по шву](src/algorithms/image-processing/seam-carving) - алгоритм изменения размера изображения с учетом содержания
+* **Статистика**
+  * `B` [Взвешенная случайность](src/algorithms/statistics/weighted-random) - выбор случайного элемента из списка на основе веса элементов
+* **Эволюционные алгоритмы**
+  * `A` [Генетический алгоритм](https://github.com/trekhleb/self-parking-car-evolution) - пример применения генетического алгоритма для обучения самопаркующихся автомобилей
 * **Прочие алгоритмы**
   * `B` [Ханойская башня](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Поворот квадратной матрицы](src/algorithms/uncategorized/square-matrix-rotation) — используется дополнительная память
@@ -143,6 +159,7 @@ _Читать на других языках:_
   * `B` [Поиск уникальных путей](src/algorithms/uncategorized/unique-paths) — на основе бэктрекинга, динамического программирования и треугольника Паскаля
   * `B` [Подсчёт дождевой воды](src/algorithms/uncategorized/rain-terraces) — на основе перебора и динамического программирования
   * `B` [Задача о рекурсивной лестнице](src/algorithms/uncategorized/recursive-staircase) — подсчёт количества путей, по которым можно достичь верха лестницы (4 способа)
+  * `B` [Лучшее время для покупки и продажи акций](src/algorithms/uncategorized/best-time-to-buy-sell-stocks) - примеры "разделяй и властвуй" и в один проход
   * `A` [Задача об N ферзях](src/algorithms/uncategorized/n-queens)
   * `A` [Маршрут коня](src/algorithms/uncategorized/knight-tour)
 
@@ -172,8 +189,10 @@ _Читать на других языках:_
   * `B` [Быстрая сортировка](src/algorithms/sorting/quick-sort)
   * `B` [Поиск в глубину (дерево)](src/algorithms/tree/depth-first-search)
   * `B` [Поиск в глубину (граф)](src/algorithms/graph/depth-first-search)
+  * `B` [Матрицы](src/algorithms/math/matrix) - генерирование и обход матриц различной формы
   * `B` [Прыжки](src/algorithms/uncategorized/jump-game)
   * `B` [Быстрое возведение в степень](src/algorithms/math/fast-powering)
+  * `B` [Лучшее время для покупки и продажи акций](src/algorithms/uncategorized/best-time-to-buy-sell-stocks) - примеры "разделяй и властвуй" и в один проход
   * `A` [Перестановки](src/algorithms/sets/permutations) (с повторениями и без повторений)
   * `A` [Сочетания](src/algorithms/sets/combinations) (с повторениями и без повторений)
 * **Динамическое программирование** — решение общей задачи конструируется на основе ранее найденных решений подзадач
@@ -182,6 +201,7 @@ _Читать на других языках:_
   * `B` [Поиск уникальных путей](src/algorithms/uncategorized/unique-paths)
   * `B` [Подсчёт дождевой воды](src/algorithms/uncategorized/rain-terraces)
   * `B` [Задача о рекурсивной лестнице](src/algorithms/uncategorized/recursive-staircase) — подсчёт количества путей, по которым можно достичь верха лестницы
+  * `B` [Резьба по шву](src/algorithms/image-processing/seam-carving) - алгоритм изменения размера изображения с учетом содержания
   * `A` [Расстояние Левенштейна](src/algorithms/string/levenshtein-distance) — метрика, измеряющая разность между двумя последовательностями
   * `A` [Наибольшая общая подпоследовательность](src/algorithms/sets/longest-common-subsequence)
   * `A` [Наибольшая общая подстрока](src/algorithms/string/longest-common-substring)
