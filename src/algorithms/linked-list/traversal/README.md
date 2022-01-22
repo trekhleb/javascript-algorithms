@@ -1,7 +1,7 @@
 # Linked List Traversal
 
 _Read this in other languages:_
-[_Русский_](README.ru-RU.md)
+[_Русский_](README.ru-RU.md),
 [中文](README.zh-CN.md)
 
 The task is to traverse the given linked list in straight order.

@@ -43,7 +43,7 @@ export default function knuthMorrisPratt(text, word) {
     if (text[textIndex] === word[wordIndex]) {
       // We've found a match.
       if (wordIndex === word.length - 1) {
-        return textIndex - word.length + 1;
+        return (textIndex - word.length) + 1;
       }
       wordIndex += 1;
       textIndex += 1;
