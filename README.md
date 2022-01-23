@@ -102,7 +102,7 @@ a set of rules that precisely define a sequence of operations.
   * `A` [Combination Sum](src/algorithms/sets/combination-sum) - find all combinations that form specific sum
 * **Strings**
   * `B` [Hamming Distance](src/algorithms/string/hamming-distance) - number of positions at which the symbols are different
-  * `B` [Palindrome Check](src/algorithms/string/palindrome-check) - is the string the same in reverse
+  * `B` [Palindrome](src/algorithms/string/palindrome) - check if the string is the same in reverse
   * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * `A` [Knuth–Morris–Pratt Algorithm](src/algorithms/string/knuth-morris-pratt) (KMP Algorithm) - substring search (pattern matching)
   * `A` [Z Algorithm](src/algorithms/string/z-algorithm) - substring search (pattern matching)
