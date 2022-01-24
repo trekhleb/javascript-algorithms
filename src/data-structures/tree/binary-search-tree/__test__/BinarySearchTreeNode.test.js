@@ -252,4 +252,21 @@ describe('BinarySearchTreeNode', () => {
 
     expect(childNode.parent).toBeNull();
   });
+
+  it('should get the successor of a node', () => {
+    const rootNode = new BinarySearchTreeNode(5);
+    rootNode.insert(2);
+    rootNode.insert(3);
+    rootNode.insert(1);
+    rootNode.insert(7);
+    rootNode.insert(6);
+
+    const node = rootNode.find(1);
+    const node2 = rootNode.find(6);
+    const node3 = rootNode.find(7);
+
+    expect(node.successor().value).toBe(2);
+    expect(node2.successor().value).toBe(7);
+    expect(node3.successor()).toBeNull();
+  });
 });
