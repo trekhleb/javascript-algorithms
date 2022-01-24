@@ -1,13 +1,12 @@
 # JavaScript Algoritmalar ve Veri Yapıları
 
-[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions)
+[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
-Bu repository JavaScript'e ait popüler
-algoritma ve veri yapılarını içermektedir.
+Bu repository popüler algoritmaların ve veri yapılarının birçoğunun Javascript tabanlı örneklerini bulundurur.
 
-Her bir algoritma ve veri yapısı kendine 
-ait açıklama ve videoya sahip README dosyası içerir. 
+Her bir algoritma ve veri yapısı kendine
+ait açıklama ve videoya sahip README dosyası içerir.
 
 _Read this in other languages:_
 [_简体中文_](README.zh-CN.md),
@@ -19,15 +18,19 @@ _Read this in other languages:_
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md),
 [_Русский_](README.ru-RU.md),
-[_Italiana_](README.it-IT.md)
+[_Italiana_](README.it-IT.md),
+[_Bahasa Indonesia_](README.id-ID.md),
+[_Українська_](README.uk-UA.md),
+[_Arabic_](README.ar-AR.md),
+[_Deutsch_](README.de-DE.md)
 
-*☝ Not, bu proje araştırma ve öğrenme amacı ile yapılmış 
-olup üretim için **yaplılmamıştır**.*
+*☝ Not, bu proje araştırma ve öğrenme amacı ile yapılmış
+olup üretim için **yapılmamıştır**.*
 
 ## Veri Yapıları
 
 Bir veri yapısı, verileri bir bilgisayarda organize etmenin ve depolamanın belirli bir yoludur, böylece
-verimli bir şekilde erişilebilir ve değiştirilebilir. Daha doğrusu, bir veri yapısı bir veri koleksiyonudur,
+verimli bir şekilde erişilebilir ve değiştirilebilir. Daha iyi ifadeyle, bir veri yapısı bir veri koleksiyonudur,
 aralarındaki ilişkiler, ve işlevler veya işlemler
 veriye uygulanabilir.
 
@@ -53,8 +56,8 @@ veriye uygulanabilir.
 
 ## Algoritmalar
 
-Bir algoritma, bir problem sınıfının nasıl çözüleceğine dair kesin bir tanımlamadır. Bu
-bir işlem dizisini kesin olarak tanımlayan bir dizi kural.
+Bir algoritma, bir problem sınıfının nasıl çözüleceğine dair kesin bir tanımlamadır.
+Bir işlem dizisini açık olarak tanımlayan kurallar dizisidir.
 
 
 `B` - Başlangıç, `A` - İleri Seviye
@@ -63,45 +66,49 @@ bir işlem dizisini kesin olarak tanımlayan bir dizi kural.
 
 * **Matematik**
   * `B` [Bit Manipülasyonu](src/algorithms/math/bits) - set/get/update/clear bits, multiplication/division by two, make negative etc.
-  * `B` [Faktöriyel](src/algorithms/math/factorial) 
+  * `B` [İkili Kayan Nokta](src/algorithms/math/binary-floating-point) - kayan noktalı sayıların ikilik sistemde gösterimi.
+  * `B` [Faktöriyel](src/algorithms/math/factorial)
   * `B` [Fibonacci Sayısı](src/algorithms/math/fibonacci) - klasik ve kapalı-form versiyonları
-  * `B` [Asallık Testi](src/algorithms/math/primality-test) (trial division method)
+  * `B` [Asallık Testi](src/algorithms/math/primality-test) (deneyerek bölüm metodu)
   * `B` [Öklid Algoritması](src/algorithms/math/euclidean-algorithm) - En büyük ortak bölen hesaplama (EBOB)
   * `B` [En küçük Ortak Kat](src/algorithms/math/least-common-multiple) (EKOK)
-  * `B` [Sieve of Eratosthenes](src/algorithms/math/sieve-of-eratosthenes) - belirli bir sayıya kadarki asal sayıları bulma
+  * `B` [Eratosten Kalburu](src/algorithms/math/sieve-of-eratosthenes) - belirli bir sayıya kadarki asal sayıları bulma
   * `B` [Is Power of Two](src/algorithms/math/is-power-of-two) - sayı ikinin katı mı sorgusu (naive ve bitwise algoritmaları)
   * `B` [Paskal Üçgeni](src/algorithms/math/pascal-triangle)
-  * `B` [Karmaşık Sayılar](src/algorithms/math/complex-number) - karmaşık sayılar ve bunlarla temel işlemler
-  * `B` [Radyan & Derece](src/algorithms/math/radian) - radyandan dereceye çeviri ve tersi
+  * `B` [Karmaşık Sayılar](src/algorithms/math/complex-number) - karmaşık sayılar ve karmaşık sayılar ile temel işlemler
+  * `B` [Radyan & Derece](src/algorithms/math/radian) - radyandan dereceye çeviri ve tersine çeviri
   * `B` [Fast Powering](src/algorithms/math/fast-powering)
+  * `B` [Horner's method](src/algorithms/math/horner-method) - polinomal ifadelerin değerlendirilmesi
+  * `B` [Matrices](src/algorithms/math/matrix) - matrisler ve basit matris operasyonları (çarpım, tersçapraz, vb.)
+  * `B` [Euclidean Distance](src/algorithms/math/euclidean-distance) - iki nokta/vektör/matris arasındaki mesafe
   * `A` [Tamsayı Bölümü](src/algorithms/math/integer-partition)
   * `A` [Karekök](src/algorithms/math/square-root) - Newton yöntemi
   * `A` [Liu Hui π Algoritması](src/algorithms/math/liu-hui) - N-gons'a göre yaklaşık π hesabı
-  * `A` [Ayrık Fourier Dönüşümü](src/algorithms/math/fourier-transform) - bir zaman fonksiyonunu (bir sinyal) onu oluşturan frekanslara ayırır
+  * `A` [Ayrık Fourier Dönüşümü](src/algorithms/math/fourier-transform) - bir zaman fonksiyonunu (sinyal) içerdiği frekanslara ayırın
 * **Setler**
-  * `B` [Kartezyen Ürün](src/algorithms/sets/cartesian-product) - product of multiple sets
+  * `B` [Kartezyen Ürün](src/algorithms/sets/cartesian-product) - birden fazla kümenin çarpımı
   * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - sonlu bir dizinin rastgele permütasyonu
-  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set (bitwise and backtracking solutions)
+  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set (bit düzeyinde ve geri izleme yöntemleri)
   * `A` [Permütasyonlar](src/algorithms/sets/permutations)(tekrarlı ve tekrarsız)
   * `A` [Kombinasyonlar](src/algorithms/sets/combinations) (tekrarlı ve tekrarsız)
   * `A` [En Uzun Ortak Altdizi](src/algorithms/sets/longest-common-subsequence) (LCS)
   * `A` [En Uzun Artan Altdizi](src/algorithms/sets/longest-increasing-subsequence)
   * `A` [En Kısa Ortak Üst Sıra](src/algorithms/sets/shortest-common-supersequence) (SCS)
-  * `A` [Knapsack Problem](src/algorithms/sets/knapsack-problem) - "0/1" and "Unbound" ones
-  * `A` [Maksimum Altdizi](src/algorithms/sets/maximum-subarray) - "Brute Force" ve "Dinamik Programlara" (Kadane'nin) versiyonu
+  * `A` [Knapsack Problem](src/algorithms/sets/knapsack-problem) - "0-1 sırt çantası problemi" ve "Sınırsız sırt çantası problemi"
+  * `A` [Maksimum Altdizi](src/algorithms/sets/maximum-subarray) - "Kaba Kuvvet" ve "Dinamik Programlara" (Kadane'nin) versiyonu
   * `A` [Kombinasyon Toplamı](src/algorithms/sets/combination-sum) - belirli toplamı oluşturan tüm kombinasyonları bulun
 * **Metin**
   * `B` [Hamming Mesafesi](src/algorithms/string/hamming-distance) - sembollerin farklı olduğu konumların sayısı
   * `A` [Levenshtein Mesafesi](src/algorithms/string/levenshtein-distance) - iki sekans arasındaki minimum düzenleme mesafesi
-  * `A` [Knuth–Morris–Pratt Algoritması](src/algorithms/string/knuth-morris-pratt) (KMP Algorithm) - substring search (pattern matching)
+  * `A` [Knuth–Morris–Pratt Algoritması](src/algorithms/string/knuth-morris-pratt) (KMP Algorithm) - altmetin araması (örüntü eşleme)
   * `A` [Z Algoritması](src/algorithms/string/z-algorithm) - altmetin araması (desen eşleştirme)
   * `A` [Rabin Karp Algoritması](src/algorithms/string/rabin-karp) - altmetin araması
   * `A` [En Uzun Ortak Alt Metin](src/algorithms/string/longest-common-substring)
   * `A` [Regular Expression Eşleme](src/algorithms/string/regular-expression-matching)
 * **Aramalar**
   * `B` [Doğrusal Arama](src/algorithms/search/linear-search)
-  * `B` [Jump Search](src/algorithms/search/jump-search) (ya da Block Search) - sıralı dizide ara
-  * `B` [İkili Arama](src/algorithms/search/binary-search) - sıralı dizide ara
+  * `B` [Jump Search](src/algorithms/search/jump-search) (ya da Block Search) - sıralı dizide arama
+  * `B` [İkili Arama](src/algorithms/search/binary-search) - sıralı dizide arama
   * `B` [Interpolation Search](src/algorithms/search/interpolation-search) - tekdüze dağıtılmış sıralı dizide arama
 * **Sıralama**
   * `B` [Bubble Sort](src/algorithms/sorting/bubble-sort)
@@ -143,8 +150,8 @@ bir işlem dizisini kesin olarak tanımlayan bir dizi kural.
 * **Kategoriye Ayrılmayanlar**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
-  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples 
-  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples 
+  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples
+  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, dynamic programming and Pascal's Triangle based examples
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem (dynamic programming and brute force versions)
   * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - tepeye ulaşmanın yollarını sayma (4 çözüm)
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
@@ -152,8 +159,8 @@ bir işlem dizisini kesin olarak tanımlayan bir dizi kural.
 
 ### Algoritmik Paradigma
 
-Algoritmik paradigma, bir sınıfın tasarımının altında yatan genel bir yöntem veya yaklaşımdır. 
-Algoritma dizayn tekniği olarak düşünülebilir. Her bir altproblemi (subproblem) asıl problemle 
+Algoritmik paradigma, bir sınıfın tasarımının altında yatan genel bir yöntem veya yaklaşımdır.
+Algoritma dizayn tekniği olarak düşünülebilir. Her bir altproblemi (subproblem) asıl problemle
 benzerlik gösteren problemlere uygulanabilir.
 
 * **Brute Force** - mümkün olan tüm çözümleri tara ve en iyisini seç
@@ -198,7 +205,7 @@ benzerlik gösteren problemlere uygulanabilir.
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
   * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - tüm grafik köşelerine giden en kısa yolu bulmak
   * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - tüm köşe çiftleri arasındaki en kısa yolları bulun
-  * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching) 
+  * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
 * **Backtracking** - brute forceye benzer, mümkün tüm sonuçları tara, ancak bir sonraki çözümü her ürettiğinizde test edersiniz
 tüm koşulları karşılıyorsa ve ancak o zaman sonraki çözümleri üretmeye devam edin. Aksi takdirde, geri dönün ve farklı bir çözüm arayın(?).
 Normally the DFS traversal of state-space is being used.
@@ -242,7 +249,7 @@ npm test -- 'LinkedList'
 
 **Deneme Alanı**
 
-data-structures ve algorithms içerisinde `./src/playground/playground.js` 
+data-structures ve algorithms içerisinde `./src/playground/playground.js`
 yazarak `./src/playground/__test__/playground.test.js` için test edebilirsin.
 
 
@@ -260,7 +267,7 @@ npm test -- 'playground'
 
 ### Big O Notation
 
-* Big O notation *, algoritmaları, giriş boyutu büyüdükçe çalışma süresi veya alan gereksinimlerinin nasıl arttığına göre sınıflandırmak için kullanılır.
+* Big O notation *, algoritmaları, girdi boyutu büyüdükçe çalışma süresi veya alan gereksinimlerinin nasıl arttığına göre sınıflandırmak için kullanılır.
 Aşağıdaki grafikte, Big O gösteriminde belirtilen algoritmaların en yaygın büyüme sıralarını bulabilirsiniz.
 
 ![Big O graphs](./assets/big-o-graph.png)
@@ -310,4 +317,6 @@ Altta Big O notations ve farklı input boyutlarına karşın yapılmış perform
 
 ## Projeyi Destekleme
 
-Bu projeyi buradan destekleyebilirsiniz ❤️️ [GitHub](https://github.com/sponsors/trekhleb) veya ❤️️ [Patreon](https://www.patreon.com/trekhleb).          
+Bu projeyi buradan destekleyebilirsiniz ❤️️ [GitHub](https://github.com/sponsors/trekhleb) veya ❤️️ [Patreon](https://www.patreon.com/trekhleb).
+
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

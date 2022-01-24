@@ -1,10 +1,14 @@
 # Linked List Traversal
 
+_Read this in other languages:_
+[_Русский_](README.ru-RU.md),
+[中文](README.zh-CN.md)
+
 The task is to traverse the given linked list in straight order.
 
-For example for the following linked list: 
+For example for the following linked list:
 
-![](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+![Singly linked list](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
 The order of traversal should be:
 
