@@ -79,7 +79,7 @@ definen con precisión una secuencia de operaciones.
   * `P` [Radianes & Grados](src/algorithms/math/radian) - conversión de radianes a grados y viceversa
   * `P` [Exponenciación rápida](src/algorithms/math/fast-powering)
   * `A` [Partición entera](src/algorithms/math/integer-partition)
-  * `A` [Algortimo π de Liu Hui](src/algorithms/math/liu-hui) - aproximar el cálculo de  π basado en polígonos de N lados
+  * `A` [Algoritmo π de Liu Hui](src/algorithms/math/liu-hui) - aproximar el cálculo de  π basado en polígonos de N lados
   * `A` [Transformada discreta de Fourier](src/algorithms/math/fourier-transform) - descomponer una función de tiempo (señal) en las frecuencias que la componen
 * **Conjuntos**
   * `P` [Producto cartesiano](src/algorithms/sets/cartesian-product) - producto de múltiples conjuntos
@@ -128,7 +128,7 @@ definen con precisión una secuencia de operaciones.
   * `P` [Algoritmo de Kruskal](src/algorithms/graph/kruskal) - encontrar el árbol de cubrimiento mínimo (MST) para un grafo no dirigido ponderado
   * `A` [Algoritmo de Dijkstra](src/algorithms/graph/dijkstra) - encontrar los caminos más cortos a todos los vértices del grafo desde un solo vértice
   * `A` [Algoritmo de Bellman-Ford](src/algorithms/graph/bellman-ford) - encontrar los caminos más cortos a todos los vértices del grafo desde un solo vértice
-  * `A` [Algortimo de Floyd-Warshall](src/algorithms/graph/floyd-warshall) - encontrar los caminos más cortos entre todos los pares de vértices
+  * `A` [Algoritmo de Floyd-Warshall](src/algorithms/graph/floyd-warshall) - encontrar los caminos más cortos entre todos los pares de vértices
   * `A` [Detectar ciclos](src/algorithms/graph/detect-cycle) - para grafos dirigidos y no dirigidos (versiones basadas en DFS y conjuntos disjuntos)
   * `A` [Algoritmo de Prim](src/algorithms/graph/prim) - encontrar el árbol de cubrimiento mínimo (MST) para un grafo no dirigido ponderado
   * `A` [Ordenamiento topológico](src/algorithms/graph/topological-sorting) - método DFS
@@ -138,7 +138,7 @@ definen con precisión una secuencia de operaciones.
   * `A` [Ciclo hamiltoniano](src/algorithms/graph/hamiltonian-cycle) - visitar cada vértice exactamente una vez
   * `A` [Componentes fuertemente conexos](src/algorithms/graph/strongly-connected-components) - algoritmo de Kosaraju
   * `A` [Problema del viajante](src/algorithms/graph/travelling-salesman) - la ruta más corta posible que visita cada ciudad y vuelve a la ciudad de origen
-* **Criptografia**
+* **Criptografía**
   * `P` [Hash polinomial](src/algorithms/cryptography/polynomial-hash) - función de hash rodante basada en polinomio
 * **Sin categoría**
   * `P` [Torre de Hanói](src/algorithms/uncategorized/hanoi-tower)
@@ -203,7 +203,7 @@ Es una abstracción superior a la noción de algoritmo, del mismo modo que un al
   * `A` [Problema de las N Reinas](src/algorithms/uncategorized/n-queens)
   * `A` [Problema del caballo (Knight tour)](src/algorithms/uncategorized/knight-tour)
   * `A` [Suma combinada](src/algorithms/sets/combination-sum) - encuentra todas las combinaciones que forman una suma específica
-* **Ramas y Limites** - recuerda la solución de menor costo encontrada en cada etapa de la búsqueda de rastreo, y utilizar el costo de la solución de menor costo encontrada hasta el momento como un límite inferior del costo de una solución de menor costo para el problema, a fin de descartar soluciones parciales con costos mayores que la solución de menor costo encontrada hasta el momento. Normalmente se utiliza un recorrido BFS en combinación con un recorrido DFS del árbol del espacio de estados.
+* **Ramas y Límites** - recuerda la solución de menor costo encontrada en cada etapa de la búsqueda de rastreo, y utilizar el costo de la solución de menor costo encontrada hasta el momento como un límite inferior del costo de una solución de menor costo para el problema, a fin de descartar soluciones parciales con costos mayores que la solución de menor costo encontrada hasta el momento. Normalmente se utiliza un recorrido BFS en combinación con un recorrido DFS del árbol del espacio de estados.
 
 ## Cómo usar este repositorio
 
@@ -300,4 +300,4 @@ frente a diferentes tamaños de los datos de entrada.
 | **Ordenamiento por cuentas**     |     n + r     |          n + r          |            n + r            | n + r   |  Si     | r - mayor número en el arreglo                                |
 | **Ordenamiento Radix**           |    n \* k     |         n \* k          |           n \* k            | n + k   |  Si     | k - largo de la llave más larga                                     |
 
-> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
+> ℹ️ Algunos otros [proyectos](https://trekhleb.dev/projects/) y [artículos](https://trekhleb.dev/blog/) sobre JavaScript y algoritmos en [trekhleb.dev](https://trekhleb.dev)

@@ -6,7 +6,7 @@
 Este repositório contém exemplos baseados em JavaScript de muitos
 algoritmos e estruturas de dados populares.
 
-Cada algoritmo e estrutura de dado possui seu próprio README
+Cada algoritmo e estrutura de dados possui seu próprio README
 com explicações relacionadas e links para leitura adicional (incluindo
 vídeos para YouTube)
 
@@ -48,7 +48,7 @@ os dados.
   * `A` [Árvore de Pesquisa Binária (Binary Search Tree)](src/data-structures/tree/binary-search-tree/README.pt-BR.md)
   * `A` [Árvore AVL (AVL Tree)](src/data-structures/tree/avl-tree/README.pt-BR.md)
   * `A` [Árvore Vermelha-Preta (Red-Black Tree)](src/data-structures/tree/red-black-tree/README.pt-BR.md)
-  * `A` [Árvore de Segmento (Segment Tree)](src/data-structures/tree/segment-tree/README.pt-BR.md) - com exemplos de consultas min / max / sum range
+  * `A` [Árvore de Segmento (Segment Tree)](src/data-structures/tree/segment-tree/README.pt-BR.md) - Com exemplos de consultas min / max / sum range
   * `A` [Árvore Fenwick (Fenwick Tree)](src/data-structures/tree/fenwick-tree/README.pt-BR.md) (Árvore indexada binária)
 * `A` [Grafo (Graph)](src/data-structures/graph/README.pt-BR.md) (ambos dirigidos e não direcionados)
 * `A` [Conjunto Disjuntor (Disjoint Set)](src/data-structures/disjoint-set/README.pt-BR.md)
@@ -68,18 +68,18 @@ um conjunto de regras que define precisamente uma sequência de operações.
   * `B` [Fatorial](src/algorithms/math/factorial)
   * `B` [Número de Fibonacci](src/algorithms/math/fibonacci)
   * `B` [Teste de Primalidade](src/algorithms/math/primality-test) (método de divisão experimental)
-  * `B` [Algoritmo Euclidiano](src/algorithms/math/euclidean-algorithm) - calcular o maior divisor comum (GCD)
-  * `B` [Mínimo múltiplo comum](src/algorithms/math/least-common-multiple) (LCM)
-  * `B` [Peneira de Eratóstenes](src/algorithms/math/sieve-of-eratosthenes) - encontrar todos os números primos até um determinado limite
-  * `B` [Potência de dois](src/algorithms/math/is-power-of-two) - verifique se o número é a potência de dois (algoritmos ingênuos e bit a bit)
+  * `B` [Algoritmo Euclidiano](src/algorithms/math/euclidean-algorithm) - Calcular o Máximo Divisor Comum (MDC)
+  * `B` [Mínimo Múltiplo Comum](src/algorithms/math/least-common-multiple) Calcular o Mínimo Múltiplo Comum (MMC)
+  * `B` [Peneira de Eratóstenes](src/algorithms/math/sieve-of-eratosthenes) - Encontrar todos os números primos até um determinado limite
+  * `B` [Potência de dois](src/algorithms/math/is-power-of-two) - Verifique se o número é a potência de dois (algoritmos ingênuos e bit a bit)
   * `B` [Triângulo de Pascal](src/algorithms/math/pascal-triangle)
-  * `B` [Número complexo](src/algorithms/math/complex-number) - números complexos e operações básicas com eles
+  * `B` [Número complexo](src/algorithms/math/complex-number) - Números complexos e operações básicas com eles
   * `A` [Partição inteira](src/algorithms/math/integer-partition)
-  * `A` [Algoritmo Liu Hui π](src/algorithms/math/liu-hui) - cálculos aproximados de π baseados em N-gons
+  * `A` [Algoritmo Liu Hui π](src/algorithms/math/liu-hui) - Cálculos aproximados de π baseados em N-gons
 * **Conjuntos**
-  * `B` [Produto cartesiano](src/algorithms/sets/cartesian-product) - produto de vários conjuntos
-  * `B` [Permutações de Fisher–Yates](src/algorithms/sets/fisher-yates) - permutação aleatória de uma sequência finita
-  * `A` [Potência e Conjunto](src/algorithms/sets/power-set) - todos os subconjuntos de um conjunto
+  * `B` [Produto cartesiano](src/algorithms/sets/cartesian-product) - Produto de vários conjuntos
+  * `B` [Permutações de Fisher–Yates](src/algorithms/sets/fisher-yates) - Permutação aleatória de uma sequência finita
+  * `A` [Potência e Conjunto](src/algorithms/sets/power-set) - Todos os subconjuntos de um conjunto
   * `A` [Permutações](src/algorithms/sets/permutations) (com e sem repetições)
   * `A` [Combinações](src/algorithms/sets/combinations) (com e sem repetições)
   * `A` [Mais longa subsequência comum](src/algorithms/sets/longest-common-subsequence) (LCS)
@@ -87,27 +87,27 @@ um conjunto de regras que define precisamente uma sequência de operações.
   * `A` [Supersequência Comum mais curta](src/algorithms/sets/shortest-common-supersequence) (SCS)
   * `A` [Problema da mochila](src/algorithms/sets/knapsack-problem) - "0/1" e "Não consolidado"
   * `A` [Máximo Subarray](src/algorithms/sets/maximum-subarray) - "Força bruta" e " Programação Dinâmica" versões (Kadane's)
-  * `A` [Soma de Combinação](src/algorithms/sets/combination-sum) - encontre todas as combinações que formam uma soma específica
+  * `A` [Soma de Combinação](src/algorithms/sets/combination-sum) - Encontre todas as combinações que formam uma soma específica
 * **Cadeia de Caracteres**
-  * `B` [Hamming Distance](src/algorithms/string/hamming-distance) - número de posições em que os símbolos são diferentes
-  * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - distância mínima de edição entre duas sequências
-  * `A` [Knuth–Morris–Pratt Algorithm](src/algorithms/string/knuth-morris-pratt) (Algoritmo KMP) - pesquisa de substring (correspondência de padrão)
-  * `A` [Z Algorithm](src/algorithms/string/z-algorithm) - pesquisa de substring (correspondência de padrão)
-  * `A` [Rabin Karp Algorithm](src/algorithms/string/rabin-karp) - pesquisa de substring
+  * `B` [Hamming Distance](src/algorithms/string/hamming-distance) - Número de posições em que os símbolos são diferentes
+  * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - Distância mínima de edição entre duas sequências
+  * `A` [Knuth–Morris–Pratt Algorithm](src/algorithms/string/knuth-morris-pratt) (Algoritmo KMP) - Pesquisa de substring (correspondência de padrão)
+  * `A` [Z Algorithm](src/algorithms/string/z-algorithm) - Pesquisa de substring (correspondência de padrão)
+  * `A` [Rabin Karp Algorithm](src/algorithms/string/rabin-karp) - Pesquisa de substring
   * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
   * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
 * **Buscas**
   * `B` [Linear Search](src/algorithms/search/linear-search)
-  * `B` [Jump Search](src/algorithms/search/jump-search) (ou Bloquear pesquisa) - pesquisar na matriz ordenada
-  * `B` [Binary Search](src/algorithms/search/binary-search) - pesquisar na matriz ordenada
-  * `B` [Interpolation Search](src/algorithms/search/interpolation-search) - pesquisar em matriz classificada uniformemente distribuída
+  * `B` [Jump Search](src/algorithms/search/jump-search) (ou Bloquear pesquisa) - Pesquisar na matriz ordenada
+  * `B` [Binary Search](src/algorithms/search/binary-search) - Pesquisar na matriz ordenada
+  * `B` [Interpolation Search](src/algorithms/search/interpolation-search) - Pesquisar em matriz classificada uniformemente distribuída
 * **Classificação**
   * `B` [Bubble Sort](src/algorithms/sorting/bubble-sort)
   * `B` [Selection Sort](src/algorithms/sorting/selection-sort)
   * `B` [Insertion Sort](src/algorithms/sorting/insertion-sort)
   * `B` [Heap Sort](src/algorithms/sorting/heap-sort)
   * `B` [Merge Sort](src/algorithms/sorting/merge-sort)
-  * `B` [Quicksort](src/algorithms/sorting/quick-sort) - implementações local e não local
+  * `B` [Quicksort](src/algorithms/sorting/quick-sort) - Implementações local e não local
   * `B` [Shellsort](src/algorithms/sorting/shell-sort)
   * `B` [Counting Sort](src/algorithms/sorting/counting-sort)
   * `B` [Radix Sort](src/algorithms/sorting/radix-sort)
@@ -117,27 +117,27 @@ um conjunto de regras que define precisamente uma sequência de operações.
 * **Grafos**
   * `B` [Depth-First Search](src/algorithms/graph/depth-first-search) (DFS)
   * `B` [Breadth-First Search](src/algorithms/graph/breadth-first-search) (BFS)
-  * `B` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - encontrando Árvore Mínima de Abrangência (MST) para grafo não direcionado ponderado
-  * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - encontrar caminhos mais curtos para todos os vértices do grafo a partir de um único vértice
-  * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - encontrar caminhos mais curtos para todos os vértices do grafo a partir de um único vértice
-  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - encontrar caminhos mais curtos entre todos os pares de vértices
-  * `A` [Detect Cycle](src/algorithms/graph/detect-cycle) - para gráficos direcionados e não direcionados (versões baseadas em DFS e Conjunto Disjuntivo)
-  * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - encontrando Árvore Mínima de Abrangência (MST) para grafo não direcionado ponderado
+  * `B` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - Encontrar Árvore Mínima de Abrangência (MST) para grafo não direcionado ponderado
+  * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - Encontrar caminhos mais curtos para todos os vértices do grafo a partir de um único vértice
+  * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - Encontrar caminhos mais curtos para todos os vértices do grafo a partir de um único vértice
+  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - Encontrar caminhos mais curtos entre todos os pares de vértices
+  * `A` [Detect Cycle](src/algorithms/graph/detect-cycle) - Para gráficos direcionados e não direcionados (versões baseadas em DFS e Conjunto Disjuntivo)
+  * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - Encontrando Árvore Mínima de Abrangência (MST) para grafo não direcionado ponderado
   * `A` [Topological Sorting](src/algorithms/graph/topological-sorting) - Métodos DFS
   * `A` [Articulation Points](src/algorithms/graph/articulation-points) -O algoritmo de Tarjan (baseado em DFS)
   * `A` [Bridges](src/algorithms/graph/bridges) - Algoritmo baseado em DFS
   * `A` [Eulerian Path and Eulerian Circuit](src/algorithms/graph/eulerian-path) - Algoritmo de Fleury - Visite todas as bordas exatamente uma vez
   * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visite todas as bordas exatamente uma vez
   * `A` [Strongly Connected Components](src/algorithms/graph/strongly-connected-components) - Algoritmo de Kosaraju's
-  * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - rota mais curta possível que visita cada cidade e retorna à cidade de origem
-* **criptografia**
-  * `B` [Polynomial Hash](src/algorithms/cryptography/polynomial-hash) - função de hash de rolagem baseada em polinômio
+  * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - Rota mais curta possível que visita cada cidade e retorna à cidade de origem
+* **Criptografia**
+  * `B` [Polynomial Hash](src/algorithms/cryptography/polynomial-hash) - Função de hash de rolagem baseada em polinômio
 * **Sem categoria**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
-  * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - algoritmo no local
-  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, programação dinâmica (top-down + bottom-up) e exemplos gananciosos
-  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - backtracking, programação dinâmica e exemplos baseados no triângulo de Pascal
-  * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping problema da água da chuva (programação dinâmica e versões de força bruta)
+  * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - Algoritmo no local
+  * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - Backtracking, programação dinâmica (top-down + bottom-up) e exemplos gananciosos
+  * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths) - Backtracking, programação dinâmica e exemplos baseados no triângulo de Pascal
+  * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - Trapping problema da água da chuva (programação dinâmica e versões de força bruta)
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
 
@@ -147,22 +147,22 @@ Um paradigma algorítmico é um método ou abordagem genérica subjacente ao des
 de algoritmos. É uma abstração maior do que a noção de um algoritmo, assim como
 algoritmo é uma abstração maior que um programa de computador.
 
-* **Força bruta** - look at all the possibilities and selects the best solution
+* **Força bruta** - Pense em todas as possibilidades e escolha a melhor solução
   * `B` [Linear Search](src/algorithms/search/linear-search)
-  * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping problema da água da chuva
+  * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - Trapping problema da água da chuva
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
-  * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - rota mais curta possível que visita cada cidade e retorna à cidade de origem
-* **Greedy** - choose the best option at the current time, without any consideration for the future
+  * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - Rota mais curta possível que visita cada cidade e retorna à cidade de origem
+* **Ganância** - Escolha a melhor opção no momento, sem qualquer consideração pelo futuro
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `A` [Unbound Knapsack Problem](src/algorithms/sets/knapsack-problem)
-  * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - finding shortest path to all graph vertices
-  * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - encontrando Árvore Mínima de Abrangência (MST) para grafo não direcionado ponderado
-  * `A` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - encontrando Árvore Mínima de Abrangência (MST) para grafo não direcionado ponderado
-* **Dividir p/ Conquistar** - dividir o problema em partes menores e depois resolver essas partes
+  * `A` [Dijkstra Algorithm](src/algorithms/graph/dijkstra) - Encontrar o caminho mais curto para todos os vértices do gráfico
+  * `A` [Prim’s Algorithm](src/algorithms/graph/prim) - Encontrando Árvore Mínima de Abrangência (MST) para grafo não direcionado ponderado
+  * `A` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - Encontrando Árvore Mínima de Abrangência (MST) para grafo não direcionado ponderado
+* **Dividir e Conquistar** - Dividir o problema em partes menores e então resolver essas partes
   * `B` [Busca binária (Binary Search)](src/algorithms/search/binary-search)
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
-  * `B` [Euclidean Algorithm](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
+  * `B` [Euclidean Algorithm](src/algorithms/math/euclidean-algorithm) - Calcular o Máximo Divisor Comum (MDC)
   * `B` [Merge Sort](src/algorithms/sorting/merge-sort)
   * `B` [Quicksort](src/algorithms/sorting/quick-sort)
   * `B` [Tree Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
@@ -170,12 +170,12 @@ algoritmo é uma abstração maior que um programa de computador.
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `A` [Permutations](src/algorithms/sets/permutations) (com e sem repetições)
   * `A` [Combinations](src/algorithms/sets/combinations) (com e sem repetições)
-* **Programação Dinâmica** - criar uma solução usando sub-soluções encontradas anteriormente
+* **Programação Dinâmica** - Criar uma solução usando sub-soluções encontradas anteriormente
   * `B` [Fibonacci Number](src/algorithms/math/fibonacci)
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
-  * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping problema da água da chuva
-  * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - distância mínima de edição entre duas sequências
+  * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - Trapping problema da água da chuva
+  * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - Distância mínima de edição entre duas sequências
   * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
   * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
   * `A` [Longest Increasing Subsequence](src/algorithms/sets/longest-increasing-subsequence)
@@ -183,18 +183,18 @@ algoritmo é uma abstração maior que um programa de computador.
   * `A` [0/1 Knapsack Problem](src/algorithms/sets/knapsack-problem)
   * `A` [Integer Partition](src/algorithms/math/integer-partition)
   * `A` [Maximum Subarray](src/algorithms/sets/maximum-subarray)
-  * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - encontrando o caminho mais curto para todos os vértices do gráfico
-  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - encontrar caminhos mais curtos entre todos os pares de vértices
+  * `A` [Bellman-Ford Algorithm](src/algorithms/graph/bellman-ford) - Encontrar o caminho mais curto para todos os vértices do gráfico
+  * `A` [Floyd-Warshall Algorithm](src/algorithms/graph/floyd-warshall) - Encontrar caminhos mais curtos entre todos os pares de vértices
   * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
-* **Backtracking** - da mesma forma que a força bruta, tente gerar todas as soluções possíveis, mas cada vez que você gerar a próxima solução, você testará
+* **Backtracking** - Da mesma forma que a força bruta, tente gerar todas as soluções possíveis, mas cada vez que você gerar a próxima solução, você testará
 se satisfizer todas as condições, e só então continuar gerando soluções subseqüentes. Caso contrário, volte atrás e siga um caminho diferente para encontrar uma solução. Normalmente, a passagem DFS do espaço de estados está sendo usada.
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game)
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
   * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visite todos os vértices exatamente uma vez
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
-  * `A` [Combination Sum](src/algorithms/sets/combination-sum) - encontre todas as combinações que formam uma soma específica
-* **Branch & Bound** - lembre-se da solução de menor custo encontrada em cada etapa do retrocesso
+  * `A` [Combination Sum](src/algorithms/sets/combination-sum) - Encontre todas as combinações que formam uma soma específica
+* **Branch & Bound** - Lembre-se da solução de menor custo encontrada em cada etapa do retrocesso
 pesquisar e usar o custo da solução de menor custo encontrada até o limite inferior do custo de
 solução de menor custo para o problema, a fim de descartar soluções parciais com custos maiores que o
 solução de menor custo encontrada até o momento. Normalmente, a travessia BFS em combinação com a passagem DFS do espaço de estados
@@ -264,7 +264,7 @@ Abaixo está a lista de algumas das notações Big O mais usadas e suas compara�
 
 ### Complexidade de operações de estrutura de dados
 
-| estrutura de dados      | Acesso    | Busca     | Inserção  | Eliminação | comentários |
+| Estrutura de dados      | Acesso    | Busca     | Inserção  | Eliminação | Comentários |
 | ----------------------- | :-------: | :-------: | :-------: | :-------:  | :--------   |
 | **Array**               | 1         | n         | n         | n          |             |
 | **Stack**               | n         | n         | 1         | 1          |             |
@@ -279,7 +279,7 @@ Abaixo está a lista de algumas das notações Big O mais usadas e suas compara�
 
 ### Array Sorting Algorithms Complexity
 
-| Nome                  | Melhor          | Média               | Pior                | Mémoria   | Estável   | comentários |
+| Nome                  | Melhor          | Média               | Pior                | Mémoria   | Estável   | Comentários |
 | --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :--------   |
 | **Bubble sort**       | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Sim       |             |
 | **Insertion sort**    | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Sim       |             |
@@ -291,4 +291,4 @@ Abaixo está a lista de algumas das notações Big O mais usadas e suas compara�
 | **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Sim       | r - maior número na matriz          |
 | **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Sim       | k - comprimento da chave mais longa |
 
-> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
+> ℹ️ Outros [projetos](https://trekhleb.dev/projects/) e [artigos](https://trekhleb.dev/blog/) sobre JavaScript e algoritmos em [trekhleb.dev](https://trekhleb.dev)
