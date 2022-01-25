@@ -1,12 +1,23 @@
-# 해시 테이블
+# Hash Table
 
-컴퓨터 과학에서 **해시 테이블** (해시맵)은 키를 값에 매핑할 수 있는 *연관배열(associative array)* 기능을 가진 데이터 구조입니다. 해시 테이블은 해시함수를 사용해 버킷이나 슬롯 배열에 대한 인덱스를 계산하고 원하는 값을 찾을 수 있습니다. (사실상 해시함수에서 배열은 bucket 또는 slot으로 부릅니다.)
-따라서 해시테이블은 특정 키에 값을 매핑 시킨 형태의 자료구조로 키값에 매핑된 값을 검색 할 때 매우 유용합니다. 이때 해시함수는 찾고자 하는 키가 버킷 또는 슬롯의 몇 번째 인덱스에 해당하는지를 확인할 때 사용합니다.
+_Read this in other languages:_
+[_简体中文_](README.zh-CN.md),
+[_Русский_](README.ru-RU.md),
+[_日本語_](README.ja-JP.md),
+[_Français_](README.fr-FR.md),
+[_Português_](README.pt-BR.md)
 
-이상적으로는 해시함수는 각 키를 하나의 버킷에 할당하지만 대부분의 해시 테이블은 불완전한 해시함수를 채택하고 있기 때문에 복수의 키에 대해 같은 인덱스를 생성했을 때 해시의 충돌이 발생합니다. 이러한 충돌은 어떤 방법으로든 대처할 필요가 있습니다.
+컴퓨팅에서, **해시 테이블**(해시 맵)은 키를 값에 매핑할 수 있는 구조인 *연관 배열*을 구현하는 자료 구조입니다. 해시 테이블은 *해시 함수*를 사용해 원하는 값을 담을 수 있는 버킷 또는 슬롯 배열의 인덱스를 계산합니다.
+
+이상적으로, 해시 함수는 각 키들을 고유 버킷에 할당하지만 대부분의 해시 테이블은 불완전한 해시 함수를 사용하기 때문에 해시 함수를 통해 두 개 이상의 키에 대해 동일한 인덱스를 생성하는 해시 충돌이 발생할 수 있습니다. 이러한 해시 충돌은 어떠한 방법으로든 해결되어야 합니다.
 
 ![Hash Table](https://upload.wikimedia.org/wikipedia/commons/7/7d/Hash_table_3_1_1_0_1_0_0_SP.svg)
 
-체이닝에 따른 해시충돌(Hash Collision)의 해결법
+다음은 분리 연결법을 통해 해시 충돌을 해결한 예시입니다.
 
 ![Hash Collision](https://upload.wikimedia.org/wikipedia/commons/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg)
+
+## 참고
+
+- [Wikipedia](https://en.wikipedia.org/wiki/Hash_table)
+- [YouTube](https://www.youtube.com/watch?v=shs0KM3wKv8&index=4&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
