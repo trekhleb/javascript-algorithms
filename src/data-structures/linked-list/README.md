@@ -104,8 +104,9 @@ Remove(head, value)
     if n.next = tail
       tail ← n
       tail.next = null
+    else
+      n.next ← n.next.next
     end if
-    n.next ← n.next.next
     return true
   end if
   return false
