@@ -160,7 +160,10 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
     let currentNode = this;
     let { parent } = currentNode;
 
-    while (parent !== null && parent.right && parent.right.value === currentNode.value) {
+    while (!this.nodeComparator.equal(parent, null)
+      && parent.right
+      && this.nodeComparator.equal(parent.right.value, currentNode.value)
+    ) {
       currentNode = parent;
       parent = currentNode.parent;
     }
