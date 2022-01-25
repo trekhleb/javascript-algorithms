@@ -1,6 +1,6 @@
 # Lista Enlazada (Linked List)
 
-_Lee esto en otros idiomas:_
+_Lee este artículo en otros idiomas:_
 [_简体中文_](README.zh-CN.md),
 [_Русский_](README.ru-RU.md),
 [_日本語_](README.ja-JP.md),
@@ -12,17 +12,17 @@ de elementos de datos, en los cuales el orden linear no es dado por
 su posción física en memoria. En cambio, cada
 elemento señala al siguiente. Es una estructura de datos
 que consiste en un grupo de nodos los cuales juntos representan
-una secuencia. Bajo la forma más simple, cada nodo es
+una secuencia. Bajo la forma más simple, cada nodo esta
 compuesto de datos y una referencia (en otras palabras,
 un lazo) al siguiente nodo en la secuencia. Esta estructura
 permite la inserción o remoción de elementos
 desde cualquier posición en la secuencia durante la iteración.
 Variantes más complejas agregan lazos adicionales, permitiendo
 una eficiente inserción o remoción desde referencias arbitrarias
-del elemento. Una desventaja de las listas lazadas es que el tiempo de
+del elemento. Una desventaja de las listas enlazadas es que el tiempo de
 acceso es linear (y difícil de canalizar). Un acceso
-más rápido, como un acceso aleatorio, no es factible. Los arreglos
-tienen una mejor locazion comparados con las listas lazadas.
+más rápido, como el aleatorio, no es factible. Los arreglos
+tienen una mejor locazion comparados con las listas enlazadas.
 
 ![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
@@ -149,7 +149,7 @@ end ReverseTraversal
 
 ### Complejidad del Tiempo
 
-| Access | Search | Insertion | Deletion |
+| Acceso | Búsqueda | Inserción | Eliminación |
 | :----: | :----: | :-------: | :------: |
 |  O(n)  |  O(n)  |   O(1)    |   O(n)   |
 
