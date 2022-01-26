@@ -5,7 +5,7 @@
 
 Repositori ini berisi contoh-contoh algoritme dan struktur data yang populer menggunakan JavaScript.
 
-Setiap algoritme dan struktur data memiliki README-nya tersendiri dengan penjelasan yang berkaitan dan tautan untuk bacaan lebih lanjut (termasuk tautan menuju video YouTube).
+Setiap algoritma dan struktur data memiliki README-nya tersendiri dengan penjelasan yang berkaitan dan tautan untuk bacaan lebih lanjut (termasuk tautan menuju video YouTube).
 
 _Baca ini dalam bahasa yang lain:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
@@ -50,24 +50,24 @@ Struktur data adalah cara tertentu untuk mengatur dan menyimpan data dalam kompu
 - `L` [_Disjoint Set_](src/data-structures/disjoint-set)
 - `L` [_Bloom Filter_](src/data-structures/bloom-filter)
 
-## Algoritme
+## Algoritma
 
-Algoritme adalah sebuah perincian yang jelas tentang cara untuk memecahkan suatu masalah. Ia adalah sekumpulan aturan yang menjelaskan secara tepat urutan-urutan dari sebuah operasi.
+Algoritma adalah sebuah perincian yang jelas tentang cara untuk memecahkan suatu masalah. Ia adalah sekumpulan aturan yang menjelaskan secara tepat urutan-urutan dari sebuah operasi.
 
 `P` - Pemula, `L` - Lanjutan
 
-### Algoritme Berdasarkanan Topik
+### Algoritma Berdasarkanan Topik
 
 - **Matematika**
-  - `P` [Manipulasi Bit](src/algorithms/math/bits) - menetapkan/mendapatkan/memperbarui/menghapus bit, perkalian/pembagian dengan angka 2, membuat bilangan negatif dsb.
+  - `P` [Manipulasi Bit](src/algorithms/math/bits) - menetapkan/mendapatkan/memperbarui/menghapus bit, perkalian/pembagian dengan angka 2, membuat bilangan negatif dan lain-lain.
   - `P` [Faktorial](src/algorithms/math/Faktorial)
   - `P` [Bilangan Fibonacci](src/algorithms/math/fibonacci) - versi klasik dan bentuk tertutup
   - `P` [Faktor Prima](src/algorithms/math/prime-factors) - menemukan faktor prima dan menghitungnya menggunakan teorema Hardy-Ramanujan
   - `P` [Pengujian Bilangan Prima](src/algorithms/math/primality-test) (metode _trial division_)
-  - `P` [Algoritme Euclidean](src/algorithms/math/euclidean-algorithm) - menghitung Faktor Persekutuan Terbesar (FPB)
+  - `P` [Algoritma Euclidean](src/algorithms/math/euclidean-algorithm) - menghitung Faktor Persekutuan Terbesar (FPB)
   - `P` [_Least Common Multiple_](src/algorithms/math/least-common-multiple) (LCM)
   - `P` [_Sieve of Eratosthenes_](src/algorithms/math/sieve-of-eratosthenes) - menemukan semua bilangan prima hingga batas yang ditentukan
-  - `P` [_Is Power of Two_](src/algorithms/math/is-power-of-two) - mengecek apakah sebuah bilangan adalah hasil dari pangkat dua (algoritme _naive_ dan _bitwise_)
+  - `P` [_Is Power of Two_](src/algorithms/math/is-power-of-two) - mengecek apakah sebuah bilangan adalah hasil dari pangkat dua (algoritma _naive_ dan _bitwise_)
   - `P` [Segitiga Pascal](src/algorithms/math/pascal-triangle)
   - `P` [Bilangan Kompleks](src/algorithms/math/complex-number) - bilangan kompleks dengan operasi dasarnya
   - `P` [Radian & Derajat](src/algorithms/math/radian) - konversi radian ke derajat dan sebaliknya
@@ -75,7 +75,7 @@ Algoritme adalah sebuah perincian yang jelas tentang cara untuk memecahkan suatu
   - `P` [Metode Horner](src/algorithms/math/horner-method) - evaluasi polinomial
   - `L` [Partisi Bilangan Bulat](src/algorithms/math/integer-partition)
   - `L` [Akar Pangkat Dua](src/algorithms/math/square-root) - metode Newton
-  - `L` [Algoritme π Liu Hui](src/algorithms/math/liu-hui) - perkiraan perhitungan π berdasarkan segibanyak
+  - `L` [Algoritma π Liu Hui](src/algorithms/math/liu-hui) - perkiraan perhitungan π berdasarkan segibanyak
   - `L` [Transformasi Diskrit Fourier](src/algorithms/math/fourier-transform) - menguraikan fungsi waktu (sinyal) menjadi frekuensi yang menyusunnya
 - **Himpunan**
   - `P` [Produk Kartesian](src/algorithms/sets/cartesian-product) - hasil dari beberapa himpunan
@@ -91,10 +91,10 @@ Algoritme adalah sebuah perincian yang jelas tentang cara untuk memecahkan suatu
   - `L` [_Combination Sum_](src/algorithms/sets/combination-sum) - menemukan semua kombinasi yang membentuk jumlah tertentu
 - **String**
   - `P` [Jarak Hamming](src/algorithms/string/hamming-distance) - jumlah posisi di mana ditemukan simbol-simbol yang berbeda
-  - `L` [Algoritme Jarak Levenshtein](src/algorithms/string/levenshtein-distance) - _edit distance_ minimum antara dua urutan
-  - `L` [Algoritme Knuth–Morris–Pratt](src/algorithms/string/knuth-morris-pratt) (Algoritme KMP) - pencarian substring (pencocokan pola)
-  - `L` [AlgoritmeZ](src/algorithms/string/z-algorithm) - pencarian substring (pencocokan pola)
-  - `L` [Algoritme Rabin Karp](src/algorithms/string/rabin-karp) - pencarian substring
+  - `L` [Algoritma Jarak Levenshtein](src/algorithms/string/levenshtein-distance) - _edit distance_ minimum antara dua urutan
+  - `L` [Algoritma Knuth–Morris–Pratt](src/algorithms/string/knuth-morris-pratt) (Algoritma KMP) - pencarian substring (pencocokan pola)
+  - `L` [Algoritma Z](src/algorithms/string/z-algorithm) - pencarian substring (pencocokan pola)
+  - `L` [Algoritma Rabin Karp](src/algorithms/string/rabin-karp) - pencarian substring
   - `L` [_Longest Common Substring_](src/algorithms/string/longest-common-substring)
   - `L` [Pencocokan Ekspresi Reguler](src/algorithms/string/regular-expression-matching)
 - **Pencarian**
@@ -121,18 +121,18 @@ Algoritme adalah sebuah perincian yang jelas tentang cara untuk memecahkan suatu
 - **Graf**
   - `P` [Pencarian Kedalaman Pertama](src/algorithms/graph/depth-first-search) (DFS)
   - `P` [Pencarian Luas Pertama](src/algorithms/graph/breadth-first-search) (BFS)
-  - `P` [Algoritme Kruskal](src/algorithms/graph/kruskal) - mencari rentang pohon minimum untuk graf tidak berarah berbobot
-  - `L` [Algoritme Dijkstra](src/algorithms/graph/dijkstra) - menemukan jalur terpendek ke semua sudut graf dari sudut tunggal
-  - `L` [Algoritme Bellman-Ford](src/algorithms/graph/bellman-ford) - menemukan jalur terpendek ke semua sudut graf dari sudut tunggal
-  - `L` [Algoritme Floyd-Warshall](src/algorithms/graph/floyd-warshall) - menemukan jalur terpendek antara semua pasangan sudut
+  - `P` [Algoritma Kruskal](src/algorithms/graph/kruskal) - mencari rentang pohon minimum untuk graf tidak berarah berbobot
+  - `L` [Algoritma Dijkstra](src/algorithms/graph/dijkstra) - menemukan jalur terpendek ke semua sudut graf dari sudut tunggal
+  - `L` [Algoritma Bellman-Ford](src/algorithms/graph/bellman-ford) - menemukan jalur terpendek ke semua sudut graf dari sudut tunggal
+  - `L` [Algoritma Floyd-Warshall](src/algorithms/graph/floyd-warshall) - menemukan jalur terpendek antara semua pasangan sudut
   - `L` [Mendeteksi Siklus](src/algorithms/graph/detect-cycle) - untuk graf berarah dan tidak berarah (berdasarkan versi DFS dan _Disjoint Set_)
-  - `L` [ALgoritme Prim](src/algorithms/graph/prim) - mencari rentang pohon minimum untuk graf tidak berarah berbobot
+  - `L` [ALgoritma Prim](src/algorithms/graph/prim) - mencari rentang pohon minimum untuk graf tidak berarah berbobot
   - `L` [Sortir Topologi](src/algorithms/graph/topological-sorting) - metode DFS
-  - `L` [Poin Artikulasi](src/algorithms/graph/articulation-points) - Algoritme Tarjan (berdasarkan DFS)
-  - `L` [Jembatan](src/algorithms/graph/bridges) - Algoritme berdasarkan DFS
-  - `L` [Jalur dan Sirkuit Eulerian](src/algorithms/graph/eulerian-path) - Algoritme Fleury - Mengunjungi setiap tepinya tepat satu kali
+  - `L` [Poin Artikulasi](src/algorithms/graph/articulation-points) - Algoritma Tarjan (berdasarkan DFS)
+  - `L` [Jembatan](src/algorithms/graph/bridges) - Algoritma berdasarkan DFS
+  - `L` [Jalur dan Sirkuit Eulerian](src/algorithms/graph/eulerian-path) - Algoritma Fleury - Mengunjungi setiap tepinya tepat satu kali
   - `L` [Siklus Hamiltonian](src/algorithms/graph/hamiltonian-cycle) - mengunjungi setiap sudutnya tepat satu kali
-  - `L` [Komponen yang Terkoneksi dengan Kuat](src/algorithms/graph/strongly-connected-components) - Algoritme Kosaraju
+  - `L` [Komponen yang Terkoneksi dengan Kuat](src/algorithms/graph/strongly-connected-components) - Algoritma Kosaraju
   - `L` [Permasalahan Penjual Keliling](src/algorithms/graph/travelling-salesman) - kemungkinan rute terpendek untuk mengunjungi setiap kota dan kembali lagi ke kota asal
 - **Kriptografi**
   - `P` [Polinomial Hash](src/algorithms/cryptography/polynomial-hash) - fungsi rolling hash berdasarkan polinomial
@@ -141,7 +141,7 @@ Algoritme adalah sebuah perincian yang jelas tentang cara untuk memecahkan suatu
   - `P` [NanoNeuron](https://github.com/trekhleb/nano-neuron) - 7 fungsi JS sederhana yang mengilustrasikan bagaimana mesin-mesin dapat benar-benar belajar (perambatan maju/mundur)
 - **Tidak Dikategorikan**
   - `P` [Menara Hanoi](src/algorithms/uncategorized/hanoi-tower)
-  - `P` [Perputaran Matriks Persegi](src/algorithms/uncategorized/square-matrix-rotation) - algoritme _in-place_
+  - `P` [Perputaran Matriks Persegi](src/algorithms/uncategorized/square-matrix-rotation) - algoritma _in-place_
   - `P` [Permainan Melompat](src/algorithms/uncategorized/jump-game) - runut-balik, pemrograman dinamis (atas ke bawah + bawah ke atas) and contoh-contoh _greedy_
   - `P` [_Unique Paths_](src/algorithms/uncategorized/unique-paths) - runut-balik, pemrograman dinamis and contoh-contoh beradsarkan Segitiga Pascal
   - `P` [_Rain Terraces_](src/algorithms/uncategorized/rain-terraces) - permasalahan _trapping rain water_ (versi pemrograman dinamis and _brute force_)
@@ -149,9 +149,9 @@ Algoritme adalah sebuah perincian yang jelas tentang cara untuk memecahkan suatu
   - `L` [Permainan N-Queen](src/algorithms/uncategorized/n-queens)
   - `L` [Permainan Knight's Tour](src/algorithms/uncategorized/knight-tour)
 
-### Algoritme Berdasarkan Paradigma
+### Algoritma Berdasarkan Paradigma
 
-Paradigma algoritmik adalah sebuah metode atau pendekatan umum yang mendasari desain sebuah tingkatan algoritme. Paradigma algoritmik merupakan abstraksi yang lebih tinggi dari gagasan sebuah algoritme, seperti halnya sebuah algoritme merupakan abstraksi yang lebih tinggi dari sebuah program komputer.
+Paradigma algoritmik adalah sebuah metode atau pendekatan umum yang mendasari desain sebuah tingkatan algoritma. Paradigma algoritmik merupakan abstraksi yang lebih tinggi dari gagasan sebuah algoritma, seperti halnya sebuah algoritma merupakan abstraksi yang lebih tinggi dari sebuah program komputer.
 
 - **_Brute Force_** - melihat ke semua kemungkinan dan memilih solusi yang terbaik
   - `P` [Pencarian Linier](src/algorithms/search/linear-search)
@@ -163,14 +163,14 @@ Paradigma algoritmik adalah sebuah metode atau pendekatan umum yang mendasari de
 - **_Greedy_** - memilih pilihan terbaik pada saat ini tanpa mempertimbangkan masa yang akan datang
   - `P` [Permainan Melompat](src/algorithms/uncategorized/jump-game)
   - `L` [Permasalahan Knapsack yang Tidak Dibatasi](src/algorithms/sets/knapsack-problem)
-  - `L` [Algoritme Dijkstra](src/algorithms/graph/dijkstra) - menemukan jalur terpendek ke semua sudut graf dari sudut tunggal
-  - `L` [Algoritme Prim](src/algorithms/graph/prim) - mencari rentang pohon minimum untuk graf tidak berarah berbobot
-  - `L` [Algoritme Kruskal](src/algorithms/graph/kruskal) - mencari rentang pohon minimum untuk graf tidak berarah berbobot
+  - `L` [Algoritma Dijkstra](src/algorithms/graph/dijkstra) - menemukan jalur terpendek ke semua sudut graf dari sudut tunggal
+  - `L` [Algoritma Prim](src/algorithms/graph/prim) - mencari rentang pohon minimum untuk graf tidak berarah berbobot
+  - `L` [Algoritma Kruskal](src/algorithms/graph/kruskal) - mencari rentang pohon minimum untuk graf tidak berarah berbobot
 - **Memecah dan Menaklukkan** - membagi masalah menjadi bagian-bagian yang kecil, lalu memcahkan bagian-bagian tersebut
   - `P` [Pencarian Biner](src/algorithms/search/binary-search)
   - `P` [Menara Hanoi](src/algorithms/uncategorized/hanoi-tower)
   - `P` [Segitiga Pascal](src/algorithms/math/pascal-triangle)
-  - `P` [Algoritme Euclidean](src/algorithms/math/euclidean-algorithm) - menghitung Faktor Persekutuan Terbesar (FPB)
+  - `P` [Algoritma Euclidean](src/algorithms/math/euclidean-algorithm) - menghitung Faktor Persekutuan Terbesar (FPB)
   - `P` [Sortir Gabungan](src/algorithms/sorting/merge-sort)
   - `P` [Sortir Cepat](src/algorithms/sorting/quick-sort)
   - `P` [Pencarian Kedalaman Pertama untuk Pohon](src/algorithms/tree/depth-first-search) (DFS)
@@ -185,7 +185,7 @@ Paradigma algoritmik adalah sebuah metode atau pendekatan umum yang mendasari de
   - `P` [_Unique Paths_](src/algorithms/uncategorized/unique-paths)
   - `P` [_Rain Terraces_](src/algorithms/uncategorized/rain-terraces) - permasalahan _trapping rain water_
   - `P` [Tangga Rekursif](src/algorithms/uncategorized/recursive-staircase) - menghitung jumlah cara untuk mencapai ke atas tangga
-  - `L` [Algoritme Jarak Levenshtein](src/algorithms/string/levenshtein-distance) - _edit distance_ minimum antara dua urutan
+  - `L` [Algoritma Jarak Levenshtein](src/algorithms/string/levenshtein-distance) - _edit distance_ minimum antara dua urutan
   - `L` [_Longest Common Subsquence_](src/algorithms/sets/longest-common-subsequence) (LCS)
   - `L` [_Longest Common Substring_](src/algorithms/string/longest-common-substring)
   - `L` [_Longest Increasing Subsequence_](src/algorithms/sets/longest-increasing-subsequence)
@@ -193,10 +193,10 @@ Paradigma algoritmik adalah sebuah metode atau pendekatan umum yang mendasari de
   - `L` [Permasalahan Knapsack 0/1](src/algorithms/sets/knapsack-problem)
   - `L` [Partisi Bilangan Bulat](src/algorithms/math/integer-partition)
   - `L` [Upalarik Maksimum](src/algorithms/sets/maximum-subarray)
-  - `L` [Algoritme Bellman-Ford](src/algorithms/graph/bellman-ford) - menemukan jalur terpendek ke semua sudut graf dari sudut tunggal
-  - `L` [Algoritme Floyd-Warshall](src/algorithms/graph/floyd-warshall) - menemukan jalur terpendek antara semua pasangan sudut
+  - `L` [Algoritma Bellman-Ford](src/algorithms/graph/bellman-ford) - menemukan jalur terpendek ke semua sudut graf dari sudut tunggal
+  - `L` [Algoritma Floyd-Warshall](src/algorithms/graph/floyd-warshall) - menemukan jalur terpendek antara semua pasangan sudut
   - `L` [Pencocokan Ekspresi Reguler](src/algorithms/string/regular-expression-matching)
-- **Runut-balik** - sama halnya dengan _brute force_, algoritme ini mencoba untuk menghasilkan segala kemungkinan solusi, tetapi setiap kali anda menghasilkan solusi selanjutnya, anda akan menguji apakah solusi tersebut memenuhi semua kondisi dan setelah itu baru akan menghasilkan solusi berikutnya. Apabila tidak, maka akan merunut-balik dan mencari solusi di jalur yang berbeda. Biasanya menggunakan lintas DFS dari ruang keadaan.
+- **Runut-balik** - sama halnya dengan _brute force_, algoritma ini mencoba untuk menghasilkan segala kemungkinan solusi, tetapi setiap kali anda menghasilkan solusi selanjutnya, anda akan menguji apakah solusi tersebut memenuhi semua kondisi dan setelah itu baru akan menghasilkan solusi berikutnya. Apabila tidak, maka akan merunut-balik dan mencari solusi di jalur yang berbeda. Biasanya menggunakan lintas DFS dari ruang keadaan.
   - `P` [Permainan Melompat](src/algorithms/uncategorized/jump-game)
   - `P` [_Unique Paths_](src/algorithms/uncategorized/unique-paths)
   - `P` [Himpunan Kuasa](src/algorithms/sets/power-set) - semua himpunan bagian dari sebuah himpunan
@@ -236,7 +236,7 @@ npm test -- 'LinkedList'
 
 **_Playground_**
 
-Anda dapat bermain dengan algoritme dan struktur data di _file_ `./src/playground/playground.js` dan menuliskan tesnya di `./src/playground/__test__/playground.test.js`.
+Anda dapat bermain dengan algoritma dan struktur data di _file_ `./src/playground/playground.js` dan menuliskan tesnya di `./src/playground/__test__/playground.test.js`.
 
 Lalu, hanya tinggal menjalankan perintah berikut untuk mengetes apakah kode _playground_ anda bekerja sesuai dengan keinginan:
 
@@ -248,11 +248,11 @@ npm test -- 'playground'
 
 ### Referensi
 
-[▶ Algoritme dan Struktur Data di YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+[▶ Algoritma dan Struktur Data di YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 
 ### Notasi _Big O_
 
-Notasi _Big O_ digunakan untuk mengklasifikasikan algoritme berdasarkan durasi atau ruang yang dibutuhkan seiring bertambahnya _input_. Pada grafik dibawah, anda dapat menemukan urutan pertumbuhan yang paling umum dari algoritme yang ditentukan dalam notasi _Big O_.
+Notasi _Big O_ digunakan untuk mengklasifikasikan algoritma berdasarkan durasi atau ruang yang dibutuhkan seiring bertambahnya _input_. Pada grafik dibawah, anda dapat menemukan urutan pertumbuhan yang paling umum dari algoritma yang ditentukan dalam notasi _Big O_.
 
 ![Big O graphs](./assets/big-o-graph.png)
 
@@ -285,7 +285,7 @@ Di bawah ini adalah daftar dari beberapa notasi _Big O_ yang sering digunakan da
 | **AVL Tree**                                 | log(n) |  log(n)   |   log(n)   |   log(n)    |                                                          |
 | **Bloom Filter**                             |   -    |     1     |     1      |      -      | Positif palsu dimungkinkan saat pencarian                |
 
-### Kompleksitas Algoritme Sortir Larik
+### Kompleksitas Algoritma Sortir Larik
 
 | Nama                                   |    Terbaik    |          Rata-rata           |          Terburuk           | Memori | Stabil | Keterangan                                                                        |
 | -------------------------------------- | :-----------: | :--------------------------: | :-------------------------: | :----: | :----: | :-------------------------------------------------------------------------------- |
