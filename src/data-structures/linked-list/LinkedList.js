@@ -56,11 +56,11 @@ export default class LinkedList {
 
   /**
    * @param {*} value
-   * @param {*} index
+   * @param {number} index
    * @return {LinkedList}
    */
-  insert(value, index) {
-    index = index < 0 ? 0 : index;
+  insert(value, rawIndex) {
+    const index = rawIndex < 0 ? 0 : rawIndex;
     if (index === 0) {
       this.prepend(value);
     } else {
@@ -70,7 +70,7 @@ export default class LinkedList {
       while (currentNode) {
         if (count === index) break;
         currentNode = currentNode.next;
-        count++;
+        count += 1;
       }
       if (currentNode) {
         newNode.next = currentNode.next;

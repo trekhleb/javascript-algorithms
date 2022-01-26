@@ -45,7 +45,7 @@ describe('LinkedList', () => {
     linkedList.insert(10, 9);
 
     expect(linkedList.toString()).toBe('1,4,2,3,10');
-  })
+  });
 
   it('should delete node by value from linked list', () => {
     const linkedList = new LinkedList();
