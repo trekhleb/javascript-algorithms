@@ -5,9 +5,11 @@ _Read this in other languages:_
 [_Русский_](README.ru-RU.md),
 [_日本語_](README.ja-JP.md),
 [_Français_](README.fr-FR.md),
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),
+[_Türkçe_](README.tr-TR.md),
+[_한국어_](README.ko-KR.md)
 
-In computer science, a **heap** is a specialized tree-based 
+In computer science, a **heap** is a specialized tree-based
 data structure that satisfies the heap property described
 below.
 
@@ -22,7 +24,7 @@ to the key of `C`
 
 ![Heap](https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg)
 
-The node at the "top" of the heap with no parents is 
+The node at the "top" of the heap with no parents is
 called the root node.
 
 ## References

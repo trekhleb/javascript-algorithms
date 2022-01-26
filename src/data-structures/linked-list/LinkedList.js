@@ -56,6 +56,40 @@ export default class LinkedList {
 
   /**
    * @param {*} value
+   * @param {*} index
+   * @return {LinkedList}
+   */
+  insert(value, index) {
+    index = index < 0 ? 0 : index;
+    if (index === 0) {
+      this.prepend(value);
+    } else {
+      let count = 1;
+      let currentNode = this.head;
+      const newNode = new LinkedListNode(value);
+      while (currentNode) {
+        if (count === index) break;
+        currentNode = currentNode.next;
+        count++;
+      }
+      if (currentNode) {
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+      } else {
+        if (this.tail) {
+          this.tail.next = newNode;
+          this.tail = newNode;
+        } else {
+          this.head = newNode;
+          this.tail = newNode;
+        }
+      }
+    }
+    return this;
+  }
+
+  /**
+   * @param {*} value
    * @return {LinkedListNode}
    */
   delete(value) {

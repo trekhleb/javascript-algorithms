@@ -258,7 +258,7 @@ Notasi _Big O_ digunakan untuk mengklasifikasikan algoritma berdasarkan durasi a
 
 Sumber: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
-Di bawah ini adalah daftar dari beberapa notasi _Bog O_ yang sering digunakan dan perbandingan kinerjanya terhadap berbagai ukuran _input data_.
+Di bawah ini adalah daftar dari beberapa notasi _Big O_ yang sering digunakan dan perbandingan kinerjanya terhadap berbagai ukuran _input data_.
 
 | Notasi _Big O_ | Komputasi untuk 10 elemen | Komputasi untuk 100 elemen | Komputasi untuk 1000 elemen |
 | -------------- | ------------------------- | -------------------------- | --------------------------- |
