@@ -164,7 +164,7 @@ Es una abstracción superior a la noción de algoritmo, del mismo modo que un al
   * `P` [Juego de los saltos](src/algorithms/uncategorized/jump-game)
   * `A` [Problema de la mochila sin límite](src/algorithms/sets/knapsack-problem)
   * `A` [Algoritmo de Dijkstra](src/algorithms/graph/dijkstra) - encontrar los caminos más cortos a todos los vértices del grafo desde un solo vértice
-  * `A` [Algortimo de Prim](src/algorithms/graph/prim) - encontrar el árbol de cubrimiento mínimo (MST) para un grafo no dirigido ponderado
+  * `A` [Algoritmo de Prim](src/algorithms/graph/prim) - encontrar el árbol de cubrimiento mínimo (MST) para un grafo no dirigido ponderado
   * `A` [Algoritmo de Kruskal](src/algorithms/graph/kruskal) - encontrar el árbol de cubrimiento mínimo (MST) para un grafo no dirigido ponderado
 * **Divide y Vencerás** - divide el problema en partes más pequeñas y luego resuelve esas partes
   * `P` [Búsqueda binaria](src/algorithms/search/binary-search)
@@ -246,7 +246,7 @@ npm test -- 'playground'
 
 ## Información útil
 
-### Refrencias
+### Referencias
 
 [▶ Estructuras de datos y algoritmos en YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 
