@@ -25,7 +25,8 @@ _Read this in other languages:_
 [_Bahasa Indonesia_](README.id-ID.md),
 [_Українська_](README.uk-UA.md),
 [_Arabic_](README.ar-AR.md),
-[_Tiếng Việt_](README.vi-VN.md)
+[_Tiếng Việt_](README.vi-VN.md),
+[_Deutsch_](README.de-DE.md)
 
 ## Struktury Danych
 
@@ -66,7 +67,7 @@ rozwiązania problemu.
 
 * **Matematyka**
   * `B` [Manipulacja Bitami](src/algorithms/math/bits) - ustaw / uzyskaj / aktualizuj / usuwaj bity, mnożenie / dzielenie przez dwa, tworzenie negatywów itp.
-  * `B` [Silna](src/algorithms/math/factorial)
+  * `B` [Silnia](src/algorithms/math/factorial)
   * `B` [Ciąg Fibonacciego](src/algorithms/math/fibonacci)
   * `B` [Test Pierwszorzędności](src/algorithms/math/primality-test) (metoda podziału na próby)
   * `B` [Algorytm Euclideana](src/algorithms/math/euclidean-algorithm) - obliczyć Największy Wspólny Dzielnik (GCD)
@@ -289,3 +290,5 @@ Poniżej umieszczamy listę najbardziej używanych Big O notacji i ich porównan
 | **Sortowanie Shella**               | n&nbsp;log(n)   | zależy od luki w układzie   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
 | **Sortowanie przez zliczanie**      | n + r           | n + r               | n + r               | n + r     | Yes         | r - największy numer w tablicy|
 | **Sortowanie Radix**                | n * k           | n * k               | n * k               | n + k     | Yes         | k -długość najdłuższego klucza |
+
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
