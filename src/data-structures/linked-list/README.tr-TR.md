@@ -1,36 +1,29 @@
-# Linked List
+# Bağlantılı Liste
 
-_Read this in other languages:_
+_Bunu diğer dillerde okuyun:_
 [_简体中文_](README.zh-CN.md),
 [_Русский_](README.ru-RU.md),
 [_日本語_](README.ja-JP.md),
 [_Português_](README.pt-BR.md),
 [_한국어_](README.ko-KR.md),
 [_Español_](README.es-ES.md),
-[_Turkish_](README.tr-TR.md),
 
-In computer science, a **linked list** is a linear collection
-of data elements, in which linear order is not given by
-their physical placement in memory. Instead, each
-element points to the next. It is a data structure
-consisting of a group of nodes which together represent
-a sequence. Under the simplest form, each node is
-composed of data and a reference (in other words,
-a link) to the next node in the sequence. This structure
-allows for efficient insertion or removal of elements
-from any position in the sequence during iteration.
-More complex variants add additional links, allowing
-efficient insertion or removal from arbitrary element
-references. A drawback of linked lists is that access
-time is linear (and difficult to pipeline). Faster
-access, such as random access, is not feasible. Arrays
-have better cache locality as compared to linked lists.
+Bilgisayar bilimlerinde, **Bağlantılı liste**, her biri hem gerçek verileri
+hem de listedeki bir sonraki düğümün bir bağlantısını içeren dinamik bir
+veri yapısıdır. Bu yapı, yineleme sırasında rastgele bir konumda
+öğeleri verimli bir şekilde eklemenize ve kaldırmanıza olanak tanır.
+Daha karmaşık seçenekler için, isteğe bağlı öğeleri verimli bir şekilde
+eklemek ve kaldırmak için ek bağlantılar içerir.
 
-![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+Bağlantılı listelerin bir dezavantajı, erişim süresinin doğrusal olmasıdır
+(ve ardışık düzene geçirilmesi zordur). Rastgele erişim gibi daha hızlı erişim
+mümkün değildir. Diziler, bağlantılı listelere kıyasla daha iyi önbellek konumuna sahiptir.
 
-## Pseudocode for Basic Operations
+![Bağlantılı Liste](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
-### Insert
+## Temel İşlemler için Sözde Kod
+
+### Ekleme
 
 ```text
 Add(value)
@@ -60,7 +53,7 @@ Prepend(value)
 end Prepend
 ```
 
-### Search
+### Arama
 
 ```text
 Contains(head, value)
@@ -78,7 +71,7 @@ Contains(head, value)
 end Contains
 ```
 
-### Delete
+### Silme
 
 ```text
 Remove(head, value)
@@ -105,16 +98,15 @@ Remove(head, value)
     if n.next = tail
       tail ← n
       tail.next = null
-    else
-      n.next ← n.next.next
     end if
+    n.next ← n.next.next
     return true
   end if
   return false
 end Remove
 ```
 
-### Traverse
+### Geçiş
 
 ```text
 Traverse(head)
@@ -128,7 +120,7 @@ Traverse(head)
 end Traverse
 ```
 
-### Traverse in Reverse
+### Ters Geçiş
 
 ```text
 ReverseTraversal(head, tail)
@@ -149,19 +141,19 @@ ReverseTraversal(head, tail)
 end ReverseTraversal
 ```
 
-## Complexities
+## Karmaşıklıklar
 
-### Time Complexity
+### Zaman Karmaşıklığı
 
-| Access    | Search    | Insertion | Deletion  |
+| Erişim    | Arama     | Ekleme    | Silme     |
 | :-------: | :-------: | :-------: | :-------: |
 | O(n)      | O(n)      | O(1)      | O(n)      |
 
-### Space Complexity
+### Uzay Karmaşıklığı
 
 O(n)
 
-## References
+## Referanslar
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
 - [YouTube](https://www.youtube.com/watch?v=njTh_OwMljA&index=2&t=1s&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
