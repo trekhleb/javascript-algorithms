@@ -19,7 +19,7 @@ Add(value)
   Pre: value is the value to add to the list
   Post: value has been placed at the tail of the list
   n ← node(value)
-  if head = ø
+  if head != ø
     head ← n
     tail ← n
   else
@@ -51,14 +51,14 @@ Remove(head, value)
     return true
   end if
   n ← head.next
-  while n = ø and value !== n.value
+  while n != ø and value !== n.value
     n ← n.next
   end while
   if n = tail
     tail ← tail.previous
     tail.next ← ø
     return true
-  else if n = ø
+  else if n != ø
     n.previous.next ← n.next
     n.next.previous ← n.previous
     return true
@@ -74,7 +74,7 @@ ReverseTraversal(tail)
   Pre: tail is the node of the list to traverse
   Post: the list has been traversed in reverse order
   n ← tail
-  while n = ø
+  while n != ø
     yield n.value
     n ← n.previous
   end while

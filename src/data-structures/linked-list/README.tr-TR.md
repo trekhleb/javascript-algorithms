@@ -1,34 +1,29 @@
-# Lista Enlazada (Linked List)
+# Bağlantılı Liste
 
-_Lee este artículo en otros idiomas:_
+_Bunu diğer dillerde okuyun:_
 [_简体中文_](README.zh-CN.md),
 [_Русский_](README.ru-RU.md),
 [_日本語_](README.ja-JP.md),
-[_Português_](README.pt-BR.md)
-[_English_](README.md)
+[_Português_](README.pt-BR.md),
+[_한국어_](README.ko-KR.md),
+[_Español_](README.es-ES.md),
 
-En ciencias de la computación una **lista enlazada** es una colección lineal
-de elementos de datos, en los cuales el orden lineal no es dado por
-su posición física en memoria. En cambio, cada
-elemento apunta al siguiente. Es una estructura de datos
-que consiste en un grupo de nodos los cuales juntos representan
-una secuencia. En su forma más sencilla, cada nodo está
-compuesto de datos y una referencia (en otras palabras,
-un enlace) al siguiente nodo en la secuencia. Esta estructura
-permite la inserción o eliminación de elementos
-desde cualquier posición en la secuencia durante la iteración.
-Las variantes más complejas agregan enlaces adicionales, permitiendo
-una eficiente inserción o eliminación desde referencias arbitrarias
-del elemento. Una desventaja de las listas lazadas es que el tiempo de
-acceso es lineal (y difícil de canalizar). Un acceso
-más rápido, como un acceso aleatorio, no es factible. Los arreglos
-tienen una mejor locazion en caché comparados con las listas lazadas.
+Bilgisayar bilimlerinde, **Bağlantılı liste**, her biri hem gerçek verileri
+hem de listedeki bir sonraki düğümün bir bağlantısını içeren dinamik bir
+veri yapısıdır. Bu yapı, yineleme sırasında rastgele bir konumda
+öğeleri verimli bir şekilde eklemenize ve kaldırmanıza olanak tanır.
+Daha karmaşık seçenekler için, isteğe bağlı öğeleri verimli bir şekilde
+eklemek ve kaldırmak için ek bağlantılar içerir.
 
-![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+Bağlantılı listelerin bir dezavantajı, erişim süresinin doğrusal olmasıdır
+(ve ardışık düzene geçirilmesi zordur). Rastgele erişim gibi daha hızlı erişim
+mümkün değildir. Diziler, bağlantılı listelere kıyasla daha iyi önbellek konumuna sahiptir.
 
-## Pseudocódigo para operaciones básicas
+![Bağlantılı Liste](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
-### Insertar
+## Temel İşlemler için Sözde Kod
+
+### Ekleme
 
 ```text
 Add(value)
@@ -58,7 +53,7 @@ Prepend(value)
 end Prepend
 ```
 
-### Buscar
+### Arama
 
 ```text
 Contains(head, value)
@@ -76,7 +71,7 @@ Contains(head, value)
 end Contains
 ```
 
-### Borrar
+### Silme
 
 ```text
 Remove(head, value)
@@ -102,6 +97,7 @@ Remove(head, value)
   if n.next != ø
     if n.next = tail
       tail ← n
+      tail.next = null
     end if
     n.next ← n.next.next
     return true
@@ -110,7 +106,7 @@ Remove(head, value)
 end Remove
 ```
 
-### Atrevesar
+### Geçiş
 
 ```text
 Traverse(head)
@@ -124,7 +120,7 @@ Traverse(head)
 end Traverse
 ```
 
-### Atravesar en Reversa
+### Ters Geçiş
 
 ```text
 ReverseTraversal(head, tail)
@@ -145,19 +141,19 @@ ReverseTraversal(head, tail)
 end ReverseTraversal
 ```
 
-## Complejidades
+## Karmaşıklıklar
 
-### Complejidad de Tiempo
+### Zaman Karmaşıklığı
 
-| Acceso | Búsqueda | Inserción | Eliminación |
-| :----: | :------: | :-------: | :---------: |
-|  O(n)  |   O(n)   |   O(1)    |    O(n)     |
+| Erişim    | Arama     | Ekleme    | Silme     |
+| :-------: | :-------: | :-------: | :-------: |
+| O(n)      | O(n)      | O(1)      | O(n)      |
 
-### Complejidad Espacial
+### Uzay Karmaşıklığı
 
 O(n)
 
-## Referencias
+## Referanslar
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
 - [YouTube](https://www.youtube.com/watch?v=njTh_OwMljA&index=2&t=1s&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

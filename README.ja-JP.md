@@ -7,7 +7,7 @@
 
 
 各アルゴリズムとデータ構造には独自のREADMEがあります。
-関連する説明と、さらに読むためのリンク (関連YouTubeのビデオ)も含まれています。
+関連する説明、そして参考資料 (YouTube動画)も含まれています。
 
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
@@ -100,7 +100,7 @@ _Read this in other languages:_
   * `A` [正規表現マッチング](src/algorithms/string/regular-expression-matching)
 * **検索**
   * `B` [リニアサーチ](src/algorithms/search/linear-search)
-  * `B` [ジャンプ検索](src/algorithms/search/jump-search) (or Block Search) - ソートされた配列で検索
+  * `B` [ジャンプ検索](src/algorithms/search/jump-search) (Jump Search) - ソートされた配列で検索
   * `B` [バイナリ検索](src/algorithms/search/binary-search) - ソートされた配列で検索
   * `B` [補間探索](src/algorithms/search/interpolation-search) - 一様分布のソート配列で検索する
 * **並べ替え**
