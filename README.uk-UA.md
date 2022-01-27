@@ -22,6 +22,7 @@ _Вивчення матеріалу на інших мовах:_
 [_Italiana_](README.it-IT.md),
 [_Bahasa Indonesia_](README.id-ID.md),
 [_Arabic_](README.ar-AR.md),
+[_Tiếng Việt_](README.vi-VN.md),
 [_Deutsch_](README.de-DE.md)
 
 *☝ Зверніть увагу! Даний проект призначений лише для навчальних та дослідницьких цілей, і він **не** призначений для виробництва (продакшн).*

@@ -22,6 +22,7 @@ _Baca ini dalam bahasa yang lain:_
 [_Italiana_](README.it-IT.md),
 [_Українська_](README.uk-UA.md),
 [_Arabic_](README.ar-AR.md),
+[_Tiếng Việt_](README.vi-VN.md),
 [_Deutsch_](README.de-DE.md)
 
 _☝ Perhatikan bahwa proyek ini hanya dimaksudkan untuk tujuan pembelajaran dan riset, dan **tidak** dimaksudkan untuk digunakan sebagai produksi._
