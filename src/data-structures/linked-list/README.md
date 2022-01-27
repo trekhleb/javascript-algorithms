@@ -7,6 +7,7 @@ _Read this in other languages:_
 [_Português_](README.pt-BR.md),
 [_한국어_](README.ko-KR.md),
 [_Español_](README.es-ES.md),
+[_Turkish_](README.tr-TR.md),
 
 In computer science, a **linked list** is a linear collection
 of data elements, in which linear order is not given by
@@ -104,8 +105,9 @@ Remove(head, value)
     if n.next = tail
       tail ← n
       tail.next = null
+    else
+      n.next ← n.next.next
     end if
-    n.next ← n.next.next
     return true
   end if
   return false
