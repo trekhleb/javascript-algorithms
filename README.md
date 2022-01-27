@@ -24,7 +24,9 @@ _Read this in other languages:_
 [_Italiana_](README.it-IT.md),
 [_Bahasa Indonesia_](README.id-ID.md),
 [_Українська_](README.uk-UA.md),
-[_Arabic_](README.ar-AR.md)
+[_Arabic_](README.ar-AR.md),
+[_Tiếng Việt_](README.vi-VN.md),
+[_Deutsch_](README.de-DE.md)
 
 *☝ Note that this project is meant to be used for learning and researching purposes
 only, and it is **not** meant to be used for production.*
@@ -67,6 +69,7 @@ a set of rules that precisely define a sequence of operations.
 
 * **Math**
   * `B` [Bit Manipulation](src/algorithms/math/bits) - set/get/update/clear bits, multiplication/division by two, make negative etc.
+  * `B` [Binary Floating Point](src/algorithms/math/binary-floating-point) - binary representation of the floating-point numbers.
   * `B` [Factorial](src/algorithms/math/factorial)
   * `B` [Fibonacci Number](src/algorithms/math/fibonacci) - classic and closed-form versions
   * `B` [Prime Factors](src/algorithms/math/prime-factors) - finding prime factors and counting them using Hardy-Ramanujan's theorem
@@ -100,6 +103,7 @@ a set of rules that precisely define a sequence of operations.
   * `A` [Combination Sum](src/algorithms/sets/combination-sum) - find all combinations that form specific sum
 * **Strings**
   * `B` [Hamming Distance](src/algorithms/string/hamming-distance) - number of positions at which the symbols are different
+  * `B` [Palindrome](src/algorithms/string/palindrome) - check if the string is the same in reverse
   * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * `A` [Knuth–Morris–Pratt Algorithm](src/algorithms/string/knuth-morris-pratt) (KMP Algorithm) - substring search (pattern matching)
   * `A` [Z Algorithm](src/algorithms/string/z-algorithm) - substring search (pattern matching)
@@ -152,6 +156,12 @@ a set of rules that precisely define a sequence of operations.
   * `B` [NanoNeuron](https://github.com/trekhleb/nano-neuron) - 7 simple JS functions that illustrate how machines can actually learn (forward/backward propagation)
   * `B` [k-NN](src/algorithms/ml/knn) - k-nearest neighbors classification algorithm
   * `B` [k-Means](src/algorithms/ml/k-means) - k-Means clustering algorithm
+* **Image Processing**
+  * `B` [Seam Carving](src/algorithms/image-processing/seam-carving) - content-aware image resizing algorithm
+* **Statistics**
+  * `B` [Weighted Random](src/algorithms/statistics/weighted-random) - select the random item from the list based on items' weights
+* **Evolutionary algorithms**
+  * `A` [Genetic algorithm](https://github.com/trekhleb/self-parking-car-evolution) - example of how the genetic algorithm may be applied for training the self-parking cars
 * **Uncategorized**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
@@ -203,6 +213,7 @@ algorithm is an abstraction higher than a computer program.
   * `B` [Unique Paths](src/algorithms/uncategorized/unique-paths)
   * `B` [Rain Terraces](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem
   * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - count the number of ways to reach to the top
+  * `B` [Seam Carving](src/algorithms/image-processing/seam-carving) - content-aware image resizing algorithm
   * `A` [Levenshtein Distance](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
   * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
   * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
@@ -233,6 +244,7 @@ tree is being used.
 ## How to use this repository
 
 **Install all dependencies**
+
 ```
 npm install
 ```
@@ -246,13 +258,24 @@ npm run lint
 ```
 
 **Run all tests**
+
 ```
 npm test
 ```
 
 **Run tests by name**
+
 ```
 npm test -- 'LinkedList'
+```
+
+**Troubleshooting**
+
+In case if linting or testing is failing try to delete the `node_modules` folder and re-install npm packages:
+
+```
+rm -rf ./node_modules
+npm i
 ```
 
 **Playground**
@@ -283,15 +306,15 @@ Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
 Below is the list of some of the most used Big O notations and their performance comparisons against different sizes of the input data.
 
-| Big O Notation | Computations for 10 elements | Computations for 100 elements | Computations for 1000 elements  |
-| -------------- | ---------------------------- | ----------------------------- | ------------------------------- |
-| **O(1)**       | 1                            | 1                             | 1                               |
-| **O(log N)**   | 3                            | 6                             | 9                               |
-| **O(N)**       | 10                           | 100                           | 1000                            |
-| **O(N log N)** | 30                           | 600                           | 9000                            |
-| **O(N^2)**     | 100                          | 10000                         | 1000000                         |
-| **O(2^N)**     | 1024                         | 1.26e+29                      | 1.07e+301                       |
-| **O(N!)**      | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
+| Big O Notation | Type        | Computations for 10 elements | Computations for 100 elements | Computations for 1000 elements  |
+| -------------- | ----------- | ---------------------------- | ----------------------------- | ------------------------------- |
+| **O(1)**       | Constant    | 1                            | 1                             | 1                               |
+| **O(log N)**   | Logarithmic | 3                            | 6                             | 9                               |
+| **O(N)**       | Linear      | 10                           | 100                           | 1000                            |
+| **O(N log N)** | n log(n)    | 30                           | 600                           | 9000                            |
+| **O(N^2)**     | Quadratic   | 100                          | 10000                         | 1000000                         |
+| **O(2^N)**     | Exponential | 1024                         | 1.26e+29                      | 1.07e+301                       |
+| **O(N!)**      | Factorial   | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
 
 ### Data Structure Operations Complexity
 
@@ -327,3 +350,5 @@ Below is the list of some of the most used Big O notations and their performance
 > You may support this project via ❤️️ [GitHub](https://github.com/sponsors/trekhleb) or ❤️️ [Patreon](https://www.patreon.com/trekhleb).
 
 [Folks who are backing this project](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 0`
+
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
