@@ -7,26 +7,26 @@ _Lee este artículo en otros idiomas:_
 [_Português_](README.pt-BR.md)
 [_English_](README.md)
 
-En ciencias de la computación una **lista enlazada** es una colección linear
-de elementos de datos, en los cuales el orden linear no es dado por
-su posción física en memoria. En cambio, cada
-elemento señala al siguiente. Es una estructura de datos
+En ciencias de la computación una **lista enlazada** es una colección lineal
+de elementos de datos, en los cuales el orden lineal no es dado por
+su posición física en memoria. En cambio, cada
+elemento apunta al siguiente. Es una estructura de datos
 que consiste en un grupo de nodos los cuales juntos representan
-una secuencia. Bajo la forma más simple, cada nodo esta
+una secuencia. En su forma más sencilla, cada nodo está
 compuesto de datos y una referencia (en otras palabras,
-un lazo) al siguiente nodo en la secuencia. Esta estructura
-permite la inserción o remoción de elementos
+un enlace) al siguiente nodo en la secuencia. Esta estructura
+permite la inserción o eliminación de elementos
 desde cualquier posición en la secuencia durante la iteración.
-Variantes más complejas agregan lazos adicionales, permitiendo
-una eficiente inserción o remoción desde referencias arbitrarias
-del elemento. Una desventaja de las listas enlazadas es que el tiempo de
-acceso es linear (y difícil de canalizar). Un acceso
-más rápido, como el aleatorio, no es factible. Los arreglos
-tienen una mejor locazion comparados con las listas enlazadas.
+Las variantes más complejas agregan enlaces adicionales, permitiendo
+una eficiente inserción o eliminación desde referencias arbitrarias
+del elemento. Una desventaja de las listas lazadas es que el tiempo de
+acceso es lineal (y difícil de canalizar). Un acceso
+más rápido, como un acceso aleatorio, no es factible. Los arreglos
+tienen una mejor locazion en caché comparados con las listas lazadas.
 
 ![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
 
-## Pseudocódigo para operacones básicas
+## Pseudocódigo para operaciones básicas
 
 ### Insertar
 
@@ -147,11 +147,11 @@ end ReverseTraversal
 
 ## Complejidades
 
-### Complejidad del Tiempo
+### Complejidad de Tiempo
 
 | Acceso | Búsqueda | Inserción | Eliminación |
-| :----: | :----: | :-------: | :------: |
-|  O(n)  |  O(n)  |   O(1)    |   O(n)   |
+| :----: | :------: | :-------: | :---------: |
+|  O(n)  |   O(n)   |   O(1)    |    O(n)     |
 
 ### Complejidad Espacial
 
