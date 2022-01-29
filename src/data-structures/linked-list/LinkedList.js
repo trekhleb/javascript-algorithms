@@ -87,6 +87,7 @@ export default class LinkedList {
     }
     return this;
   }
+
   /**
    * @param {*} value
    * @param {number} index
@@ -95,19 +96,18 @@ export default class LinkedList {
   setAtIndex(value, index) {
     if (index < 0) {
       return this;
-    } else {
-      let count = 0;
-      let currentNode = this.head;
-      while (currentNode) {
-        if (count === index) break;
-        currentNode = currentNode.next;
-        count += 1;
-      }
-      if (currentNode) {
-        currentNode.value = value;
-      }
-      return this;
     }
+    let count = 0;
+    let currentNode = this.head;
+    while (currentNode) {
+      if (count === index) break;
+      currentNode = currentNode.next;
+      count += 1;
+    }
+    if (currentNode) {
+      currentNode.value = value;
+    }
+    return this;
   }
 
   /**
@@ -217,8 +217,6 @@ export default class LinkedList {
   findByIndex(index) {
     if (!this.head || index < 0) {
       return null;
-    } else if (index === 0) {
-      return this.head;
     }
     let count = 0;
     let currentNode = this.head;

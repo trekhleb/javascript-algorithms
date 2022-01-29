@@ -50,7 +50,11 @@ describe('LinkedList', () => {
   it('should insert node to linked list', () => {
     const linkedList = new LinkedList();
 
-    linkedList.append(1).append(2).append(3).append(4).append(5);
+    linkedList.append(1);
+    linkedList.append(2);
+    linkedList.append(3);
+    linkedList.append(4);
+    linkedList.append(5);
 
     expect(linkedList.toString()).toBe('1,2,3,4,5');
 
@@ -259,7 +263,7 @@ describe('LinkedList', () => {
     expect(node.value.value).toBe(2);
     expect(node.value.key).toBe('test2');
     expect(
-      linkedList.find({ callback: (value) => value.key === 'test5' })
+      linkedList.find({ callback: (value) => value.key === 'test5' }),
     ).toBeNull();
   });
 
@@ -294,7 +298,7 @@ describe('LinkedList', () => {
     expect(node.value.value).toBe(2);
     expect(node.value.customValue).toBe('test2');
     expect(
-      linkedList.find({ value: { value: 2, customValue: 'test5' } })
+      linkedList.find({ value: { value: 2, customValue: 'test5' } }),
     ).toBeNull();
   });
 
