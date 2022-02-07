@@ -5,7 +5,7 @@
 
 이 저장소에는 많이 알려진 알고리즘 및 자료 구조의 Javascript 기반 예제를 담고 있습니다.
 
-각 알고리즘과 자료 구조에 대해 연관되어있는 설명이 README에 작성되어 있으며,
+각 알고리즘과 자료 구조에 대해 연관되어 있는 설명이 README에 작성되어 있으며,
 링크를 통해 더 자세한 설명을 만날 수 있습니다. (관련된 YouTube 영상도 포함).
 
 _Read this in other languages:_
@@ -22,7 +22,9 @@ _Read this in other languages:_
 [_Italiana_](README.it-IT.md),
 [_Bahasa Indonesia_](README.id-ID.md),
 [_Українська_](README.uk-UA.md),
-[_Arabic_](README.ar-AR.md)
+[_Arabic_](README.ar-AR.md),
+[_Tiếng Việt_](README.vi-VN.md),
+[_Deutsch_](README.de-DE.md)
 
 ## 자료 구조
 
@@ -276,3 +278,5 @@ Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 | **셸 정렬**            | n&nbsp;log(n)   | 간격 순서에 영향을 받습니다.   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
 | **계수 정렬**          | n + r           | n + r               | n + r               | n + r     | Yes              | r - 배열내 가장 큰 수 |
 | **기수 정렬**          | n * k           | n * k               | n * k               | n + k     | Yes              | k - 키값의 최대 길이 |
+
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

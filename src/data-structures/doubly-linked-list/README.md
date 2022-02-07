@@ -4,26 +4,27 @@ _Read this in other languages:_
 [_Русский_](README.ru-RU.md),
 [_简体中文_](README.zh-CN.md),
 [_日本語_](README.ja-JP.md),
-[_Português_](README.pt-BR.md)
-[_한국어_](README.ko-KR.md)
+[_Português_](README.pt-BR.md),
+[_한국어_](README.ko-KR.md),
+[_Español_](README.es-ES.md),
 
-In computer science, a **doubly linked list** is a linked data structure that 
-consists of a set of sequentially linked records called nodes. Each node contains 
-two fields, called links, that are references to the previous and to the next 
-node in the sequence of nodes. The beginning and ending nodes' previous and next 
-links, respectively, point to some kind of terminator, typically a sentinel 
-node or null, to facilitate the traversal of the list. If there is only one 
-sentinel node, then the list is circularly linked via the sentinel node. It can 
-be conceptualized as two singly linked lists formed from the same data items, 
+In computer science, a **doubly linked list** is a linked data structure that
+consists of a set of sequentially linked records called nodes. Each node contains
+two fields, called links, that are references to the previous and to the next
+node in the sequence of nodes. The beginning and ending nodes' previous and next
+links, respectively, point to some kind of terminator, typically a sentinel
+node or null, to facilitate the traversal of the list. If there is only one
+sentinel node, then the list is circularly linked via the sentinel node. It can
+be conceptualized as two singly linked lists formed from the same data items,
 but in opposite sequential orders.
 
 ![Doubly Linked List](https://upload.wikimedia.org/wikipedia/commons/5/5e/Doubly-linked-list.svg)
 
-The two node links allow traversal of the list in either direction. While adding 
-or removing a node in a doubly linked list requires changing more links than the 
-same operations on a singly linked list, the operations are simpler and 
-potentially more efficient (for nodes other than first nodes) because there 
-is no need to keep track of the previous node during traversal or no need 
+The two node links allow traversal of the list in either direction. While adding
+or removing a node in a doubly linked list requires changing more links than the
+same operations on a singly linked list, the operations are simpler and
+potentially more efficient (for nodes other than first nodes) because there
+is no need to keep track of the previous node during traversal or no need
 to traverse the list to find the previous node, so that its link can be modified.
 
 ## Pseudocode for Basic Operations
@@ -45,7 +46,7 @@ Add(value)
   end if
 end Add
 ```
-    
+
 ### Delete
 
 ```text
@@ -82,7 +83,7 @@ Remove(head, value)
   return false
 end Remove
 ```
-    
+
 ### Reverse Traversal
 
 ```text
@@ -96,7 +97,7 @@ ReverseTraversal(tail)
   end while
 end Reverse Traversal
 ```
-    
+
 ## Complexities
 
 ## Time Complexity

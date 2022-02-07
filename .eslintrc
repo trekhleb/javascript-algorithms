@@ -11,5 +11,10 @@
     "class-methods-use-this": "off",
     "arrow-body-style": "off",
     "no-loop-func": "off"
+  },
+  "settings": {
+    "react": {
+      "version": "latest"
+    }
   }
 }

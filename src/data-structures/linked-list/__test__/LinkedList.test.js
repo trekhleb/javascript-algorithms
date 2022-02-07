@@ -32,6 +32,21 @@ describe('LinkedList', () => {
     expect(linkedList.toString()).toBe('3,2,1');
   });
 
+  it('should insert node to linked list', () => {
+    const linkedList = new LinkedList();
+
+    linkedList.insert(4, 3);
+    expect(linkedList.head.toString()).toBe('4');
+    expect(linkedList.tail.toString()).toBe('4');
+
+    linkedList.insert(3, 2);
+    linkedList.insert(2, 1);
+    linkedList.insert(1, -7);
+    linkedList.insert(10, 9);
+
+    expect(linkedList.toString()).toBe('1,4,2,3,10');
+  });
+
   it('should delete node by value from linked list', () => {
     const linkedList = new LinkedList();
 
@@ -215,7 +230,7 @@ describe('LinkedList', () => {
     expect(node).toBeDefined();
     expect(node.value.value).toBe(2);
     expect(node.value.customValue).toBe('test2');
-    expect(linkedList.find({ value: 2, customValue: 'test5' })).toBeNull();
+    expect(linkedList.find({ value: { value: 2, customValue: 'test5' } })).toBeNull();
   });
 
   it('should find preferring callback over compare function', () => {
