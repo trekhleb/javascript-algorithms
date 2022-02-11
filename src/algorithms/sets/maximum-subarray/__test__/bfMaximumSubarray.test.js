@@ -1,7 +1,7 @@
 import bfMaximumSubarray from '../bfMaximumSubarray';
 
 describe('bfMaximumSubarray', () => {
-  it('should find maximum subarray using brute force algorithm', () => {
+  it('should find maximum subarray using the brute force algorithm', () => {
     expect(bfMaximumSubarray([])).toEqual([]);
     expect(bfMaximumSubarray([0, 0])).toEqual([0]);
     expect(bfMaximumSubarray([0, 0, 1])).toEqual([0, 0, 1]);
