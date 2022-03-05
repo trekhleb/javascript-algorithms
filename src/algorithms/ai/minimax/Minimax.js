@@ -39,7 +39,7 @@ class MinimaxPlayer extends Player {
    * @returns {Number} - Best score the player can reach under this state
    */
   minimax(node, depth) {
-    if (depth === 0 || node.isTerminated()) {
+    if (depth === 0 || node.isTerminalState()) {
       return this.heuristic(node);
     }
 

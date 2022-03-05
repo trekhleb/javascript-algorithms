@@ -1,4 +1,4 @@
-import GameNode, { playerMark } from '../../GameNode';
+import TicTacToeGameNode, { playerMark } from '../../TicTacToeGameNode';
 import Minimax from '../Minimax';
 
 describe('Minimax', () => {
@@ -8,7 +8,7 @@ describe('Minimax', () => {
       ['o', 'o', 'x'],
       ['_', '_', '_'],
     ];
-    const initialNode = new GameNode(board, playerMark);
+    const initialNode = new TicTacToeGameNode(board, playerMark);
     const player = new Minimax();
 
     expect(player.findBestMove(initialNode)).toStrictEqual([2, 2]);
