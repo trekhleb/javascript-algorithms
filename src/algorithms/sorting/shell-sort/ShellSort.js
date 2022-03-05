@@ -21,9 +21,7 @@ export default class ShellSort extends Sort {
 
           // Compare and swap array elements if needed.
           if (this.comparator.lessThan(array[gapShiftedIndex], array[currentIndex])) {
-            const tmp = array[currentIndex];
-            array[currentIndex] = array[gapShiftedIndex];
-            array[gapShiftedIndex] = tmp;
+            [array[currentIndex], array[gapShiftedIndex]] = [array[gapShiftedIndex], array[currentIndex]];
           }
 
           gapShiftedIndex = currentIndex;
