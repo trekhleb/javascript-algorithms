@@ -14,6 +14,13 @@ class GameNode {
   }
 
   /**
+   * @returns {Object} - Get the move which caused this game state
+   */
+   getMove() {
+    throw new Error('GameNode::getMove must be implemented');
+  }
+
+  /**
    * @returns {Array.<GameNode>} - Possible next states of the game tree
    */
   computeNextStates() {

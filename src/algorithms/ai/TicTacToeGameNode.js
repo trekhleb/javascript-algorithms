@@ -69,6 +69,13 @@ class TicTacToeGameNode extends GameNode {
   }
 
   /**
+   * @returns {Object} - Get the move which caused this game state
+   */
+   getMove() {
+    return this.move;
+  }
+
+  /**
    *
    * @returns {string} - If the game is end with three consecutive mark on the board.
    *                     Return the player mark of winning ('x' or 'o'), otherwise return null.
