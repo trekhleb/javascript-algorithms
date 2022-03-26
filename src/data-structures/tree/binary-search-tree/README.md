@@ -143,7 +143,7 @@ end remove
 findParent(value, root)
   Pre: value is the value of the node we want to find the parent of
        root is the root node of the BST and is != ø
-  Post: a reference to the prent node of value if found; otherwise ø
+  Post: a reference to the parent node of value if found; otherwise ø
   if value = root.value
     return ø
   end if
@@ -171,7 +171,7 @@ end findParent
 
 ```text
 findNode(root, value)
-  Pre: value is the value of the node we want to find the parent of
+  Pre: value is the value of the node we want to find
        root is the root node of the BST
   Post: a reference to the node of value if found; otherwise ø
   if root = ø
