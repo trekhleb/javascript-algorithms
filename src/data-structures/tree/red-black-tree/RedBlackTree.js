@@ -57,9 +57,9 @@ export default class RedBlackTree extends BinarySearchTree {
     const grandParent = node.parent.parent;
 
     if (node.uncle && this.isNodeRed(node.uncle)) {
-      // If node has red uncle then we need to do RECOLORING.
+      // If node has red auncle then we need to do RECOLORING.
 
-      // Recolor parent and uncle to black.
+      // Recolor parent and auncle to black.
       this.makeNodeBlack(node.uncle);
       this.makeNodeBlack(node.parent);
 
@@ -75,7 +75,7 @@ export default class RedBlackTree extends BinarySearchTree {
       // Now do further checking for recolored grand-parent.
       this.balance(grandParent);
     } else if (!node.uncle || this.isNodeBlack(node.uncle)) {
-      // If node uncle is black or absent then we need to do ROTATIONS.
+      // If node auncle is black or absent then we need to do ROTATIONS.
 
       if (grandParent) {
         // Grand parent that we will receive after rotations.

@@ -61,10 +61,10 @@ unlike ordinary binary search trees.
 
 ## Balancing during insertion
 
-### If uncle is RED
+### If auncle is RED
 ![Red Black Tree Balancing](https://www.geeksforgeeks.org/wp-content/uploads/redBlackCase2.png)
 
-### If uncle is BLACK
+### If auncle is BLACK
 
 - Left Left Case (`p` is left child of `g` and `x` is left child of `p`)
 - Left Right Case (`p` is left child of `g` and `x` is right child of `p`)

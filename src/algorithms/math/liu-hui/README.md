@@ -1,16 +1,16 @@
 # Liu Hui's π Algorithm
 
-Liu Hui remarked in his commentary to The Nine Chapters on the Mathematical Art,
+Liu Hui remarked in their commentary to The Nine Chapters on the Mathematical Art,
 that the ratio of the circumference of an inscribed hexagon to the diameter of 
-the circle was `three`, hence `π` must be greater than three. He went on to provide 
+the circle was `three`, hence `π` must be greater than three. They went on to provide 
 a detailed step-by-step description of an iterative algorithm to calculate `π` to 
-any required accuracy based on bisecting polygons; he calculated `π` to 
-between `3.141024` and `3.142708` with a 96-gon; he suggested that `3.14` was 
-a good enough approximation, and expressed `π` as `157/50`; he admitted that 
-this number was a bit small. Later he invented an ingenious quick method to 
+any required accuracy based on bisecting polygons; they calculated `π` to 
+between `3.141024` and `3.142708` with a 96-gon; they suggested that `3.14` was 
+a good enough approximation, and expressed `π` as `157/50`; they admitted that 
+this number was a bit small. Later they invented an ingenious quick method to 
 improve on it, and obtained `π ≈ 3.1416` with only a 96-gon, with an accuracy 
-comparable to that from a 1536-gon. His most important contribution in this 
-area was his simple iterative `π` algorithm.
+comparable to that from a 1536-gon. Their most important contribution in this 
+area was their simple iterative `π` algorithm.
 
 ## Area of a circle
 
@@ -31,7 +31,7 @@ the circle; there will be no loss
 Liu Hui's method of calculating the area of a circle.
 
 Further, Liu Hui proved that the area of a circle is half of its circumference 
-multiplied by its radius. He said:
+multiplied by its radius. They said:
 
 > Between a polygon and a circle, there is excess radius. Multiply the excess 
 radius by a side of the polygon. The resulting area exceeds the boundary of 
@@ -83,7 +83,7 @@ From here, there is now a technique to determine `m` from `M`, which gives the
 side length for a polygon with twice the number of edges. Starting with a 
 hexagon, Liu Hui could determine the side length of a dodecagon using this 
 formula. Then continue repetitively to determine the side length of a 
-24-gon given the side length of a dodecagon. He could do this recursively as 
+24-gon given the side length of a dodecagon. They could do this recursively as 
 many times as necessary. Knowing how to determine the area of these polygons, 
 Liu Hui could then approximate `π`.
 
