@@ -8,18 +8,16 @@
 
 在双向链表中进行添加或者删除节点时,需做的链接更改要比单向链表复杂得多。这种操作在单向链表中更简单高效,因为不需要关注一个节点（除第一个和最后一个节点以外的节点）的两个链接,而只需要关注一个链接即可。
 
-
-
 ## 基础操作的伪代码
 
 ### 插入
 
 ```text
 Add(value)
-  Pre: value is the value to add to the list
-  Post: value has been placed at the tail of the list
+  Pre: value 是要插入的值
+  Post: value 被插入到列表的尾部
   n ← node(value)
-  if head != ø
+  if head = ø
     head ← n
     tail ← n
   else
@@ -29,14 +27,14 @@ Add(value)
   end if
 end Add
 ```
-    
+
 ### 删除
 
 ```text
 Remove(head, value)
-  Pre: head is the head node in the list
-       value is the value to remove from the list
-  Post: value is removed from the list, true; otherwise false
+  Pre: head 是列表里的第一个节点
+       value 是要从列表中删除的值
+  Post: value 若从列表中被删除, 返回 true; 否则返回 false
   if head = ø
     return false
   end if
@@ -66,13 +64,13 @@ Remove(head, value)
   return false
 end Remove
 ```
-    
+
 ### 反向遍历
 
 ```text
 ReverseTraversal(tail)
-  Pre: tail is the node of the list to traverse
-  Post: the list has been traversed in reverse order
+  Pre: tail 是要遍历的列表的最后一个节点
+  Post: 列表被反向遍历
   n ← tail
   while n != ø
     yield n.value
@@ -80,7 +78,7 @@ ReverseTraversal(tail)
   end while
 end Reverse Traversal
 ```
-    
+
 ## 复杂度
 
 ## 时间复杂度

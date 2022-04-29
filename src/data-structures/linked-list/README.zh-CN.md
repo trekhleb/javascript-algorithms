@@ -16,8 +16,8 @@
 
 ```text
 Add(value)
-  Pre: value is the value to add to the list
-  Post: value has been placed at the tail of the list
+  Pre: value 是要添加到列表的值
+  Post: value 被放置到列表的尾部
   n ← node(value)
   if head = ø
     head ← n
@@ -31,8 +31,8 @@ end Add
 
 ```
 Prepend(value)
- Pre: value is the value to add to the list
- Post: value has been placed at the head of the list
+ Pre: value 是要添加到列表的值
+ Post: value 被放置到列表的头部
  n ← node(value)
  n.next ← head
  head ← n
@@ -46,9 +46,9 @@ end Prepend
 
 ```text
 Contains(head, value)
-  Pre: head is the head node in the list
-       value is the value to search for
-  Post: the item is either in the linked list, true; otherwise false
+  Pre: head 是列表的头节点
+         value 是要搜索的值
+  Post: 元素若在链表中, 返回 true, 否则返回 false
   n ← head
   while n != ø and n.value != value
     n ← n.next
@@ -59,14 +59,14 @@ Contains(head, value)
   return true
 end Contains
 ```
-    
+
 ### 删除
 
 ```text
 Remove(head, value)
-  Pre: head is the head node in the list
-       value is the value to remove from the list
-  Post: value is removed from the list, true, otherwise false
+  Pre: head 是列表的头节点
+         value 是要删除的值
+  Post: value 若从链表删除, 返回 true, 否则返回 false
   if head = ø
     return false
   end if
@@ -98,8 +98,8 @@ end Remove
 
 ```text
 Traverse(head)
-  Pre: head is the head node in the list
-  Post: the items in the list have been traversed
+  Pre: head 是列表的头节点
+  Post: 列表里的所有元素均被访问到
   n ← head
   while n != ø
     yield n.value
@@ -107,13 +107,13 @@ Traverse(head)
   end while
 end Traverse
 ```
-    
+
 ### 反向遍历
 
 ```text
 ReverseTraversal(head, tail)
-  Pre: head and tail belong to the same list
-  Post: the items in the list have been traversed in reverse order
+  Pre: head 与 tail 分别是同一个列表的头节点和尾节点
+  Post: 列表里所有的元素以反向顺序被访问到
   if tail != ø
     curr ← tail
     while curr != head
