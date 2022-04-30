@@ -83,7 +83,7 @@ end Reverse Traversal
 
 ## 时间复杂度
 
-| Access    | Search    | Insertion | Deletion  |
+| 访问       | 查询      | 插入       | 删除       |
 | :-------: | :-------: | :-------: | :-------: |
 | O(n)      | O(n)      | O(1)      | O(1)      |
 
