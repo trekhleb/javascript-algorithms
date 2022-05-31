@@ -20,6 +20,18 @@ export default function isPowerOfTwo(number) {
    *
    * So after checking that the number is greater than zero, we can use a clever little bit
    * hack to test that one and only one bit is set.
+   *
+   * For example for number `8` the operations will look like:
+   *
+   *   1000
+   * - 0001
+   *   ----
+   *   0111
+   *
+   *   1000
+   * & 0111
+   *   ----
+   *   0000
    */
   return (number & (number - 1)) === 0;
 }
