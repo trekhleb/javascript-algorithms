@@ -32,6 +32,8 @@ export default function isPowerOfTwo(number) {
    * & 0111
    *   ----
    *   0000
+   *
+   * References: http://www.graphics.stanford.edu/~seander/bithacks.html#DetermineIfPowerOf2
    */
   return (number & (number - 1)) === 0;
 }
