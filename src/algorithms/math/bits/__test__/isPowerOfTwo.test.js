@@ -1,7 +1,9 @@
 import isPowerOfTwo from '../isPowerOfTwo';
 
 describe('isPowerOfTwo', () => {
-  it('should detect if the number is power of two', () => {
+  it('should detect if the int is power of two', () => {
+    expect(isPowerOfTwo(-32)).toBe(false);
+    expect(isPowerOfTwo(-1)).toBe(false);
     expect(isPowerOfTwo(1)).toBe(true);
     expect(isPowerOfTwo(2)).toBe(true);
     expect(isPowerOfTwo(3)).toBe(false);
@@ -16,5 +18,6 @@ describe('isPowerOfTwo', () => {
     expect(isPowerOfTwo(32)).toBe(true);
     expect(isPowerOfTwo(127)).toBe(false);
     expect(isPowerOfTwo(128)).toBe(true);
+    expect(isPowerOfTwo(2 ** 30)).toBe(true);
   });
 });
