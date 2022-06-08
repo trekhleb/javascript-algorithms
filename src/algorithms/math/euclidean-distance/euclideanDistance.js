@@ -10,7 +10,7 @@ import * as mtrx from '../matrix/Matrix';
  * @param {Matrix} a
  * @param {Matrix} b
  * @returns {number}
- * @trows {Error}
+ * @throws {Error}
  */
 const euclideanDistance = (a, b) => {
   mtrx.validateSameShape(a, b);
