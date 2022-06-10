@@ -2,6 +2,7 @@
 
 _Baca ini dalam bahasa lain:_
 [_Русский_](README.ru-RU.md)
+[_English_](README.md)
 
 Dalam kriptografi, **Sandi Caesar**, juga dikenal sebagai **Sandi Caesar**, **Sandi Geser**, **Kode Caesar**  atau **Pergeseran Caesar**, adalah salah satu teknik enkripsi yang paling sederhana dan paling dikenal. Ini adalah jenis cipher substitusi di mana setiap huruf dalam plaintext diganti dengan huruf beberapa posisi tetap di bawah alfabet. Sebagai contoh, dengan pergeseran kiri `3`, `D` akan digantikan oleh `A`, `E` akan menjadi `B`, dan seterusnya. Metode ini dinamai Julius Caesar, yang menggunakannya dalam korespondensi pribadinya.
 
