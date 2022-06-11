@@ -63,7 +63,7 @@ _অন্যান্য ভাষায় অনুবাদ পড়ুন:_
 
 ### বিষয় অনুসারে অ্যালগরিদম
 
-***গণিত**
+* **গণিত**
   * `স` [বিট ম্যানিপুলেশন/Bit Manipulation](src/algorithms/math/bits) - সেট/গেট/আপডেট/ক্লিয়ার বিট, দুই দ্বারা গুণ/ভাগ, ঋণাত্মক বানানো ইত্যাদি।
   * `স` [বাইনারী দশমিক সংখ্যা/Binary Floating Point](src/algorithms/math/binary-floating-point) - দশমিক সংখ্যার বাইনারি উপস্থাপনা।
   * `স` [ফ্যাক্টোরিয়াল/Factorial](src/algorithms/math/factorial)
@@ -85,3 +85,51 @@ _অন্যান্য ভাষায় অনুবাদ পড়ুন:_
   * `ক` [বর্গমূল/Square Root](src/algorithms/math/square-root) - নিউটনের পদ্ধতি
   * `ক` [লিউ হুই π অ্যালগরিদম/Liu Hui π Algorithm](src/algorithms/math/liu-hui) - এন-গনের উপর ভিত্তি করে আনুমানিক π গণনা
   * `ক` [ডিসক্রিট ফুরিয়ার ট্রান্সফর্ম/Discrete Fourier Transform](src/algorithms/math/fourier-transform) - সময়ের একটি ফাংশনকে (একটি সংকেত) ফ্রিকোয়েন্সিতে পরিবর্তন করা
+
+* **সেট**
+  * `স` [কার্টেসিয়ান গুণফল/Cartesian Product](src/algorithms/sets/cartesian-product) - একাধিক সেটের গুণফল
+  * `স` [ফিশার–ইয়েটস শাফেল/Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - একটি সসীম ক্রম-এর এলোমেলো বিন্যাস
+  * `ক` [পাওয়ার সেট/Power Set](src/algorithms/sets/power-set) - একটি সেটের সমস্ত উপসেট (বিটওয়াইজ এবং ব্যাকট্র্যাকিং সমাধান)
+  * `ক` [বিন্যাস/Permutations](src/algorithms/sets/permutations) (পুনরাবৃত্তি সহ এবং ছাড়া)
+  * `ক` [সমাবেশ/Combinations](src/algorithms/sets/combinations) (পুনরাবৃত্তি সহ এবং ছাড়া)
+  * `ক` [দীর্ঘতম সাধারণ সাবসিকুয়েন্স/Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence)
+  * `ক` [দীর্ঘতম ক্রমবর্ধমান সাবসিকুয়েন্স/Longest Increasing Subsequence](src/algorithms/sets/longest-বর্ধিত-পরবর্তী)
+  * `ক` [সংক্ষিপ্ততম সাধারণ সুপারসিকুয়েন্স/Shortest Common Supersequence](src/algorithms/sets/shortest-common-supersequence)
+  * `ক` [ন্যাপস্যাক সমস্যা/Knapsack Problem](src/algorithms/sets/knapsack-problem) - "0/1" এবং "অসীম"
+  * `ক` [সর্বোচ্চ সাব অ্যারে/Maximum Subarray](src/algorithms/sets/maximum-subarray) - "ব্রুট ফোর্স" এবং "ডাইনামিক প্রোগ্রামিং" (কাডেনের) ভার্সন
+  * `ক` [কম্বিনেশন সমষ্টি/Combination Sum](src/algorithms/sets/combination-sum) - নির্দিষ্ট যোগফল তৈরি করে এমন সকল কম্বিনেশন খুঁজুন
+
+* **স্ট্রিংস**
+  * `স` [হ্যামিং দূরত্ব/Hamming Distance](src/algorithms/string/hamming-distance) - অবস্থানের সংখ্যা যেখানে প্রতীকগুলি আলাদা
+  * `স` [প্যালিনড্রোম/Palindrome](src/algorithms/string/palindrome) - স্ট্রিং বিপরীতে একই কিনা তা পরীক্ষা করুন
+  * `ক` [লেভেনশটাইন দূরত্ব/Levenshtein Distance](src/algorithms/string/levenshtein-distance) - দুটি সিকোয়েন্সের মধ্যে ন্যূনতম সম্পাদনা দূরত্ব
+  * `ক` [নুথ–মরিস–প্র্যাট অ্যালগরিদম/Knuth–Morris–Pratt Algorithm](src/algorithms/string/knuth-morris-pratt) (KMP অ্যালগরিদম) - সাবস্ট্রিং অনুসন্ধান (প্যাটার্ন মিলানো)
+  * `ক` [জেড অ্যালগরিদম/Z Algorithm](src/algorithms/string/z-algorithm) - সাবস্ট্রিং অনুসন্ধান (প্যাটার্ন মিলানো)
+  * `ক` [র‌্যাবিন কার্প অ্যালগরিদম/Rabin Karp Algorithm](src/algorithms/string/rabin-karp) - সাবস্ট্রিং অনুসন্ধান
+  * `ক` [দীর্ঘতম সাধারণ সাবস্ট্রিং/Longest Common Substring](src/algorithms/string/longest-common-substring)
+  * `ক` [রেগুলার এক্সপ্রেশন মিলানো/Regular Expression Matching](src/algorithms/string/regular-expression-matching)
+
+* **অনুসন্ধান**
+  * `B` [লিনিয়ার অনুসন্ধান/Linear Search](src/algorithms/search/linear-search)
+  * `B` [জাম্প অনুসন্ধান/Jump Search](src/algorithms/search/jump-search) (বা ব্লক অনুসন্ধান) - সাজানো অ্যারেতে অনুসন্ধান করা
+  * `B` [বাইনারী অনুসন্ধান/Binary Search](src/algorithms/search/binary-search) - সাজানো অ্যারেতে অনুসন্ধান করা
+  * `B` [ইন্টারপোলেশন অনুসন্ধান/Interpolation Search](src/algorithms/search/interpolation-search) - সমানভাবে বিতরণ করা সাজানো অ্যারেতে অনুসন্ধান করা
+
+* **সাজানো**
+   * `B` [বাবল্ সাজানো/Bubble Sort](src/algorithms/sorting/bubble-sort)
+   * `B` [নির্বাচনী বাছাই/Selection Sort](src/algorithms/sorting/selection-sort)
+   * `B` [সন্নিবেশ সাজানোর/Insertion Sort](src/algorithms/sorting/insertion-sort)
+   * `B` [হিপ বাছাই/Heap Sort](src/algorithms/sorting/heap-sort)
+   * `B` [একত্রিত করে সাজানো/Merge Sort](src/algorithms/sorting/merge-sort)
+   * `B` [তাড়াতাড়ি সাজানো/Quicksort](src/algorithms/sorting/quick-sort) - ইন-প্লেস এবং নন-ইন-প্লেস বাস্তবায়ন
+   * `B` [শেল সর্ট/Shellsort](src/algorithms/sorting/shell-sort)
+   * `B` [গণনা বাছাই/Counting Sort](src/algorithms/sorting/counting-sort)
+   * `B` [রেডিক্স সাজানো/Radix Sort](src/algorithms/sorting/radix-sort)
+
+* **লিঙ্ক করা তালিকা**
+  * `B` [সোজা ট্রাভার্সাল/Straight Traversal](src/algorithms/linked-list/traversal)
+  * `B` [উল্টো ট্রাভার্সাল/Reverse Traversal](src/algorithms/linked-list/reverse-traversal)
+
+* **ট্রি**
+  * `B` [গভীর-প্রথম অনুসন্ধান/Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
+  * `B` [প্রস্থ-প্রথম অনুসন্ধান/Breadth-First Search](src/algorithms/tree/breadth-first-search) (BFS)
