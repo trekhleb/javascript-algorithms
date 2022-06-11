@@ -9,6 +9,7 @@
 
 
 _অন্যান্য ভাষায় অনুবাদ পড়ুন:_
+[_English_](README.md),
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
