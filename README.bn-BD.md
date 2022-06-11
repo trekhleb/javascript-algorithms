@@ -41,7 +41,7 @@ _অন্যান্য ভাষায় অনুবাদ পড়ুন:_
 * `স` [কিউ/Queue](src/data-structures/queue)
 * `স` [স্ট্যাক/Stack](src/data-structures/stack)
 * `স` [হ্যাশ টেবিল/Hash Table](src/data-structures/hash-table)
-* `স` [হিপ/Heap](src/data-structures/heap) - max and min heap versions
+* `স` [হিপ/Heap](src/data-structures/heap) - সর্বোচ্চ এবং সর্বনিম্ন হিপ ভার্সন
 * `স` [প্রায়রিটি কিউ/Priority Queue](src/data-structures/priority-queue)
 * `ক` [ট্রায়/Trie](src/data-structures/trie)
 * `ক` [ট্রি/Tree](src/data-structures/tree)
@@ -53,3 +53,34 @@ _অন্যান্য ভাষায় অনুবাদ পড়ুন:_
 * `ক` [গ্রাফ/Graph](src/data-structures/graph) (both directed and undirected)
 * `ক` [ডিসজয়েন্ট সেট/Disjoint Set](src/data-structures/disjoint-set)
 * `ক` [ব্লুম ফিল্টার/Bloom Filter](src/data-structures/bloom-filter)
+
+## অ্যালগরিদম
+
+একটি অ্যালগরিদম হল এক শ্রেণীর সমস্যার সমাধান করার নির্দিষ্ট কৌশল। এটা কিছু নিয়মের একটি সেট যা সঠিকভাবে অপারেশনের ক্রম সংজ্ঞায়িত করে।
+
+`স` - সহজ, `ক` - কঠিন
+
+### বিষয় অনুসারে অ্যালগরিদম
+
+***গণিত**
+  * `স` [বিট ম্যানিপুলেশন/Bit Manipulation](src/algorithms/math/bits) - সেট/গেট/আপডেট/ক্লিয়ার বিট, দুই দ্বারা গুণ/ভাগ, ঋণাত্মক বানানো ইত্যাদি।
+  * `স` [বাইনারী দশমিক সংখ্যা/Binary Floating Point](src/algorithms/math/binary-floating-point) - দশমিক সংখ্যার বাইনারি উপস্থাপনা।
+  * `স` [ফ্যাক্টোরিয়াল/Factorial](src/algorithms/math/factorial)
+  * `স` [ফিবোনাচি নম্বর/Fibonacci Number](src/algorithms/math/fibonacci) - ক্লাসিক এবং ক্লোজড-ফর্ম ভার্সন
+  * `স` [প্রাইম ফ্যাক্টর/Prime Factors](src/algorithms/math/prime-factors) - হার্ডি-রামানুজনের উপপাদ্য ব্যবহার করে প্রাইম ফ্যাক্টর খুঁজে বের করা এবং গণনা করা
+  * `স` [প্রিমালিটি টেস্ট/Primality Test](src/algorithms/math/primality-test) (ট্রায়াল ডিভিশন পদ্ধতি)
+  * `স` [ইউক্লিডীয় অ্যালগরিদম/Euclidean Algorithm](src/algorithms/math/euclidean-algorithm) - গরিষ্ঠ সাধারণ গুণনিয়ক (গ.সা.গু) গণনা করা
+  * `স` [লঘিষ্ঠ সাধারণ গুণনিয়ক/Least Common Multiple](src/algorithms/math/least-common-multiple) লঘিষ্ঠ সাধারণ গুণনিয়ক (ল.সা.গু)
+  * `স` [সিভ অফ ইরাটস্থিনস/Sieve of Eratosthenes](src/algorithms/math/seve-of-eratosthenes) - যে কোনো নির্দিষ্ট সীমা পর্যন্ত সমস্ত মৌলিক সংখ্যা খুঁজে বের করা
+  * `স` [ইজ পাওয়ার অফ টু/Is Power of Two](src/algorithms/math/is-power-of-two) - সংখ্যাটি দুটির সূচক কিনা তা পরীক্ষা করুন (নাইভ এবং বিটওয়াইজ অ্যালগরিদম)
+  * `স` [পাসকেলের ত্রিভুজ/Pascal's Triangle](src/algorithms/math/pascal-triangle)
+  * `স` [জটিল সংখ্যা/Complex Number](src/algorithms/math/complex-number) - জটিল সংখ্যা এবং তাদের সাধারণ হিসাব
+  * `স` [রেডিয়ান এবং ডিগ্রি/Radian & Degree](src/algorithms/math/radian) - রেডিয়ান থেকে ডিগ্রি এবং ডিগ্রি থেকে রেডিয়ান
+  * `স` [ফাস্ট পাওয়ারিং/Fast Powering](src/algorithms/math/fast-powering)
+  * `স` [হর্নারের পদ্ধতি/Horner's method](src/algorithms/math/horner-method) - বহুপদী মূল্যায়ন
+  * `স` [ম্যাট্রিক্স/Matrix](src/algorithms/math/matrix) - ম্যাট্রিক্স এবং সাধারণ ম্যাট্রিক্স অপারেশন (গুণ, ট্রান্সপজিশন ইত্যাদি)
+  * `স` [ইউক্লিডীয় দূরত্ব/Euclidean Distance](src/algorithms/math/euclidean-distance) - দুটি বিন্দু/ভেক্টর/ম্যাট্রিক্সের মধ্যে দূরত্ব
+  * `ক` [পূর্ণসংখ্যা বিভাজন/Integer Partition](src/algorithms/math/integer-partition)
+  * `ক` [বর্গমূল/Square Root](src/algorithms/math/square-root) - নিউটনের পদ্ধতি
+  * `ক` [লিউ হুই π অ্যালগরিদম/Liu Hui π Algorithm](src/algorithms/math/liu-hui) - এন-গনের উপর ভিত্তি করে আনুমানিক π গণনা
+  * `ক` [ডিসক্রিট ফুরিয়ার ট্রান্সফর্ম/Discrete Fourier Transform](src/algorithms/math/fourier-transform) - সময়ের একটি ফাংশনকে (একটি সংকেত) ফ্রিকোয়েন্সিতে পরিবর্তন করা
