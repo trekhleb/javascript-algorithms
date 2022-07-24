@@ -4,7 +4,9 @@
 
 FIFO(先入れ先出し)のキュー
 
-![Queue](https://upload.wikimedia.org/wikipedia/commons/5/52/Data_Queue.svg)
+![Queue](./images/queue.jpeg)
+
+<small><i>Made with <a href="https://okso.app">okso.app</a></i></small>
 
 ## 参考
 

@@ -20,7 +20,9 @@ structure de données linéaire, ou, plus abstraitement, une collection séquent
 
 Représentation d'une file PEPS (premier entré, premier sorti)
 
-![Queue](https://upload.wikimedia.org/wikipedia/commons/5/52/Data_Queue.svg)
+![Queue](./images/queue.jpeg)
+
+<small><i>Made with <a href="https://okso.app">okso.app</a></i></small>
 
 ## Références
 

@@ -26,7 +26,9 @@ sequential collection.
 
 Representation of a FIFO (first in, first out) queue
 
-![Queue](https://upload.wikimedia.org/wikipedia/commons/5/52/Data_Queue.svg)
+![Queue](./images/queue.jpeg)
+
+<small><i>Made with <a href="https://okso.app">okso.app</a></i></small>
 
 ## References
 
