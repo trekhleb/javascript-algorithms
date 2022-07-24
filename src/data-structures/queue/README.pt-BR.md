@@ -22,7 +22,7 @@ Representação de uma file FIFO (first in, first out)
 
 ![Queue](./images/queue.jpeg)
 
-<small><i>Made with <a href="https://okso.app">okso.app</a></i></small>
+*Made with [okso.app](https://okso.app)*
 
 ## References
 

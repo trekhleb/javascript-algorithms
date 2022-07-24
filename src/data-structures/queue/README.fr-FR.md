@@ -22,7 +22,7 @@ Représentation d'une file PEPS (premier entré, premier sorti)
 
 ![Queue](./images/queue.jpeg)
 
-<small><i>Made with <a href="https://okso.app">okso.app</a></i></small>
+*Made with [okso.app](https://okso.app)*
 
 ## Références
 
