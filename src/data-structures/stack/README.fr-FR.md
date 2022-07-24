@@ -20,7 +20,9 @@ autres articles en premier.
 
 Représentation simple de l'éxecution d'une pile avec des opérations empiler (push) et dépiler (pop).
 
-![Stack](https://upload.wikimedia.org/wikipedia/commons/b/b4/Lifo_stack.png)
+![Stack](./images/stack.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Références
 
