@@ -18,7 +18,9 @@ sentinel node, then the list is circularly linked via the sentinel node. It can
 be conceptualized as two singly linked lists formed from the same data items,
 but in opposite sequential orders.
 
-![Doubly Linked List](https://upload.wikimedia.org/wikipedia/commons/5/5e/Doubly-linked-list.svg)
+![Doubly Linked List](./images/doubly-linked-list.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 The two node links allow traversal of the list in either direction. While adding
 or removing a node in a doubly linked list requires changing more links than the
