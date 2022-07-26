@@ -19,7 +19,9 @@ Bağlantılı listelerin bir dezavantajı, erişim süresinin doğrusal olmasıd
 (ve ardışık düzene geçirilmesi zordur). Rastgele erişim gibi daha hızlı erişim
 mümkün değildir. Diziler, bağlantılı listelere kıyasla daha iyi önbellek konumuna sahiptir.
 
-![Bağlantılı Liste](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+![Linked List](./images/linked-list.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Temel İşlemler için Sözde Kod
 
