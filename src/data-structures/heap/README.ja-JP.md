@@ -8,7 +8,7 @@
 
 *最大ヒープ*では、`P`のキーは`C`のキーより大きい、もしくは等しくなります。
 
-![Heap](https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg)
+![Heap](https://user-images.githubusercontent.com/17690376/107872731-50a35100-6ed2-11eb-93bc-0a8a25243e18.jpg)
 
 ヒープの「トップ」のノードには親ノードが存在せず、ルートノードと呼ばれます。
 

@@ -8,7 +8,7 @@ Dans un *tas minimal* (en anglais *min heap*), si `P` est un nœud parent de `C`
 
 Dans un *tas maximal* (en anglais *max heap*), la clé de `P` est supérieure ou égale à la clé de `C`.
 
-![Heap](https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg)
+![Heap](https://user-images.githubusercontent.com/17690376/107872731-50a35100-6ed2-11eb-93bc-0a8a25243e18.jpg)
 
 Le nœud au «sommet» du tas sans parents est appelé le nœud racine.
 
