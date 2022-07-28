@@ -52,6 +52,20 @@ const validate2D = (m) => {
 };
 
 /**
+ * Checks if matrix is 2D squared
+ *
+ * @param {Matrix} m
+ * @throws {Error}
+ */
+const validate2DSquare = (m) => {
+  validate2D(m);
+  const mShape = shape(m);
+  if (mShape[0] !== mShape[1]) {
+    throw new Error('Matrix is not 2D squared');
+  }
+};
+
+/**
  * Validates that matrices are of the same shape.
  *
  * @param {Matrix} a
@@ -115,6 +129,20 @@ export const generate = (mShape, fill) => {
  */
 export const zeros = (mShape) => {
   return generate(mShape, () => 0);
+};
+
+/**
+ * Generates a square identity matrix of specified shape.
+ *
+ * @param {Shape} mShape - shape of the matrix
+ * @returns {Matrix}
+ */
+
+export const identity = (mShape) => {
+  const M = generate([mShape, mShape], () => 0);
+  for (let i = 0; i < mShape; i += 1) M[i][i] = 1;
+
+  return M;
 };
 
 /**
@@ -306,4 +334,34 @@ export const sub = (a, b) => {
   });
 
   return result;
+};
+
+/**
+ * Computes the inverse of square matrix
+ *
+ * @param {Matrix} m
+ * @return {Matrix}
+ */
+
+/**
+ * Power a square matrix by a number n
+ *
+ * @param {Matrix} m
+ * @param {number} n
+ * @return {Matrix}
+ */
+export const power = (m, n) => {
+  if (n < 0) throw new Error('Negative exponent not supported');
+  validate2DSquare(m);
+  let e = n;
+  let base = m;
+  let P = identity(m.length);
+  while (e !== 0) {
+    if (e % 2 === 1) {
+      P = dot(P, base);
+    }
+    base = dot(base, base);
+    e >>= 1;
+  }
+  return P;
 };
