@@ -17,12 +17,16 @@ In a *min heap*, if `P` is a parent node of `C`, then the
 key (the value) of `P` is less than or equal to the
 key of `C`.
 
-![MinHeap](https://upload.wikimedia.org/wikipedia/commons/6/69/Min-heap.png)
+![MinHeap](./images/min-heap.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 In a *max heap*, the key of `P` is greater than or equal
 to the key of `C`
 
-![Heap](https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg)
+![MaxHeap](./images/max-heap.jpeg)
+
+![Array Representation](./images/array-representation.jpeg)
 
 The node at the "top" of the heap with no parents is
 called the root node.
