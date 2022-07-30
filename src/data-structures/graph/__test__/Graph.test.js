@@ -305,6 +305,35 @@ describe('Graph', () => {
     expect(graph.getNeighbors(vertexD)[0].getKey()).toBe(vertexC.getKey());
   });
 
+  it('should be possible to reverse directed graph with cycle of lenght two', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeBA = new GraphEdge(vertexB, vertexA);
+
+    const graph = new Graph(true);
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBA);
+
+    expect(graph.toString()).toBe('A,B');
+    expect(graph.getAllEdges().length).toBe(2);
+    expect(graph.getNeighbors(vertexA).length).toBe(1);
+    expect(graph.getNeighbors(vertexA)[0].getKey()).toBe(vertexB.getKey());
+    expect(graph.getNeighbors(vertexB).length).toBe(1);
+    expect(graph.getNeighbors(vertexB)[0].getKey()).toBe(vertexA.getKey());
+
+    graph.reverse();
+
+    expect(graph.toString()).toBe('A,B');
+    expect(graph.getAllEdges().length).toBe(2);
+    expect(graph.getNeighbors(vertexA).length).toBe(1);
+    expect(graph.getNeighbors(vertexA)[0].getKey()).toBe(vertexB.getKey());
+    expect(graph.getNeighbors(vertexB).length).toBe(1);
+    expect(graph.getNeighbors(vertexB)[0].getKey()).toBe(vertexA.getKey());
+  });
+
   it('should return vertices indices', () => {
     const vertexA = new GraphVertex('A');
     const vertexB = new GraphVertex('B');
