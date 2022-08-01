@@ -7,7 +7,9 @@
 
 队列中元素先进先出 FIFO (first in, first out)的示意
 
-![Queue](https://upload.wikimedia.org/wikipedia/commons/5/52/Data_Queue.svg)
+![Queue](./images/queue.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## 参考
 

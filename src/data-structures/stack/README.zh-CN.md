@@ -13,7 +13,9 @@
 
 栈的 push 和 pop 操作的示意
 
-![Stack](https://upload.wikimedia.org/wikipedia/commons/b/b4/Lifo_stack.png)
+![Stack](./images/stack.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## 参考
 

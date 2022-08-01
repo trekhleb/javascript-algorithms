@@ -11,7 +11,9 @@ somente um nó sentinela, então a lista é ligada circularmente através do nó
 sentinela. Ela pode ser conceitualizada como duas listas individualmente ligadas
 e formadas a partir dos mesmos itens, mas em ordem sequencial opostas.
 
-![Doubly Linked List](https://upload.wikimedia.org/wikipedia/commons/5/5e/Doubly-linked-list.svg)
+![Doubly Linked List](./images/doubly-linked-list.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 Os dois nós ligados permitem a travessia da lista em qualquer direção.
 Enquanto adicionar ou remover um nó de uma lista duplamente vinculada requer
@@ -41,7 +43,7 @@ Add(value)
   end if
 end Add
 ```
-    
+
 ### Deletar
 
 ```text
@@ -78,7 +80,7 @@ Remove(head, value)
   return false
 end Remove
 ```
-    
+
 ### Travessia reversa
 
 ```text
@@ -92,7 +94,7 @@ ReverseTraversal(tail)
   end while
 end Reverse Traversal
 ```
-    
+
 ## Complexidades
 
 ## Complexidade de Tempo

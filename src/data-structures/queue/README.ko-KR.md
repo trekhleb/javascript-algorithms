@@ -13,7 +13,9 @@ _Read this in other languages:_
 
 선입선출 자료 구조인 큐를 나타내면 다음과 같습니다.
 
-![Queue](https://upload.wikimedia.org/wikipedia/commons/5/52/Data_Queue.svg)
+![Queue](./images/queue.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## 참고
 
