@@ -15,13 +15,13 @@
 
 Метод цепочек подразумевает хранение значений, соответствующих одному и тому же индексу в виде связного списка(цепочки).
 
-![Хеш цепочки](https://upload.wikimedia.org/wikipedia/commons/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg)
-
-Метод открытой адресации помещает значение, для которого получен дублирующий индекс, в первую свободную ячейку.
-
 ![Hash Collision](./images/collision-resolution.jpeg)
 
 *Made with [okso.app](https://okso.app)*
+
+Метод открытой адресации помещает значение, для которого получен дублирующий индекс, в первую свободную ячейку.
+
+![Хеш открытая адресация](https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Hash_table_5_0_1_1_1_1_0_SP.svg/380px-Hash_table_5_0_1_1_1_1_0_SP.svg.png)
 
 ## Ссылки
 
