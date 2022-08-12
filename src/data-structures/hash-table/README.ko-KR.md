@@ -17,7 +17,9 @@ _Read this in other languages:_
 
 다음은 분리 연결법을 통해 해시 충돌을 해결한 예시입니다.
 
-![Hash Collision](https://upload.wikimedia.org/wikipedia/commons/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg)
+![Hash Collision](./images/collision-resolution.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## 참고
 

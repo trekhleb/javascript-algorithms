@@ -24,11 +24,11 @@ accommodated in some way.
 
 ![Hash Table](./images/hash-table.jpeg)
 
-*Made with [okso.app](https://okso.app)*
-
 Hash collision resolved by separate chaining.
 
-![Hash Collision](https://upload.wikimedia.org/wikipedia/commons/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg)
+![Hash Collision](./images/collision-resolution.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## References
 

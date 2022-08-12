@@ -19,11 +19,11 @@ accommodées d'une manière ou d'une autre.
 
 ![Hash Table](./images/hash-table.jpeg)
 
-*Made with [okso.app](https://okso.app)*
-
 Collision de hachage résolue par chaînage séparé.
 
-![Hash Collision](https://upload.wikimedia.org/wikipedia/commons/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg)
+![Hash Collision](./images/collision-resolution.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Références
 
