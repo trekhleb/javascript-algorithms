@@ -22,7 +22,9 @@ Uma árvore não ordenada simples; neste diagrama, o nó rotulado como `7`
 possui dois filhos, rotulados como `2` e `6`, e um pai, rotulado como `2`.
 O nó raíz, no topo, não possui nenhum pai.
 
-![Tree](https://upload.wikimedia.org/wikipedia/commons/f/f7/Binary_tree.svg)
+![Tree](./images/tree.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Referências
 

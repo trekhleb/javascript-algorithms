@@ -18,7 +18,9 @@ vários outros itens primeiro.
 Representação simples de um tempo de execução de pilha com operações
 _push_ e _pop_.
 
-![Stack](https://upload.wikimedia.org/wikipedia/commons/b/b4/Lifo_stack.png)
+![Stack](./images/stack.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Referências
 
