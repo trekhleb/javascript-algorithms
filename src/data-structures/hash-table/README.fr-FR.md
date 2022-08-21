@@ -17,11 +17,13 @@ hachage où la fonction de hachage génère le même index
 pour plusieurs clés. De telles collisions doivent être
 accommodées d'une manière ou d'une autre.
 
-![Hash Table](https://upload.wikimedia.org/wikipedia/commons/7/7d/Hash_table_3_1_1_0_1_0_0_SP.svg)
+![Hash Table](./images/hash-table.jpeg)
 
 Collision de hachage résolue par chaînage séparé.
 
-![Hash Collision](https://upload.wikimedia.org/wikipedia/commons/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg)
+![Hash Collision](./images/collision-resolution.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Références
 

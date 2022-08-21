@@ -22,11 +22,13 @@ collisions where the hash function generates the same
 index for more than one key. Such collisions must be
 accommodated in some way.
 
-![Hash Table](https://upload.wikimedia.org/wikipedia/commons/7/7d/Hash_table_3_1_1_0_1_0_0_SP.svg)
+![Hash Table](./images/hash-table.jpeg)
 
 Hash collision resolved by separate chaining.
 
-![Hash Collision](https://upload.wikimedia.org/wikipedia/commons/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg)
+![Hash Collision](./images/collision-resolution.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## References
 
