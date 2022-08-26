@@ -1,7 +1,7 @@
 # 二叉搜索树
 
 _Read this in other languages:_
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),[_English_](README.md)
 
 在计算机科学中, **二叉搜索树** (BST), 也称为有序二叉树或排序二叉树, 是一种特殊的容器:
 在内存中存储“元素”的数据结构（如数字，名称等）。二叉搜索树可以快速查找，添加和删除元素，也可用于
