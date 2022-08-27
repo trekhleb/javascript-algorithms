@@ -17,7 +17,9 @@ para um grafo direcionado.
 Os vértices podem fazer parte a estrutura do grafo, ou podem
 ser entidades externas representadas por índices inteiros ou referências.
 
-![Graph](https://www.tutorialspoint.com/data_structures_algorithms/images/graph.jpg)
+![Graph](./images/graph.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Referências
 
