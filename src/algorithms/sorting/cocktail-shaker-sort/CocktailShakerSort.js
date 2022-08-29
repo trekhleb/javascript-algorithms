@@ -29,7 +29,7 @@ export default class CocktailShakerSort extends Sort {
       end --;
 
       // if nothing swapped, then array is sorted.
-      if (swapped == false) 
+      if (swapped === false) 
         break;
 
       // reset the swapped flag so that it can be used in the next stage
