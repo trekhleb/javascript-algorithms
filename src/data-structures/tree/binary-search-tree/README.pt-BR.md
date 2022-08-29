@@ -26,8 +26,9 @@ Uma pesquisa de árvore binária de tamanho 9 e profundidade 3, com valor 8
 na raíz.
 As folhas não foram desenhadas.
 
+![Trie](./images/binary-search-tree.jpg)
 
-![Binary Search Tree](https://upload.wikimedia.org/wikipedia/commons/d/da/Binary_search_tree.svg)
+*Made with [okso.app](https://okso.app)*
 
 ## Pseudocódigo para Operações Básicas
 
@@ -44,7 +45,7 @@ insert(value)
   end if
 end insert
 ```
-    
+
 ```text
 insertNode(current, value)
   Pre: current is the node to start from
@@ -83,8 +84,8 @@ contains(root, value)
   end if
 end contains
 ```
-    
-     
+
+
 ### Remoção
 
 ```text
@@ -185,7 +186,7 @@ findNode(root, value)
   end if
 end findNode
 ```
-    
+
 ### Encontrar Mínimo
 
 ```text
@@ -199,7 +200,7 @@ findMin(root)
   findMin(root.left)
 end findMin
 ```
-    
+
 ### Encontrar Máximo
 
 ```text
@@ -213,7 +214,7 @@ findMax(root)
   findMax(root.right)
 end findMax
 ```
-    
+
 ### Traversal
 
 #### Na Ordem Traversal (InOrder Traversal)
@@ -243,7 +244,7 @@ preorder(root)
   end if
 end preorder
 ```
-   
+
 #### Pós Ordem Traversal (PostOrder Traversal)
 
 ```text
@@ -257,7 +258,7 @@ postorder(root)
   end if
 end postorder
 ```
-     
+
 ## Complexidades
 
 ### Complexidade de Tempo
