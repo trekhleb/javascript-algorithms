@@ -11,11 +11,12 @@ export default class CocktailShakerSort extends Sort {
     let end = array.length;
 
     while (swapped) {
-      // reset the swapped flag on entering the loop, because it might be true from a previous iteration.
+      // Reset the swapped flag on entering the loop,
+      // because it might be true from a previous iteration.
       swapped = false;
 
-      // loop forward same as the bubble sort
-      for (let i = start; i < end - 1; i++) {
+      // Loop forward same as the bubble sort
+      for (let i = start; i < end - 1; i += 1) {
         // Call visiting callback.
         this.callbacks.visitingCallback(array[i]);
 
@@ -25,18 +26,20 @@ export default class CocktailShakerSort extends Sort {
         }
       }
 
-      // move the end point backward by one, because the item at the end point is already in its correct position.
-      end --;
+      // Move the end point backward by one,
+      // because the item at the end point is already in its correct position.
+      end -= 1;
 
-      // if nothing swapped, then array is sorted.
-      if (swapped === false) 
+      // If nothing swapped, then array is sorted.
+      if (swapped === false) {
         break;
-
-      // reset the swapped flag so that it can be used in the next stage
+      }
+      
+      // Reset the swapped flag so that it can be used in the next stage
       swapped = false;
 
-      // loop backward, doing the same comparison as in the previous stage
-      for (let i = end - 1; i >= start; i--) {
+      // Loop backward, doing the same comparison as in the previous stage
+      for (let i = end - 1; i >= start; i -= 1) {
         // Call visiting callback.
         this.callbacks.visitingCallback(array[i]);
 
@@ -46,8 +49,9 @@ export default class CocktailShakerSort extends Sort {
         }
       }
 
-      // move the start point forward by one, because the item at the start point is already in its correct position.
-      start ++;
+      // Move the start point forward by one,
+      // because the item at the start point is already in its correct position.
+      start += 1;
       
     }
     return array;
