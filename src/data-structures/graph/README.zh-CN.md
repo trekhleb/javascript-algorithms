@@ -11,9 +11,9 @@
 
 如果顶点对之间的边是有权重的,该图可称为加权图。
 
+![Graph](./images/graph.jpeg)
 
-
-![Graph](https://www.tutorialspoint.com/data_structures_algorithms/images/graph.jpg)
+*Made with [okso.app](https://okso.app)*
 
 ## 参考
 

@@ -13,11 +13,13 @@ imperfeita, pela qual poderá causar colisões de hashes onde a função de hash
 gera o mesmo índice para mais de uma chave.Tais colisões devem ser
 acomodados de alguma forma.
 
-![Hash Table](https://upload.wikimedia.org/wikipedia/commons/7/7d/Hash_table_3_1_1_0_1_0_0_SP.svg)
+![Hash Table](./images/hash-table.jpeg)
 
 Colisão de hash resolvida por encadeamento separado.
 
-![Hash Collision](https://upload.wikimedia.org/wikipedia/commons/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg)
+![Hash Collision](./images/collision-resolution.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Referências
 
