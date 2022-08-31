@@ -21,17 +21,15 @@ function binarySearch(sortedArray, startIndex, endIndex, seekElement, comparator
     }
     // If element is smaller than middleIndex, then it can only be  present n left subarray
     if (comparator.greaterThan(sortedArray[middleIndex], seekElement)) {
-      return binarySearch(sortedArray, startIndex, middleIndex - 1, seekElement, comparatorCallback);
-    } else {
-      // Else the element can only be present in right subarray
-      return binarySearch(sortedArray, middleIndex + 1, endIndex, seekElement, comparatorCallback);
+      return binarySearch(sortedArray, startIndex, middleIndex-1, seekElement, comparatorCallback);
     }
-    
+    // Else the element can only be present in right subarray
+    return binarySearch(sortedArray, middleIndex + 1, endIndex, seekElement, comparatorCallback);
+    }
   }
   // We reach here when element is not present in array
   return -1;
 }
-
 /**
  * Exponential search implementation.
  *
@@ -40,17 +38,14 @@ function binarySearch(sortedArray, startIndex, endIndex, seekElement, comparator
  * @param {function(a, b)} [comparatorCallback]
  * @return {number}
  */
-
 export default function exponentialSearch(sortedArray, seekElement, comparatorCallback) {
   const comparator = new Comparator(comparatorCallback);
-  const length = sortedArray.length;
-       
+  const length = sortedArray.length;  
   // If element is present at first location itself
-  if(sortedArray.length !== 0) {
+  if (sortedArray.length !== 0) {
     if (comparator.equal(sortedArray[0], seekElement))
       return 0;
     }
-   
     // Find range for binary search by repeated doubling
     let range = 1;
     while (range < length && comparator.lessThanOrEqual(sortedArray[range], seekElement)) {
