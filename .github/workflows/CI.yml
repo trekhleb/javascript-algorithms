@@ -1,4 +1,4 @@
-name: CI
+name: javascript CI
 
 on:
   push:
