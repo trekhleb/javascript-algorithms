@@ -3,9 +3,10 @@
  * Finds the factor of a number.
  *
  */
+
 const prompt = require('prompt-sync')({ sigint: true });
 
-dafault export function printFactors(x) {
+export default function printFactors(x) {
   console.log('The factors of', x, 'are:');
 
   //  looping 
@@ -16,6 +17,6 @@ dafault export function printFactors(x) {
   }
 }
 //  get the input from the user
-const num = prompt("Enter an positive integer: ");
+const number = prompt("Enter an positive integer: ");
 
-printFactors(num);
+printFactors(number);
