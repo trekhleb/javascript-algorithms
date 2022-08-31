@@ -12,3 +12,4 @@ describe('factors', () => {
     expect(factors(54)).toEqual([1, 2, 3, 6, 9, 18, 27, 54]);
     expect(factors(100)).toEqual([1, 2, 4, 5, 10, 20, 25, 50, 100]);
   });
+});
