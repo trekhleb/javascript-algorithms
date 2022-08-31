@@ -1,35 +1,31 @@
-name: javascript CI
+# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ "master" ]
   pull_request:
-    branches: [ master ]
+    branches: [ "master" ]
 
 jobs:
-  test:
+  build:
+
     runs-on: ubuntu-latest
+
     strategy:
       matrix:
-        node-version: [ 14.x ]
+        node-version: [14.x]
+        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Install dependencies
-        run: npm i
-
-      - name: Run linting
-        run: npm run lint
-
-      - name: Run tests
-        run: npm run coverage
-
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
+    - uses: actions/checkout@v3
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build --if-present
+    - run: npm test
