@@ -25,7 +25,6 @@ function binarySearch(sortedArray, startIndex, endIndex, seekElement, comparator
     }
     // Else the element can only be present in right subarray
     return binarySearch(sortedArray, middleIndex + 1, endIndex, seekElement, comparatorCallback);
-    }
   }
   // We reach here when element is not present in array
   return -1;
