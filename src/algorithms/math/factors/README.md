@@ -12,5 +12,7 @@ There are two methods of finding factors: multiplication and division. In additi
 ## References
 
 https://en.wikipedia.org/wiki/Factor#Mathematics
+
 https://www.storyofmathematics.com/factors-multiples/
+
 https://www.splashlearn.com/math-vocabulary/multiplication/factor
