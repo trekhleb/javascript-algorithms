@@ -48,7 +48,7 @@ export default function exponentialSearch(sortedArray, seekElement, comparatorCa
     // Find range for binary search by repeated doubling
     let range = 1;
     while (range < length && comparator.lessThanOrEqual(sortedArray[range], seekElement)) {
-      range = range * 2;
+      range *= 2;
     }
     // Call binary search for the found range.
     return binarySearch(sortedArray, range/2, Math.min(range, length - 1), seekElement, comparatorCallback);
