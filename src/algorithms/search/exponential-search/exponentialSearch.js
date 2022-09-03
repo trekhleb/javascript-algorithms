@@ -43,7 +43,7 @@ export default function exponentialSearch(sortedArray, seekElement, comparatorCa
   // If element is present at first location itself
   if (sortedArray.length !== 0) {
     if (comparator.equal(sortedArray[0], seekElement))
-      return 0;
+    }
   }
   // Find range for binary search by repeated doubling
     let range = 1;
