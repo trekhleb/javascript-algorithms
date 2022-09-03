@@ -50,6 +50,6 @@ export default function exponentialSearch(sortedArray, seekElement, comparatorCa
     while (range < length && comparator.lessThanOrEqual(sortedArray[range], seekElement)) {
       range *= 2;
     }
-    // Call binary search for the found range.
+  // Call binary search for the found range.
   return binarySearch(sortedArray, range/2, Math.min(range, length - 1), seekElement, comparatorCallback);
 }
