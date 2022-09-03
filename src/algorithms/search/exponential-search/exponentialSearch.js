@@ -21,7 +21,7 @@ function binarySearch(sortedArray, startIndex, endIndex, seekElement, comparator
     }
     // If element is smaller than middleIndex, then it can only be  present n left subarray
     if (comparator.greaterThan(sortedArray[middleIndex], seekElement)) {
-      return binarySearch(sortedArray, startIndex, middleIndex-1, seekElement, comparatorCallback);
+      return binarySearch(sortedArray, startIndex, middleIndex - 1, seekElement, comparatorCallback);
     }
     // Else the element can only be present in right subarray
     return binarySearch(sortedArray, middleIndex + 1, endIndex, seekElement, comparatorCallback);
