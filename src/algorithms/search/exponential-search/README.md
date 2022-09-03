@@ -13,4 +13,4 @@ can even out-perform more traditional searches for bounded lists, such as binary
 
 ## References
 
-- [Wikipedia](https://en.wikipedia.org/wiki/Exponential_search)
+-[Wikipedia](https://en.wikipedia.org/wiki/Exponential_search)
