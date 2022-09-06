@@ -1,6 +1,6 @@
-# Linked List
+# السجل (Linked List)
 
-_Read this in other languages:_
+_اقرأ بغير لغات :_
 [_简体中文_](README.zh-CN.md),
 [_Русский_](README.ru-RU.md),
 [_日本語_](README.ja-JP.md),
@@ -8,32 +8,27 @@ _Read this in other languages:_
 [_한국어_](README.ko-KR.md),
 [_Español_](README.es-ES.md),
 [_Turkish_](README.tr-TR.md),
-[_Arabic_](README.ar-AR.md)
+[_English_](README.md)
 
-In computer science, a **linked list** is a linear collection
-of data elements, in which linear order is not given by
-their physical placement in memory. Instead, each
-element points to the next. It is a data structure
-consisting of a group of nodes which together represent
-a sequence. Under the simplest form, each node is
-composed of data and a reference (in other words,
-a link) to the next node in the sequence. This structure
-allows for efficient insertion or removal of elements
-from any position in the sequence during iteration.
-More complex variants add additional links, allowing
-efficient insertion or removal from arbitrary element
-references. A drawback of linked lists is that access
-time is linear (and difficult to pipeline). Faster
-access, such as random access, is not feasible. Arrays
-have better cache locality as compared to linked lists.
+في علوم الحاسوب السجل هو بنية معطيات خطية
+كلمة خطية هنا لا تعني أن العناصر يخزنون
+في الذاكرة بجانب بعضهم البعض بل تعني أن
+كل عنصر من العناصر يشير إلى العنصرالذي
+يليه
+أنها بنية معطيات مؤلفة من مجموعة من العقد
+مترابطة فيما بينها
+في أبسط الحالات كل عقدة تحتوي على بيانات
+و مؤشر يشير إلى العقدة التالية
+هذه البنية تسمح بإضافة و حذف عناصر بفعالية
+في أي مكان في السجل
 
-![Linked List](./images/linked-list.jpeg)
+![السجل](./images/linked-list.jpeg)
 
 _Made with [okso.app](https://okso.app)_
 
-## Pseudocode for Basic Operations
+## شرح مبسط للعمليات الرئيسية
 
-### Insert
+### الإضافة
 
 ```text
 Add(value)
@@ -63,7 +58,7 @@ Prepend(value)
 end Prepend
 ```
 
-### Search
+### البحث
 
 ```text
 Contains(head, value)
@@ -81,7 +76,7 @@ Contains(head, value)
 end Contains
 ```
 
-### Delete
+### الحذف
 
 ```text
 Remove(head, value)
@@ -117,7 +112,7 @@ Remove(head, value)
 end Remove
 ```
 
-### Traverse
+### التجوال
 
 ```text
 Traverse(head)
@@ -131,7 +126,7 @@ Traverse(head)
 end Traverse
 ```
 
-### Traverse in Reverse
+### التجوال العكسي
 
 ```text
 ReverseTraversal(head, tail)
@@ -152,19 +147,19 @@ ReverseTraversal(head, tail)
 end ReverseTraversal
 ```
 
-## Complexities
+## التعقيد
 
-### Time Complexity
+### التعقيد الزمني
 
-| Access | Search | Insertion | Deletion |
-| :----: | :----: | :-------: | :------: |
-|  O(n)  |  O(n)  |   O(1)    |   O(n)   |
+| البحث | الوصول | الإضافة | الحذف |
+| :---: | :----: | :-----: | :---: |
+| O(n)  |  O(n)  |  O(1)   | O(n)  |
 
-### Space Complexity
+### تعقيد المساحة
 
 O(n)
 
-## References
+## المراجع
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
 - [YouTube](https://www.youtube.com/watch?v=njTh_OwMljA&index=2&t=1s&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

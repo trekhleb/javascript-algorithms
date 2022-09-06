@@ -7,6 +7,7 @@ _Bunu diğer dillerde okuyun:_
 [_Português_](README.pt-BR.md),
 [_한국어_](README.ko-KR.md),
 [_Español_](README.es-ES.md),
+[_Arabic_](README.ar-AR.md)
 
 Bilgisayar bilimlerinde, **Bağlantılı liste**, her biri hem gerçek verileri
 hem de listedeki bir sonraki düğümün bir bağlantısını içeren dinamik bir
@@ -21,7 +22,7 @@ mümkün değildir. Diziler, bağlantılı listelere kıyasla daha iyi önbellek
 
 ![Linked List](./images/linked-list.jpeg)
 
-*Made with [okso.app](https://okso.app)*
+_Made with [okso.app](https://okso.app)_
 
 ## Temel İşlemler için Sözde Kod
 
@@ -147,9 +148,9 @@ end ReverseTraversal
 
 ### Zaman Karmaşıklığı
 
-| Erişim    | Arama     | Ekleme    | Silme     |
-| :-------: | :-------: | :-------: | :-------: |
-| O(n)      | O(n)      | O(1)      | O(n)      |
+| Erişim | Arama | Ekleme | Silme |
+| :----: | :---: | :----: | :---: |
+|  O(n)  | O(n)  |  O(1)  | O(n)  |
 
 ### Uzay Karmaşıklığı
 
