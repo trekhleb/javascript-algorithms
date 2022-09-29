@@ -59,12 +59,12 @@ export default function shortestCommonSupersequence(set1, set2) {
 
   // Attach set1 leftovers.
   if (setIndex1 < set1.length) {
-    supersequence = supersequence.concat(set1.slice(setIndex1));
+    supersequence = supersequence.concat(...set1.slice(setIndex1));
   }
 
   // Attach set2 leftovers.
   if (setIndex2 < set2.length) {
-    supersequence = supersequence.concat(set2.slice(setIndex2));
+    supersequence = supersequence.concat(...set2.slice(setIndex2));
   }
 
   return supersequence;
