@@ -249,7 +249,7 @@ Ordem de crescimento dos algoritmos especificados em notação Big O.
 
 ![Notação Big-O](./assets/big-o-graph.png)
 
-Fonte: [Notação Big-O dicas](http://bigocheatsheet.com/).
+Fonte: [Dicas de Notação Big-O](http://bigocheatsheet.com/).
 
 Abaixo está a lista de algumas das notações Big O mais usadas e suas comparações de desempenho em relação aos diferentes tamanhos dos dados de entrada.
 
@@ -278,7 +278,7 @@ Abaixo está a lista de algumas das notações Big O mais usadas e suas compara�
 | **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)     |             |
 | **Bloom Filter**        | -         | 1         | 1         | -          | Falsos positivos são possíveis durante a pesquisa |
 
-### Array Sorting Algorithms Complexity
+### Complexidade de algoritmos de ordenação de arrays
 
 | Nome                  | Melhor          | Média               | Pior                | Mémoria   | Estável   | Comentários |
 | --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :--------   |
