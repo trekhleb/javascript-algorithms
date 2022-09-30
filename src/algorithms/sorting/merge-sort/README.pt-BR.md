@@ -1,7 +1,7 @@
 # Merge Sort
 
 _Leia isso em outros idiomas:_
-[_한국어_](README.ko-KR.md)
+[_한국어_](README.ko-KR.md),
 [_English_](README.md)
 
 Em ciência da computação, merge sort (também comumente escrito
