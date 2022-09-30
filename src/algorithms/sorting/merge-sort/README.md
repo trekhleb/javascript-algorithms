@@ -2,6 +2,7 @@
 
 _Read this in other languages:_
 [_한국어_](README.ko-KR.md)
+[_Português_](README.pt-BR.md)
 
 In computer science, merge sort (also commonly spelled
 mergesort) is an efficient, general-purpose,
