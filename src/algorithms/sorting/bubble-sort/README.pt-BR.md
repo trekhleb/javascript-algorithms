@@ -4,13 +4,13 @@ O bubble sort, ou ordenação por flutuação (literalmente "por bolha"), é um 
 
 ![Algorithm Visualization](https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif)
 
-## Complexity
+## Complexidade
 
-| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
+| Nome                  | Melhor            | Média             | Pior               | Memória    | Estável    | Comentários  |
 | --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
 | **Bubble sort**       | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
 
-## References
+## Referências
 
 - [Wikipedia](https://pt.wikipedia.org/wiki/Bubble_sort)
 - [YouTube](https://www.youtube.com/watch?v=6Gv8vg0kcHc&index=27&t=0s&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
