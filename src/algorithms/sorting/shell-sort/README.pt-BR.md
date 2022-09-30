@@ -1,6 +1,6 @@
 # Shellsort
 
-_Read this in other languages:_
+_Leia isso em outros idiomas:_
 [_English_](README.md).
 
 Shellsort, também conhecido como Shell sort ou método de Shell,
