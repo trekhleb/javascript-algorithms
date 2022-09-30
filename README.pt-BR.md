@@ -111,7 +111,7 @@ um conjunto de regras que define precisamente uma sequência de operações.
   * `B` [Shellsort](src/algorithms/sorting/shell-sort)
   * `B` [Counting Sort](src/algorithms/sorting/counting-sort)
   * `B` [Radix Sort](src/algorithms/sorting/radix-sort)
-* **Arvóres**
+* **Árvores**
   * `B` [Busca em Profundidade (Depth-First Search)](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [Busca em Largura (Breadth-First Search)](src/algorithms/tree/breadth-first-search) (BFS)
 * **Grafos**
