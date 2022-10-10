@@ -3,7 +3,7 @@
 O **bloom filter** é uma estrutura de dados probabilística
 espaço-eficiente designada para testar se um elemento está
 ou não presente em um conjunto de dados. Foi projetado para ser
-incrivelmente rápido e utilizar o mínimo de memória ao 
+incrivelmente rápida e utilizar o mínimo de memória ao 
 potencial custo de um falso-positivo. Correspondências 
 _falsas positivas_ são possíveis, contudo _falsos negativos_ 
 não são - em outras palavras, a consulta retorna 
@@ -12,7 +12,7 @@ não são - em outras palavras, a consulta retorna
 Bloom propôs a técnica para aplicações onde a quantidade 
 de entrada de dados exigiria uma alocação de memória
 impraticavelmente grande se as "convencionais" técnicas
-error-free hashing fossem aplicado.
+error-free hashing fossem aplicadas.
 
 ## Descrição do algoritmo
 

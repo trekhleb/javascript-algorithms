@@ -1,9 +1,9 @@
-# Trie
+# Árvore de Prefixos (Trie)
 
 Na ciência da computação, uma **trie**, também chamada de árvore digital (digital tree)
 e algumas vezes de _radix tree_ ou _prefix tree_ (tendo em vista que eles
-podem ser pesquisados por prefixos), é um tipo de árvore de pesquisa, uma
-uma estrutura de dados de árvore ordenada que é usado para armazenar um
+podem ser pesquisados por prefixos), é um tipo de árvore de pesquisa, uma 
+estrutura de dados de árvore ordenada que é usado para armazenar um
 conjunto dinâmico ou matriz associativa onde as chaves são geralmente _strings_.
 Ao contrário de uma árvore de pesquisa binária (binary search tree),
 nenhum nó na árvore armazena a chave associada a esse nó; em vez disso,
