@@ -2,7 +2,8 @@
 
 _Read this in other languages:_
 [français](README.fr-FR.md),
-[english](README.md).
+[english](README.md),
+[ქართული](README.ka-GE.md).
 
 在数学中，斐波那契数是以下整数序列（称为斐波那契数列）中的数字，其特征在于前两个数字之后的每个数字都是前两个数字的和：
 
