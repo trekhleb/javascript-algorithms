@@ -24,7 +24,9 @@ acceso es lineal (y difícil de canalizar). Un acceso
 más rápido, como un acceso aleatorio, no es factible. Los arreglos
 tienen una mejor localización en caché comparados con las listas enlazadas.
 
-![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+![Linked List](./images/linked-list.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Pseudocódigo para operaciones básicas
 

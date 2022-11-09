@@ -16,7 +16,9 @@ _Read this in other languages:_
 
 다음은 push와 pop 연산을 실행하는 간단한 스택의 실행입니다.
 
-![Stack](https://upload.wikimedia.org/wikipedia/commons/b/b4/Lifo_stack.png)
+![Stack](./images/stack.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## 참조
 
