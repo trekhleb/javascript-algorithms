@@ -2,38 +2,39 @@
 
 _Read this in other languages:_
 [_Русский_](README.ru-RU.md),
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),
+[_Українська_](README.uk-UA.md)
 
-A **bloom filter** is a space-efficient probabilistic 
-data structure designed to test whether an element 
-is present in a set. It is designed to be blazingly 
+A **bloom filter** is a space-efficient probabilistic
+data structure designed to test whether an element
+is present in a set. It is designed to be blazingly
 fast and use minimal memory at the cost of potential
 false positives. False positive matches are possible,
 but false negatives are not – in other words, a query
 returns either "possibly in set" or "definitely not in set".
 
-Bloom proposed the technique for applications where the 
+Bloom proposed the technique for applications where the
 amount of source data would require an impractically large
-amount of memory if "conventional" error-free hashing 
+amount of memory if "conventional" error-free hashing
 techniques were applied.
 
 ## Algorithm description
 
-An empty Bloom filter is a bit array of `m` bits, all 
+An empty Bloom filter is a bit array of `m` bits, all
 set to `0`. There must also be `k` different hash functions
-defined, each of which maps or hashes some set element to 
-one of the `m` array positions, generating a uniform random 
-distribution. Typically, `k` is a constant, much smaller 
-than `m`, which is proportional to the number of elements 
-to be added; the precise choice of `k` and the constant of 
-proportionality of `m` are determined by the intended 
+defined, each of which maps or hashes some set element to
+one of the `m` array positions, generating a uniform random
+distribution. Typically, `k` is a constant, much smaller
+than `m`, which is proportional to the number of elements
+to be added; the precise choice of `k` and the constant of
+proportionality of `m` are determined by the intended
 false positive rate of the filter.
 
-Here is an example of a Bloom filter, representing the 
-set `{x, y, z}`. The colored arrows show the positions 
-in the bit array that each set element is mapped to. The 
-element `w` is not in the set `{x, y, z}`, because it 
-hashes to one bit-array position containing `0`. For 
+Here is an example of a Bloom filter, representing the
+set `{x, y, z}`. The colored arrows show the positions
+in the bit array that each set element is mapped to. The
+element `w` is not in the set `{x, y, z}`, because it
+hashes to one bit-array position containing `0`. For
 this figure, `m = 18` and `k = 3`.
 
 ![Bloom Filter](https://upload.wikimedia.org/wikipedia/commons/a/ac/Bloom_filter.svg)
