@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
-تحتوي هذا مقالة على أمثلة عديدة تستند إلى الخوارزميات الشائعة وهياكل البيانات في الجافا سكريبت.
+تحتوي هذه المقالة على أمثلة عديدة تستند إلى الخوارزميات الشائعة وهياكل البيانات في الجافا سكريبت.
 
 كل خوارزمية وهياكل البيانات لها برنامج README منفصل خاص بها
 مع التفسيرات والروابط ذات الصلة لمزيد من القراءة (بما في ذلك تلك
