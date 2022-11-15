@@ -1,15 +1,19 @@
 # Quicksort
 
-Quicksort é um algoritmo de dividir para conquistar é um algoritmo de divisão e conquista.
+_Leia isso em outros idiomas:_
+[_简体中文_](README.zh-CN.md),
+[_English_](README.md)
+
+Quicksort é um algoritmo de dividir para conquistar.
 Quicksort primeiro divide uma grande matriz em duas menores
 submatrizes: os elementos baixos e os elementos altos.
-O Quicksort pode então classificar recursivamente as submatrizes
+O Quicksort pode então classificar recursivamente as submatrizes.
 
 As etapas são:
 
 1. Escolha um elemento, denominado pivô, na matriz.
 2. Particionamento: reordene a matriz para que todos os elementos com
-valores menores que o pivô vêm antes do pivô, enquanto todos
+valores menores que o pivô estejam antes do pivô, enquanto todos
 elementos com valores maiores do que o pivô vêm depois dele
 (valores iguais podem ser usados em qualquer direção). Após este particionamento,
 o pivô está em sua posição final. Isso é chamado de
@@ -27,7 +31,7 @@ As linhas horizontais são valores dinâmicos.
 
 | Nome                  | Melhor            | Média             | Pior               | Memória    | Estável    | Comentários  |
 | --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
-| **Quick sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No        |  Quicksort geralmente é feito no local com espaço de pilha O(log(n)) |
+| **Quick sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | Não        |  Quicksort geralmente é feito no local com espaço de pilha O(log(n)) |
 
 ## Referências
 

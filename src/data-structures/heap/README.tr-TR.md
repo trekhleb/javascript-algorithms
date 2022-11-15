@@ -4,11 +4,15 @@ Bilgisayar biliminde, **yığın (heap)** aşağıda açıklanan özellikleri ka
 
 *min heap*, Eğer `P`, `C`'nin üst düğümü ise, `P`'nin anahtarı (değeri)  `C`'nin anahtarından (değerinden) küçük veya ona eşittir.
 
-![MinHeap](https://upload.wikimedia.org/wikipedia/commons/6/69/Min-heap.png)
+![MinHeap](./images/min-heap.jpeg)
 
-*max heap*, `P`'nin anahtarı `C`'nin anahtarından büyük veya eşittir. 
+*Made with [okso.app](https://okso.app)*
 
-![Heap](https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg)
+*max heap*, `P`'nin anahtarı `C`'nin anahtarından büyük veya eşittir.
+
+![MaxHeap](./images/max-heap.jpeg)
+
+![Array Representation](./images/array-representation.jpeg)
 
 Yığının (Heap) "en üstündeki" ebeveyni olmayan düğüme kök düğüm (root node) denir.
 

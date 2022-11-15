@@ -4,11 +4,15 @@
 
 *최소 힙*에서 `P`가 `C`의 상위 노드라면 `P`의 키(값)는 `C`의 키보다 작거나 같습니다.
 
-![MinHeap](https://upload.wikimedia.org/wikipedia/commons/6/69/Min-heap.png)
+![MinHeap](./images/min-heap.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 *최대 힙*에서 `P`의 키는 `C`의 키보다 크거나 같습니다.
 
-![Heap](https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg)
+![MaxHeap](./images/max-heap.jpeg)
+
+![Array Representation](./images/array-representation.jpeg)
 
 상위 노드가 없는 힙의 "상단"에 있는 노드를 루트 노드라고 합니다.
 

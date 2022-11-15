@@ -13,10 +13,12 @@
 
 一棵简单的无序树; 在下图中:
 
-标记为7的节点具有两个子节点, 标记为2和6; 
+标记为7的节点具有两个子节点, 标记为2和6;
 一个父节点,标记为2,作为根节点, 在顶部,没有父节点。
 
-![Tree](https://upload.wikimedia.org/wikipedia/commons/f/f7/Binary_tree.svg)
+![Tree](./images/tree.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## 参考
 

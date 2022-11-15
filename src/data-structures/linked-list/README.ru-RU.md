@@ -6,7 +6,9 @@
 
 Недостатком связных списков является то, что время доступа линейно (и затруднительно для реализации конвейеров). Быстрый доступ(случайный) невозможен.
 
-![Связный список](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+![Linked List](./images/linked-list.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Псевдокод основных операций
 
@@ -57,7 +59,7 @@ Contains(head, value)
   return true
 end Contains
 ```
-    
+
 ### Удаление
 
 ```text

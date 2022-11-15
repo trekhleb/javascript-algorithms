@@ -7,6 +7,7 @@ _Read this in other languages:_
 [_Português_](README.pt-BR.md),
 [_한국어_](README.ko-KR.md),
 [_Español_](README.es-ES.md),
+[_Українська_](README.uk-UA.md)
 
 In computer science, a **doubly linked list** is a linked data structure that
 consists of a set of sequentially linked records called nodes. Each node contains
@@ -18,7 +19,9 @@ sentinel node, then the list is circularly linked via the sentinel node. It can
 be conceptualized as two singly linked lists formed from the same data items,
 but in opposite sequential orders.
 
-![Doubly Linked List](https://upload.wikimedia.org/wikipedia/commons/5/5e/Doubly-linked-list.svg)
+![Doubly Linked List](./images/doubly-linked-list.jpeg)
+
+_Made with [okso.app](https://okso.app)_
 
 The two node links allow traversal of the list in either direction. While adding
 or removing a node in a doubly linked list requires changing more links than the
@@ -102,9 +105,9 @@ end Reverse Traversal
 
 ## Time Complexity
 
-| Access    | Search    | Insertion | Deletion  |
-| :-------: | :-------: | :-------: | :-------: |
-| O(n)      | O(n)      | O(1)      | O(n)      |
+| Access | Search | Insertion | Deletion |
+| :----: | :----: | :-------: | :------: |
+|  O(n)  |  O(n)  |   O(1)    |   O(n)   |
 
 ### Space Complexity
 

@@ -11,7 +11,9 @@
 
 Иллюстрация работы с очередью.
 
-![Очередь](https://upload.wikimedia.org/wikipedia/commons/5/52/Data_Queue.svg)
+![Очередь](./images/queue.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## References
 

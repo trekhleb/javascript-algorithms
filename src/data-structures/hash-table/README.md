@@ -6,12 +6,13 @@ _Read this in other languages:_
 [_日本語_](README.ja-JP.md),
 [_Français_](README.fr-FR.md),
 [_Português_](README.pt-BR.md),
-[_한국어_](README.ko-KR.md)
+[_한국어_](README.ko-KR.md),
+[_Українська_](README.uk-UA.md)
 
 In computing, a **hash table** (hash map) is a data
-structure which implements an *associative array*
-abstract data type, a structure that can *map keys
-to values*. A hash table uses a *hash function* to
+structure which implements an _associative array_
+abstract data type, a structure that can _map keys
+to values_. A hash table uses a _hash function_ to
 compute an index into an array of buckets or slots,
 from which the desired value can be found
 
@@ -22,11 +23,13 @@ collisions where the hash function generates the same
 index for more than one key. Such collisions must be
 accommodated in some way.
 
-![Hash Table](https://upload.wikimedia.org/wikipedia/commons/7/7d/Hash_table_3_1_1_0_1_0_0_SP.svg)
+![Hash Table](./images/hash-table.jpeg)
 
 Hash collision resolved by separate chaining.
 
-![Hash Collision](https://upload.wikimedia.org/wikipedia/commons/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg)
+![Hash Collision](./images/collision-resolution.jpeg)
+
+_Made with [okso.app](https://okso.app)_
 
 ## References
 

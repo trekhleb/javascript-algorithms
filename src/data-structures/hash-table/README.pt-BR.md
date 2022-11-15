@@ -1,6 +1,6 @@
 # Tabela de Hash (Hash Table)
 
-Na ciência da computação, uma **tabela de hash** (hash map) é uma
+Na ciência da computação, uma **tabela de hash** (hash table) é uma
 estrutura de dados pela qual implementa um tipo de dado abstrado de
 *array associativo*, uma estrutura que pode *mapear chaves para valores*.
 Uma tabela de hash utiliza uma *função de hash* para calcular um índice
@@ -10,14 +10,16 @@ pode ser encontrado.
 Idealmente, a função de hash irá atribuir a cada chave a um bucket único,
 mas a maioria dos designs de tabela de hash emprega uma função de hash
 imperfeita, pela qual poderá causar colisões de hashes onde a função de hash
-gera o mesmo índice para mais de uma chave.Tais colisões devem ser
+gera o mesmo índice para mais de uma chave. Tais colisões devem ser
 acomodados de alguma forma.
 
-![Hash Table](https://upload.wikimedia.org/wikipedia/commons/7/7d/Hash_table_3_1_1_0_1_0_0_SP.svg)
+![Hash Table](./images/hash-table.jpeg)
 
 Colisão de hash resolvida por encadeamento separado.
 
-![Hash Collision](https://upload.wikimedia.org/wikipedia/commons/d/d0/Hash_table_5_0_1_1_1_1_1_LL.svg)
+![Hash Collision](./images/collision-resolution.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Referências
 

@@ -26,7 +26,9 @@ time is linear (and difficult to pipeline). Faster
 access, such as random access, is not feasible. Arrays
 have better cache locality as compared to linked lists.
 
-![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+![Linked List](./images/linked-list.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Pseudocode for Basic Operations
 

@@ -1,8 +1,8 @@
-# Conjunto Disjuntor (Disjoint Set)
+# Conjunto Disjunto (Disjoint Set)
 
-**Conjunto Disjuntor**
+**Conjunto Disjunto**
 
-**Conjunto Disjuntor** é uma estrutura de dados (também chamado de
+**Conjunto Disjunto** é uma estrutura de dados (também chamado de
 estrutura de dados de union–find ou merge–find) é uma estrutura de dados
 que rastreia um conjunto de elementos particionados em um número de
 subconjuntos separados (sem sobreposição).
@@ -10,9 +10,9 @@ Ele fornece operações de tempo quase constante (limitadas pela função
 inversa de Ackermann) para *adicionar novos conjuntos*, para 
 *mesclar/fundir conjuntos existentes* e para *determinar se os elementos
 estão no mesmo conjunto*.
-Além de muitos outros usos (veja a seção Applications), conjunto disjuntor
+Além de muitos outros usos (veja a seção Applications), conjuntos disjuntos
 desempenham um papel fundamental no algoritmo de Kruskal para encontrar a
-árvore geradora mínima de um gráfico (graph).
+árvore geradora mínima de um grafo (graph).
 
 ![disjoint set](https://upload.wikimedia.org/wikipedia/commons/6/67/Dsu_disjoint_sets_init.svg)
 

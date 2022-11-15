@@ -12,7 +12,9 @@ _Read this in other languages:_
 센티넬 노드가 하나만 있으면, 목록이 센티넬 노드를 통해서 원형으로 연결됩니다.
 동일한 데이터 항목으로 구성되어 있지만, 반대 순서로 두 개의 단일 연결 리스트로 개념화 할 수 있습니다.
 
-![이중 연결 리스트](https://upload.wikimedia.org/wikipedia/commons/5/5e/Doubly-linked-list.svg)
+![이중 연결 리스트](./images/doubly-linked-list.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 두 개의 노드 링크를 사용하면 어느 방향으로든 리스트를 순회할 수 있습니다.
 이중 연결 리스트에서 노드를 추가하거나 제거하려면, 단일 연결 리스트에서 동일한 작업보다 더 많은 링크를 변경해야 하지만, 첫 번째 노드 이외의 노드인 경우 작업을 추적할 필요가 없으므로 작업이 더 단순해져 잠재적으로 더 효율적입니다.
@@ -37,7 +39,7 @@ Add(value)
   end if
 end Add
 ```
-    
+
 ### 삭제
 
 ```text
@@ -74,7 +76,7 @@ Remove(head, value)
   return false
 end Remove
 ```
-    
+
 ### 역순회
 
 ```text
@@ -88,7 +90,7 @@ ReverseTraversal(tail)
   end while
 end Reverse Traversal
 ```
-    
+
 ## 복잡도
 
 ## 시간 복잡도
