@@ -1,0 +1,1 @@
+In computer science, a skip list is a probabilistic data structure that allows {\mathcal {O}} search complexity as well as {\mathcal {O}} insertion complexity within an ordered sequence of n elements.
