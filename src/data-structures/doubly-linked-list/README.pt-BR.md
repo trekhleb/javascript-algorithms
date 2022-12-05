@@ -4,7 +4,7 @@ Na ciência da computação, uma **lista duplamente conectada** é uma estrutura
 de dados vinculada que se consistem em um conjunto de registros
 sequencialmente vinculados chamados de nós (nodes). Em cada nó contém dois
 campos, chamados de ligações, que são referenciados ao nó anterior e posterior
-de uma sequência de nós. O começo e o fim dos nós anteriormente e posteiormente
+de uma sequência de nós. O começo e o fim dos nós anteriormente e posteriormente
 ligados, respectiviamente, apontam para algum tipo de terminação, normalmente
 um nó sentinela ou nulo, para facilitar a travessia da lista. Se existe
 somente um nó sentinela, então a lista é ligada circularmente através do nó
@@ -20,7 +20,7 @@ Enquanto adicionar ou remover um nó de uma lista duplamente vinculada requer
 alterar mais ligações (conexões) do que em uma lista encadeada individualmente
 (singly linked list), as operações são mais simples e potencialmente mais
 eficientes (para nós que não sejam nós iniciais) porque não há necessidade
-de se manter rastreamento do nó anterior durante a travessia ou não há
+de manter um rastreamento do nó anterior durante a travessia ou não há
 necessidade de percorrer a lista para encontrar o nó anterior, para que
 então sua ligação/conexão possa ser modificada.
 
@@ -44,7 +44,7 @@ Add(value)
 end Add
 ```
 
-### Deletar
+### Remoção
 
 ```text
 Remove(head, value)
