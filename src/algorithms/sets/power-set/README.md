@@ -102,7 +102,7 @@ Adding the 3nd element to all existing sets:
 [[], [1], [2], [1, 2]] ← 3 = [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
 ```
 
-And so on for the rest of the elements from originalSet. On every iteration the number of sets is doubled, so we'll get `2^n` sets.
+And so on, for the rest of the elements from the `originalSet`. On every iteration the number of sets is doubled, so we'll get `2^n` sets.
 
 > See [caPowerSet.js](./caPowerSet.js) file for cascading solution.
 
