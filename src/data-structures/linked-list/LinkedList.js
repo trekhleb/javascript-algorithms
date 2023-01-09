@@ -59,8 +59,8 @@ export default class LinkedList {
    * @param {number} index
    * @return {LinkedList}
    */
-  insert(value, rawIndex) {
-    const index = rawIndex < 0 ? 0 : rawIndex;
+  insert(value, desiredIndex) {
+    const index = desiredIndex < 0 ? 0 : desiredIndex;
     if (index === 0) {
       this.prepend(value);
     } else {
