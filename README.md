@@ -27,7 +27,7 @@ _Read this in other languages:_
 [_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md),
 [_Русский_](README.ru-RU.md),
-[_Türk_](README.tr-TR.md),
+[_Türkçe_](README.tr-TR.md),
 [_Italiana_](README.it-IT.md),
 [_Bahasa Indonesia_](README.id-ID.md),
 [_Українська_](README.uk-UA.md),
@@ -99,7 +99,7 @@ a set of rules that precisely define a sequence of operations.
 * **Sets**
   * `B` [Cartesian Product](src/algorithms/sets/cartesian-product) - product of multiple sets
   * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
-  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set (bitwise and backtracking solutions)
+  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set (bitwise, backtracking, and cascading solutions)
   * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
   * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
   * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
@@ -279,7 +279,7 @@ npm test -- 'LinkedList'
 
 **Troubleshooting**
 
-In case if linting or testing is failing try to delete the `node_modules` folder and re-install npm packages:
+If linting or testing is failing, try to delete the `node_modules` folder and re-install npm packages:
 
 ```
 rm -rf ./node_modules
