@@ -148,4 +148,26 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
 
     return this.left.findMin();
   }
+
+  /**
+   * @return {BinarySearchTreeNode}
+   */
+  successor() {
+    if (this.right) {
+      return this.right.findMin();
+    }
+
+    let currentNode = this;
+    let { parent } = currentNode;
+
+    while (!this.nodeComparator.equal(parent, null)
+      && parent.right
+      && this.nodeComparator.equal(parent.right.value, currentNode.value)
+    ) {
+      currentNode = parent;
+      parent = currentNode.parent;
+    }
+
+    return parent;
+  }
 }
