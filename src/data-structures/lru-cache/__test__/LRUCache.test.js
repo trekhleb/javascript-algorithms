@@ -94,6 +94,17 @@ describe('LRUCache', () => {
     expect(cache.get('key-4')).toBe(5);
   });
 
+  it('should promote the node while calling set() method', () => {
+    const cache = new LRUCache(2);
+
+    cache.set('2', 1);
+    cache.set('1', 1);
+    cache.set('2', 3);
+    cache.set('4', 1);
+    expect(cache.get('1')).toBeUndefined();
+    expect(cache.get('2')).toBe(3);
+  });
+
   it('should promote the recently accessed item with cache size of 3', () => {
     const cache = new LRUCache(3);
 

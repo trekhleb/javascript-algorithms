@@ -43,7 +43,9 @@ class LRUCache {
    */
   set(key, val) {
     if (this.nodesMap[key]) {
-      this.nodesMap[key].val = val;
+      const node = this.nodesMap[key];
+      node.val = val;
+      this.promote(node);
     } else {
       const node = new LinkedListNode(key, val);
       this.append(node);
