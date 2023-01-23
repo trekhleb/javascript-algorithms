@@ -64,6 +64,7 @@ the data.
 * `A` [Graph](src/data-structures/graph) (both directed and undirected)
 * `A` [Disjoint Set](src/data-structures/disjoint-set)
 * `A` [Bloom Filter](src/data-structures/bloom-filter)
+* `A` [LRU Cache](src/data-structures/lru-cache/) - Least Recently Used (LRU) cache
 
 ## Algorithms
 
