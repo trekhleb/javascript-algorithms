@@ -16,7 +16,7 @@ The functions `get()` and `set()` must each run in `O(1)` average time complexit
 
 ## Implementation
 
-See the `LRUCache` implementation example in [LRUCache.js](./LRUCache.js). The solution uses a `HashMap` for fast `O(1)` cache items access, and a `DoublyLinkedList` for fast `O(1)` cache items promotions and eviction (to keep the maximum allowed cache capacity).
+See the `LRUCache` implementation example in [LRUCache.js](./LRUCache.js). The solution uses a `HashMap` for fast `O(1)` (in average) cache items access, and a `DoublyLinkedList` for fast `O(1)` (in average) cache items promotions and eviction (to keep the maximum allowed cache capacity).
 
 ![Linked List](./images/lru-cache.jpg)
 
