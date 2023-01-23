@@ -26,7 +26,7 @@ You may also find more test-case examples of how the LRU Cache works in [LRUCach
 
 ## Costs
 
-|   | Worst Case |
+|   | Average |
 |---|---|
 | Space |`O(n)`|
 | Get item | `O(1)` |
