@@ -24,7 +24,7 @@ See the `LRUCache` implementation example in [LRUCache.js](./LRUCache.js). The s
 
 You may also find more test-case examples of how the LRU Cache works in [LRUCache.test.js](./__test__/LRUCache.test.js) file.
 
-## Costs
+## Complexities
 
 |   | Average |
 |---|---|
