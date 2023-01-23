@@ -22,6 +22,8 @@ See the `LRUCache` implementation example in [LRUCache.js](./LRUCache.js). The s
 
 *Made with [okso.app](https://okso.app)*
 
+You may also find more test-case examples of how the LRU Cache works in [LRUCache.test.js](./__test__/LRUCache.test.js) file.
+
 ## Costs
 
 |   | Worst Case |
