@@ -1,5 +1,24 @@
-/* eslint-disable no-param-reassign */
-import LinkedListNode from './LinkedListNode';
+/* eslint-disable no-param-reassign, max-classes-per-file */
+
+/**
+ * Simple implementation of the Doubly-Linked List Node
+ * that is used in LRUCache class below.
+ */
+class LinkedListNode {
+  /**
+   * Creates a doubly-linked list node.
+   * @param {string} key
+   * @param {any} val
+   * @param {LinkedListNode} prev
+   * @param {LinkedListNode} next
+   */
+  constructor(key, val, prev = null, next = null) {
+    this.key = key;
+    this.val = val;
+    this.prev = prev;
+    this.next = next;
+  }
+}
 
 /**
  * Implementation of the LRU (Least Recently Used) Cache
