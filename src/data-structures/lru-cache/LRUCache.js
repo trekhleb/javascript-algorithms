@@ -24,7 +24,7 @@ class LinkedListNode {
  * Implementation of the LRU (Least Recently Used) Cache
  * based on the HashMap and Doubly Linked List data-structures.
  *
- * Current implementation allows to have fast (O(1)) read and write operations.
+ * Current implementation allows to have fast O(1) (in average) read and write operations.
  *
  * At any moment in time the LRU Cache holds not more that "capacity" number of items in it.
  */
@@ -43,7 +43,7 @@ class LRUCache {
 
   /**
    * Returns the cached value by its key.
-   * Time complexity: O(1).
+   * Time complexity: O(1) in average.
    * @param {string} key
    * @returns {any}
    */
@@ -56,7 +56,7 @@ class LRUCache {
 
   /**
    * Sets the value to cache by its key.
-   * Time complexity: O(1).
+   * Time complexity: O(1) in average.
    * @param {string} key
    * @param {any} val
    */

@@ -16,6 +16,8 @@ The functions `get()` and `set()` must each run in `O(1)` average time complexit
 
 ## Implementation
 
+### Version 1: Doubly Linked List + Hash Map
+
 See the `LRUCache` implementation example in [LRUCache.js](./LRUCache.js). The solution uses a `HashMap` for fast `O(1)` (in average) cache items access, and a `DoublyLinkedList` for fast `O(1)` (in average) cache items promotions and eviction (to keep the maximum allowed cache capacity).
 
 ![Linked List](./images/lru-cache.jpg)
@@ -23,6 +25,16 @@ See the `LRUCache` implementation example in [LRUCache.js](./LRUCache.js). The s
 *Made with [okso.app](https://okso.app)*
 
 You may also find more test-case examples of how the LRU Cache works in [LRUCache.test.js](./__test__/LRUCache.test.js) file.
+
+### Version 2: Ordered Map
+
+The first implementation that uses doubly linked list is good for learning purposes and for better understanding of how the average `O(1)` time complexity is achievable while doing `set()` and `get()`.
+
+However, the simpler approach might be to use a JavaScript [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) object. The `Map` object holds key-value pairs and **remembers the original insertion order** of the keys. We can use this fact in order to keep the recently-used items in the "end" of the map by removing and re-adding items. The item at the beginning of the `Map` is the first one to be evicted if cache capacity overflows. The order of the items may checked by using the `IterableIterator` like `map.keys()`.
+
+See the `LRUCacheOnMap` implementation example in [LRUCacheOnMap.js](./LRUCacheOnMap.js).
+
+You may also find more test-case examples of how the LRU Cache works in [LRUCacheOnMap.test.js](./__test__/LRUCacheOnMap.test.js) file.
 
 ## Complexities
 
