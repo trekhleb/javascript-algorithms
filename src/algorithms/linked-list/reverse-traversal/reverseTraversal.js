@@ -1,24 +1,26 @@
-/**
- * Traversal callback function.
- * @callback traversalCallback
- * @param {*} nodeValue
- */
+// head = [1 2 3 4 5]  output = [5 4 3 2 1]
+// head = [1 2]  output = [2 1]
+// head = []  output = []
 
 /**
- * @param {LinkedListNode} node
- * @param {traversalCallback} callback
+ * Definition for singly-linked list.
+ * function ListNode(val, next) {
+ *     this.val = (val===undefined ? 0 : val)
+ *     this.next = (next===undefined ? null : next)
+ * }
  */
-function reverseTraversalRecursive(node, callback) {
-  if (node) {
-    reverseTraversalRecursive(node.next, callback);
-    callback(node.value);
-  }
-}
-
 /**
- * @param {LinkedList} linkedList
- * @param {traversalCallback} callback
+ * @param {ListNode} head
+ * @return {ListNode}
  */
-export default function reverseTraversal(linkedList, callback) {
-  reverseTraversalRecursive(linkedList.head, callback);
-}
+var reverseList = function(head) {
+  prevHead = null;
+      while(head!=null){
+           nextRec = head.next;
+          head.next = prevHead;
+          prevHead = head;
+          head = nextRec;
+          //Reversing the connection b/w nodes
+      }
+      return prevHead;
+};
