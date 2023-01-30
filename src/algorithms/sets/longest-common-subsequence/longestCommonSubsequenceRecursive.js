@@ -1,17 +1,17 @@
 /* eslint-disable no-param-reassign */
 /**
- * Longest Common Substring (LCS) (Recursive Approach).
+ * Longest Common Subsequence (LCS) (Recursive Approach).
  *
  * @param {string} string1
  * @param {string} string2
  * @return {number}
  */
-export default function longestCommonSubstringRecursive(string1, string2) {
+export default function longestCommonSubsequenceRecursive(string1, string2) {
   /**
    *
    * @param {string} s1
    * @param {string} s2
-   * @return {string} - returns the LCS (Longest Common Substring)
+   * @return {string} - returns the LCS (Longest Common Subsequence)
    */
   const lcs = (s1, s2, memo = {}) => {
     if (!s1 || !s2) return '';
