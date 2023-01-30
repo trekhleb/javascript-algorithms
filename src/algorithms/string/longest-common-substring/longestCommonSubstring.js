@@ -1,4 +1,6 @@
 /**
+ * Longest Common Substring (LCS) (Dynamic Programming Approach).
+ *
  * @param {string} string1
  * @param {string} string2
  * @return {string}

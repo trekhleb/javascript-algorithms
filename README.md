@@ -62,7 +62,7 @@ the data.
   * `A` [Segment Tree](src/data-structures/tree/segment-tree) - with min/max/sum range queries examples
   * `A` [Fenwick Tree](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
 * `A` [Graph](src/data-structures/graph) (both directed and undirected)
-* `A` [Disjoint Set](src/data-structures/disjoint-set)
+* `A` [Disjoint Set](src/data-structures/disjoint-set) - a union–find data structure or merge–find set
 * `A` [Bloom Filter](src/data-structures/bloom-filter)
 * `A` [LRU Cache](src/data-structures/lru-cache/) - Least Recently Used (LRU) cache
 
@@ -287,7 +287,7 @@ rm -rf ./node_modules
 npm i
 ```
 
-Also make sure that you're using a correct Node version (`>=14.16.0`). If you're using [nvm](https://github.com/nvm-sh/nvm) for Node version management you may run `nvm use` from the root folder of the project and the correct version will be picked up.
+Also make sure that you're using a correct Node version (`>=16`). If you're using [nvm](https://github.com/nvm-sh/nvm) for Node version management you may run `nvm use` from the root folder of the project and the correct version will be picked up.
 
 **Playground**
 
