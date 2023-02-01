@@ -35,21 +35,20 @@
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@babel/cli": "7.16.8",
-    "@babel/preset-env": "7.16.11",
-    "@types/jest": "27.4.0",
-    "canvas": "2.9.0",
-    "eslint": "8.7.0",
+    "@babel/cli": "7.20.7",
+    "@babel/preset-env": "7.20.2",
+    "@types/jest": "29.4.0",
+    "canvas": "2.11.0",
+    "eslint": "8.33.0",
     "eslint-config-airbnb": "19.0.4",
-    "eslint-plugin-import": "2.25.4",
-    "eslint-plugin-jest": "25.7.0",
-    "eslint-plugin-jsx-a11y": "6.5.1",
-    "eslint-plugin-react": "7.28.0",
-    "husky": "7.0.4",
-    "jest": "27.4.7"
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-jest": "27.2.1",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "husky": "8.0.3",
+    "jest": "29.4.1"
   },
   "engines": {
-    "node": ">=14.16.0",
-    "npm": ">=6.14.0"
+    "node": ">=16.15.0",
+    "npm": ">=8.5.5"
   }
 }
