@@ -30,6 +30,11 @@ _Image source: [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering)_
 
 The centroids are moving continuously in order to create better distinction between the different set of data points. As we can see, after a few iterations, the difference in centroids is quite low between iterations. For example between iterations `13` and `14` the difference is quite small because there the optimizer is tuning boundary cases.
 
+## Code Examples
+
+- [kMeans.js](./kMeans.js)
+- [kMeans.test.js](./__test__/kMeans.test.js) (test cases)
+
 ## References
 
 - [k-Means neighbors algorithm on Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering)
