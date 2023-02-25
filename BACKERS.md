@@ -8,11 +8,40 @@
 
 ## `O(n²)` Backers
 
-`null`
+<ul>
+  <li>
+    <a href="https://github.com/newrelic">
+      <img
+        src="https://avatars.githubusercontent.com/u/31739?s=200&v=4"
+        width="30"
+        height="30"
+      /></a>
+    &thinsp;
+    <a href="https://github.com/newrelic">newrelic</a>
+  </li>
+</ul>
 
 ## `O(n×log(n))` Backers
 
 `null`
+
+<!--
+<table>
+  <tr>
+    <td align="center">
+      <a href="[PROFILE_URL]">
+        <img
+          src="[PROFILE_IMG_SRC]"
+          width="50"
+          height="50"
+        />
+      </a>
+      <br />
+      <a href="[PROFILE_URL]">[PROFILE_NAME]</a>
+    </td>
+  </tr>
+</table>
+-->
 
 <!--
 <ul>
