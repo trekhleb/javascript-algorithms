@@ -8,18 +8,21 @@
 
 ## `O(n²)` Backers
 
-<ul>
-  <li>
-    <a href="https://github.com/newrelic">
-      <img
-        src="https://avatars.githubusercontent.com/u/31739?s=200&v=4"
-        width="30"
-        height="30"
-      /></a>
-    &thinsp;
-    <a href="https://github.com/newrelic">newrelic</a>
-  </li>
-</ul>
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/newrelic">
+        <img
+          src="https://avatars.githubusercontent.com/u/31739?s=200&v=4"
+          width="50"
+          height="50"
+        />
+      </a>
+      <br />
+      <a href="https://github.com/newrelic">newrelic</a>
+    </td>
+  </tr>
+</table>
 
 ## `O(n×log(n))` Backers
 
