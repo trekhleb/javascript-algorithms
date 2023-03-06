@@ -361,10 +361,26 @@ Below is the list of some of the most used Big O notations and their performance
 
 > You may support this project via ❤️️ [GitHub](https://github.com/sponsors/trekhleb) or ❤️️ [Patreon](https://www.patreon.com/trekhleb).
 
-[Folks who are backing this project](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 0`
+[Folks who are backing this project](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 1`
 
-> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/newrelic">
+        <img
+          src="https://avatars.githubusercontent.com/u/31739?s=200&v=4"
+          width="50"
+          height="50"
+        />
+      </a>
+      <br />
+      <a href="https://github.com/newrelic">newrelic</a>
+    </td>
+  </tr>
+</table>
 
 ## Author
 
-- [@trekhleb](https://trekhleb.dev)
+[@trekhleb](https://trekhleb.dev)
+
+A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
