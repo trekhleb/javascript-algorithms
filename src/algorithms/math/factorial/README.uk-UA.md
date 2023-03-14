@@ -1,7 +1,7 @@
 # Факторіал
 
 _Прочитайте це іншими мовами:_
-[english](README.md), [_简体中文_](README.zh-CN.md), [français](README.fr-FR.md), [turkish](README.tr-TR.md), [ქართული](README.ka-GE.md), [українська](README.uk-UA.md).
+[_English_](README.md), [_简体中文_](README.zh-CN.md), [_Français_](README.fr-FR.md), [_Turkish_](README.tr-TR.md), [_ქართული_](README.ka-GE.md), [_Українська_](README.uk-UA.md).
 
 У математиці факторіал невід'ємного цілого числа `n`, позначений `n!`, є добутком усіх натуральних чисел, менших або рівних `n`. Наприклад:
 
@@ -30,4 +30,4 @@ _Прочитайте це іншими мовами:_
 
 ## Посилання
 
-[Wikipedia](https://en.wikipedia.org/wiki/Factorial)
+[Wikipedia](https://uk.wikipedia.org/wiki/%D0%A4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D1%96%D0%B0%D0%BB)
