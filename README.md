@@ -364,22 +364,6 @@ Below is the list of some of the most used Big O notations and their performance
 
 [Folks who are backing this project](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 1`
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/newrelic">
-        <img
-          src="https://avatars.githubusercontent.com/u/31739?s=200&v=4"
-          width="50"
-          height="50"
-        />
-      </a>
-      <br />
-      <a href="https://github.com/newrelic">newrelic</a>
-    </td>
-  </tr>
-</table>
-
 ## Author
 
 [@trekhleb](https://trekhleb.dev)
