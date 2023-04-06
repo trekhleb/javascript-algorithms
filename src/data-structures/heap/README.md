@@ -57,7 +57,6 @@ Where:
 - **meld:** joining two heaps to form a valid new heap containing all the elements of both, destroying the original heaps.
 
 > In this repository, the [MaxHeap.js](./MaxHeap.js) and [MinHeap.js](./MinHeap.js) are examples of the **Binary** heap.
-
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Heap_(data_structure))
