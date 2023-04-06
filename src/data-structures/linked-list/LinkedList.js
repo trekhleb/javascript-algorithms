@@ -75,6 +75,8 @@ export default class LinkedList {
       if (currentNode) {
         newNode.next = currentNode.next;
         currentNode.next = newNode;
+        this.tail.next = newNode;
+        this.tail = newNode;
       } else {
         if (this.tail) {
           this.tail.next = newNode;
