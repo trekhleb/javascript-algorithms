@@ -43,6 +43,9 @@ describe('LinkedList', () => {
     linkedList.insert(2, 1);
     linkedList.insert(1, -7);
     linkedList.insert(10, 9);
+
+    expect(linkedList.toString()).toBe('1,4,2,3,10');
+
     linkedList.insert(7, 5);
     expect(linkedList.toString()).toBe('1,4,2,3,10,7');
     expect(linkedList.head.toString()).toBe('1');
