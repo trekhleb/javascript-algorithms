@@ -11,9 +11,10 @@ import Queue from '../../../../data-structures/queue/Queue';
  * @param {GraphVertex} source
  * @param {GraphVertex} sink
  * @param {object} capacities
- * @return {number}
+ * @return {object}
  *
  * NB: capacities is a mapping from: GraphEdge.getKey() to number
+ *   & return is {graph:graph,maxflow:f} of types {Graph, Number}
  *
  */
 export default function edmondsKarp(graph,source,sink,capacities) {
@@ -38,8 +39,8 @@ export default function edmondsKarp(graph,source,sink,capacities) {
   let residualGraph;
 
   // FLOW HELPER functions
-  let getFlow = (edge) => edge.weight;
-  let updateFlow = (edge,value) => {edge.weight+=value};
+  const getFlow = (edge) => edge.weight;
+  const updateFlow = (edge,value) => {edge.weight+=value};
 
   // FUNCTION for building Residual Graph
   // -> And hence determining residual capacities
@@ -53,16 +54,16 @@ export default function edmondsKarp(graph,source,sink,capacities) {
     graph.getAllEdges().forEach((edge) => {
       // edge is an edge in graph
       // get edgeKey for extracting edge capacity from capacities
-      let edgeKey = edge.getKey();
+      const edgeKey = edge.getKey();
 
       // get the residualGraph start and end vertices (from edge in graph)
-      let startVertex = residualGraph.getVertexByKey(edge.startVertex.getKey());
-      let endVertex = residualGraph.getVertexByKey(edge.endVertex.getKey());
+      const startVertex = residualGraph.getVertexByKey(edge.startVertex.getKey());
+      const endVertex = residualGraph.getVertexByKey(edge.endVertex.getKey());
 
       // if the flow is less than the capacity:
       if (getFlow(edge)<capacities[edgeKey]) {
         // compute the residual capacity
-        let capMinusFlow = capacities[edgeKey]-getFlow(edge);
+        const capMinusFlow = capacities[edgeKey]-getFlow(edge);
         // add a forward edge to residualGraph of the difference (cap-flow)
         // -> because (cap-flow) units of flow can still be pushed down the edge
         residualGraph.addEdge(new GraphEdge(startVertex,endVertex,capMinusFlow));
@@ -89,15 +90,15 @@ export default function edmondsKarp(graph,source,sink,capacities) {
 
     for (let edgeResidualGraph of edgePath) {
       // get the vertices in Graph corresponding to the edge in residualGraph
-      let startVertex = graph.getVertexByKey(edgeResidualGraph.startVertex.getKey());
-      let endVertex = graph.getVertexByKey(edgeResidualGraph.endVertex.getKey());
+      const startVertex = graph.getVertexByKey(edgeResidualGraph.startVertex.getKey());
+      const endVertex = graph.getVertexByKey(edgeResidualGraph.endVertex.getKey());
 
       // if it contains a forward edge, update the flow by adding bottleneck
-      let forwardEdge = graph.findEdge(startVertex,endVertex);
+      const forwardEdge = graph.findEdge(startVertex,endVertex);
       if (forwardEdge!=null) updateFlow(forwardEdge, bottleneck);
 
       // if it contains a backward edge, update the flow by adding -bottleneck
-      let backwardEdge = graph.findEdge(endVertex,startVertex);
+      const backwardEdge = graph.findEdge(endVertex,startVertex);
       if (backwardEdge!=null) updateFlow(backwardEdge, -bottleneck);
     }
     // increase the value of flow by bottleneck
@@ -105,7 +106,7 @@ export default function edmondsKarp(graph,source,sink,capacities) {
   }
 
   // intialise the variable augmentingPath
-  var augmentingPath;
+  let augmentingPath;
 
   /**
    * findAugmentingPath: finds an augmenting path in residualGraph
@@ -115,8 +116,8 @@ export default function edmondsKarp(graph,source,sink,capacities) {
     // intialise augmentingPath
     augmentingPath = [];
     // get the source and sink keys
-    let s = source.getKey();
-    let t = sink.getKey();
+    const s = source.getKey();
+    const t = sink.getKey();
     // initialise a queue of vertices visited
     let vertexPathQ = new Queue();
     vertexPathQ.enqueue([s]);
@@ -155,7 +156,7 @@ export default function edmondsKarp(graph,source,sink,capacities) {
     breadthFirstSearch(residualGraph,residualGraph.getVertexByKey(s),bfsCallbacks);
 
     // the search path is the next of vertexPathQ to dequeue
-    let vertexPath = vertexPathQ.dequeue();
+    const vertexPath = vertexPathQ.dequeue();
     // check that vertexPath exists and ends with the sink
     if (vertexPath!=null && vertexPath[vertexPath.length-1]==t) {
       // reset augmentingPath
@@ -163,10 +164,10 @@ export default function edmondsKarp(graph,source,sink,capacities) {
 
       for (var i=0; i<vertexPath.length-1; i+=1){
         // get the start and end vertices for next edge in path in residualGraph
-        let startVertex = residualGraph.getVertexByKey(vertexPath[i]);
-        let endVertex = residualGraph.getVertexByKey(vertexPath[i+1]);
+        const startVertex = residualGraph.getVertexByKey(vertexPath[i]);
+        const endVertex = residualGraph.getVertexByKey(vertexPath[i+1]);
         // find the edge in residualGraph
-        let edge = residualGraph.findEdge(startVertex,endVertex);
+        const edge = residualGraph.findEdge(startVertex,endVertex);
         // add the edge to the augmentingPath
         augmentingPath.push(edge);
       }

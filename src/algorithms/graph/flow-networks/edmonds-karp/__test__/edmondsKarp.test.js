@@ -4,8 +4,7 @@ import Graph from '../../../../../data-structures/graph/Graph';
 import edmondsKarp from '../edmondsKarp';
 
 describe('edmondsKarp', () => {
-  it('should solve problem for simple graph', () => {
-
+  it('should solve the maximum flow problem', () => {
     const capacities = {'S_A':3,'S_B':3,'A_B':4,'A_D':3,'B_C':5,'B_D':3,'C_T':2,'D_T':4}
 
     const vertexS = new GraphVertex('S');
@@ -47,6 +46,7 @@ describe('edmondsKarp', () => {
     const flowThroughEachEdge = {};
     const expectedFlow = {'S_A':3,'S_B':3,'A_B':0,'A_D':3,'B_C':2,'B_D':1,'C_T':2,'D_T':4};
     edmondsKarpObj.graph.getAllEdges().forEach(e=>{flowThroughEachEdge[e.getKey()]=e.weight})
+
     expect(JSON.stringify(flowThroughEachEdge)).toBe(JSON.stringify(expectedFlow));
   });
 });
