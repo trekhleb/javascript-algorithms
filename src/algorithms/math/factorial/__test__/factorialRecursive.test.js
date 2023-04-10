@@ -3,9 +3,14 @@ import factorialRecursive from '../factorialRecursive';
 describe('factorialRecursive', () => {
   it('should calculate factorial', () => {
     expect(factorialRecursive(0)).toBe(1);
+    expect(factorialRecursive(-0)).toBe(1);
     expect(factorialRecursive(1)).toBe(1);
     expect(factorialRecursive(5)).toBe(120);
     expect(factorialRecursive(8)).toBe(40320);
     expect(factorialRecursive(10)).toBe(3628800);
+  });
+  it('should throw exception', () => {
+    expect(() => factorialRecursive(-1)).toThrowError('Factorial of a negative number (-1) does not exist!');
+    expect(() => factorialRecursive(-10)).toThrowError('Factorial of a negative number (-10) does not exist!');
   });
 });
