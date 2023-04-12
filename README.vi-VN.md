@@ -24,7 +24,8 @@ _Đọc bằng ngôn ngữ khác:_
 [_Italiana_](README.it-IT.md),
 [_Bahasa Indonesia_](README.id-ID.md),
 [_Українська_](README.uk-UA.md),
-[_Arabic_](README.ar-AR.md)
+[_Arabic_](README.ar-AR.md),
+[_Urdu_](README.ur-PK.md),
 
 *☝ Dự án này chỉ được sử dụng cho mục đích học tập và nghiên cứu, **không** được dùng
 cho mục đích thương mại.*

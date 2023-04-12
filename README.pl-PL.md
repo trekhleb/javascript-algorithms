@@ -26,7 +26,8 @@ _Read this in other languages:_
 [_Українська_](README.uk-UA.md),
 [_Arabic_](README.ar-AR.md),
 [_Tiếng Việt_](README.vi-VN.md),
-[_Deutsch_](README.de-DE.md)
+[_Deutsch_](README.de-DE.md),
+[_Urdu_](README.ur-PK.md),
 
 ## Struktury Danych
 
