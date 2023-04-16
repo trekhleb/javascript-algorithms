@@ -5,8 +5,9 @@
  * @return {number[]}
  */
 
-export default function kadane() {
 
+
+export default function Kadane(array) {
 
 
   // This algorithm works for both positive and negative values of the array
