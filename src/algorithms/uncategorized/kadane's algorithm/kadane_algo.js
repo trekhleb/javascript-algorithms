@@ -9,7 +9,7 @@ export default function kadane() {
   let current_sum = array[0];
   let maximum_subarray_sum = array[0];
 
-  for (let i = 0; i < array.length; i++) {
+  for (let i = 1; i < array.length; i++) {
     current_sum = Math.max(current_sum + array[i], array[i]);
     maximum_subarray_sum = Math.max(maximum_subarray_sum, current_sum);
   }
