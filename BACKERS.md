@@ -8,21 +8,7 @@
 
 ## `O(n²)` Backers
 
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/newrelic">
-        <img
-          src="https://avatars.githubusercontent.com/u/31739?s=200&v=4"
-          width="50"
-          height="50"
-        />
-      </a>
-      <br />
-      <a href="https://github.com/newrelic">newrelic</a>
-    </td>
-  </tr>
-</table>
+`null`
 
 ## `O(n×log(n))` Backers
 

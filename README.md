@@ -9,6 +9,7 @@
 
 [![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
+![repo size](https://img.shields.io/github/repo-size/trekhleb/javascript-algorithms.svg)
 
 This repository contains JavaScript based examples of many
 popular algorithms and data structures.
@@ -133,6 +134,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Shellsort](src/algorithms/sorting/shell-sort)
   * `B` [Counting Sort](src/algorithms/sorting/counting-sort)
   * `B` [Radix Sort](src/algorithms/sorting/radix-sort)
+  * `B` [Bucket Sort](src/algorithms/sorting/bucket-sort)
 * **Linked Lists**
   * `B` [Straight Traversal](src/algorithms/linked-list/traversal)
   * `B` [Reverse Traversal](src/algorithms/linked-list/reverse-traversal)
@@ -362,22 +364,6 @@ Below is the list of some of the most used Big O notations and their performance
 > You may support this project via ❤️️ [GitHub](https://github.com/sponsors/trekhleb) or ❤️️ [Patreon](https://www.patreon.com/trekhleb).
 
 [Folks who are backing this project](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 1`
-
-<table>
-  <tr>
-    <td align="center">
-      <a href="https://github.com/newrelic">
-        <img
-          src="https://avatars.githubusercontent.com/u/31739?s=200&v=4"
-          width="50"
-          height="50"
-        />
-      </a>
-      <br />
-      <a href="https://github.com/newrelic">newrelic</a>
-    </td>
-  </tr>
-</table>
 
 ## Author
 
