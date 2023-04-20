@@ -9,10 +9,9 @@
  * @param {traversalCallback} callback
  */
 export default function traversal(linkedList, callback) {
-  let currentNode = linkedList.head;
+  const iterator = linkedList.getIterator();
 
-  while (currentNode) {
-    callback(currentNode.value);
-    currentNode = currentNode.next;
+  for (const nodeValue of iterator) {
+    callback(nodeValue);
   }
 }
