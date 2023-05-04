@@ -1,24 +1,15 @@
-# JavaScript Algorithms and Data Structures
-
-> 🇺🇦 UKRAINE [IS BEING ATTACKED](https://war.ukraine.ua/) BY RUSSIAN ARMY. CIVILIANS ARE GETTING KILLED. RESIDENTIAL AREAS ARE GETTING BOMBED.
-> - Help Ukraine via [National Bank of Ukraine](https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi)
-> - Help Ukraine via [SaveLife](https://savelife.in.ua/en/donate-en/) fund
-> - More info on [war.ukraine.ua](https://war.ukraine.ua/) and [MFA of Ukraine](https://twitter.com/MFA_Ukraine)
-
-<hr/>
+# JavaScript Algorithms និង Data Structures
 
 [![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 ![repo size](https://img.shields.io/github/repo-size/trekhleb/javascript-algorithms.svg)
 
-This repository contains JavaScript based examples of many
-popular algorithms and data structures.
+រ៉េប៉ូJavaScript​ នេះមានទៅដោយឧទាហរណ៍ algorithms​ និង data structure ដែលពេញនិយមជាច្រើន។
 
-Each algorithm and data structure has its own separate README
-with related explanations and links for further reading (including ones
-to YouTube videos).
+algorithm និង data structure នីមួយៗមាននូវឯកសារអានផ្សេងៗ
+ដែលទាក់ទងទៅនឹងការពន្យល់និងលីងចង្អុលទៅរកឯកសារអានបន្ត(ព្រមមានទាំងYoutubeវីឌីអូ).
 
-_Read this in other languages:_
+_អាននេះជាភាសាផ្សេង:_
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
 [_한국어_](README.ko-KR.md),
@@ -37,24 +28,23 @@ _Read this in other languages:_
 [_Deutsch_](README.de-DE.md),
 [_កម្ពុជា_](README.km-KH.md)
 
-*☝ Note that this project is meant to be used for learning and researching purposes
-only, and it is **not** meant to be used for production.*
+*☝ សូមចំណាំថា គម្រោងនេះ មានបំណងប្រើប្រាស់សម្រាប់គោលបំណងសិក្សា និងស្រាវជ្រាវ
+តែប៉ុណ្ណោះ, ហើយវាគឺ**មិនតម្រង់**អោយប្រើនៅតំណាក់កាលប្រដាក់សិនទេ.*
 
 ## Data Structures
 
-A data structure is a particular way of organizing and storing data in a computer so that it can
-be accessed and modified efficiently. More precisely, a data structure is a collection of data
-values, the relationships among them, and the functions or operations that can be applied to
-the data.
+data structureគឺជាវិធីជាក់លាក់មួយក្នុងការរៀបចំនិងរក្សាទុកទិន្នន័យនៅក្នុងកុំព្យូទ័រដើម្បីឱ្យវាអាចធ្វើបាន
+ត្រូវបានចូលប្រើ និងកែប្រែប្រកបដោយប្រសិទ្ធភាព។. ច្បាស់ជាងនេះទៅទៀត data structureគឺជាការប្រមូលតម្លៃទិន្នន័យ
+ទំនាក់ទំនងរវាងពួកវា និងមុខងារ ឬប្រតិបត្តិការដែលអាចត្រូវបានអនុវត្តទៅ
+ទិន្នន័យនោះ។
 
-`B` - Beginner, `A` - Advanced
+`B` - ចាប់ផ្តើមដំបូង, `A` - កម្រិតខ្ពស់
 
-* `B` [Linked List](src/data-structures/linked-list)
 * `B` [Doubly Linked List](src/data-structures/doubly-linked-list)
 * `B` [Queue](src/data-structures/queue)
 * `B` [Stack](src/data-structures/stack)
 * `B` [Hash Table](src/data-structures/hash-table)
-* `B` [Heap](src/data-structures/heap) - max and min heap versions
+* `B` [Heap](src/data-structures/heap) - max និង min heap versions
 * `B` [Priority Queue](src/data-structures/priority-queue)
 * `A` [Trie](src/data-structures/trie)
 * `A` [Tree](src/data-structures/tree)
@@ -70,14 +60,14 @@ the data.
 
 ## Algorithms
 
-An algorithm is an unambiguous specification of how to solve a class of problems. It is
-a set of rules that precisely define a sequence of operations.
+An algorithm គឺជាការបញ្ជាក់ច្បាស់លាស់នៃរបៀបដោះស្រាយបញ្ហា។ វា​គឺ​ជា​
+សំណុំច្បាប់ដែលកំណត់យ៉ាងជាក់លាក់នូវលំដាប់នៃប្រតិបត្តិការមួយៗ។
 
-`B` - Beginner, `A` - Advanced
+`B` - ចាប់ផ្តើមដំបូង, `A` - កម្រិតខ្ពស់
 
-### Algorithms by Topic
+### Algorithms តាមប្រធានបទ
 
-* **Math**
+* **គណិតវិទ្យា**
   * `B` [Bit Manipulation](src/algorithms/math/bits) - set/get/update/clear bits, multiplication/division by two, make negative etc.
   * `B` [Binary Floating Point](src/algorithms/math/binary-floating-point) - binary representation of the floating-point numbers.
   * `B` [Factorial](src/algorithms/math/factorial)
@@ -99,7 +89,7 @@ a set of rules that precisely define a sequence of operations.
   * `A` [Square Root](src/algorithms/math/square-root) - Newton's method
   * `A` [Liu Hui π Algorithm](src/algorithms/math/liu-hui) - approximate π calculations based on N-gons
   * `A` [Discrete Fourier Transform](src/algorithms/math/fourier-transform) - decompose a function of time (a signal) into the frequencies that make it up
-* **Sets**
+* **សំណុំ**
   * `B` [Cartesian Product](src/algorithms/sets/cartesian-product) - product of multiple sets
   * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
   * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set (bitwise, backtracking, and cascading solutions)
@@ -125,7 +115,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Jump Search](src/algorithms/search/jump-search) (or Block Search) - search in sorted array
   * `B` [Binary Search](src/algorithms/search/binary-search) - search in sorted array
   * `B` [Interpolation Search](src/algorithms/search/interpolation-search) - search in uniformly distributed sorted array
-* **Sorting**
+* **ការតម្រៀប**
   * `B` [Bubble Sort](src/algorithms/sorting/bubble-sort)
   * `B` [Selection Sort](src/algorithms/sorting/selection-sort)
   * `B` [Insertion Sort](src/algorithms/sorting/insertion-sort)
@@ -139,10 +129,10 @@ a set of rules that precisely define a sequence of operations.
 * **Linked Lists**
   * `B` [Straight Traversal](src/algorithms/linked-list/traversal)
   * `B` [Reverse Traversal](src/algorithms/linked-list/reverse-traversal)
-* **Trees**
+* **ដើមឈើ**
   * `B` [Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [Breadth-First Search](src/algorithms/tree/breadth-first-search) (BFS)
-* **Graphs**
+* **ក្រាហ្វ**
   * `B` [Depth-First Search](src/algorithms/graph/depth-first-search) (DFS)
   * `B` [Breadth-First Search](src/algorithms/graph/breadth-first-search) (BFS)
   * `B` [Kruskal’s Algorithm](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
@@ -158,7 +148,7 @@ a set of rules that precisely define a sequence of operations.
   * `A` [Hamiltonian Cycle](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
   * `A` [Strongly Connected Components](src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
   * `A` [Travelling Salesman Problem](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
-* **Cryptography**
+* **គ្រីពតូក្រាហ្វី**
   * `B` [Polynomial Hash](src/algorithms/cryptography/polynomial-hash) - rolling hash function based on polynomial
   * `B` [Rail Fence Cipher](src/algorithms/cryptography/rail-fence-cipher) - a transposition cipher algorithm for encoding messages
   * `B` [Caesar Cipher](src/algorithms/cryptography/caesar-cipher) - simple substitution cipher
@@ -169,11 +159,11 @@ a set of rules that precisely define a sequence of operations.
   * `B` [k-Means](src/algorithms/ml/k-means) - k-Means clustering algorithm
 * **Image Processing**
   * `B` [Seam Carving](src/algorithms/image-processing/seam-carving) - content-aware image resizing algorithm
-* **Statistics**
+* **ស្ថិតិ**
   * `B` [Weighted Random](src/algorithms/statistics/weighted-random) - select the random item from the list based on items' weights
 * **Evolutionary algorithms**
   * `A` [Genetic algorithm](https://github.com/trekhleb/self-parking-car-evolution) - example of how the genetic algorithm may be applied for training the self-parking cars
-* **Uncategorized**
+* **មិនបានចាត់ថ្នាក់ប្រធានបទ**
   * `B` [Tower of Hanoi](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Square Matrix Rotation](src/algorithms/uncategorized/square-matrix-rotation) - in-place algorithm
   * `B` [Jump Game](src/algorithms/uncategorized/jump-game) - backtracking, dynamic programming (top-down + bottom-up) and greedy examples
@@ -184,10 +174,10 @@ a set of rules that precisely define a sequence of operations.
   * `A` [N-Queens Problem](src/algorithms/uncategorized/n-queens)
   * `A` [Knight's Tour](src/algorithms/uncategorized/knight-tour)
 
-### Algorithms by Paradigm
+### Algorithms by paradigm
 
-An algorithmic paradigm is a generic method or approach which underlies the design of a class
-of algorithms. It is an abstraction higher than the notion of an algorithm, just as an
+An algorithmic paradigm គឺជាវិធីសាស្រ្តទូទៅ ឬវិធីសាស្រ្តដែលផ្អែកលើការរចនានៃថ្នាក់
+នៃក្បួនដោះស្រាយ. It is an abstraction higher than the notion of an algorithm, just as an
 algorithm is an abstraction higher than a computer program.
 
 * **Brute Force** - look at all the possibilities and selects the best solution
@@ -253,102 +243,103 @@ a least-cost solution to the problem, in order to discard partial solutions with
 lowest-cost solution found so far. Normally BFS traversal in combination with DFS traversal of state-space
 tree is being used.
 
-## How to use this repository
+## របៀបប្រើប្រាស់រ៉េប៉ូនេះ
 
-**Install all dependencies**
+**ដំឡើងភាពអាស្រ័យទាំងអស់**
 
 ```
 npm install
 ```
 
-**Run ESLint**
+**ប្រើ ESLint**
 
-You may want to run it to check code quality.
+អ្នកប្រហែលជាត្រូវរត់ដំណើរការវា ដើម្បីពិនិត្យមើលគុណភាពកូដ.
 
 ```
 npm run lint
 ```
 
-**Run all tests**
+**ធ្វើតេស្តគ្រប់យ៉ាង**
 
 ```
 npm test
 ```
 
-**Run tests by name**
+**ធ្វើតេស្តតាមឈ្មោះ**
 
 ```
 npm test -- 'LinkedList'
 ```
 
-**Troubleshooting**
+**ការ​ដោះស្រាយ​បញ្ហា**
 
-If linting or testing is failing, try to delete the `node_modules` folder and re-install npm packages:
+ប្រសិនបើ linting ឬការសាកល្បងបរាជ័យ សូមព្យាយាមលុប `node_modules` ថតឯកសារ ហើយដំឡើងកញ្ចប់ npm ឡើងវិញ:
 
 ```
 rm -rf ./node_modules
 npm i
 ```
 
-Also make sure that you're using a correct Node version (`>=16`). If you're using [nvm](https://github.com/nvm-sh/nvm) for Node version management you may run `nvm use` from the root folder of the project and the correct version will be picked up.
+ត្រូវប្រាកដថាអ្នកកំពុងប្រើកំណែ Node ត្រឹមត្រូវ(`>=16`). ប្រសិនបើអ្នកកំពុងប្រើ [nvm](https://github.com/nvm-sh/nvm) សម្រាប់ការគ្រប់គ្រងកំណែ Node អ្នកអាចដំណើរការបាន។ `nvm use` ពីថត root នៃគម្រោង ហើយកំណែត្រឹមត្រូវនឹងត្រូវបានជ្រើសរើស។
 
-**Playground**
+**កន្លែងសាកល្បង**
 
-You may play with data-structures and algorithms in `./src/playground/playground.js` file and write
-tests for it in `./src/playground/__test__/playground.test.js`.
+អ្នកអាចសាកល្បងលេងជាមួយនឹង data-structures និង algorithms ក្នុង `./src/playground/playground.js` ថត និង​សរសេរ
+តេស្តរបស់វានៅក្នុងថតនេះផងដែរ `./src/playground/__test__/playground.test.js`.
 
-Then just simply run the following command to test if your playground code works as expected:
+បន្ទាប់មកគ្រាន់តែដំណើរការពាក្យបញ្ជាខាងក្រោមដើម្បីសាកល្បងថាតើលេខកូដកន្លែងសាកល្បងរបស់អ្នកដំណើរការដូចការរំពឹងទុកដែរឬទេ:
+
 
 ```
 npm test -- 'playground'
 ```
 
-## Useful Information
+## ព័ត៌មានមានប្រយោជន៍
 
-### References
+### ឯកសារយោង
 
-- [▶ Data Structures and Algorithms on YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
-- [✍🏻 Data Structure Sketches](https://okso.app/showcase/data-structures)
+- [▶ Data Structures និង Algorithms នៅលើ YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
+- [✍🏻 Data Structure គំនូរព្រាង](https://okso.app/showcase/data-structures)
 
 ### Big O Notation
 
-*Big O notation* is used to classify algorithms according to how their running time or space requirements grow as the input size grows.
-On the chart below you may find most common orders of growth of algorithms specified in Big O notation.
+*Big O notation* ត្រូវ​បាន​ប្រើ​ដើម្បី​ចាត់​ថ្នាក់​ក្បួន​ដោះស្រាយ​ដោយ​យោង​ទៅ​តាម​របៀប​ដែល​ពេល​វេលា​រត់​ ឬ​តម្រូវ​ការ​លំហ​របស់​វា​កើនឡើង​ខណៈ​ទំហំ​បញ្ចូល​កើនឡើង។
+នៅលើគំនូសតាងខាងក្រោម អ្នកអាចរកឃើញលំដាប់ទូទៅបំផុតនៃការលូតលាស់នៃក្បួនដោះស្រាយដែលបានបញ្ជាក់នៅក្នុងសញ្ញាសម្គាល់ Big O ។
 
-![Big O graphs](./assets/big-o-graph.png)
+![ក្រាហ្វ​ Big O](./assets/big-o-graph.png)
 
-Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+Source: [ព្រឺយ៉ុង​ Big O](http://bigocheatsheet.com/).
 
-Below is the list of some of the most used Big O notations and their performance comparisons against different sizes of the input data.
+ខាងក្រោមនេះគឺជាបញ្ជីនៃសញ្ញាសម្គាល់ Big O មួយចំនួនដែលបានប្រើច្រើនបំផុត និងការប្រៀបធៀបការអនុវត្តរបស់ពួកគេជាមួយនឹងទំហំផ្សេងគ្នានៃទិន្នន័យបញ្ចូល។
 
-| Big O Notation | Type        | Computations for 10 elements | Computations for 100 elements | Computations for 1000 elements  |
+| Big O Notation | ប្រភេទ        | ការគណនាសម្រាប់ធាតុ 10​​​​​​​​​​​​​​​           | ការគណនាសម្រាប់ធាតុ 100​              | ការគណនាសម្រាប់ធាតុ 100០             |
 | -------------- | ----------- | ---------------------------- | ----------------------------- | ------------------------------- |
-| **O(1)**       | Constant    | 1                            | 1                             | 1                               |
-| **O(log N)**   | Logarithmic | 3                            | 6                             | 9                               |
-| **O(N)**       | Linear      | 10                           | 100                           | 1000                            |
+| **O(1)**       | ថេរ          | 1                            | 1                             | 1                               |
+| **O(log N)**   | លោការីត      | 3                            | 6                             | 9                               |
+| **O(N)**       | លីនេអ៊ែរ       | 10                           | 100                           | 1000                            |
 | **O(N log N)** | n log(n)    | 30                           | 600                           | 9000                            |
 | **O(N^2)**     | Quadratic   | 100                          | 10000                         | 1000000                         |
-| **O(2^N)**     | Exponential | 1024                         | 1.26e+29                      | 1.07e+301                       |
+| **O(2^N)**     | អិចស្ប៉ូណង់ស្យែល | 1024                         | 1.26e+29                      | 1.07e+301                       |
 | **O(N!)**      | Factorial   | 3628800                      | 9.3e+157                      | 4.02e+2567                      |
 
 ### Data Structure Operations Complexity
 
-| Data Structure          | Access    | Search    | Insertion | Deletion  | Comments  |
+| Data Structure          | ការប្រើ      | ស្វែងរក     | ការបញ្ចូល    | ការលុប      | មតិយោបល់  |
 | ----------------------- | :-------: | :-------: | :-------: | :-------: | :-------- |
 | **Array**               | 1         | n         | n         | n         |           |
 | **Stack**               | n         | n         | 1         | 1         |           |
 | **Queue**               | n         | n         | 1         | 1         |           |
 | **Linked List**         | n         | n         | 1         | n         |           |
-| **Hash Table**          | -         | n         | n         | n         | In case of perfect hash function costs would be O(1) |
+| **Hash Table**          | -         | n         | n         | n         | នៅក្នុងករណីនៃមុខងារ hash ដ៏ល្អឥតខ្ចោះ នឹងត្រូវចំណាយ O(1) |
 | **Binary Search Tree**  | n         | n         | n         | n         | In case of balanced tree costs would be O(log(n)) |
 | **B-Tree**              | log(n)    | log(n)    | log(n)    | log(n)    |           |
 | **Red-Black Tree**      | log(n)    | log(n)    | log(n)    | log(n)    |           |
 | **AVL Tree**            | log(n)    | log(n)    | log(n)    | log(n)    |           |
-| **Bloom Filter**        | -         | 1         | 1         | -         | False positives are possible while searching |
+| **Bloom Filter**        | -         | 1         | 1         | -         | ភាពវិជ្ជមានមិនពិតអាចធ្វើទៅបាននៅពេលស្វែងរក |
 
 ### Array Sorting Algorithms Complexity
 
-| Name                  | Best            | Average             | Worst               | Memory    | Stable    | Comments  |
+| ឈ្មោះ                  | ល្អបំផុត            | មធ្យម                | Worst               | អាក្រក់បំផុត    | ស្ថិរភាព     | មតិយោបល់  |
 | --------------------- | :-------------: | :-----------------: | :-----------------: | :-------: | :-------: | :-------- |
 | **Bubble sort**       | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
 | **Insertion sort**    | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
@@ -356,9 +347,9 @@ Below is the list of some of the most used Big O notations and their performance
 | **Heap sort**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |           |
 | **Merge sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Yes       |           |
 | **Quick sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No        | Quicksort is usually done in-place with O(log(n)) stack space |
-| **Shell sort**        | n&nbsp;log(n)   | depends on gap sequence   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
-| **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - biggest number in array |
-| **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Yes       | k - length of longest key |
+| **Shell sort**        | n&nbsp;log(n)   | អាស្រ័យលើលំហលំដាប់      | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
+| **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - ចំនួនធំបំផុតនៅក្នុងអារេ |
+| **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Yes       | k - ប្រវែងនៃគន្លឹះវែងបំផុត |
 
 ## Project Backers
 
