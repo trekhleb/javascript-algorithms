@@ -75,7 +75,7 @@ export default function eulerianPath(graph) {
       [edgeToDelete] = currentEdges;
     } else {
       // If there are many edges left then we need to peek any of those except bridges.
-      [edgeToDelete] = currentEdges.filter(edge => !bridges[edge.getKey()]);
+      [edgeToDelete] = currentEdges.filter((edge) => !bridges[edge.getKey()]);
     }
 
     // Detect next current vertex.

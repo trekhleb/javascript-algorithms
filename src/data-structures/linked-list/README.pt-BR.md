@@ -1,24 +1,26 @@
 # Lista Encadeada (Linked List)
 
 Na ciência da computação, uma **lista encadeada** é uma coleção linear de
-elementos de dado, em que a ordem linear não é dada por sua locação
+elementos de dados, em que a ordem linear não é dada por sua locação
 física na memória. Em vez disso, cada elemento aponta para o próximo.
 É uma estrutura de dados consistindo em um grupo de nós
 que juntos representam uma sequência. Sob a forma mais simples,
 cada nó é composto de dados e uma referência (em outras palavras,
-uma ligação/conexão) para o próximo nó na sequência. Esta estrutua
-permite uma eficiente inserção e remoção de elementos de qualquer
+uma ligação/conexão) para o próximo nó na sequência. Esta estrutura
+permite inserção ou remoção eficiente de elementos de qualquer
 posição na sequência durante a iteração.
 
 Variantes mais complexas adicionam ligações adicionais, permitindo
 uma inserção ou remoção mais eficiente a partir de referências
-de elementos arbitrárias. Uma desvantagem das listas vinculadas
+de elementos arbitrárias. Uma desvantagem das listas encadeadas
 é que o tempo de acesso é linear (e difícil de inserir em uma
-pipeline). Acessos mais rápidos, como acesso aleatório, não é viável.
+pipeline). Acesso mais rápido, como acesso aleatório, não é viável.
 Arrays possuem uma melhor localização de cache em comparação
-com lista encadeada (linked list).
+com listas encadeadas (linked lists).
 
-![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+![Linked List](./images/linked-list.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Pseudo código para Operações Básicas
 

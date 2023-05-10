@@ -1,13 +1,13 @@
 # JavaScriptアルゴリズムとデータ構造
 
-[![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
+[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
 このリポジトリには、JavaScriptベースの一般的なアルゴリズムとデータ構造に関する多数のサンプルが含まれています。
 
 
 各アルゴリズムとデータ構造には独自のREADMEがあります。
-関連する説明と、さらに読むためのリンク (関連YouTubeのビデオ)も含まれています。
+関連する説明、そして参考資料 (YouTube動画)も含まれています。
 
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
@@ -17,7 +17,15 @@ _Read this in other languages:_
 [_Polski_](README.pl-PL.md),
 [_Français_](README.fr-FR.md),
 [_Español_](README.es-ES.md),
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),
+[_Русский_](README.ru-RU.md),
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md),
+[_Bahasa Indonesia_](README.id-ID.md),
+[_Українська_](README.uk-UA.md),
+[_Arabic_](README.ar-AR.md),
+[_Tiếng Việt_](README.vi-VN.md),
+[_Deutsch_](README.de-DE.md)
 
 ## データ構造
 
@@ -57,7 +65,7 @@ _Read this in other languages:_
 
 * **数学**
   * `B` [ビット操作](src/algorithms/math/bits) - set/get/update/clear bits, 2つの乗算/除算, 否定的にする. 等
-  * `B` [因果関係](src/algorithms/math/factorial) 
+  * `B` [因果関係](src/algorithms/math/factorial)
   * `B` [フィボナッチ数](src/algorithms/math/fibonacci) - クラシックとクローズドフォームのバージョン
   * `B` [素数性テスト](src/algorithms/math/primality-test) (trial division 方法)
   * `B` [ユークリッドアルゴリズム](src/algorithms/math/euclidean-algorithm) - 最大公約数を計算する (GCD)
@@ -93,7 +101,7 @@ _Read this in other languages:_
   * `A` [正規表現マッチング](src/algorithms/string/regular-expression-matching)
 * **検索**
   * `B` [リニアサーチ](src/algorithms/search/linear-search)
-  * `B` [ジャンプ検索](src/algorithms/search/jump-search) (or Block Search) - ソートされた配列で検索
+  * `B` [ジャンプ検索](src/algorithms/search/jump-search) (Jump Search) - ソートされた配列で検索
   * `B` [バイナリ検索](src/algorithms/search/binary-search) - ソートされた配列で検索
   * `B` [補間探索](src/algorithms/search/interpolation-search) - 一様分布のソート配列で検索する
 * **並べ替え**
@@ -115,7 +123,7 @@ _Read this in other languages:_
 * **グラフ**
   * `B` [深度優先検索](src/algorithms/graph/depth-first-search) (DFS)
   * `B` [幅優先検索](src/algorithms/graph/breadth-first-search) (BFS)
-  * `B` [Kruskalのアルゴリズム](src/algorithms/graph/kruskal) - 重み付き無向グラフの最小スパニングツリー（MST）の発見 
+  * `B` [Kruskalのアルゴリズム](src/algorithms/graph/kruskal) - 重み付き無向グラフの最小スパニングツリー（MST）の発見
   * `A` [Dijkstraアルゴリズム](src/algorithms/graph/dijkstra) - 単一の頂点からすべてのグラフ頂点への最短経路を見つける
   * `A` [Bellman-Fordアルゴリズム](src/algorithms/graph/bellman-ford) - 単一の頂点からすべてのグラフ頂点への最短経路を見つける
   * `A` [Floyd-Warshallアルゴリズム](src/algorithms/graph/floyd-warshall) - すべての頂点ペア間の最短経路を見つける
@@ -143,7 +151,7 @@ _Read this in other languages:_
 ### Paradigmによるアルゴリズム
 
 アルゴリズムパラダイムは、あるクラスのアルゴリズムの設計の基礎をなす一般的な方法またはアプローチである。それは、アルゴリズムがコンピュータプログラムよりも高い抽象であるのと同様に、アルゴリズムの概念よりも高い抽象である。
-* **ブルートフォース** - べての可能性を見て最適なソリューションを選択する
+* **ブルートフォース** - すべての可能性を見て最適なソリューションを選択する
   * `B` [線形探索](src/algorithms/search/linear-search)
   * `B` [レインテラス](src/algorithms/uncategorized/rain-terraces) - 雨水問題
   * `B` [Recursive Staircase](src/algorithms/uncategorized/recursive-staircase) - 先頭に到達する方法の数を数えます
@@ -289,3 +297,5 @@ npm test -- 'playground'
 | **Shell sort**        | n&nbsp;log(n)   | depends on gap sequence   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
 | **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - biggest number in array |
 | **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Yes       | k - length of longest key |
+
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

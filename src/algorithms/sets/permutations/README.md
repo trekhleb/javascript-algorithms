@@ -4,13 +4,13 @@ When the order doesn't matter, it is a **Combination**.
 
 When the order **does** matter it is a **Permutation**.
 
-**"The combination to the safe is 472"**. We do care about the order. `724` won't work, nor will `247`. 
+**"The combination to the safe is 472"**. We do care about the order. `724` won't work, nor will `247`.
 It has to be exactly `4-7-2`.
 
 ## Permutations without repetitions
 
-A permutation, also called an “arrangement number” or “order”, is a rearrangement of 
-the elements of an ordered list `S` into a one-to-one correspondence with `S` itself. 
+A permutation, also called an “arrangement number” or “order”, is a rearrangement of
+the elements of an ordered list `S` into a one-to-one correspondence with `S` itself.
 
 Below are the permutations of string `ABC`.
 
@@ -37,19 +37,17 @@ For example the the lock below: it could be `333`.
 n * n * n ... (r times) = n^r
 ```
 
-## Cheat Sheets
+## Cheatsheet
 
-Permutations cheat sheet
+![Permutations and Combinations Overview](./images/overview.png)
 
-![Permutations Cheat Sheet](https://cdn-images-1.medium.com/max/2000/1*JNK-n0Pt0Vbxk0lxVpgT5A.png)
+![Permutations overview](./images/permutations-overview.jpeg)
 
-Combinations cheat sheet
+| | |
+| --- | --- |
+|![Permutations with repetition](./images/permutations-with-repetitions.jpg) | ![Permutations without repetition](./images/permutations-without-repetitions.jpg) |
 
-![Combinations Cheat Sheet](https://cdn-images-1.medium.com/max/2000/1*7cFRn8jW4g_91YgDAbmxRQ.png)
-
-Permutations/combinations algorithm ideas.
-
-![Algorithms Idea](https://cdn-images-1.medium.com/max/2000/1*vLsSsZMnesCFPCYTYMbxrQ.png)
+*Made with [okso.app](https://okso.app)*
 
 ## References
 

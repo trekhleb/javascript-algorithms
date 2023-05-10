@@ -7,6 +7,8 @@ describe('longestCommonSubstring', () => {
     expect(longestCommonSubstring('', 'ABC')).toBe('');
     expect(longestCommonSubstring('ABABC', 'BABCA')).toBe('BABC');
     expect(longestCommonSubstring('BABCA', 'ABCBA')).toBe('ABC');
+    expect(longestCommonSubstring('sea', 'eat')).toBe('ea');
+    expect(longestCommonSubstring('algorithms', 'rithm')).toBe('rithm');
     expect(longestCommonSubstring(
       'Algorithms and data structures implemented in JavaScript',
       'Here you may find Algorithms and data structures that are implemented in JavaScript',

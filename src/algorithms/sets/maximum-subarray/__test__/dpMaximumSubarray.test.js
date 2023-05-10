@@ -1,7 +1,7 @@
 import dpMaximumSubarray from '../dpMaximumSubarray';
 
 describe('dpMaximumSubarray', () => {
-  it('should find maximum subarray using dynamic programming algorithm', () => {
+  it('should find maximum subarray using the dynamic programming algorithm', () => {
     expect(dpMaximumSubarray([])).toEqual([]);
     expect(dpMaximumSubarray([0, 0])).toEqual([0]);
     expect(dpMaximumSubarray([0, 0, 1])).toEqual([0, 0, 1]);

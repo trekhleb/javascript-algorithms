@@ -8,7 +8,7 @@
 
 Na ciência da computação, uma **árvore** é uma estrutura de dados
 abstrada (ADT) amplamente utilizada - ou uma estrutura de dados
-implementando este ADT que simula uma estrutura hierarquica de árvore,
+implementando este ADT que simula uma estrutura hierárquica de árvore,
 com valor raíz e sub-árvores de filhos com um nó pai, representado
 como um conjunto de nós conectados.
 
@@ -22,7 +22,9 @@ Uma árvore não ordenada simples; neste diagrama, o nó rotulado como `7`
 possui dois filhos, rotulados como `2` e `6`, e um pai, rotulado como `2`.
 O nó raíz, no topo, não possui nenhum pai.
 
-![Tree](https://upload.wikimedia.org/wikipedia/commons/f/f7/Binary_tree.svg)
+![Tree](./images/tree.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Referências
 

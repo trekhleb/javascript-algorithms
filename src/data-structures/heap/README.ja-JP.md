@@ -4,11 +4,15 @@
 
 *最小ヒープ*では、もし`P`が`C`の親ノードの場合、`P`のキー(値)は`C`のキーより小さい、または等しくなります。
 
-![MinHeap](https://upload.wikimedia.org/wikipedia/commons/6/69/Min-heap.png)
+![MinHeap](./images/min-heap.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 *最大ヒープ*では、`P`のキーは`C`のキーより大きい、もしくは等しくなります。
 
-![Heap](https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg)
+![MaxHeap](./images/max-heap.jpeg)
+
+![Array Representation](./images/array-representation.jpeg)
 
 ヒープの「トップ」のノードには親ノードが存在せず、ルートノードと呼ばれます。
 

@@ -1,10 +1,14 @@
 # Bit Manipulation
 
+_Read this in other languages:_
+[français](README.fr-FR.md),
+[简体中文](README.zh-CN.md).
+
 #### Get Bit
 
 This method shifts the relevant bit to the zeroth position.
 Then we perform `AND` operation with one which has bit
-pattern like `0001`.  This clears all bits from the original
+pattern like `0001`. This clears all bits from the original
 number except the relevant one. If the relevant bit is one,
 the result is `1`, otherwise the result is `0`.
 
@@ -53,7 +57,7 @@ isEven: true
 
 #### isPositive
 
-This method determines if the number is positive. It is based on the fact that all positive 
+This method determines if the number is positive. It is based on the fact that all positive
 numbers have their leftmost bit to be set to `0`. However, if the number provided is zero
 or negative zero, it should still return `false`.
 
@@ -230,12 +234,13 @@ Number: 9 = (10 - 1) = 0b01001
 
 This method adds up two integer numbers using bitwise operators.
 
-It implements [full adder](https://en.wikipedia.org/wiki/Adder_(electronics))
+It implements [full adder](<https://en.wikipedia.org/wiki/Adder_(electronics)>)
 electronics circuit logic to sum two 32-bit integers in two's complement format.
 It's using the boolean logic to cover all possible cases of adding two input bits:
 with and without a "carry bit" from adding the previous less-significant stage.
 
 Legend:
+
 - `A`: Number `A`
 - `B`: Number `B`
 - `ai`: ith bit of number `A`
@@ -259,7 +264,7 @@ B = 6: 110
 └──────┴────┴────┴─────────┴──────────┴─────────┴───────────┴───────────┘
 ```
 
-> See [fullAdder.js](fullAdder.js) for further details.  
+> See [fullAdder.js](fullAdder.js) for further details.
 > See [Full Adder on YouTube](https://www.youtube.com/watch?v=wvJc9CZcvBc&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8).
 
 ## References

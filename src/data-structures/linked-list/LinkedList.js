@@ -56,6 +56,40 @@ export default class LinkedList {
 
   /**
    * @param {*} value
+   * @param {number} index
+   * @return {LinkedList}
+   */
+  insert(value, rawIndex) {
+    const index = rawIndex < 0 ? 0 : rawIndex;
+    if (index === 0) {
+      this.prepend(value);
+    } else {
+      let count = 1;
+      let currentNode = this.head;
+      const newNode = new LinkedListNode(value);
+      while (currentNode) {
+        if (count === index) break;
+        currentNode = currentNode.next;
+        count += 1;
+      }
+      if (currentNode) {
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+      } else {
+        if (this.tail) {
+          this.tail.next = newNode;
+          this.tail = newNode;
+        } else {
+          this.head = newNode;
+          this.tail = newNode;
+        }
+      }
+    }
+    return this;
+  }
+
+  /**
+   * @param {*} value
    * @return {LinkedListNode}
    */
   delete(value) {
@@ -65,7 +99,7 @@ export default class LinkedList {
 
     let deletedNode = null;
 
-    // If the head must be deleted then make next node that is differ
+    // If the head must be deleted then make next node that is different
     // from the head to be a new head.
     while (this.head && this.compare.equal(this.head.value, value)) {
       deletedNode = this.head;
@@ -180,7 +214,7 @@ export default class LinkedList {
    * @return {LinkedList}
    */
   fromArray(values) {
-    values.forEach(value => this.append(value));
+    values.forEach((value) => this.append(value));
 
     return this;
   }
@@ -205,7 +239,7 @@ export default class LinkedList {
    * @return {string}
    */
   toString(callback) {
-    return this.toArray().map(node => node.toString(callback)).toString();
+    return this.toArray().map((node) => node.toString(callback)).toString();
   }
 
   /**
