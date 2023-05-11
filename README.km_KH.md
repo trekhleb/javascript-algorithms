@@ -1,5 +1,12 @@
 # JavaScript Algorithms និង Data Structure
 
+> 🇺🇦 អ៊ុយក្រែន [កំពុងត្រូវវាយប្រហារ](https://war.ukraine.ua/) ដោយកងទ័ពរុស្ស៊ី។ ប្រជាជនកំពុងត្រូវបានសម្លាប់។ តំបន់​លំនៅឋាន​កំពុង​ត្រូវ​បាន​បំផ្ទុះ។
+> - ជួយអ៊ុយក្រែនតាមរយៈ [ធនាគារជាតិនៃអ៊ុយក្រែន](https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi)
+> - ជួយអ៊ុយក្រែនតាមរយៈ [SaveLife](https://savelife.in.ua/en/donate-en/) មូលនិធិ
+> - ព័ត៌មានបន្ថែមអំពី [war.ukraine.ua](https://war.ukraine.ua/) និង [MFA of Ukraine](https://twitter.com/MFA_Ukraine)
+
+<hr/>
+
 [![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 ![repo size](https://img.shields.io/github/repo-size/trekhleb/javascript-algorithms.svg)
@@ -26,7 +33,7 @@ _អាននេះជាភាសាផ្សេង:_
 [_Arabic_](README.ar-AR.md),
 [_Tiếng Việt_](README.vi-VN.md),
 [_Deutsch_](README.de-DE.md),
-[_កម្ពុជា_](README.km-KH.md)
+[_ខ្មែរ_](README.km-KH.md)
 
 *☝ សូមចំណាំថា គម្រោងនេះ មានបំណងប្រើប្រាស់សម្រាប់គោលបំណងសិក្សា និងស្រាវជ្រាវ
 តែប៉ុណ្ណោះ, ហើយវាគឺ**មិនតម្រង់**អោយប្រើនៅតំណាក់កាលប្រដាក់សិនទេ.*
@@ -60,7 +67,7 @@ data structureគឺជាវិធីជាក់លាក់មួយក្ន
 
 ## Algorithms
 
-An algorithm គឺជាការបញ្ជាក់ច្បាស់លាស់នៃរបៀបដោះស្រាយបញ្ហា។ វា​គឺ​ជា​
+Algorithm គឺជាការបញ្ជាក់ច្បាស់លាស់នៃរបៀបដោះស្រាយបញ្ហា។ វា​គឺ​ជា​
 សំណុំច្បាប់ដែលកំណត់យ៉ាងជាក់លាក់នូវលំដាប់នៃប្រតិបត្តិការមួយៗ។
 
 `B` - ចាប់ផ្តើមដំបូង, `A` - កម្រិតខ្ពស់
@@ -110,7 +117,7 @@ An algorithm គឺជាការបញ្ជាក់ច្បាស់លា�
   * `A` [Rabin Karp Algorithm](src/algorithms/string/rabin-karp) - substring search
   * `A` [Longest Common Substring](src/algorithms/string/longest-common-substring)
   * `A` [Regular Expression Matching](src/algorithms/string/regular-expression-matching)
-* **Searches**
+* **ការស្វែងរក**
   * `B` [Linear Search](src/algorithms/search/linear-search)
   * `B` [Jump Search](src/algorithms/search/jump-search) (or Block Search) - search in sorted array
   * `B` [Binary Search](src/algorithms/search/binary-search) - search in sorted array
@@ -126,7 +133,7 @@ An algorithm គឺជាការបញ្ជាក់ច្បាស់លា�
   * `B` [Counting Sort](src/algorithms/sorting/counting-sort)
   * `B` [Radix Sort](src/algorithms/sorting/radix-sort)
   * `B` [Bucket Sort](src/algorithms/sorting/bucket-sort)
-* **Linked Lists**
+* **បញ្ជីភ្ជាប់**
   * `B` [Straight Traversal](src/algorithms/linked-list/traversal)
   * `B` [Reverse Traversal](src/algorithms/linked-list/reverse-traversal)
 * **ដើមឈើ**
@@ -251,7 +258,7 @@ tree is being used.
 npm install
 ```
 
-**ប្រើ ESLint**
+**ប្រើESLint**
 
 អ្នកប្រហែលជាត្រូវរត់ដំណើរការវា ដើម្បីពិនិត្យមើលគុណភាពកូដ.
 
