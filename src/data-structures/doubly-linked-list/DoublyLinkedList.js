@@ -213,6 +213,10 @@ export default class DoublyLinkedList {
     return nodes;
   }
 
+  size() {
+    return this.toArray().length;
+  }
+
   /**
    * @param {*[]} values - Array of values that need to be converted to linked list.
    * @return {DoublyLinkedList}

@@ -49,6 +49,13 @@ export default class Stack {
   }
 
   /**
+   * @return {number}
+   */
+  size() {
+    return this.linkedList.size();
+  }
+
+  /**
    * @return {*[]}
    */
   toArray() {
