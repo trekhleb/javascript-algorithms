@@ -23,7 +23,7 @@ together with a list of references to nodes (the "children"),
 with the constraints that no reference is duplicated, and none
 points to the root.
 
-A simple unordered tree; in this diagram, the node labeled 7 has
+A simple unordered tree; in this diagram, the node labeled 3 has
 two children, labeled 2 and 6, and one parent, labeled 2. The
 root node, at the top, has no parent.
 
