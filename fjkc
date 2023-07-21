@@ -1,0 +1,282 @@
+[33mcommit 8c5e5f4f0d5bb94439e02fe6ad6bb92b37a23834[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: trekhleb <trehleb@gmail.com>
+Date:   Mon Apr 10 18:47:10 2023 +0200
+
+    Add repo size
+
+[33mcommit 14c563619c300145de3d07d8e67024dc05869606[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Mon Apr 10 18:31:06 2023 +0200
+
+    Fix repo build for M1 MacBooks (#1029)
+
+[33mcommit bbbfd32a45a677950554a91c4ece8976b8b31c38[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Sat Mar 25 17:02:02 2023 +0100
+
+    Update Bakers.
+
+[33mcommit b9304f4787c9586ad146f24e305244d0df95e080[m
+Author: Yaroslav Podorvanov <63663261+YaroslavPodorvanov@users.noreply.github.com>
+Date:   Thu Mar 16 21:40:41 2023 +0200
+
+    feat: added Ukrainian translation for factorial (#1006)
+    
+    * added Ukrainian translations for factorial
+    
+    * added links to other languages
+    
+    * formatting
+    
+    * delete link
+    
+    * Türkçe
+    
+    ---------
+    
+    Co-authored-by: VictorPoprozhuk <victor.poprozhuk@gmail.com>
+
+[33mcommit 1ad60dc5107216e1f6febf7255e5fc915588c94b[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Mon Mar 13 14:12:43 2023 +0100
+
+    Add Bucket Sort.
+
+[33mcommit e95d856e6781fdb3a727f139bbc12249d814a80e[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Fri Feb 24 23:06:02 2023 -0100
+
+    Add bakers
+
+[33mcommit 46aae1d708f077ad229f200053cab8276fd6317c[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Fri Feb 24 23:04:35 2023 -0100
+
+    Add bakers
+
+[33mcommit 5a41865787350d1270ae07b2086604caf7d16454[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Mon Feb 20 18:41:58 2023 +0100
+
+    Add links for code examples for K-Means clustering
+
+[33mcommit af08253a956c994f098f84e5fdd700b6ce99b344[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Wed Feb 1 08:11:25 2023 +0100
+
+    Adding Heap time complexities
+
+[33mcommit 5fc33c0f0ae5c6ccddaf8c40a8af483fb750a3ad[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Mon Jan 30 09:08:17 2023 +0100
+
+    Add a recursive version of the Longest Common Subsequence.
+
+[33mcommit c9f1caf1ca87cfa23a5a12046a8359f93f337971[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Mon Jan 30 09:01:49 2023 +0100
+
+    Add a recursive version of the Longest Common Substring.
+
+[33mcommit bcd1cc1b008100098a906b610f79074db2edea0e[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Mon Jan 30 08:19:38 2023 +0100
+
+    Upgrade packages and Node versions. (#989)
+    
+    * Upgrade to Node 16
+    
+    * Upgrade packages and Node versions.
+
+[33mcommit 1d6249d552240794c4ea66e97cd91ae5b062392e[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Fri Jan 27 08:05:56 2023 +0100
+
+    Update README.
+
+[33mcommit 4b4d77071cee9c6ba50390ec3635a9755828daa3[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Tue Jan 24 09:43:12 2023 +0100
+
+    Add an example of the LRU Cache based on the Map.
+
+[33mcommit 69c3a16f75175fa6f49cd936e0049fdc6ede1da4[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Tue Jan 24 09:04:02 2023 +0100
+
+    Refactor LRU Cache.
+
+[33mcommit fbd77551b3196b15f7ea3373ad0efebc13fd47c1[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Mon Jan 23 18:44:46 2023 +0100
+
+    Update time complexity table for LRU.
+
+[33mcommit f6a0ed42bcaba0607fb2cc1d843f90d78ea340c3[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Mon Jan 23 18:43:52 2023 +0100
+
+    Update time complexity table for LRU.
+
+[33mcommit 6c4aa1b6a26c45e75d22a92adf1fcdcbc95cd401[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Mon Jan 23 18:43:00 2023 +0100
+
+    Update time complexity table for LRU.
+
+[33mcommit 3d8dd9a67f7e17ff892dd3186e351a5d9caee329[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Mon Jan 23 18:15:13 2023 +0100
+
+    Update LRU Cache README.
+
+[33mcommit d408abd833181c5866166ce6b6af073576bd5708[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Mon Jan 23 18:07:24 2023 +0100
+
+    Update LRU Cache image.
+
+[33mcommit e4f2ccdbece78d44d3f4bd908c828408b1c0c791[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Mon Jan 23 18:03:40 2023 +0100
+
+    Add an example of the LRU (Least Recently Used) Cache implementation (#980)
+    
+    * Add an example of the LRU Cache implementation.
+    
+    * Promote the node on set() as well.
+    
+    * Add LRU Cache images.
+
+[33mcommit 6c335c5d833fd2a68342cf3648a3174bed8c01ad[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Fri Jan 6 14:45:04 2023 +0100
+
+    Fixing the broken link for QuickSort
+
+[33mcommit 65e4a7c8b35914e70bfc2b7cbc58c5a9f654db53[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Fri Jan 6 14:37:36 2023 +0100
+
+    Adding a simple cascading solution to generate a Power Set (#975)
+    
+    * Add a simple cascading version of generating a PowerSet.
+    
+    * Update README.
+    
+    * Update README.
+    
+    * Update README.
+
+[33mcommit a123b9017d53a54853401b21382828b65c712e71[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Mon Dec 5 08:06:38 2022 +0100
+
+    Reverting Malay translation since most of the links are not working
+
+[33mcommit 2a6f724589a1887a8ed6b665fa238e29acbf8c8c[m
+Author: j0pgrm <109052480+j0pgrm@users.noreply.github.com>
+Date:   Sun Dec 4 23:59:33 2022 -0700
+
+    Malay readme (#927)
+    
+    * update-readme
+    
+    * deploy
+    
+    * deploy
+    
+    Co-authored-by: name <your mail>
+    Co-authored-by: Oleksii Trekhleb <trehleb@gmail.com>
+
+[33mcommit a6a4d01f95a1f1f2243360d1fd7dbd2275f0fa79[m
+Author: Oleksandr (Sasha) Khivrych <alexander.khivrych@gmail.com>
+Date:   Mon Dec 5 06:38:35 2022 +0000
+
+    feat: added ukranian translations for graph, heap, linked-list, priority-queue, queue, stack. trie (#965)
+
+[33mcommit 025b9a390b5cde87d4d00604ee745e8ea83202ff[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Mon Nov 28 16:43:30 2022 +0100
+
+    Update Permutation and Combination cheatsheets. (#963)
+
+[33mcommit 565256088a1b99d3d7901b5d8db992fe9acabd2d[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Thu Nov 10 15:06:33 2022 +0100
+
+    README updates.
+
+[33mcommit 8e4225ac713fe2b0747b66ab1cd4206ea72b7791[m
+Author: Berkay <102474166+doandroidsdreamof@users.noreply.github.com>
+Date:   Thu Nov 10 17:04:50 2022 +0300
+
+    Update README.md (#953)
+    
+    Co-authored-by: Oleksii Trekhleb <trehleb@gmail.com>
+
+[33mcommit e62572648c42b23b4e3a7ae68ce9529098eeca32[m
+Author: Oleksandr (Sasha) Khivrych <alexander.khivrych@gmail.com>
+Date:   Thu Nov 10 14:02:29 2022 +0000
+
+    feat: added ukr translations for bloom filter,  Disjoint Set, Doubly Linked List (#957)
+    
+    Co-authored-by: Oleksii Trekhleb <trehleb@gmail.com>
+
+[33mcommit 5de9ca28e90cf860dbcb114441f72b5a4342ebb9[m
+Author: David (Dato) Kadaria <94402615+davidkadaria@users.noreply.github.com>
+Date:   Thu Nov 10 18:00:21 2022 +0400
+
+    Added Georgian translation && Added link to the translation from other files (#951)
+
+[33mcommit c4164bf2240b1458252c3860f584bf01be4a85f8[m
+Author: Oleksii Trekhleb <trehleb@gmail.com>
+Date:   Fri Oct 21 22:21:11 2022 +0200
+
+    Update README.md
+
+[33mcommit da6ae08851b4bb6f35cb3e7a36263cd68689168a[m
+Author: Mateus Pfeffer <92607757+StPfeffer@users.noreply.github.com>
+Date:   Mon Oct 10 10:23:32 2022 -0300
+
+    Brazilian Portuguese translation and typos fixes (#943)
+    
+    * Update README.pt-BR.md
+    
+    * TRIE README.pt-BR typo
+    
+    * TREE README.pt-BR typo
+    
+    * Stack README.pt-BR typo
+    
+    * Priority Queue README.pt-BR typo
+    
+    * hash-table README.pt-BR typo
+    
+    * doubly-linked-list README.pt-BR typo
+    
+    * disjoint-set README.pt-BR typo
+    
+    * bloom-filter README.pt-BR typo
+    
+    * merge-sort pt-BR translation
+    
+    * merge-sort README added pt-BR option
+    
+    * insertion sort pt-BR translation
+    
+    * insertion sort README added pt-br option
+    
+    * heap-sort pt-BR translation
+    
+    * heap-sort READMED added pt-BR option
+    
+    * bubble sort pt-BR typo
+    
+    * pt-BR translation for sorting algorithms
+    
+    Fixed typos and translated all the missing algorithms
+    
+    * Update README.pt-BR.md
+    
+    * linked list pt-BR t
