@@ -63,27 +63,32 @@ export default class LinkedList {
     const index = rawIndex < 0 ? 0 : rawIndex;
     if (index === 0) {
       this.prepend(value);
+      return this;
+    }
+    // if we have single node in linked list and we have to insert a value we can insert at last
+    if (this.head === this.tail) {
+      this.append(value);
+      return this;
+    }
+    const newNode = new LinkedListNode(value);
+    let count = 1;
+    let currentNode = this.head;
+
+    while (currentNode) {
+      if (count === index) break;
+      currentNode = currentNode.next;
+      count += 1;
+    }
+    // if there is a node in the position we want to insert
+    if (currentNode) {
+      newNode.next = currentNode.next;
+      currentNode.next = newNode;
     } else {
-      let count = 1;
-      let currentNode = this.head;
-      const newNode = new LinkedListNode(value);
-      while (currentNode) {
-        if (count === index) break;
-        currentNode = currentNode.next;
-        count += 1;
-      }
-      if (currentNode) {
-        newNode.next = currentNode.next;
-        currentNode.next = newNode;
-      } else {
-        if (this.tail) {
-          this.tail.next = newNode;
-          this.tail = newNode;
-        } else {
-          this.head = newNode;
-          this.tail = newNode;
-        }
-      }
+      /*  if index exceeds the size of linked list we
+    will be appending the node at last or if the linked
+    list dosent exist we will be appending the value that
+    means inserting a new value into the linked list */
+      this.append(value);
     }
     return this;
   }
@@ -239,7 +244,9 @@ export default class LinkedList {
    * @return {string}
    */
   toString(callback) {
-    return this.toArray().map((node) => node.toString(callback)).toString();
+    return this.toArray()
+      .map((node) => node.toString(callback))
+      .toString();
   }
 
   /**
