@@ -372,3 +372,7 @@ Below is the list of some of the most used Big O notations and their performance
 [@trekhleb](https://trekhleb.dev)
 
 A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
+
+<div align="center">
+  <a href="https://commons.wikimedia.org/wiki/Category:JavaScript_mascot"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/JavaScript_mascot_bliss.png/562px-JavaScript_mascot_bliss.png" width="450px"></a>
+</div>
