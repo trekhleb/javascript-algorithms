@@ -1,5 +1,8 @@
 # Regular Expression Matching
 
+_Read this in other languages:_
+[中文](README.zh-CN.md)
+
 Given an input string `s` and a pattern `p`, implement regular 
 expression matching with support for `.` and `*`.
 
