@@ -1,0 +1,35 @@
+//This this function is use to calculate the median of array
+
+@param num
+@return median
+
+alert(selectMedian([75,3,5,52300,5,4,0,123,2,76,768,28]));
+
+function selectMedian(arr) {
+   const Length = arr.length, halfLength = Length/2;
+   if (Length % 2 == 1)
+      return select(arr, halfLength);
+   else
+      return 0.5 * (select(arr, halfLength - 1) + select(arr, halfLength));
+}
+
+function select(arr, mid) {
+   // Select the mid element in arr
+   // arr: List of numerics
+   // mid: Index
+   // return: The mid element (in numerical order) of arr
+   if (arr.length == 1)
+      return arr[0];
+   else {
+      const pivot = arr[0];
+      const lows = arr.filter((e)=>(e<pivot));
+      const highs = arr.filter((e)=>(e>pivot));
+      const pivots = arr.filter((e)=>(e==pivot));
+      if (mid < lows.length) // the pivot is too high
+         return select(lows, mid);
+      else if (mid < lows.length + pivots.length)// We got lucky and guessed the median
+         return pivot;
+      else // the pivot is too low
+         return select(highs, mid - lows.length - pivots.length);
+   }
+}
