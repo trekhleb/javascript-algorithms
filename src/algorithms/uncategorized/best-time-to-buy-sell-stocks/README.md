@@ -46,7 +46,7 @@ Let's say we have an array of prices `[7, 6, 4, 3, 1]` and we're on the _1st_ da
 1. _Option 1: Keep the money_ → profit would equal to the profit from buying/selling the rest of the stocks → `keepProfit = profit([6, 4, 3, 1])`.
 2. _Option 2: Buy/sell at current price_ → profit in this case would equal to the profit from buying/selling the rest of the stocks plus (or minus, depending on whether we're selling or buying) the current stock price → `buySellProfit = -7 + profit([6, 4, 3, 1])`.
 
-The overall profit would be equal to → `overalProfit = Max(keepProfit, buySellProfit)`.
+The overall profit would be equal to → `overallProfit = Max(keepProfit, buySellProfit)`.
 
 As you can see the `profit([6, 4, 3, 1])` task is being solved in the same recursive manner.
 

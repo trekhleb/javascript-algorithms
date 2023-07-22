@@ -93,7 +93,7 @@ three factors: the size of the bloom filter, the
 number of hash functions we use, and the number
 of items that have been inserted into the filter.
 
-The formula to calculate probablity of a false positive is:
+The formula to calculate probability of a false positive is:
 
 ( 1 - e <sup>-kn/m</sup> ) <sup>k</sup>
 
