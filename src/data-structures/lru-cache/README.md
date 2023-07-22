@@ -1,5 +1,8 @@
 # Least Recently Used (LRU) Cache
 
+_Read this in other languages:_
+[한국어](README.ko-KR.md),
+
 A **Least Recently Used (LRU) Cache** organizes items in order of use, allowing you to quickly identify which item hasn't been used for the longest amount of time.
 
 Picture a clothes rack, where clothes are always hung up on one side. To find the least-recently used item, look at the item on the other end of the rack.
@@ -22,7 +25,7 @@ See the `LRUCache` implementation example in [LRUCache.js](./LRUCache.js). The s
 
 ![Linked List](./images/lru-cache.jpg)
 
-*Made with [okso.app](https://okso.app)*
+_Made with [okso.app](https://okso.app)_
 
 You may also find more test-case examples of how the LRU Cache works in [LRUCache.test.js](./__test__/LRUCache.test.js) file.
 
@@ -38,11 +41,11 @@ You may also find more test-case examples of how the LRU Cache works in [LRUCach
 
 ## Complexities
 
-|   | Average |
-|---|---|
-| Space |`O(n)`|
-| Get item | `O(1)` |
-| Set item | `O(1)` |
+|          | Average |
+| -------- | ------- |
+| Space    | `O(n)`  |
+| Get item | `O(1)`  |
+| Set item | `O(1)`  |
 
 ## References
 
