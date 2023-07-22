@@ -104,9 +104,9 @@ remove(value)
     root ← ø
   else if nodeToRemove.left = ø and nodeToRemove.right = ø
     if nodeToRemove.value < parent.value
-      parent.left ←  nodeToRemove.right
+      parent.left  ← ø
     else
-      parent.right ← nodeToRemove.right
+      parent.right ← ø
     end if
   else if nodeToRemove.left != ø and nodeToRemove.right != ø
     next ← nodeToRemove.right
