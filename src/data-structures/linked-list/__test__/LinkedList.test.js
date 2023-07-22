@@ -47,6 +47,18 @@ describe('LinkedList', () => {
     expect(linkedList.toString()).toBe('1,4,2,3,10');
   });
 
+  it('should insert and maintain head and tail', () => {
+    const linkedList = new LinkedList();
+
+    linkedList.insert(2, 0);
+    linkedList.insert(3, 1);
+    linkedList.insert(4, 2);
+
+    expect(linkedList.toString()).toBe('2,3,4');
+    expect(linkedList.head.toString()).toBe('2');
+    expect(linkedList.tail.toString()).toBe('4');
+  });
+
   it('should delete node by value from linked list', () => {
     const linkedList = new LinkedList();
 
