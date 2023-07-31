@@ -23,7 +23,7 @@ const indexInLetters = (c, alphabet=englishAlphabet) => {
  * @return {string}
  */
 
-const vingenereCipherEncrypt = (message, key, alphabet=englishAlphabet) => {
+export const vingenereCipherEncrypt = (message, key, alphabet=englishAlphabet) => {
     message = message.toLowerCase();
     key = key.toLowerCase();
     const str = message.split('');
@@ -50,7 +50,7 @@ const vingenereCipherEncrypt = (message, key, alphabet=englishAlphabet) => {
  * @return {string}
  */
 
-const vingenereCipherDencrypt = (message, key, alphabet=englishAlphabet) => {
+export const vingenereCipherDencrypt = (message, key, alphabet=englishAlphabet) => {
     message = message.toLowerCase();
     key = key.toLowerCase();
     const str = message.split('');
