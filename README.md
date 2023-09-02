@@ -1,3 +1,4 @@
+![IMG_20230824_113629](https://github.com/DediGithubJoint/javascript-algorithms/assets/30582415/29bada9d-77de-46b5-9ab4-86b2c4836eab)
 # JavaScript Algorithms and Data Structures
 
 > 🇺🇦 UKRAINE [IS BEING ATTACKED](https://war.ukraine.ua/) BY RUSSIAN ARMY. CIVILIANS ARE GETTING KILLED. RESIDENTIAL AREAS ARE GETTING BOMBED.
