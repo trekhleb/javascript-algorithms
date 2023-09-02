@@ -25,7 +25,7 @@ and the multiples of `6` are:
 ```
 6, 12, 18, 24, 30, 36, 42, 48, 54, 60, 66, 72, ...
 ```
-
+8, 16, 24, 32, 40, 48, 56, 64, 72, 80, 88, 76, 
 Common multiples of `4` and `6` are simply the numbers 
 that are in both lists:
 
