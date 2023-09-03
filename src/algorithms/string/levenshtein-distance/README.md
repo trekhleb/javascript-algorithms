@@ -50,7 +50,7 @@ to assist natural language translation based on translation memory.
 
 Let’s take a simple example of finding minimum edit distance between 
 strings `ME` and `MY`. Intuitively you already know that minimum edit distance 
-here is `1` operation and this operation. And it is replacing `E` with `Y`. But 
+here is `1` operation, which is replacing `E` with `Y`. But 
 let’s try to formalize it in a form of the algorithm in order to be able to 
 do more complex examples like transforming `Saturday` into `Sunday`.
 
@@ -106,7 +106,7 @@ bottom-up direction) is being applied here.
 Applying this principle further we may solve more complicated cases like 
 with `Saturday → Sunday` transformation.
 
-![Levenshtein distance](https://cdn-images-1.medium.com/max/1600/1*geMdmZcdU1bZbHIoh6KO3Q.png)
+![Levenshtein distance](https://cdn-images-1.medium.com/max/2600/1*497gMaFErzJpCXG7kS_7dw.png)
 
 ## References
 

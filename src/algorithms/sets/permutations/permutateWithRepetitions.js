@@ -8,7 +8,7 @@ export default function permutateWithRepetitions(
   permutationLength = permutationOptions.length,
 ) {
   if (permutationLength === 1) {
-    return permutationOptions.map(permutationOption => [permutationOption]);
+    return permutationOptions.map((permutationOption) => [permutationOption]);
   }
 
   // Init permutations array.

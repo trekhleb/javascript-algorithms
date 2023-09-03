@@ -21,7 +21,6 @@ describe('reverseTraversal', () => {
   });
 });
 
-
 // it('should reverse traversal the linked list with callback', () => {
 //   const linkedList = new LinkedList();
 //

@@ -1,5 +1,8 @@
 # Heap Sort
 
+_Read this in other languages:_
+[_Português_](README.pt-BR.md)
+
 Heapsort is a comparison-based sorting algorithm.
 Heapsort can be thought of as an improved selection
 sort: like that algorithm, it divides its input into
