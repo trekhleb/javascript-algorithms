@@ -48,6 +48,12 @@ export default class LinkedList {
     }
 
     // Attach new node to the end of linked list.
+    let current = this.head;
+    while (current.next !== null) {
+        current = current.next;
+    }
+    current.next = newNode;
+    
     this.tail.next = newNode;
     this.tail = newNode;
 
