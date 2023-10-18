@@ -92,6 +92,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Pascal's Triangle](src/algorithms/math/pascal-triangle)
   * `B` [Complex Number](src/algorithms/math/complex-number) - complex numbers and basic operations with them
   * `B` [Radian & Degree](src/algorithms/math/radian) - radians to degree and backwards conversion
+  * `B` [Mini-Max Sum](src/algorithms/math/mini-max-sum)
   * `B` [Fast Powering](src/algorithms/math/fast-powering)
   * `B` [Horner's method](src/algorithms/math/horner-method) - polynomial evaluation
   * `B` [Matrices](src/algorithms/math/matrix) - matrices and basic matrix operations (multiplication, transposition, etc.)
