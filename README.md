@@ -314,6 +314,8 @@ npm test -- 'playground'
 ### Big O Notation
 
 *Big O notation* is used to classify algorithms according to how their running time or space requirements grow as the input size grows.
+Here is more detailed explaination on Big 0 notation [Understanding Big-O Notation With JavaScript](https://github.com/b0nbon1/javascript-algorithms/blob/better-explaination-Big0/big-o-notation.Eng.md).
+
 On the chart below you may find most common orders of growth of algorithms specified in Big O notation.
 
 ![Big O graphs](./assets/big-o-graph.png)
