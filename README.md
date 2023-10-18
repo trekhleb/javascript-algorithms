@@ -43,7 +43,7 @@ only, and it is **not** meant to be used for production.*
 
 ## Data Structures
 
-A data structure is a particular way of organizing and storing data in a computer so that it can
+A data structure is a way of organizing and storing data in a computer so that the data can
 be accessed and modified efficiently. More precisely, a data structure is a collection of data
 values, the relationships among them, and the functions or operations that can be applied to
 the data.
@@ -187,7 +187,7 @@ a set of rules that precisely define a sequence of operations.
 
 ### Algorithms by Paradigm
 
-An algorithmic paradigm is a generic method or approach which underlies the design of a class
+An algorithmic paradigm is a generic method which underlies the design of a class
 of algorithms. It is an abstraction higher than the notion of an algorithm, just as an
 algorithm is an abstraction higher than a computer program.
 
@@ -314,7 +314,7 @@ npm test -- 'playground'
 ### Big O Notation
 
 *Big O notation* is used to classify algorithms according to how their running time or space requirements grow as the input size grows.
-On the chart below you may find most common orders of growth of algorithms specified in Big O notation.
+On the chart below the most common orders of growth of algorithms are specified in Big O notation.
 
 ![Big O graphs](./assets/big-o-graph.png)
 
