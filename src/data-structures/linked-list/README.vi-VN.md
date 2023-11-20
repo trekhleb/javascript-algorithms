@@ -32,6 +32,11 @@ có độ tương phản cache tốt hơn so với danh sách liên kết.
 *Được làm từ [okso.app](https://okso.app)*
 
 ## Mã giải (Pseudocode) cho Các Hoạt Động Cơ Bản
+  *head = đầu,
+  *tail = đuôi,
+  *next = kế tiếp,
+  *node = nút,
+  *value = giá trị
 
 ### Chèn (Insert)
 
@@ -39,7 +44,7 @@ có độ tương phản cache tốt hơn so với danh sách liên kết.
 ThêmGiáTrị(giá trị) (Add(value))
   Trước(Pre): giá trị là giá trị muốn thêm vào danh sách
   Sau(Post): giá trị đã được đặt ở cuối danh sách
-  (head = đầu, tail = đuôi, next = kế tiếp )
+
  n ← node(value)
   if head = ø
     head ← n
@@ -53,8 +58,9 @@ end ThêmGiáTrị(Add)
 
 ```
 ChènVàoĐầu(giá trị)
-  Trước: giá trị là giá trị muốn thêm vào danh sách
-  Sau: giá trị đã được đặt ở đầu danh sách
+  Trước(Pre): giá trị là giá trị muốn thêm vào danh sách
+  Sau(Post): giá trị đã được đặt ở đầu danh sách
+
  n ← node(value)
  n.next ← head
  head ← n
@@ -70,13 +76,80 @@ Chứa(đầu, giá trị)
   Trước: đầu là nút đầu trong danh sách
        giá trị là giá trị cần tìm kiếm
   Sau: mục đó có thể ở trong danh sách liên kết, true; nếu không, là false
-  n ← đầu
-  trong khi n != ø và n.giá trị != giá trị
-    n ← n.kế tiếp
-  kết thúc trong khi
-  nếu n = ø
-    trả về false
-  kết thúc nếu
-  trả về true
-end Chứa
+  n ← head
+  while n != ø and n.value != value
+    n ← n.next
+  end while
+  if n = ø
+    return false
+  end if
+  return true
+end Contains
 ```
+
+### Xóa (Delete)
+```
+Xóa(đầu, giá trị)
+  Trước: đầu là nút đầu trong danh sách
+       giá trị là giá trị cần xóa khỏi danh sách
+  Sau: giá trị đã được xóa khỏi danh sách, true; nếu không, là false
+  if head = ø
+    return false
+  end if
+  n ← head
+  if n.value = value
+    if head = tail
+      head ← ø
+      tail ← ø
+    else
+      head ← head.next
+    end if
+    return true
+  end if
+  while n.next != ø and n.next.value != value
+    n ← n.next
+  end while
+  if n.next != ø
+    if n.next = tail
+      tail ← n
+      tail.next = null
+    else
+      n.next ← n.next.next
+    end if
+    return true
+  end if
+  return false
+end Remove
+```
+
+### Duyệt(raverse)
+Duyệt(đầu)
+  Trước: đầu là nút đầu trong danh sách
+  Sau: các mục trong danh sách đã được duyệt
+  n ← head
+  while n != ø
+    yield n.value
+    n ← n.next
+  end while
+end Traverse
+
+### Duyệt Ngược (Traverse in Reverse)
+DuyệtNgược(đầu, đuôi)
+  Trước: đầu và đuôi thuộc cùng một danh sách
+  Sau: các mục trong danh sách đã được duyệt theo thứ tự ngược lại
+
+## Độ Phức Tạp
+
+### Độ Phức Tạp Thời Gian (Time Complexity)
+
+| Access    | Search    | Insertion | Deletion  |
+| :-------: | :-------: | :-------: | :-------: |
+| O(n)      | O(n)      | O(1)      | O(n)      |
+
+## Độ Phức Tạp Không Gian (Space Complexity)
+O(n)
+
+## Tham Khảo
+
+- [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
+- [YouTube](https://www.youtube.com/watch?v=njTh_OwMljA&index=2&t=1s&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
