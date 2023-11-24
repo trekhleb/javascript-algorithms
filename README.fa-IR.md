@@ -1,9 +1,3 @@
-<style>
-    * {
-        direction: rtl;
-    }
-</style>
-
 # الگوریتم ها و ساختارهای داده در جاوااسکریپت
 
 [![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
