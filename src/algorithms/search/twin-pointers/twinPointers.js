@@ -24,11 +24,11 @@ export function twinPointerSorted(sortedArray, seekElement, comparatorCallback) 
      * If our sum is less than the target then we can increase said sum but by increasing the left value; 
      * since the array is sorted, this will always result in array[left] becoming a larger number.
     */
-    if (comparator.lessThan(sortedArray[left] + sortedarray[right], seekElement)) {
+    if (comparator.lessThan(sortedArray[left] + sortedArray[right], seekElement)) {
         left++;
 
     // Same concept as before, only now we decrease our sum because it's greater than the target.    
-    } else if (comparator.greaterThan(sortedArray[left] + sortedarray[right], seekElement)) {
+    } else if (comparator.greaterThan(sortedArray[left] + sortedArray[right], seekElement)) {
         right--;
     
     // Assuming we have found our target, return left and right since they represent the indices that our correct sum is located at.
@@ -37,8 +37,8 @@ export function twinPointerSorted(sortedArray, seekElement, comparatorCallback) 
     }
   }
 
-  // Return [0, 0] (an impossible answer due to our while loop) if we haven't found any combination of numbers that works.
-  return [0, 0];
+  // Return -1 if we haven't found any combination of numbers that works.
+  return -1;
 }
 
 /* An example of a twin pointer method on an unsorted array. In this problem, we aim to get the heighest possible area from two numbers by using the
@@ -55,6 +55,13 @@ export function twinPointerSorted(sortedArray, seekElement, comparatorCallback) 
 export function twinPointerUnsorted(unsortedArray, comparatorCallback) {
     const comparator = new Comparator(comparatorCallback);
   
+    // Edge cases; not relevant to the pointer method.
+    if (unsortedArray.length === 0) {
+        return 0
+    } else if (unsortedArray.length === 1) {
+        return unsortedArray[0]
+    }
+    
     // Again, we set our two pointers to the left and rightmost elements of the array.
     let left = 0;
     let right = unsortedArray.length - 1;

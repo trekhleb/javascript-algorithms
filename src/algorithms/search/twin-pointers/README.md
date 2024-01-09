@@ -15,8 +15,6 @@ Note that any array can be sorted to easily use the twin pointer method by using
 However, the Array.sort method inherently has a time complexity of O(n log n), which can be undesirable
 in many cases when the desired time complexity of your solution is simply O(n).
 
-![Binary Search](https://upload.wikimedia.org/wikipedia/commons/8/83/Binary_Search_Depiction.svg)
-
 ## Complexity
 
 **Time Complexity**: `O(n)` - since we only need to look over every element of our array a single time when comparing, time complexity is O(n).
