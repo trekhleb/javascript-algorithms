@@ -41,8 +41,8 @@ export function twinPointerSorted(sortedArray, seekElement, comparatorCallback) 
   return [0, 0];
 }
 
-/* An example of a twin pointer method on an unsorted array. In this problem, we aim to get the heighest possible area from two numbers,
-    assuming that each number n is a rectangle of 1 width and n height. (Problem and solution taken from Leetcode #11)
+/* An example of a twin pointer method on an unsorted array. In this problem, we aim to get the heighest possible area from two numbers by using the
+    small of the two heights, assuming that each number n is a rectangle of 1 width and n height. (Problem and solution taken from Leetcode #11)
 */
 
 /**
@@ -67,22 +67,28 @@ export function twinPointerUnsorted(unsortedArray, comparatorCallback) {
     while (left !== right) {
 
         // In this situation, since we don't have a specific "target" in mind we instead compare the two values at our two pointers to each other.
-        if (height[left] < height[right]) {
+        if (comparator.lessThan(unsortedArray[left], unsortedArray[right])) {
             
             // Here we simply calculate our current area and whether we need to change our highest area by comparing it with the current.
-            area = (Math.min(height[left], height[right]) * (right - left));
+            area = (Math.min(unsortedArray[left], unsortedArray[right]) * (right - left));
             mostArea = Math.max(area, mostArea);
             
             /**
-             * Again, we move the left pointer forward or the right pointer backwards. You may be thinking that 
+             * Again, we move the left pointer forward or the right pointer backwards. You may be thinking that this is basically the same as with the 
+             * sorted array; while that is correct from a pure code standpoint, conceptually the reasoning is different. In the first example, because the array
+             * is sorted we can move the left pointer forward with the knowledge that this will DEFINITELY either keep the value the same or increase it. 
+             * In this situation however, our array isn't sorted and thus moving the left pointer forward isn't guaranteed to increase the value; all we know
+             * is that it will change. However, because we are calculating area with the smallest height and our value (heght) at the left pointer is smaller than the right pointer,
+             * we know that the ONLY way to get a higher area is if there is a potentially higher value for the left pointer.
              */
             left++;
         } else {
-            area = (Math.min(height[left], height[right]) * (right - left));
+            area = (Math.min(unsortedArray[left], unsortedArray[right]) * (right - left));
             mostArea = Math.max(area, mostArea);
             right--;
         }
     }
 
+    // Our greatest area should be correct since we re-state if the current area is greater.
     return mostArea
   }
