@@ -243,7 +243,6 @@ export default class DoublyLinkedList {
     while (currNode) {
       // Store next node.
       nextNode = currNode.next;
-      prevNode = currNode.previous;
 
       // Change next node of the current node so it would link to previous node.
       currNode.next = prevNode;
