@@ -11,7 +11,7 @@ import Comparator from '../../../utils/comparator/Comparator';
 
 export default function binarySearch(sortedArray, seekElement, comparatorCallback) {
   // Let's create comparator from the comparatorCallback function.
-  // Comparator object will give us common comparison methods like equal() and lessThen().
+  // Comparator object will give us common comparison methods like equal() and lessThan().
   const comparator = new Comparator(comparatorCallback);
 
   // These two indices will contain current array (sub-array) boundaries.
