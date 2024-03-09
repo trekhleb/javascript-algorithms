@@ -1,8 +1,8 @@
-import DisjointSetMinimalistic from '../DisjointSetMinimalistic';
+import DisjointSetAdhoc from '../DisjointSetAdhoc';
 
-describe('DisjointSetMinimalistic', () => {
+describe('DisjointSetAdhoc', () => {
   it('should create unions and find connected elements', () => {
-    const set = new DisjointSetMinimalistic(10);
+    const set = new DisjointSetAdhoc(10);
 
     // 1-2-5-6-7 3-8-9 4
     set.union(1, 2);
@@ -32,7 +32,7 @@ describe('DisjointSetMinimalistic', () => {
   });
 
   it('should keep the height of the tree small', () => {
-    const set = new DisjointSetMinimalistic(10);
+    const set = new DisjointSetAdhoc(10);
 
     // 1-2-6-7-9 1 3 4 5
     set.union(7, 6);

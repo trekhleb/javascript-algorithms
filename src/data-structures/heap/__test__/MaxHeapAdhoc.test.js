@@ -1,6 +1,6 @@
-import MaxHeap from '../MaxHeapMinimalistic';
+import MaxHeap from '../MaxHeapAdhoc';
 
-describe('MaxHeap', () => {
+describe('MaxHeapAdhoc', () => {
   it('should create an empty max heap', () => {
     const maxHeap = new MaxHeap();
 

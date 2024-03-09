@@ -1,10 +1,10 @@
 /**
- * The minimalistic version of a MinHeap data structure that doesn't have
+ * The minimalistic (ad hoc) version of a MaxHeap data structure that doesn't have
  * external dependencies and that is easy to copy-paste and use during the
  * coding interview if allowed by the interviewer (since many data
  * structures in JS are missing).
  */
-class MinHeapMinimalistic {
+class MaxHeapAdhoc {
   constructor(heap = []) {
     this.heap = [];
     heap.forEach(this.add);
@@ -40,7 +40,7 @@ class MinHeapMinimalistic {
     let nodeIndex = this.heap.length - 1;
     while (nodeIndex > 0) {
       const parentIndex = this.getParentIndex(nodeIndex);
-      if (this.heap[parentIndex] <= this.heap[nodeIndex]) break;
+      if (this.heap[parentIndex] >= this.heap[nodeIndex]) break;
       this.swap(parentIndex, nodeIndex);
       nodeIndex = parentIndex;
     }
@@ -51,12 +51,10 @@ class MinHeapMinimalistic {
 
     while (
       (
-        this.hasLeftChild(nodeIndex)
-        && this.heap[nodeIndex] > this.leftChild(nodeIndex)
+        this.hasLeftChild(nodeIndex) && this.heap[nodeIndex] < this.leftChild(nodeIndex)
       )
       || (
-        this.hasRightChild(nodeIndex)
-        && this.heap[nodeIndex] > this.rightChild(nodeIndex)
+        this.hasRightChild(nodeIndex) && this.heap[nodeIndex] < this.rightChild(nodeIndex)
       )
     ) {
       const leftIndex = this.getLeftChildIndex(nodeIndex);
@@ -65,7 +63,7 @@ class MinHeapMinimalistic {
       const right = this.rightChild(nodeIndex);
 
       if (this.hasLeftChild(nodeIndex) && this.hasRightChild(nodeIndex)) {
-        if (left <= right) {
+        if (left >= right) {
           this.swap(leftIndex, nodeIndex);
           nodeIndex = leftIndex;
         } else {
@@ -80,11 +78,11 @@ class MinHeapMinimalistic {
   }
 
   getLeftChildIndex(parentIndex) {
-    return 2 * parentIndex + 1;
+    return (2 * parentIndex) + 1;
   }
 
   getRightChildIndex(parentIndex) {
-    return 2 * parentIndex + 2;
+    return (2 * parentIndex) + 2;
   }
 
   getParentIndex(childIndex) {
@@ -114,4 +112,4 @@ class MinHeapMinimalistic {
   }
 }
 
-export default MinHeapMinimalistic;
+export default MaxHeapAdhoc;

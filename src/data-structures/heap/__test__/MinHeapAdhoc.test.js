@@ -1,8 +1,8 @@
-import MinHeapMinimalistic from '../MinHeapMinimalistic';
+import MinHeapAdhoc from '../MinHeapAdhoc';
 
-describe('MinHeapMinimalistic', () => {
+describe('MinHeapAdhoc', () => {
   it('should create an empty min heap', () => {
-    const minHeap = new MinHeapMinimalistic();
+    const minHeap = new MinHeapAdhoc();
 
     expect(minHeap).toBeDefined();
     expect(minHeap.peek()).toBe(undefined);
@@ -10,7 +10,7 @@ describe('MinHeapMinimalistic', () => {
   });
 
   it('should add items to the heap and heapify it up', () => {
-    const minHeap = new MinHeapMinimalistic();
+    const minHeap = new MinHeapAdhoc();
 
     minHeap.add(5);
     expect(minHeap.isEmpty()).toBe(false);
@@ -44,7 +44,7 @@ describe('MinHeapMinimalistic', () => {
   });
 
   it('should poll items from the heap and heapify it down', () => {
-    const minHeap = new MinHeapMinimalistic();
+    const minHeap = new MinHeapAdhoc();
 
     minHeap.add(5);
     minHeap.add(3);
@@ -74,7 +74,7 @@ describe('MinHeapMinimalistic', () => {
   });
 
   it('should heapify down through the right branch as well', () => {
-    const minHeap = new MinHeapMinimalistic();
+    const minHeap = new MinHeapAdhoc();
 
     minHeap.add(3);
     minHeap.add(12);

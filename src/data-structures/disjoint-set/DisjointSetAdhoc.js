@@ -1,5 +1,5 @@
 /**
- * The minimalistic version of a DisjointSet (or a UnionFind) data structure
+ * The minimalistic (ad hoc) version of a DisjointSet (or a UnionFind) data structure
  * that doesn't have external dependencies and that is easy to copy-paste and
  * use during the coding interview if allowed by the interviewer (since many
  * data structures in JS are missing).
@@ -16,7 +16,7 @@
  * In practice, we assume it's a constant.
  * In other words, O(α(N)) is regarded as O(1) on average.
  */
-class DisjointSetMinimalistic {
+class DisjointSetAdhoc {
   /**
    * Initializes the set of specified size.
    * @param {number} size
@@ -75,4 +75,4 @@ class DisjointSetMinimalistic {
   }
 }
 
-export default DisjointSetMinimalistic;
+export default DisjointSetAdhoc;
