@@ -68,3 +68,5 @@ Now, the array is already sorted, but our algorithm doesn’t know if it is comp
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Cocktail_shaker_sort)
 - [GeeksForGeeks](https://www.geeksforgeeks.org/cocktail-sort/)
+## explaining sort algorithm
+-[GeeksForGeeks](https://www.geeksforgeeks.org/sorting-algorithms/)
