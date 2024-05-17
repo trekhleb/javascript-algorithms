@@ -15,6 +15,6 @@ export default function fisherYates(originalArray) {
 }
 
 
-export function add(x: number, y: number){
+export function add(x, y){
   return x + y * 2;
 }
