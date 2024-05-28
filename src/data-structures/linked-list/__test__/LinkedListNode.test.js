@@ -42,5 +42,6 @@ describe('LinkedListNode', () => {
     const toStringCallback = (value) => `value: ${value.value}, key: ${value.key}`;
 
     expect(node.toString(toStringCallback)).toBe('value: 1, key: test');
+    console.log("hi");
   });
 });
