@@ -279,7 +279,7 @@ export default class Heap {
   /* istanbul ignore next */
   pairIsInCorrectOrder(firstElement, secondElement) {
     throw new Error(`
-      You have to implement heap pair comparision method
+      You have to implement heap pair comparison method
       for ${firstElement} and ${secondElement} values.
     `);
   }
