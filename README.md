@@ -48,6 +48,8 @@ be accessed and modified efficiently. More precisely, a data structure is a coll
 values, the relationships among them, and the functions or operations that can be applied to
 the data.
 
+Remember that each data has its own trade-offs. And you need to pay attention more to why you're choosing a certain data structure than to how to implement it.
+
 `B` - Beginner, `A` - Advanced
 
 * `B` [Linked List](src/data-structures/linked-list)
