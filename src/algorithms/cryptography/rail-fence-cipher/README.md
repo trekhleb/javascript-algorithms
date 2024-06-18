@@ -24,5 +24,5 @@ It's time to start populating the next rail once the number of visited fence pos
 
 ## References
 
-- [Шифр ограждения рельсов в Википедии](https://en.wikipedia.org/wiki/Rail_fence_cipher)
-- [Калькулятор шифа ограждения рельсов](https://crypto.interactive-maths.com/rail-fence-cipher.html)
+- [Rail Fence Cipher on Wikipedia](https://en.wikipedia.org/wiki/Rail_fence_cipher)
+- [Rail Fence Cipher Calculator](https://crypto.interactive-maths.com/rail-fence-cipher.html)
