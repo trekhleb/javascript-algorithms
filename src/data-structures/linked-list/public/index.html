@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+    <title>Linked List</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Linked List Operations</h1>
+      <div class="row">
+        <input
+          type="text"
+          id="initialValue"
+          maxlength="5"
+          placeholder="Initial Value:"
+        />
+        <button onclick="createLinkedList()" id="create_list">Create</button>
+      </div>
+      <div class="row" id="pushContainer">
+        <input
+          type="text"
+          id="pushValue"
+          maxlength="5"
+          placeholder="Push Value:"
+        />
+        <button onclick="pushValue()">Push</button>
+      </div>
+      <div class="row" id="unshiftContainer">
+        <input
+          type="text"
+          id="unshiftValue"
+          maxlength="5"
+          placeholder="Unshift Value:"
+        />
+        <button onclick="unshiftValue()">Unshift</button>
+      </div>
+      <hr />
+      <div>
+        <button onclick="popValue()">Pop</button>
+        <button onclick="shiftValue()">Shift</button>
+        <button onclick="clearList()">Clear List</button>
+      </div>
+      <div>
+        <button onclick="getHead()">Get Head</button>
+        <button onclick="getTail()">Get Tail</button>
+        <button onclick="getLength()">Get Length</button>
+      </div>
+      <div>
+        <button onclick="getAllNodes()">Show Nodes</button>
+
+        <button onclick="reverseNodes()">Reverse</button>
+      </div>
+      <div id="indexContainer">
+        <h3>
+          Accessing elements in linked lists
+          <button
+            id="toggleColapse"
+            onclick="toggle()"
+            style="
+              max-width: 33px;
+              min-width: 33px;
+              min-height: 37px;
+              max-height: 37px;
+              background: none;
+              color: #3cb371;
+              font-size: 19px;
+            "
+          >
+            ⬆
+          </button>
+        </h3>
+
+        <div class="collapseContainer">
+          <div class="select-container">
+            <label for="indexDropdown">Get Node:</label>
+            <select id="indexDropdown" onchange="getNodeAtIndex()">
+              <option value="" disabled selected>Select an index</option>
+            </select>
+          </div>
+          <div class="select-container">
+            <label for="indexRemoveDropdown">Remove Node at:</label>
+            <select id="indexRemoveDropdown" onchange="getNodeAtRemoveIndex()">
+              <option value="" disabled selected>Select an index</option>
+            </select>
+            <button
+              id="removeSubmit"
+              disabled
+              onclick="removeIndex()"
+              style="
+                margin-top: 10px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                max-width: 33px;
+                min-width: 33px;
+                min-height: 37px;
+                max-height: 37px;
+              "
+            >
+              ⇨
+            </button>
+          </div>
+          <div class="select-container">
+            <label for="indexSetDropdown">Set</label>
+            <select id="indexSetDropdown" onchange="getNodeAtSetIndex()">
+              <option value="" disabled selected>index</option>
+            </select>
+            <label for="indexSetDropdown">to</label>
+            <input
+              type="text"
+              id="setValue"
+              maxlength="5"
+              placeholder="Value:"
+              oninput="isValid()"
+            />
+            <button
+              id="setSubmit"
+              disabled
+              onclick="setIndex()"
+              style="
+                margin-top: 9px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                max-width: 33px;
+                min-width: 33px;
+                min-height: 37px;
+                max-height: 37px;
+              "
+            >
+              ⇨
+            </button>
+          </div>
+          <div class="select-container">
+            <label for="indexInsertDropdown">Insert</label>
+            <input
+              type="text"
+              id="insertValue"
+              maxlength="5"
+              placeholder="Value:"
+              oninput="isInsertValid()"
+            />
+            <label for="indexInsertDropdown">to</label>
+            <select id="indexInsertDropdown" onchange="getNodeAtInsertIndex()">
+              <option value="" disabled selected>index</option>
+            </select>
+            <button
+              id="insertSubmit"
+              disabled
+              onclick="insertIndex()"
+              style="
+                margin-top: 10px;
+                border-top-left-radius: 0px;
+                border-bottom-left-radius: 0px;
+                max-width: 33px;
+                min-width: 33px;
+                min-height: 37px;
+                max-height: 37px;
+              "
+            >
+              ⇨
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <pre id="output"></pre>
+      </div>
+      <div>
+        <pre id="outputNode"></pre>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

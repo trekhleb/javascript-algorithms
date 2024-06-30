@@ -1,0 +1,250 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 30;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: auto; /* Add this to prevent content overflow issues */
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    overflow: auto; /* Ensure container can scroll if content overflows */
+}
+
+.collapseContainer{
+    display: inline;
+}
+
+#indexContainer {
+    border: 1px solid #5A9;
+    border-radius: 5px;
+    background-color:  #ffe6e6;
+}
+
+h1,h3 {
+    margin-bottom: 20px;
+    color: #5A9;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+button {
+    background-color: #5A9;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+
+    min-width: 100px;
+}
+
+
+
+button:hover {
+    background-color: #478;
+}
+
+pre {
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.node {
+    display: inline-block;
+    background-color: #5A9;
+    color: white;
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    margin: 5px;
+    font-size: 14px;
+}
+
+.arrow {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 18px;
+    color: #333;
+}
+
+.row {
+    flex-direction: row;
+    display: flex;
+}
+
+.row button {
+    background-color: #5A9;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 0;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    min-width: 100px;
+}
+
+.row button:hover {
+    background-color: #478;
+}
+
+@keyframes length-animation {
+    0% { background-color: #00CED1; } 
+    60% { background-color: #20B2AA; } 
+    100% { background-color: #3CB371; } 
+}
+
+@keyframes tail-animation {
+    0% { background-color: #8A2BE2; } 
+    60% { background-color: #4B0082; } 
+    100% { background-color: #800080; } 
+}
+
+@keyframes head-animation {
+    0% { background-color: #dfd2cd; }
+    60% { background-color: #e99d80; }
+    100% { background-color: #FF6347; }
+}
+
+
+.head-node {
+    background-color: #FF6347;
+    animation: head-animation 0.3s ease-out; 
+}
+
+.tail-node {
+    background-color: #800080;
+    animation: tail-animation 0.3s ease-out; 
+}
+
+.length-node {
+    background-color: #3CB371; 
+    animation: length-animation 0.3s ease-out; 
+}
+
+
+*:focus {
+    outline: none;
+}
+
+.select-container {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.select-container label {
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+select:focus {
+    border-color: #5A9;
+}
+
+option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+#setValue{
+    max-width: 40px;
+    height: 3px;
+    margin-top:9px;
+    border-radius: 0px;
+    font-size: 14px;
+    padding: 16px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+#insertValue{
+    max-width: 40px;
+    height: 3px;
+    margin-top:9px;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 16px;
+}
+
+#setSubmit:disabled {
+    background-color: #ccc; 
+    color: #666; 
+    cursor: not-allowed;
+}
+
+#insertSubmit:disabled {
+    background-color: #ccc; 
+    color: #666; 
+    cursor: not-allowed;
+}
+
+#indexInsertDropdown{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    min-height: 37px;
+    max-height: 37px;
+}
+
+#indexRemoveDropdown{
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    min-height: 37px;
+    max-height: 37px;
+}
+
+#removeSubmit:disabled {
+    background-color: #ccc; 
+    color: #666; 
+    cursor: not-allowed;
+}
