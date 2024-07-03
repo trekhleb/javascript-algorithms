@@ -148,4 +148,15 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
 
     return this.left.findMin();
   }
+
+  /**
+   * Returns max node in Binary search tree
+   * @returns {BinarySearchTreeNode}
+   */
+  findMax() {
+    if (!this || !this.right) {
+      return this;
+    }
+    return this.right.findMax();
+  }
 }
