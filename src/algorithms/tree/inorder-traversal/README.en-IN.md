@@ -7,7 +7,7 @@ the root and explores left branch of tree, root node and then right branch of tr
 
 # Inorder Traversal Algorithm
 
-Inorder traversal is an algorithm for traversing tree data structures. The algorithm involves visiting each node in a specific order: left branch, root node, and then the right branch. This ensures that the nodes are visited in ascending order for Binary Search Trees (BST).
+Inorder traversal is an algorithm for traversing tree data structures.The algorithm involves visiting each node in a specific order: left branch, root node, and then the right branch. This ensures that the nodes are visited in ascending order for Binary Search Trees (BST).
 
 ## Inorder Traversal Steps
 

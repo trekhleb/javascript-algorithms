@@ -1,8 +1,8 @@
 import BinarySearchTreeNode from '../../../../data-structures/tree/binary-search-tree/BinarySearchTreeNode';
 import preorderTraversal from '../preorderTraversal';
 
-describe('Inorder Traversal of Binary tree', () => {
-  it('sholud give inorder travsersal of binary tree', () => {
+describe('Preorder Traversal of Binary tree', () => {
+  it('sholud give Preorder travsersal of binary tree', () => {
     // creating BST
     const bst = new BinarySearchTreeNode(10);
 
