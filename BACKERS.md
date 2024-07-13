@@ -15,6 +15,24 @@
 `null`
 
 <!--
+<table>
+  <tr>
+    <td align="center">
+      <a href="[PROFILE_URL]">
+        <img
+          src="[PROFILE_IMG_SRC]"
+          width="50"
+          height="50"
+        />
+      </a>
+      <br />
+      <a href="[PROFILE_URL]">[PROFILE_NAME]</a>
+    </td>
+  </tr>
+</table>
+-->
+
+<!--
 <ul>
   <li>
     <a href="[PROFILE_URL]">
