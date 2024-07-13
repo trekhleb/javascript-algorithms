@@ -4,11 +4,15 @@ En informatique, un **tas** est une structure de données arborescente spéciali
 
 Dans un *tas minimal* (en anglais *min heap*), si `P` est un nœud parent de `C`, alors la clé (la valeur) de `P` est inférieure ou égale à la clé de `C`.
 
-![MinHeap](https://upload.wikimedia.org/wikipedia/commons/6/69/Min-heap.png)
+![MinHeap](./images/min-heap.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 Dans un *tas maximal* (en anglais *max heap*), la clé de `P` est supérieure ou égale à la clé de `C`.
 
-![Heap](https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg)
+![MaxHeap](./images/max-heap.jpeg)
+
+![Array Representation](./images/array-representation.jpeg)
 
 Le nœud au «sommet» du tas sans parents est appelé le nœud racine.
 

@@ -6,12 +6,16 @@ baseada em uma árvore especializada que satisfaz a propriedade _heap_ descrita 
 Em um *heap mínimo* (min heap), caso `P` é um nó pai de `C`, então a chave
 (o valor) de `P` é menor ou igual a chave de `C`.
 
-![MinHeap](https://upload.wikimedia.org/wikipedia/commons/6/69/Min-heap.png)
+![MinHeap](./images/min-heap.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 Em uma *heap máximo* (max heap), a chave de `P` é maior ou igual
 a chave de `C`.
 
-![Heap](https://upload.wikimedia.org/wikipedia/commons/3/38/Max-Heap.svg)
+![MaxHeap](./images/max-heap.jpeg)
+
+![Array Representation](./images/array-representation.jpeg)
 
 O nó no "topo" do _heap_, cujo não possui pais, é chamado de nó raiz.
 

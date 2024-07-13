@@ -4,7 +4,7 @@ export default class QuickSortInPlace extends Sort {
   /** Sorting in place avoids unnecessary use of additional memory, but modifies input array.
    *
    * This process is difficult to describe, but much clearer with a visualization:
-   * @see: http://www.algomation.com/algorithm/quick-sort-visualization
+   * @see: https://www.hackerearth.com/practice/algorithms/sorting/quick-sort/visualize/
    *
    * @param {*[]} originalArray - Not sorted array.
    * @param {number} inputLowIndex

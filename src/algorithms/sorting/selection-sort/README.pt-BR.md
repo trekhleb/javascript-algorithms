@@ -1,7 +1,7 @@
 # Selection Sort
 
-_Leia isso em outras línguas:_
-[english](README.md).
+_Leia isso em outros idiomas:_
+[_English_](README.md).
 
 Selection Sort é um algoritmo de ordenação, mais especificamente um algoritmo de ordenação por comparação in-place (requer uma quantidade constante de espaço de memória adicional). Tem complexidade O(n²), tornando-o ineficiente em listas grandes e, geralmente, tem desempenho inferior ao similar Insertion Sort. O Selection Sort é conhecido por sua simplicidade e tem vantagens de desempenho sobre algoritmos mais complexos em certas situações, particularmente quando a memória auxiliar é limitada.
 

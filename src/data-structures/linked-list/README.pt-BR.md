@@ -18,7 +18,9 @@ pipeline). Acesso mais rápido, como acesso aleatório, não é viável.
 Arrays possuem uma melhor localização de cache em comparação
 com listas encadeadas (linked lists).
 
-![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+![Linked List](./images/linked-list.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Pseudo código para Operações Básicas
 

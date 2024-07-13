@@ -8,7 +8,9 @@
 
 更快的访问，如随机访问，是不可行的。与链表相比，数组具有更好的缓存位置。
 
-![Linked List](https://upload.wikimedia.org/wikipedia/commons/6/6d/Singly-linked-list.svg)
+![Linked List](./images/linked-list.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## 基本操作的伪代码
 
@@ -59,7 +61,7 @@ Contains(head, value)
   return true
 end Contains
 ```
-    
+
 ### 删除
 
 ```text
@@ -107,7 +109,7 @@ Traverse(head)
   end while
 end Traverse
 ```
-    
+
 ### 反向遍历
 
 ```text

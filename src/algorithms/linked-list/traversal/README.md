@@ -2,7 +2,8 @@
 
 _Read this in other languages:_
 [_Русский_](README.ru-RU.md),
-[中文](README.zh-CN.md)
+[_中文_](README.zh-CN.md),
+[_Português_](README.pt-BR.md)
 
 The task is to traverse the given linked list in straight order.
 

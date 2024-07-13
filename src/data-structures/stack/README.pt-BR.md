@@ -1,14 +1,14 @@
-# Stack
+# Pilha (Stack)
 
-Na ciência da computação, um **stack** é uma estrutura de dados abstrata
+Na ciência da computação, uma **pilha** é uma estrutura de dados abstrata
 que serve como uma coleção de elementos com duas operações principais:
 
 * **push**, pela qual adiciona um elemento à coleção, e
 * **pop**, pela qual remove o último elemento adicionado.
 
 A ordem em que os elementos saem de um _stack_ dá origem ao seu
-nome alternativo, LIFO (last in, first out). Adicionalmente, uma
-espiar a operação pode dar acesso ao topo sem modificar o _stack_.
+nome alternativo, LIFO (last in, first out). Adicionalmente, uma operação
+de espiada (peek) pode dar acesso ao topo sem modificar o _stack_.
 O nome "stack" para este tipo de estrutura vem da analogia de
 um conjunto de itens físicos empilhados uns sobre os outros,
 o que facilita retirar um item do topo da pilha, enquanto para chegar a
@@ -18,7 +18,9 @@ vários outros itens primeiro.
 Representação simples de um tempo de execução de pilha com operações
 _push_ e _pop_.
 
-![Stack](https://upload.wikimedia.org/wikipedia/commons/b/b4/Lifo_stack.png)
+![Stack](./images/stack.jpeg)
+
+*Made with [okso.app](https://okso.app)*
 
 ## Referências
 

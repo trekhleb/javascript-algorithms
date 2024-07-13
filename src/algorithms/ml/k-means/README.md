@@ -1,5 +1,8 @@
 # k-Means Algorithm
 
+_Read this in other languages:_
+[_Português_](README.pt-BR.md)
+
 The **k-Means algorithm** is an unsupervised Machine Learning algorithm. It's a clustering algorithm, which groups the sample data on the basis of similarity between dimensions of vectors.
 
 In k-Means classification, the output is a set of classes assigned to each vector. Each cluster location is continuously optimized in order to get the accurate locations of each cluster such that they represent each group clearly.
@@ -26,6 +29,11 @@ Here is a visualization of k-Means clustering for better understanding:
 _Image source: [Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering)_
 
 The centroids are moving continuously in order to create better distinction between the different set of data points. As we can see, after a few iterations, the difference in centroids is quite low between iterations. For example between iterations `13` and `14` the difference is quite small because there the optimizer is tuning boundary cases.
+
+## Code Examples
+
+- [kMeans.js](./kMeans.js)
+- [kMeans.test.js](./__test__/kMeans.test.js) (test cases)
 
 ## References
 
