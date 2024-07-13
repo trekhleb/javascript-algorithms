@@ -10,8 +10,8 @@
 <hr/>
 
 ![Civilians Massacred](./assets/massacre.png)
-> 🇵🇸 Palastine [IS BEING ATTACKED](https://www.aljazeera.com/news/liveblog/2024/7/13/israel-war-on-gaza-live-dozens-of-bodies-recovered-after-massacre) BY ISRAELI ARMY. CIVILIANS ARE GETTING KILLED. RESIDENTIAL AREAS ARE GETTING BOMBED.
-> - Help Palastine — SPREAD THE WORD — STOP THE GENOCIDE
+> 🇵🇸 PALESTINE [IS BEING ATTACKED](https://www.aljazeera.com/news/liveblog/2024/7/13/israel-war-on-gaza-live-dozens-of-bodies-recovered-after-massacre) BY ISRAELI ARMY. CIVILIANS ARE GETTING KILLED. RESIDENTIAL AREAS ARE GETTING BOMBED.
+> - Help PALESTINE — SPREAD THE WORD — STOP THE GENOCIDE
 
 <hr/>
 
