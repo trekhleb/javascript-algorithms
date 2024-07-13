@@ -9,6 +9,12 @@
 
 <hr/>
 
+![Civilians Massacred](./assets/massacre.png)
+> 🇵🇸 Palastine [IS BEING ATTACKED](https://www.aljazeera.com/news/liveblog/2024/7/13/israel-war-on-gaza-live-dozens-of-bodies-recovered-after-massacre) BY ISRAELI ARMY. CIVILIANS ARE GETTING KILLED. RESIDENTIAL AREAS ARE GETTING BOMBED.
+> - Help Palastine — SPREAD THE WORD — STOP THE GENOCIDE
+
+<hr/>
+
 [![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 ![repo size](https://img.shields.io/github/repo-size/trekhleb/javascript-algorithms.svg)
