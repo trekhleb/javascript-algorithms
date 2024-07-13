@@ -1,14 +1,17 @@
 # JavaScript Algorithms and Data Structures
 
 > 🇺🇦 UKRAINE [IS BEING ATTACKED](https://war.ukraine.ua/) BY RUSSIAN ARMY. CIVILIANS ARE GETTING KILLED. RESIDENTIAL AREAS ARE GETTING BOMBED.
-> - Help Ukraine via [National Bank of Ukraine](https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi)
-> - Help Ukraine via [SaveLife](https://savelife.in.ua/en/donate-en/) fund
+> - Help Ukraine via:
+>   - [Serhiy Prytula Charity Foundation](https://prytulafoundation.org/en/)
+>   - [Come Back Alive Charity Foundation](https://savelife.in.ua/en/donate-en/)
+>   - [National Bank of Ukraine](https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi)
 > - More info on [war.ukraine.ua](https://war.ukraine.ua/) and [MFA of Ukraine](https://twitter.com/MFA_Ukraine)
 
 <hr/>
 
 [![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
+![repo size](https://img.shields.io/github/repo-size/trekhleb/javascript-algorithms.svg)
 
 This repository contains JavaScript based examples of many
 popular algorithms and data structures.
@@ -33,7 +36,8 @@ _Read this in other languages:_
 [_Українська_](README.uk-UA.md),
 [_Arabic_](README.ar-AR.md),
 [_Tiếng Việt_](README.vi-VN.md),
-[_Deutsch_](README.de-DE.md)
+[_Deutsch_](README.de-DE.md),
+[_Uzbek_](README.uz-UZ.md)
 
 *☝ Note that this project is meant to be used for learning and researching purposes
 only, and it is **not** meant to be used for production.*
@@ -44,6 +48,8 @@ A data structure is a particular way of organizing and storing data in a compute
 be accessed and modified efficiently. More precisely, a data structure is a collection of data
 values, the relationships among them, and the functions or operations that can be applied to
 the data.
+
+Remember that each data has its own trade-offs. And you need to pay attention more to why you're choosing a certain data structure than to how to implement it.
 
 `B` - Beginner, `A` - Advanced
 
@@ -62,8 +68,9 @@ the data.
   * `A` [Segment Tree](src/data-structures/tree/segment-tree) - with min/max/sum range queries examples
   * `A` [Fenwick Tree](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
 * `A` [Graph](src/data-structures/graph) (both directed and undirected)
-* `A` [Disjoint Set](src/data-structures/disjoint-set)
+* `A` [Disjoint Set](src/data-structures/disjoint-set) - a union–find data structure or merge–find set
 * `A` [Bloom Filter](src/data-structures/bloom-filter)
+* `A` [LRU Cache](src/data-structures/lru-cache/) - Least Recently Used (LRU) cache
 
 ## Algorithms
 
@@ -99,7 +106,7 @@ a set of rules that precisely define a sequence of operations.
 * **Sets**
   * `B` [Cartesian Product](src/algorithms/sets/cartesian-product) - product of multiple sets
   * `B` [Fisher–Yates Shuffle](src/algorithms/sets/fisher-yates) - random permutation of a finite sequence
-  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set (bitwise and backtracking solutions)
+  * `A` [Power Set](src/algorithms/sets/power-set) - all subsets of a set (bitwise, backtracking, and cascading solutions)
   * `A` [Permutations](src/algorithms/sets/permutations) (with and without repetitions)
   * `A` [Combinations](src/algorithms/sets/combinations) (with and without repetitions)
   * `A` [Longest Common Subsequence](src/algorithms/sets/longest-common-subsequence) (LCS)
@@ -132,6 +139,7 @@ a set of rules that precisely define a sequence of operations.
   * `B` [Shellsort](src/algorithms/sorting/shell-sort)
   * `B` [Counting Sort](src/algorithms/sorting/counting-sort)
   * `B` [Radix Sort](src/algorithms/sorting/radix-sort)
+  * `B` [Bucket Sort](src/algorithms/sorting/bucket-sort)
 * **Linked Lists**
   * `B` [Straight Traversal](src/algorithms/linked-list/traversal)
   * `B` [Reverse Traversal](src/algorithms/linked-list/reverse-traversal)
@@ -279,14 +287,14 @@ npm test -- 'LinkedList'
 
 **Troubleshooting**
 
-In case if linting or testing is failing try to delete the `node_modules` folder and re-install npm packages:
+If linting or testing is failing, try to delete the `node_modules` folder and re-install npm packages:
 
 ```
 rm -rf ./node_modules
 npm i
 ```
 
-Also make sure that you're using a correct Node version (`>=14.16.0`). If you're using [nvm](https://github.com/nvm-sh/nvm) for Node version management you may run `nvm use` from the root folder of the project and the correct version will be picked up.
+Also make sure that you're using a correct Node version (`>=16`). If you're using [nvm](https://github.com/nvm-sh/nvm) for Node version management you may run `nvm use` from the root folder of the project and the correct version will be picked up.
 
 **Playground**
 
@@ -360,10 +368,10 @@ Below is the list of some of the most used Big O notations and their performance
 
 > You may support this project via ❤️️ [GitHub](https://github.com/sponsors/trekhleb) or ❤️️ [Patreon](https://www.patreon.com/trekhleb).
 
-[Folks who are backing this project](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 0`
-
-> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
+[Folks who are backing this project](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 1`
 
 ## Author
 
-- [@trekhleb](https://trekhleb.dev)
+[@trekhleb](https://trekhleb.dev)
+
+A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
