@@ -1,5 +1,8 @@
 # Palindrome Check
 
+_Read this in other languages:_
+[中文](README.zh-CN.md)
+
 A [Palindrome](https://en.wikipedia.org/wiki/Palindrome) is a string that reads the same forwards and backwards.
 This means that the second half of the string is the reverse of the
 first half.
