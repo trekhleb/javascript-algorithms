@@ -56,6 +56,14 @@ export default class Stack {
       .toArray()
       .map((linkedListNode) => linkedListNode.value);
   }
+  
+  /**
+   * @return {*}
+   */
+  length() {
+    return this.linkedList
+      .toArray().length
+  }
 
   /**
    * @param {function} [callback]
