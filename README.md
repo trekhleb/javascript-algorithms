@@ -143,6 +143,8 @@ a set of rules that precisely define a sequence of operations.
 * **Linked Lists**
   * `B` [Straight Traversal](src/algorithms/linked-list/traversal)
   * `B` [Reverse Traversal](src/algorithms/linked-list/reverse-traversal)
+* **Stack**
+  * `B` [Valid Parentheses](src/algorithms/stack/valid-parentheses)  - check if a string has valid parentheses in the correct order
 * **Trees**
   * `B` [Depth-First Search](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [Breadth-First Search](src/algorithms/tree/breadth-first-search) (BFS)
