@@ -19,6 +19,11 @@ _MakeSet_ creates 8 singletons.
 
 After some operations of _Union_, some sets are grouped together.
 
+## Implementation
+
+- [DisjointSet.js](./DisjointSet.js)
+- [DisjointSetAdhoc.js](./DisjointSetAdhoc.js) - The minimalistic (ad hoc) version of a DisjointSet (or a UnionFind) data structure that doesn't have external dependencies and that is easy to copy-paste and use during the coding interview if allowed by the interviewer (since many data structures in JS are missing).
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Disjoint-set_data_structure)
