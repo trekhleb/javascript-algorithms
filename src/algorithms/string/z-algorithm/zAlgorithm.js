@@ -48,7 +48,7 @@ function buildZArray(zString) {
       }
 
       // Now we may calculate how many characters starting from current position
-      // are are the same as the prefix. We may calculate it by difference between
+      // are the same as the prefix. We may calculate it by difference between
       // right and left Z box boundaries.
       zArray[charIndex] = zBoxRightIndex - zBoxLeftIndex;
 
