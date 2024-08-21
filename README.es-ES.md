@@ -25,7 +25,8 @@ _Léelo en otros idiomas:_
 [_Українська_](README.uk-UA.md),
 [_Arabic_](README.ar-AR.md),
 [_Tiếng Việt_](README.vi-VN.md),
-[_Deutsch_](README.de-DE.md)
+[_Deutsch_](README.de-DE.md),
+[_Uzbek_](README.uz-UZ.md)
 
 *☝ Nótese que este proyecto está pensado con fines de aprendizaje e investigación,
 y **no** para ser usado en producción.*
@@ -69,7 +70,7 @@ definen con precisión una secuencia de operaciones.
 * **Matemáticas**
   * `P` [Manipulación de bits](src/algorithms/math/bits) - asignar/obtener/actualizar/limpiar bits, multiplicación/división por dos, hacer negativo, etc.
   * `P` [Factorial](src/algorithms/math/factorial)
-  * `P` [Número de Fibonacci](src/algorithms/math/fibonacci)
+  * `P` [Sucesión de Fibonacci](src/algorithms/math/fibonacci)
   * `P` [Prueba de primalidad](src/algorithms/math/primality-test) (método de división de prueba)
   * `P` [Algoritmo de Euclides](src/algorithms/math/euclidean-algorithm) - calcular el Máximo común divisor (MCD)
   * `P` [Mínimo común múltiplo](src/algorithms/math/least-common-multiple) (MCM)
