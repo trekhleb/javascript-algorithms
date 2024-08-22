@@ -1,7 +1,7 @@
 import dpLongestIncreasingSubsequence from '../dpLongestIncreasingSubsequence';
 
 describe('dpLongestIncreasingSubsequence', () => {
-  it('should find longest increasing subsequence length', () => {
+  it('should find longest increasing subsequence', () => {
     expect(dpLongestIncreasingSubsequence([
       9, 8, 7, 6, 5, 4, 3, 2, 1, 0,
     ])).toStrictEqual([9]);
