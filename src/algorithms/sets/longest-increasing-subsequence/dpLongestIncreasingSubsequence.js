@@ -55,7 +55,7 @@ export default function dpLongestIncreasingSubsequence(sequence) {
 
   while (rightIndex > -1) {
     const leftIndex = lengthsArray.findLastIndex((item, idx) => (
-       item === lengthsArray[rightIndex] - 1 && idx < rightIndex
+      item === lengthsArray[rightIndex] - 1 && idx < rightIndex
     ));
 
     longestIncreasingSubsequence.unshift(sequence[rightIndex]);
