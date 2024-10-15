@@ -37,7 +37,8 @@ _Read this in other languages:_
 [_Arabic_](README.ar-AR.md),
 [_Tiếng Việt_](README.vi-VN.md),
 [_Deutsch_](README.de-DE.md),
-[_Uzbek_](README.uz-UZ.md)
+[_Uzbek_](README.uz-UZ.md),
+[_עברית_](README.he-HE.md)
 
 *☝ Note that this project is meant to be used for learning and researching purposes
 only, and it is **not** meant to be used for production.*
