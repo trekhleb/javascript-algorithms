@@ -26,6 +26,7 @@ _Read this in other languages:_
 [_Tiếng Việt_](README.vi-VN.md),
 [_Deutsch_](README.de-DE.md),
 [_Uzbek_](README.uz-UZ.md)
+[_עברית_](README.he-HE.md)
 
 ## 자료 구조
 

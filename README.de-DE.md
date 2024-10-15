@@ -26,6 +26,7 @@ _Lies dies in anderen Sprachen:_
 [_Українська_](README.uk-UA.md),
 [_Arabic_](README.ar-AR.md),
 [_Uzbek_](README.uz-UZ.md)
+[_עברית_](README.he-HE.md)
 
 _☝ Beachte, dass dieses Projekt nur für Lern- und Forschungszwecke gedacht ist und **nicht** für den produktiven Einsatz verwendet werden soll_
 

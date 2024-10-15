@@ -29,6 +29,7 @@ _Read this in other languages:_
 [_Tiếng Việt_](README.vi-VN.md),
 [_Deutsch_](README.de-DE.md),
 [_Uzbek_](README.uz-UZ.md)
+[_עברית_](README.he-HE.md)
 
 Yodda tuting, bu loyiha faqat o'quv va tadqiqot maqsadida ishlatilishi
 uchun mo'ljallangan va ishlab chiqarishda ishlatilishi **mumkin emas**.

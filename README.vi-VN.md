@@ -25,6 +25,7 @@ _Đọc bằng ngôn ngữ khác:_
 [_Bahasa Indonesia_](README.id-ID.md),
 [_Українська_](README.uk-UA.md),
 [_Arabic_](README.ar-AR.md)
+[_עברית_](README.he-HE.md)
 
 *☝ Dự án này chỉ được sử dụng cho mục đích học tập và nghiên cứu, **không** được dùng
 cho mục đích thương mại.*
@@ -97,19 +98,19 @@ quy tắc xác định chính xác một chuỗi phép toán.
   * `A` [Dãy con chung ngắn nhất](src/algorithms/sets/shortest-common-supersequence) (SCS)
   * `A` [Bài toán xếp ba lô](src/algorithms/sets/knapsack-problem) - dạng 0-1 và không bị chặn
   * `A` [Mảng con lớn nhất](src/algorithms/sets/maximum-subarray) - phiên bản vét cạn và quy hoạch động (Kadane)
-  * `A` [Tổ hợp của tổng](src/algorithms/sets/combination-sum) - tìm tất cả các tổ hợp tạo thành tổng cụ thể 
+  * `A` [Tổ hợp của tổng](src/algorithms/sets/combination-sum) - tìm tất cả các tổ hợp tạo thành tổng cụ thể
 * **Chuỗi**
-  * `B` [Khoảng cách Hamming](src/algorithms/string/hamming-distance) - số các vị trí các ký hiệu khác nhau 
+  * `B` [Khoảng cách Hamming](src/algorithms/string/hamming-distance) - số các vị trí các ký hiệu khác nhau
   * `A` [Khoảng cách Levenshtein](src/algorithms/string/levenshtein-distance) - khoảng cách thay đổi nhỏ nhất giữa hai chuỗi ký tự
-  * `A` [Thuật toán Knuth–Morris–Pratt](src/algorithms/string/knuth-morris-pratt) (thuật toán KMP) - tìm chuỗi con (đối sánh mẫu) 
+  * `A` [Thuật toán Knuth–Morris–Pratt](src/algorithms/string/knuth-morris-pratt) (thuật toán KMP) - tìm chuỗi con (đối sánh mẫu)
   * `A` [Thuật toán Z](src/algorithms/string/z-algorithm) - tìm chuỗi con (đối sánh mẫu)
   * `A` [Thuật toán Rabin Karp](src/algorithms/string/rabin-karp) - tìm chuỗi con
   * `A` [Xâu con chung dài nhất](src/algorithms/string/longest-common-substring)
   * `A` [Phối biểu thức chính quy](src/algorithms/string/regular-expression-matching)
 * **Tìm kiếm**
   * `B` [Tìm kiếm tuyến tính](src/algorithms/search/linear-search)
-  * `B` [Tìm kiếm nhảy](src/algorithms/search/jump-search) (tìm khối) - tìm kiếm trong mảng đã sắp xếp 
-  * `B` [Tìm kiếm nhị phân](src/algorithms/search/binary-search) - tìm kiếm trong mảng đã sắp xếp 
+  * `B` [Tìm kiếm nhảy](src/algorithms/search/jump-search) (tìm khối) - tìm kiếm trong mảng đã sắp xếp
+  * `B` [Tìm kiếm nhị phân](src/algorithms/search/binary-search) - tìm kiếm trong mảng đã sắp xếp
   * `B` [Tìm kiếm nội suy ](src/algorithms/search/interpolation-search) - Tìm kiếm strong mảng có thứ tự được phân phối đồng nhất
 * **Sắp xếp**
   * `B` [Sắp xếp nổi bọt](src/algorithms/sorting/bubble-sort)
@@ -144,12 +145,12 @@ quy tắc xác định chính xác một chuỗi phép toán.
   * `A` [Các thành phần kết nối chặt](src/algorithms/graph/strongly-connected-components) - Thuật toán Kosaraju
   * `A` [Bài toán người bán hàng](src/algorithms/graph/travelling-salesman) - tuyến đường ngắn nhất có thể đến thăm từng thành phố và trở về thành phố gốc
 * **Mật mã học**
-  * `B` [Băm đa thức](src/algorithms/cryptography/polynomial-hash) - lăn hàm băm dựa trên đa thức 
-  * `B` [Mật mã hàng rào đường sắt](src/algorithms/cryptography/rail-fence-cipher) - một thuật toán mật mã chuyển vị để mã hóa thông điệp 
+  * `B` [Băm đa thức](src/algorithms/cryptography/polynomial-hash) - lăn hàm băm dựa trên đa thức
+  * `B` [Mật mã hàng rào đường sắt](src/algorithms/cryptography/rail-fence-cipher) - một thuật toán mật mã chuyển vị để mã hóa thông điệp
   * `B` [Mật mã Caesar](src/algorithms/cryptography/caesar-cipher) - mật mã chuyển vị đơn giản
   * `B` [Mật mã Hill](src/algorithms/cryptography/hill-cipher) - mật mã chuyển vị đơn giản dựa trên đại số tuyến tính
 * **Học máy**
-  * `B` [NanoNeuron](https://github.com/trekhleb/nano-neuron) - 7 hàm JS đơn giản minh họa cách máy tính thực sự có thể học (truyền thuận / truyền ngược) 
+  * `B` [NanoNeuron](https://github.com/trekhleb/nano-neuron) - 7 hàm JS đơn giản minh họa cách máy tính thực sự có thể học (truyền thuận / truyền ngược)
   * `B` [k-NN](src/algorithms/ml/knn) - thuật toán phân loại k láng giềng gần nhất
   * `B` [k-Means](src/algorithms/ml/k-means) - thuật toán phân cụm k-Means
 * **Khác**
@@ -167,22 +168,22 @@ quy tắc xác định chính xác một chuỗi phép toán.
 
 Mẫu hình thuật toán là một phương pháp hoặc cách tiếp cận chung làm cơ sở cho việc thiết kế một
 lớp thuật toán. Nó là một sự trừu tượng cao hơn khái niệm về một thuật toán, cũng giống như
-một thuật toán là một sự trừu tượng cao hơn một chương trình máy tính. 
+một thuật toán là một sự trừu tượng cao hơn một chương trình máy tính.
 
-* **Vét cạn** - xem xét tất cả các khả năng và chọn giải pháp tốt nhất 
+* **Vét cạn** - xem xét tất cả các khả năng và chọn giải pháp tốt nhất
   * `B` [Tìm kiếm tuyến tính](src/algorithms/search/linear-search)
   * `B` [Thu thập nước mưa](src/algorithms/uncategorized/rain-terraces) - bài toán bẫy nước mưa
   * `B` [Cầu thang đệ quy](src/algorithms/uncategorized/recursive-staircase) - đếm số cách lên đến đỉnh
   * `A` [Mảng con lớn nhất](src/algorithms/sets/maximum-subarray)
   * `A` [Bài toán người bán hàng](src/algorithms/graph/travelling-salesman) - tuyến đường ngắn nhất có thể đến thăm từng thành phố và trở về thành phố gốc
   * `A` [Biến đổi Fourier rời rạc](src/algorithms/math/fourier-transform) - phân giải tín hiệu thời gian thành các tần số tạo nên tín hiệu đó
-* **Tham lam** - chọn phương án tốt nhất vào thời điểm hiện tại mà không cần cân nhắc đến tương lai 
+* **Tham lam** - chọn phương án tốt nhất vào thời điểm hiện tại mà không cần cân nhắc đến tương lai
   * `B` [Trò chơi nhảy](src/algorithms/uncategorized/jump-game)
   * `A` [Bài xếp ba lô không bị chặn](src/algorithms/sets/knapsack-problem)
   * `A` [Thuật toán Dijkstra](src/algorithms/graph/dijkstra) - tìm những đường ngắn nhất từ một định tới tất cả các đỉnh
   * `A` [Thuật toán Prim](src/algorithms/graph/prim) - tìm cây bao trùm nhỏ nhất (MST) cho đồ thị vô hướng có trọng số
   * `A` [Thuật toán Kruskal](src/algorithms/graph/kruskal) - tìm cây bao trùm nhỏ nhất (MST) cho đồ thị vô hướng có trọng số
-* **Chia để trị** - chia vấn đề thành các phần nhỏ hơn rồi giải quyết các phần đó 
+* **Chia để trị** - chia vấn đề thành các phần nhỏ hơn rồi giải quyết các phần đó
   * `B` [Tìm kiếm nhị phân](src/algorithms/search/binary-search)
   * `B` [Tháp Hà Nội](src/algorithms/uncategorized/hanoi-tower)
   * `B` [Tam giác Pascal](src/algorithms/math/pascal-triangle)
@@ -191,7 +192,7 @@ một thuật toán là một sự trừu tượng cao hơn một chương trìn
   * `B` [Sắp xếp nhanh](src/algorithms/sorting/quick-sort)
   * `B` [Cây tìm kiếm theo chiều sâu](src/algorithms/tree/depth-first-search) (DFS)
   * `B` [Đồ thị tìm kiếm theo chiều sâu](src/algorithms/graph/depth-first-search) (DFS)
-  * `B` [Ma trận](src/algorithms/math/matrix) - tạo và duyệt các ma trận có kích thước khác nhau 
+  * `B` [Ma trận](src/algorithms/math/matrix) - tạo và duyệt các ma trận có kích thước khác nhau
   * `B` [Trò chơi nhảy](src/algorithms/uncategorized/jump-game)
   * `B` [Tính nhanh lũy thừa](src/algorithms/math/fast-powering)
   * `B` [Thời điểm tốt nhất để mua bán cổ phiếu](src/algorithms/uncategorized/best-time-to-buy-sell-stocks) - ví dụ chia để trị và một đường chuyền
@@ -216,18 +217,18 @@ một thuật toán là một sự trừu tượng cao hơn một chương trìn
   * `A` [Phối biểu thức chính quy](src/algorithms/string/regular-expression-matching)
 * **Quay lui** - tương tự như vét cạn, cố tạo ra tất cả các giải pháp có thể, nhưng mỗi lần bạn tạo ra giải pháp tiếp theo,
 bạn sẽ kiểm tra xem nó có thỏa mãn tất cả các điều kiện hay không và chỉ khi thỏa mãn mới tiếp tục tạo ra các giải pháp tiếp theo.
-Nếu không, hãy quay lại và đi trên một con đường khác để tìm ra giải pháp. Thông thường, truyền DFS của không gian trạng thái được sử dụng. 
+Nếu không, hãy quay lại và đi trên một con đường khác để tìm ra giải pháp. Thông thường, truyền DFS của không gian trạng thái được sử dụng.
   * `B` [Trò chơi nhảy](src/algorithms/uncategorized/jump-game)
   * `B` [Đường đi độc nhất](src/algorithms/uncategorized/unique-paths)
   * `B` [Tập lũy thừa](src/algorithms/sets/power-set) - tập hợp chứa tất cả các tập con
   * `A` [Chu trình Hamilton](src/algorithms/graph/hamiltonian-cycle) - đi qua các đỉnh một lần duy nhất
   * `A` [Bài toán n quân hậu](src/algorithms/uncategorized/n-queens)
   * `A` [Mã đi tuần](src/algorithms/uncategorized/knight-tour)
-  * `A` [Tổ hợp của tổng](src/algorithms/sets/combination-sum) - tìm tất cả các tổ hợp tạo thành tổng cụ thể 
+  * `A` [Tổ hợp của tổng](src/algorithms/sets/combination-sum) - tìm tất cả các tổ hợp tạo thành tổng cụ thể
 * **Branch & Bound** - ghi nhớ giải pháp chi với phí thấp nhất được tìm thấy ở mỗi giai đoạn của quá trình tìm kiếm quay lui,
 sử dụng chi phí của giải pháp có chi phí thấp nhất được tìm thấy cho đến nay như một giới hạn dưới về chi phí của
-một giải pháp ít chi phí nhân cho bài toán, để loại bỏ các giải pháp từng phần với chi phí lớn hơn giải pháp chi phí thấp nhất được tìm thấy cho đến nay. 
-Thông thường BFS duyệt kết hợp với duyệt DFS của cây không gian trạng thái đang được sử dụng. 
+một giải pháp ít chi phí nhân cho bài toán, để loại bỏ các giải pháp từng phần với chi phí lớn hơn giải pháp chi phí thấp nhất được tìm thấy cho đến nay.
+Thông thường BFS duyệt kết hợp với duyệt DFS của cây không gian trạng thái đang được sử dụng.
 
 ## Hướng dẫn sử dụng repository
 
@@ -238,7 +239,7 @@ npm install
 
 **Chạy ESLint**
 
-Bạn có thể muốn chạy nó để kiểm tra chất lượng code. 
+Bạn có thể muốn chạy nó để kiểm tra chất lượng code.
 
 ```
 npm run lint
@@ -259,7 +260,7 @@ npm test -- 'LinkedList'
 Bạn có thể chơi với các cấu trúc dữ liệu và thuật toán trong tệp `./src/playground/playground.js`
 và viết các bài kiểm thử cho nó ở `./src/playground/__test__/playground.test.js`.
 
-Sau đó, chỉ cần chạy lệnh sau để kiểm tra xem sân chơi của bạn có hoạt động như mong đợi hay không: 
+Sau đó, chỉ cần chạy lệnh sau để kiểm tra xem sân chơi của bạn có hoạt động như mong đợi hay không:
 
 ```
 npm test -- 'playground'
@@ -274,7 +275,7 @@ npm test -- 'playground'
 ### Kí hiệu O lớn
 
 *Kí hiệu O lớn* được dùng để phân loại thuật toán theo thời gian chạy hoặc yêu cầu không gian gia tăng khi kích thước đầu vào gia tăng.
-Trên biểu đồ bên dưới, bạn có thể tìm thấy hầu hết các thứ tự tăng trưởng phổ biến của các thuật toán được chỉ định trong ký hiệu O lớn. 
+Trên biểu đồ bên dưới, bạn có thể tìm thấy hầu hết các thứ tự tăng trưởng phổ biến của các thuật toán được chỉ định trong ký hiệu O lớn.
 
 ![Đồ thị O lớn](./assets/big-o-graph.png)
 
