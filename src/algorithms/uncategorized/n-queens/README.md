@@ -59,7 +59,7 @@ and return false.
         queen here leads to a solution.
     b) If placing queen in [row, column] leads to a solution then return 
         true.
-    c) If placing queen doesn't lead to a solution then umark this [row, 
+    c) If placing queen doesn't lead to a solution then unmark this [row, 
         column] (Backtrack) and go to step (a) to try other rows.
 3) If all rows have been tried and nothing worked, return false to trigger 
     backtracking.
