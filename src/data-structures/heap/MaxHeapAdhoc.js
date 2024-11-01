@@ -7,7 +7,8 @@
 class MaxHeapAdhoc {
   constructor(heap = []) {
     this.heap = [];
-    heap.forEach(this.add);
+    // Use an arrow function to maintain context for 'this'.
+    heap.forEach(num => this.add(num));
   }
 
   add(num) {
@@ -16,15 +17,17 @@ class MaxHeapAdhoc {
   }
 
   peek() {
-    return this.heap[0];
+    return this.isEmpty() ? undefined : this.heap[0];
   }
 
   poll() {
-    if (this.heap.length === 0) return undefined;
+    if (this.isEmpty()) return undefined;
     const top = this.heap[0];
-    this.heap[0] = this.heap[this.heap.length - 1];
-    this.heap.pop();
-    this.heapifyDown();
+    const last = this.heap.pop(); // Remove the last element to replace the top
+    if (!this.isEmpty()) {
+      this.heap[0] = last; // Move the last element to the root
+      this.heapifyDown(); // Re-establish the heap property
+    }
     return top;
   }
 
@@ -49,31 +52,22 @@ class MaxHeapAdhoc {
   heapifyDown() {
     let nodeIndex = 0;
 
-    while (
-      (
-        this.hasLeftChild(nodeIndex) && this.heap[nodeIndex] < this.leftChild(nodeIndex)
-      )
-      || (
-        this.hasRightChild(nodeIndex) && this.heap[nodeIndex] < this.rightChild(nodeIndex)
-      )
-    ) {
+    while (this.hasLeftChild(nodeIndex)) {
       const leftIndex = this.getLeftChildIndex(nodeIndex);
       const rightIndex = this.getRightChildIndex(nodeIndex);
-      const left = this.leftChild(nodeIndex);
-      const right = this.rightChild(nodeIndex);
+      let largerChildIndex = leftIndex;
 
-      if (this.hasLeftChild(nodeIndex) && this.hasRightChild(nodeIndex)) {
-        if (left >= right) {
-          this.swap(leftIndex, nodeIndex);
-          nodeIndex = leftIndex;
-        } else {
-          this.swap(rightIndex, nodeIndex);
-          nodeIndex = rightIndex;
-        }
-      } else if (this.hasLeftChild(nodeIndex)) {
-        this.swap(leftIndex, nodeIndex);
-        nodeIndex = leftIndex;
+      // Check if the right child exists and is greater than the left child
+      if (this.hasRightChild(nodeIndex) && this.rightChild(nodeIndex) > this.leftChild(nodeIndex)) {
+        largerChildIndex = rightIndex;
       }
+
+      // If the current node is greater than the largest child, break
+      if (this.heap[nodeIndex] >= this.heap[largerChildIndex]) break;
+
+      // Swap with the larger child
+      this.swap(nodeIndex, largerChildIndex);
+      nodeIndex = largerChildIndex;
     }
   }
 
@@ -106,9 +100,7 @@ class MaxHeapAdhoc {
   }
 
   swap(indexOne, indexTwo) {
-    const tmp = this.heap[indexTwo];
-    this.heap[indexTwo] = this.heap[indexOne];
-    this.heap[indexOne] = tmp;
+    [this.heap[indexOne], this.heap[indexTwo]] = [this.heap[indexTwo], this.heap[indexOne]];
   }
 }
 
