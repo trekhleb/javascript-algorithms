@@ -36,7 +36,8 @@ _Read this in other languages:_
 [_Українська_](README.uk-UA.md),
 [_Arabic_](README.ar-AR.md),
 [_Tiếng Việt_](README.vi-VN.md),
-[_Deutsch_](README.de-DE.md)
+[_Deutsch_](README.de-DE.md),
+[_Uzbek_](README.uz-UZ.md)
 
 *☝ Note that this project is meant to be used for learning and researching purposes
 only, and it is **not** meant to be used for production.*
@@ -47,6 +48,8 @@ A data structure is a particular way of organizing and storing data in a compute
 be accessed and modified efficiently. More precisely, a data structure is a collection of data
 values, the relationships among them, and the functions or operations that can be applied to
 the data.
+
+Remember that each data has its own trade-offs. And you need to pay attention more to why you're choosing a certain data structure than to how to implement it.
 
 `B` - Beginner, `A` - Advanced
 
