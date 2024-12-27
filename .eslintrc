@@ -12,6 +12,7 @@
     "arrow-body-style": "off",
     "no-loop-func": "off"
   },
+  "ignorePatterns": ["*.md", "*.png", "*.jpeg", "*.jpg"],
   "settings": {
     "react": {
       "version": "18.2.0"
