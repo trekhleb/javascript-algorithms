@@ -230,13 +230,74 @@ describe('AvlTree', () => {
     expect(tree.root.height).toBe(3);
   });
 
-  it('should throw an error when trying to remove the node', () => {
-    const removeNodeAvlTree = () => {
-      const tree = new AvlTree();
+  it('should remove values from the tree with right-right rotation', () => {
+    const tree = new AvlTree();
 
-      tree.remove(1);
-    };
+    tree.insert(10);
+    tree.insert(20);
+    tree.insert(30);
+    tree.insert(40);
 
-    expect(removeNodeAvlTree).toThrowError();
+    expect(tree.toString()).toBe('10,20,30,40');
+
+    tree.remove(10);
+
+    expect(tree.toString()).toBe('20,30,40');
+    expect(tree.root.value).toBe(30);
+    expect(tree.root.left.value).toBe(20);
+    expect(tree.root.right.value).toBe(40);
+    expect(tree.root.balanceFactor).toBe(0);
+  });
+
+  it('should remove values from the tree with left-left rotation', () => {
+    const tree = new AvlTree();
+
+    tree.insert(10);
+    tree.insert(20);
+    tree.insert(30);
+    tree.insert(5);
+
+    expect(tree.toString()).toBe('5,10,20,30');
+
+    tree.remove(30);
+
+    expect(tree.toString()).toBe('5,10,20');
+    expect(tree.root.value).toBe(10);
+    expect(tree.root.left.value).toBe(5);
+    expect(tree.root.right.value).toBe(20);
+    expect(tree.root.balanceFactor).toBe(0);
+  });
+
+  it('should keep balance after removal', () => {
+    const tree = new AvlTree();
+
+    tree.insert(1);
+    tree.insert(2);
+    tree.insert(3);
+    tree.insert(4);
+    tree.insert(5);
+    tree.insert(6);
+    tree.insert(7);
+    tree.insert(8);
+    tree.insert(9);
+
+    expect(tree.toString()).toBe('1,2,3,4,5,6,7,8,9');
+    expect(tree.root.value).toBe(4);
+    expect(tree.root.height).toBe(3);
+    expect(tree.root.balanceFactor).toBe(-1);
+
+    tree.remove(8);
+
+    expect(tree.root.value).toBe(4);
+    expect(tree.root.balanceFactor).toBe(-1);
+
+    tree.remove(9);
+
+    expect(tree.contains(8)).toBeFalsy();
+    expect(tree.contains(9)).toBeFalsy();
+    expect(tree.toString()).toBe('1,2,3,4,5,6,7');
+    expect(tree.root.value).toBe(4);
+    expect(tree.root.height).toBe(2);
+    expect(tree.root.balanceFactor).toBe(0);
   });
 });

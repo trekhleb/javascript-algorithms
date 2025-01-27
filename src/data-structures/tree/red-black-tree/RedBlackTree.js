@@ -155,7 +155,7 @@ export default class RedBlackTree extends BinarySearchTree {
       parentNode.parent = null;
     }
 
-    // Swap colors of granParent and parent nodes.
+    // Swap colors of grandParentNode and parentNode.
     this.swapNodeColors(parentNode, grandParentNode);
 
     // Return new root node.

@@ -1,29 +1,37 @@
 # JavaScript 알고리즘 및 자료 구조
 
-[![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
+[![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
 이 저장소에는 많이 알려진 알고리즘 및 자료 구조의 Javascript 기반 예제를 담고 있습니다.
 
-각 알고리즘과 자료 구조에 대해 연관되어있는 설명이 README에 작성되어 있으며,
+각 알고리즘과 자료 구조에 대해 연관되어 있는 설명이 README에 작성되어 있으며,
 링크를 통해 더 자세한 설명을 만날 수 있습니다. (관련된 YouTube 영상도 포함).
 
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
 [_简体中文_](README.zh-CN.md),
 [_繁體中文_](README.zh-TW.md),
+[_日本語_](README.ja-JP.md),
 [_Polski_](README.pl-PL.md),
-[_Français_](README.fr-FR.md)
-
-> 우리는 주요 알고리즘에 대해 더 자세한 설명을 담은 책을 제작 중입니다.
-만약 “JavaScript Algorithms” 책이 언제 출시되는지 알고 싶다면
-, [여기를 클릭하세요.](https://upscri.be/402324/).
+[_Français_](README.fr-FR.md),
+[_Español_](README.es-ES.md),
+[_Português_](README.pt-BR.md),
+[_Русский_](README.ru-RU.md),
+[_Türk_](README.tr-TR.md),
+[_Italiana_](README.it-IT.md),
+[_Bahasa Indonesia_](README.id-ID.md),
+[_Українська_](README.uk-UA.md),
+[_Arabic_](README.ar-AR.md),
+[_Tiếng Việt_](README.vi-VN.md),
+[_Deutsch_](README.de-DE.md),
+[_Uzbek_](README.uz-UZ.md)
 
 ## 자료 구조
 
 자료 구조는 데이터를 특정 방식으로 구성하고 저장함으로써 더 효율적으로
 접근하고 수정할 수 있게 해줍니다. 간단히 말해, 자료 구조는 데이터 값들,
-데이터 간의 관계, 그리고 데이터를 다룰 수 있는 함수와 작업의 모임입니다. 
+데이터 간의 관계, 그리고 데이터를 다룰 수 있는 함수와 작업의 모임입니다.
 
 
 `B` - 입문자, `A` - 숙련자
@@ -37,19 +45,19 @@ _Read this in other languages:_
 * `B` [우선순위 큐](src/data-structures/priority-queue)
 * `A` [트라이](src/data-structures/trie)
 * `A` [트리](src/data-structures/tree)
-    * `A` [이진 탐색 트리](src/data-structures/tree/binary-search-tree)
-    * `A` [AVL 트리](src/data-structures/tree/avl-tree)
-    * `A` [Red-Black 트리](src/data-structures/tree/red-black-tree)
-    * `A` [세그먼트 트리](src/data-structures/tree/segment-tree) - min/max/sum range 쿼리 예제.
-    * `A` [Fenwick 트리](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
+  * `A` [이진 탐색 트리](src/data-structures/tree/binary-search-tree)
+  * `A` [AVL 트리](src/data-structures/tree/avl-tree)
+  * `A` [Red-Black 트리](src/data-structures/tree/red-black-tree)
+  * `A` [세그먼트 트리](src/data-structures/tree/segment-tree) - min/max/sum range 쿼리 예제.
+  * `A` [Fenwick 트리](src/data-structures/tree/fenwick-tree) (Binary Indexed Tree)
 * `A` [그래프](src/data-structures/graph) (유방향, 무방향)
 * `A` [서로소 집합](src/data-structures/disjoint-set)
 * `A` [블룸 필터](src/data-structures/bloom-filter)
 
 ## 알고리즘
 
-알고리즘은 어떤 종류의 문제를 풀 수 있는 정확한 방법이며, 
-일련의 작업을 정확하게 정의해 놓은 규칙들입니다. 
+알고리즘은 어떤 종류의 문제를 풀 수 있는 정확한 방법이며,
+일련의 작업을 정확하게 정의해 놓은 규칙들입니다.
 
 `B` - 입문자, `A` - 숙련자
 
@@ -57,7 +65,7 @@ _Read this in other languages:_
 
 * **Math**
   * `B` [Bit Manipulation](src/algorithms/math/bits) - set/get/update/clear bits, 2의 곱 / 나누기, 음수로 만들기 etc.
-  * `B` [팩토리얼](src/algorithms/math/factorial) 
+  * `B` [팩토리얼](src/algorithms/math/factorial)
   * `B` [피보나치 수](src/algorithms/math/fibonacci)
   * `B` [소수 판별](src/algorithms/math/primality-test) (trial division 방식)
   * `B` [유클리드 호제법](src/algorithms/math/euclidean-algorithm) - 최대공약수 (GCD)
@@ -124,7 +132,7 @@ _Read this in other languages:_
 * **Uncategorized**
   * `B` [하노이 탑](src/algorithms/uncategorized/hanoi-tower)
   * `B` [정방 행렬 회전](src/algorithms/uncategorized/square-matrix-rotation) - 제자리(in-place) 알고리즘
-  * `B` [점프 게임](src/algorithms/uncategorized/jump-game) - 백트래킹, 동적계획법 (top-down + bottom-up), 탐욕 알고리즘 예제 
+  * `B` [점프 게임](src/algorithms/uncategorized/jump-game) - 백트래킹, 동적계획법 (top-down + bottom-up), 탐욕 알고리즘 예제
   * `B` [Unique 경로](src/algorithms/uncategorized/unique-paths) - 백트래킹, 동적계획법, 파스칼 삼각형에 기반한 예제
   * `B` [빗물 담기 문제](src/algorithms/uncategorized/rain-terraces) - trapping rain water problem (동적계획법, 브루트포스 버전)
   * `A` [N-Queens 문제](src/algorithms/uncategorized/n-queens)
@@ -132,9 +140,7 @@ _Read this in other languages:_
 
 ### 패러다임별 알고리즘
 
-알고리즘의 패러다임은 어떤 종류의 알고리즘을 설계할 때 기초가 되는 일반적인 방법 혹은 접근법입니다.
-알고리즘이 컴퓨터의 프로그램 보다 더 추상적인 것처럼 알고리즘의 패러다임은 어떤 알고리즘의 
-개념보다 추상적인 것입니다.
+알고리즘 패러다임 이란, 알고리즘이 주어진 문제를 해결하기 위해 채택한 기초가 되는 일반적인 방법 혹은 접근법입니다. 알고리즘이 해결하는 문제나 알고리즘의 동작 방식이 완전히 다르더라도,알고리즘의 동작 원칙이 같으면 같은 패러다음을 사용했다고 말할 수 있으며, 주로 알고리즘을 구분하는 기준으로 쓰인다. 알고리즘이 일반적인 컴퓨터의 프로그램에 대한 개념보다 보다 더 추상적인 개념인 것처럼 알고리즘의 패러다임은 명확히 정의된 수학적 실체가 있는 것이 아니기 때문에 그 어떤 알고리즘의 개념보다도 훨씬 추상적인 개념입니다.
 
 * **브루트 포스(Brute Force)** - 가능한 모든 경우를 탐색한 뒤 최적을 찾아내는 방식입니다.
   * `B` [선형 탐색](src/algorithms/search/linear-search)
@@ -182,11 +188,11 @@ _Read this in other languages:_
   * `A` [N-Queens 문제](src/algorithms/uncategorized/n-queens)
   * `A` [기사의 여행](src/algorithms/uncategorized/knight-tour)
   * `A` [조합 합](src/algorithms/sets/combination-sum) - 특정 합을 구성하는 모든 조합 찾기
-* **분기 한정법** - 백트래킹으로 찾은 각 단계의 최소 비용 해결법을 기억해 두고 있다가, 이 비용을 이용해서 더 낮은 최소 비용을 찾습니다. 기억해둔 최소 비용을 이용해 더 높은 비용이 드는 해결법은 더이상 탐색하지 않습니다. 보통 상태 정보를 사진 DFS 를 이용한 BFS 방식에서 사용됩니다.
+* **분기 한정법** - 백트래킹으로 찾은 각 단계의 최소 비용이 드는 해를 기억해 두고 있다가, 이 비용을 이용해서 더 낮은 최적의 해를 찾습니다. 기억해둔 최소 비용들을 이용해 더 높은 비용이 드는 해결법을 탐색 안함으로써 불필요한 시간 소모를 줄입니다. 보통 상태 공간 트리의 DFS 탐색을 이용한 BFS 탐색 방식에서 사용됩니다.
 
 ## 이 저장소의 사용법
 
-**모든 의존성 설치**
+**모든 종속 모듈들 설치**
 ```
 npm install
 ```
@@ -273,3 +279,5 @@ Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 | **셸 정렬**            | n&nbsp;log(n)   | 간격 순서에 영향을 받습니다.   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
 | **계수 정렬**          | n + r           | n + r               | n + r               | n + r     | Yes              | r - 배열내 가장 큰 수 |
 | **기수 정렬**          | n * k           | n * k               | n * k               | n + k     | Yes              | k - 키값의 최대 길이 |
+
+> ℹ️ A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)

@@ -1,5 +1,8 @@
 # Shellsort
 
+_Read this in other languages:_
+[_Português_](README.pt-BR.md).
+
 Shellsort, also known as Shell sort or Shell's method, 
 is an in-place comparison sort. It can be seen as either a 
 generalization of sorting by exchange (bubble sort) or sorting 
@@ -37,6 +40,8 @@ After this step, the array should look like this
 
 ![Shellsort](https://www.tutorialspoint.com/data_structures_algorithms/images/shell_sort_step_2.jpg)
 
+> UPD: On the picture below there is a typo and result array is supposed to be `[14, 10, 27, 19, 35, 33, 42, 44]`.
+
 Finally, we sort the rest of the array using interval of value 1. 
 Shell sort uses insertion sort to sort the array.
 
@@ -50,5 +55,6 @@ Shell sort uses insertion sort to sort the array.
 
 ## References
 
-* [Tutorials Point](https://www.tutorialspoint.com/data_structures_algorithms/shell_sort_algorithm.htm)
-* [Wikipedia](https://en.wikipedia.org/wiki/Shellsort)
+- [Tutorials Point](https://www.tutorialspoint.com/data_structures_algorithms/shell_sort_algorithm.htm)
+- [Wikipedia](https://en.wikipedia.org/wiki/Shellsort)
+- [YouTube by Rob Edwards](https://www.youtube.com/watch?v=ddeLSDsYVp8&index=79&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)

@@ -10,7 +10,7 @@ export default function kruskal(graph) {
   // It should fire error if graph is directed since the algorithm works only
   // for undirected graphs.
   if (graph.isDirected) {
-    throw new Error('Prim\'s algorithms works only for undirected graphs');
+    throw new Error('Kruskal\'s algorithms works only for undirected graphs');
   }
 
   // Init new graph that will contain minimum spanning tree of original graph.
@@ -33,7 +33,7 @@ export default function kruskal(graph) {
   const sortedEdges = new QuickSort(sortingCallbacks).sort(graph.getAllEdges());
 
   // Create disjoint sets for all graph vertices.
-  const keyCallback = graphVertex => graphVertex.getKey();
+  const keyCallback = (graphVertex) => graphVertex.getKey();
   const disjointSet = new DisjointSet(keyCallback);
 
   graph.getAllVertices().forEach((graphVertex) => {

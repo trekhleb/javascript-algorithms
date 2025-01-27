@@ -9,7 +9,7 @@
 **Contributing New Translation**
 
 - Create new `README.xx-XX.md` file with translation alongside with 
-main `README.md` file where `xx-XX` is locale and country/region codes.
+main `README.md` file where `xx-XX` is [locale and country/region codes](http://www.lingoes.net/en/translator/langcode.htm).
 For example `en-US`, `zh-CN`, `zh-TW`, `ko-KR` etc.
 - You may also translate all other sub-folders by creating 
 related `README.xx-XX.md` files in each of them.
