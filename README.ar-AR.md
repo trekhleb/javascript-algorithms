@@ -25,7 +25,7 @@ _اقرأ هذا في لغات أخرى:_
 [_Tiếng Việt_](README.vi-VN.md),
 [_Deutsch_](README.de-DE.md),
 [_Uzbek_](README.uz-UZ.md)
-[_עברית_](README.he-HE.md)
+[_עברית_](README.he-IL.md)
 
  ☝ ملاحضة هذا المشروع مخصص للاستخدام لأغراض التعلم والبحث
 فقط ، و ** ليست ** معدة للاستخدام في **الإنتاج**
