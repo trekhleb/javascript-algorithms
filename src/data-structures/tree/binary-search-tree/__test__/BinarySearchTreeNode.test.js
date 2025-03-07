@@ -252,4 +252,14 @@ describe('BinarySearchTreeNode', () => {
 
     expect(childNode.parent).toBeNull();
   });
+
+  it('should give max node', () => {
+    const bst = new BinarySearchTreeNode(10);
+    bst.insert(20);
+    bst.insert(-2);
+    bst.insert(4);
+    bst.insert(-10);
+    bst.insert(40);
+    expect(bst.findMax().value).toBe(40);
+  });
 });
