@@ -185,4 +185,20 @@ describe('GraphVertex', () => {
 
     expect(vertexA.getEdges().length).toEqual(3);
   });
+
+  it('should execute callback when passed to toString', () => {
+    const vertex = new GraphVertex('A');
+
+    expect(vertex.toString(() => 'B')).toEqual('B');
+  });
+
+  it('should execute toString on value when calling toString on vertex', () => {
+    const value = {
+      toString() { return 'A'; },
+    };
+
+    const vertex = new GraphVertex(value);
+
+    expect(vertex.toString()).toEqual('A');
+  });
 });
