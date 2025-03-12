@@ -321,4 +321,47 @@ describe('RedBlackTree', () => {
 
     expect(removeNodeFromRedBlackTree).toThrowError();
   });
+
+  it('should set parent of parent node correctly in first part of leftRightRotation', () => {
+    const tree = new RedBlackTree();
+
+    tree.insert(15);
+    tree.insert(100);
+    tree.insert(7);
+    const node1 = tree.insert(1);
+    // now 15 is root, 7 is his left child, 100 is right, 1 is left child of 7
+    const node5 = tree.insert(5);
+    // rotation: at first, 7 is Grandparent, 1 is his left child and Parent of his right Child 5
+    // . 7
+    // 1
+    // . 5
+    // after rotation 5 is parent of 1 and 7, 1 is left child, 7 is right child
+    // . 5
+    // 1 . 7
+    // so, 5.left = 1 and 1.parent = 5 (should be)
+    expect(node5.left).toBe(node1);
+    expect(node1.parent).toBe(node5);
+  });
+
+  it('should set parent of parent node correctly in first part of rightLeftRotation', () => {
+    const tree = new RedBlackTree();
+
+    tree.insert(15);
+    tree.insert(100);
+    tree.insert(7);
+    const node120 = tree.insert(120);
+    // now 15 is root, 7 is his left child, 100 is right, 120 is right child of 100
+    const node110 = tree.insert(110);
+    // rotation: at first, 100 is Grandparent,
+    // 120 is his right child and Parent of his left Child 110
+    // 100
+    // . 120
+    // 110
+    // after rotation 110 is parent of 100 and 120, 100 is left child, 120 is right child
+    // .. 110
+    // 100 . 120
+    // so, 110.right = 120 and 120.parent = 110 (should be)
+    expect(node110.right).toBe(node120);
+    expect(node120.parent).toBe(node110);
+  });
 });
