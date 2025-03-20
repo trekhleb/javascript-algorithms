@@ -38,7 +38,7 @@
     "@babel/cli": "7.20.7",
     "@babel/preset-env": "7.20.2",
     "@types/jest": "29.4.0",
-    "eslint": "8.33.0",
+    "eslint": "^8.33.0",
     "eslint-config-airbnb": "19.0.4",
     "eslint-plugin-import": "2.27.5",
     "eslint-plugin-jest": "27.2.1",
