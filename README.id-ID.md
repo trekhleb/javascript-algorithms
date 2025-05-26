@@ -23,7 +23,9 @@ _Baca ini dalam bahasa yang lain:_
 [_Українська_](README.uk-UA.md),
 [_Arabic_](README.ar-AR.md),
 [_Tiếng Việt_](README.vi-VN.md),
-[_Deutsch_](README.de-DE.md)
+[_Deutsch_](README.de-DE.md),
+[_Uzbek_](README.uz-UZ.md)
+[_עברית_](README.he-IL.md)
 
 _☝ Perhatikan bahwa proyek ini hanya dimaksudkan untuk tujuan pembelajaran dan riset, dan **tidak** dimaksudkan untuk digunakan sebagai produksi._
 
