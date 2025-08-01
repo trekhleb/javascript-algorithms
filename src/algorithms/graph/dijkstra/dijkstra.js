@@ -1,80 +1,89 @@
-import PriorityQueue from '../../../data-structures/priority-queue/PriorityQueue';
-
-/**
- * @typedef {Object} ShortestPaths
- * @property {Object} distances - shortest distances to all vertices
- * @property {Object} previousVertices - shortest paths to all vertices.
- */
-
-/**
- * Implementation of Dijkstra algorithm of finding the shortest paths to graph nodes.
- * @param {Graph} graph - graph we're going to traverse.
- * @param {GraphVertex} startVertex - traversal start vertex.
- * @return {ShortestPaths}
- */
-export default function dijkstra(graph, startVertex) {
-  // Init helper variables that we will need for Dijkstra algorithm.
-  const distances = {};
-  const visitedVertices = {};
-  const previousVertices = {};
-  const queue = new PriorityQueue();
-
-  // Init all distances with infinity assuming that currently we can't reach
-  // any of the vertices except the start one.
-  graph.getAllVertices().forEach((vertex) => {
-    distances[vertex.getKey()] = Infinity;
-    previousVertices[vertex.getKey()] = null;
-  });
-
-  // We are already at the startVertex so the distance to it is zero.
-  distances[startVertex.getKey()] = 0;
-
-  // Init vertices queue.
-  queue.add(startVertex, distances[startVertex.getKey()]);
-
-  // Iterate over the priority queue of vertices until it is empty.
-  while (!queue.isEmpty()) {
-    // Fetch next closest vertex.
-    const currentVertex = queue.poll();
-
-    // Iterate over every unvisited neighbor of the current vertex.
-    currentVertex.getNeighbors().forEach((neighbor) => {
-      // Don't visit already visited vertices.
-      if (!visitedVertices[neighbor.getKey()]) {
-        // Update distances to every neighbor from current vertex.
-        const edge = graph.findEdge(currentVertex, neighbor);
-
-        const existingDistanceToNeighbor = distances[neighbor.getKey()];
-        const distanceToNeighborFromCurrent = distances[currentVertex.getKey()] + edge.weight;
-
-        // If we've found shorter path to the neighbor - update it.
-        if (distanceToNeighborFromCurrent < existingDistanceToNeighbor) {
-          distances[neighbor.getKey()] = distanceToNeighborFromCurrent;
-
-          // Change priority of the neighbor in a queue since it might have became closer.
-          if (queue.hasValue(neighbor)) {
-            queue.changePriority(neighbor, distances[neighbor.getKey()]);
-          }
-
-          // Remember previous closest vertex.
-          previousVertices[neighbor.getKey()] = currentVertex;
-        }
-
-        // Add neighbor to the queue for further visiting.
-        if (!queue.hasValue(neighbor)) {
-          queue.add(neighbor, distances[neighbor.getKey()]);
-        }
-      }
-    });
-
-    // Add current vertex to visited ones to avoid visiting it again later.
-    visitedVertices[currentVertex.getKey()] = currentVertex;
+class PriorityQueue {
+  constructor() {
+    this.values = [];
   }
 
-  // Return the set of shortest distances to all vertices and the set of
-  // shortest paths to all vertices in a graph.
-  return {
-    distances,
-    previousVertices,
-  };
+  add(value, priority) {
+    this.values.push({ value, priority });
+    this.sort();
+  }
+
+  poll() {
+    return this.values.shift().value;
+  }
+
+  isEmpty() {
+    return this.values.length === 0;
+  }
+
+  hasValue(value) {
+    return this.values.some((item) => item.value === value);
+  }
+
+  changePriority(value, newPriority) {
+    for (let item of this.values) {
+      if (item.value === value) {
+        item.priority = newPriority;
+        break;
+      }
+    }
+    this.sort();
+  }
+
+  sort() {
+    this.values.sort((a, b) => a.priority - b.priority);
+  }
 }
+
+function dijkstra(graph, start) {
+  const distances = {};
+  const previous = {};
+  const queue = new PriorityQueue();
+  const visited = new Set();
+
+  // Initialize distances
+  for (let vertex in graph) {
+    if (vertex === start) {
+      distances[vertex] = 0;
+      queue.add(vertex, 0);
+    } else {
+      distances[vertex] = Infinity;
+    }
+    previous[vertex] = null;
+  }
+
+  while (!queue.isEmpty()) {
+    const currentVertex = queue.poll();
+
+    // ✅ Skip already visited nodes (handles duplicates safely)
+    if (visited.has(currentVertex)) continue;
+    visited.add(currentVertex);
+
+    for (let neighbor in graph[currentVertex]) {
+      const distance = distances[currentVertex] + graph[currentVertex][neighbor];
+
+      if (distance < distances[neighbor]) {
+        distances[neighbor] = distance;
+        previous[neighbor] = currentVertex;
+
+        if (!queue.hasValue(neighbor)) {
+          queue.add(neighbor, distance);
+        } else {
+          queue.changePriority(neighbor, distance);
+        }
+      }
+    }
+  }
+
+  return { distances, previous };
+}
+
+const graph = {
+  A: { B: 1, C: 4 },
+  B: { C: 2, D: 5 },
+  C: { D: 1 },
+  D: {}
+};
+
+const result = dijkstra(graph, "A");
+console.log(result.distances); // { A: 0, B: 1, C: 3, D: 4 }
