@@ -239,7 +239,9 @@ export default class LinkedList {
    * @return {string}
    */
   toString(callback) {
-    return this.toArray().map((node) => node.toString(callback)).toString();
+    return this.toArray()
+      .map((node) => node.toString(callback))
+      .toString();
   }
 
   /**
@@ -268,5 +270,22 @@ export default class LinkedList {
     this.head = prevNode;
 
     return this;
+  }
+
+  /**
+   * Get us the size of the link;
+   * @returns {number}
+   */
+  getSize() {
+    let res = 0;
+    let currNode = this.head;
+
+    // Iterate the entire list.
+    while (currNode) {
+      res++;
+      currNode = currNode.next;
+    }
+
+    return res;
   }
 }
