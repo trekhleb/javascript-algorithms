@@ -288,4 +288,25 @@ export default class LinkedList {
 
     return res;
   }
+
+  /**
+   * Find the index of the value.
+   * @param {*} value
+   * @returns {number}
+   */
+  indexOf(value) {
+    if (this.getSize() === 0) return -1; // check if the size of list is 0 return -1;
+    let currNode = this.head;
+    let index = 0;
+
+    // Iterate the list to find the value.
+    while (currNode) {
+      if (currNode.value === value) return index;
+      currNode = currNode.next;
+      index++;
+    }
+
+    // if the value dont exist:
+    return -1;
+  }
 }
