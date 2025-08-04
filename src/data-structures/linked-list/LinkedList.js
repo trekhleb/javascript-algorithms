@@ -329,4 +329,23 @@ export default class LinkedList {
 
     return currNode.value;
   }
+  
+  /**
+   * Print the entire list.
+   */
+  print() {
+    if (this.getSize() === 0) return ''; // check if the list size is zero;
+    let res = '';
+    let currNode = this.head;
+
+    // Iterate the list to add values to res variable
+    while (currNode) {
+      res += `${currNode.value} ==> `;
+      currNode = currNode.next;
+    }
+
+    res += `null`;
+
+    console.log(res);
+  }
 }
