@@ -309,4 +309,24 @@ export default class LinkedList {
     // if the value dont exist:
     return -1;
   }
+
+  /**
+   * Find the value of specified index.
+   * @param {number} index
+   * @returns {*}
+   */
+  at(index) {
+    // check if the index not exist
+    if (index < 0 || index > this.getSize()) return undefined;
+    let i = 0;
+    let currNode = this.head;
+
+    // Iterate the list to find the index.
+    while (i < index) {
+      currNode = currNode.next;
+      i++;
+    }
+
+    return currNode.value;
+  }
 }
