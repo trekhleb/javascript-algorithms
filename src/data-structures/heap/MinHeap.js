@@ -1,5 +1,7 @@
 import Heap from './Heap';
 
+// the best heap implementation!!!!
+
 export default class MinHeap extends Heap {
   /**
    * Checks if pair of heap elements is in correct order.
