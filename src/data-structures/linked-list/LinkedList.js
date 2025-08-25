@@ -16,6 +16,57 @@ export default class LinkedList {
   }
 
   /**
+   * Returns the index of the first occurrence of the value in the list, or -1 if not found.
+   * @param {*} value
+   * @returns {number}
+   */
+  indexOf(value) {
+    let current = this.head;
+    let index = 0;
+    while (current) {
+      if (this.compare.equal(current.value, value)) {
+        return index;
+      }
+      current = current.next;
+      index += 1;
+    }
+    return -1;
+  }
+
+  /**
+   * Returns the value at the given index, or undefined if out of bounds.
+   * @param {number} index
+   * @returns {*}
+   */
+  at(index) {
+    if (index < 0) return undefined;
+    let current = this.head;
+    let i = 0;
+    while (current) {
+      if (i === index) {
+        return current.value;
+      }
+      current = current.next;
+      i += 1;
+    }
+    return undefined;
+  }
+
+  /**
+   * Prints the list in a user-friendly format (e.g., 1 -> 2 -> 3).
+   * @returns {string}
+   */
+  print() {
+    const values = [];
+    let current = this.head;
+    while (current) {
+      values.push(String(current.value));
+      current = current.next;
+    }
+    return values.join(' -> ');
+  }
+
+  /**
    * @param {*} value
    * @return {LinkedList}
    */
