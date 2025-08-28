@@ -12,7 +12,7 @@ import * as mtrx from '../matrix/Matrix';
  * @returns {number}
  * @trows {Error}
  */
-export const manhattanDistance = (a, b) => {
+const manhattanDistance = (a, b) => {
   mtrx.validateSameShape(a, b);
 
   let distanceTotal = 0;
@@ -24,3 +24,5 @@ export const manhattanDistance = (a, b) => {
 
   return distanceTotal;
 };
+
+export default manhattanDistance;

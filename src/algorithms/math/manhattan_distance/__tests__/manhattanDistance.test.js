@@ -1,4 +1,4 @@
-import { manhattanDistance } from '../manhattanDistance';
+import manhattanDistance from '../manhattanDistance';
 
 describe('manhattanDistance', () => {
   it('should calculate Manhattan distance between vectors', () => {
