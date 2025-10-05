@@ -1,0 +1,7 @@
+# Enforce LF for all text files
+* text=auto eol=lf
+
+# Ignore all files in .husky except .sh scripts
+*
+!.gitignore
+!*.sh
