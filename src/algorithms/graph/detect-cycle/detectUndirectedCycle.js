@@ -4,56 +4,57 @@ import depthFirstSearch from '../depth-first-search/depthFirstSearch';
  * Detect cycle in undirected graph using Depth First Search.
  *
  * @param {Graph} graph
+ * @returns {Vertex[] | null} ordered array of vertices forming the cycle (first === last), or null
  */
 export default function detectUndirectedCycle(graph) {
-  let cycle = null;
+  let cycle = null; // will hold ordered array once found
 
-  // List of vertices that we have visited.
-  const visitedVertices = {};
+  const visitedVertices = {}; // visited vertices
+  const parents = {}; // parent for every visited vertex
 
-  // List of parents vertices for every visited vertex.
-  const parents = {};
-
-  // Callbacks for DFS traversing.
   const callbacks = {
     allowTraversal: ({ currentVertex, nextVertex }) => {
-      // Don't allow further traversal in case if cycle has been detected.
-      if (cycle) {
-        return false;
-      }
+      if (cycle) return false; // stop traversal once cycle is found
 
-      // Don't allow traversal from child back to its parent.
       const currentVertexParent = parents[currentVertex.getKey()];
-      const currentVertexParentKey = currentVertexParent ? currentVertexParent.getKey() : null;
+      const currentVertexParentKey = currentVertexParent
+        ? currentVertexParent.getKey()
+        : null;
 
       return currentVertexParentKey !== nextVertex.getKey();
     },
+
     enterVertex: ({ currentVertex, previousVertex }) => {
       if (visitedVertices[currentVertex.getKey()]) {
-        // Compile cycle path based on parents of previous vertices.
-        cycle = {};
+        // Build ordered cycle array
+        const startKey = currentVertex.getKey();
+        const cycleArr = [currentVertex];
 
-        let currentCycleVertex = currentVertex;
-        let previousCycleVertex = previousVertex;
-
-        while (previousCycleVertex.getKey() !== currentVertex.getKey()) {
-          cycle[currentCycleVertex.getKey()] = previousCycleVertex;
-          currentCycleVertex = previousCycleVertex;
-          previousCycleVertex = parents[previousCycleVertex.getKey()];
+        let walker = previousVertex;
+        while (walker && walker.getKey() !== startKey) {
+          cycleArr.push(walker);
+          walker = parents[walker.getKey()];
         }
 
-        cycle[currentCycleVertex.getKey()] = previousCycleVertex;
+        cycleArr.push(currentVertex); // close the cycle
+        cycle = cycleArr;
       } else {
-        // Add next vertex to visited set.
         visitedVertices[currentVertex.getKey()] = currentVertex;
         parents[currentVertex.getKey()] = previousVertex;
       }
     },
   };
 
-  // Start DFS traversing.
-  const startVertex = graph.getAllVertices()[0];
-  depthFirstSearch(graph, startVertex, callbacks);
+  const allVertices = graph.getAllVertices();
+  for (let i = 0; i < allVertices.length; i += 1) {
+    const startVertex = allVertices[i];
+
+    if (!visitedVertices[startVertex.getKey()]) {
+      depthFirstSearch(graph, startVertex, callbacks);
+
+      if (cycle) break; // early exit once cycle is found
+    }
+  }
 
   return cycle;
 }
