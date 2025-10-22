@@ -27,8 +27,6 @@ _Baca ini dalam bahasa yang lain:_
 [_Uzbek_](README.uz-UZ.md)
 [_עברית_](README.he-IL.md)
 
-_☝ Perhatikan bahwa proyek ini hanya dimaksudkan untuk tujuan pembelajaran dan riset, dan **tidak** dimaksudkan untuk digunakan sebagai produksi._
-
 ## Struktur Data
 
 Struktur data adalah cara tertentu untuk mengatur dan menyimpan data dalam komputer sehingga dapat diakses dan diubah secara efisien. Lebih tepatnya, struktur data adalah kumpulan dari nilai data, relasi di antara data-data, dan fungsi atau operasi yang dapat diterapkan pada data.

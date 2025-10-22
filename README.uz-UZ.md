@@ -31,9 +31,6 @@ _Read this in other languages:_
 [_Uzbek_](README.uz-UZ.md)
 [_עברית_](README.he-IL.md)
 
-Yodda tuting, bu loyiha faqat o'quv va tadqiqot maqsadida ishlatilishi
-uchun mo'ljallangan va ishlab chiqarishda ishlatilishi **mumkin emas**.
-
 ## Ma'lumotlar tuzilmalari
 
 Ma'lumotlar tuzilmasi - bu kompyuterda ma'lumotlarni samarali tarzda

@@ -29,9 +29,6 @@ _Léelo en otros idiomas:_
 [_Uzbek_](README.uz-UZ.md)
 [_עברית_](README.he-IL.md)
 
-*☝ Nótese que este proyecto está pensado con fines de aprendizaje e investigación,
-y **no** para ser usado en producción.*
-
 ## Estructuras de Datos
 
 Una estructura de datos es una forma particular de organizar y almacenar datos en un ordenador para que puedan accederse
