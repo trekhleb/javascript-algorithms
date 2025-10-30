@@ -233,6 +233,13 @@ export default class LinkedList {
 
     return nodes;
   }
+  
+  /**
+   * @return {number}
+   */
+  size() {
+    return this.toArray().length;
+  }
 
   /**
    * @param {function} [callback]
