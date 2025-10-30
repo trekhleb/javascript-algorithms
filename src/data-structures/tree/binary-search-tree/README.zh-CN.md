@@ -1,40 +1,29 @@
-# Binary Search Tree
+# 二叉搜索树
 
 _Read this in other languages:_
-[_Português_](README.pt-BR.md),[_简体中文_](README.zh-CN.md)
+[_Português_](README.pt-BR.md),[_English_](README.md)
 
-In computer science, **binary search trees** (BST), sometimes called
-ordered or sorted binary trees, are a particular type of container:
-data structures that store "items" (such as numbers, names etc.)
-in memory. They allow fast lookup, addition and removal of
-items, and can be used to implement either dynamic sets of
-items, or lookup tables that allow finding an item by its key
-(e.g., finding the phone number of a person by name).
+在计算机科学中, **二叉搜索树** (BST), 也称为有序二叉树或排序二叉树, 是一种特殊的容器:
+在内存中存储“元素”的数据结构（如数字，名称等）。二叉搜索树可以快速查找，添加和删除元素，也可用于
+构建动态元素集或在表中根据键查找元素值 （例：通过某人姓名找到某人的手机号）。
 
-Binary search trees keep their keys in sorted order, so that lookup
-and other operations can use the principle of binary search:
-when looking for a key in a tree (or a place to insert a new key),
-they traverse the tree from root to leaf, making comparisons to
-keys stored in the nodes of the tree and deciding, on the basis
-of the comparison, to continue searching in the left or right
-subtrees. On average, this means that each comparison allows
-the operations to skip about half of the tree, so that each
-lookup, insertion or deletion takes time proportional to the
-logarithm of the number of items stored in the tree. This is
-much better than the linear time required to find items by key
-in an (unsorted) array, but slower than the corresponding
-operations on hash tables.
+二叉搜索树为有序序列，所以在进行查找或其他操作时可以使用二分查找原理：
+在树中寻找键（或插入新键的位置）时，查找过程为: 从根到叶遍历树，通过比较
+存储在树的节点中的键来判断继续向左或向右搜索子树。 平均而言，这意味着每次
+比较都允许跳过大约一半的操作，这样每个查找、插入或删除所花费的时间为
+树中存储的项目数的对数。 这是比按键在（未排序的）数组中查找元素所需的
+线性时间要好得多，但比在哈希表中相应的操作慢。
 
-A binary search tree of size 9 and depth 3, with 8 at the root.
-The leaves are not drawn.
+下图为一个大小为 9，深度为 3，8 为根结点的二叉搜索树。
+叶子节点没有被绘制。
 
 ![Trie](./images/binary-search-tree.jpg)
 
 _Made with [okso.app](https://okso.app)_
 
-## Pseudocode for Basic Operations
+## 基础操作的伪代码
 
-### Insertion
+### 插入
 
 ```text
 insert(value)
@@ -68,7 +57,7 @@ insertNode(current, value)
 end insertNode
 ```
 
-### Searching
+### 查找
 
 ```text
 contains(root, value)
@@ -87,7 +76,7 @@ contains(root, value)
 end contains
 ```
 
-### Deletion
+### 删除
 
 ```text
 remove(value)
@@ -138,7 +127,7 @@ remove(value)
 end remove
 ```
 
-### Find Parent of Node
+### 查找某个节点的父节点
 
 ```text
 findParent(value, root)
@@ -168,7 +157,7 @@ findParent(value, root)
 end findParent
 ```
 
-### Find Node
+### 查找节点
 
 ```text
 findNode(root, value)
@@ -188,7 +177,7 @@ findNode(root, value)
 end findNode
 ```
 
-### Find Minimum
+### 查找最小值
 
 ```text
 findMin(root)
@@ -202,7 +191,7 @@ findMin(root)
 end findMin
 ```
 
-### Find Maximum
+### 查找最大值
 
 ```text
 findMax(root)
@@ -216,9 +205,9 @@ findMax(root)
 end findMax
 ```
 
-### Traversal
+### 遍历
 
-#### InOrder Traversal
+#### 中序遍历
 
 ```text
 inorder(root)
@@ -232,7 +221,7 @@ inorder(root)
 end inorder
 ```
 
-#### PreOrder Traversal
+#### 前序遍历
 
 ```text
 preorder(root)
@@ -246,7 +235,7 @@ preorder(root)
 end preorder
 ```
 
-#### PostOrder Traversal
+#### 后序遍历
 
 ```text
 postorder(root)
@@ -260,19 +249,19 @@ postorder(root)
 end postorder
 ```
 
-## Complexities
+## 复杂度
 
-### Time Complexity
+### 时间复杂度
 
 |  Access   |  Search   | Insertion | Deletion  |
 | :-------: | :-------: | :-------: | :-------: |
 | O(log(n)) | O(log(n)) | O(log(n)) | O(log(n)) |
 
-### Space Complexity
+### 空间复杂度
 
 O(n)
 
-## References
+## 参考资料
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Binary_search_tree)
 - [Inserting to BST on YouTube](https://www.youtube.com/watch?v=wcIRPqTR3Kc&list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8&index=9&t=0s)
