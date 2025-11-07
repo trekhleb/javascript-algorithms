@@ -83,6 +83,10 @@ If the node that we're visiting (in this case the node `C`) is already in the qu
 
 Now we now the shortest distances to ech node from the start node `A`. In practice, during the distance calculations we also record the the `previousVertices` for each node to be able to show the exact sequence of nodes that forms the shortest path.
 
+## Implementation example
+
+- [dijkstra.js](./dijkstra.js)
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
