@@ -45,8 +45,6 @@ Each neighbor of the pulled (from the queue) node is being traversed to calculat
 
 Every time we visit a not yet seen neighbor, we add it to the priority queue, where the priority is a distance to the neighbor node from the origin node.
 
-If the node is already in the queue, it means we already calculated the distance to it before but from another node/path. If the current distance to it (from the current neighbor node) is shorter than the one that was calculated before, we update the distance (in the priority queue) to the shortest one, since we're searching for the shortest paths.
-
 ![Dijkstra step 2](./images/dijkstra-02.png)
 
 ![Dijkstra step 3](./images/dijkstra-03.png)
@@ -55,7 +53,11 @@ If the node is already in the queue, it means we already calculated the distance
 
 Once all the neighbors of the current nodes were checked, the current node is being put to the `visited` set. We don't want to visit such nodes ones again during the upcoming traverses.
 
+Now, let's pull out the next node from the priority queue that is closest to the origin (has a shorter distance). We start visiting its neighbors as well.
+
 ![Dijkstra step 5](./images/dijkstra-05.png)
+
+If the node that we're visiting (in this case the node `C`) is already in the queue, it means we already calculated the distance to it before but from another node/path (`A → C`). If the current distance to it (from the current neighbor node `A → B → C`) is shorter than the one that was calculated before, we update the distance (in the priority queue) to the shortest one, since we're searching for the shortest paths. If the distance from the current neighbor is actually longer that the once was already calculated, we leave it like this without updating the `C` node distance in the queue.
 
 ![Dijkstra step 6](./images/dijkstra-06.png)
 
