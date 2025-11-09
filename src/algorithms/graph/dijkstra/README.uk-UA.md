@@ -2,7 +2,15 @@
 
 _Читайте іншими мовами:_
 [_English_](README.md),
-[_한국어_](README.ko-KR.md)
+[_한국어_](README.ko-KR.md),
+[_日本語_](README.ja-JP.md),
+[_简体中文_](README.zh-CN.md),
+[_繁體中文_](README.zh-TW.md),
+[_Українська_](README.uk-UA.md),
+[_Español_](README.es-ES.md),
+[_Français_](README.fr-FR.md),
+[_Deutsch_](README.de-DE.md),
+[_עברית_](README.he-IL.md)
 
 Алгоритм Дейкстри — це алгоритм пошуку найкоротших шляхів між вершинами графа, який може представляти, наприклад, дорожню мережу.
 

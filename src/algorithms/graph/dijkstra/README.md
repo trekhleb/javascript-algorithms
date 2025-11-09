@@ -2,7 +2,14 @@
 
 _Read this in other languages:_
 [_한국어_](README.ko-KR.md),
-[_Українська_](README.uk-UA.md)
+[_日本語_](README.ja-JP.md),
+[_简体中文_](README.zh-CN.md),
+[_繁體中文_](README.zh-TW.md),
+[_Українська_](README.uk-UA.md),
+[_Español_](README.es-ES.md),
+[_Français_](README.fr-FR.md),
+[_Deutsch_](README.de-DE.md),
+[_עברית_](README.he-IL.md)
 
 Dijkstra's algorithm is an algorithm for finding the shortest
 paths between nodes in a graph, which may represent, for example,
