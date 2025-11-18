@@ -26,7 +26,9 @@ _Leia isto em outros idiomas:_
 [_Українська_](README.uk-UA.md),
 [_Arabic_](README.ar-AR.md),
 [_Tiếng Việt_](README.vi-VN.md),
-[_Deutsch_](README.de-DE.md)
+[_Deutsch_](README.de-DE.md),
+[_Uzbek_](README.uz-UZ.md)
+[_עברית_](README.he-IL.md)
 
 ## Estrutura de Dados
 

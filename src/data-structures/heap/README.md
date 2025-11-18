@@ -58,6 +58,11 @@ Where:
 
 > In this repository, the [MaxHeap.js](./MaxHeap.js) and [MinHeap.js](./MinHeap.js) are examples of the **Binary** heap.
 
+## Implementation
+
+- [MaxHeap.js](./MaxHeap.js) and [MinHeap.js](./MinHeap.js)
+- [MaxHeapAdhoc.js](./MaxHeapAdhoc.js) and [MinHeapAdhoc.js](./MinHeapAdhoc.js) - The minimalistic (ad hoc) version of a MinHeap/MaxHeap data structure that doesn't have external dependencies and that is easy to copy-paste and use during the coding interview if allowed by the interviewer (since many data structures in JS are missing).
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Heap_(data_structure))
