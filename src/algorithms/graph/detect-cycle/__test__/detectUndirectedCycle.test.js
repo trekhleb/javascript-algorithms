@@ -27,15 +27,40 @@ describe('detectUndirectedCycle', () => {
       .addEdge(edgeBC)
       .addEdge(edgeCD);
 
+    // no cycle yet
     expect(detectUndirectedCycle(graph)).toBeNull();
 
+    // add the final edge that closes cycle B-C-D-E-B
     graph.addEdge(edgeDE);
 
-    expect(detectUndirectedCycle(graph)).toEqual({
-      B: vertexC,
-      C: vertexD,
-      D: vertexE,
-      E: vertexB,
+    const cycle = detectUndirectedCycle(graph);
+
+    // should return ordered array of vertices representing cycle (first === last)
+    expect(Array.isArray(cycle)).toBe(true);
+    expect(cycle.length).toBeGreaterThanOrEqual(3);
+    expect(cycle[0].getKey()).toBe(cycle[cycle.length - 1].getKey());
+
+    // Extract keys for easier assertions
+    const keys = cycle.map((v) => v.getKey());
+
+    // The expected cycle is B -> C -> D -> E -> B (but the returned cycle may be a rotation),
+    // so accept any rotation of that sequence.
+    const allowedRotations = [
+      ['B', 'C', 'D', 'E', 'B'],
+      ['C', 'D', 'E', 'B', 'C'],
+      ['D', 'E', 'B', 'C', 'D'],
+      ['E', 'B', 'C', 'D', 'E'],
+    ];
+
+    // Check that keys match one of the allowed rotations
+    const matchesRotation = allowedRotations.some((rot) => {
+      if (rot.length !== keys.length) return false;
+      for (let i = 0; i < rot.length; i += 1) {
+        if (rot[i] !== keys[i]) return false;
+      }
+      return true;
     });
+
+    expect(matchesRotation).toBe(true);
   });
 });
