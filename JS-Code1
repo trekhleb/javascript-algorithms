@@ -1,0 +1,26 @@
+
+function gcd(a, b) {
+    while (b !== 0) {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+function lcm(a, b) {
+    return (a * b) / gcd(a, b);
+}
+
+// Function to find LCM of an array
+function lcmOfArray(arr) {
+    let result = arr[0];
+    for (let i = 1; i < arr.length; i++) {
+        result = lcm(result, arr[i]);
+    }
+    return result;
+}
+
+
+const arr = [4, 6, 8, 12];
+console.log("LCM:", lcmOfArray(arr));
