@@ -239,7 +239,9 @@ export default class LinkedList {
    * @return {string}
    */
   toString(callback) {
-    return this.toArray().map((node) => node.toString(callback)).toString();
+    return this.toArray()
+      .map((node) => node.toString(callback))
+      .toString();
   }
 
   /**
@@ -268,5 +270,82 @@ export default class LinkedList {
     this.head = prevNode;
 
     return this;
+  }
+
+  /**
+   * Get us the size of the link;
+   * @returns {number}
+   */
+  getSize() {
+    let res = 0;
+    let currNode = this.head;
+
+    // Iterate the entire list.
+    while (currNode) {
+      res++;
+      currNode = currNode.next;
+    }
+
+    return res;
+  }
+
+  /**
+   * Find the index of the value.
+   * @param {*} value
+   * @returns {number}
+   */
+  indexOf(value) {
+    if (this.getSize() === 0) return -1; // check if the size of list is 0 return -1;
+    let currNode = this.head;
+    let index = 0;
+
+    // Iterate the list to find the value.
+    while (currNode) {
+      if (currNode.value === value) return index;
+      currNode = currNode.next;
+      index++;
+    }
+
+    // if the value dont exist:
+    return -1;
+  }
+
+  /**
+   * Find the value of specified index.
+   * @param {number} index
+   * @returns {*}
+   */
+  at(index) {
+    // check if the index not exist
+    if (index < 0 || index > this.getSize()) return undefined;
+    let i = 0;
+    let currNode = this.head;
+
+    // Iterate the list to find the index.
+    while (i < index) {
+      currNode = currNode.next;
+      i++;
+    }
+
+    return currNode.value;
+  }
+  
+  /**
+   * Print the entire list.
+   */
+  print() {
+    if (this.getSize() === 0) return ''; // check if the list size is zero;
+    let res = '';
+    let currNode = this.head;
+
+    // Iterate the list to add values to res variable
+    while (currNode) {
+      res += `${currNode.value} ==> `;
+      currNode = currNode.next;
+    }
+
+    res += `null`;
+
+    console.log(res);
   }
 }
