@@ -269,4 +269,25 @@ export default class LinkedList {
 
     return this;
   }
+
+  /**
+   * @returns {Number}
+   */
+  size() {
+    // If head is null the size of linked list will be -1 or 0, So here we return -1.
+    if (!this.head) {
+      return -1;
+    }
+
+    let size = 0;
+    let currentNode = this.head;
+
+    // Traverse to the linked list and update the size.
+    while (currentNode) {
+      size += 1;
+      currentNode = currentNode.next;
+    }
+
+    return size;
+  }
 }
