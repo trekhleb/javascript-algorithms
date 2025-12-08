@@ -21,12 +21,12 @@ describe('PolynomialHash', () => {
 
         // Check hashing for different word lengths.
         frameSizes.forEach((frameSize) => {
-          let previousWord = text.substr(0, frameSize);
+          let previousWord = text.slice(0, frameSize);
           let previousHash = polynomialHash.hash(previousWord);
 
           // Shift frame through the whole text.
           for (let frameShift = 1; frameShift < (text.length - frameSize); frameShift += 1) {
-            const currentWord = text.substr(frameShift, frameSize);
+            const currentWord = text.slice(frameShift, frameShift + frameSize);
             const currentHash = polynomialHash.hash(currentWord);
             const currentRollingHash = polynomialHash.roll(previousHash, previousWord, currentWord);
 
