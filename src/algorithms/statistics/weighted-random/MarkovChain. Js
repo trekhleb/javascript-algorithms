@@ -1,0 +1,51 @@
+function markovChainGenerator(text) {
+
+const textArr = text.split(' ')
+
+const markovChain = {};
+
+for (let i = 0; i < textArr.length; i++)
+
+ {
+
+let word = textArr[i].toLowerCase().replace(/[\W_]/, "")
+
+if (!markovChain[word])
+
+ {
+
+markovChain[word] = []
+
+}
+
+if (textArr[i + 1]) 
+
+{
+
+markovChain[word].push(textArr[i +1].toLowerCase().replace(/[\W_]/, ""));
+
+}
+
+}
+
+
+return markovChain
+
+}
+
+
+
+
+
+function likelyhood(chain, prev, word) 
+
+{
+
+const prevArr = chain[prev]
+
+const num = prevArr.filter
+
+(w => w === word).length
+
+return `The likelihood that ${word} will come after ${prev} is ${num} out of ${prevArr.length}`}
+
