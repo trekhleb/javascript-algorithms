@@ -24,7 +24,7 @@ export default function kruskal(graph) {
      */
     compareCallback: (graphEdgeA, graphEdgeB) => {
       if (graphEdgeA.weight === graphEdgeB.weight) {
-        return 1;
+        return 0;
       }
 
       return graphEdgeA.weight <= graphEdgeB.weight ? -1 : 1;
