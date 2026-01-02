@@ -49,7 +49,7 @@ In other words, the filter can take in items. When
 we go to check if an item has previously been
 inserted, it can tell us either "no" or "maybe".
 
-Both insertion and search are `O(1)` operations.
+Both insertion and search are `O(k)` operations.
 
 ## Making the filter
 
