@@ -152,6 +152,51 @@ ReverseTraversal(head, tail)
 end ReverseTraversal
 ```
 
+### Swap
+
+```text
+Swap(head, data1, data2)
+  Pre:  head is the head node in the list
+        data1 and data2 are valid values
+  Post: the 2 items in the list have been swapped
+  if data1 === data2
+    end Swap
+  node1Prev ← null
+  node2Prev ← null
+  node1 ← head
+  node2 ← head
+  while node1 != null
+    if node1.data === data1
+      break
+    node1Prev ← node1
+    node1 ← node1.next
+  end while
+  while node2 != null
+    if node2.data === data2
+      break
+    node2Prev ← node2
+    node2 ← node2.next
+  end while
+  if !node1 or !node2
+    end
+  endif
+  if !node1Prev
+    head ← node2
+  else
+    node1Prev.next ← node2
+  endif
+  if !node2Prev
+    head ← node1
+  else
+    node2Prev.next ← node1
+  endif
+  let temp ← node1.next
+  node1.next ← node2.next
+  node2.next ← temp
+  endSwap
+
+```
+
 ## Complexities
 
 ### Time Complexity
