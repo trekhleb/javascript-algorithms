@@ -5,18 +5,8 @@
  */
 export default function longestCommonSubsequence(set1, set2) {
   // Init LCS matrix.
-  const lcsMatrix = Array(set2.length + 1).fill(null).map(() => Array(set1.length + 1).fill(null));
-
-  // Fill first row with zeros.
-  for (let columnIndex = 0; columnIndex <= set1.length; columnIndex += 1) {
-    lcsMatrix[0][columnIndex] = 0;
-  }
-
-  // Fill first column with zeros.
-  for (let rowIndex = 0; rowIndex <= set2.length; rowIndex += 1) {
-    lcsMatrix[rowIndex][0] = 0;
-  }
-
+  const lcsMatrix = Array(set2.length + 1).fill().map(() => Array(set1.length + 1).fill().map(() => 0));
+  
   // Fill rest of the column that correspond to each of two strings.
   for (let rowIndex = 1; rowIndex <= set2.length; rowIndex += 1) {
     for (let columnIndex = 1; columnIndex <= set1.length; columnIndex += 1) {
