@@ -39,9 +39,7 @@ export default class QuickSortInPlace extends Sort {
        * @param {number} rightIndex
        */
       const swap = (leftIndex, rightIndex) => {
-        const temp = array[leftIndex];
-        array[leftIndex] = array[rightIndex];
-        array[rightIndex] = temp;
+        [array[leftIndex], array[rightIndex]] = [array[rightIndex], array[leftIndex]];
       };
 
       const pivot = array[highIndex];
