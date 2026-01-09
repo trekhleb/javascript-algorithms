@@ -1,8 +1,8 @@
-import MaxHeap from '../MaxHeapAdhoc';
+import MaxHeapAdhoc from '../MaxHeapAdhoc';
 
 describe('MaxHeapAdhoc', () => {
   it('should create an empty max heap', () => {
-    const maxHeap = new MaxHeap();
+    const maxHeap = new MaxHeapAdhoc();
 
     expect(maxHeap).toBeDefined();
     expect(maxHeap.peek()).toBe(undefined);
@@ -10,7 +10,7 @@ describe('MaxHeapAdhoc', () => {
   });
 
   it('should add items to the heap and heapify it up', () => {
-    const maxHeap = new MaxHeap();
+    const maxHeap = new MaxHeapAdhoc();
 
     maxHeap.add(5);
     expect(maxHeap.isEmpty()).toBe(false);
@@ -44,7 +44,7 @@ describe('MaxHeapAdhoc', () => {
   });
 
   it('should poll items from the heap and heapify it down', () => {
-    const maxHeap = new MaxHeap();
+    const maxHeap = new MaxHeapAdhoc();
 
     maxHeap.add(5);
     maxHeap.add(3);
@@ -74,7 +74,7 @@ describe('MaxHeapAdhoc', () => {
   });
 
   it('should heapify down through the right branch as well', () => {
-    const maxHeap = new MaxHeap();
+    const maxHeap = new MaxHeapAdhoc();
 
     maxHeap.add(3);
     maxHeap.add(12);
@@ -87,5 +87,13 @@ describe('MaxHeapAdhoc', () => {
 
     expect(maxHeap.poll()).toBe(12);
     expect(maxHeap.toString()).toBe('11,3,10');
+  });
+
+  it('should create the max heap filled', () => {
+    const maxHeap = new MaxHeapAdhoc([3, 12, 10]);
+
+    expect(maxHeap).toBeDefined();
+    expect(maxHeap.peek()).toBe(12);
+    expect(maxHeap.isEmpty()).toBe(false);
   });
 });
