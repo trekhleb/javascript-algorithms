@@ -3,7 +3,7 @@
 [![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
-Repositori ini berisi contoh-contoh algoritme dan struktur data yang populer menggunakan JavaScript.
+Repositori ini berisi contoh-contoh algoritma dan struktur data yang populer menggunakan JavaScript.
 
 Setiap algoritma dan struktur data memiliki README-nya tersendiri dengan penjelasan yang berkaitan dan tautan untuk bacaan lebih lanjut (termasuk tautan menuju video YouTube).
 
