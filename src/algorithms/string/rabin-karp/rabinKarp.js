@@ -32,7 +32,7 @@ export default function rabinKarp(text, word) {
     // In case of hash collision the strings may not be equal.
     if (
       wordHash === currentFrameHash
-      && text.substr(charIndex, word.length) === word
+      && text.slice(charIndex, charIndex + word.length) === word
     ) {
       return charIndex;
     }
