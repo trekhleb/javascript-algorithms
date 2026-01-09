@@ -12,6 +12,8 @@ export default class LinkedList {
     /** @var LinkedListNode */
     this.tail = null;
 
+    this.length = 0;
+
     this.compare = new Comparator(comparatorFunction);
   }
 
@@ -28,6 +30,9 @@ export default class LinkedList {
     if (!this.tail) {
       this.tail = newNode;
     }
+
+    // once node added, modify the length the list
+    this.length++;
 
     return this;
   }
@@ -51,6 +56,9 @@ export default class LinkedList {
     this.tail.next = newNode;
     this.tail = newNode;
 
+    // once node added, modify the length the list
+    this.length++;
+
     return this;
   }
 
@@ -63,6 +71,8 @@ export default class LinkedList {
     const index = rawIndex < 0 ? 0 : rawIndex;
     if (index === 0) {
       this.prepend(value);
+    } else if (index === this.length) {
+      this.append(value);
     } else {
       let count = 1;
       let currentNode = this.head;
@@ -85,6 +95,10 @@ export default class LinkedList {
         }
       }
     }
+    
+    // once node added, modify the length the list
+    this.length++;
+
     return this;
   }
 
@@ -124,6 +138,9 @@ export default class LinkedList {
     if (this.compare.equal(this.tail.value, value)) {
       this.tail = currentNode;
     }
+
+    // once node added, modify the length the list
+    this.length--;
 
     return deletedNode;
   }
@@ -186,6 +203,9 @@ export default class LinkedList {
 
     this.tail = currentNode;
 
+    // once node added, modify the length the list
+    this.length--;
+
     return deletedTail;
   }
 
@@ -205,6 +225,9 @@ export default class LinkedList {
       this.head = null;
       this.tail = null;
     }
+
+    // once node added, modify the length the list
+    this.length--;
 
     return deletedHead;
   }
