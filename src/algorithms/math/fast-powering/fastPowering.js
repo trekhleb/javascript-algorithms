@@ -9,6 +9,11 @@
  * @return {number}
  */
 export default function fastPowering(base, power) {
+  if (power === 1) {
+    // Any number raised to the power of one is always that number
+    return base;
+  }
+
   if (power === 0) {
     // Anything that is raised to the power of zero is 1.
     return 1;
