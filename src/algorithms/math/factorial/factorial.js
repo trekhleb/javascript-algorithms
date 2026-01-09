@@ -11,3 +11,16 @@ export default function factorial(number) {
 
   return result;
 }
+/**
+ * @param {number} number
+ * @return {number}
+ * Recursive solution
+ */
+export default function factorial(number){
+  if (number>=1){
+    return number*factorial(number-1);
+  }
+  else{
+    return 1
+  }
+}
