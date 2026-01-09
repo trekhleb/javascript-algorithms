@@ -2,6 +2,7 @@ import longestCommonSubstring from '../longestCommonSubstring';
 
 describe('longestCommonSubstring', () => {
   it('should find longest common substring between two strings', () => {
+    // testing variuos options
     expect(longestCommonSubstring('', '')).toBe('');
     expect(longestCommonSubstring('ABC', '')).toBe('');
     expect(longestCommonSubstring('', 'ABC')).toBe('');
