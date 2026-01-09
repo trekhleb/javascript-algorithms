@@ -8,7 +8,7 @@ export default function bellmanFord(graph, startVertex) {
   const previousVertices = {};
 
   // Init all distances with infinity assuming that currently we can't reach
-  // any of the vertices except start one.
+  // any of the vertices except start one and try to get to that point.
   distances[startVertex.getKey()] = 0;
   graph.getAllVertices().forEach((vertex) => {
     previousVertices[vertex.getKey()] = null;
