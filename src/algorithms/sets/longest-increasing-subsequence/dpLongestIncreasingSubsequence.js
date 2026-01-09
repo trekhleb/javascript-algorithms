@@ -3,7 +3,7 @@
  * Complexity: O(n * n)
  *
  * @param {number[]} sequence
- * @return {number}
+ * @return {number[]}
  */
 export default function dpLongestIncreasingSubsequence(sequence) {
   // Create array with longest increasing substrings length and
@@ -49,5 +49,18 @@ export default function dpLongestIncreasingSubsequence(sequence) {
     }
   }
 
-  return longestIncreasingLength;
+  // Construct the longest increasing subsequence from the back to the front
+  let rightIndex = lengthsArray.findIndex((item) => item === longestIncreasingLength);
+  const longestIncreasingSubsequence = [];
+
+  while (rightIndex > -1) {
+    const leftIndex = lengthsArray.findLastIndex((item, idx) => (
+      item === lengthsArray[rightIndex] - 1 && idx < rightIndex
+    ));
+
+    longestIncreasingSubsequence.unshift(sequence[rightIndex]);
+    rightIndex = leftIndex;
+  }
+
+  return longestIncreasingSubsequence;
 }
