@@ -374,3 +374,24 @@ Below is the list of some of the most used Big O notations and their performance
 [@trekhleb](https://trekhleb.dev)
 
 A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
+
+
+### Dijkstra's Algorithm
+**Purpose:** Find shortest paths from a single source vertex to all other vertices in a weighted graph.  
+**File:** `dijkstra.js`  
+**Usage:**
+```javascript
+const { dijkstra } = require('./graph');
+const graph = { A: [{vertex:'B',weight:1}], B: [] };
+console.log(dijkstra(graph,'A'));
+
+
+### Breadth-First Search (BFS)
+**Purpose:** Visit all vertices in a graph in breadth-first order.  
+**File:** `bfs.js`  
+**Usage:**
+```javascript
+const { bfs } = require('./graph');
+const graph = { A:['B','C'], B:['D'], C:[] };
+console.log(bfs(graph,'A')); // ['A','B','C','D']
+
