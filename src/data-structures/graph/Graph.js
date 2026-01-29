@@ -13,7 +13,13 @@ export default class Graph {
    * @returns {Graph}
    */
   addVertex(newVertex) {
-    this.vertices[newVertex.getKey()] = newVertex;
+    const key = newVertex.getKey();
+
+    if (this.vertices[key]) {
+      throw new Error('Vertex has already been added before');
+    }
+
+    this.vertices[key] = newVertex;
 
     return this;
   }
