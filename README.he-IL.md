@@ -25,7 +25,8 @@ _קרא זאת בשפות אחרות:_
 [_Arabic_](README.ar-AR.md),
 [_Tiếng Việt_](README.vi-VN.md),
 [_Deutsch_](README.de-DE.md),
-[_Uzbek_](README.uz-UZ.md)
+[_Uzbek_](README.uz-UZ.md),
+[_ქართული_](README.ka-GE.md)
 
 ## מבני נתונים
 
