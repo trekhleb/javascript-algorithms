@@ -39,7 +39,7 @@ n * n * n ... (r times) = n^r
 
 ## Cheatsheet
 
-![Permutations and Combinations Overview](./images/overview.png)
+![Permutations and Combinations Overview](./images/permutations-overview.jpeg)
 
 ![Permutations overview](./images/permutations-overview.jpeg)
 
