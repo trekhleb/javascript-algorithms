@@ -1,0 +1,3 @@
+# Floyd's Cycle Detection Algorithm (aka Hare and Tortoise Algorithm)
+Floyd algorithm for finding the cycles in a linked list is used to determine presence of a cycle in the linked list using constant space and linear time (i.e. space complexity = O(1) and time comoplexity = O(n), where n is number of nodes in the list).
+ The algorithm uses two pointers where one pointer moves a littile faster (the hare pointer). If at any point of traversal, the fast pointer meets the slow pointer, we can say that we have a cycle in the linked list. Conversly if the fast pointer hits a null, we have reached the end of list and no cycle is present.
