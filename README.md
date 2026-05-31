@@ -69,6 +69,7 @@ Remember that each data has its own trade-offs. And you need to pay attention mo
 * `A` [Disjoint Set](src/data-structures/disjoint-set) - a union–find data structure or merge–find set
 * `A` [Bloom Filter](src/data-structures/bloom-filter)
 * `A` [LRU Cache](src/data-structures/lru-cache/) - Least Recently Used (LRU) cache
+* `A` [Blockchain](src/data-structures/blockchain/) - Blockchain
 
 ## Algorithms
 
