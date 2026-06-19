@@ -279,4 +279,24 @@ describe('LinkedList', () => {
     expect(linkedList.head.value).toBe(1);
     expect(linkedList.tail.value).toBe(3);
   });
+
+  it('should update tail when inserting at the end and keep it consistent for next appends', () => {
+    const linkedList = new LinkedList();
+
+    linkedList.append(1);
+    linkedList.append(2);
+
+    // Insert 3 at index 2 (current tail position).
+    linkedList.insert(3, 2);
+
+    // 1. Verify that the tail is pointing to 3.
+    expect(linkedList.tail.value).toBe(3);
+    expect(linkedList.toString()).toBe('1,2,3');
+
+    // 2. Ensure that subsequent appends work correctly without losing data.
+    // If the tail wasn't updated correctly, appending 4 would overwrite 3.
+    linkedList.append(4);
+    expect(linkedList.toString()).toBe('1,2,3,4');
+    expect(linkedList.tail.value).toBe(4);
+  });
 });
