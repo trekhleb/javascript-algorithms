@@ -33,6 +33,8 @@ export default class GraphEdge {
     this.startVertex = this.endVertex;
     this.endVertex = tmp;
 
+    this.key = null;
+
     return this;
   }
 
