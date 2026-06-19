@@ -1,10 +1,13 @@
-import LinkedList from '../linked-list/LinkedList';
+import DoublyLinkedList from '../doubly-linked-list/DoublyLinkedList';
 
 export default class Deque {
   constructor() {
     // We use a doubly linked list internally so that both front and back
-    // operations run in O(1) time.
-    this.linkedList = new LinkedList();
+    // operations (add, remove and peek) run in O(1) time.
+    this.linkedList = new DoublyLinkedList();
+
+    // Keep a running element count so that `size` stays O(1).
+    this.length = 0;
   }
 
   /**
@@ -43,6 +46,7 @@ export default class Deque {
    */
   addFront(value) {
     this.linkedList.prepend(value);
+    this.length += 1;
   }
 
   /**
@@ -51,6 +55,7 @@ export default class Deque {
    */
   addBack(value) {
     this.linkedList.append(value);
+    this.length += 1;
   }
 
   /**
@@ -59,7 +64,11 @@ export default class Deque {
    */
   removeFront() {
     const removedHead = this.linkedList.deleteHead();
-    return removedHead ? removedHead.value : null;
+    if (!removedHead) {
+      return null;
+    }
+    this.length -= 1;
+    return removedHead.value;
   }
 
   /**
@@ -68,7 +77,11 @@ export default class Deque {
    */
   removeBack() {
     const removedTail = this.linkedList.deleteTail();
-    return removedTail ? removedTail.value : null;
+    if (!removedTail) {
+      return null;
+    }
+    this.length -= 1;
+    return removedTail.value;
   }
 
   /**
@@ -76,13 +89,7 @@ export default class Deque {
    * @return {number}
    */
   get size() {
-    let count = 0;
-    let currentNode = this.linkedList.head;
-    while (currentNode) {
-      count += 1;
-      currentNode = currentNode.next;
-    }
-    return count;
+    return this.length;
   }
 
   /**
