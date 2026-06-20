@@ -1,5 +1,14 @@
 # JavaScript 演算法與資料結構
 
+> 🇺🇦 烏克蘭正遭受攻擊 (https://war.ukraine.ua/) — 由俄羅斯軍隊發動。平民遭到傷害，住宅區被轟炸。
+> - 捐助烏克蘭：
+>   - [Serhiy Prytula 慈善基金會](https://prytulafoundation.org/en/)
+>   - [Come Back Alive 慈善基金會](https://savelife.in.ua/en/donate-en/)
+>   - [烏克蘭國家銀行（募款專戶）](https://bank.gov.ua/en/news/all/natsionalniy-bank-vidkriv-spetsrahunok-dlya-zboru-koshtiv-na-potrebi-armiyi)
+> - 更多資訊請見 [war.ukraine.ua](https://war.ukraine.ua/) 與 [烏克蘭外交部 (MFA)](https://twitter.com/MFA_Ukraine)
+
+<hr/>
+
 [![CI](https://github.com/trekhleb/javascript-algorithms/workflows/CI/badge.svg)](https://github.com/trekhleb/javascript-algorithms/actions?query=workflow%3ACI+branch%3Amaster)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
@@ -8,6 +17,7 @@
 
 _Read this in other languages:_
 [_English_](https://github.com/trekhleb/javascript-algorithms/),
+[_繁體中文_](README.zh-TW.md),
 [_简体中文_](README.zh-CN.md),
 [_한국어_](README.ko-KR.md),
 [_日本語_](README.ja-JP.md),
@@ -43,108 +53,125 @@ _Read this in other languages:_
   * [紅黑樹](src/data-structures/tree/red-black-tree)
 * [圖](src/data-structures/graph) (有向跟無向皆包含)
 * [互斥集](src/data-structures/disjoint-set)
+* [布隆過濾器](src/data-structures/bloom-filter)
+* [LRU 快取](src/data-structures/lru-cache/) - 最近最少使用（Least Recently Used）快取
+ ## 演算法
 
-## 演算法
+演算法是針對一類問題提供明確解決方案的規範。  
+它是一組精確定義的規則，用來描述一系列操作步驟。
 
-演算法是一個如何解決一類問題的非模糊規格。演算法是一個具有精確地定義了一系列運作的規則的集合
+`B` - 初學者，`A` - 進階
 
-### 演算法議題分類
+### 按主題分類的演算法
 
 * **數學類**
-  * [階層](src/algorithms/math/factorial)
-  * [費伯納西數列](src/algorithms/math/fibonacci)
-  * [Primality Test](src/algorithms/math/primality-test) (排除法)
-  * [歐幾里得算法](src/algorithms/math/euclidean-algorithm) - 計算最大公因數 (GCD)
-  * [最小公倍數](src/algorithms/math/least-common-multiple) (LCM)
-  * [整數拆分](src/algorithms/math/integer-partition)
-* **集合**
-  * [笛卡爾積](src/algorithms/sets/cartesian-product) - 多個集合的乘積
-  * [冪集合](src/algorithms/sets/power-set) - 所有集合的子集合
-  * [排列](src/algorithms/sets/permutations) (有/無重複)
-  * [组合](src/algorithms/sets/combinations) (有/無重複)
-  * [洗牌算法](src/algorithms/sets/fisher-yates) - 隨機置換一有限序列
-  * [最長共同子序列](src/algorithms/sets/longest-common-subsequence) (LCS)
-  * [最長遞增子序列](src/algorithms/sets/longest-increasing-subsequence)
-  * [Shortest Common Supersequence](src/algorithms/sets/shortest-common-supersequence) (SCS)
-  * [背包問題](src/algorithms/sets/knapsack-problem) - "0/1" and "Unbound" ones
-  * [最大子序列問題](src/algorithms/sets/maximum-subarray) - 暴力法以及動態編程的(Kadane's)版本
-* **字串**
-  * [萊文斯坦距離](src/algorithms/string/levenshtein-distance) - 兩序列間的最小編輯距離
-  * [漢明距離](src/algorithms/string/hamming-distance) - number of positions at which the symbols are different
-  * [KMP 演算法](src/algorithms/string/knuth-morris-pratt) - 子字串搜尋
-  * [Rabin Karp 演算法](src/algorithms/string/rabin-karp) - 子字串搜尋
-  * [最長共通子序列](src/algorithms/string/longest-common-substring)
-* **搜尋**
-  * [二元搜尋](src/algorithms/search/binary-search)
-* **排序**
-  * [氣泡排序](src/algorithms/sorting/bubble-sort)
-  * [選擇排序](src/algorithms/sorting/selection-sort)
-  * [插入排序](src/algorithms/sorting/insertion-sort)
-  * [堆排序](src/algorithms/sorting/heap-sort)
-  * [合併排序](src/algorithms/sorting/merge-sort)
-  * [快速排序](src/algorithms/sorting/quick-sort)
-  * [希爾排序](src/algorithms/sorting/shell-sort)
+  * `B` [位元運算](src/algorithms/math/bits) - 設定/取得/更新/清除位元、乘除以二、取負數等。
+  * `B` [二進位浮點數](src/algorithms/math/binary-floating-point) - 浮點數的二進位表示。
+  * `B` [階乘](src/algorithms/math/factorial)
+  * `B` [費波那契數列](src/algorithms/math/fibonacci) - 經典與閉合形式。
+  * `B` [質因數分解](src/algorithms/math/prime-factors) - 找出質因數並使用 Hardy-Ramanujan 定理計算。
+  * `B` [質數測試](src/algorithms/math/primality-test) (試除法)
+  * `B` [歐幾里得演算法](src/algorithms/math/euclidean-algorithm) - 計算最大公因數 (GCD)
+  * `B` [最小公倍數](src/algorithms/math/least-common-multiple) (LCM)
+  * `B` [埃拉托斯特尼篩法](src/algorithms/math/sieve-of-eratosthenes) - 找出所有小於給定值的質數
+  * `B` [二的冪檢查](src/algorithms/math/is-power-of-two)
+  * `B` [帕斯卡三角形](src/algorithms/math/pascal-triangle)
+  * `B` [複數運算](src/algorithms/math/complex-number)
+  * `B` [弧度與角度](src/algorithms/math/radian)
+  * `B` [快速冪算法](src/algorithms/math/fast-powering)
+  * `B` [霍納法則](src/algorithms/math/horner-method)
+  * `B` [矩陣](src/algorithms/math/matrix)
+  * `B` [歐幾里得距離](src/algorithms/math/euclidean-distance)
+  * `A` [整數拆分](src/algorithms/math/integer-partition)
+  * `A` [平方根](src/algorithms/math/square-root)
+  * `A` [劉徽圓周率算法](src/algorithms/math/liu-hui)
+  * `A` [離散傅立葉變換](src/algorithms/math/fourier-transform)
+* **集合類**
+  * `B` [笛卡爾積](src/algorithms/sets/cartesian-product)
+  * `B` [費雪耶茨洗牌法](src/algorithms/sets/fisher-yates)
+  * `A` [冪集](src/algorithms/sets/power-set)
+  * `A` [排列](src/algorithms/sets/permutations)
+  * `A` [組合](src/algorithms/sets/combinations)
+  * `A` [最長公共子序列](src/algorithms/sets/longest-common-subsequence)
+  * `A` [最長遞增子序列](src/algorithms/sets/longest-increasing-subsequence)
+  * `A` [最短公共超序列](src/algorithms/sets/shortest-common-supersequence)
+  * `A` [背包問題](src/algorithms/sets/knapsack-problem)
+  * `A` [最大子序列問題](src/algorithms/sets/maximum-subarray)
+  * `A` [組合總和](src/algorithms/sets/combination-sum)
+* **字串類**
+  * `B` [漢明距離](src/algorithms/string/hamming-distance)
+  * `B` [回文檢查](src/algorithms/string/palindrome)
+  * `A` [萊文斯坦距離](src/algorithms/string/levenshtein-distance)
+  * `A` [KMP 演算法](src/algorithms/string/knuth-morris-pratt)
+  * `A` [Z 演算法](src/algorithms/string/z-algorithm)
+  * `A` [Rabin Karp 演算法](src/algorithms/string/rabin-karp)
+  * `A` [最長公共子字串](src/algorithms/string/longest-common-substring)
+  * `A` [正則表達式匹配](src/algorithms/string/regular-expression-matching)
+* **搜尋類**
+  * `B` [線性搜尋](src/algorithms/search/linear-search)
+  * `B` [跳躍搜尋](src/algorithms/search/jump-search)
+  * `B` [二元搜尋](src/algorithms/search/binary-search)
+  * `B` [內插搜尋](src/algorithms/search/interpolation-search)
+* **排序類**
+  * `B` [氣泡排序](src/algorithms/sorting/bubble-sort)
+  * `B` [選擇排序](src/algorithms/sorting/selection-sort)
+  * `B` [插入排序](src/algorithms/sorting/insertion-sort)
+  * `B` [堆排序](src/algorithms/sorting/heap-sort)
+  * `B` [合併排序](src/algorithms/sorting/merge-sort)
+  * `B` [快速排序](src/algorithms/sorting/quick-sort)
+  * `B` [希爾排序](src/algorithms/sorting/shell-sort)
+  * `B` [計數排序](src/algorithms/sorting/counting-sort)
+  * `B` [基數排序](src/algorithms/sorting/radix-sort)
+  * `B` [桶排序](src/algorithms/sorting/bucket-sort)
+* **鏈表**
+  * `B` [正向遍歷](src/algorithms/linked-list/traversal)
+  * `B` [反向遍歷](src/algorithms/linked-list/reverse-traversal)
 * **樹**
-  * [深度優先搜尋](src/algorithms/tree/depth-first-search) (DFS)
-  * [廣度優先搜尋](src/algorithms/tree/breadth-first-search) (BFS)
+  * `B` [深度優先搜尋](src/algorithms/tree/depth-first-search) (DFS)
+  * `B` [廣度優先搜尋](src/algorithms/tree/breadth-first-search) (BFS)
 * **圖**
-  * [深度優先搜尋](src/algorithms/graph/depth-first-search) (DFS)
-  * [廣度優先搜尋](src/algorithms/graph/breadth-first-search) (BFS)
-  * [Dijkstra 演算法](src/algorithms/graph/dijkstra) - 找到所有圖頂點的最短路徑
-  * [Bellman-Ford 演算法](src/algorithms/graph/bellman-ford) - 找到所有圖頂點的最短路徑
-  * [Detect Cycle](src/algorithms/graph/detect-cycle) - for both directed and undirected graphs (DFS and Disjoint Set based versions)
-  * [Prim’s 演算法](src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * [Kruskal’s 演算法](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * [拓撲排序](src/algorithms/graph/topological-sorting) - DFS method
-  * [關節點](src/algorithms/graph/articulation-points) - Tarjan's algorithm (DFS based)
-  * [橋](src/algorithms/graph/bridges) - DFS based algorithm
-  * [尤拉路徑及尤拉環](src/algorithms/graph/eulerian-path) - Fleury's algorithm - Visit every edge exactly once
-  * [漢彌爾頓環](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
-  * [強連通組件](src/algorithms/graph/strongly-connected-components) - Kosaraju's algorithm
-  * [旅行推銷員問題](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
-  * [Floyd-Warshall algorithm](src/algorithms/graph/floyd-warshall) - 一次循环可以找出所有頂點之间的最短路徑
+  * `B` [深度優先搜尋](src/algorithms/graph/depth-first-search) (DFS)
+  * `B` [廣度優先搜尋](src/algorithms/graph/breadth-first-search) (BFS)
+  * `B` [Kruskal 演算法](src/algorithms/graph/kruskal)
+  * `A` [Dijkstra 演算法](src/algorithms/graph/dijkstra)
+  * `A` [Bellman-Ford 演算法](src/algorithms/graph/bellman-ford)
+  * `A` [Floyd-Warshall 演算法](src/algorithms/graph/floyd-warshall)
+  * `A` [環檢測](src/algorithms/graph/detect-cycle)
+  * `A` [Prim 演算法](src/algorithms/graph/prim)
+  * `A` [拓撲排序](src/algorithms/graph/topological-sorting)
+  * `A` [關節點](src/algorithms/graph/articulation-points)
+  * `A` [橋](src/algorithms/graph/bridges)
+  * `A` [歐拉路徑與歐拉回路](src/algorithms/graph/eulerian-path)
+  * `A` [哈密頓迴圈](src/algorithms/graph/hamiltonian-cycle)
+  * `A` [強連通分量](src/algorithms/graph/strongly-connected-components)
+  * `A` [旅行推銷員問題](src/algorithms/graph/travelling-salesman)
+* **密碼學**
+  * `B` [多項式雜湊](src/algorithms/cryptography/polynomial-hash)
+  * `B` [鐵軌密碼](src/algorithms/cryptography/rail-fence-cipher)
+  * `B` [凱撒密碼](src/algorithms/cryptography/caesar-cipher)
+  * `B` [Hill 密碼](src/algorithms/cryptography/hill-cipher)
+* **機器學習**
+  * `B` [NanoNeuron](https://github.com/trekhleb/nano-neuron)
+  * `B` [k-最近鄰演算法 (k-NN)](src/algorithms/ml/knn)
+  * `B` [k-平均演算法 (k-Means)](src/algorithms/ml/k-means)
+* **影像處理**
+  * `B` [縫隙雕刻 (Seam Carving)](src/algorithms/image-processing/seam-carving)
+* **統計學**
+  * `B` [加權隨機](src/algorithms/statistics/weighted-random)
+* **進化演算法**
+  * `A` [遺傳演算法](https://github.com/trekhleb/self-parking-car-evolution)
 * **未分類**
-  * [河內塔](src/algorithms/uncategorized/hanoi-tower)
-  * [N-皇后問題](src/algorithms/uncategorized/n-queens)
-  * [騎士走棋盤](src/algorithms/uncategorized/knight-tour)
+  * `B` [河內塔](src/algorithms/uncategorized/hanoi-tower)
+  * `B` [矩陣旋轉](src/algorithms/uncategorized/square-matrix-rotation)
+  * `B` [跳躍遊戲](src/algorithms/uncategorized/jump-game)
+  * `B` [唯一路徑](src/algorithms/uncategorized/unique-paths)
+  * `B` [雨水收集](src/algorithms/uncategorized/rain-terraces)
+  * `B` [遞迴階梯](src/algorithms/uncategorized/recursive-staircase)
+  * `B` [最佳買賣股票時機](src/algorithms/uncategorized/best-time-to-buy-sell-stocks)
+  * `B` [有效括號](src/algorithms/stack/valid-parentheses)
+  * `A` [N 皇后問題](src/algorithms/uncategorized/n-queens)
+  * `A` [騎士巡邏](src/algorithms/uncategorized/knight-tour)
 
-### 演算法範型
-
-演算法的範型是一個泛用方法或設計一類底層演算法的方式。它是一個比演算法的概念更高階的抽象化，就像是演算法是比電腦程式更高階的抽象化。
-
-* **暴力法** - 尋遍所有的可能解然後選取最好的解
-  * [最大子序列](src/algorithms/sets/maximum-subarray)
-  * [旅行推銷員問題](src/algorithms/graph/travelling-salesman) - shortest possible route that visits each city and returns to the origin city
-* **貪婪法** - choose the best option at the current time, without any consideration for the future
-  * [未定背包問題](src/algorithms/sets/knapsack-problem)
-  * [Dijkstra 演算法](src/algorithms/graph/dijkstra) - 找到所有圖頂點的最短路徑
-  * [Prim’s 演算法](src/algorithms/graph/prim) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-  * [Kruskal’s 演算法](src/algorithms/graph/kruskal) - finding Minimum Spanning Tree (MST) for weighted undirected graph
-* **分治法** - divide the problem into smaller parts and then solve those parts
-  * [二元搜尋](src/algorithms/search/binary-search)
-  * [河內塔](src/algorithms/uncategorized/hanoi-tower)
-  * [歐幾里得演算法](src/algorithms/math/euclidean-algorithm) - calculate the Greatest Common Divisor (GCD)
-  * [排列](src/algorithms/sets/permutations) (有/無重複)
-  * [组合](src/algorithms/sets/combinations) (有/無重複)
-  * [合併排序](src/algorithms/sorting/merge-sort)
-  * [快速排序](src/algorithms/sorting/quick-sort)
-  * [樹深度優先搜尋](src/algorithms/tree/depth-first-search) (DFS)
-  * [圖深度優先搜尋](src/algorithms/graph/depth-first-search) (DFS)
-* **動態編程** - build up to a solution using previously found sub-solutions
-  * [費伯納西數列](src/algorithms/math/fibonacci)
-  * [萊溫斯坦距離](src/algorithms/string/levenshtein-distance) - minimum edit distance between two sequences
-  * [最長共同子序列](src/algorithms/sets/longest-common-subsequence) (LCS)
-  * [最長共同子字串](src/algorithms/string/longest-common-substring)
-  * [最長遞增子序列](src/algorithms/sets/longest-increasing-subsequence)
-  * [最短共同子序列](src/algorithms/sets/shortest-common-supersequence)
-  * [0/1背包問題](src/algorithms/sets/knapsack-problem)
-  * [整數拆分](src/algorithms/math/integer-partition)
-  * [最大子序列](src/algorithms/sets/maximum-subarray)
-  * [Bellman-Ford 演算法](src/algorithms/graph/bellman-ford) - finding shortest path to all graph vertices
-* **回溯法** - 用類似暴力法來嘗試產生所有可能解，但每次只在能滿足所有測試條件，且只有繼續產生子序列方案來產生的解決方案。否則回溯並尋找不同路徑的解決方案。
-  * [漢彌爾頓迴路](src/algorithms/graph/hamiltonian-cycle) - Visit every vertex exactly once
-  * [N-皇后問題](src/algorithms/uncategorized/n-queens)
-  * [騎士走棋盤](src/algorithms/uncategorized/knight-tour)
 * **Branch & Bound**
 
 ## 如何使用本知識庫
