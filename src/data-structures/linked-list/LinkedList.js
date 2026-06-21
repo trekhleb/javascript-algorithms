@@ -269,4 +269,62 @@ export default class LinkedList {
 
     return this;
   }
+  
+  /**
+   * Find the index of a node with a specific value.
+   * @param {*} value
+   * @return {number} Index of the node, or -1 if not found
+   */
+  indexOf(value) {
+    let index = 0;
+    let currentNode = this.head;
+    while (currentNode) {
+      if (this.compare.equal(currentNode.value, value)) {
+        return index;
+      }
+      currentNode = currentNode.next;
+      index += 1;
+    }
+    return -1;
+  }
+
+  /**
+   * Get the value at a specific index.
+   * @param {number} index
+   * @return {*} The value at the specified index, or undefined if out of bounds
+   */
+  at(index) {
+    if (index < 0) {
+      return undefined;
+    }
+    let currentNode = this.head;
+    let currentIndex = 0;
+    while (currentNode) {
+      if (currentIndex === index) {
+        return currentNode.value;
+      }
+      currentNode = currentNode.next;
+      currentIndex += 1;
+    }
+    return undefined;
+  }
+
+  /**
+   * Print the entire linked list.
+   * @param {function} callback Optional callback to format the output
+   * @return {LinkedList}
+   */
+  print(callback) {
+    let currentNode = this.head;
+    let result = '';
+    while (currentNode) {
+      result += callback ? callback(currentNode.value) : currentNode.value;
+      currentNode = currentNode.next;
+      if (currentNode) {
+        result += ' -> ';
+      }
+    }
+    console.log(result);
+    return this;
+  }
 }
