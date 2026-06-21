@@ -1,65 +1,51 @@
 /**
- * @param {number[]} candidates - candidate numbers we're picking from.
- * @param {number} remainingSum - remaining sum after adding candidates to currentCombination.
- * @param {number[][]} finalCombinations - resulting list of combinations.
- * @param {number[]} currentCombination - currently explored candidates.
- * @param {number} startFrom - index of the candidate to start further exploration from.
- * @return {number[][]}
- */
-function combinationSumRecursive(
-  candidates,
-  remainingSum,
-  finalCombinations = [],
-  currentCombination = [],
-  startFrom = 0,
-) {
-  if (remainingSum < 0) {
-    // By adding another candidate we've gone below zero.
-    // This would mean that the last candidate was not acceptable.
-    return finalCombinations;
-  }
-
-  if (remainingSum === 0) {
-    // If after adding the previous candidate our remaining sum
-    // became zero - we need to save the current combination since it is one
-    // of the answers we're looking for.
-    finalCombinations.push(currentCombination.slice());
-
-    return finalCombinations;
-  }
-
-  // If we haven't reached zero yet let's continue to add all
-  // possible candidates that are left.
-  for (let candidateIndex = startFrom; candidateIndex < candidates.length; candidateIndex += 1) {
-    const currentCandidate = candidates[candidateIndex];
-
-    // Let's try to add another candidate.
-    currentCombination.push(currentCandidate);
-
-    // Explore further option with current candidate being added.
-    combinationSumRecursive(
-      candidates,
-      remainingSum - currentCandidate,
-      finalCombinations,
-      currentCombination,
-      candidateIndex,
-    );
-
-    // BACKTRACKING.
-    // Let's get back, exclude current candidate and try another ones later.
-    currentCombination.pop();
-  }
-
-  return finalCombinations;
-}
-
-/**
- * Backtracking algorithm of finding all possible combination for specific sum.
+ * Iterative algorithm to find all combinations (repetitions allowed)
+ * that sum up to a given number (target) using elements
+ * from a set of positive integers (candidates).
  *
  * @param {number[]} candidates
  * @param {number} target
  * @return {number[][]}
  */
 export default function combinationSum(candidates, target) {
-  return combinationSumRecursive(candidates, target);
+  const combinations = [];
+
+  const nonZeroCandidates = Array.from(new Set(candidates.filter(c => c > 0).slice().reverse()));
+  const stack = nonZeroCandidates
+    .map((candidate, index) => ({ candidateIndex: index, sum: candidate, prev: null }));
+
+  while (stack.length > 0) {
+    const node = stack.pop();
+
+    if (node.sum === target) {
+      /*
+      If the cumulative sum matches the target value
+      then we build the corresponding candidates combination
+      by traversing the current branch back to its root...
+      */
+      const combination = [];
+      let currentNode = node;
+      while (currentNode !== null) {
+        const candidate = nonZeroCandidates[currentNode.candidateIndex];
+        combination.push(candidate);
+        currentNode = currentNode.prev;
+      }
+      combinations.push(combination);
+    } else if (node.sum < target) {
+      /*
+      ...otherwise we combine the current branch
+      with any other candidate (as long as it is
+      less or equal than the current candidate)
+      and evaluate the new branches.
+      */
+      for (let i = node.candidateIndex; i < nonZeroCandidates.length; i += 1) {
+        stack.push({
+          candidateIndex: i,
+          sum: node.sum + nonZeroCandidates[i],
+          prev: node,
+        });
+      }
+    }
+  }
+  return combinations;
 }
