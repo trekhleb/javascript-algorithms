@@ -5,7 +5,7 @@ export default class MergeSort extends Sort {
     // Call visiting callback.
     this.callbacks.visitingCallback(null);
 
-    // If array is empty or consists of one element then return this array since it is sorted.
+    // If array is empty or consists of one element then return this array since it is already sorted.
     if (originalArray.length <= 1) {
       return originalArray;
     }
@@ -13,48 +13,45 @@ export default class MergeSort extends Sort {
     // Split array on two halves.
     const middleIndex = Math.floor(originalArray.length / 2);
     const leftArray = originalArray.slice(0, middleIndex);
-    const rightArray = originalArray.slice(middleIndex, originalArray.length);
+    const rightArray = originalArray.slice(middleIndex);
 
-    // Sort two halves of split array
-    const leftSortedArray = this.sort(leftArray);
-    const rightSortedArray = this.sort(rightArray);
+    // Sort two halves of split array.
+    const sortedLeftArray = this.sort(leftArray);
+    const sortedRightArray = this.sort(rightArray);
 
     // Merge two sorted arrays into one.
-    return this.mergeSortedArrays(leftSortedArray, rightSortedArray);
+    return this.mergeArrays(sortedLeftArray, sortedRightArray);
   }
 
-  mergeSortedArrays(leftArray, rightArray) {
-    const sortedArray = [];
+  mergeArrays(leftArray, rightArray) {
+    let sortedArray = [];
 
-    // Use array pointers to exclude old elements after they have been added to the sorted array.
+    // Indices for traversing the left and right arrays.
     let leftIndex = 0;
     let rightIndex = 0;
 
     while (leftIndex < leftArray.length && rightIndex < rightArray.length) {
-      let minElement = null;
+      // Compare the elements at the current indices.
+      const leftElement = leftArray[leftIndex];
+      const rightElement = rightArray[rightIndex];
 
-      // Find the minimum element between the left and right array.
-      if (this.comparator.lessThanOrEqual(leftArray[leftIndex], rightArray[rightIndex])) {
-        minElement = leftArray[leftIndex];
-        // Increment index pointer to the right
+      if (this.comparator.lessThanOrEqual(leftElement, rightElement)) {
+        // If the left element is smaller or equal, append it to the sorted array.
+        sortedArray.push(leftElement);
         leftIndex += 1;
       } else {
-        minElement = rightArray[rightIndex];
-        // Increment index pointer to the right
+        // Otherwise, append the right element to the sorted array.
+        sortedArray.push(rightElement);
         rightIndex += 1;
       }
 
-      // Add the minimum element to the sorted array.
-      sortedArray.push(minElement);
-
       // Call visiting callback.
-      this.callbacks.visitingCallback(minElement);
+      this.callbacks.visitingCallback(null);
     }
 
-    // There will be elements remaining from either the left OR the right
-    // Concatenate the remaining elements into the sorted array
-    return sortedArray
-      .concat(leftArray.slice(leftIndex))
-      .concat(rightArray.slice(rightIndex));
+    // Concatenate the remaining elements from either the left or the right array.
+    sortedArray = sortedArray.concat(leftArray.slice(leftIndex)).concat(rightArray.slice(rightIndex));
+
+    return sortedArray;
   }
 }
