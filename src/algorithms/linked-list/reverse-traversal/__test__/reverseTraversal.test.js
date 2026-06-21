@@ -19,17 +19,28 @@ describe('reverseTraversal', () => {
 
     expect(traversedNodeValues).toEqual([3, 2, 1]);
   });
-});
 
-// it('should reverse traversal the linked list with callback', () => {
-//   const linkedList = new LinkedList();
-//
-//   linkedList
-//     .append(1)
-//     .append(2)
-//     .append(3);
-//
-//   expect(linkedList.toString()).toBe('1,2,3');
-//   expect(linkedList.reverseTraversal(linkedList.head, value => value * 2)).toEqual([6, 4, 2]);
-//   expect(() => linkedList.reverseTraversal(linkedList.head)).toThrow();
-// });
+  // New Test: Should throw an error if no callback is provided
+  it('should throw an error if no callback function is provided', () => {
+    const linkedList = new LinkedList();
+    linkedList.append(1);
+
+    expect(() => reverseTraversal(linkedList)).toThrow('Callback function is required for reverseTraversal');
+  });
+
+  //  New Test: Should throw an error if the linked list is empty
+  it('should throw an error if linked list is empty', () => {
+    const linkedList = new LinkedList();
+
+    expect(() => reverseTraversal(linkedList, (value) => console.log(value))).toThrow(
+      'Cannot reverse traverse an empty linked list',
+    );
+  });
+
+  //  New Test: Should throw an error if linked list is null
+  it('should throw an error if linked list is null', () => {
+    expect(() => reverseTraversal(null, (value) => console.log(value))).toThrow(
+      'Cannot reverse traverse an empty linked list',
+    );
+  });
+});
