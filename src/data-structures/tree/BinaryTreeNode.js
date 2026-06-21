@@ -167,11 +167,13 @@ export default class BinaryTreeNode {
 
     if (this.left && this.nodeComparator.equal(this.left, nodeToReplace)) {
       this.left = replacementNode;
+      this.left.parent = this;
       return true;
     }
 
     if (this.right && this.nodeComparator.equal(this.right, nodeToReplace)) {
       this.right = replacementNode;
+      this.right.parent = this;
       return true;
     }
 
