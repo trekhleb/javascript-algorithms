@@ -95,9 +95,8 @@ export default class Heap {
    * @param {number} indexTwo
    */
   swap(indexOne, indexTwo) {
-    const tmp = this.heapContainer[indexTwo];
-    this.heapContainer[indexTwo] = this.heapContainer[indexOne];
-    this.heapContainer[indexOne] = tmp;
+    [this.heapContainer[indexOne], this.heapContainer[indexTwo]] = [
+      this.heapContainer[indexTwo], this.heapContainer[indexOne]];
   }
 
   /**
