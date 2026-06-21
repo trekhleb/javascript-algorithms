@@ -23,10 +23,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: Install dependencies
-        run: npm i
-
-      - name: Run linting
-        run: npm run lint
+        run: npm ci
 
       - name: Run tests
         run: npm run coverage
