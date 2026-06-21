@@ -26,7 +26,7 @@ export default class BinaryTreeNode {
       return 0;
     }
 
-    return this.left.height + 1;
+    return this.left.height;
   }
 
   /**
@@ -37,14 +37,14 @@ export default class BinaryTreeNode {
       return 0;
     }
 
-    return this.right.height + 1;
+    return this.right.height;
   }
 
   /**
    * @return {number}
    */
   get height() {
-    return Math.max(this.leftHeight, this.rightHeight);
+    return Math.max(this.leftHeight, this.rightHeight) + 1;
   }
 
   /**
