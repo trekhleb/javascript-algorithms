@@ -129,5 +129,10 @@ export default function stronglyConnectedComponents(graph) {
   graph.reverse();
 
   // Do DFS once again on reversed graph.
-  return getSCCSets(graph, verticesByFinishTime);
+  const sccSets = getSCCSets(graph, verticesByFinishTime);
+
+  // Reverse the graph back to its original state.
+  graph.reverse();
+
+  return sccSets;
 }
