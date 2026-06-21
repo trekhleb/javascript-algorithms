@@ -48,6 +48,14 @@ export default class Queue {
   }
 
   /**
+   * @return {number}
+   */
+  size() {
+    return this.linkedList.size();
+  }
+
+  
+  /**
    * @param [callback]
    * @return {string}
    */
