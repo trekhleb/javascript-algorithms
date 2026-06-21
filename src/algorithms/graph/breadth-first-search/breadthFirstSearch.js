@@ -1,75 +1,26 @@
-import Queue from '../../../data-structures/queue/Queue';
-
 /**
- * @typedef {Object} Callbacks
- *
- * @property {function(vertices: Object): boolean} [allowTraversal] -
- *   Determines whether DFS should traverse from the vertex to its neighbor
- *   (along the edge). By default prohibits visiting the same vertex again.
- *
- * @property {function(vertices: Object)} [enterVertex] - Called when BFS enters the vertex.
- *
- * @property {function(vertices: Object)} [leaveVertex] - Called when BFS leaves the vertex.
+ * Breadth-First Search (BFS) for a graph
+ * @param {Object} graph - adjacency list
+ * @param {string} startVertex - starting node
+ * @returns {Array} order of visited vertices
  */
+function bfs(graph, startVertex) {
+    const visited = new Set();
+    const queue = [startVertex];
+    const order = [];
 
-/**
- * @param {Callbacks} [callbacks]
- * @returns {Callbacks}
- */
-function initCallbacks(callbacks = {}) {
-  const initiatedCallback = callbacks;
-
-  const stubCallback = () => {};
-
-  const allowTraversalCallback = (
-    () => {
-      const seen = {};
-      return ({ nextVertex }) => {
-        if (!seen[nextVertex.getKey()]) {
-          seen[nextVertex.getKey()] = true;
-          return true;
+    while (queue.length > 0) {
+        const vertex = queue.shift();
+        if (!visited.has(vertex)) {
+            visited.add(vertex);
+            order.push(vertex);
+            for (const neighbor of graph[vertex]) {
+                queue.push(neighbor.vertex || neighbor); // support weighted/unweighted
+            }
         }
-        return false;
-      };
     }
-  )();
 
-  initiatedCallback.allowTraversal = callbacks.allowTraversal || allowTraversalCallback;
-  initiatedCallback.enterVertex = callbacks.enterVertex || stubCallback;
-  initiatedCallback.leaveVertex = callbacks.leaveVertex || stubCallback;
-
-  return initiatedCallback;
+    return order;
 }
 
-/**
- * @param {Graph} graph
- * @param {GraphVertex} startVertex
- * @param {Callbacks} [originalCallbacks]
- */
-export default function breadthFirstSearch(graph, startVertex, originalCallbacks) {
-  const callbacks = initCallbacks(originalCallbacks);
-  const vertexQueue = new Queue();
-
-  // Do initial queue setup.
-  vertexQueue.enqueue(startVertex);
-
-  let previousVertex = null;
-
-  // Traverse all vertices from the queue.
-  while (!vertexQueue.isEmpty()) {
-    const currentVertex = vertexQueue.dequeue();
-    callbacks.enterVertex({ currentVertex, previousVertex });
-
-    // Add all neighbors to the queue for future traversals.
-    graph.getNeighbors(currentVertex).forEach((nextVertex) => {
-      if (callbacks.allowTraversal({ previousVertex, currentVertex, nextVertex })) {
-        vertexQueue.enqueue(nextVertex);
-      }
-    });
-
-    callbacks.leaveVertex({ currentVertex, previousVertex });
-
-    // Memorize current vertex before next loop.
-    previousVertex = currentVertex;
-  }
-}
+module.exports = bfs;
