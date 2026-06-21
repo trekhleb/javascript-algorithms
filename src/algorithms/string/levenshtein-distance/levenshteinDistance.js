@@ -35,3 +35,20 @@ export default function levenshteinDistance(a, b) {
 
   return distanceMatrix[b.length][a.length];
 }
+
+export function levenshteinDistanceRec(P, T, i, j) {
+    // if called without initial distances, start with the length of the strings
+    if (i === undefined || j === undefined) return levenshteinDistanceRec(P, T, P.length - 1, T.length - 1);
+  
+    // establish base cases
+    if (i === 0 && j === 0) return 0;
+    if (i === 0) return j;
+    if (j === 0) return i;
+
+    var sub = levenshteinDistanceRec(P, T, i-1, j-1) + (P[i]===T[j] ? 0 : 1); // substitution
+    var del = levenshteinDistanceRec(P, T, i, j-1) + 1; // insertion
+    var add = levenshteinDistanceRec(P, T, i-1, j) + 1; // deletion
+    
+    // pick the transformation that minimizes the distance
+    return Math.min(sub, add, del);
+};
