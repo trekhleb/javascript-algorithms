@@ -4,6 +4,10 @@ import pascalTriangle from '../../../math/pascal-triangle/pascalTriangle';
 
 describe('combineWithoutRepetitions', () => {
   it('should combine string without repetitions', () => {
+    expect(combineWithoutRepetitions(['A', 'B'], 0)).toEqual([
+      [],
+    ]);
+
     expect(combineWithoutRepetitions(['A', 'B'], 3)).toEqual([]);
 
     expect(combineWithoutRepetitions(['A', 'B'], 1)).toEqual([
@@ -28,6 +32,8 @@ describe('combineWithoutRepetitions', () => {
     expect(combineWithoutRepetitions(['A', 'B', 'C'], 3)).toEqual([
       ['A', 'B', 'C'],
     ]);
+
+    expect(combineWithoutRepetitions(['A', 'B', 'C'], -1)).toEqual([]);
 
     expect(combineWithoutRepetitions(['A', 'B', 'C', 'D'], 3)).toEqual([
       ['A', 'B', 'C'],
