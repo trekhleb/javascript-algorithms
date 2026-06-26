@@ -261,7 +261,7 @@ describe('Graph', () => {
     expect(graph.getAllEdges()[1].getKey()).toBe(edgeAC.getKey());
   });
 
-  it('should should throw an error when trying to delete not existing edge', () => {
+  it('should throw an error when trying to delete not existing edge', () => {
     function deleteNotExistingEdge() {
       const graph = new Graph();
 
