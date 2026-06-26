@@ -440,7 +440,7 @@ const findLowEnergySeam = (energyMap: EnergyMap, { w, h }: ImageSize): Seam => {
     }
   }
 
-  // Find the lowest energy energy seam.
+  // Find the lowest energy seam.
   // Once we know where the tail is we may traverse and assemble the lowest
   // energy seam based on the "previous" value of the seam pixel metadata.
   const seam: Seam = [];
