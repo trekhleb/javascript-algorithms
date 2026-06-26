@@ -347,6 +347,26 @@ describe('Graph', () => {
     expect(graph.getNeighbors(vertexB)[0].getKey()).toBe(vertexA.getKey());
   });
 
+  it('should keep edge keys consistent after reverse', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+
+    const graph = new Graph(true);
+    graph.addEdge(edgeAB);
+
+    graph.reverse();
+
+    // After reverse the edge goes B->A, so its key must reflect the new direction.
+    expect(edgeAB.getKey()).toBe('B_A');
+
+    // Re-adding a fresh edge in the original A->B direction must not collide
+    // with a stale key left over from the reversed edge.
+    expect(() => graph.addEdge(new GraphEdge(vertexA, vertexB))).not.toThrow();
+    expect(graph.getAllEdges().length).toBe(2);
+  });
+
   it('should return vertices indices', () => {
     const vertexA = new GraphVertex('A');
     const vertexB = new GraphVertex('B');

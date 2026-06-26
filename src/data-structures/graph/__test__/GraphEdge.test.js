@@ -62,4 +62,24 @@ describe('GraphEdge', () => {
     expect(edge.getKey()).toEqual(customKey);
     expect(edge.toString()).toEqual('custom_key');
   });
+
+  it('should recompute auto-generated key to reflect direction after reverse', () => {
+    const edge = new GraphEdge(new GraphVertex('A'), new GraphVertex('B'));
+
+    expect(edge.getKey()).toBe('A_B');
+
+    edge.reverse();
+
+    expect(edge.getKey()).toBe('B_A');
+  });
+
+  it('should preserve custom key after reverse', () => {
+    const edge = new GraphEdge(new GraphVertex('A'), new GraphVertex('B'), 0, 'custom_key');
+
+    expect(edge.getKey()).toBe('custom_key');
+
+    edge.reverse();
+
+    expect(edge.getKey()).toBe('custom_key');
+  });
 });
