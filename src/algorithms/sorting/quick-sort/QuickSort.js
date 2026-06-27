@@ -19,12 +19,12 @@ export default class QuickSort extends Sort {
     const rightArray = [];
 
     // Take the first element of array as a pivot.
-    const pivotElement = array.shift();
+    const pivotElement = array.pop();
     const centerArray = [pivotElement];
 
     // Split all array elements between left, center and right arrays.
     while (array.length) {
-      const currentElement = array.shift();
+      const currentElement = array.pop();
 
       // Call visiting callback.
       this.callbacks.visitingCallback(currentElement);
