@@ -2,6 +2,7 @@
 
 _Read this in other languages:_
 [_Русский_](README.ru-RU.md),
+[_Español_](README.es-ES.md),
 [_Português_](README.pt-BR.md),
 [_Українська_](README.uk-UA.md)
 
