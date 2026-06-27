@@ -26,7 +26,8 @@ _Lies dies in anderen Sprachen:_
 [_Українська_](README.uk-UA.md),
 [_Arabic_](README.ar-AR.md),
 [_Uzbek_](README.uz-UZ.md)
-[_עברית_](README.he-IL.md)
+[_עברית_](README.he-IL.md),
+[_ქართული_](README.ka-GE.md)
 
 ## Datenstrukturen
 
