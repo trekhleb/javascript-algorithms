@@ -7,7 +7,7 @@
 class MaxHeapAdhoc {
   constructor(heap = []) {
     this.heap = [];
-    heap.forEach(this.add);
+    heap.forEach((value) => this.add(value));
   }
 
   add(num) {
