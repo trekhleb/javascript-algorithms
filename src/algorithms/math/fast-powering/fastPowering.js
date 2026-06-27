@@ -14,6 +14,12 @@ export default function fastPowering(base, power) {
     return 1;
   }
 
+  if (power < 0) {
+    // Negative power means we need to compute the reciprocal.
+    // x^(-n) = 1 / x^n
+    return 1 / fastPowering(base, -power);
+  }
+
   if (power % 2 === 0) {
     // If the power is even...
     // we may recursively redefine the result via twice smaller powers:
