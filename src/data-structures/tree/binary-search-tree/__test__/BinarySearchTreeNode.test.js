@@ -252,4 +252,30 @@ describe('BinarySearchTreeNode', () => {
 
     expect(childNode.parent).toBeNull();
   });
+
+  it('should remove nodes 3,6 in tree 3,6,8', () => {
+    const root = new BinarySearchTreeNode(8);
+
+    root.insert(3);
+    root.insert(6);
+
+    root.remove(3);
+    root.remove(6);
+
+    expect(root.right).toBeNull();
+    expect(root.left).toBeNull();
+  });
+
+  it('should remove nodes 8 in tree 6,8', () => {
+    const root = new BinarySearchTreeNode(8);
+
+    root.insert(6);
+
+    root.remove(8);
+
+    expect(root.right).toBeNull();
+    expect(root.left).toBeNull();
+    expect(root.parent).toBeNull();
+    expect(root.value).toBe(6);
+  });
 });

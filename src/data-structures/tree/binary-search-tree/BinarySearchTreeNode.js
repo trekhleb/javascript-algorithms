@@ -101,9 +101,10 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
       if (parent) {
         // Node has a parent. Just remove the pointer to this node from the parent.
         parent.removeChild(nodeToRemove);
+        nodeToRemove.parent = null;
       } else {
         // Node has no parent. Just erase current node value.
-        nodeToRemove.setValue(undefined);
+        nodeToRemove.setValue(null);
       }
     } else if (nodeToRemove.left && nodeToRemove.right) {
       // Node has two children.
@@ -127,13 +128,12 @@ export default class BinarySearchTreeNode extends BinaryTreeNode {
 
       if (parent) {
         parent.replaceChild(nodeToRemove, childNode);
+        childNode.parent = parent;
+        nodeToRemove.parent = null;
       } else {
         BinaryTreeNode.copyNode(childNode, nodeToRemove);
       }
     }
-
-    // Clear the parent of removed node.
-    nodeToRemove.parent = null;
 
     return true;
   }
