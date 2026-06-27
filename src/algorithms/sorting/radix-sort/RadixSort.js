@@ -113,7 +113,10 @@ export default class RadixSort extends Sort {
    */
   getLengthOfLongestElement(array) {
     if (this.isArrayOfNumbers(array)) {
-      return Math.floor(Math.log10(Math.max(...array))) + 1;
+      const max = Math.max(...array);
+      // Handle edge cases where max is 0 or negative
+      if (max <= 0) return 1;
+      return Math.floor(Math.log10(max)) + 1;
     }
 
     return array.reduce((acc, val) => {
