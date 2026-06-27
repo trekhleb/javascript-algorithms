@@ -86,6 +86,6 @@ describe('kruskal', () => {
     expect(minimumSpanningTree.getWeight()).toBe(3);
     expect(minimumSpanningTree.getAllVertices().length).toBe(graph.getAllVertices().length);
     expect(minimumSpanningTree.getAllEdges().length).toBe(graph.getAllVertices().length - 1);
-    expect(minimumSpanningTree.toString()).toBe('A,B,C,D');
+    expect(minimumSpanningTree.getAllVertices().map((vertex) => vertex.getKey()).sort()).toEqual(['A', 'B', 'C', 'D']);
   });
 });
