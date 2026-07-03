@@ -59,4 +59,15 @@ describe('hanoiTower', () => {
 
     expect(moveCallback).toHaveBeenCalledTimes((2 ** numberOfDiscs) - 1);
   });
+
+  it('should not make any moves when there are no discs', () => {
+    const moveCallback = jest.fn();
+
+    hanoiTower({
+      numberOfDiscs: 0,
+      moveCallback,
+    });
+
+    expect(moveCallback).toHaveBeenCalledTimes(0);
+  });
 });
