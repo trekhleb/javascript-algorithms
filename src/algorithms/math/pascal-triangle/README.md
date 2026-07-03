@@ -58,6 +58,13 @@ C(lineNumber, i) = C(lineNumber, i - 1) * (lineNumber - i + 1) / i
 So `C(lineNumber, i)` can be calculated 
 from `C(lineNumber, i - 1)` in `O(1)` time.
 
+> **Precision note:** JavaScript numbers are 64-bit floats, so the
+> intermediate product `C(lineNumber, i - 1) * (lineNumber - i + 1)` in the
+> formula above loses integer precision once it exceeds
+> `Number.MAX_SAFE_INTEGER` (`2^53 - 1`). As a result this multiplicative
+> approach returns only approximate entries for the big line numbers (the
+> first failure happens around the line number `55`).
+
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Pascal%27s_triangle)

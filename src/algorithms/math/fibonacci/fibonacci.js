@@ -5,6 +5,11 @@
  * @return {number[]}
  */
 export default function fibonacci(n) {
+  // A sequence of zero numbers is an empty array.
+  if (n === 0) {
+    return [];
+  }
+
   const fibSequence = [1];
 
   let currentValue = 1;
@@ -16,7 +21,7 @@ export default function fibonacci(n) {
 
   let iterationsCounter = n - 1;
 
-  while (iterationsCounter) {
+  while (iterationsCounter > 0) {
     currentValue += previousValue;
     previousValue = currentValue - previousValue;
 

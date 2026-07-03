@@ -1,8 +1,9 @@
 import isValid from '../validParentheses';
 
 describe('validParentheses', () => {
-  it('should return false when string is empty', () => {
-    expect(isValid('')).toBe(false);
+  it('should return true when string is empty', () => {
+    // An empty string is vacuously valid — there are no brackets to mismatch.
+    expect(isValid('')).toBe(true);
   });
 
   it('should return true when string contains valid parentheses in correct order', () => {

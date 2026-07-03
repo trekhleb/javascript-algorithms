@@ -18,7 +18,7 @@ Below are the permutations of string `ABC`.
 
 Or for example the first three people in a running race: you can't be first and second.
 
-**Number of combinations**
+**Number of permutations**
 
 ```
 n * (n-1) * (n -2) * ... * 1 = n!
@@ -31,7 +31,7 @@ For example, the lock below could be `333`.
 
 ![Permutation Lock](https://www.mathsisfun.com/combinatorics/images/permutation-lock.jpg)
 
-**Number of combinations**
+**Number of permutations**
 
 ```
 n * n * n ... (r times) = n^r

@@ -114,7 +114,7 @@ To multiply complex numbers each part of the first complex number gets multiplie
 by each part of the second complex number:
 
 Just use "FOIL", which stands for "**F**irsts, **O**uters, **I**nners, **L**asts" (
-see [Binomial Multiplication](ttps://www.mathsisfun.com/algebra/polynomials-multiplying.html) for
+see [Binomial Multiplication](https://www.mathsisfun.com/algebra/polynomials-multiplying.html) for
 more details):
 
 ![Complex Multiplication](https://www.mathsisfun.com/algebra/images/foil-complex.svg)
@@ -207,7 +207,7 @@ There is a faster way though.
 In the previous example, what happened on the bottom was interesting:
 
 ```text
-(4 − 5i)(4 + 5i) = 16 + 20i − 20i − 25i
+(4 − 5i)(4 + 5i) = 16 + 20i − 20i − 25i^2
 ```
 
 The middle terms `(20i − 20i)` cancel out! Also `i^2 = −1` so we end up with this:

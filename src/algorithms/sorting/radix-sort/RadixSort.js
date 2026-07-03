@@ -1,6 +1,9 @@
 import Sort from '../Sort';
 
-// Using charCode (a = 97, b = 98, etc), we can map characters to buckets from 0 - 25
+// Using charCode (a = 97, b = 98, etc), we can map characters to buckets from 1 - 26.
+// Bucket 0 is reserved for the "no character at this position" case so that
+// shorter strings are sorted before longer strings with the same prefix
+// (e.g. 'b' goes before 'ba').
 const BASE_CHAR_CODE = 97;
 const NUMBER_OF_POSSIBLE_DIGITS = 10;
 const ENGLISH_ALPHABET_LENGTH = 26;
@@ -13,6 +16,27 @@ export default class RadixSort extends Sort {
   sort(originalArray) {
     // Assumes all elements of array are of the same type
     const isArrayOfNumbers = this.isArrayOfNumbers(originalArray);
+
+    if (isArrayOfNumbers) {
+      // Number buckets are formed of digits and thus can only handle
+      // non-negative integers. To sort negative numbers we sort their
+      // absolute values instead and then reverse and negate the result
+      // back, prepending it to the sorted non-negative numbers:
+      // [2, -1, -3] → negatives [1, 3] → sorted [1, 3]
+      // → reversed and negated [-3, -1] → result [-3, -1, 2]
+      const negativeNumbers = originalArray
+        .filter((number) => number < 0)
+        .map((number) => -number);
+
+      if (negativeNumbers.length) {
+        const nonNegativeNumbers = originalArray.filter((number) => number >= 0);
+
+        return [
+          ...this.sort(negativeNumbers).reverse().map((number) => -number),
+          ...this.sort(nonNegativeNumbers),
+        ];
+      }
+    }
 
     let sortedArray = [...originalArray];
     const numPasses = this.determineNumPasses(sortedArray);
@@ -67,7 +91,9 @@ export default class RadixSort extends Sort {
    * @return {*[]}
    */
   placeElementsInCharacterBuckets(array, index, numPasses) {
-    const buckets = this.createBuckets(ENGLISH_ALPHABET_LENGTH);
+    // One extra bucket (the very first one) is being used for the elements
+    // that have no character at the currently inspected position.
+    const buckets = this.createBuckets(ENGLISH_ALPHABET_LENGTH + 1);
 
     array.forEach((element) => {
       this.callbacks.visitingCallback(element);
@@ -79,24 +105,28 @@ export default class RadixSort extends Sort {
   }
 
   /**
+   * Get the bucket number for the character of the element that is being
+   * inspected during the current pass. Passes go through character positions
+   * from right to left (this is the least-significant-digit radix sort), so
+   * the pass number 0 inspects the very last possible character position.
+   *
    * @param {string} element
    * @param {number} index
    * @param {number} numPasses
    * @return {number}
    */
   getCharCodeOfElementAtIndex(element, index, numPasses) {
-    // Place element in last bucket if not ready to organize
-    if ((numPasses - index) > element.length) {
-      return ENGLISH_ALPHABET_LENGTH - 1;
+    const charPos = numPasses - index - 1;
+
+    // If the string is too short to have a character at this position then
+    // place it into the very first bucket, since the "absent character"
+    // must be sorted before 'a' ('b' goes before 'ba').
+    if (charPos > element.length - 1) {
+      return 0;
     }
 
-    /**
-     * If each character has been organized, use first character to determine bucket,
-     * otherwise iterate backwards through element
-     */
-    const charPos = index > element.length - 1 ? 0 : element.length - index - 1;
-
-    return element.toLowerCase().charCodeAt(charPos) - BASE_CHAR_CODE;
+    // Characters a-z occupy buckets 1-26 (bucket 0 is reserved above).
+    return element.toLowerCase().charCodeAt(charPos) - BASE_CHAR_CODE + 1;
   }
 
   /**

@@ -3,6 +3,11 @@
  * @return {*[]}
  */
 export default function permutateWithoutRepetitions(permutationOptions) {
+  // There is exactly one way to permutate an empty set — the empty permutation.
+  if (permutationOptions.length === 0) {
+    return [[]];
+  }
+
   if (permutationOptions.length === 1) {
     return [permutationOptions];
   }

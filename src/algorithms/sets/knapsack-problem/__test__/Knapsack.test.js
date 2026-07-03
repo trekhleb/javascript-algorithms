@@ -87,6 +87,41 @@ describe('Knapsack', () => {
     expect(knapsack.selectedItems[2].toString()).toBe('v7 w1 x 1');
   });
 
+  it('should solve 0/1 knapsack problem with a single item that fits', () => {
+    const possibleKnapsackItems = [
+      new KnapsackItem({ value: 5, weight: 2 }),
+    ];
+
+    const maxKnapsackWeight = 3;
+
+    const knapsack = new Knapsack(possibleKnapsackItems, maxKnapsackWeight);
+
+    knapsack.solveZeroOneKnapsackProblem();
+
+    expect(knapsack.totalValue).toBe(5);
+    expect(knapsack.totalWeight).toBe(2);
+    expect(knapsack.selectedItems.length).toBe(1);
+    expect(knapsack.selectedItems[0].toString()).toBe('v5 w2 x 1');
+  });
+
+  it('should solve 0/1 knapsack problem when the best item weighs exactly the limit', () => {
+    const possibleKnapsackItems = [
+      new KnapsackItem({ value: 1, weight: 1 }),
+      new KnapsackItem({ value: 10, weight: 5 }),
+    ];
+
+    const maxKnapsackWeight = 5;
+
+    const knapsack = new Knapsack(possibleKnapsackItems, maxKnapsackWeight);
+
+    knapsack.solveZeroOneKnapsackProblem();
+
+    expect(knapsack.totalValue).toBe(10);
+    expect(knapsack.totalWeight).toBe(5);
+    expect(knapsack.selectedItems.length).toBe(1);
+    expect(knapsack.selectedItems[0].toString()).toBe('v10 w5 x 1');
+  });
+
   it('should solve unbound knapsack problem', () => {
     const possibleKnapsackItems = [
       new KnapsackItem({ value: 84, weight: 7 }), // v/w ratio is 12
@@ -158,5 +193,25 @@ describe('Knapsack', () => {
     expect(knapsack.selectedItems[2].toString()).toBe('v10 w1 x 6');
     expect(knapsack.selectedItems[3].toString()).toBe('v12 w3 x 1');
     expect(knapsack.selectedItems[4].toString()).toBe('v5 w2 x 2');
+  });
+
+  it('should not exceed the weight limit in unbound knapsack problem', () => {
+    const possibleKnapsackItems = [
+      new KnapsackItem({ value: 10, weight: 5 }), // v/w ratio is 2
+      new KnapsackItem({ value: 9, weight: 4 }), // v/w ratio is 2.25
+    ];
+
+    const maxKnapsackWeight = 5;
+
+    const knapsack = new Knapsack(possibleKnapsackItems, maxKnapsackWeight);
+
+    knapsack.solveUnboundedKnapsackProblem();
+
+    // The v9 item (higher value per weight unit) is added first and after
+    // that the v10 item doesn't fit anymore and thus must not be added.
+    expect(knapsack.totalValue).toBe(9);
+    expect(knapsack.totalWeight).toBe(4);
+    expect(knapsack.selectedItems.length).toBe(1);
+    expect(knapsack.selectedItems[0].toString()).toBe('v9 w4 x 1');
   });
 });

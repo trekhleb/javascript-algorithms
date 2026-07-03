@@ -36,9 +36,9 @@ Output: 28
 
 ### Backtracking
 
-First thought that might came to mind is that we need to build a decision tree 
+The first thought that might come to mind is that we need to build a decision tree 
 where `D` means moving down and `R` means moving right. For example in case
-of boars `width = 3` and `height = 2` we will have the following decision tree:
+of a board with `width = 3` and `height = 2` we will have the following decision tree:
 
 ```
                 START

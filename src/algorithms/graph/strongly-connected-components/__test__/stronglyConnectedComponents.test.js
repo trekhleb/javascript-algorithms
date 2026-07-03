@@ -126,4 +126,30 @@ describe('stronglyConnectedComponents', () => {
     expect(components[0].map((vertex) => vertex.getKey()).sort()).toEqual(['A', 'B', 'C']);
     expect(components[1].map((vertex) => vertex.getKey())).toEqual(['D']);
   });
+
+  it('should not leave the graph reversed after the algorithm run', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+    const edgeCA = new GraphEdge(vertexC, vertexA);
+
+    const graph = new Graph(true);
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBC)
+      .addEdge(edgeCA);
+
+    stronglyConnectedComponents(graph);
+
+    // All the edges must keep their original directions.
+    expect(graph.findEdge(vertexA, vertexB)).toBe(edgeAB);
+    expect(graph.findEdge(vertexB, vertexA)).toBeNull();
+    expect(edgeAB.startVertex).toBe(vertexA);
+    expect(edgeAB.endVertex).toBe(vertexB);
+    expect(edgeAB.getKey()).toBe('A_B');
+  });
 });

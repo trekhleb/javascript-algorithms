@@ -6,8 +6,8 @@ export default function floydWarshall(graph) {
   // Get all graph vertices.
   const vertices = graph.getAllVertices();
 
-  // Init previous vertices matrix with nulls meaning that there are no
-  // previous vertices exist that will give us shortest path.
+  // Init next vertices matrix with nulls meaning that there are no
+  // next vertices exist that will give us shortest path.
   const nextVertices = Array(vertices.length).fill(null).map(() => {
     return Array(vertices.length).fill(null);
   });
@@ -19,7 +19,7 @@ export default function floydWarshall(graph) {
   });
 
   // Init distance matrix with the distance we already now (from existing edges).
-  // And also init previous vertices from the edges.
+  // And also init next vertices from the edges.
   vertices.forEach((startVertex, startIndex) => {
     vertices.forEach((endVertex, endIndex) => {
       if (startVertex === endVertex) {
@@ -31,9 +31,10 @@ export default function floydWarshall(graph) {
 
         if (edge) {
           // There is an edge from vertex with startIndex to vertex with endIndex.
-          // Save distance and previous vertex.
+          // Save distance and the next vertex on the way from start to end. For
+          // the direct edge the next vertex is the end vertex itself.
           distances[startIndex][endIndex] = edge.weight;
-          nextVertices[startIndex][endIndex] = startVertex;
+          nextVertices[startIndex][endIndex] = endVertex;
         } else {
           distances[startIndex][endIndex] = Infinity;
         }
@@ -53,14 +54,17 @@ export default function floydWarshall(graph) {
       vertices.forEach((endVertex, endIndex) => {
         // Compare existing distance from startVertex to endVertex, with distance
         // from startVertex to endVertex but via middleVertex.
-        // Save the shortest distance and previous vertex that allows
+        // Save the shortest distance and the next vertex that allows
         // us to have this shortest distance.
         const distViaMiddle = distances[startIndex][middleIndex] + distances[middleIndex][endIndex];
 
         if (distances[startIndex][endIndex] > distViaMiddle) {
-          // We've found a shortest pass via middle vertex.
+          // We've found a shortest pass via middle vertex. Since the shortest
+          // path now goes through the middle vertex, the first step from the
+          // start vertex is the same as the first step on the way from the
+          // start vertex to the middle one.
           distances[startIndex][endIndex] = distViaMiddle;
-          nextVertices[startIndex][endIndex] = middleVertex;
+          nextVertices[startIndex][endIndex] = nextVertices[startIndex][middleIndex];
         }
       });
     });

@@ -16,7 +16,7 @@ to the later of the two vertices in the sequence.
 The choice of starting vertex is not important: traversing the same cyclic 
 sequence of edges from different starting vertices produces the same closed walk.
 
-A **simple cycle may** be defined either as a closed walk with no repetitions of 
+A **simple cycle** may be defined either as a closed walk with no repetitions of 
 vertices and edges allowed, other than the repetition of the starting and ending 
 vertex, or as the set of edges in such a walk. The two definitions are equivalent 
 in directed graphs, where simple cycles are also called directed cycles: the cyclic 

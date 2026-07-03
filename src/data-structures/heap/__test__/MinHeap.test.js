@@ -191,4 +191,20 @@ describe('MinHeap', () => {
     minHeap.remove(4);
     expect(minHeap.toString()).toBe('1,5,3,8,9,6,7');
   });
+
+  it('should keep the heap invariant when removing items with falsy values around', () => {
+    // The parent of the moved item has value 0 here, so the parent check
+    // must be done by index (and not by the item truthiness).
+    const minHeap = new MinHeap();
+    [-10, 0, -9, 4, 5, -8, -7, 6, 7, 8, 9, -8].forEach((value) => minHeap.add(value));
+
+    minHeap.remove(4);
+
+    // Polling must return the items in the ascending order.
+    const polledValues = [];
+    while (!minHeap.isEmpty()) {
+      polledValues.push(minHeap.poll());
+    }
+    expect(polledValues).toEqual([...polledValues].sort((a, b) => a - b));
+  });
 });

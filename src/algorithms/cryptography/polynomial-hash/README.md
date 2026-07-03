@@ -37,9 +37,9 @@ The *Rabin–Karp string search algorithm* is often explained using a very simpl
 rolling hash function that only uses multiplications and 
 additions - **polynomial rolling hash**:
 
-> H(s<sub>0</sub>, s<sub>1</sub>, ..., s<sub>k</sub>) = s<sub>0</sub> * p<sup>k-1</sup> + s<sub>1</sub> * p<sup>k-2</sup> + ... + s<sub>k</sub> * p<sup>0</sup>
+> H(s<sub>0</sub>, s<sub>1</sub>, ..., s<sub>k</sub>) = s<sub>0</sub> * p<sup>k</sup> + s<sub>1</sub> * p<sup>k-1</sup> + ... + s<sub>k</sub> * p<sup>0</sup>
 
-where `p` is a constant, and *(s<sub>1</sub>, ... , s<sub>k</sub>)* are the input
+where `p` is a constant, and *(s<sub>0</sub>, ... , s<sub>k</sub>)* are the input
 characters.
 
 For example we can convert short strings to key numbers by multiplying digit codes by 
@@ -50,7 +50,7 @@ by calculating:
 
 In order to avoid manipulating huge `H` values, all math is done modulo `M`.
 
-> H(s<sub>0</sub>, s<sub>1</sub>, ..., s<sub>k</sub>) = (s<sub>0</sub> * p<sup>k-1</sup> + s<sub>1</sub> * p<sup>k-2</sup> + ... + s<sub>k</sub> * p<sup>0</sup>) mod M
+> H(s<sub>0</sub>, s<sub>1</sub>, ..., s<sub>k</sub>) = (s<sub>0</sub> * p<sup>k</sup> + s<sub>1</sub> * p<sup>k-1</sup> + ... + s<sub>k</sub> * p<sup>0</sup>) mod M
 
 A careful choice of the parameters `M`, `p` is important to obtain “good”
 properties of the hash function, i.e., low collision rate.
@@ -106,7 +106,7 @@ function hash(key, arraySize) {
 Polynomial hashing has a rolling property: the fingerprints can be updated 
 efficiently when symbols are added or removed at the ends of the string
 (provided that an array of powers of p modulo M of sufficient length is stored).
-The popular Rabin–Karp pattern matching algorithm is based on this property
+The popular Rabin–Karp pattern matching algorithm is based on this property.
 
 ## References
 

@@ -23,7 +23,7 @@ const generateKeyMatrix = (keyString) => {
     // Callback to get a value of each matrix cell.
     // The order the matrix is being filled in is from left to right, from top to bottom.
     () => {
-      // A → 0, B → 1, ..., a → 32, b → 33, ...
+      // A → 0, B → 1, ..., Z → 25
       const charCodeShifted = (keyString.codePointAt(keyStringIndex)) % alphabetCodeShift;
       keyStringIndex += 1;
       return charCodeShifted;
@@ -63,8 +63,11 @@ export function hillCipherEncrypt(message, keyString) {
     throw new Error('The message and key string can only contain letters');
   }
 
-  const keyMatrix = generateKeyMatrix(keyString);
-  const messageVector = generateMessageVector(message);
+  // The cipher works with the 26-letter alphabet where A → 0, ..., Z → 25.
+  // Normalize the case so that lowercase letters map to the same numbers
+  // as their uppercase counterparts.
+  const keyMatrix = generateKeyMatrix(keyString.toUpperCase());
+  const messageVector = generateMessageVector(message.toUpperCase());
 
   // keyString.length must equal to square of message.length
   if (keyMatrix.length !== message.length) {

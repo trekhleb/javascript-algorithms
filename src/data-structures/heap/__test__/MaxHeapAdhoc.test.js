@@ -9,6 +9,13 @@ describe('MaxHeapAdhoc', () => {
     expect(maxHeap.isEmpty()).toBe(true);
   });
 
+  it('should create a max heap from the initial array', () => {
+    const maxHeap = new MaxHeap([1, 3, 2]);
+
+    expect(maxHeap.peek()).toBe(3);
+    expect(maxHeap.isEmpty()).toBe(false);
+  });
+
   it('should add items to the heap and heapify it up', () => {
     const maxHeap = new MaxHeap();
 

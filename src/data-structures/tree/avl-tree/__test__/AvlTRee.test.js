@@ -300,4 +300,77 @@ describe('AvlTree', () => {
     expect(tree.root.height).toBe(2);
     expect(tree.root.balanceFactor).toBe(0);
   });
+
+  it('should not lose subtrees when rotating a node that is a right child', () => {
+    // A left-left rotation is needed at node 70, which is the RIGHT child
+    // of the root. The rotated-up node must be attached to the same side
+    // of the parent where the unbalanced node used to be.
+    const tree = new AvlTree();
+    [50, 30, 70, 65, 60].forEach((value) => tree.insert(value));
+
+    expect(tree.toString()).toBe('30,50,60,65,70');
+    expect(tree.contains(30)).toBe(true);
+  });
+
+  it('should rebalance interior nodes after removal', () => {
+    const tree = new AvlTree();
+    [30, 20, 40, 10, 25, 50, 5].forEach((value) => tree.insert(value));
+
+    tree.remove(25);
+
+    expect(tree.toString()).toBe('5,10,20,30,40,50');
+
+    // Every node must satisfy the AVL invariant.
+    const checkBalance = (node) => {
+      if (!node) {
+        return;
+      }
+      expect(Math.abs(node.balanceFactor)).toBeLessThanOrEqual(1);
+      checkBalance(node.left);
+      checkBalance(node.right);
+    };
+    checkBalance(tree.root);
+  });
+
+  it('should keep the AVL invariant under a mixed insert/remove workload', () => {
+    const tree = new AvlTree();
+    const values = [];
+
+    // Deterministic pseudo-random sequence (linear congruential generator).
+    let seed = 42;
+    const nextRandom = () => {
+      seed = (seed * 1103515245 + 12345) % 2147483648;
+      return seed;
+    };
+
+    for (let i = 0; i < 200; i += 1) {
+      const value = nextRandom() % 1000;
+      if (!values.includes(value)) {
+        values.push(value);
+        tree.insert(value);
+      }
+    }
+
+    // Remove half of the values in pseudo-random order.
+    const removedCount = Math.floor(values.length / 2);
+    for (let i = 0; i < removedCount; i += 1) {
+      const removeIndex = nextRandom() % values.length;
+      const [value] = values.splice(removeIndex, 1);
+      tree.remove(value);
+    }
+
+    const expectedString = [...values].sort((a, b) => a - b).join(',');
+    expect(tree.toString()).toBe(expectedString);
+
+    // Every node must satisfy the AVL invariant.
+    const checkBalance = (node) => {
+      if (!node) {
+        return;
+      }
+      expect(Math.abs(node.balanceFactor)).toBeLessThanOrEqual(1);
+      checkBalance(node.left);
+      checkBalance(node.right);
+    };
+    checkBalance(tree.root);
+  });
 });

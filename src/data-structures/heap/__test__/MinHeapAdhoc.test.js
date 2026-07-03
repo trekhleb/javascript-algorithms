@@ -9,6 +9,13 @@ describe('MinHeapAdhoc', () => {
     expect(minHeap.isEmpty()).toBe(true);
   });
 
+  it('should create a min heap from the initial array', () => {
+    const minHeap = new MinHeapAdhoc([3, 1, 2]);
+
+    expect(minHeap.peek()).toBe(1);
+    expect(minHeap.isEmpty()).toBe(false);
+  });
+
   it('should add items to the heap and heapify it up', () => {
     const minHeap = new MinHeapAdhoc();
 

@@ -46,10 +46,11 @@ A deque is the right tool when you need **O(1) access at both ends**:
 
 - **Sliding window maximum/minimum** — maintain candidates in a monotonic deque
   so each element is pushed and popped at most once (overall O(n)).
-- **Browser history** — navigate backward (`removeFront`) and forward
-  (`removeBack`) through pages.
-- **Undo / redo stacks** — push actions to the back, undo from the back,
-  redo from the front.
+- **Browser history** — append freshly visited pages to the back and, once
+  the history size limit is reached, drop the oldest entries from the front.
+- **Bounded undo history** — push actions to the back and undo from the back
+  (like a stack), while old actions beyond the undo limit are evicted from
+  the front.
 - **Palindrome checking** — compare characters from both ends simultaneously.
 - **Work-stealing schedulers** (e.g. Java's `ForkJoinPool`) — threads push/pop
   from their own back, while idle threads steal from another thread's front.

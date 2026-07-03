@@ -37,7 +37,9 @@ describe('rabinKarp', () => {
   it('should work with UTF symbols', () => {
     expect(rabinKarp('a\u{ffff}', '\u{ffff}')).toBe(1);
     expect(rabinKarp('\u0000耀\u0000', '耀\u0000')).toBe(1);
-    // @TODO: Provide Unicode support.
-    // expect(rabinKarp('a\u{20000}', '\u{20000}')).toBe(1);
+    expect(rabinKarp('a\u{20000}', '\u{20000}')).toBe(1);
+    // The astral symbol occupies two UTF-16 code units, thus the position is 2.
+    expect(rabinKarp('\u{20000}ba', 'ba')).toBe(2);
+    expect(rabinKarp('a\u{20000}baa', '\u{20000}b')).toBe(1);
   });
 });

@@ -39,7 +39,8 @@ export default class PolynomialHash {
    * Recalculates the hash representation of a word so that it isn't
    * necessary to traverse the whole word again.
    *
-   * Time complexity: O(1).
+   * Time complexity: O(word.length) because of the multiplier
+   * re-calculation loop (hash update itself takes O(1) time).
    *
    * @param {number} prevHash
    * @param {string} prevWord
@@ -49,11 +50,16 @@ export default class PolynomialHash {
   roll(prevHash, prevWord, newWord) {
     let hash = prevHash;
 
-    const prevValue = this.charToNumber(prevWord[0]);
-    const newValue = this.charToNumber(newWord[newWord.length - 1]);
+    // Use code points (and not UTF-16 code units) to be consistent with
+    // the hash() method and to support surrogate pairs (astral symbols).
+    const prevWordChars = Array.from(prevWord);
+    const newWordChars = Array.from(newWord);
+
+    const prevValue = this.charToNumber(prevWordChars[0]);
+    const newValue = this.charToNumber(newWordChars[newWordChars.length - 1]);
 
     let prevValueMultiplier = 1;
-    for (let i = 1; i < prevWord.length; i += 1) {
+    for (let i = 1; i < prevWordChars.length; i += 1) {
       prevValueMultiplier *= this.base;
       prevValueMultiplier %= this.modulus;
     }

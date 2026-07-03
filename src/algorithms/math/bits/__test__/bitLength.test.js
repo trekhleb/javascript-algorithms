@@ -11,4 +11,9 @@ describe('bitLength', () => {
     expect(bitLength(0b11110101)).toBe(8);
     expect(bitLength(0b00011110101)).toBe(8);
   });
+
+  it('should calculate number of bits for numbers that are 31 bits long or more', () => {
+    expect(bitLength(2 ** 30)).toBe(31);
+    expect(bitLength(2 ** 40)).toBe(41);
+  });
 });

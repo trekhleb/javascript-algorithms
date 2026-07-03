@@ -82,14 +82,22 @@ export default class Graph {
       this.edges[edge.getKey()] = edge;
     }
 
-    // Add edge to the vertices.
+    // Add edge to the vertices. Skip the vertices that already have this edge
+    // attached (it happens when the same edge instance is being added to
+    // several graphs, i.e. while building a minimum spanning tree).
     if (this.isDirected) {
       // If graph IS directed then add the edge only to start vertex.
-      startVertex.addEdge(edge);
+      if (!startVertex.hasEdge(edge)) {
+        startVertex.addEdge(edge);
+      }
     } else {
       // If graph ISN'T directed then add the edge to both vertices.
-      startVertex.addEdge(edge);
-      endVertex.addEdge(edge);
+      if (!startVertex.hasEdge(edge)) {
+        startVertex.addEdge(edge);
+      }
+      if (!endVertex.hasEdge(edge)) {
+        endVertex.addEdge(edge);
+      }
     }
 
     return this;

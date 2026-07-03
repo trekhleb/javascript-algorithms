@@ -88,4 +88,32 @@ describe('kruskal', () => {
     expect(minimumSpanningTree.getAllEdges().length).toBe(graph.getAllVertices().length - 1);
     expect(minimumSpanningTree.toString()).toBe('A,B,C,D');
   });
+
+  it('should not modify the original graph', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB, 1);
+    const edgeBC = new GraphEdge(vertexB, vertexC, 2);
+    const edgeAC = new GraphEdge(vertexA, vertexC, 3);
+
+    const graph = new Graph();
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBC)
+      .addEdge(edgeAC);
+
+    // Remember the original vertex degrees. The spanning tree is built from
+    // the edge instances that are shared with the original graph so building
+    // it must not attach any duplicate edges to the original graph vertices.
+    const degreesBefore = graph.getAllVertices().map((vertex) => vertex.getDegree());
+
+    kruskal(graph);
+
+    const degreesAfter = graph.getAllVertices().map((vertex) => vertex.getDegree());
+
+    expect(degreesAfter).toEqual(degreesBefore);
+  });
 });

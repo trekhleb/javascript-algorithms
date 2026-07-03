@@ -342,6 +342,7 @@ Below is the list of some of the most used Big O notations and their performance
 | **Array**               | 1         | n         | n         | n         |           |
 | **Stack**               | n         | n         | 1         | 1         |           |
 | **Queue**               | n         | n         | 1         | 1         |           |
+| **Deque**               | n         | n         | 1         | 1         | Insertion and deletion are O(1) at both the front and the back |
 | **Linked List**         | n         | n         | 1         | n         |           |
 | **Hash Table**          | -         | n         | n         | n         | In case of perfect hash function costs would be O(1) |
 | **Binary Search Tree**  | n         | n         | n         | n         | In case of balanced tree costs would be O(log(n)) |
@@ -357,7 +358,7 @@ Below is the list of some of the most used Big O notations and their performance
 | **Bubble sort**       | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
 | **Insertion sort**    | n               | n<sup>2</sup>       | n<sup>2</sup>       | 1         | Yes       |           |
 | **Selection sort**    | n<sup>2</sup>   | n<sup>2</sup>       | n<sup>2</sup>       | 1         | No        |           |
-| **Heap sort**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        |           |
+| **Heap sort**         | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | 1         | No        | Classic heapsort is in-place; this repo's implementation copies the items into a heap and thus uses O(n) memory |
 | **Merge sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n&nbsp;log(n)       | n         | Yes       |           |
 | **Quick sort**        | n&nbsp;log(n)   | n&nbsp;log(n)       | n<sup>2</sup>       | log(n)    | No        | Quicksort is usually done in-place with O(log(n)) stack space |
 | **Shell sort**        | n&nbsp;log(n)   | depends on gap sequence   | n&nbsp;(log(n))<sup>2</sup>  | 1         | No         |           |
