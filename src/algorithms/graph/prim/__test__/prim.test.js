@@ -11,7 +11,7 @@ describe('prim', () => {
       prim(graph);
     }
 
-    expect(applyPrimToDirectedGraph).toThrowError();
+    expect(applyPrimToDirectedGraph).toThrow();
   });
 
   it('should find minimum spanning tree', () => {

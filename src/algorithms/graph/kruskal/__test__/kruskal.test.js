@@ -11,7 +11,7 @@ describe('kruskal', () => {
       kruskal(graph);
     }
 
-    expect(applyPrimToDirectedGraph).toThrowError();
+    expect(applyPrimToDirectedGraph).toThrow();
   });
 
   it('should find minimum spanning tree', () => {

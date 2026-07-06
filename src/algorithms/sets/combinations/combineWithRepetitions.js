@@ -4,6 +4,14 @@
  * @return {*[]}
  */
 export default function combineWithRepetitions(comboOptions, comboLength) {
+  if (comboLength === 0) {
+    return [[]];
+  }
+
+  if (comboLength < 0) {
+    return [];
+  }
+
   // If the length of the combination is 1 then each element of the original array
   // is a combination itself.
   if (comboLength === 1) {

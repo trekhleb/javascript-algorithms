@@ -30,7 +30,7 @@ describe('eulerianPath', () => {
       eulerianPath(graph);
     }
 
-    expect(findEulerianPathInNotEulerianGraph).toThrowError();
+    expect(findEulerianPathInNotEulerianGraph).toThrow();
   });
 
   it('should find Eulerian Circuit in graph', () => {

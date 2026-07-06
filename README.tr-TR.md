@@ -27,9 +27,6 @@ _Read this in other languages:_
 [_Uzbek_](README.uz-UZ.md)
 [_עברית_](README.he-IL.md)
 
-*☝ Not, bu proje araştırma ve öğrenme amacı ile yapılmış
-olup üretim için **yapılmamıştır**.*
-
 ## Veri Yapıları
 
 Bir veri yapısı, verileri bir bilgisayarda organize etmenin ve depolamanın belirli bir yoludur, böylece

@@ -2,7 +2,7 @@ import { hillCipherEncrypt, hillCipherDecrypt } from '../hillCipher';
 
 describe('hillCipher', () => {
   it('should throw an exception when trying to decipher', () => {
-    expect(hillCipherDecrypt).toThrowError('This method is not implemented yet');
+    expect(hillCipherDecrypt).toThrow('This method is not implemented yet');
   });
 
   it('should throw an error when message or keyString contains none letter character', () => {
@@ -12,10 +12,10 @@ describe('hillCipher', () => {
     const invalidCharacterInKeyString = () => {
       hillCipherEncrypt('hello', 'hel12world');
     };
-    expect(invalidCharacterInMessage).toThrowError(
+    expect(invalidCharacterInMessage).toThrow(
       'The message and key string can only contain letters',
     );
-    expect(invalidCharacterInKeyString).toThrowError(
+    expect(invalidCharacterInKeyString).toThrow(
       'The message and key string can only contain letters',
     );
   });
@@ -24,7 +24,7 @@ describe('hillCipher', () => {
     const invalidLengthOfKeyString = () => {
       hillCipherEncrypt('ab', 'ab');
     };
-    expect(invalidLengthOfKeyString).toThrowError(
+    expect(invalidLengthOfKeyString).toThrow(
       'Invalid key string length. The square root of the key string must be an integer',
     );
   });
@@ -33,7 +33,7 @@ describe('hillCipher', () => {
     const invalidLengthOfKeyString = () => {
       hillCipherEncrypt('ab', 'aaabbbccc');
     };
-    expect(invalidLengthOfKeyString).toThrowError(
+    expect(invalidLengthOfKeyString).toThrow(
       'Invalid key string length. The key length must be a square of message length',
     );
   });

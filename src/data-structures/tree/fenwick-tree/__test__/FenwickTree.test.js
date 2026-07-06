@@ -105,10 +105,10 @@ describe('FenwickTree', () => {
       tree.queryRange(3, 2);
     };
 
-    expect(increaseAtInvalidLowIndex).toThrowError();
-    expect(increaseAtInvalidHighIndex).toThrowError();
-    expect(queryInvalidLowIndex).toThrowError();
-    expect(queryInvalidHighIndex).toThrowError();
-    expect(rangeQueryInvalidIndex).toThrowError();
+    expect(increaseAtInvalidLowIndex).toThrow();
+    expect(increaseAtInvalidHighIndex).toThrow();
+    expect(queryInvalidLowIndex).toThrow();
+    expect(queryInvalidHighIndex).toThrow();
+    expect(rangeQueryInvalidIndex).toThrow();
   });
 });

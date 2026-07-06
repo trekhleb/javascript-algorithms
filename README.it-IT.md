@@ -26,8 +26,6 @@ _Leggilo in altre lingue:_
 [_Uzbek_](README.uz-UZ.md)
 [_עברית_](README.he-IL.md)
 
-*☝ Si noti che questo progetto è destinato ad essere utilizzato solo per l'apprendimento e la ricerca e non è destinato ad essere utilizzato per il commercio.*
-
 ## Strutture Dati
 
 Una struttura dati è un particolare modo di organizzare e memorizzare i dati in un computer che  permeta di accedervi e modificarli in modo efficiente. Più precisamente, una struttura dati è una raccolta di dati, le relazioni tra di essi e le funzioni o operazioni che possono essere applicate ai dati.

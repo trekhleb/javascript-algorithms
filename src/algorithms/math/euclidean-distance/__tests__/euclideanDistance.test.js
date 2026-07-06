@@ -12,11 +12,11 @@ describe('euclideanDistance', () => {
   });
 
   it('should throw an error in case if two matrices are of different shapes', () => {
-    expect(() => euclideanDistance([[1]], [[[2]]])).toThrowError(
+    expect(() => euclideanDistance([[1]], [[[2]]])).toThrow(
       'Matrices have different dimensions',
     );
 
-    expect(() => euclideanDistance([[1]], [[2, 3]])).toThrowError(
+    expect(() => euclideanDistance([[1]], [[2, 3]])).toThrow(
       'Matrices have different shapes',
     );
   });

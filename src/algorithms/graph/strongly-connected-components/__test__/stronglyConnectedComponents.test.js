@@ -99,4 +99,31 @@ describe('stronglyConnectedComponents', () => {
     expect(components[3][1].getKey()).toBe(vertexF.getKey());
     expect(components[3][2].getKey()).toBe(vertexE.getKey());
   });
+
+  it('should not break on edges in opposite directions (issue #873)', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeBA = new GraphEdge(vertexB, vertexA);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+    const edgeCA = new GraphEdge(vertexC, vertexA);
+    const edgeCD = new GraphEdge(vertexC, vertexD);
+
+    const graph = new Graph(true);
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBA)
+      .addEdge(edgeBC)
+      .addEdge(edgeCA)
+      .addEdge(edgeCD);
+
+    const components = stronglyConnectedComponents(graph);
+
+    expect(components.length).toBe(2);
+    expect(components[0].map((vertex) => vertex.getKey()).sort()).toEqual(['A', 'B', 'C']);
+    expect(components[1].map((vertex) => vertex.getKey())).toEqual(['D']);
+  });
 });
