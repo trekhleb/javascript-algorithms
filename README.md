@@ -55,6 +55,7 @@ Remember that each data has its own trade-offs. And you need to pay attention mo
 * `B` [Doubly Linked List](src/data-structures/doubly-linked-list)
 * `B` [Queue](src/data-structures/queue)
 * `B` [Stack](src/data-structures/stack)
+* `B` [Deque](src/data-structures/deque) - double-ended queue
 * `B` [Hash Table](src/data-structures/hash-table)
 * `B` [Heap](src/data-structures/heap) - max and min heap versions
 * `B` [Priority Queue](src/data-structures/priority-queue)

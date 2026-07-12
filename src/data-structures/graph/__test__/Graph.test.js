@@ -261,7 +261,7 @@ describe('Graph', () => {
     expect(graph.getAllEdges()[1].getKey()).toBe(edgeAC.getKey());
   });
 
-  it('should should throw an error when trying to delete not existing edge', () => {
+  it('should throw an error when trying to delete not existing edge', () => {
     function deleteNotExistingEdge() {
       const graph = new Graph();
 
@@ -316,6 +316,55 @@ describe('Graph', () => {
     expect(graph.getNeighbors(vertexC)[0].getKey()).toBe(vertexA.getKey());
     expect(graph.getNeighbors(vertexD).length).toBe(1);
     expect(graph.getNeighbors(vertexD)[0].getKey()).toBe(vertexC.getKey());
+  });
+
+  it('should be possible to reverse directed graph with cycle of lenght two', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeBA = new GraphEdge(vertexB, vertexA);
+
+    const graph = new Graph(true);
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBA);
+
+    expect(graph.toString()).toBe('A,B');
+    expect(graph.getAllEdges().length).toBe(2);
+    expect(graph.getNeighbors(vertexA).length).toBe(1);
+    expect(graph.getNeighbors(vertexA)[0].getKey()).toBe(vertexB.getKey());
+    expect(graph.getNeighbors(vertexB).length).toBe(1);
+    expect(graph.getNeighbors(vertexB)[0].getKey()).toBe(vertexA.getKey());
+
+    graph.reverse();
+
+    expect(graph.toString()).toBe('A,B');
+    expect(graph.getAllEdges().length).toBe(2);
+    expect(graph.getNeighbors(vertexA).length).toBe(1);
+    expect(graph.getNeighbors(vertexA)[0].getKey()).toBe(vertexB.getKey());
+    expect(graph.getNeighbors(vertexB).length).toBe(1);
+    expect(graph.getNeighbors(vertexB)[0].getKey()).toBe(vertexA.getKey());
+  });
+
+  it('should keep edge keys consistent after reverse', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+
+    const graph = new Graph(true);
+    graph.addEdge(edgeAB);
+
+    graph.reverse();
+
+    // After reverse the edge goes B->A, so its key must reflect the new direction.
+    expect(edgeAB.getKey()).toBe('B_A');
+
+    // Re-adding a fresh edge in the original A->B direction must not collide
+    // with a stale key left over from the reversed edge.
+    expect(() => graph.addEdge(new GraphEdge(vertexA, vertexB))).not.toThrow();
+    expect(graph.getAllEdges().length).toBe(2);
   });
 
   it('should return vertices indices', () => {
