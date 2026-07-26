@@ -374,4 +374,7 @@ Below is the list of some of the most used Big O notations and their performance
 
 [@trekhleb](https://trekhleb.dev)
 
-A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
+A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev):
+
+- [yesbrainer.ai](https://yesbrainer.ai/) – council of AI models for the decisions that aren’t no-brainers (BYOK, private, no account)
+- [okso.app](https://okso.app/) – drawing app to express, grasp, and organize your thoughts and ideas
