@@ -287,7 +287,7 @@ npm test -- 'LinkedList'
 
 **Troubleshooting**
 
-If linting or testing is failing, try to delete the `node_modules` folder and re-install npm packages:
+In case of linting or testing is failing, try to delete the `node_modules` folder and re-install npm packages:
 
 ```
 rm -rf ./node_modules
