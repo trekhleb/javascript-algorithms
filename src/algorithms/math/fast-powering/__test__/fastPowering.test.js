@@ -1,6 +1,15 @@
 import fastPowering from '../fastPowering';
 
 describe('fastPowering', () => {
+  it('should compute negative powers correctly', () => {
+    expect(fastPowering(2, -1)).toBe(0.5);
+    expect(fastPowering(2, -2)).toBe(0.25);
+    expect(fastPowering(2, -3)).toBe(0.125);
+    expect(fastPowering(4, -1)).toBe(0.25);
+    expect(fastPowering(5, -2)).toBeCloseTo(0.04, 10);
+    expect(fastPowering(10, -1)).toBe(0.1);
+  });
+
   it('should compute power in log(n) time', () => {
     expect(fastPowering(1, 1)).toBe(1);
     expect(fastPowering(2, 0)).toBe(1);
