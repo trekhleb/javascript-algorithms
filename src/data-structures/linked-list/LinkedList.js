@@ -56,35 +56,53 @@ export default class LinkedList {
 
   /**
    * @param {*} value
-   * @param {number} index
+   * @param {number} rawIndex
    * @return {LinkedList}
    */
   insert(value, rawIndex) {
     const index = rawIndex < 0 ? 0 : rawIndex;
+
+    // If index is 0, prepend the value to the list.
     if (index === 0) {
       this.prepend(value);
-    } else {
-      let count = 1;
-      let currentNode = this.head;
-      const newNode = new LinkedListNode(value);
-      while (currentNode) {
-        if (count === index) break;
-        currentNode = currentNode.next;
-        count += 1;
+      return this;
+    }
+
+    const newNode = new LinkedListNode(value);
+    let currentNode = this.head;
+    let count = 1;
+
+    // Traverse the list to find the insertion point.
+    while (currentNode) {
+      if (count === index) break;
+      count += 1;
+      currentNode = currentNode.next;
+    }
+
+    if (currentNode) {
+      // If currentNode is found, insert the newNode after it.
+      newNode.next = currentNode.next;
+      currentNode.next = newNode;
+
+      // UPDATE: If the newNode is inserted after the current tail,
+      // we must update the tail to point to the newNode.
+      if (currentNode === this.tail) {
+        this.tail = newNode;
       }
-      if (currentNode) {
-        newNode.next = currentNode.next;
-        currentNode.next = newNode;
+    } else {
+      // If currentNode is not found (index out of bounds or empty list).
+      if (!this.tail) {
+        // Case for empty list: newNode becomes both head and tail.
+        this.head = newNode;
+        this.tail = newNode;
       } else {
-        if (this.tail) {
-          this.tail.next = newNode;
-          this.tail = newNode;
-        } else {
-          this.head = newNode;
-          this.tail = newNode;
-        }
+        // Case for index out of bounds: append the newNode to the end.
+        newNode.next = this.tail.next;
+        this.tail.next = newNode;
+        this.tail = newNode;
       }
     }
+
     return this;
   }
 
