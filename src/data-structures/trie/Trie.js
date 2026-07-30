@@ -108,3 +108,5 @@ export default class Trie {
     return currentNode;
   }
 }
+
+// Local fallback improvement: appended a small comment.
