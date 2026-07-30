@@ -5,12 +5,14 @@
   "env": {
     "jest/globals": true
   },
+  "ignorePatterns": ["*.md", "*.png", "*.jpeg", "*.jpg"],
   "rules": {
     "no-bitwise": "off",
     "no-lonely-if": "off",
     "class-methods-use-this": "off",
     "arrow-body-style": "off",
-    "no-loop-func": "off"
+    "no-loop-func": "off",
+    "linebreak-style": ["error", "windows"]
   },
   "ignorePatterns": ["*.md", "*.png", "*.jpeg", "*.jpg"],
   "settings": {
