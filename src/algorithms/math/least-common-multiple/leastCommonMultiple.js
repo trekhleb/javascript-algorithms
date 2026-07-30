@@ -1,11 +1,12 @@
 import euclideanAlgorithm from '../euclidean-algorithm/euclideanAlgorithm';
 
 /**
- * @param {number} a
- * @param {number} b
- * @return {number}
+ * Finds the LCM of an array of numbers.
+ * @param {number[]} arr - Array of numbers
+ * @return {number} - LCM of the entire array
  */
+export default function leastCommonMultipleArray(arr) {
+  if (arr.length === 0) return 0;
 
-export default function leastCommonMultiple(a, b) {
-  return ((a === 0) || (b === 0)) ? 0 : Math.abs(a * b) / euclideanAlgorithm(a, b);
+  return arr.reduce((lcm, num) => leastCommonMultiple(lcm, num), 1);
 }
