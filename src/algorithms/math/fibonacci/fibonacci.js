@@ -27,3 +27,16 @@ export default function fibonacci(n) {
 
   return fibSequence;
 }
+/**
+* Return a fibonacci series using recursion
+* Time Complexity -- O(2^N)
+* Space Complexity -- O(N)
+*/
+export default function fib(int n){
+  if(n==1 || n==0){
+    return n;
+  }
+  else{
+    return fib(n-1)+fib(n-2)
+  }
+}
