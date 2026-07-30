@@ -8,7 +8,8 @@ _Read this in other languages:_
 [_Português_](README.pt-BR.md),
 [_Türkçe_](README.tr-TR.md),
 [_한국어_](README.ko-KR.md),
-[_Українська_](README.uk-UA.md)
+[_Українська_](README.uk-UA.md),
+[_繁體中文_](README.zh-TW.md)
 
 
 In computer science, a **heap** is a specialized tree-based

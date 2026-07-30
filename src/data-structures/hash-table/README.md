@@ -7,7 +7,8 @@ _Read this in other languages:_
 [_Français_](README.fr-FR.md),
 [_Português_](README.pt-BR.md),
 [_한국어_](README.ko-KR.md),
-[_Українська_](README.uk-UA.md)
+[_Українська_](README.uk-UA.md),
+[_繁體中文_](README.zh-TW.md)
 
 In computing, a **hash table** (hash map) is a data
 structure which implements an _associative array_
