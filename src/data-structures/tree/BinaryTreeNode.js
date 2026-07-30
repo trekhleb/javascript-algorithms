@@ -100,6 +100,12 @@ export default class BinaryTreeNode {
    * @return {BinaryTreeNode}
    */
   setLeft(node) {
+
+    // Check if it is a proper node.
+    if (node && !(node instanceof BinaryTreeNode)) {
+      throw new Error('The left node must be an instance of BinaryTreeNode');
+    }
+
     // Reset parent for left node since it is going to be detached.
     if (this.left) {
       this.left.parent = null;
@@ -121,6 +127,12 @@ export default class BinaryTreeNode {
    * @return {BinaryTreeNode}
    */
   setRight(node) {
+
+    // Check if it is a proper node.
+    if (node && !(node instanceof BinaryTreeNode)) {
+      throw new Error('The right node must be an instance of BinaryTreeNode');
+    }
+
     // Reset parent for right node since it is going to be detached.
     if (this.right) {
       this.right.parent = null;
