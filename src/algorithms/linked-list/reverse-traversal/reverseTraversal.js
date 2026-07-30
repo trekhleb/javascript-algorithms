@@ -20,5 +20,15 @@ function reverseTraversalRecursive(node, callback) {
  * @param {traversalCallback} callback
  */
 export default function reverseTraversal(linkedList, callback) {
+  // Check if the callback function is provided and is a function
+  if (!callback || typeof callback !== 'function') {
+    throw new Error('Callback function is required for reverseTraversal');
+  }
+
+  //  Check if the linked list is empty
+  if (!linkedList || !linkedList.head) {
+    throw new Error('Cannot reverse traverse an empty linked list');
+  }
+
   reverseTraversalRecursive(linkedList.head, callback);
 }
