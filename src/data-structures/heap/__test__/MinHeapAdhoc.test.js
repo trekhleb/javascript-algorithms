@@ -88,4 +88,12 @@ describe('MinHeapAdhoc', () => {
     expect(minHeap.poll()).toBe(3);
     expect(minHeap.toString()).toBe('10,11,12');
   });
+
+  it('should create the min heap filled', () => {
+    const minHeap = new MinHeapAdhoc([3, 12, 10]);
+
+    expect(minHeap).toBeDefined();
+    expect(minHeap.peek()).toBe(3);
+    expect(minHeap.isEmpty()).toBe(false);
+  });
 });
