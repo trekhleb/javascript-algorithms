@@ -80,8 +80,10 @@ export default class LinkedList {
           this.tail.next = newNode;
           this.tail = newNode;
         } else {
-          this.head = newNode;
-          this.tail = newNode;
+          // this.head = newNode;
+          // this.tail = newNode;
+          newNode.next = this.head;
+          newNode = this.head;
         }
       }
     }
