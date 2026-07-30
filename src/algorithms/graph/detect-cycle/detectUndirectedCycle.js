@@ -6,7 +6,7 @@ import depthFirstSearch from '../depth-first-search/depthFirstSearch';
  * @param {Graph} graph
  */
 export default function detectUndirectedCycle(graph) {
-  let cycle = null;
+  let cyclePath = null;
 
   // List of vertices that we have visited.
   const visitedVertices = {};
@@ -18,7 +18,7 @@ export default function detectUndirectedCycle(graph) {
   const callbacks = {
     allowTraversal: ({ currentVertex, nextVertex }) => {
       // Don't allow further traversal in case if cycle has been detected.
-      if (cycle) {
+      if (cyclePath) {
         return false;
       }
 
@@ -30,19 +30,22 @@ export default function detectUndirectedCycle(graph) {
     },
     enterVertex: ({ currentVertex, previousVertex }) => {
       if (visitedVertices[currentVertex.getKey()]) {
-        // Compile cycle path based on parents of previous vertices.
-        cycle = {};
-
-        let currentCycleVertex = currentVertex;
-        let previousCycleVertex = previousVertex;
-
-        while (previousCycleVertex.getKey() !== currentVertex.getKey()) {
-          cycle[currentCycleVertex.getKey()] = previousCycleVertex;
-          currentCycleVertex = previousCycleVertex;
-          previousCycleVertex = parents[previousCycleVertex.getKey()];
+        // A cycle is detected. Construct the cycle path as an array.
+        cyclePath = [];
+        
+        // Build path from previousVertex up to the common ancestor
+        const pathFromPrevious = [];
+        let current = previousVertex;
+        while (current && current.getKey() !== currentVertex.getKey()) {
+          pathFromPrevious.push(current);
+          current = parents[current.getKey()];
         }
-
-        cycle[currentCycleVertex.getKey()] = previousCycleVertex;
+        
+        // Add currentVertex (the one that was already visited)
+        pathFromPrevious.push(currentVertex);
+        
+        // Reverse the path to get proper order and close the cycle
+        cyclePath = [...pathFromPrevious.reverse(), previousVertex];
       } else {
         // Add next vertex to visited set.
         visitedVertices[currentVertex.getKey()] = currentVertex;
@@ -52,8 +55,13 @@ export default function detectUndirectedCycle(graph) {
   };
 
   // Start DFS traversing.
-  const startVertex = graph.getAllVertices()[0];
+  const allVertices = graph.getAllVertices();
+  if (allVertices.length === 0) {
+    return null;
+  }
+  
+  const startVertex = allVertices[0];
   depthFirstSearch(graph, startVertex, callbacks);
 
-  return cycle;
+  return cyclePath;
 }
