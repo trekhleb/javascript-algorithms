@@ -29,8 +29,9 @@ export default function articulationPoints(graph) {
   // Time needed to discover to the current vertex.
   let discoveryTime = 0;
 
-  // Peek the start vertex for DFS traversal.
-  const startVertex = graph.getAllVertices()[0];
+  // Root vertex of the graph component that is currently being traversed.
+  // The graph might be disconnected thus every component will have its own root.
+  let startVertex = null;
 
   const dfsCallbacks = {
     /**
@@ -106,8 +107,16 @@ export default function articulationPoints(graph) {
     },
   };
 
-  // Do Depth First Search traversal over submitted graph.
-  depthFirstSearch(graph, startVertex, dfsCallbacks);
+  // Do Depth First Search traversal over all graph components since the graph
+  // might be disconnected. Every unvisited vertex starts the traversal of its
+  // component and becomes the root of that component. Notice that discovery
+  // time keeps on incrementing from component to component.
+  graph.getAllVertices().forEach((vertex) => {
+    if (!visitedSet[vertex.getKey()]) {
+      startVertex = vertex;
+      depthFirstSearch(graph, startVertex, dfsCallbacks);
+    }
+  });
 
   return articulationPointsSet;
 }

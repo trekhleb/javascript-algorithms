@@ -20,4 +20,11 @@ describe('fastPowering', () => {
     expect(fastPowering(7, 21)).toBe(558545864083284000);
     expect(fastPowering(100, 9)).toBe(1000000000000000000);
   });
+
+  it('should compute negative powers', () => {
+    expect(fastPowering(2, -1)).toBe(0.5);
+    expect(fastPowering(2, -3)).toBe(0.125);
+    expect(fastPowering(10, -2)).toBe(0.01);
+    expect(fastPowering(-2, -3)).toBe(-0.125);
+  });
 });

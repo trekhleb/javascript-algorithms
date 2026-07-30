@@ -51,9 +51,14 @@ export default function detectUndirectedCycle(graph) {
     },
   };
 
-  // Start DFS traversing.
-  const startVertex = graph.getAllVertices()[0];
-  depthFirstSearch(graph, startVertex, callbacks);
+  // Start DFS traversing. The graph might be disconnected thus we need to run
+  // DFS from every unvisited vertex to make sure that all graph components
+  // are being checked for cycles.
+  graph.getAllVertices().forEach((startVertex) => {
+    if (!cycle && !visitedVertices[startVertex.getKey()]) {
+      depthFirstSearch(graph, startVertex, callbacks);
+    }
+  });
 
   return cycle;
 }

@@ -17,6 +17,14 @@ export default class RedBlackTree extends BinarySearchTree {
   insert(value) {
     const insertedNode = super.insert(value);
 
+    // In case if the value already existed in the tree, the returned node
+    // is the existing (already colored) one. Its color must be left intact,
+    // otherwise re-inserting a black node's value would repaint it red and
+    // break the red-black invariants.
+    if (this.isNodeColored(insertedNode)) {
+      return insertedNode;
+    }
+
     // if (!this.root.left && !this.root.right) {
     if (this.nodeComparator.equal(insertedNode, this.root)) {
       // Make root to always be black.

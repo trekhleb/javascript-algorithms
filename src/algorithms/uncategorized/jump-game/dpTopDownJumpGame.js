@@ -28,13 +28,14 @@ export default function dpTopDownJumpGame(
     return true;
   }
 
-  // Init cell goodness table if it is empty.
-  // This is DYNAMIC PROGRAMMING feature.
-  const currentCellsGoodness = [...cellsGoodness];
+  // Init cell goodness table if it is empty. The table must be shared (and not
+  // copied) across the whole recursion tree so that every "bad" cell gets deeply
+  // visited only once. This is DYNAMIC PROGRAMMING feature.
+  const currentCellsGoodness = cellsGoodness;
   if (!currentCellsGoodness.length) {
     numbers.forEach(() => currentCellsGoodness.push(undefined));
     // Mark the last cell as "good" one since it is where we ultimately want to get.
-    currentCellsGoodness[cellsGoodness.length - 1] = true;
+    currentCellsGoodness[currentCellsGoodness.length - 1] = true;
   }
 
   // Check what the longest jump we could make from current position.

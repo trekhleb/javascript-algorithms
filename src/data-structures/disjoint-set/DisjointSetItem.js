@@ -39,7 +39,7 @@ export default class DisjointSetItem {
   }
 
   /**
-   * Rank basically means the number of all ancestors.
+   * Rank basically means the number of all descendants.
    *
    * @return {number}
    */

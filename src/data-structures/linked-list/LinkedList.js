@@ -75,6 +75,11 @@ export default class LinkedList {
       if (currentNode) {
         newNode.next = currentNode.next;
         currentNode.next = newNode;
+        // If the new node was attached after the tail node
+        // then the tail reference needs to be updated.
+        if (this.tail === currentNode) {
+          this.tail = newNode;
+        }
       } else {
         if (this.tail) {
           this.tail.next = newNode;

@@ -22,7 +22,10 @@ function initCallbacks(callbacks = {}) {
   const allowTraversalCallback = (
     () => {
       const seen = {};
-      return ({ nextVertex }) => {
+      return ({ currentVertex, nextVertex }) => {
+        // Mark current vertex as seen as well so that traversal would never
+        // get back to it (i.e. when the cycle leads back to the start vertex).
+        seen[currentVertex.getKey()] = true;
         if (!seen[nextVertex.getKey()]) {
           seen[nextVertex.getKey()] = true;
           return true;

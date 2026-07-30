@@ -145,7 +145,7 @@ end remove
 findParent(value, root)
   Pre: value is the value of the node we want to find the parent of
        root is the root node of the BST and is != ø
-  Post: a reference to the prent node of value if found; otherwise ø
+  Post: a reference to the parent node of value if found; otherwise ø
   if value = root.value
     return ø
   end if
@@ -173,7 +173,7 @@ end findParent
 
 ```text
 findNode(root, value)
-  Pre: value is the value of the node we want to find the parent of
+  Pre: value is the value of the node we want to find
        root is the root node of the BST
   Post: a reference to the node of value if found; otherwise ø
   if root = ø
@@ -194,7 +194,7 @@ end findNode
 ```text
 findMin(root)
   Pre: root is the root node of the BST
-    root = ø
+    root != ø
   Post: the smallest value in the BST is located
   if root.left = ø
     return root.value
@@ -208,7 +208,7 @@ end findMin
 ```text
 findMax(root)
   Pre: root is the root node of the BST
-    root = ø
+    root != ø
   Post: the largest value in the BST is located
   if root.right = ø
     return root.value
@@ -268,6 +268,13 @@ end postorder
 | Access    | Search    | Insertion | Deletion  |
 | :-------: | :-------: | :-------: | :-------: |
 | O(log(n)) | O(log(n)) | O(log(n)) | O(log(n)) |
+
+> The `O(log(n))` complexities above are for the **average** case (a reasonably
+> balanced tree). This basic BST is not self-balancing, so in the worst case
+> (i.e. when the values are inserted in sorted order) the tree degenerates into
+> a linked list and all the operations take `O(n)` time. Self-balancing trees
+> (i.e. [AVL Tree](../avl-tree) or [Red-Black Tree](../red-black-tree))
+> guarantee `O(log(n))` in the worst case as well.
 
 ### Space Complexity
 

@@ -25,6 +25,12 @@ negative integer, e.g., `21 = 5 × 105 + (−2) × 252`.
 The fact that the GCD can always be expressed in this way is
 known as Bézout's identity.
 
+The [extended Euclidean algorithm](extendedEuclideanAlgorithm.js)
+computes these Bézout coefficients `x` and `y` (such that
+`a × x + b × y = gcd(a, b)`) along with the GCD itself. The
+coefficients are useful, for example, for computing modular
+multiplicative inverses.
+
 ![GCD](https://upload.wikimedia.org/wikipedia/commons/3/37/Euclid%27s_algorithm_Book_VII_Proposition_2_3.png)
 
 Euclid's method for finding the greatest common divisor (GCD)

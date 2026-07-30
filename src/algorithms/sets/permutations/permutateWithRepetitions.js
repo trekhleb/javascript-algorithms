@@ -7,6 +7,11 @@ export default function permutateWithRepetitions(
   permutationOptions,
   permutationLength = permutationOptions.length,
 ) {
+  // There is exactly one permutation of the zero length — the empty permutation.
+  if (permutationLength === 0) {
+    return [[]];
+  }
+
   if (permutationLength === 1) {
     return permutationOptions.map((permutationOption) => [permutationOption]);
   }

@@ -5,13 +5,19 @@
  * Complexity: log(n)
  *
  * @param {number} base - Number that will be raised to the power.
- * @param {number} power - The power that number will be raised to.
+ * @param {number} power - The power that number will be raised to (may be negative).
  * @return {number}
  */
 export default function fastPowering(base, power) {
   if (power === 0) {
     // Anything that is raised to the power of zero is 1.
     return 1;
+  }
+
+  if (power < 0) {
+    // Raising to the negative power is the same as raising to the positive
+    // power and taking the reciprocal of it: x^(-y) = 1 / x^y.
+    return 1 / fastPowering(base, -power);
   }
 
   if (power % 2 === 0) {

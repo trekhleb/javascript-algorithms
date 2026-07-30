@@ -229,4 +229,35 @@ describe('articulationPoints', () => {
     expect(articulationPointsSet.length).toBe(1);
     expect(articulationPointsSet[0].getKey()).toBe(vertexC.getKey());
   });
+
+  it('should find articulation points in all components of disconnected graph', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+    const vertexE = new GraphVertex('E');
+    const vertexF = new GraphVertex('F');
+
+    // First component is a path "A - B - C" with articulation point B.
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+
+    // Second component is a path "D - E - F" with articulation point E.
+    const edgeDE = new GraphEdge(vertexD, vertexE);
+    const edgeEF = new GraphEdge(vertexE, vertexF);
+
+    const graph = new Graph();
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBC)
+      .addEdge(edgeDE)
+      .addEdge(edgeEF);
+
+    const articulationPointsSet = Object.values(articulationPoints(graph));
+
+    expect(articulationPointsSet.length).toBe(2);
+    expect(articulationPointsSet[0].getKey()).toBe(vertexB.getKey());
+    expect(articulationPointsSet[1].getKey()).toBe(vertexE.getKey());
+  });
 });

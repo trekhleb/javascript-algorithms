@@ -14,10 +14,6 @@ hashTable.set('[', ']');
  * @return {boolean}
  */
 export default function isValid(parenthesesString) {
-  // If string is empty return false
-  if (parenthesesString.length === 0) {
-    return false;
-  }
   // Create stack
   const stack = new Stack();
 

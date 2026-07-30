@@ -24,9 +24,6 @@ export default function graphBridges(graph) {
   // Time needed to discover to the current vertex.
   let discoveryTime = 0;
 
-  // Peek the start vertex for DFS traversal.
-  const startVertex = graph.getAllVertices()[0];
-
   const dfsCallbacks = {
     /**
      * @param {GraphVertex} currentVertex
@@ -88,8 +85,14 @@ export default function graphBridges(graph) {
     },
   };
 
-  // Do Depth First Search traversal over submitted graph.
-  depthFirstSearch(graph, startVertex, dfsCallbacks);
+  // Do Depth First Search traversal over all graph components since the graph
+  // might be disconnected. Every unvisited vertex starts the traversal of its
+  // own component.
+  graph.getAllVertices().forEach((startVertex) => {
+    if (!visitedSet[startVertex.getKey()]) {
+      depthFirstSearch(graph, startVertex, dfsCallbacks);
+    }
+  });
 
   return bridges;
 }

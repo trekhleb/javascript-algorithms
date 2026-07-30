@@ -80,11 +80,11 @@ Since the algorithm requires only one pass through the prices array, the time co
 
 #### Additional Space Complexity
 
-Except of the prices array itself the algorithm consumes the constant amount of memory. Thus, additional space complexity is `O(1)`.
+Except for the prices array itself, the algorithm consumes a constant amount of memory. Thus, additional space complexity is `O(1)`.
 
 ## Accumulator Approach `O(n)`
 
-There is even simpler approach exists. Let's say we have the prices array which looks like this `[1, 7, 2, 3, 6, 7, 6, 7]`:
+There is an even simpler approach. Let's say we have the prices array which looks like this `[1, 7, 2, 3, 6, 7, 6, 7]`:
 
 ![Simple One Pass](https://leetcode.com/media/original_images/122_maxprofit_2.PNG)
 
@@ -100,7 +100,31 @@ Since the algorithm requires only one pass through the prices array, the time co
 
 #### Additional Space Complexity
 
-Except of the prices array itself the algorithm consumes the constant amount of memory. Thus, additional space complexity is `O(1)`.
+Except for the prices array itself, the algorithm consumes a constant amount of memory. Thus, additional space complexity is `O(1)`.
+
+## Dynamic Programming Approach `O(n)`
+
+We may also track two states for every day:
+
+- `lastBuy` — the maximum profit so far if we're currently _holding_ a stock (i.e. the last action was a "buy").
+- `lastSold` — the maximum profit so far if we're _not holding_ a stock (i.e. the last action was a "sell", or we haven't traded yet).
+
+On each day we may either keep the previous state or switch it:
+
+- `curBuy = Max(lastBuy, lastSold - price)` — keep holding, or buy at today's price.
+- `curSold = Max(lastSold, lastBuy + price)` — keep resting, or sell at today's price.
+
+After the last day the answer is `lastSold`, since the maximum profit always ends with a sale (still holding a stock at the end could only have decreased the profit).
+
+> See the full code example in [dpBestTimeToBuySellStocks.js](dpBestTimeToBuySellStocks.js)
+
+#### Time Complexity
+
+Since the algorithm requires only one pass through the prices array, the time complexity would equal `O(n)`.
+
+#### Additional Space Complexity
+
+Except for the prices array itself, the algorithm consumes a constant amount of memory. Thus, additional space complexity is `O(1)`.
 
 ## References
 

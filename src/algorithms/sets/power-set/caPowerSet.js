@@ -18,7 +18,7 @@ export default function caPowerSet(originalSet) {
     Adding the 2nd element to all existing sets:
     [[], [1]] ← 2 = [[], [1], [2], [1, 2]]
 
-    Adding the 3nd element to all existing sets:
+    Adding the 3rd element to all existing sets:
     [[], [1], [2], [1, 2]] ← 3 = [[], [1], [2], [1, 2], [3], [1, 3], [2, 3], [1, 2, 3]]
 
     And so on for the rest of the elements from originalSet.

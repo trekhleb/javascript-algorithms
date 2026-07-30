@@ -147,4 +147,18 @@ describe('LRUCache', () => {
     expect(cache.get('key-5')).toBe(5);
     expect(cache.get('key-6')).toBe(6);
   });
+
+  it('should work with keys that exist on Object prototype', () => {
+    const cache = new LRUCache(5);
+
+    cache.set('constructor', 1);
+    cache.set('toString', 2);
+    cache.set('hasOwnProperty', 3);
+    cache.set('__proto__', 4);
+
+    expect(cache.get('constructor')).toBe(1);
+    expect(cache.get('toString')).toBe(2);
+    expect(cache.get('hasOwnProperty')).toBe(3);
+    expect(cache.get('__proto__')).toBe(4);
+  });
 });

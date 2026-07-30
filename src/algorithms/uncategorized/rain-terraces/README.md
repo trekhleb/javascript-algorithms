@@ -33,7 +33,7 @@ Structure is like below:
 |  | |
 |__|_| 
 
-We can trap "3*2 units" of water between 3 an 2,
+We can trap "3*2 units" of water between 3 and 2,
 "1 unit" on top of bar 2 and "3 units" between 2 
 and 4. See below diagram also.
 ```
@@ -59,7 +59,7 @@ An element of array can store water if there are higher bars on left and right.
 We can find amount of water to be stored in every element by finding the heights 
 of bars on left and right sides. The idea is to compute amount of water that can
 be stored in every element of array. For example, consider the array
-`[3, 0, 0, 2, 0, 4]`, We can trap "3*2 units" of water between 3 an 2, "1 unit" 
+`[3, 0, 0, 2, 0, 4]`, We can trap "3*2 units" of water between 3 and 2, "1 unit" 
 on top of bar 2 and "3 units" between 2 and 4. See below diagram also.
 
 ### Approach 1: Brute force

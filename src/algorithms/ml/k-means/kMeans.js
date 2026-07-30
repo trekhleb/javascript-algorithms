@@ -58,8 +58,8 @@ export default function KMeans(
 
     // Recalculate cluster centroid values via all dimensions of the points under it.
     for (let clusterIndex = 0; clusterIndex < k; clusterIndex += 1) {
-      // Reset cluster center coordinates since we need to recalculate them.
-      clusterCenters[clusterIndex] = Array(dataDim).fill(0);
+      // Sum of the coordinates of all the points assigned to the current cluster.
+      const centroidSums = Array(dataDim).fill(0);
       let clusterSize = 0;
       for (let dataIndex = 0; dataIndex < data.length; dataIndex += 1) {
         if (classes[dataIndex] === clusterIndex) {
@@ -67,15 +67,17 @@ export default function KMeans(
           clusterSize += 1;
           for (let dimensionIndex = 0; dimensionIndex < dataDim; dimensionIndex += 1) {
             // Add data point coordinates to the cluster center coordinates.
-            clusterCenters[clusterIndex][dimensionIndex] += data[dataIndex][dimensionIndex];
+            centroidSums[dimensionIndex] += data[dataIndex][dimensionIndex];
           }
         }
       }
-      // Calculate the average for each cluster center coordinate.
-      for (let dimensionIndex = 0; dimensionIndex < dataDim; dimensionIndex += 1) {
-        clusterCenters[clusterIndex][dimensionIndex] = parseFloat(Number(
-          clusterCenters[clusterIndex][dimensionIndex] / clusterSize,
-        ).toFixed(2));
+      // If the cluster is empty we keep its previous centroid.
+      // Otherwise averaging would result in a 0/0 = NaN centroid.
+      if (clusterSize > 0) {
+        // Calculate the average for each cluster center coordinate.
+        clusterCenters[clusterIndex] = centroidSums.map(
+          (coordinatesSum) => coordinatesSum / clusterSize,
+        );
       }
     }
   }

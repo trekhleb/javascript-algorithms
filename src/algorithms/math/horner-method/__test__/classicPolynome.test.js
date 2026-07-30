@@ -11,4 +11,13 @@ describe('classicPolynome', () => {
     expect(classicPolynome([0, 0, 2.77, 1.42, 2.3311], 1.35)).toBe(9.296425000000001);
     expect(classicPolynome([2, 0, 0, 5.757, 5.31412, 12.3213], 3.141)).toBe(697.2731167035034);
   });
+
+  it('should not mutate the coefficients array of the caller', () => {
+    const coefficients = [2, 4, 2, 5];
+
+    expect(classicPolynome(coefficients, 0.75)).toBe(9.59375);
+    // The second call with the same array must give the same result.
+    expect(classicPolynome(coefficients, 0.75)).toBe(9.59375);
+    expect(coefficients).toEqual([2, 4, 2, 5]);
+  });
 });

@@ -17,16 +17,17 @@ How to find `a` raised to the power `b`?
 We multiply `a` to itself, `b` times. That
 is, `a^b = a * a * a * ... * a` (`b` occurrences of `a`).
 
-This operation will take `O(n)` time since we need to do multiplication operation
-exactly `n` times.
+This operation will take `O(b)` time since we need to do the multiplication
+operation exactly `b - 1` times.
 
 ## Fast Power Algorithm
 
 Can we do better than naive algorithm does? Yes we may solve the task of
-powering in `O(log(n))` time.
+powering in `O(log(b))` time.
 
-The algorithm uses divide and conquer approach to compute power. Currently the
-algorithm work for two positive integers `X` and `Y`.
+The algorithm uses divide and conquer approach to compute power. The
+algorithm works for an integer base `X` and an integer power `Y`
+(negative powers are supported as well).
 
 The idea behind the algorithm is based on the fact that:
 
@@ -40,7 +41,13 @@ For **odd** `Y`:
 
 ```text
 X^Y = X^(Y//2) * X^(Y//2) * X
-where Y//2 is result of division of Y by 2 without reminder.
+where Y//2 is result of division of Y by 2 without remainder.
+```
+
+For **negative** `Y`:
+
+```text
+X^Y = 1 / X^(-Y)
 ```
 
 **For example**
@@ -59,10 +66,10 @@ it by saving it to some intermediate variable to avoid its duplicate calculation
 **Time Complexity**
 
 Since each iteration we split the power by half then we will call function
-recursively `log(n)` times. This the time complexity of the algorithm is reduced to:
+recursively `log(b)` times. Thus the time complexity of the algorithm is reduced to:
 
 ```text
-O(log(n))
+O(log(b))
 ```
 
 ## References

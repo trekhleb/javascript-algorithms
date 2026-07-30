@@ -66,4 +66,12 @@ describe('squareRoot', () => {
     expect(squareRoot(4.5, 10)).toBe(2.1213203436);
     expect(squareRoot(217.534, 10)).toBe(14.7490338667);
   });
+
+  it('should not hang for tolerances beyond the double precision limit', () => {
+    // The tolerances of >= 16 digits are not achievable with the 64-bit floats.
+    // The function must stop improving the approximation at some point
+    // instead of iterating forever.
+    expect(squareRoot(2, 17)).toBeCloseTo(1.4142135623730951, 15);
+    expect(squareRoot(5, 20)).toBeCloseTo(2.23606797749979, 14);
+  });
 });

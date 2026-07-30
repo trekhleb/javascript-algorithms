@@ -35,7 +35,10 @@ class LRUCache {
    */
   constructor(capacity) {
     this.capacity = capacity; // How many items to store in cache at max.
-    this.nodesMap = {}; // The quick links to each linked list node in cache.
+    // The quick links to each linked list node in cache. The prototype-less
+    // object is used so that inherited properties (i.e. 'constructor' or
+    // 'toString' keys) don't collide with the cached keys.
+    this.nodesMap = Object.create(null);
     this.size = 0; // The number of items that is currently stored in the cache.
     this.head = new LinkedListNode(); // The Head (first) linked list node.
     this.tail = new LinkedListNode(); // The Tail (last) linked list node.

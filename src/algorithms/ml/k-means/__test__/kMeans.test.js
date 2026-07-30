@@ -37,4 +37,15 @@ describe('kMeans', () => {
     const expectedCluster = [1, 1, 0];
     expect(KMeans(dataSet, k)).toEqual(expectedCluster);
   });
+
+  it('should assign valid cluster ids even when some cluster becomes empty', () => {
+    // The first two initial centroids are equal here, so one of the clusters
+    // becomes empty after the first assignment step. The empty cluster must
+    // keep its previous centroid instead of turning into a NaN centroid
+    // (which would make all the points fall into a non-existent cluster -1).
+    const classes = KMeans([[0], [0], [10]], 2);
+
+    expect(classes).not.toContain(-1);
+    expect(classes).toEqual([1, 1, 0]);
+  });
 });

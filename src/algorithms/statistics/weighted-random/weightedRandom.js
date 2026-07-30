@@ -41,8 +41,12 @@ export default function weightedRandom(items, weights) {
 
   // Picking the random item based on its weight.
   // The items with higher weight will be picked more often.
+  // The item with the index i "owns" the [cumulativeWeights[i - 1], cumulativeWeights[i])
+  // interval of the random numbers. The strict ">" comparison makes the interval of
+  // a zero-weight item empty, so such an item can never be picked (even when the
+  // random number is exactly 0).
   for (let itemIndex = 0; itemIndex < items.length; itemIndex += 1) {
-    if (cumulativeWeights[itemIndex] >= randomNumber) {
+    if (cumulativeWeights[itemIndex] > randomNumber) {
       return {
         item: items[itemIndex],
         index: itemIndex,

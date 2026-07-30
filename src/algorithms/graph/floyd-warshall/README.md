@@ -55,7 +55,7 @@ In the tables below `i` is row numbers and `j` is column numbers.
 | **1** | 0   | ∞   | −2  | ∞   |
 | **2** | 4   | 0   |  2  | ∞   |
 | **3** | ∞   | ∞   |  0  | 2   |
-| **4** | ∞   | −   |  ∞  | 0   |
+| **4** | ∞   | −1  |  ∞  | 0   |
 
 
 **k = 2**

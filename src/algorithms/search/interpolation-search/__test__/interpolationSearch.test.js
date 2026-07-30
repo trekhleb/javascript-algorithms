@@ -21,4 +21,18 @@ describe('interpolationSearch', () => {
     expect(interpolationSearch([1, 2, 3, 700, 800, 1200, 1300, 1400, 19000], 800)).toBe(4);
     expect(interpolationSearch([0, 10, 11, 12, 13, 14, 15], 10)).toBe(1);
   });
+
+  it('should not hang when seeking element above the maximum array value', () => {
+    // Used to infinitely loop since the interpolated index was landing
+    // out of array bounds and the search range was never shrinking.
+    expect(interpolationSearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 10)).toBe(-1);
+    expect(interpolationSearch([1, 2, 3, 4, 5, 6, 7, 8, 9], 0)).toBe(-1);
+  });
+
+  it('should not hang when searching in non-uniformly distributed array', () => {
+    // Used to infinitely loop since the search range was never shrinking.
+    expect(interpolationSearch([0, 5, 10, 17, 18], 16)).toBe(-1);
+    expect(interpolationSearch([0, 5, 10, 17, 18], 17)).toBe(3);
+    expect(interpolationSearch([0, 5, 10, 17, 18], 5)).toBe(1);
+  });
 });

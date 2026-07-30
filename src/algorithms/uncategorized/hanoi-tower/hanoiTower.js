@@ -14,6 +14,11 @@ function hanoiTowerRecursive({
   toPole,
   moveCallback,
 }) {
+  if (numberOfDiscs <= 0) {
+    // Base case with no discs — nothing to move.
+    return;
+  }
+
   if (numberOfDiscs === 1) {
     // Base case with just one disc.
     moveCallback(fromPole.peek(), fromPole.toArray(), toPole.toArray());

@@ -279,4 +279,19 @@ describe('LinkedList', () => {
     expect(linkedList.head.value).toBe(1);
     expect(linkedList.tail.value).toBe(3);
   });
+
+  it('should update the tail when inserting at the end of the list', () => {
+    const linkedList = new LinkedList();
+    linkedList.fromArray(['a', 'b', 'c']);
+
+    linkedList.insert('v', 3);
+
+    expect(linkedList.toString()).toBe('a,b,c,v');
+    expect(linkedList.tail.value).toBe('v');
+
+    // The following append must not discard the inserted node.
+    linkedList.append('w');
+    expect(linkedList.toString()).toBe('a,b,c,v,w');
+    expect(linkedList.tail.value).toBe('w');
+  });
 });

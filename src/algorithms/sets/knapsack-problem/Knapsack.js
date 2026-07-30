@@ -115,34 +115,24 @@ export default class Knapsack {
       }
     }
 
-    // Now let's trace back the knapsack matrix to see what items we're going to add
-    // to the knapsack.
+    // Now let's trace the knapsack matrix back to see what items we're going
+    // to add to the knapsack. If the max value in the current weight column
+    // differs from the max value for the previous item in the same column then
+    // it means that the current item HAS been added to the knapsack. In this
+    // case we need to subtract its weight and proceed to the reduced knapsack.
+    // Otherwise the current item has been skipped.
     let itemIndex = this.possibleItems.length - 1;
     let weightIndex = this.weightLimit;
 
-    while (itemIndex > 0) {
+    while (itemIndex >= 0) {
       const currentItem = this.possibleItems[itemIndex];
-      const prevItem = this.possibleItems[itemIndex - 1];
 
-      // Check if matrix value came from top (from previous item).
-      // In this case this would mean that we need to include previous item
-      // to the list of selected items.
-      if (
-        knapsackMatrix[itemIndex][weightIndex]
-        && knapsackMatrix[itemIndex][weightIndex] === knapsackMatrix[itemIndex - 1][weightIndex]
-      ) {
-        // Check if there are several items with the same weight but with the different values.
-        // We need to add highest item in the matrix that is possible to get the highest value.
-        const prevSumValue = knapsackMatrix[itemIndex - 1][weightIndex];
-        const prevPrevSumValue = knapsackMatrix[itemIndex - 2][weightIndex];
-        if (
-          !prevSumValue
-          || (prevSumValue && prevPrevSumValue !== prevSumValue)
-        ) {
-          this.selectedItems.push(prevItem);
-        }
-      } else if (knapsackMatrix[itemIndex - 1][weightIndex - currentItem.weight]) {
-        this.selectedItems.push(prevItem);
+      // For the very first item there is no previous row in the matrix, thus
+      // we're comparing its max value with zero (the empty knapsack value).
+      const prevItemMaxValue = itemIndex > 0 ? knapsackMatrix[itemIndex - 1][weightIndex] : 0;
+
+      if (knapsackMatrix[itemIndex][weightIndex] !== prevItemMaxValue) {
+        this.selectedItems.push(currentItem);
         weightIndex -= currentItem.weight;
       }
 
@@ -164,17 +154,21 @@ export default class Knapsack {
         const availableWeight = this.weightLimit - this.totalWeight;
         const maxPossibleItemsCount = Math.floor(availableWeight / currentItem.weight);
 
-        if (maxPossibleItemsCount > currentItem.itemsInStock) {
-          // If we have more items in stock then it is allowed to add
-          // let's add the maximum allowed number of them.
-          currentItem.quantity = currentItem.itemsInStock;
-        } else if (maxPossibleItemsCount) {
-          // In case if we don't have specified number of items in stock
-          // let's add only items we have in stock.
-          currentItem.quantity = maxPossibleItemsCount;
-        }
+        // If the item doesn't fit into the remaining knapsack space at all
+        // (maxPossibleItemsCount is zero) then we must not add it.
+        if (maxPossibleItemsCount) {
+          if (maxPossibleItemsCount > currentItem.itemsInStock) {
+            // If we have more items in stock then it is allowed to add
+            // let's add the maximum allowed number of them.
+            currentItem.quantity = currentItem.itemsInStock;
+          } else {
+            // In case if we don't have specified number of items in stock
+            // let's add only items we have in stock.
+            currentItem.quantity = maxPossibleItemsCount;
+          }
 
-        this.selectedItems.push(currentItem);
+          this.selectedItems.push(currentItem);
+        }
       }
     }
   }

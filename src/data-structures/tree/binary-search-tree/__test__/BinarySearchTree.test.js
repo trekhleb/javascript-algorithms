@@ -95,4 +95,38 @@ describe('BinarySearchTree', () => {
     expect(bst.toString()).toBe('-20,-10,4,6,10,20,25');
     expect(bst.root.height).toBe(3);
   });
+
+  it('should keep parent references consistent when removing a node with two children', () => {
+    const bst = new BinarySearchTree();
+    bst.insert(10);
+    bst.insert(20);
+    bst.insert(15);
+    bst.insert(25);
+
+    // Node 20 has two children — its value gets replaced, so it must
+    // keep its parent reference.
+    bst.remove(20);
+
+    expect(bst.toString()).toBe('10,15,25');
+    expect(bst.root.right.parent).toBe(bst.root);
+
+    // Removing the rest must properly detach the nodes.
+    bst.remove(15);
+    bst.remove(25);
+
+    expect(bst.toString()).toBe('10');
+    expect(bst.root.left).toBeNull();
+    expect(bst.root.right).toBeNull();
+  });
+
+  it('should allow to insert into the tree again after all nodes were removed', () => {
+    const bst = new BinarySearchTree();
+    bst.insert(10);
+    bst.remove(10);
+
+    bst.insert(20);
+
+    expect(bst.toString()).toBe('20');
+    expect(bst.root.value).toBe(20);
+  });
 });
