@@ -31,11 +31,12 @@ describe('detectUndirectedCycle', () => {
 
     graph.addEdge(edgeDE);
 
-    expect(detectUndirectedCycle(graph)).toEqual({
-      B: vertexC,
-      C: vertexD,
-      D: vertexE,
-      E: vertexB,
-    });
+    expect(detectUndirectedCycle(graph)).toEqual([
+      vertexB,
+      vertexC,
+      vertexD,
+      vertexE,
+      vertexB,
+    ]);
   });
 });

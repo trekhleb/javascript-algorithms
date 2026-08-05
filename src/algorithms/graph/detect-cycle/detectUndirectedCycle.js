@@ -30,19 +30,19 @@ export default function detectUndirectedCycle(graph) {
     },
     enterVertex: ({ currentVertex, previousVertex }) => {
       if (visitedVertices[currentVertex.getKey()]) {
-        // Compile cycle path based on parents of previous vertices.
-        cycle = {};
+        // Build an ordered cycle path array starting and ending at the repeated vertex.
+        const cyclePath = [currentVertex];
 
-        let currentCycleVertex = currentVertex;
         let previousCycleVertex = previousVertex;
 
         while (previousCycleVertex.getKey() !== currentVertex.getKey()) {
-          cycle[currentCycleVertex.getKey()] = previousCycleVertex;
-          currentCycleVertex = previousCycleVertex;
+          cyclePath.push(previousCycleVertex);
           previousCycleVertex = parents[previousCycleVertex.getKey()];
         }
 
-        cycle[currentCycleVertex.getKey()] = previousCycleVertex;
+        cyclePath.push(previousCycleVertex);
+
+        cycle = cyclePath;
       } else {
         // Add next vertex to visited set.
         visitedVertices[currentVertex.getKey()] = currentVertex;
