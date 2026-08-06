@@ -184,7 +184,12 @@ export default class RedBlackTree extends BinarySearchTree {
     parentNode.setRight(childLeftNode);
 
     // Put left-right node in place of left node.
+    // It sets previous grandParentNode.left.parent = null
+    // (previous grandParentNode.left is parentNode).
     grandParentNode.setLeft(childNode);
+
+    // Set correct parent of parentNode.
+    parentNode.parent = childNode;
 
     // Now we're ready to do left-left rotation.
     return this.leftLeftRotation(grandParentNode);
@@ -259,7 +264,12 @@ export default class RedBlackTree extends BinarySearchTree {
     parentNode.setLeft(childRightNode);
 
     // Put childNode node in place of parentNode.
+    // It sets previous grandParentNode.right.parent = null
+    // (previous grandParentNode.right is parentNode).
     grandParentNode.setRight(childNode);
+
+    // Set correct parent of parentNode.
+    parentNode.parent = childNode;
 
     // Now we're ready to do right-right rotation.
     return this.rightRightRotation(grandParentNode);
