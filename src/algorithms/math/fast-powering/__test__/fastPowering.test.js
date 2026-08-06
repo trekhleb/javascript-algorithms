@@ -19,5 +19,8 @@ describe('fastPowering', () => {
     expect(fastPowering(16, 16)).toBe(18446744073709552000);
     expect(fastPowering(7, 21)).toBe(558545864083284000);
     expect(fastPowering(100, 9)).toBe(1000000000000000000);
+    expect(fastPowering(5, -5)).toBe(0.0003200000000000002);
+    expect(fastPowering(-5, 5)).toBe(-3125);
+    expect(fastPowering(-5, -5)).toBe(-0.0003200000000000002);
   });
 });
