@@ -9,9 +9,12 @@ export default class AvlTree extends BinarySearchTree {
     super.insert(value);
 
     // Let's move up to the root and check balance factors along the way.
-    let currentNode = this.root.find(value);
+    let insertedNode = this.root.find(value);
+    let currentNode = insertedNode;
     while (currentNode) {
-      this.balance(currentNode);
+      if (this.balanceInsert(currentNode, insertedNode)) {
+        return;
+      }
       currentNode = currentNode.parent;
     }
   }
@@ -25,13 +28,42 @@ export default class AvlTree extends BinarySearchTree {
     super.remove(value);
 
     // Balance the tree starting from the root node.
-    this.balance(this.root);
+
+    let currentNode = this.root.find(value);
+    
+    while(currentNode) {
+      this.balanceRemove(currentNode);
+      currentNode = currentNode.parent;
+    }
+  }
+
+  /**
+   * @param {BinarySearchTreeNode} node
+   * @return {Boolean}
+   */
+  balanceInsert(node, insertedNode) {
+    if (node.balanceFactor > 1) {
+      if (insertedNode.value < node.value) {
+        this.rotateLeftLeft(node);
+      } else {
+        this.rotateLeftRight(node);
+      }
+      return true;
+    } else if (node.balanceFactor < -1) {
+      if (insertedNode.value > node.value) {
+        this.rotateRightRight(node);
+      } else {
+        this.rotateRightLeft(node);
+      }
+      return true;
+    }
+    return false;
   }
 
   /**
    * @param {BinarySearchTreeNode} node
    */
-  balance(node) {
+  balanceRemove(node) {
     // If balance factor is not OK then try to balance the node.
     if (node.balanceFactor > 1) {
       // Left rotation.
