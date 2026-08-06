@@ -223,7 +223,7 @@ end findMax
 inorder(root)
   Pre: root is the root node of the BST
   Post: the nodes in the BST have been visited in inorder
-  if root = ø
+  if root != ø
     inorder(root.left)
     yield root.value
     inorder(root.right)
@@ -237,7 +237,7 @@ end inorder
 preorder(root)
   Pre: root is the root node of the BST
   Post: the nodes in the BST have been visited in preorder
-  if root = ø
+  if root != ø
     yield root.value
     preorder(root.left)
     preorder(root.right)
@@ -251,7 +251,7 @@ end preorder
 postorder(root)
   Pre: root is the root node of the BST
   Post: the nodes in the BST have been visited in postorder
-  if root = ø
+  if root != ø
     postorder(root.left)
     postorder(root.right)
     yield root.value
