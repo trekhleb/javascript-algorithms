@@ -164,6 +164,75 @@ end ReverseTraversal
 
 O(n)
 
+
+### Examples
+Some of real live usages are listed below:
+
+  - Snake Game
+    You start the game with one node on the list which in thime and place is both the head and tail
+
+      [] <- (single node)
+
+    As the snake keeps eating those items are being added to the tail, and as such, becoming the tail for the list
+
+     (food)-> *  [] <-(snake)
+                /  \ 
+              head tail
+
+        [][] (snake has eaten and it grew by one)
+        /  \
+      head tail
+
+    And so on and so forth
+      (food)-> *  [][] <-(snake)
+                  /   \ 
+                head  tail
+
+          [][][] (snake has eaten and it grew by one)
+          /     \
+        head   tail
+
+
+
+      (food)-> *  [][][] <-(snake)
+                  /     \ 
+                head    tail
+
+          [][][][] (snake has eaten and it grew by one)
+          /       \
+        head     tail
+
+
+ - Web Browser History
+    Let's say you are confortably browsing the web on your computer, you are using your favorite browser, when you visit your first page your browser creates a single node list with the website you are looking at.
+
+    The value for the node would then be the link for that site, for example, Github
+
+            [ Github/javascript-algorithms ].  <- current website (tail and also head)
+
+    But then you decide to go to facebook on that tab, but your browser instead of forgetting where you've been keeps track of the last page by adding nodes to that list
+
+            [ Github/javascript-algorithms ].  <- (head)
+                        |
+            [ Facebook/your-profile  ] <- current website (tail)
+
+    As you keep visiting new websites on that tab the browser keeps track of it and will append it to the tail of the list
+    until you have something like this
+
+            [ Github/javascript-algorithms ].  <- (head)
+                        |
+            [ Facebook/your-profile  ] <- node
+                        |
+            [ Wikipedia/Pomodoro_Technique ] <- node
+                        |
+            [ Wikipedia/Life_hack ] <- node
+                        |
+            [ Whatsapp ] <- current website (tail)
+
+    This is a very good example of a double link list
+
+
+ 
 ## References
 
 - [Wikipedia](https://en.wikipedia.org/wiki/Linked_list)
