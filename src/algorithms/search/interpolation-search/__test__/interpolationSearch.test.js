@@ -20,5 +20,14 @@ describe('interpolationSearch', () => {
     expect(interpolationSearch([0, 2, 3, 700, 800, 1200, 1300, 1400, 1900], 1200)).toBe(5);
     expect(interpolationSearch([1, 2, 3, 700, 800, 1200, 1300, 1400, 19000], 800)).toBe(4);
     expect(interpolationSearch([0, 10, 11, 12, 13, 14, 15], 10)).toBe(1);
+    // add unit test define by using white-box testing with MCC coverage and ALL-DU coverage techniques
+    expect(interpolationSearch([4, 6, 20], 2)).toBe(-1);
+    expect(interpolationSearch([2, 7, 8, 15], 7)).toBe(1);
+    expect(interpolationSearch([4], 4)).toBe(0);
+    expect(interpolationSearch([4], 5)).toBe(-1);
+    expect(interpolationSearch([2, 7, 8, 15], 8)).toBe(2);
+    expect(interpolationSearch([2, 7, 8, 15, 19, 20, 21, 22], 20)).toBe(5);
+    expect(interpolationSearch([5], 5)).toBe(0);
+    expect(interpolationSearch([2, 5], 5)).toBe(1);
   });
 });
