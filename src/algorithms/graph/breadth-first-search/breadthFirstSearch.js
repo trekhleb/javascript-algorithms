@@ -32,6 +32,7 @@ function initCallbacks(callbacks = {}) {
         return false;
       };
     }
+    
   )();
 
   initiatedCallback.allowTraversal = callbacks.allowTraversal || allowTraversalCallback;
