@@ -14,13 +14,25 @@ export default class QuickSort extends Sort {
       return array;
     }
 
-    // Init left and right arrays.
+    // Init left, center, and right arrays.
     const leftArray = [];
     const rightArray = [];
+    const centerArray = [];
 
-    // Take the first element of array as a pivot.
-    const pivotElement = array.shift();
-    const centerArray = [pivotElement];
+    // Take the median element of first, mid, and last elements.
+    let pivotElement = array[0];
+    const mid = Math.floor(array.length / 2);
+    if ((this.comparator.lessThan(array[mid], array[array.length - 1])
+        && this.comparator.greaterThan(array[mid], array[0]))
+      || (this.comparator.greaterThan(array[mid], array[array.length - 1])
+        && this.comparator.lessThan(array[mid], array[0]))) {
+      pivotElement = array[mid];
+    } else if ((this.comparator.lessThan(array[array.length - 1], array[mid])
+        && this.comparator.greaterThan(array[array.length - 1], array[0]))
+      || (this.comparator.greaterThan(array[array.length - 1], array[mid])
+        && this.comparator.lessThan(array[array.length - 1], array[0]))) {
+      pivotElement = array[array.length - 1];
+    }
 
     // Split all array elements between left, center and right arrays.
     while (array.length) {
