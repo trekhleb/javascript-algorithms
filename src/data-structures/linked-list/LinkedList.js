@@ -90,6 +90,28 @@ export default class LinkedList {
 
   /**
    * @param {*} value
+   * @param {number} index
+   * @return {LinkedList}
+   */
+  setAtIndex(value, index) {
+    if (index < 0) {
+      return this;
+    }
+    let count = 0;
+    let currentNode = this.head;
+    while (currentNode) {
+      if (count === index) break;
+      currentNode = currentNode.next;
+      count += 1;
+    }
+    if (currentNode) {
+      currentNode.value = value;
+    }
+    return this;
+  }
+
+  /**
+   * @param {*} value
    * @return {LinkedListNode}
    */
   delete(value) {
@@ -129,6 +151,36 @@ export default class LinkedList {
   }
 
   /**
+   * @param {number} index
+   * @return {LinkedListNode}
+   */
+  deleteAtIndex(index) {
+    if (!this.head || index < 0) {
+      return null;
+    }
+    let deletedNode = null;
+    if (index === 0) {
+      deletedNode = this.head;
+      this.head = this.head.next;
+    } else {
+      let count = 1;
+      let currentNode = this.head;
+      while (currentNode) {
+        if (count === index) break;
+        currentNode = currentNode.next;
+        count += 1;
+      }
+      if (currentNode) {
+        deletedNode = currentNode.next;
+        if (deletedNode) {
+          currentNode.next = deletedNode.next;
+        }
+      }
+    }
+    return deletedNode;
+  }
+
+  /**
    * @param {Object} findParams
    * @param {*} findParams.value
    * @param {function} [findParams.callback]
@@ -156,6 +208,24 @@ export default class LinkedList {
     }
 
     return null;
+  }
+
+  /**
+   * @param {*} index
+   * @return {LinkedListNode}
+   */
+  findByIndex(index) {
+    if (!this.head || index < 0) {
+      return null;
+    }
+    let count = 0;
+    let currentNode = this.head;
+    while (currentNode) {
+      if (count === index) break;
+      currentNode = currentNode.next;
+      count += 1;
+    }
+    return currentNode;
   }
 
   /**
@@ -239,7 +309,9 @@ export default class LinkedList {
    * @return {string}
    */
   toString(callback) {
-    return this.toArray().map((node) => node.toString(callback)).toString();
+    return this.toArray()
+      .map((node) => node.toString(callback))
+      .toString();
   }
 
   /**
