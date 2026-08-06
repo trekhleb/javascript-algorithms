@@ -279,4 +279,17 @@ describe('LinkedList', () => {
     expect(linkedList.head.value).toBe(1);
     expect(linkedList.tail.value).toBe(3);
   });
+  
+  it('should be iterable', () => {
+    const linkedList = new LinkedList();
+    expect(typeof linkedList[Symbol.iterator]).toBe('function');
+
+    // Add test values to linked list.
+    linkedList
+      .append(1)
+      .append(2)
+      .append(3);
+
+    expect([...linkedList]).toEqual([1, 2, 3]);
+  });
 });
