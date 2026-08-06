@@ -9,7 +9,7 @@ import Comparator from '../../../utils/comparator/Comparator';
  * @return {number}
  */
 
-export default function binarySearch(sortedArray, seekElement, comparatorCallback) {
+export default const binarySearch = (sortedArray, seekElement, comparatorCallback) => {
   // Let's create comparator from the comparatorCallback function.
   // Comparator object will give us common comparison methods like equal() and lessThan().
   const comparator = new Comparator(comparatorCallback);
