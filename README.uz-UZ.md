@@ -300,7 +300,7 @@ _Big O notation_ algoritmlarni kirish hajmi oshgani sayin ularning ishlash vaqti
 
 ![Big O grafiklar](./assets/big-o-graph.png)
 
-Manba: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+Manba: [Big O Cheat Sheet](https://bigocheatsheet.com/).
 
 Quyida eng ko'p qo'llaniladigan Big O notatsiyalarining ro'yxati va ularning kirish ma'lumotlarining turli o'lchamlariga nisbatan ishlashini taqqoslash keltirilgan.
 

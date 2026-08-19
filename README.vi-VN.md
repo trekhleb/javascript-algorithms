@@ -276,7 +276,7 @@ Trên biểu đồ bên dưới, bạn có thể tìm thấy hầu hết các th
 
 ![Đồ thị O lớn](./assets/big-o-graph.png)
 
-Nguồn: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+Nguồn: [Big O Cheat Sheet](https://bigocheatsheet.com/).
 
 Dưới đây là danh sách một số ký hiệu O lớn thông dụng và so sánh với các kích thước khác nhau của dữ liệu đầu vào.
 

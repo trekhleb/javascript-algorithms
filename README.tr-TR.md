@@ -272,7 +272,7 @@ Aşağıdaki grafikte, Big O gösteriminde belirtilen algoritmaların en yaygın
 
 ![Big O graphs](./assets/big-o-graph.png)
 
-Kaynak: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+Kaynak: [Big O Cheat Sheet](https://bigocheatsheet.com/).
 
 Altta Big O notations ve farklı input boyutlarına karşın yapılmış performans karşılaştırması listelenmektedir.
 

@@ -186,7 +186,7 @@ npm test -- 'playground'
 
 ![Big O 表](./assets/big-o-graph.png)
 
-資料來源: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+資料來源: [Big O Cheat Sheet](https://bigocheatsheet.com/).
 
 下列列出幾個常用的 Big O 標記以及其不同大小資料量輸入後的運算效能比較。
 

@@ -273,7 +273,7 @@ npm test -- 'playground'
 
 ![Big O graphs](./assets/big-o-graph.png)
 
-مصدر: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+مصدر: [Big O Cheat Sheet](https://bigocheatsheet.com/).
 
 فيما يلي قائمة ببعض رموز Big O notation الأكثر استخدامًا ومقارنات أدائها مقابل أحجام مختلفة من بيانات الإدخال.
 

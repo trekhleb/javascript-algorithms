@@ -257,7 +257,7 @@ npm test -- 'playground'
 
 ![Big Oグラフ](./assets/big-o-graph.png)
 
-出典: [Big Oチートシート](http://bigocheatsheet.com/).
+出典: [Big Oチートシート](https://bigocheatsheet.com/).
 
 以下は、最も使用されているBig O表記のリストと、入力データのさまざまなサイズに対するパフォーマンス比較です。
 

@@ -250,7 +250,7 @@ Kolejność wzrastania algorytmów według Big O notacji.
 
 ![Big O grafy](./assets/big-o-graph.png)
 
-Źródło: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+Źródło: [Big O Cheat Sheet](https://bigocheatsheet.com/).
 
 Poniżej umieszczamy listę najbardziej używanych Big O notacji i ich porównania wydajności do róznych rozmiarów z wprowadzonych danych.
 

@@ -274,7 +274,7 @@ npm test -- 'playground'
 
 ![Big O graphs](./assets/big-o-graph.png)
 
-Источник: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+Источник: [Big O Cheat Sheet](https://bigocheatsheet.com/).
 
 Ниже представлены часто используемые обозначения в нотации «О» большое, а также сравнение их производительностей на различных размерах входных данных.
 
