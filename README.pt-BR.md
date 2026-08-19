@@ -258,7 +258,7 @@ A notação Big O é usada para classificar algoritmos de acordo com a forma com
 
 ![Notação Big-O](./assets/big-o-graph.png)
 
-Fonte: [Notação Big-O Dicas](http://bigocheatsheet.com/).
+Fonte: [Notação Big-O Dicas](https://bigocheatsheet.com/).
 
 Abaixo está a lista de algumas das notações Big O mais usadas e suas comparações de desempenho em relação aos diferentes tamanhos dos dados de entrada.
 

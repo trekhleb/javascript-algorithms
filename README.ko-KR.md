@@ -238,7 +238,7 @@ Big O 표기로 표시한 알고리즘의 증가 양상입니다.
 
 ![Big O graphs](./assets/big-o-graph.png)
 
-Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+Source: [Big O Cheat Sheet](https://bigocheatsheet.com/).
 
 아래는 가장 많이 사용되는 Big O 표기와 입력 데이터 크기에 따른 성능을 비교한 표입니다.
 

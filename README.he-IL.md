@@ -312,7 +312,7 @@ npm test -- 'playground'
 
 ![גרפי ה-O הגדול](./assets/big-o-graph.png)
 
-מקור: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+מקור: [Big O Cheat Sheet](https://bigocheatsheet.com/).
 
 להלן רשימה של כמה מסימוני ה-O הגדול הנפוצים ביותר והשוואות הביצועים שלהם מול גדלים שונים של נתוני קלט.
 

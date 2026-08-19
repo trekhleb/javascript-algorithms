@@ -253,7 +253,7 @@ Comparaison de la performance d'algorithmes en notation Grand O.
 
 ![Big O graphs](./assets/big-o-graph.png)
 
-Source: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+Source: [Big O Cheat Sheet](https://bigocheatsheet.com/).
 
 Voici la liste de certaines des notations Grand O les plus utilisées et de leurs
 comparaisons de performance suivant différentes tailles pour les données d'entrée.

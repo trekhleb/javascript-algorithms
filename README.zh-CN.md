@@ -251,7 +251,7 @@ npm test -- 'playground'
 
 ![Big O graphs](./assets/big-o-graph.png)
 
-源: [Big O Cheat Sheet](http://bigocheatsheet.com/).
+源: [Big O Cheat Sheet](https://bigocheatsheet.com/).
 
 以下是一些最常用的 大O标记法 列表以及它们与不同大小输入数据的性能比较。
 
