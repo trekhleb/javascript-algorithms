@@ -28,6 +28,13 @@ describe('kNN', () => {
     expect(inconsistent).toThrow('Matrices have different shapes');
   });
 
+  it('should throw an error on mismatched dataSet and labels lengths', () => {
+    const mismatched = () => {
+      kNN([[1, 1], [2, 2]], [1], [1, 1]);
+    };
+    expect(mismatched).toThrow('The number of dataSet points must match the number of labels');
+  });
+
   it('should find the nearest neighbour', () => {
     let dataSet;
     let labels;

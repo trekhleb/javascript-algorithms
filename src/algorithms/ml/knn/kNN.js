@@ -20,6 +20,10 @@ export default function kNN(
     throw new Error('Either dataSet or labels or toClassify were not set');
   }
 
+  if (dataSet.length !== labels.length) {
+    throw new Error('The number of dataSet points must match the number of labels');
+  }
+
   // Calculate distance from toClassify to each point for all dimensions in dataSet.
   // Store distance and point's label into distances list.
   const distances = [];
