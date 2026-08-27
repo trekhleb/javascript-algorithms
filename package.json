@@ -47,6 +47,11 @@
     "jest": "^30.2.0",
     "pngjs": "^7.0.0"
   },
+  "overrides": {
+    "@istanbuljs/load-nyc-config": {
+      "js-yaml": "^3.15.1"
+    }
+  },
   "engines": {
     "node": ">=22.0.0",
     "npm": ">=10.0.0"
