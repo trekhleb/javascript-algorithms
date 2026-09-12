@@ -1,6 +1,6 @@
 # جافا سكريبت خوارزميات  وهياكل البيانات
 
-[![Build Status](https://travis-ci.org/trekhleb/javascript-algorithms.svg?branch=master)](https://travis-ci.org/trekhleb/javascript-algorithms)
+[![CI](https://github.com/trekhleb/javascript-algorithms/actions/workflows/CI.yml/badge.svg?branch=master)](https://github.com/trekhleb/javascript-algorithms/actions/workflows/CI.yml)
 [![codecov](https://codecov.io/gh/trekhleb/javascript-algorithms/branch/master/graph/badge.svg)](https://codecov.io/gh/trekhleb/javascript-algorithms)
 
 تحتوي هذه المقالة على أمثلة عديدة تستند إلى الخوارزميات الشائعة وهياكل البيانات في الجافا سكريبت.
