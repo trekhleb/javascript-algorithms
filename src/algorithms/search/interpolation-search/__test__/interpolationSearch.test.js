@@ -21,4 +21,11 @@ describe('interpolationSearch', () => {
     expect(interpolationSearch([1, 2, 3, 700, 800, 1200, 1300, 1400, 19000], 800)).toBe(4);
     expect(interpolationSearch([0, 10, 11, 12, 13, 14, 15], 10)).toBe(1);
   });
+
+  it('should not loop forever when the seek element is missing and above part of the range', () => {
+    expect(interpolationSearch([2, 4, 8, 8, 10, 12, 18, 20, 20, 20, 22, 26, 26, 28], 24)).toBe(-1);
+    expect(interpolationSearch([1, 2, 3, 700, 800, 1200, 1300, 1400, 1900], 1500)).toBe(-1);
+    expect(interpolationSearch([1, 2, 3, 700, 800, 1200, 1300, 1400, 1900], 2000)).toBe(-1);
+    expect(interpolationSearch([1, 2, 3], 5)).toBe(-1);
+  });
 });
