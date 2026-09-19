@@ -47,6 +47,22 @@ describe('LinkedList', () => {
     expect(linkedList.toString()).toBe('1,4,2,3,10');
   });
 
+  it('should update the tail when inserting after the last node', () => {
+    const linkedList = new LinkedList();
+
+    linkedList.append(1).append(2);
+    linkedList.insert(3, 2);
+
+    expect(linkedList.tail.value).toBe(3);
+    expect(linkedList.toString()).toBe('1,2,3');
+
+    linkedList.append(4);
+
+    expect(linkedList.toString()).toBe('1,2,3,4');
+    expect(linkedList.deleteTail().value).toBe(4);
+    expect(linkedList.deleteTail().value).toBe(3);
+  });
+
   it('should delete node by value from linked list', () => {
     const linkedList = new LinkedList();
 
