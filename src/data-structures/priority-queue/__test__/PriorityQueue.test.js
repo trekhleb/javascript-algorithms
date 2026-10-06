@@ -121,4 +121,19 @@ describe('PriorityQueue', () => {
     expect(priorityQueue.hasValue(70)).toBe(false);
     expect(priorityQueue.hasValue(15)).toBe(true);
   });
+  it('should remove only the given item and keep items with the same priority', () => {
+    const priorityQueue = new PriorityQueue();
+
+    priorityQueue.add(10, 1);
+    priorityQueue.add(5, 1);
+    priorityQueue.add(100, 2);
+
+    priorityQueue.remove(10);
+
+    expect(priorityQueue.hasValue(10)).toBe(false);
+    expect(priorityQueue.hasValue(5)).toBe(true);
+    expect(priorityQueue.poll()).toBe(5);
+    expect(priorityQueue.poll()).toBe(100);
+    expect(priorityQueue.isEmpty()).toBe(true);
+  });
 });
