@@ -1,4 +1,5 @@
 import BinarySearchTree from '../BinarySearchTree';
+import BinarySearchTreeNode from '../BinarySearchTreeNode';
 
 describe('BinarySearchTree', () => {
   it('should create binary search tree', () => {
@@ -50,6 +51,28 @@ describe('BinarySearchTree', () => {
     const removed2 = bst.remove(20);
     expect(bst.toString()).toBe('10');
     expect(removed2).toBe(true);
+  });
+
+  it('should keep parent pointers consistent when removing a node with one child (issue #2102)', () => {
+    const root = new BinarySearchTreeNode(8);
+    root.insert(3);
+    root.insert(6);
+    root.remove(3);
+    root.remove(6);
+    expect(root.right).toBeNull();
+    expect(root.left).toBeNull();
+  });
+
+  it('should re-parent the surviving child via replaceChild (issue #1102)', () => {
+    const bst = new BinarySearchTree();
+    bst.insert(10);
+    bst.insert(5);
+    bst.insert(3);
+    const node5 = bst.root.left;
+    bst.remove(5);
+    expect(bst.root.left.value).toBe(3);
+    expect(bst.root.left.parent).toBe(bst.root);
+    expect(node5.parent).toBeNull();
   });
 
   it('should insert object values', () => {
