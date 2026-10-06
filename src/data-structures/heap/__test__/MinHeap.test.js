@@ -191,4 +191,20 @@ describe('MinHeap', () => {
     minHeap.remove(4);
     expect(minHeap.toString()).toBe('1,5,3,8,9,6,7');
   });
+  it('should heapify up when the item moved into the removed position is smaller than its parent', () => {
+    const minHeap = new MinHeap();
+
+    minHeap.add(1);
+    minHeap.add(5);
+    minHeap.add(2);
+    minHeap.add(6);
+    minHeap.add(7);
+    minHeap.add(3);
+    minHeap.add(4);
+
+    expect(minHeap.toString()).toBe('1,5,2,6,7,3,4');
+
+    minHeap.remove(6);
+    expect(minHeap.toString()).toBe('1,4,2,5,7,3');
+  });
 });
