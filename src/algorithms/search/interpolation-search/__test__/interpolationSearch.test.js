@@ -21,4 +21,11 @@ describe('interpolationSearch', () => {
     expect(interpolationSearch([1, 2, 3, 700, 800, 1200, 1300, 1400, 19000], 800)).toBe(4);
     expect(interpolationSearch([0, 10, 11, 12, 13, 14, 15], 10)).toBe(1);
   });
+
+  it('should not loop forever when the seek element is above part of the range', () => {
+    // Regression test: without the fix this call hangs forever.
+    expect(interpolationSearch([2, 4, 8, 8, 10, 12, 18, 20, 20, 20, 22, 26, 26, 28], 24)).toBe(-1);
+    expect(interpolationSearch([1, 2, 4, 8, 16, 32, 64, 128], 48)).toBe(-1);
+    expect(interpolationSearch([1, 3, 5, 7, 9], 8)).toBe(-1);
+  });
 });
