@@ -1,54 +1,59 @@
+(Sem assunto)
+teo machado<teobaldomachado22@gmail.com>
+Você
 {
-  "name": "javascript-algorithms-and-data-structures",
-  "version": "0.0.4",
-  "description": "Algorithms and data-structures implemented on JavaScript",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/trekhleb/javascript-algorithms.git"
-  },
-  "keywords": [
-    "computer-science",
-    "cs",
-    "algorithms",
-    "data-structures",
-    "javascript",
-    "algorithm",
-    "javascript-algorithms",
-    "sorting-algorithms",
-    "graph",
-    "tree",
-    "interview",
-    "interview-preparation"
-  ],
-  "author": "Oleksii Trekhleb (https://trekhleb.dev)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/trekhleb/javascript-algorithms/issues"
-  },
-  "homepage": "https://github.com/trekhleb/javascript-algorithms#readme",
-  "main": "index.js",
-  "scripts": {
-    "lint": "eslint ./src/**",
-    "test": "jest",
-    "coverage": "npm run test -- --coverage",
-    "ci": "npm run lint && npm run coverage",
-    "prepare": "husky"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.28.6",
-    "@babel/preset-env": "^7.29.0",
-    "@types/jest": "^30.0.0",
-    "eslint": "^8.57.1",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-jest": "^27.9.0",
-    "eslint-plugin-jsx-a11y": "^6.10.2",
-    "husky": "^9.1.7",
-    "jest": "^30.2.0",
-    "pngjs": "^7.0.0"
-  },
-  "engines": {
-    "node": ">=22.0.0",
-    "npm": ">=10.0.0"
-  }
+"name": "javascript-algorithms-and-data-structures",
+"version": "0.0.4",
+"description": "Algorithms and data structures implemented in JavaScript",
+"repository": {
+"type": "git",
+"url": "git+https://github.com/trekhleb/javascript-algorithms.git"
+},
+"keywords": [
+"computer-science",
+"cs",
+"algorithms",
+"data-structures",
+"javascript",
+"algorithm",
+"javascript-algorithms",
+"sorting-algorithms",
+"graph",
+"tree",
+"interview",
+"interview-preparation"
+],
+"author": "Oleksii Trekhleb (https://trekhleb.dev)",
+"license": "MIT",
+"bugs": {
+"url": "https://github.com/trekhleb/javascript-algorithms/issues"
+},
+"homepage": "https://github.com/trekhleb/javascript-algorithms#readme",
+"main": "index.js",
+"scripts": {
+"lint": "eslint "src/**/*.js"",
+"test": "jest",
+"test:watch": "jest --watch",
+"test:ci": "jest --ci --coverage --runInBand",
+"coverage": "jest --coverage",
+"ci": "npm run lint && npm run test:ci",
+"prepare": "husky"
+},
+"devDependencies": {
+"@babel/cli": "^7.28.6",
+"@babel/preset-env": "^7.29.0",
+"@types/jest": "^30.0.0",
+"eslint": "^8.57.1",
+"eslint-config-airbnb": "^19.0.4",
+"eslint-plugin-import": "^2.32.0",
+"eslint-plugin-jest": "^27.9.0",
+"eslint-plugin-jsx-a11y": "^6.10.2",
+"husky": "^9.1.7",
+"jest": "^30.2.0",
+"pngjs": "^7.0.0"
+},
+"engines": {
+"node": ">=22.0.0",
+"npm": ">=10.0.0"
 }
+} 
