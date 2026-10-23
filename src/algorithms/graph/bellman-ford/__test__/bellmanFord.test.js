@@ -4,6 +4,31 @@ import Graph from '../../../../data-structures/graph/Graph';
 import bellmanFord from '../bellmanFord';
 
 describe('bellmanFord', () => {
+  it('should stop relaxing a complete unit-weight graph after distances settle', () => {
+    const graph = new Graph(true);
+    const vertices = Array.from({ length: 12 }, (_, index) => new GraphVertex(`v${index}`));
+    let weightReads = 0;
+    vertices.forEach((start) => {
+      vertices.forEach((end) => {
+        if (start !== end) {
+          const edge = new GraphEdge(start, end, 1);
+          Object.defineProperty(edge, 'weight', {
+            get: () => {
+              weightReads += 1;
+              return 1;
+            },
+          });
+          graph.addEdge(edge);
+        }
+      });
+    });
+
+    const { distances } = bellmanFord(graph, vertices[0]);
+    expect(distances.v0).toBe(0);
+    vertices.slice(1).forEach((vertex) => expect(distances[vertex.getKey()]).toBe(1));
+    expect(weightReads).toBeLessThanOrEqual(2 * graph.getAllEdges().length);
+  });
+
   it('should find minimum paths to all vertices for undirected graph', () => {
     const vertexA = new GraphVertex('A');
     const vertexB = new GraphVertex('B');
