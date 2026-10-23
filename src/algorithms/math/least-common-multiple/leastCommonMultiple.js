@@ -7,5 +7,6 @@ import euclideanAlgorithm from '../euclidean-algorithm/euclideanAlgorithm';
  */
 
 export default function leastCommonMultiple(a, b) {
-  return ((a === 0) || (b === 0)) ? 0 : Math.abs(a * b) / euclideanAlgorithm(a, b);
+  // Divide first so a safe integer result does not require an unsafe intermediate product.
+  return ((a === 0) || (b === 0)) ? 0 : Math.abs((a / euclideanAlgorithm(a, b)) * b);
 }

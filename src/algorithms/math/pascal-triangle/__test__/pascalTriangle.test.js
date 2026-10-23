@@ -1,6 +1,18 @@
 import pascalTriangle from '../pascalTriangle';
 
 describe('pascalTriangle', () => {
+  it('should preserve safe integer coefficients when intermediate products are larger', () => {
+    expect(pascalTriangle(57)[22]).toBe(3489348548829780);
+    expect(pascalTriangle(56)[28]).toBe(7648690600760440);
+
+    // Build independent rows using Pascal's addition identity.
+    let expected = [1];
+    for (let row = 1; row <= 56; row += 1) {
+      expected = [1, ...expected.slice(1).map((value, i) => value + expected[i]), 1];
+      expect(pascalTriangle(row)).toEqual(expected);
+    }
+  });
+
   it('should calculate Pascal Triangle coefficients for specific line number', () => {
     expect(pascalTriangle(0)).toEqual([1]);
     expect(pascalTriangle(1)).toEqual([1, 1]);
