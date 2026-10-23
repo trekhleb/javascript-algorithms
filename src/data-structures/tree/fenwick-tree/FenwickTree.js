@@ -20,7 +20,7 @@ export default class FenwickTree {
    * @return {FenwickTree}
    */
   increase(position, value) {
-    if (position < 1 || position > this.arraySize) {
+    if (!Number.isInteger(position) || position < 1 || position > this.arraySize) {
       throw new Error('Position is out of allowed range');
     }
 
@@ -38,7 +38,7 @@ export default class FenwickTree {
    * @return {number}
    */
   query(position) {
-    if (position < 1 || position > this.arraySize) {
+    if (!Number.isInteger(position) || position < 1 || position > this.arraySize) {
       throw new Error('Position is out of allowed range');
     }
 
