@@ -1,6 +1,13 @@
 import euclideanAlgorithmIterative from '../euclideanAlgorithmIterative';
 
 describe('euclideanAlgorithmIterative', () => {
+  it('should handle widely separated safe integers', () => {
+    expect(euclideanAlgorithmIterative(Number.MAX_SAFE_INTEGER, 2)).toBe(1);
+    expect(euclideanAlgorithmIterative(2, Number.MAX_SAFE_INTEGER)).toBe(1);
+    expect(euclideanAlgorithmIterative(-Number.MAX_SAFE_INTEGER, 3)).toBe(1);
+    expect(euclideanAlgorithmIterative(2 ** 52, 2)).toBe(2);
+  });
+
   it('should calculate GCD iteratively', () => {
     expect(euclideanAlgorithmIterative(0, 0)).toBe(0);
     expect(euclideanAlgorithmIterative(2, 0)).toBe(2);

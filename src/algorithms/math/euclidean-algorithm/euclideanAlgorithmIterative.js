@@ -9,12 +9,10 @@ export default function euclideanAlgorithmIterative(originalA, originalB) {
   let a = Math.abs(originalA);
   let b = Math.abs(originalB);
 
-  // Subtract one number from another until both numbers would become the same.
-  // This will be out GCD. Also quit the loop if one of the numbers is zero.
-  while (a && b && a !== b) {
-    [a, b] = a > b ? [a - b, b] : [a, b - a];
+  // Each remainder replaces a whole sequence of repeated subtractions.
+  while (b !== 0) {
+    [a, b] = [b, a % b];
   }
 
-  // Return the number that is not equal to zero since the last subtraction (it will be a GCD).
-  return a || b;
+  return a;
 }

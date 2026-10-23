@@ -1,6 +1,15 @@
 import leastCommonMultiple from '../leastCommonMultiple';
 
 describe('leastCommonMultiple', () => {
+  it.each([
+    [549533988, 76324165],
+    [76324165, 549533988],
+    [-549533988, 76324165],
+    [549533988, -76324165],
+  ])('should avoid overflowing the intermediate product for %i and %i', (a, b) => {
+    expect(leastCommonMultiple(a, b)).toBe(2747669940);
+  });
+
   it('should find least common multiple', () => {
     expect(leastCommonMultiple(0, 0)).toBe(0);
     expect(leastCommonMultiple(1, 0)).toBe(0);
