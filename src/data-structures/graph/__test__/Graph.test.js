@@ -3,6 +3,52 @@ import GraphVertex from '../GraphVertex';
 import GraphEdge from '../GraphEdge';
 
 describe('Graph', () => {
+  it('should support vertex keys that match Object prototype properties', () => {
+    const graph = new Graph(true);
+    const keys = ['constructor', '__proto__', 'toString', 'hasOwnProperty'];
+    const vertices = keys.map((key) => new GraphVertex(key));
+
+    keys.forEach((key) => expect(graph.getVertexByKey(key)).toBeUndefined());
+    vertices.forEach((vertex) => graph.addVertex(vertex));
+    vertices.slice(1).forEach((vertex, index) => {
+      graph.addEdge(new GraphEdge(vertices[index], vertex, index + 1));
+    });
+
+    expect(graph.getAllVertices()).toEqual(vertices);
+    keys.forEach((key, index) => {
+      expect(graph.getVertexByKey(key)).toBe(vertices[index]);
+      expect(graph.getVerticesIndices()[key]).toBe(index);
+    });
+    expect(graph.toString()).toBe(keys.toString());
+    expect(graph.getAdjacencyMatrix()).toEqual([
+      [Infinity, 1, Infinity, Infinity],
+      [Infinity, Infinity, 2, Infinity],
+      [Infinity, Infinity, Infinity, 3],
+      [Infinity, Infinity, Infinity, Infinity],
+    ]);
+    expect(() => graph.addVertex(vertices[0])).toThrow('Vertex has already been added before');
+  });
+
+  it('should support edge keys that match Object prototype properties', () => {
+    ['constructor', '__proto__', 'toString', 'hasOwnProperty'].forEach((key) => {
+      const graph = new Graph();
+      const start = new GraphVertex('A');
+      const end = new GraphVertex('B');
+      const edge = new GraphEdge(start, end, 7, key);
+
+      expect(() => graph.deleteEdge(edge)).toThrow('Edge not found in graph');
+      graph.addEdge(edge);
+      expect(graph.getAllEdges()).toEqual([edge]);
+      expect(graph.findEdge(start, end)).toBe(edge);
+      expect(graph.getWeight()).toBe(7);
+      expect(() => graph.addEdge(edge)).toThrow('Edge has already been added before');
+      graph.deleteEdge(edge);
+      expect(graph.getAllEdges()).toEqual([]);
+      expect(graph.findEdge(start, end)).toBeNull();
+      expect(graph.findEdge(end, start)).toBeNull();
+    });
+  });
+
   it('should add vertices to graph', () => {
     const graph = new Graph();
 
