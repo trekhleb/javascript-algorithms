@@ -1,6 +1,28 @@
+import { runInNewContext } from 'vm';
 import FenwickTree from '../FenwickTree';
 
 describe('FenwickTree', () => {
+  it('should reject fractional queries without entering a nonterminating loop', () => {
+    const tree = new FenwickTree(5);
+    // Bound synchronous execution so a regression cannot hang the test runner.
+    expect(() => runInNewContext('tree.query(1.5)', { tree }, { timeout: 500 }))
+      .toThrow('Position is out of allowed range');
+  });
+
+  it.each([1.5, NaN])('should reject invalid update position %s without changing the tree', (position) => {
+    const tree = new FenwickTree(5);
+    expect(() => tree.increase(position, 7)).toThrow('Position is out of allowed range');
+    expect(tree.treeArray).toEqual([0, 0, 0, 0, 0, 0]);
+  });
+
+  it('should reject NaN query bounds instead of returning a misleading sum', () => {
+    const tree = new FenwickTree(5);
+    tree.increase(1, 7);
+    expect(() => tree.query(NaN)).toThrow('Position is out of allowed range');
+    expect(() => tree.queryRange(NaN, 3)).toThrow('Position is out of allowed range');
+    expect(() => tree.queryRange(1, NaN)).toThrow('Position is out of allowed range');
+  });
+
   it('should create empty fenwick tree of correct size', () => {
     const tree1 = new FenwickTree(5);
     expect(tree1.treeArray.length).toBe(5 + 1);
