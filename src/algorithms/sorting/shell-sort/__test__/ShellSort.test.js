@@ -8,12 +8,23 @@ import {
 } from '../../SortTester';
 
 // Complexity constants.
-const SORTED_ARRAY_VISITING_COUNT = 320;
-const NOT_SORTED_ARRAY_VISITING_COUNT = 320;
-const REVERSE_SORTED_ARRAY_VISITING_COUNT = 320;
-const EQUAL_ARRAY_VISITING_COUNT = 320;
+const SORTED_ARRAY_VISITING_COUNT = 62;
+const NOT_SORTED_ARRAY_VISITING_COUNT = 87;
+const REVERSE_SORTED_ARRAY_VISITING_COUNT = 80;
+const EQUAL_ARRAY_VISITING_COUNT = 62;
 
 describe('ShellSort', () => {
+  it('should stop traversing an ordered gap subsequence', () => {
+    const input = Array.from({ length: 4000 }, (_, index) => index);
+    const visitingCallback = jest.fn();
+    const sorter = new ShellSort({ visitingCallback });
+
+    expect(sorter.sort(input)).toEqual(input);
+    expect(visitingCallback.mock.calls.length).toBeLessThanOrEqual(
+      input.length * Math.ceil(Math.log2(input.length)),
+    );
+  });
+
   it('should sort array', () => {
     SortTester.testSort(ShellSort);
   });
