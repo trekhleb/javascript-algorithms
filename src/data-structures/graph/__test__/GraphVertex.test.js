@@ -2,6 +2,26 @@ import GraphVertex from '../GraphVertex';
 import GraphEdge from '../GraphEdge';
 
 describe('GraphVertex', () => {
+  it('should distinguish self-loops from edges to other vertices', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeBA = new GraphEdge(vertexB, vertexA);
+    const loop = new GraphEdge(vertexA, vertexA);
+
+    vertexA.addEdge(edgeAB).addEdge(edgeBA);
+    expect(vertexA.findEdge(vertexA)).toBeNull();
+    expect(vertexA.hasNeighbor(vertexA)).toBe(false);
+
+    vertexA.addEdge(loop);
+    expect(vertexA.findEdge(vertexA)).toBe(loop);
+    expect(vertexA.hasNeighbor(vertexA)).toBe(true);
+    expect(vertexA.findEdge(vertexB)).toBe(edgeAB);
+    vertexA.deleteEdge(edgeAB);
+    expect(vertexA.findEdge(vertexB)).toBe(edgeBA);
+    expect(vertexA.hasNeighbor(vertexB)).toBe(true);
+  });
+
   it('should throw an error when trying to create vertex without value', () => {
     let vertex = null;
 

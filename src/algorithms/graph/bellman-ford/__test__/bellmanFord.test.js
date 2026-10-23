@@ -4,6 +4,16 @@ import Graph from '../../../../data-structures/graph/Graph';
 import bellmanFord from '../bellmanFord';
 
 describe('bellmanFord', () => {
+  it('should not use another edge weight when relaxing a self-loop', () => {
+    const graph = new Graph(true);
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    graph.addEdge(new GraphEdge(vertexA, vertexB, -3));
+    graph.addEdge(new GraphEdge(vertexA, vertexA, 9));
+
+    expect(bellmanFord(graph, vertexA).distances).toEqual({ A: 0, B: -3 });
+  });
+
   it('should find minimum paths to all vertices for undirected graph', () => {
     const vertexA = new GraphVertex('A');
     const vertexB = new GraphVertex('B');

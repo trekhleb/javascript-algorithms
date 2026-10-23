@@ -3,6 +3,18 @@ import GraphVertex from '../GraphVertex';
 import GraphEdge from '../GraphEdge';
 
 describe('Graph', () => {
+  it('should use the self-loop weight in the adjacency matrix', () => {
+    const graph = new Graph();
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const loop = new GraphEdge(vertexA, vertexA, 5);
+    graph.addEdge(new GraphEdge(vertexA, vertexB, 2));
+    expect(graph.findEdge(vertexA, vertexA)).toBeNull();
+    graph.addEdge(loop);
+    expect(graph.findEdge(vertexA, vertexA)).toBe(loop);
+    expect(graph.getAdjacencyMatrix()).toEqual([[5, 2], [2, Infinity]]);
+  });
+
   it('should add vertices to graph', () => {
     const graph = new Graph();
 
