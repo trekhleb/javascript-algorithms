@@ -1,7 +1,7 @@
 {
   "name": "javascript-algorithms-and-data-structures",
   "version": "0.0.4",
-  "description": "Algorithms and data-structures implemented on JavaScript",
+  "description": "Algorithms and data structures implemented in JavaScript",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/trekhleb/javascript-algorithms.git"
@@ -28,10 +28,12 @@
   "homepage": "https://github.com/trekhleb/javascript-algorithms#readme",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ./src/**",
+    "lint": "eslint \"src/**/*.js\"",
     "test": "jest",
-    "coverage": "npm run test -- --coverage",
-    "ci": "npm run lint && npm run coverage",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --ci --coverage --runInBand",
+    "coverage": "jest --coverage",
+    "ci": "npm run lint && npm run test:ci",
     "prepare": "husky"
   },
   "devDependencies": {
