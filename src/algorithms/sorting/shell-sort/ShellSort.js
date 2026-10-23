@@ -24,6 +24,9 @@ export default class ShellSort extends Sort {
             const tmp = array[currentIndex];
             array[currentIndex] = array[gapShiftedIndex];
             array[gapShiftedIndex] = tmp;
+          } else {
+            // Earlier elements in this gap subsequence are already ordered.
+            break;
           }
 
           gapShiftedIndex = currentIndex;
