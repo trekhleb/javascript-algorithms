@@ -3,8 +3,8 @@ export default class Graph {
    * @param {boolean} isDirected
    */
   constructor(isDirected = false) {
-    this.vertices = {};
-    this.edges = {};
+    this.vertices = Object.create(null);
+    this.edges = Object.create(null);
     this.isDirected = isDirected;
   }
 
@@ -167,7 +167,7 @@ export default class Graph {
    * @return {object}
    */
   getVerticesIndices() {
-    const verticesIndices = {};
+    const verticesIndices = Object.create(null);
     this.getAllVertices().forEach((vertex, index) => {
       verticesIndices[vertex.getKey()] = index;
     });
