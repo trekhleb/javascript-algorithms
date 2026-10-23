@@ -62,6 +62,26 @@ describe('Trie', () => {
     expect(trie.doesWordExist('cart')).toBe(false);
   });
 
+  it('should delete words containing supplementary Unicode characters', () => {
+    const trie = new Trie();
+    const words = ['😀', '😀a', '😀b', 'a😀', 'a😀b', '𐐀'];
+    words.forEach((word) => trie.addWord(word));
+
+    expect(trie.deleteWord('😀c')).toBe(trie);
+    words.forEach((word) => expect(trie.doesWordExist(word)).toBe(true));
+
+    words.forEach((word, index) => {
+      expect(trie.deleteWord(word)).toBe(trie);
+      words.slice(0, index + 1).forEach((deleted) => {
+        expect(trie.doesWordExist(deleted)).toBe(false);
+      });
+      words.slice(index + 1).forEach((remaining) => {
+        expect(trie.doesWordExist(remaining)).toBe(true);
+      });
+    });
+    expect(trie.head.suggestChildren()).toEqual([]);
+  });
+
   it('should suggests next characters', () => {
     const trie = new Trie();
 
