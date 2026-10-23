@@ -1,5 +1,5 @@
 /**
- * Multiply to unsigned numbers using bitwise operator.
+ * Multiply two unsigned 32-bit integers using bitwise operations.
  *
  * The main idea of bitwise multiplication is that every number may be split
  * to the sum of powers of two:
@@ -10,7 +10,8 @@
  *
  * x * 19 = x * 2^4 + x * 2^1 + x * 2^0
  *
- * Now we need to remember that (x * 2^4) is equivalent of shifting x left by 4 bits (x << 4).
+ * Doubling x advances to the next power of two. Use numeric addition for this
+ * step because JavaScript's left shift truncates the result to a signed 32-bit integer.
  *
  * @param {number} number1
  * @param {number} number2
@@ -22,21 +23,19 @@ export default function multiplyUnsigned(number1, number2) {
   // Let's treat number2 as a multiplier for the number1.
   let multiplier = number2;
 
-  // Multiplier current bit index.
-  let bitIndex = 0;
+  // Value of number1 multiplied by the current power of two.
+  let multiplicand = number1;
 
   // Go through all bits of number2.
   while (multiplier !== 0) {
     // Check if current multiplier bit is set.
     if (multiplier & 1) {
-      // In case if multiplier's bit at position bitIndex is set
-      // it would mean that we need to multiply number1 by the power
-      // of bit with index bitIndex and then add it to the result.
-      result += (number1 << bitIndex);
+      result += multiplicand;
     }
 
-    bitIndex += 1;
-    multiplier >>= 1;
+    multiplicand += multiplicand;
+    // Zero-fill the high bit so unsigned values eventually reach zero.
+    multiplier >>>= 1;
   }
 
   return result;
