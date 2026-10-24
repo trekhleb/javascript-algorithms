@@ -4,6 +4,38 @@ import Graph from '../../../../data-structures/graph/Graph';
 import floydWarshall from '../floydWarshall';
 
 describe('floydWarshall', () => {
+  it.each([false, true])('should reconstruct paths through a multi-edge suffix (directed: %s)', (directed) => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+    const graph = new Graph(directed);
+
+    // Discover D -> B -> C before considering D as an intermediate vertex.
+    [vertexB, vertexC, vertexA, vertexD].forEach((vertex) => graph.addVertex(vertex));
+    graph
+      .addEdge(new GraphEdge(vertexA, vertexD, 2))
+      .addEdge(new GraphEdge(vertexD, vertexB, 3))
+      .addEdge(new GraphEdge(vertexB, vertexC, 4));
+
+    const { distances, nextVertices } = floydWarshall(graph);
+    const indices = graph.getVerticesIndices();
+    expect(distances[indices.A][indices.C]).toBe(9);
+    expect(nextVertices[indices.A][indices.C]).toBe(vertexB);
+
+    const path = [vertexC];
+    let weight = 0;
+    while (path[0] !== vertexA && path.length <= graph.getAllVertices().length) {
+      const previous = nextVertices[indices.A][indices[path[0].getKey()]];
+      const edge = graph.findEdge(previous, path[0]);
+      expect(edge).toBeDefined();
+      weight += edge.weight;
+      path.unshift(previous);
+    }
+    expect(path).toEqual([vertexA, vertexD, vertexB, vertexC]);
+    expect(weight).toBe(distances[indices.A][indices.C]);
+  });
+
   it('should find minimum paths to all vertices for undirected graph', () => {
     const vertexA = new GraphVertex('A');
     const vertexB = new GraphVertex('B');
@@ -212,8 +244,13 @@ describe('floydWarshall', () => {
     expect(nextVertices[vertexFIndex][vertexFIndex]).toBe(null);
     expect(nextVertices[vertexAIndex][vertexBIndex]).toBe(vertexC);
     expect(nextVertices[vertexAIndex][vertexCIndex]).toBe(vertexA);
-    expect(nextVertices[vertexFIndex][vertexBIndex]).toBe(vertexE);
-    expect(nextVertices[vertexEIndex][vertexBIndex]).toBe(vertexD);
+    // The shortest F -> B path is F -> E -> D -> A -> C -> B.
+    expect(nextVertices[vertexFIndex][vertexBIndex]).toBe(vertexC);
+    expect(nextVertices[vertexFIndex][vertexCIndex]).toBe(vertexA);
+    expect(nextVertices[vertexFIndex][vertexAIndex]).toBe(vertexD);
+    expect(nextVertices[vertexFIndex][vertexDIndex]).toBe(vertexE);
+    expect(nextVertices[vertexFIndex][vertexEIndex]).toBe(vertexF);
+    expect(nextVertices[vertexEIndex][vertexBIndex]).toBe(vertexC);
     expect(nextVertices[vertexDIndex][vertexBIndex]).toBe(vertexC);
     expect(nextVertices[vertexCIndex][vertexBIndex]).toBe(vertexC);
   });
