@@ -1,6 +1,22 @@
 import BinaryTreeNode from '../BinaryTreeNode';
 
 describe('BinaryTreeNode', () => {
+  it.each(['setLeft', 'setRight'])('should preserve a reparented child during %s', (setter) => {
+    const previousParent = new BinaryTreeNode(1);
+    const nextParent = new BinaryTreeNode(2);
+    const child = new BinaryTreeNode(3);
+    const replacement = new BinaryTreeNode(4);
+
+    previousParent[setter](child);
+    nextParent[setter](child);
+    previousParent[setter](replacement);
+
+    expect(child.parent).toBe(nextParent);
+    expect(replacement.parent).toBe(previousParent);
+    previousParent[setter](null);
+    expect(replacement.parent).toBeNull();
+  });
+
   it('should create node', () => {
     const node = new BinaryTreeNode();
 
