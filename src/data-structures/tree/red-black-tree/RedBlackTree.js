@@ -44,8 +44,9 @@ export default class RedBlackTree extends BinarySearchTree {
    * @param {BinarySearchTreeNode} node
    */
   balance(node) {
-    // If it is a root node then nothing to balance here.
-    if (this.nodeComparator.equal(node, this.root)) {
+    // Only a red node can violate the rule against adjacent red nodes.
+    // A black subtree root produced by a rotation needs no further balancing.
+    if (this.nodeComparator.equal(node, this.root) || this.isNodeBlack(node)) {
       return;
     }
 
