@@ -24,6 +24,16 @@ describe('weightedRandom', () => {
     expect(weightedRandom(['a', 'b', 'c'], [1, 1, 0])).not.toEqual({ index: 2, item: 'c' });
   });
 
+  it('should not pick zero-weight items even when the random number is zero', () => {
+    const mathRandomSpy = jest.spyOn(Math, 'random').mockImplementation(() => 0);
+
+    // Without the strict comparison the leading zero-weight item 'a' would be
+    // picked here since its cumulative weight (0) equals the random number (0).
+    expect(weightedRandom(['a', 'b', 'c'], [0, 0.2, 0.8])).toEqual({ index: 1, item: 'b' });
+
+    mathRandomSpy.mockRestore();
+  });
+
   it('should correctly do random selection based on wights', () => {
     // Number of times we're going to select the random items based on their weights.
     const ATTEMPTS_NUM = 1000;

@@ -18,7 +18,7 @@ with the largest sum is `4, −1, 2, 1`, with sum `6`.
 ## Solutions
 
 - Brute Force solution `O(n^2)`: [bfMaximumSubarray.js](./bfMaximumSubarray.js)
-- Divide and Conquer solution `O(n^2)`: [dcMaximumSubarraySum.js](./dcMaximumSubarraySum.js)
+- Recursive (pick / don't pick) solution `O(n^2)`, often referred to as "Divide and Conquer": [dcMaximumSubarraySum.js](./dcMaximumSubarraySum.js)
 - Dynamic Programming solution `O(n)`: [dpMaximumSubarray.js](./dpMaximumSubarray.js)
 
 ## References

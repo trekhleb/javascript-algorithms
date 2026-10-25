@@ -7,7 +7,8 @@
  * @return {number}
  */
 export default function classicPolynome(coefficients, xVal) {
-  return coefficients.reverse().reduce(
+  // Reverse a copy of the coefficients so the caller's array isn't mutated.
+  return [...coefficients].reverse().reduce(
     (accumulator, currentCoefficient, index) => {
       return accumulator + currentCoefficient * (xVal ** index);
     },

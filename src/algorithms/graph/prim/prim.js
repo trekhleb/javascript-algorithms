@@ -69,5 +69,11 @@ export default function prim(graph) {
     }
   }
 
+  // If some of the vertices haven't been visited then the graph is disconnected
+  // and it is not possible to build the spanning tree that includes all vertices.
+  if (Object.keys(visitedVertices).length !== graph.getAllVertices().length) {
+    throw new Error('Prim\'s algorithm works only for connected graphs');
+  }
+
   return minimumSpanningTree;
 }

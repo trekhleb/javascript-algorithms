@@ -8,6 +8,12 @@
  */
 const peakvalleyBestTimeToBuySellStocks = (prices, visit = () => {}) => {
   visit();
+
+  // There is no way to make a profit out of an empty price list.
+  if (!prices.length) {
+    return 0;
+  }
+
   let profit = 0;
   let low = prices[0];
   let high = prices[0];

@@ -18,6 +18,11 @@ export default class PriorityQueue extends MinHeap {
 
   /**
    * Add item to the priority queue.
+   *
+   * Note that the priorities are keyed by the item value, so all equal
+   * items share one priority: adding an already-queued value with a new
+   * priority re-prioritizes every queued instance of that value.
+   *
    * @param {*} item - item we're going to add to the queue.
    * @param {number} [priority] - items priority.
    * @return {PriorityQueue}

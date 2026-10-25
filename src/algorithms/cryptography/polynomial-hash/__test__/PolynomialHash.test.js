@@ -56,4 +56,31 @@ describe('PolynomialHash', () => {
     // @TODO: Provide Unicode support.
     expect(polynomialHash.hash('\u{20000}')).toBe(92);
   });
+
+  it('should roll hash by chars in constant time', () => {
+    const polynomialHash = new PolynomialHash({ base: 79, modulus: 101 });
+    const text = Array.from('Lorem \u{20000} ipsum dolor sit amet 耀 consectetur');
+    const frameSize = 7;
+
+    let previousHash = polynomialHash.hash(text.slice(0, frameSize).join(''));
+    const multiplierSpy = jest.spyOn(polynomialHash, 'getHighestPowerMultiplier');
+
+    for (let frameShift = 1; frameShift <= (text.length - frameSize); frameShift += 1) {
+      const currentWord = text.slice(frameShift, frameShift + frameSize).join('');
+      const currentRollingHash = polynomialHash.rollChar(
+        previousHash,
+        text[frameShift - 1],
+        text[frameShift + frameSize - 1],
+        frameSize,
+      );
+
+      expect(currentRollingHash).toBe(polynomialHash.hash(currentWord));
+
+      previousHash = currentRollingHash;
+    }
+
+    // The multiplier is calculated once and then taken from the cache.
+    expect(polynomialHash.multiplierWordLength).toBe(frameSize);
+    expect(multiplierSpy).toHaveBeenCalledTimes(text.length - frameSize);
+  });
 });

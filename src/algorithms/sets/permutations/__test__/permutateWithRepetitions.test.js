@@ -1,6 +1,12 @@
 import permutateWithRepetitions from '../permutateWithRepetitions';
 
 describe('permutateWithRepetitions', () => {
+  it('should permutate empty set', () => {
+    // The only permutation of an empty set is the empty permutation.
+    expect(permutateWithRepetitions([])).toEqual([[]]);
+    expect(permutateWithRepetitions(['A', 'B'], 0)).toEqual([[]]);
+  });
+
   it('should permutate string with repetition', () => {
     const permutations1 = permutateWithRepetitions(['A']);
     expect(permutations1).toEqual([

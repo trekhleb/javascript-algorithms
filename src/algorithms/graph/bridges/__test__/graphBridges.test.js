@@ -200,4 +200,35 @@ describe('graphBridges', () => {
     expect(bridges.length).toBe(1);
     expect(bridges[0].getKey()).toBe(edgeCD.getKey());
   });
+
+  it('should find bridges in all components of disconnected graph', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+    const vertexE = new GraphVertex('E');
+
+    // First component "A - B" consists of one bridge.
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+
+    // Second component "C - D - E" consists of two more bridges.
+    const edgeCD = new GraphEdge(vertexC, vertexD);
+    const edgeDE = new GraphEdge(vertexD, vertexE);
+
+    const graph = new Graph();
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeCD)
+      .addEdge(edgeDE);
+
+    const bridges = Object.values(graphBridges(graph));
+
+    expect(bridges.length).toBe(3);
+    expect(bridges.map((bridge) => bridge.getKey()).sort()).toEqual([
+      edgeAB.getKey(),
+      edgeCD.getKey(),
+      edgeDE.getKey(),
+    ].sort());
+  });
 });

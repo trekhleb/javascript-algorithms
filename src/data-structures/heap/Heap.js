@@ -169,10 +169,12 @@ export default class Heap {
 
         // If there is no parent or parent is in correct order with the node
         // we're going to delete then heapify down. Otherwise heapify up.
+        // Check the parent existence by index (and not by the item truthiness)
+        // since the parent item value may be falsy (i.e. 0 or an empty string).
         if (
           this.hasLeftChild(indexToRemove)
           && (
-            !parentItem
+            !this.hasParent(indexToRemove)
             || this.pairIsInCorrectOrder(parentItem, this.heapContainer[indexToRemove])
           )
         ) {

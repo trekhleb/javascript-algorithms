@@ -88,4 +88,29 @@ describe('prim', () => {
     expect(minimumSpanningTree.getAllEdges().length).toBe(graph.getAllVertices().length - 1);
     expect(minimumSpanningTree.toString()).toBe('A,B,C,D');
   });
+
+  it('should fire an error for disconnected graph', () => {
+    function applyPrimToDisconnectedGraph() {
+      const vertexA = new GraphVertex('A');
+      const vertexB = new GraphVertex('B');
+      const vertexC = new GraphVertex('C');
+      const vertexD = new GraphVertex('D');
+
+      // Two disconnected components: "A - B" and "C - D".
+      const edgeAB = new GraphEdge(vertexA, vertexB, 1);
+      const edgeCD = new GraphEdge(vertexC, vertexD, 2);
+
+      const graph = new Graph();
+
+      graph
+        .addEdge(edgeAB)
+        .addEdge(edgeCD);
+
+      prim(graph);
+    }
+
+    expect(applyPrimToDisconnectedGraph).toThrow(
+      'Prim\'s algorithm works only for connected graphs',
+    );
+  });
 });

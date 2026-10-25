@@ -114,4 +114,14 @@ describe('HashTable', () => {
 
     expect(hashTable.getValues()).toEqual(['one', 'two', 'three']);
   });
+
+  it('should track special object keys in the keys registry', () => {
+    const hashTable = new HashTable();
+
+    hashTable.set('__proto__', 'x');
+
+    expect(hashTable.get('__proto__')).toBe('x');
+    expect(hashTable.has('__proto__')).toBe(true);
+    expect(hashTable.getKeys()).toEqual(['__proto__']);
+  });
 });

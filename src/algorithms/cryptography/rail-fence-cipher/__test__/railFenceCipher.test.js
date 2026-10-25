@@ -40,4 +40,12 @@ describe('railFenceCipher', () => {
       'THEYAREATTACKINGFROMTHENORTH',
     );
   });
+
+  it('leaves the message unchanged when there is a single rail', () => {
+    // A single-rail fence can't zig-zag, so the cipher is the identity.
+    expect(encodeRailFenceCipher('abc', 1)).toBe('abc');
+    expect(decodeRailFenceCipher('abc', 1)).toBe('abc');
+    expect(encodeRailFenceCipher('', 1)).toBe('');
+    expect(decodeRailFenceCipher('', 1)).toBe('');
+  });
 });

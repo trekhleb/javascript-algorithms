@@ -98,4 +98,10 @@ describe('SegmentTree', () => {
     expect(segmentTree.rangeQuery(4, 5)).toBe(3);
     expect(segmentTree.rangeQuery(3, 3)).toBe(0);
   });
+
+  it('should build an empty tree for an empty input array', () => {
+    const segmentTree = new SegmentTree([], Math.min, Infinity);
+
+    expect(segmentTree.segmentTree).toEqual([]);
+  });
 });

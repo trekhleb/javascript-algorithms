@@ -39,7 +39,9 @@ export default class PolynomialHash {
    * Recalculates the hash representation of a word so that it isn't
    * necessary to traverse the whole word again.
    *
-   * Time complexity: O(1).
+   * Time complexity: O(word.length) because the words have to be split into
+   * code points to find their first/last characters and length. Use rollChar()
+   * to get O(1) time when these values are already known.
    *
    * @param {number} prevHash
    * @param {string} prevWord
@@ -47,16 +49,39 @@ export default class PolynomialHash {
    * @return {number}
    */
   roll(prevHash, prevWord, newWord) {
+    // Use code points (and not UTF-16 code units) to be consistent with
+    // the hash() method and to support surrogate pairs (astral symbols).
+    const prevWordChars = Array.from(prevWord);
+    const newWordChars = Array.from(newWord);
+
+    return this.rollChar(
+      prevHash,
+      prevWordChars[0],
+      newWordChars[newWordChars.length - 1],
+      prevWordChars.length,
+    );
+  }
+
+  /**
+   * Function that creates hash representation of the word based on previous
+   * word hash value, the character that leaves the frame and the character
+   * that enters the frame.
+   *
+   * Time complexity: O(1) (amortized, since the base^(wordLength - 1) multiplier
+   * is calculated only once per word length).
+   *
+   * @param {number} prevHash
+   * @param {string} removedChar - The first character of the previous word.
+   * @param {string} addedChar - The last character of the new word.
+   * @param {number} wordLength - Length of the word in code points.
+   * @return {number}
+   */
+  rollChar(prevHash, removedChar, addedChar, wordLength) {
     let hash = prevHash;
 
-    const prevValue = this.charToNumber(prevWord[0]);
-    const newValue = this.charToNumber(newWord[newWord.length - 1]);
-
-    let prevValueMultiplier = 1;
-    for (let i = 1; i < prevWord.length; i += 1) {
-      prevValueMultiplier *= this.base;
-      prevValueMultiplier %= this.modulus;
-    }
+    const prevValue = this.charToNumber(removedChar);
+    const newValue = this.charToNumber(addedChar);
+    const prevValueMultiplier = this.getHighestPowerMultiplier(wordLength);
 
     hash += this.modulus;
     hash -= (prevValue * prevValueMultiplier) % this.modulus;
@@ -66,6 +91,28 @@ export default class PolynomialHash {
     hash %= this.modulus;
 
     return hash;
+  }
+
+  /**
+   * Calculates (base ^ (wordLength - 1)) % modulus and caches the result,
+   * since the multiplier stays the same while the frame is being rolled.
+   *
+   * @param {number} wordLength
+   * @return {number}
+   */
+  getHighestPowerMultiplier(wordLength) {
+    if (this.multiplierWordLength !== wordLength) {
+      let multiplier = 1;
+      for (let i = 1; i < wordLength; i += 1) {
+        multiplier *= this.base;
+        multiplier %= this.modulus;
+      }
+
+      this.multiplierWordLength = wordLength;
+      this.multiplier = multiplier;
+    }
+
+    return this.multiplier;
   }
 
   /**

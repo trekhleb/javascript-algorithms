@@ -44,10 +44,10 @@ example, when washing clothes, the washing machine must finish
 before we put the clothes in the dryer). Then, a topological sort 
 gives an order in which to perform the jobs.
 
-Other application is **dependency resolution**. Each vertex is a package
-and each edge is a dependency of package `a` on package 'b'. Then topological
-sorting will provide a sequence of installing dependencies in a way that every
-next dependency has its dependent packages to be installed in prior.
+Another application is **dependency resolution**. Each vertex is a package
+and each edge is a dependency of package `a` on package `b`. Then topological
+sorting will provide an order of installing the packages in which every
+package gets installed only after all of its dependencies are installed.
 
 ## References
 

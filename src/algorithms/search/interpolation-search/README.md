@@ -22,7 +22,7 @@ To find the position to be searched, it uses following formula:
 // The idea of formula is to return higher value of pos
 // when element to be searched is closer to arr[hi]. And
 // smaller value when closer to arr[lo]
-pos = lo + ((x - arr[lo]) * (hi - lo) / (arr[hi] - arr[Lo]))
+pos = lo + ((x - arr[lo]) * (hi - lo) / (arr[hi] - arr[lo]))
 
 arr[] - Array where elements need to be searched
 x - Element to be searched
@@ -32,7 +32,7 @@ hi - Ending index in arr[]
 
 ## Complexity
 
-**Time complexity**: `O(log(log(n))`
+**Time complexity**: `O(log(log(n)))`
 
 ## References
 

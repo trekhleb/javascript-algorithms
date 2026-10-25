@@ -1,4 +1,5 @@
 import graphBridges from '../bridges/graphBridges';
+import depthFirstSearch from '../depth-first-search/depthFirstSearch';
 
 /**
  * Fleury's algorithm of finding Eulerian Path (visit all graph edges exactly once).
@@ -7,6 +8,32 @@ import graphBridges from '../bridges/graphBridges';
  * @return {GraphVertex[]}
  */
 export default function eulerianPath(graph) {
+  // It should fire error if graph is directed since the algorithm works only
+  // for undirected graphs.
+  if (graph.isDirected) {
+    throw new Error('Eulerian path algorithm works only for undirected graphs');
+  }
+
+  // The algorithm works only for connected graphs. Check that every vertex
+  // that has edges is reachable from any other such vertex. Otherwise it is
+  // not possible to walk through all the edges in one pass.
+  const verticesWithEdges = graph.getAllVertices().filter((vertex) => vertex.getDegree() > 0);
+
+  if (verticesWithEdges.length) {
+    // Do DFS from the first vertex that has edges and collect reached vertices.
+    const reachedVertices = {};
+    depthFirstSearch(graph, verticesWithEdges[0], {
+      enterVertex: ({ currentVertex }) => {
+        reachedVertices[currentVertex.getKey()] = currentVertex;
+      },
+      allowTraversal: ({ nextVertex }) => !reachedVertices[nextVertex.getKey()],
+    });
+
+    if (Object.keys(reachedVertices).length !== verticesWithEdges.length) {
+      throw new Error('Eulerian path exists only in connected graphs');
+    }
+  }
+
   const eulerianPathVertices = [];
 
   // Set that contains all vertices with even rank (number of neighbors).

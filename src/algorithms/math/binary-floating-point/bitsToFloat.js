@@ -84,7 +84,21 @@ function bitsToFloat(bits, precisionConfig) {
     0,
   );
 
-  // Putting all parts together to calculate the final number.
+  // All-zeros exponent means that the number is zero (if the fraction is zero
+  // as well) or a subnormal number. Subnormal numbers use the exponent
+  // of (1 - bias) and don't have the implicit leading 1 in the fraction.
+  if (exponentUnbiased === 0) {
+    return sign * (2 ** (1 - exponentBias)) * fraction;
+  }
+
+  // All-ones exponent encodes the special values:
+  // Infinity (if the fraction is zero) and NaN (otherwise).
+  if (exponentUnbiased === (2 ** exponentBitsCount) - 1) {
+    return fraction === 0 ? sign * Infinity : NaN;
+  }
+
+  // Putting all parts together to calculate the final normalized number
+  // (with the implicit leading 1 in the fraction).
   return sign * (2 ** exponent) * (1 + fraction);
 }
 

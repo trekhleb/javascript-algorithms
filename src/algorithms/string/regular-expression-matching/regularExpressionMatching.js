@@ -43,7 +43,9 @@ export default function regularExpressionMatching(string, pattern) {
   for (let columnIndex = 1; columnIndex <= pattern.length; columnIndex += 1) {
     const patternIndex = columnIndex - 1;
 
-    if (pattern[patternIndex] === ZERO_OR_MORE_CHARS) {
+    // The '*' char must have a preceding char to repeat (a pattern that
+    // starts with '*' is malformed and can't match anything).
+    if (pattern[patternIndex] === ZERO_OR_MORE_CHARS && patternIndex > 0) {
       matchMatrix[0][columnIndex] = matchMatrix[0][columnIndex - 2];
     } else {
       matchMatrix[0][columnIndex] = false;

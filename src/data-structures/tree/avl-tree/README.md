@@ -40,7 +40,7 @@ AVL tree with balance factors (green)
 
 **Right-Left Rotation**
 
-![Right-Right Rotation](http://btechsmartclass.com/data_structures/ds_images/RL%20Rotation.png)
+![Right-Left Rotation](http://btechsmartclass.com/data_structures/ds_images/RL%20Rotation.png)
 
 ## References
 

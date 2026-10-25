@@ -4,7 +4,7 @@ _Read this in other languages:_
 [_Português_](README.pt-BR.md).
 
 Selection sort is a sorting algorithm, specifically an 
-in-place comparison sort. It has O(n2) time complexity, 
+in-place comparison sort. It has O(n<sup>2</sup>) time complexity, 
 making it inefficient on large lists, and generally 
 performs worse than the similar insertion sort. 
 Selection sort is noted for its simplicity, and it has 

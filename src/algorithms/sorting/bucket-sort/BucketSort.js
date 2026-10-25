@@ -1,4 +1,4 @@
-import RadixSort from '../radix-sort/RadixSort';
+import QuickSort from '../quick-sort/QuickSort';
 
 /**
  * Bucket Sort
@@ -30,10 +30,10 @@ export default function BucketSort(arr, bucketsNum = 1) {
 
   // Sort individual buckets.
   for (let i = 0; i < buckets.length; i += 1) {
-    // Let's use the Radix Sorter here. This may give us
-    // the average O(n + k) time complexity to sort one bucket
-    // (where k is a number of digits in the longest number).
-    buckets[i] = new RadixSort().sort(buckets[i]);
+    // Let's use a comparison-based sorter here since bucket elements
+    // may be arbitrary numbers (i.e. negative ones or floats), which
+    // a digit-based sorter (like radix sort) cannot handle.
+    buckets[i] = new QuickSort().sort(buckets[i]);
   }
 
   // Merge sorted buckets into final output.

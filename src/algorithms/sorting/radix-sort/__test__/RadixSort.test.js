@@ -9,6 +9,24 @@ describe('RadixSort', () => {
     SortTester.testSort(RadixSort);
   });
 
+  it('should sort negative numbers', () => {
+    SortTester.testNegativeNumbersSort(RadixSort);
+
+    const sorter = new RadixSort();
+    expect(sorter.sort([2, -1, -3])).toEqual([-3, -1, 2]);
+    expect(sorter.sort([-5, -10])).toEqual([-10, -5]);
+  });
+
+  it('should sort strings of different lengths lexicographically', () => {
+    const sorter = new RadixSort();
+
+    // Shorter strings must go before longer strings with the same prefix.
+    expect(sorter.sort(['b', 'ba'])).toEqual(['b', 'ba']);
+    expect(sorter.sort(['zzz', 'bb', 'a', 'rr', 'rrb', 'rrba'])).toEqual(
+      ['a', 'bb', 'rr', 'rrb', 'rrba', 'zzz'],
+    );
+  });
+
   it('should visit array of strings n (number of strings) x m (length of longest element) times', () => {
     SortTester.testAlgorithmTimeComplexity(
       RadixSort,

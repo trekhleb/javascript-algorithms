@@ -77,11 +77,13 @@ describe('floydWarshall', () => {
     expect(distances[vertexAIndex][vertexGIndex]).toBe(12);
     expect(distances[vertexAIndex][vertexFIndex]).toBe(11);
 
-    expect(nextVertices[vertexAIndex][vertexFIndex]).toBe(vertexD);
+    // nextVertices[x][y] contains the next vertex after x on the shortest path
+    // from x to y (i.e. the shortest path from A to F is A -> B -> D -> F).
+    expect(nextVertices[vertexAIndex][vertexFIndex]).toBe(vertexB);
     expect(nextVertices[vertexAIndex][vertexDIndex]).toBe(vertexB);
-    expect(nextVertices[vertexAIndex][vertexBIndex]).toBe(vertexA);
+    expect(nextVertices[vertexAIndex][vertexBIndex]).toBe(vertexB);
     expect(nextVertices[vertexAIndex][vertexGIndex]).toBe(vertexE);
-    expect(nextVertices[vertexAIndex][vertexCIndex]).toBe(vertexA);
+    expect(nextVertices[vertexAIndex][vertexCIndex]).toBe(vertexC);
     expect(nextVertices[vertexAIndex][vertexAIndex]).toBe(null);
     expect(nextVertices[vertexAIndex][vertexHIndex]).toBe(null);
   });
@@ -140,11 +142,13 @@ describe('floydWarshall', () => {
       [2, 5, 7, 0],
     ]);
 
-    expect(nextVertices[vertexAIndex][vertexDIndex]).toBe(vertexC);
+    // nextVertices[x][y] contains the next vertex after x on the shortest path
+    // from x to y (i.e. the shortest path from A to D is A -> B -> C -> D).
+    expect(nextVertices[vertexAIndex][vertexDIndex]).toBe(vertexB);
     expect(nextVertices[vertexAIndex][vertexCIndex]).toBe(vertexB);
     expect(nextVertices[vertexBIndex][vertexDIndex]).toBe(vertexC);
     expect(nextVertices[vertexAIndex][vertexAIndex]).toBe(null);
-    expect(nextVertices[vertexAIndex][vertexBIndex]).toBe(vertexA);
+    expect(nextVertices[vertexAIndex][vertexBIndex]).toBe(vertexB);
   });
 
   it('should find minimum paths to all vertices for directed graph with negative edge weights', () => {
@@ -208,13 +212,51 @@ describe('floydWarshall', () => {
     expect(distances[vertexFIndex][vertexDIndex]).toBe(9);
     expect(distances[vertexFIndex][vertexEIndex]).toBe(8);
 
+    // nextVertices[x][y] contains the next vertex after x on the shortest path
+    // from x to y (i.e. the shortest path from F to B is F -> E -> D -> A -> C -> B).
     expect(nextVertices[vertexFIndex][vertexGIndex]).toBe(null);
     expect(nextVertices[vertexFIndex][vertexFIndex]).toBe(null);
     expect(nextVertices[vertexAIndex][vertexBIndex]).toBe(vertexC);
-    expect(nextVertices[vertexAIndex][vertexCIndex]).toBe(vertexA);
+    expect(nextVertices[vertexAIndex][vertexCIndex]).toBe(vertexC);
     expect(nextVertices[vertexFIndex][vertexBIndex]).toBe(vertexE);
     expect(nextVertices[vertexEIndex][vertexBIndex]).toBe(vertexD);
-    expect(nextVertices[vertexDIndex][vertexBIndex]).toBe(vertexC);
-    expect(nextVertices[vertexCIndex][vertexBIndex]).toBe(vertexC);
+    expect(nextVertices[vertexDIndex][vertexBIndex]).toBe(vertexA);
+    expect(nextVertices[vertexCIndex][vertexBIndex]).toBe(vertexB);
+  });
+
+  it('should allow to reconstruct the shortest path from the nextVertices matrix', () => {
+    const vertexX = new GraphVertex('X');
+    const vertexA = new GraphVertex('A');
+    const vertexM = new GraphVertex('M');
+    const vertexB = new GraphVertex('B');
+    const vertexY = new GraphVertex('Y');
+
+    const edgeXA = new GraphEdge(vertexX, vertexA, 1);
+    const edgeAM = new GraphEdge(vertexA, vertexM, 1);
+    const edgeMB = new GraphEdge(vertexM, vertexB, 1);
+    const edgeBY = new GraphEdge(vertexB, vertexY, 1);
+
+    const graph = new Graph(true);
+
+    graph
+      .addEdge(edgeXA)
+      .addEdge(edgeAM)
+      .addEdge(edgeMB)
+      .addEdge(edgeBY);
+
+    const { distances, nextVertices } = floydWarshall(graph);
+
+    const verticesIndices = graph.getVerticesIndices();
+
+    expect(distances[verticesIndices.X][verticesIndices.Y]).toBe(4);
+
+    // Walk the nextVertices matrix from X all the way to Y to restore the path.
+    const path = [vertexX];
+    while (path[path.length - 1] !== vertexY) {
+      const currentVertexIndex = verticesIndices[path[path.length - 1].getKey()];
+      path.push(nextVertices[currentVertexIndex][verticesIndices.Y]);
+    }
+
+    expect(path.map((vertex) => vertex.getKey())).toEqual(['X', 'A', 'M', 'B', 'Y']);
   });
 });

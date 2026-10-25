@@ -114,4 +114,28 @@ describe('bellmanFord', () => {
     expect(previousVertices.A.getKey()).toBe('D');
     expect(previousVertices.D.getKey()).toBe('E');
   });
+
+  it('should throw an error in case of negative weight cycle', () => {
+    function bellmanFordNegativeCycle() {
+      const vertexA = new GraphVertex('A');
+      const vertexB = new GraphVertex('B');
+      const vertexC = new GraphVertex('C');
+
+      // Cycle "B - C - B" has total weight of (-3 + 1) = -2. It means that
+      // the shortest paths may be infinitely improved by walking the cycle.
+      const edgeAB = new GraphEdge(vertexA, vertexB, 1);
+      const edgeBC = new GraphEdge(vertexB, vertexC, -3);
+      const edgeCB = new GraphEdge(vertexC, vertexB, 1);
+
+      const graph = new Graph(true);
+      graph
+        .addEdge(edgeAB)
+        .addEdge(edgeBC)
+        .addEdge(edgeCB);
+
+      bellmanFord(graph, vertexA);
+    }
+
+    expect(bellmanFordNegativeCycle).toThrow('Graph contains a negative weight cycle');
+  });
 });

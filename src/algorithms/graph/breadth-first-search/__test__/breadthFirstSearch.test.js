@@ -171,4 +171,35 @@ describe('breadthFirstSearch', () => {
       expect(params.previousVertex).toEqual(leaveVertexParamsMap[callIndex].previousVertex);
     }
   });
+
+  it('should enter each vertex of directed cycle exactly once by default', () => {
+    const graph = new Graph(true);
+
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+
+    // Directed triangle "A -> B -> C -> A" that leads back to the start vertex.
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+    const edgeBC = new GraphEdge(vertexB, vertexC);
+    const edgeCA = new GraphEdge(vertexC, vertexA);
+
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeBC)
+      .addEdge(edgeCA);
+
+    const enterVertexCallback = jest.fn();
+
+    breadthFirstSearch(graph, vertexA, {
+      enterVertex: enterVertexCallback,
+    });
+
+    expect(enterVertexCallback).toHaveBeenCalledTimes(3);
+
+    const enteredVertices = enterVertexCallback.mock.calls.map(
+      (call) => call[0].currentVertex.getKey(),
+    );
+    expect(enteredVertices).toEqual(['A', 'B', 'C']);
+  });
 });

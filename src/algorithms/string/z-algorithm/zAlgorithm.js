@@ -115,11 +115,18 @@ export default function zAlgorithm(text, word) {
   const zArray = buildZArray(zString);
 
   // Based on Z-array properties each cell will tell us the length of the match between
-  // the string prefix and current sub-text. Thus we're may find all positions in zArray
-  // with the number that equals to the length of the word (zString prefix) and based on
-  // that positions we'll be able to calculate word positions in text.
-  for (let charIndex = 1; charIndex < zArray.length; charIndex += 1) {
-    if (zArray[charIndex] === word.length) {
+  // the string prefix and current sub-text. Thus we may find all positions in zArray
+  // with the number that is at least the length of the word (zString prefix) and based
+  // on that positions we'll be able to calculate word positions in text. We scan the
+  // text part of zString only and use ">=" comparison because in case the text itself
+  // contains the separator character the match may run over the separator and make the
+  // Z-value bigger than the word length.
+  for (
+    let charIndex = word.length + SEPARATOR.length;
+    charIndex < zArray.length;
+    charIndex += 1
+  ) {
+    if (zArray[charIndex] >= word.length) {
       // Since we did concatenation to form zString we need to subtract prefix
       // and separator lengths.
       const wordPosition = charIndex - word.length - SEPARATOR.length;

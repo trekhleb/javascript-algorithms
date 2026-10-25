@@ -22,7 +22,7 @@ const euclideanDistance = (a, b) => {
     squaresTotal += (aCellValue - bCellValue) ** 2;
   });
 
-  return Number(Math.sqrt(squaresTotal).toFixed(2));
+  return Math.sqrt(squaresTotal);
 };
 
 export default euclideanDistance;

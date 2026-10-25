@@ -14,8 +14,10 @@ export default class HashTable {
     // Create hash table of certain size and fill each bucket with empty linked list.
     this.buckets = Array(hashTableSize).fill(null).map(() => new LinkedList());
 
-    // Just to keep track of all actual keys in a fast way.
-    this.keys = {};
+    // Just to keep track of all actual keys in a fast way. The prototype-less
+    // object is used so that special keys (i.e. '__proto__') are stored
+    // reliably as plain own properties.
+    this.keys = Object.create(null);
   }
 
   /**

@@ -44,7 +44,9 @@ export default function fastFourierTransform(inputData, inverse = false) {
   }
 
   for (let blockLength = 2; blockLength <= N; blockLength *= 2) {
-    const imaginarySign = inverse ? -1 : 1;
+    // The forward transform uses the e^(-2*pi*i/blockLength) kernel
+    // and the inverse transform uses the e^(2*pi*i/blockLength) one.
+    const imaginarySign = inverse ? 1 : -1;
     const phaseStep = new ComplexNumber({
       re: Math.cos((2 * Math.PI) / blockLength),
       im: imaginarySign * Math.sin((2 * Math.PI) / blockLength),
@@ -69,7 +71,7 @@ export default function fastFourierTransform(inputData, inverse = false) {
 
   if (inverse) {
     for (let signalId = 0; signalId < N; signalId += 1) {
-      output[signalId] /= N;
+      output[signalId] = output[signalId].divide(N);
     }
   }
 

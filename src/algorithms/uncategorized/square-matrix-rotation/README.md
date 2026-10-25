@@ -63,11 +63,13 @@ Rotate the input matrix in-place such that it becomes:
 
 We would need to do two reflections of the matrix: 
 
-- reflect vertically
 - reflect diagonally from bottom-left to top-right
+- then reflect vertically (upside-down)
 
-Or we also could Furthermore, you can reflect diagonally 
-top-left/bottom-right and reflect horizontally.
+Or, alternatively, we could reflect diagonally along the
+top-left/bottom-right (main) diagonal first (i.e. transpose
+the matrix), and then reflect horizontally. This is the
+order that is illustrated below and used in the code.
 
 A common question is how do you even figure out what kind 
 of reflections to do? Simply rip a square piece of paper,
@@ -75,9 +77,9 @@ write a random word on it so you know its rotation. Then,
 flip the square piece of paper around until you figure out
 how to come to the solution.
  
-Here is an example of how first line may be rotated using
-diagonal top-right/bottom-left rotation along with horizontal
-rotation.
+Here is an example of how the first line may be rotated using
+the top-left/bottom-right diagonal reflection along with the
+horizontal reflection.
 
 ```
 Let's say we have a string at the top of the matrix:
@@ -86,7 +88,7 @@ A B C
 • • •
 • • •
 
-Let's do top-right/bottom-left diagonal reflection:
+Let's do the top-left/bottom-right diagonal reflection:
 
 A B C
 / / •
@@ -98,7 +100,7 @@ A → →
 B → →
 C → →
 
-The string has been rotated to 90 degree:
+The string has been rotated by 90 degrees:
 
 • • A
 • • B

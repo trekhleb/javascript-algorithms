@@ -49,9 +49,10 @@ function findAllPaths(startVertex, paths = [], path = []) {
 function getCycleWeight(adjacencyMatrix, verticesIndices, cycle) {
   let weight = 0;
 
-  for (let cycleIndex = 1; cycleIndex < cycle.length; cycleIndex += 1) {
-    const fromVertex = cycle[cycleIndex - 1];
-    const toVertex = cycle[cycleIndex];
+  for (let cycleIndex = 0; cycleIndex < cycle.length; cycleIndex += 1) {
+    const fromVertex = cycle[cycleIndex];
+    // Link the last cycle vertex back to the first one to close the cycle.
+    const toVertex = cycle[(cycleIndex + 1) % cycle.length];
     const fromVertexIndex = verticesIndices[fromVertex.getKey()];
     const toVertexIndex = verticesIndices[toVertex.getKey()];
     weight += adjacencyMatrix[fromVertexIndex][toVertexIndex];
@@ -74,13 +75,16 @@ export default function bfTravellingSalesman(graph) {
   // Generate all possible paths from startVertex.
   const allPossiblePaths = findAllPaths(startVertex);
 
-  // Filter out paths that are not cycles.
+  // Filter out paths that are not cycles. The salesman tour must visit every
+  // graph vertex exactly once and it must be possible to get back to the
+  // start vertex from the last vertex of the path.
   const allPossibleCycles = allPossiblePaths.filter((path) => {
     /** @var {GraphVertex} */
     const lastVertex = path[path.length - 1];
     const lastVertexNeighbors = lastVertex.getNeighbors();
 
-    return lastVertexNeighbors.includes(startVertex);
+    return path.length === graph.getAllVertices().length
+      && lastVertexNeighbors.includes(startVertex);
   });
 
   // Go through all possible cycles and pick the one with minimum overall tour weight.

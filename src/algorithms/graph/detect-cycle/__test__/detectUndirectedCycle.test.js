@@ -38,4 +38,33 @@ describe('detectUndirectedCycle', () => {
       E: vertexB,
     });
   });
+
+  it('should detect cycle that is hidden in the second graph component', () => {
+    const vertexA = new GraphVertex('A');
+    const vertexB = new GraphVertex('B');
+    const vertexC = new GraphVertex('C');
+    const vertexD = new GraphVertex('D');
+    const vertexE = new GraphVertex('E');
+
+    // First component "A - B" has no cycles.
+    const edgeAB = new GraphEdge(vertexA, vertexB);
+
+    // Second component "C - D - E - C" forms a cycle.
+    const edgeCD = new GraphEdge(vertexC, vertexD);
+    const edgeDE = new GraphEdge(vertexD, vertexE);
+    const edgeEC = new GraphEdge(vertexE, vertexC);
+
+    const graph = new Graph();
+    graph
+      .addEdge(edgeAB)
+      .addEdge(edgeCD)
+      .addEdge(edgeDE)
+      .addEdge(edgeEC);
+
+    expect(detectUndirectedCycle(graph)).toEqual({
+      C: vertexE,
+      E: vertexD,
+      D: vertexC,
+    });
+  });
 });

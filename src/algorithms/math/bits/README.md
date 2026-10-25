@@ -206,7 +206,7 @@ time and see if shifted number is bigger than the input number.
 ```
 5 = 0b0101
 Count of valuable bits is: 3
-When we shift 1 four times it will become bigger than 5.
+When we shift 1 three times it will become bigger than 5.
 ```
 
 > See [bitLength.js](bitLength.js) for further details.

@@ -53,7 +53,7 @@ Z[] =  x 0 6 0 4 0 2 0
 ## Complexity
 
 - **Time:** `O(|W| + |T|)`
-- **Space:** `O(|W|)`
+- **Space:** `O(|W| + |T|)` (the Z-array is built over the concatenation of the word, the separator and the text)
 
 ## References
 

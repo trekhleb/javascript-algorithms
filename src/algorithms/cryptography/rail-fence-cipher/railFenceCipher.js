@@ -201,6 +201,12 @@ const decodeFence = (params) => {
  * @returns {string} - Encoded string
  */
 export const encodeRailFenceCipher = (string, railCount) => {
+  // A fence with a single rail (or no rails at all) can't zig-zag
+  // and thus leaves the message unchanged.
+  if (railCount <= 1) {
+    return string;
+  }
+
   const fence = buildFence(railCount);
 
   const filledFence = fillEncodeFence({
@@ -221,6 +227,12 @@ export const encodeRailFenceCipher = (string, railCount) => {
  * @returns {string} - Decoded string.
  */
 export const decodeRailFenceCipher = (string, railCount) => {
+  // A fence with a single rail (or no rails at all) can't zig-zag
+  // and thus leaves the message unchanged.
+  if (railCount <= 1) {
+    return string;
+  }
+
   const strLen = string.length;
   const emptyFence = buildFence(railCount);
   const filledFence = fillDecodeFence({

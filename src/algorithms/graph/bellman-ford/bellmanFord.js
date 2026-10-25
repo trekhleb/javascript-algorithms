@@ -38,6 +38,20 @@ export default function bellmanFord(graph, startVertex) {
     });
   }
 
+  // Do one more relaxation round over all the edges. After (|V| - 1) iterations
+  // all the distances must be final. Thus if any distance may still be improved
+  // then the graph must contain a negative weight cycle.
+  Object.keys(distances).forEach((vertexKey) => {
+    const vertex = graph.getVertexByKey(vertexKey);
+
+    graph.getNeighbors(vertex).forEach((neighbor) => {
+      const edge = graph.findEdge(vertex, neighbor);
+      if (distances[vertex.getKey()] + edge.weight < distances[neighbor.getKey()]) {
+        throw new Error('Graph contains a negative weight cycle');
+      }
+    });
+  });
+
   return {
     distances,
     previousVertices,

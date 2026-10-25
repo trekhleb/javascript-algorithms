@@ -4,6 +4,8 @@ describe('peakvalleyBestTimeToBuySellStocks', () => {
   it('should find the best time to buy and sell stocks', () => {
     let visit;
 
+    expect(peakvalleyBestTimeToBuySellStocks([])).toEqual(0);
+
     expect(peakvalleyBestTimeToBuySellStocks([1, 5])).toEqual(4);
 
     visit = jest.fn();

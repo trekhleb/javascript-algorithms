@@ -321,4 +321,21 @@ describe('RedBlackTree', () => {
 
     expect(removeNodeFromRedBlackTree).toThrow();
   });
+
+  it('should preserve the node color when inserting a duplicate value', () => {
+    const tree = new RedBlackTree();
+
+    tree.insert(10);
+    tree.insert(5);
+    tree.insert(20);
+    tree.insert(25);
+
+    const node20 = tree.root.find(20);
+    expect(tree.isNodeBlack(node20)).toBe(true);
+
+    // Re-inserting an existing value must not repaint the existing node.
+    tree.insert(20);
+
+    expect(tree.isNodeBlack(node20)).toBe(true);
+  });
 });

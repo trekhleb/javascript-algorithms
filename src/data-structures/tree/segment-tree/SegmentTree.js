@@ -25,6 +25,11 @@ export default class SegmentTree {
     let segmentTreeArrayLength;
     const inputArrayLength = inputArray.length;
 
+    // An empty input array is represented by an empty segment tree.
+    if (inputArrayLength === 0) {
+      return [];
+    }
+
     if (isPowerOfTwo(inputArrayLength)) {
       // If original array length is a power of two.
       segmentTreeArrayLength = (2 * inputArrayLength) - 1;
@@ -46,6 +51,11 @@ export default class SegmentTree {
    * Build segment tree.
    */
   buildSegmentTree() {
+    // There is nothing to build for an empty input array.
+    if (this.inputArray.length === 0) {
+      return;
+    }
+
     const leftIndex = 0;
     const rightIndex = this.inputArray.length - 1;
     const position = 0;

@@ -2,6 +2,13 @@ import permutateWithoutRepetitions from '../permutateWithoutRepetitions';
 import factorial from '../../../math/factorial/factorial';
 
 describe('permutateWithoutRepetitions', () => {
+  it('should permutate empty set', () => {
+    // The only permutation of an empty set is the empty permutation.
+    const permutations = permutateWithoutRepetitions([]);
+    expect(permutations.length).toBe(factorial(0));
+    expect(permutations).toEqual([[]]);
+  });
+
   it('should permutate string', () => {
     const permutations1 = permutateWithoutRepetitions(['A']);
     expect(permutations1).toEqual([

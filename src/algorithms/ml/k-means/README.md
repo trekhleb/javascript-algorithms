@@ -20,7 +20,7 @@ The algorithm is as follows:
 3. Calculate the distance of each data point from each cluster
 4. Assign the cluster label of each data point equal to that of the cluster at its minimum distance
 5. Calculate the centroid of each cluster based on the data points it contains
-6. Repeat each of the above steps until the centroid locations are varying
+6. Repeat each of the above steps until the centroid locations stop varying
 
 Here is a visualization of k-Means clustering for better understanding:
 
@@ -37,4 +37,4 @@ The centroids are moving continuously in order to create better distinction betw
 
 ## References
 
-- [k-Means neighbors algorithm on Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering)
+- [k-means clustering on Wikipedia](https://en.wikipedia.org/wiki/K-means_clustering)

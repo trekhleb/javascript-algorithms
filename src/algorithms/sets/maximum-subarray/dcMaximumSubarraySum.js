@@ -1,9 +1,12 @@
 /**
- * Divide and Conquer solution.
+ * Recursive (pick / don't pick) solution.
+ * This approach is often referred to as "Divide and Conquer" in the maximum
+ * subarray literature, although strictly speaking it is a linear recursion
+ * that for each element decides whether to pick it or not.
  * Complexity: O(n^2) in case if no memoization applied
  *
  * @param {Number[]} inputArray
- * @return {Number[]}
+ * @return {Number} - maximum subarray sum
  */
 export default function dcMaximumSubarraySum(inputArray) {
   /**

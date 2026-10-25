@@ -13,7 +13,7 @@ It is attributed to Eratosthenes of Cyrene, an ancient Greek mathematician.
 5. Find the first position greater than `p` that is `true` in the array. If there is no such position, stop. Otherwise, let `p` equal this new number (which is the next prime), and repeat from step 4
 
 When the algorithm terminates, the numbers remaining `true` in the array are all 
-the primes below `n`.
+the primes up to (and including) `n`.
 
 An improvement of this algorithm is, in step 4, start marking multiples 
 of `p` from `p * p`, and not from `2 * p`. The reason why this works is because, 

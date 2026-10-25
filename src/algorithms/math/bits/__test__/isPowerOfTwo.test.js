@@ -17,4 +17,11 @@ describe('isPowerOfTwo', () => {
     expect(isPowerOfTwo(127)).toBe(false);
     expect(isPowerOfTwo(128)).toBe(true);
   });
+
+  it('should detect that zero and negative numbers are not powers of two', () => {
+    expect(isPowerOfTwo(0)).toBe(false);
+    expect(isPowerOfTwo(-1)).toBe(false);
+    expect(isPowerOfTwo(-2)).toBe(false);
+    expect(isPowerOfTwo(-(2 ** 31))).toBe(false);
+  });
 });
