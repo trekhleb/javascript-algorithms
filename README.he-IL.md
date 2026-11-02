@@ -33,12 +33,12 @@ _קרא זאת בשפות אחרות:_
 
 זכור שלכל מבנה נתונים יש את היתרונות והחסרונות שלו. חשוב לשים לב יותר לסיבה שבגללה אתה בוחר מבנה נתונים מסוים מאשר לאופן היישום שלו.
 
-‏‏`B` - מתחיל, `A` - מתקדם
+‏`B` - מתחיל, `A` - מתקדם
 
-* ‏‏`B` [רשימה מקושרת](src/data-structures/linked-list)
-* ‏‏`B` [רשימה מקושרת כפולה](src/data-structures/doubly-linked-list)
-* ‏‏`B` [תור](src/data-structures/queue)
-* ‏‏`B` [מחסנית](src/data-structures/stack)
+* ‏`B` [רשימה מקושרת](src/data-structures/linked-list)
+* ‏`B` [רשימה מקושרת כפולה](src/data-structures/doubly-linked-list)
+* ‏`B` [תור](src/data-structures/queue)
+* ‏`B` [מחסנית](src/data-structures/stack)
 * ‏`B` [טבלת גיבוב](src/data-structures/hash-table)
 * ‏`B` [ערימה](src/data-structures/heap) - גרסאות מקסימום ומינימום
 * ‏`B` [תור עדיפויות](src/data-structures/priority-queue)
@@ -63,7 +63,7 @@ _קרא זאת בשפות אחרות:_
 ### אלגוריתמים לפי נושא
 
 * **מתמטיקה**
-  * ‏‏`B` [מניפולציה על ביטים](src/algorithms/math/bits) - קביעה/עדכון/ניקוי ביטים, הכפלה/חילוק ב-2, הפיכה לשלילי וכו'
+  * ‏`B` [מניפולציה על ביטים](src/algorithms/math/bits) - קביעה/עדכון/ניקוי ביטים, הכפלה/חילוק ב-2, הפיכה לשלילי וכו'
   * ‏`B` [נקודה צפה בינארית](src/algorithms/math/binary-floating-point) - ייצוג בינארי של מספרים בנקודה צפה
   * ‏`B` [פקטוריאל](src/algorithms/math/factorial)
   * ‏`B` [מספר פיבונאצ'י](src/algorithms/math/fibonacci) - גרסאות קלאסיות וסגורות
