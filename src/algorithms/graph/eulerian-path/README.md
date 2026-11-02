@@ -1,5 +1,8 @@
 # Eulerian Path
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 In graph theory, an **Eulerian trail** (or **Eulerian path**) is a 
 trail in a finite graph which visits every edge exactly once.
 Similarly, an **Eulerian circuit** or **Eulerian cycle** is an 

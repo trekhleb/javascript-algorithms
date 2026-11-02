@@ -1,5 +1,8 @@
 # Unique Paths Problem
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 A robot is located at the top-left corner of a `m x n` grid 
 (marked 'Start' in the diagram below).
 

@@ -2,7 +2,8 @@
 
 _Leia isso em outros idiomas:_
 [_한국어_](README.ko-KR.md),
-[_English_](README.md)
+[_English_](README.md),
+[_తెలుగు_](README.te-IN.md)
 
 Em ciência da computação, merge sort (também comumente escrito
 mergesort) é uma ferramenta eficiente, de propósito geral,

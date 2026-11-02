@@ -1,7 +1,8 @@
 # Transformation de Fourier
 
 _Read this in other languages:_
-[english](README.md).
+[english](README.md),
+[_తెలుగు_](README.te-IN.md).
 
 ## Définitions
 

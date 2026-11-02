@@ -5,7 +5,8 @@ _Read this in other languages:_
 [_Русский_](README.ru-RU.md),
 [_日本語_](README.ja-JP.md),
 [_Français_](README.fr-FR.md),
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),
+[_తెలుగు_](README.te-IN.md)
 
 컴퓨팅에서, **해시 테이블**(해시 맵)은 키를 값에 매핑할 수 있는 구조인 *연관 배열*을 구현하는 자료 구조입니다. 해시 테이블은 *해시 함수*를 사용해 원하는 값을 담을 수 있는 버킷 또는 슬롯 배열의 인덱스를 계산합니다.
 

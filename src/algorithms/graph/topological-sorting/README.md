@@ -1,5 +1,8 @@
 # Topological Sorting
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 In the field of computer science, a topological sort or 
 topological ordering of a directed graph is a linear ordering 
 of its vertices such that for every directed edge `uv` from 

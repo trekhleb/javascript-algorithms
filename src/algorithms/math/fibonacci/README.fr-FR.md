@@ -2,7 +2,8 @@
 
 _Read this in other languages:_
 [english](README.md),
-[ქართული](README.ka-GE.md).
+[ქართული](README.ka-GE.md),
+[_తెలుగు_](README.te-IN.md).
 
 En mathématiques, la suite de Fibonacci est une suite d'entiers
 dans laquelle chaque terme (après les deux premiers)

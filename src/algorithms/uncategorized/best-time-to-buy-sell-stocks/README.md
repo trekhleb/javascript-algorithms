@@ -1,5 +1,8 @@
 # Best Time to Buy and Sell Stock
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 ## Task Description
 
 Say you have an array prices for which the `i`-th element is the price of a given stock on day `i`.

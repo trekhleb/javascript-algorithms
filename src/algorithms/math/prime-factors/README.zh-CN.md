@@ -1,7 +1,8 @@
 # 质数因子
 
 _Read this in other languages:_
-[english](README.md).
+[english](README.md),
+[_తెలుగు_](README.te-IN.md).
 
 **质数** 是一个比 `1` 大的整数，且 **不能**由其它整数相乘得出。前几个质数是: `2`, `3`, `5`, `7`, `11`, `13`, `17`, `19`,依此类推。
 

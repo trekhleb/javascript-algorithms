@@ -1,7 +1,8 @@
 # Manipulation de bits
 
 _Read this in other languages:_
-[english](README.md).
+[english](README.md),
+[_తెలుగు_](README.te-IN.md).
 
 #### Vérifier un bit (_get_)
 

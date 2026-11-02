@@ -10,7 +10,8 @@ _קרא בשפות אחרות:_
 [_Español_](README.es-ES.md),
 [_Français_](README.fr-FR.md),
 [_Deutsch_](README.de-DE.md),
-[_עברית_](README.he-IL.md)
+[_עברית_](README.he-IL.md),
+[_తెలుగు_](README.te-IN.md)
 
 אלגוריתם דייקסטרה הוא אלגוריתם למציאת המסלולים הקצרים ביותר בין צמתים בגרף, שיכול לייצג למשל רשת כבישים.
 

@@ -1,7 +1,8 @@
 # Counting Sort
 
 _Leia isso em outros idiomas:_
-[_English_](README.md)
+[_English_](README.md),
+[_తెలుగు_](README.te-IN.md)
 
 Em ciência da computação, **counting sort** é um algoritmo para ordenar
 uma coleção de objetos de acordo com chaves que são pequenos inteiros;

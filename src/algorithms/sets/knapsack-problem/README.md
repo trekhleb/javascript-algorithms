@@ -1,5 +1,8 @@
 # Knapsack Problem
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 The knapsack problem or rucksack problem is a problem in 
 combinatorial optimization: Given a set of items, each with 
 a weight and a value, determine the number of each item to 

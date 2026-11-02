@@ -2,6 +2,7 @@
 
 _Read this in other languages:_
 [한국어](README.ko-KR.md),
+[_తెలుగు_](README.te-IN.md)
 
 A **Least Recently Used (LRU) Cache** organizes items in order of use, allowing you to quickly identify which item hasn't been used for the longest amount of time.
 

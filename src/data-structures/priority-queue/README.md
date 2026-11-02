@@ -7,7 +7,8 @@ _Read this in other languages:_
 [_Français_](README.fr-FR.md),
 [_Português_](README.pt-BR.md),
 [_한국어_](README.ko-KR.md),
-[_Українська_](README.uk-UA.md)
+[_Українська_](README.uk-UA.md),
+[_తెలుగు_](README.te-IN.md)
 
 In computer science, a **priority queue** is an abstract data type
 which is like a regular queue or stack data structure, but where

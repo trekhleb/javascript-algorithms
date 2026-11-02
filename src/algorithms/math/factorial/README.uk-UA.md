@@ -1,7 +1,8 @@
 # Факторіал
 
 _Прочитайте це іншими мовами:_
-[_English_](README.md), [_简体中文_](README.zh-CN.md), [_Français_](README.fr-FR.md), [_Türkçe_](README.tr-TR.md), [_ქართული_](README.ka-GE.md).
+[_English_](README.md), [_简体中文_](README.zh-CN.md), [_Français_](README.fr-FR.md), [_Türkçe_](README.tr-TR.md), [_ქართული_](README.ka-GE.md),
+[_తెలుగు_](README.te-IN.md).
 
 У математиці факторіал невід'ємного цілого числа `n`, позначений `n!`, є добутком усіх натуральних чисел, менших або рівних `n`. Наприклад:
 

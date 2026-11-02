@@ -1,5 +1,8 @@
 # Tower of Hanoi
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 The Tower of Hanoi (also called the Tower of Brahma or Lucas'
 Tower and sometimes pluralized) is a mathematical game or puzzle. 
 It consists of three rods and a number of disks of different sizes,

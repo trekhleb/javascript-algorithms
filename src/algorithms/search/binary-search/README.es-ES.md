@@ -2,7 +2,8 @@
 
 _Lea esto en otros idiomas:_
 [English](README.md)
-[Português brasileiro](README.pt-BR.md).
+[Português brasileiro](README.pt-BR.md),
+[_తెలుగు_](README.te-IN.md).
 
 En informática, la búsqueda binaria, también conocida como búsqueda de medio intervalo
 búsqueda, búsqueda logarítmica, o corte binario, es un algoritmo de búsqueda

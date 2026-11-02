@@ -1,5 +1,8 @@
 # Square Matrix In-Place Rotation
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 ## The Problem
 
 You are given an `n x n` 2D matrix (representing an image). 

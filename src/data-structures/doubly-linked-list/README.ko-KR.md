@@ -4,7 +4,8 @@ _Read this in other languages:_
 [_Русский_](README.ru-RU.md),
 [_简体中文_](README.zh-CN.md),
 [_日本語_](README.ja-JP.md),
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),
+[_తెలుగు_](README.te-IN.md)
 
 컴퓨터공학에서 **이중 연결 리스트**는 순차적으로 링크된 노드라는 레코드 세트로 구성된 링크된 데이터 구조입니다.
 각 노드에는 링크라고 하는 두 개의 필드가 있으며, 노드 순서에서 이전 노드와 다음 노드에 대한 참조를 가집니다.

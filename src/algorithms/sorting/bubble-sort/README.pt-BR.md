@@ -1,7 +1,8 @@
 # Bubble Sort
 
 _Leia isso em outros idiomas:_
-[_English_](README.md)
+[_English_](README.md),
+[_తెలుగు_](README.te-IN.md)
 
 O bubble sort, ou ordenação por flutuação (literalmente "por bolha"), é um algoritmo de ordenação dos mais simples. A ideia é percorrer o vetor diversas vezes, e a cada passagem fazer flutuar para o topo o maior elemento da sequência. Essa movimentação lembra a forma como as bolhas em um tanque de água procuram seu próprio nível, e disso vem o nome do algoritmo.
 

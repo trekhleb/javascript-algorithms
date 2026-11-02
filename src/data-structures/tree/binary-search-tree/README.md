@@ -1,7 +1,8 @@
 # Binary Search Tree
 
 _Read this in other languages:_
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),
+[_తెలుగు_](README.te-IN.md)
 
 In computer science, **binary search trees** (BST), sometimes called
 ordered or sorted binary trees, are a particular type of container:

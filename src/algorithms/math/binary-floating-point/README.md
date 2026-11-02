@@ -1,5 +1,8 @@
 # Binary representation of floating-point numbers
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 Have you ever wondered how computers store the floating-point numbers like `3.1416` (𝝿) or `9.109 × 10⁻³¹` (the mass of the electron in kg) in the memory which is limited by a finite number of ones and zeroes (aka bits)?
 
 It seems pretty straightforward for integers (i.e. `17`). Let's say we have 16 bits (2 bytes) to store the number. In 16 bits we may store the integers in a range of `[0, 65535]`:

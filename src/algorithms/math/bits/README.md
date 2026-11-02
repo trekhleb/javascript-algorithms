@@ -2,7 +2,8 @@
 
 _Read this in other languages:_
 [français](README.fr-FR.md),
-[简体中文](README.zh-CN.md).
+[简体中文](README.zh-CN.md),
+[_తెలుగు_](README.te-IN.md).
 
 #### Get Bit
 

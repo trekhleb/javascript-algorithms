@@ -2,7 +2,8 @@
 
 _Leia isso em outros idiomas:_
 [_中文_](README.zh-CN.md),
-[_English_](README.md)
+[_English_](README.md),
+[_తెలుగు_](README.te-IN.md)
 
 A tarefa é percorrer a lista encadeada fornecida em ordem inversa.
 

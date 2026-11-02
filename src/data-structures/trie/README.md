@@ -5,7 +5,8 @@ _Read this in other languages:_
 [_Русский_](README.ru-RU.md),
 [_Português_](README.pt-BR.md),
 [_Українська_](README.uk-UA.md),
-[_한국어_](README.ko-KO.md)
+[_한국어_](README.ko-KO.md),
+[_తెలుగు_](README.te-IN.md)
 
 In computer science, a **trie**, also called digital tree and sometimes
 radix tree or prefix tree (as they can be searched by prefixes),

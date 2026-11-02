@@ -1,7 +1,8 @@
 # Shellsort
 
 _Leia isso em outros idiomas:_
-[_English_](README.md).
+[_English_](README.md),
+[_తెలుగు_](README.te-IN.md).
 
 Shellsort, também conhecido como Shell sort ou método de Shell,
 é uma classificação de comparação in-loco. Pode ser visto tanto como um

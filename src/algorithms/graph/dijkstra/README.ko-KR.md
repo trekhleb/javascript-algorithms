@@ -10,7 +10,8 @@ _다른 언어로 읽기:_
 [_Español_](README.es-ES.md),
 [_Français_](README.fr-FR.md),
 [_Deutsch_](README.de-DE.md),
-[_עברית_](README.he-IL.md)
+[_עברית_](README.he-IL.md),
+[_తెలుగు_](README.te-IN.md)
 
 다익스트라 알고리즘은 그래프의 노드 간 최단 경로를 찾는 알고리즘으로, 예를 들어 도로망을 표현할 수 있습니다.
 

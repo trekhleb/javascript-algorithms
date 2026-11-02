@@ -1,5 +1,8 @@
 # Integer Partition
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 In number theory and combinatorics, a partition of a positive 
 integer `n`, also called an **integer partition**, is a way of 
 writing `n` as a sum of positive integers. 

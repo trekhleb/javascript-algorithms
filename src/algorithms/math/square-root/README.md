@@ -1,5 +1,8 @@
 # Square Root (Newton's Method)
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 In numerical analysis, a branch of mathematics, there are several square root 
 algorithms or methods of computing the principal square root of a non-negative real 
 number. As, generally, the roots of a function cannot be computed exactly.

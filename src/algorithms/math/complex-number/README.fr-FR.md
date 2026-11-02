@@ -1,7 +1,8 @@
 # Nombre complexe
 
 _Read this in other languages:_
-[english](README.md).
+[english](README.md),
+[_తెలుగు_](README.te-IN.md).
 
 Un **nombre complexe** est un nombre qui peut s'écrire sous la forme
 `a + b * i`, tels que `a` et `b` sont des nombres réels,

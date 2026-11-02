@@ -10,7 +10,8 @@ _阅读其他语言版本：_
 [_Español_](README.es-ES.md),
 [_Français_](README.fr-FR.md),
 [_Deutsch_](README.de-DE.md),
-[_עברית_](README.he-IL.md)
+[_עברית_](README.he-IL.md),
+[_తెలుగు_](README.te-IN.md)
 
 Dijkstra 算法是一种用于在图中查找节点之间最短路径的算法，例如，它可以用于表示道路网络。
 

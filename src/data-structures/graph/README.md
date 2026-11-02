@@ -5,7 +5,8 @@ _Read this in other languages:_
 [_Русский_](README.ru-RU.md),
 [_Français_](README.fr-FR.md),
 [_Português_](README.pt-BR.md),
-[_Українська_](README.uk-UA.md)
+[_Українська_](README.uk-UA.md),
+[_తెలుగు_](README.te-IN.md)
 
 
 In computer science, a **graph** is an abstract data type

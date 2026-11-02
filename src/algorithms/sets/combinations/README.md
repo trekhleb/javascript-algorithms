@@ -1,5 +1,8 @@
 # Combinations
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 When the order doesn't matter, it is a **Combination**.
 
 When the order **does** matter it is a **Permutation**.

@@ -1,5 +1,8 @@
 # Hill Cipher
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 The **Hill cipher** is a [polygraphic substitution](https://en.wikipedia.org/wiki/Polygraphic_substitution) cipher based on linear algebra.
 
 Each letter is represented by a number [modulo](https://en.wikipedia.org/wiki/Modular_arithmetic) `26`. Though this is not an essential feature of the cipher, this simple scheme is often used:

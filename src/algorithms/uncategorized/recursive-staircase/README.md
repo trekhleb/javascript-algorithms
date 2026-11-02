@@ -1,5 +1,8 @@
 # Recursive Staircase Problem
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 ## The Problem
 
 There are `n` stairs, a person standing at the bottom wants to reach the top. The person can climb either `1` or `2` stairs at a time. _Count the number of ways, the person can reach the top._

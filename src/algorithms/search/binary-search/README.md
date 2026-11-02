@@ -2,7 +2,8 @@
 
 _Read this in other languages:_
 [Português brasileiro](README.pt-BR.md).
-[Español](README.es-ES.md).
+[Español](README.es-ES.md),
+[_తెలుగు_](README.te-IN.md).
 
 In computer science, binary search, also known as half-interval
 search, logarithmic search, or binary chop, is a search algorithm

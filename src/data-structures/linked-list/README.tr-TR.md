@@ -7,6 +7,7 @@ _Bunu diğer dillerde okuyun:_
 [_Português_](README.pt-BR.md),
 [_한국어_](README.ko-KR.md),
 [_Español_](README.es-ES.md),
+[_తెలుగు_](README.te-IN.md)
 
 Bilgisayar bilimlerinde, **Bağlantılı liste**, her biri hem gerçek verileri
 hem de listedeki bir sonraki düğümün bir bağlantısını içeren dinamik bir

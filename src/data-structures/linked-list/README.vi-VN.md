@@ -8,7 +8,8 @@ _Đọc bằng ngôn ngữ khác:_
 [_한국어_](README.ko-KR.md),
 [_Español_](README.es-ES.md),
 [_Türkçe_](README.tr-TR.md),
-[_Українська_](README.uk-UA.md)
+[_Українська_](README.uk-UA.md),
+[_తెలుగు_](README.te-IN.md)
 
 
 Trong khoa học máy tính, một danh sách liên kết là một bộ sưu tập tuyến tính

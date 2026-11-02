@@ -1,5 +1,8 @@
 # Polynomial Rolling Hash
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 ## Hash Function
 
 **Hash functions** are used to map large data sets of elements of an arbitrary 

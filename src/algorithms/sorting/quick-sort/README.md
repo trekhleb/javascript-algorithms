@@ -2,7 +2,8 @@
 
 _Read this in other languages:_
 [_简体中文_](README.zh-CN.md),
-[_Português_](README.pt-BR.md)
+[_Português_](README.pt-BR.md),
+[_తెలుగు_](README.te-IN.md)
 
 Quicksort is a divide and conquer algorithm.
 Quicksort first divides a large array into two smaller 

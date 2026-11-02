@@ -1,5 +1,8 @@
 # Rabin Karp Algorithm
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 In computer science, the Rabin–Karp algorithm or Karp–Rabin algorithm 
 is a string searching algorithm created by Richard M. Karp and 
 Michael O. Rabin (1987) that uses hashing to find any one of a set 

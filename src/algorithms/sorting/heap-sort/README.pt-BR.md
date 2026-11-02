@@ -1,7 +1,8 @@
 # Heap Sort
 
 _Leia isso em outros idiomas:_
-[_English_](README.md)
+[_English_](README.md),
+[_తెలుగు_](README.te-IN.md)
 
 Heapsort é um algoritmo de ordenação baseado em comparação. O Heapsort pode ser pensado como uma seleção aprimorada sort: como esse algoritmo, ele divide sua entrada em uma região classificada e uma região não classificada, e iterativamente encolhe a região não classificada extraindo o maior elemento e movendo-o para a região classificada. A melhoria consiste no uso de uma estrutura de dados heap em vez de uma busca em tempo linear para encontrar o máximo.
 

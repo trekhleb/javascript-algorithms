@@ -25,7 +25,8 @@ _Đọc bằng ngôn ngữ khác:_
 [_Bahasa Indonesia_](README.id-ID.md),
 [_Українська_](README.uk-UA.md),
 [_Arabic_](README.ar-AR.md)
-[_עברית_](README.he-IL.md)
+[_עברית_](README.he-IL.md),
+[_తెలుగు_](README.te-IN.md)
 
 ## Cấu Trúc Dữ Liệu
 

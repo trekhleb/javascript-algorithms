@@ -1,7 +1,8 @@
 # Factorielle
 
 _Lisez ceci dans d'autres langues:_
-[english](README.md), [_简体中文_](README.zh-CN.md).
+[english](README.md), [_简体中文_](README.zh-CN.md),
+[_తెలుగు_](README.te-IN.md).
 
 En mathématiques, la factorielle d'un entier naturel `n`,
 notée avec un point d'exclamation `n!`, est le produit des nombres entiers

@@ -1,5 +1,8 @@
 # Interpolation Search
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 **Interpolation search** is an algorithm for searching for a key in an array that 
 has been ordered by numerical values assigned to the keys (key values).
 

@@ -1,7 +1,8 @@
 # Radix Sort
 
 _Leia isso em outros idiomas:_
-[_English_](README.md)
+[_English_](README.md),
+[_తెలుగు_](README.te-IN.md)
 
 Em ciência da computação, **radix sort** é uma classificação inteira não comparativa
 algoritmo que classifica os dados com chaves inteiras agrupando as chaves pelo indivíduo

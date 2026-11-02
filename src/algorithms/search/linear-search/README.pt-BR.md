@@ -1,7 +1,8 @@
 # Busca Linear
 
 _Leia isso em outras línguas:_
-[english](README.md).
+[english](README.md),
+[_తెలుగు_](README.te-IN.md).
 
 Na Ciência da Computação, busca linear ou busca sequencial é um método para encontrar um elemento alvo em uma lista. 
 O algoritmo verifica sequencialmente cada elemento da lista procurando o elemento alvo até ele ser encontrado ou até ter verificado todos os elementos.

@@ -10,7 +10,8 @@ _以其他語言閱讀：_
 [_Español_](README.es-ES.md),
 [_Français_](README.fr-FR.md),
 [_Deutsch_](README.de-DE.md),
-[_עברית_](README.he-IL.md)
+[_עברית_](README.he-IL.md),
+[_తెలుగు_](README.te-IN.md)
 
 Dijkstra 演算法是一種用於在圖中尋找節點之間最短路徑的演算法，例如，它可用於表示道路網絡。
 

@@ -7,7 +7,8 @@ _Đọc bằng ngôn ngữ khác:_
 [_Português_](README.pt-BR.md),
 [_한국어_](README.ko-KR.md),
 [_Español_](README.es-ES.md),
-[_Українська_](README.uk-UA.md)
+[_Українська_](README.uk-UA.md),
+[_తెలుగు_](README.te-IN.md)
 
 Trong khoa học máy tính, một ngăn xếp (stack) là một kiểu dữ liệu trừu tượng phục vụ như một bộ sưu tập các phần tử, với hai hoạt động chính:
 

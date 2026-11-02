@@ -5,7 +5,8 @@ _Lea esto en otros idiomas:_
 [_简体中文_](README.zh-CN.md),
 [_日本語_](README.ja-JP.md),
 [_Português_](README.pt-BR.md)
-[_한국어_](README.ko-KR.md)
+[_한국어_](README.ko-KR.md),
+[_తెలుగు_](README.te-IN.md)
 
 En informática, una **lista doblemente enlazada** es una estructura de datos relacionados que consta de un conjunto de registros conectados secuencialmente llamados nodos. Cada nodo contiene dos campos, llamados enlaces, que son referencias al nodo anterior y al siguiente en la secuencia de nodos. Los enlaces anterior y siguiente de los nodos inicial y final, apuntan respectivamente a algún tipo de terminador (normalmente un nodo centinela o nulo), facilitando así el recorrido de la lista. Si solo hay un nodo nulo, la lista se enlaza circularmente a través este. Puede conceptualizarse como dos listas enlazadas individualmente formadas a partir de los mismos elementos de datos, pero en órdenes secuenciales opuestos.
 

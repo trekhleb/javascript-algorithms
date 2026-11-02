@@ -25,7 +25,8 @@ _Читать на других языках:_
 [_Tiếng Việt_](README.vi-VN.md),
 [_Deutsch_](README.de-DE.md),
 [_Uzbek_](README.uz-UZ.md)
-[_עברית_](README.he-IL.md)
+[_עברית_](README.he-IL.md),
+[_తెలుగు_](README.te-IN.md)
 
 ## Структуры данных
 

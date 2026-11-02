@@ -1,5 +1,8 @@
 # Jump Game
 
+_Read this in other languages:_
+[_తెలుగు_](README.te-IN.md)
+
 ## The Problem
 
 Given an array of non-negative integers, you are initially positioned at 
