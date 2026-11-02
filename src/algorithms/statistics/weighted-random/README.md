@@ -1,5 +1,8 @@
 # Weighted Random
 
+_Read this in other languages:_
+[_తెలుగు_](README.tel-IN.md)
+
 ![Weighted Random](images/cover.png)
 
 ## What is "Weighted Random"
