@@ -27,7 +27,7 @@ describe('squareRoot', () => {
     expect(squareRoot(0, tolerance)).toBe(0);
     expect(squareRoot(1, tolerance)).toBe(1);
     expect(squareRoot(2, tolerance)).toBe(1.4);
-    expect(squareRoot(3, tolerance)).toBe(1.8);
+    expect(squareRoot(3, tolerance)).toBe(1.7);
     expect(squareRoot(4, tolerance)).toBe(2);
     expect(squareRoot(15, tolerance)).toBe(3.9);
     expect(squareRoot(16, tolerance)).toBe(4);
@@ -65,5 +65,25 @@ describe('squareRoot', () => {
   it('should correctly calculate square root for integers with custom tolerance', () => {
     expect(squareRoot(4.5, 10)).toBe(2.1213203436);
     expect(squareRoot(217.534, 10)).toBe(14.7490338667);
+  });
+
+  it('should not overestimate the root', () => {
+    expect(squareRoot(6)).toBe(2);
+    expect(squareRoot(12)).toBe(3);
+    expect(squareRoot(35)).toBe(6);
+    expect(squareRoot(99)).toBe(10);
+    expect(squareRoot(6, 1)).toBe(2.4);
+    expect(squareRoot(12, 2)).toBe(3.46);
+  });
+
+  it('should match Math.sqrt for small, large and fractional numbers', () => {
+    expect(squareRoot(0.25, 10)).toBe(0.5);
+    expect(squareRoot(0.0001, 10)).toBe(0.01);
+    expect(squareRoot(1e12)).toBe(1e6);
+    expect(squareRoot(1e300)).toBe(1e150);
+
+    for (let n = 1; n <= 1000; n += 1) {
+      expect(squareRoot(n, 6)).toBe(Math.round(Math.sqrt(n) * 1e6) / 1e6);
+    }
   });
 });
