@@ -17,22 +17,20 @@ export default function squareRoot(number, tolerance = 0) {
     return 0;
   }
 
-  // We will start approximation from value 1.
-  let root = 1;
+  // We will start approximation from value 1. After the first Newton step the
+  // approximation is never below the real root (AM-GM inequality), and every
+  // next step moves it down towards the root. So we iterate while it keeps
+  // decreasing, which gives the root with full floating point precision.
+  //
+  // Stopping when |number - root^2| <= delta is not enough: that bounds the error
+  // of the square, not of the root, and gives e.g. squareRoot(6) = 3.
+  let root = (1 + number) / 2;
 
-  // Delta is a desired distance between the number and the square of the root.
-  // - if tolerance=0 then delta=1
-  // - if tolerance=1 then delta=0.1
-  // - if tolerance=2 then delta=0.01
-  // - and so on...
-  const requiredDelta = 1 / (10 ** tolerance);
-
-  // Approximating the root value to the point when we get a desired precision.
-  while (Math.abs(number - (root ** 2)) > requiredDelta) {
-    // Newton's method reduces in this case to the so-called Babylonian method.
-    // These methods generally yield approximate results, but can be made arbitrarily
-    // precise by increasing the number of calculation steps.
-    root -= ((root ** 2) - number) / (2 * root);
+  // Newton's method reduces in this case to the so-called Babylonian method.
+  let nextRoot = (root + (number / root)) / 2;
+  while (nextRoot < root) {
+    root = nextRoot;
+    nextRoot = (root + (number / root)) / 2;
   }
 
   // Cut off undesired floating digits and return the root value.
