@@ -1,7 +1,7 @@
 # Hamming Distance
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 the Hamming distance between two strings of equal length is the 
 number of positions at which the corresponding symbols are 

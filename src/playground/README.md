@@ -1,7 +1,7 @@
 # Playground
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 You may use `playground.js` file to play with data
 structures and algorithms. The code from `playground.js` may

@@ -1,7 +1,7 @@
 # Tower of Hanoi
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 The Tower of Hanoi (also called the Tower of Brahma or Lucas'
 Tower and sometimes pluralized) is a mathematical game or puzzle. 

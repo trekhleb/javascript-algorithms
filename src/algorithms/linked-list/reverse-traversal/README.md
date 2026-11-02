@@ -3,7 +3,7 @@
 _Read this in other languages:_
 [_中文_](README.zh-CN.md),
 [_Português_](README.pt-BR.md),
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 The task is to traverse the given linked list in reversed order.
 

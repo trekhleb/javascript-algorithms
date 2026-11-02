@@ -1,7 +1,7 @@
 # Longest Increasing Subsequence
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 The longest increasing subsequence problem is to find a subsequence of a 
 given sequence in which the subsequence's elements are in sorted order, 

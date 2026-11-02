@@ -2,7 +2,7 @@
 
 _Bunu diğer dillerde okuyun:_
 [_简体中文_](README.zh-CN.md), [français](README.fr-FR.md),
-[_తెలుగు_](README.tel-IN.md).
+[_తెలుగు_](README.te-IN.md).
 
 Faktöriyel, matematikte, sağına ünlem işareti konulmuş sayıya
 verilen isim, daha genel olan Gama fonksiyonunun tam sayılarla

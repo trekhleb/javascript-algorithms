@@ -1,7 +1,7 @@
 # Liu Hui's π Algorithm
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 Liu Hui remarked in his commentary to The Nine Chapters on the Mathematical Art,
 that the ratio of the circumference of an inscribed hexagon to the diameter of 

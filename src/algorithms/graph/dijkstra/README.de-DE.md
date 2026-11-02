@@ -11,7 +11,7 @@ _Lies dies in anderen Sprachen:_
 [_Français_](README.fr-FR.md),
 [_Deutsch_](README.de-DE.md),
 [_עברית_](README.he-IL.md),
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 Der Dijkstra-Algorithmus ist ein Algorithmus zur Bestimmung der kürzesten Wege zwischen Knoten in einem Graphen, der beispielsweise Straßennetze darstellen kann.
 

@@ -1,7 +1,7 @@
 # N-Queens Problem
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 The **eight queens puzzle** is the problem of placing eight chess queens 
 on an `8×8` chessboard so that no two queens threaten each other. 

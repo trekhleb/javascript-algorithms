@@ -1,7 +1,7 @@
 # Radian
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 The **radian** (symbol **rad**) is the unit for measuring angles, and is the 
 standard unit of angular measure used in many areas of mathematics.

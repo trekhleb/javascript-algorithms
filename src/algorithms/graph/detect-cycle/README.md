@@ -1,7 +1,7 @@
 # Detect Cycle in Graphs
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 In graph theory, a **cycle** is a path of edges and vertices 
 wherein a vertex is reachable from itself. There are several 

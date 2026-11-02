@@ -1,7 +1,7 @@
 # Combinations
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 When the order doesn't matter, it is a **Combination**.
 

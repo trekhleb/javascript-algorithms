@@ -6,7 +6,7 @@ _Lee este artículo en otros idiomas:_
 [_日本語_](README.ja-JP.md),
 [_Português_](README.pt-BR.md)
 [_English_](README.md),
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 En ciencias de la computación una **lista enlazada** es una  colección lineal 
 de elementos, en los cuales el orden lineal no es dado por

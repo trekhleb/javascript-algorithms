@@ -2,7 +2,7 @@
 
 _Read this in other languages:_
 [_Português_](README.pt-BR.md),
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 A **red–black tree** is a kind of self-balancing binary search 
 tree in computer science. Each node of the binary tree has 

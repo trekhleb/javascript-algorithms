@@ -1,7 +1,7 @@
 # Jump Search
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 Like Binary Search, **Jump Search** (or **Block Search**) is a searching algorithm 
 for sorted arrays. The basic idea is to check fewer elements (than linear search) 

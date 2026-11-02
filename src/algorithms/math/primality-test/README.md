@@ -1,7 +1,7 @@
 # Primality Test
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 A **prime number** (or a **prime**) is a natural number greater than `1` that 
 cannot be formed by multiplying two smaller natural numbers. A natural number 

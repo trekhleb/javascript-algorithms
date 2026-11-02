@@ -2,7 +2,7 @@
 
 _Read this in other languages:_
 [_Português_](README.pt-BR.md),
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 Bubble sort, sometimes referred to as sinking sort, is a
 simple sorting algorithm that repeatedly steps through

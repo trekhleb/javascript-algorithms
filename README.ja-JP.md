@@ -28,7 +28,7 @@ _Read this in other languages:_
 [_Deutsch_](README.de-DE.md),
 [_Uzbek_](README.uz-UZ.md)
 [_עברית_](README.he-IL.md),
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 ## データ構造
 

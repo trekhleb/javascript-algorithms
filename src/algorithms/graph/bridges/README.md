@@ -1,7 +1,7 @@
 # Bridges in Graph
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 In graph theory, a **bridge**, **isthmus**, **cut-edge**, or **cut arc** is an edge 
 of a graph whose deletion increases its number of connected components. Equivalently, 

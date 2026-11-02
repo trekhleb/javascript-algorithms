@@ -9,7 +9,7 @@ _Read this in other languages:_
 [_Español_](README.es-ES.md),
 [_Türkçe_](README.tr-TR.md),
 [_Українська_](README.uk-UA.md),
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 In computer science, a **linked list** is a linear collection
 of data elements, in which linear order is not given by

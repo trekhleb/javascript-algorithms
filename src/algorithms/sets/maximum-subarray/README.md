@@ -1,7 +1,7 @@
 # Maximum subarray problem
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 The maximum subarray problem is the task of finding the contiguous
 subarray within a one-dimensional array, `a[1...n]`, of numbers

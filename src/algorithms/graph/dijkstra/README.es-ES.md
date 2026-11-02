@@ -11,7 +11,7 @@ _Lee esto en otros idiomas:_
 [_Français_](README.fr-FR.md),
 [_Deutsch_](README.de-DE.md),
 [_עברית_](README.he-IL.md),
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 El algoritmo de Dijkstra es un algoritmo para encontrar los caminos más cortos entre nodos en un grafo, que puede representar, por ejemplo, redes de carreteras.
 

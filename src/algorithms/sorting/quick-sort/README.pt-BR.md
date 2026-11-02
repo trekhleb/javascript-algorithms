@@ -3,7 +3,7 @@
 _Leia isso em outros idiomas:_
 [_简体中文_](README.zh-CN.md),
 [_English_](README.md),
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 Quicksort é um algoritmo de dividir para conquistar.
 Quicksort primeiro divide uma grande matriz em duas menores

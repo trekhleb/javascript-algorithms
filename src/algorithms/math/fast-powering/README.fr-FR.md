@@ -2,7 +2,7 @@
 
 _Read this in other languages:_
 [english](README.md),
-[_తెలుగు_](README.tel-IN.md).
+[_తెలుగు_](README.te-IN.md).
 
 En algèbre, une **puissance** d'un nombre est le résultat de la multiplication répétée de ce nombre avec lui-même.
 

@@ -4,7 +4,7 @@ _Read this in other languages:_
 [_Русский_](README.ru-RU.md),
 [_Português_](README.pt-BR.md),
 [_Українська_](README.uk-UA.md),
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 A **bloom filter** is a space-efficient probabilistic
 data structure designed to test whether an element

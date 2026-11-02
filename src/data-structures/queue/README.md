@@ -8,7 +8,7 @@ _Read this in other languages:_
 [_Português_](README.pt-BR.md),
 [_한국어_](README.ko-KR.md),
 [_Українська_](README.uk-UA.md),
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 In computer science, a **queue** is a particular kind of abstract data
 type or collection in which the entities in the collection are

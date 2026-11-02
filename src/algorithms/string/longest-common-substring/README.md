@@ -1,7 +1,7 @@
 # Longest Common Substring Problem
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 The longest common substring problem is to find the longest string 
 (or strings) that is a substring (or are substrings) of two or more 

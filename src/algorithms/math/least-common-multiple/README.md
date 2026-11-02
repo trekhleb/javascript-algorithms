@@ -1,7 +1,7 @@
 # Least common multiple
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 In arithmetic and number theory, the least common multiple, 
 lowest common multiple, or smallest common multiple of 

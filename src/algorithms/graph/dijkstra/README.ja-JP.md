@@ -11,7 +11,7 @@ _他の言語で読む:_
 [_Français_](README.fr-FR.md),
 [_Deutsch_](README.de-DE.md),
 [_עברית_](README.he-IL.md),
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 ダイクストラ法は、グラフ内のノード間の最短経路を見つけるためのアルゴリズムです。
 例えば道路網などを表すことができます。

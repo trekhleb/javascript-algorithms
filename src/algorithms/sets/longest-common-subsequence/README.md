@@ -1,7 +1,7 @@
 # Longest common subsequence problem
 
 _Read this in other languages:_
-[_తెలుగు_](README.tel-IN.md)
+[_తెలుగు_](README.te-IN.md)
 
 The longest common subsequence (LCS) problem is the problem of finding 
 the longest subsequence common to all sequences in a set of sequences 
