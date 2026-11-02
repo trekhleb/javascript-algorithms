@@ -347,4 +347,4 @@ npm test -- 'playground'
 
 [@trekhleb](https://trekhleb.dev)
 
-כמה [פרויקטים](https://trekhleb.dev/projects/) ו[מאמרים](https://trekhleb.dev/blog/) נוספים על JavaScript ואלגוריתמים ב-[trekhleb.dev](https://trekhleb.dev)* ‏`B` [משחק הקפיצות](src/algorithms/uncategor * ‏`B` [חיפוש בינארי](src/algorithms
+[פרויקטים](https://trekhleb.dev/projects/) ו[מאמרים](https://trekhleb.dev/blog/) נוספים על JavaScript ואלגוריתמים באתר [trekhleb.dev](https://trekhleb.dev)
