@@ -40,9 +40,6 @@ _Read this in other languages:_
 [_Uzbek_](README.uz-UZ.md),
 [_עברית_](README.he-IL.md)
 
-*☝ Note that this project is meant to be used for learning and researching purposes
-only, and it is **not** meant to be used for production.*
-
 ## Data Structures
 
 A data structure is a particular way of organizing and storing data in a computer so that it can
@@ -58,6 +55,7 @@ Remember that each data has its own trade-offs. And you need to pay attention mo
 * `B` [Doubly Linked List](src/data-structures/doubly-linked-list)
 * `B` [Queue](src/data-structures/queue)
 * `B` [Stack](src/data-structures/stack)
+* `B` [Deque](src/data-structures/deque) - double-ended queue
 * `B` [Hash Table](src/data-structures/hash-table)
 * `B` [Heap](src/data-structures/heap) - max and min heap versions
 * `B` [Priority Queue](src/data-structures/priority-queue)
@@ -366,14 +364,17 @@ Below is the list of some of the most used Big O notations and their performance
 | **Counting sort**     | n + r           | n + r               | n + r               | n + r     | Yes       | r - biggest number in array |
 | **Radix sort**        | n * k           | n * k               | n * k               | n + k     | Yes       | k - length of longest key |
 
-## Project Backers
+<!-- ## Project Backers
 
 > You may support this project via ❤️️ [GitHub](https://github.com/sponsors/trekhleb) or ❤️️ [Patreon](https://www.patreon.com/trekhleb).
 
-[Folks who are backing this project](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 1`
+[Folks who are backing this project](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 1` -->
 
 ## Author
 
 [@trekhleb](https://trekhleb.dev)
 
-A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev)
+A few more [projects](https://trekhleb.dev/projects/) and [articles](https://trekhleb.dev/blog/) about JavaScript and algorithms on [trekhleb.dev](https://trekhleb.dev):
+
+- 🧠 [yesbrainer.ai](https://yesbrainer.ai/) – council of AI models for the decisions that aren’t no-brainers (BYOK, private, no account)
+- ✍🏻 [okso.app](https://okso.app/) – drawing app to express, grasp, and organize your thoughts and ideas

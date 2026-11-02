@@ -3,6 +3,10 @@ import factorial from '../../../math/factorial/factorial';
 
 describe('combineWithRepetitions', () => {
   it('should combine string with repetitions', () => {
+    expect(combineWithRepetitions(['A', 'B'], 0)).toEqual([
+      [],
+    ]);
+
     expect(combineWithRepetitions(['A'], 1)).toEqual([
       ['A'],
     ]);
@@ -24,6 +28,8 @@ describe('combineWithRepetitions', () => {
       ['A', 'B', 'B'],
       ['B', 'B', 'B'],
     ]);
+
+    expect(combineWithRepetitions(['A', 'B'], -1)).toEqual([]);
 
     expect(combineWithRepetitions(['A', 'B', 'C'], 2)).toEqual([
       ['A', 'A'],

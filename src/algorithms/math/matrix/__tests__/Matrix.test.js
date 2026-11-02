@@ -4,16 +4,16 @@ describe('Matrix', () => {
   it('should throw when trying to add matrices of invalid shapes', () => {
     expect(
       () => mtrx.dot([0], [1]),
-    ).toThrowError('Invalid matrix format');
+    ).toThrow('Invalid matrix format');
     expect(
       () => mtrx.dot([[0]], [1]),
-    ).toThrowError('Invalid matrix format');
+    ).toThrow('Invalid matrix format');
     expect(
       () => mtrx.dot([[[0]]], [[1]]),
-    ).toThrowError('Matrix is not of 2D shape');
+    ).toThrow('Matrix is not of 2D shape');
     expect(
       () => mtrx.dot([[0]], [[1], [2]]),
-    ).toThrowError('Matrices have incompatible shape for multiplication');
+    ).toThrow('Matrices have incompatible shape for multiplication');
   });
 
   it('should calculate matrices dimensions', () => {
@@ -252,7 +252,7 @@ describe('Matrix', () => {
   it('should throw when trying to transpose non 2D matrix', () => {
     expect(() => {
       mtrx.t([[[1]]]);
-    }).toThrowError('Matrix is not of 2D shape');
+    }).toThrow('Matrix is not of 2D shape');
   });
 
   it('should add two matrices', () => {
@@ -316,11 +316,11 @@ describe('Matrix', () => {
   });
 
   it('should throw when trying to add matrices of different shape', () => {
-    expect(() => mtrx.add([[0]], [[[0]]])).toThrowError(
+    expect(() => mtrx.add([[0]], [[[0]]])).toThrow(
       'Matrices have different dimensions',
     );
 
-    expect(() => mtrx.add([[0]], [[0, 0]])).toThrowError(
+    expect(() => mtrx.add([[0]], [[0, 0]])).toThrow(
       'Matrices have different shapes',
     );
   });
@@ -380,11 +380,11 @@ describe('Matrix', () => {
   });
 
   it('should throw when trying to multiply matrices element-wise of different shape', () => {
-    expect(() => mtrx.mul([[0]], [[[0]]])).toThrowError(
+    expect(() => mtrx.mul([[0]], [[[0]]])).toThrow(
       'Matrices have different dimensions',
     );
 
-    expect(() => mtrx.mul([[0]], [[0, 0]])).toThrowError(
+    expect(() => mtrx.mul([[0]], [[0, 0]])).toThrow(
       'Matrices have different shapes',
     );
   });
@@ -444,11 +444,11 @@ describe('Matrix', () => {
   });
 
   it('should throw when trying to subtract matrices element-wise of different shape', () => {
-    expect(() => mtrx.sub([[0]], [[[0]]])).toThrowError(
+    expect(() => mtrx.sub([[0]], [[[0]]])).toThrow(
       'Matrices have different dimensions',
     );
 
-    expect(() => mtrx.sub([[0]], [[0, 0]])).toThrowError(
+    expect(() => mtrx.sub([[0]], [[0, 0]])).toThrow(
       'Matrices have different shapes',
     );
   });

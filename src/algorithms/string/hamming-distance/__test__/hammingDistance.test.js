@@ -6,7 +6,7 @@ describe('hammingDistance', () => {
       hammingDistance('a', 'aa');
     };
 
-    expect(compareStringsOfDifferentLength).toThrowError();
+    expect(compareStringsOfDifferentLength).toThrow();
   });
 
   it('should calculate difference between two strings', () => {

@@ -75,7 +75,7 @@ function hash(key, arraySize) {
 
 The `hash()` method is not as efficient as it might be. Other than the 
 character conversion, there are two multiplications and an addition inside 
-the loop. We can eliminate one multiplication by using **Horner's method*:
+the loop. We can eliminate one multiplication by using **Horner's method**:
  
 > a<sub>4</sub> * x<sup>4</sup> + a<sub>3</sub> * x<sup>3</sup> + a<sub>2</sub> * x<sup>2</sup> + a<sub>1</sub> * x<sup>1</sup> + a<sub>0</sub> = (((a<sub>4</sub> * x + a<sub>3</sub>) * x + a<sub>2</sub>) * x + a<sub>1</sub>) * x + a<sub>0</sub>
 

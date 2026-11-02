@@ -28,8 +28,6 @@ _Lies dies in anderen Sprachen:_
 [_Uzbek_](README.uz-UZ.md)
 [_עברית_](README.he-IL.md)
 
-_☝ Beachte, dass dieses Projekt nur für Lern- und Forschungszwecke gedacht ist und **nicht** für den produktiven Einsatz verwendet werden soll_
-
 ## Datenstrukturen
 
 Eine Datenstruktur ist eine bestimmte Art und Weise, Daten in einem Computer so zu organisieren und zu speichern, dass sie

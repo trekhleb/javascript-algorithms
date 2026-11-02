@@ -27,9 +27,6 @@ _Đọc bằng ngôn ngữ khác:_
 [_Arabic_](README.ar-AR.md)
 [_עברית_](README.he-IL.md)
 
-*☝ Dự án này chỉ được sử dụng cho mục đích học tập và nghiên cứu, **không** được dùng
-cho mục đích thương mại.*
-
 ## Cấu Trúc Dữ Liệu
 
 Cấu trúc dữ liệu là một cách cụ thể để tổ chức và lưu trữ dữ liệu trong máy tính để nó có thể

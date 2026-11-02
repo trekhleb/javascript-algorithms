@@ -4,13 +4,13 @@ describe('kMeans', () => {
   it('should throw an error on invalid data', () => {
     expect(() => {
       KMeans();
-    }).toThrowError('The data is empty');
+    }).toThrow('The data is empty');
   });
 
   it('should throw an error on inconsistent data', () => {
     expect(() => {
       KMeans([[1, 2], [1]], 2);
-    }).toThrowError('Matrices have different shapes');
+    }).toThrow('Matrices have different shapes');
   });
 
   it('should find the nearest neighbour', () => {

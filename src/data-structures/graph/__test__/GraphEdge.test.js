@@ -7,8 +7,6 @@ describe('GraphEdge', () => {
     const endVertex = new GraphVertex('B');
     const edge = new GraphEdge(startVertex, endVertex);
 
-    expect(edge.getKey()).toBe('A_B');
-    expect(edge.toString()).toBe('A_B');
     expect(edge.startVertex).toEqual(startVertex);
     expect(edge.endVertex).toEqual(endVertex);
     expect(edge.weight).toEqual(0);
@@ -38,5 +36,50 @@ describe('GraphEdge', () => {
     expect(edge.startVertex).toEqual(vertexB);
     expect(edge.endVertex).toEqual(vertexA);
     expect(edge.weight).toEqual(10);
+  });
+
+  it('should return edges names as key', () => {
+    const edge = new GraphEdge(new GraphVertex('A'), new GraphVertex('B'), 0);
+
+    expect(edge.getKey()).toBe('A_B');
+    expect(edge.toString()).toBe('A_B');
+  });
+
+  it('should return custom key if defined', () => {
+    const edge = new GraphEdge(new GraphVertex('A'), new GraphVertex('B'), 0, 'custom_key');
+
+    expect(edge.getKey()).toEqual('custom_key');
+    expect(edge.toString()).toEqual('custom_key');
+  });
+
+  it('should execute toString on key  when calling toString on edge', () => {
+    const customKey = {
+      toString() { return 'custom_key'; },
+    };
+
+    const edge = new GraphEdge(new GraphVertex('A'), new GraphVertex('B'), 0, customKey);
+
+    expect(edge.getKey()).toEqual(customKey);
+    expect(edge.toString()).toEqual('custom_key');
+  });
+
+  it('should recompute auto-generated key to reflect direction after reverse', () => {
+    const edge = new GraphEdge(new GraphVertex('A'), new GraphVertex('B'));
+
+    expect(edge.getKey()).toBe('A_B');
+
+    edge.reverse();
+
+    expect(edge.getKey()).toBe('B_A');
+  });
+
+  it('should preserve custom key after reverse', () => {
+    const edge = new GraphEdge(new GraphVertex('A'), new GraphVertex('B'), 0, 'custom_key');
+
+    expect(edge.getKey()).toBe('custom_key');
+
+    edge.reverse();
+
+    expect(edge.getKey()).toBe('custom_key');
   });
 });

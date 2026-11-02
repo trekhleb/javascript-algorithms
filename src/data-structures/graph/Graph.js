@@ -13,7 +13,13 @@ export default class Graph {
    * @returns {Graph}
    */
   addVertex(newVertex) {
-    this.vertices[newVertex.getKey()] = newVertex;
+    const key = newVertex.getKey();
+
+    if (this.vertices[key]) {
+      throw new Error('Vertex has already been added before');
+    }
+
+    this.vertices[key] = newVertex;
 
     return this;
   }
@@ -138,6 +144,7 @@ export default class Graph {
    */
   reverse() {
     /** @param {GraphEdge} edge */
+    const reversedEdges = [];
     this.getAllEdges().forEach((edge) => {
       // Delete straight edge from graph and from vertices.
       this.deleteEdge(edge);
@@ -145,7 +152,11 @@ export default class Graph {
       // Reverse the edge.
       edge.reverse();
 
-      // Add reversed edge back to the graph and its vertices.
+      // Add reversed edge to the list of reversed edges.
+      reversedEdges.push(edge);
+    });
+    reversedEdges.forEach((edge) => {
+      // Add reversed edge to the graph.
       this.addEdge(edge);
     });
 

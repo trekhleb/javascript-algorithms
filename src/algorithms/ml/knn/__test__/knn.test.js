@@ -4,28 +4,28 @@ describe('kNN', () => {
   it('should throw an error on invalid data', () => {
     expect(() => {
       kNN();
-    }).toThrowError('Either dataSet or labels or toClassify were not set');
+    }).toThrow('Either dataSet or labels or toClassify were not set');
   });
 
   it('should throw an error on invalid labels', () => {
     const noLabels = () => {
       kNN([[1, 1]]);
     };
-    expect(noLabels).toThrowError('Either dataSet or labels or toClassify were not set');
+    expect(noLabels).toThrow('Either dataSet or labels or toClassify were not set');
   });
 
   it('should throw an error on not giving classification vector', () => {
     const noClassification = () => {
       kNN([[1, 1]], [1]);
     };
-    expect(noClassification).toThrowError('Either dataSet or labels or toClassify were not set');
+    expect(noClassification).toThrow('Either dataSet or labels or toClassify were not set');
   });
 
   it('should throw an error on not giving classification vector', () => {
     const inconsistent = () => {
       kNN([[1, 1]], [1], [1]);
     };
-    expect(inconsistent).toThrowError('Matrices have different shapes');
+    expect(inconsistent).toThrow('Matrices have different shapes');
   });
 
   it('should find the nearest neighbour', () => {

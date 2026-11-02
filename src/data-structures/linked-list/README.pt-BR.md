@@ -149,7 +149,7 @@ end ReverseTraversal
 | :----: | :------: | :------: | :-----: |
 |  O(n)  |  O(n)    |  O(1)    |  O(n)   |
 
-### Complexidade de Espaçø
+### Complexidade de Espaço
 
 O(n)
 

@@ -319,6 +319,6 @@ describe('RedBlackTree', () => {
       tree.remove(1);
     };
 
-    expect(removeNodeFromRedBlackTree).toThrowError();
+    expect(removeNodeFromRedBlackTree).toThrow();
   });
 });

@@ -1,7 +1,7 @@
 import nQueens from '../nQueens';
 
 describe('nQueens', () => {
-  it('should not hae solution for 3 queens', () => {
+  it('should not have solution for 3 queens', () => {
     const solutions = nQueens(3);
     expect(solutions.length).toBe(0);
   });
