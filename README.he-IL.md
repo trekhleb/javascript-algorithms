@@ -349,12 +349,6 @@ npm test -- 'playground'
 
 </div>
 
-## תומכי הפרויקט
-
-> אתה יכול לתמוך בפרויקט זה דרך ❤️️ [GitHub](https://github.com/sponsors/trekhleb) או ❤️️ [Patreon](https://www.patreon.com/trekhleb).
-
-[אנשים שתומכים בפרויקט זה](https://github.com/trekhleb/javascript-algorithms/blob/master/BACKERS.md) `∑ = 1`
-
 ## מחבר
 
 [@trekhleb](https://trekhleb.dev)
