@@ -50,7 +50,7 @@ _קרא זאת בשפות אחרות:_
   * ‏`A` [עץ מקטעים](src/data-structures/tree/segment-tree) - עם דוגמאות לשאילתות מינימום/מקסימום/סכום של טווח
   * ‏`A` [עץ פנוויק](src/data-structures/tree/fenwick-tree) (עץ בינארי מאונדקס)
 * ‏`A` [גרף](src/data-structures/graph) (מכוון ולא מכוון)
-* ‏`A` [קבוצה מופרדת](src/data-structures/disjoint-set) - מבנה נתונים של איחוד-מציאה או מיזוג-מציאה
+* ‏`A` [איחוד קבוצות זרות](src/data-structures/disjoint-set) - מבנה נתונים של איחוד-מציאה או מיזוג-מציאה
 * ‏`A` [מסנן בלום](src/data-structures/bloom-filter)
 * ‏`A` [מטמון LRU](src/data-structures/lru-cache/) - מטמון פחות שימוש לאחרונה (LRU)
 
@@ -65,18 +65,18 @@ _קרא זאת בשפות אחרות:_
 * **מתמטיקה**
   * ‏`B` [מניפולציה על ביטים](src/algorithms/math/bits) - קביעה/עדכון/ניקוי ביטים, הכפלה/חילוק ב-2, הפיכה לשלילי וכו'
   * ‏`B` [נקודה צפה בינארית](src/algorithms/math/binary-floating-point) - ייצוג בינארי של מספרים בנקודה צפה
-  * ‏`B` [פקטוריאל](src/algorithms/math/factorial)
+  * ‏`B` [עצרת](src/algorithms/math/factorial)
   * ‏`B` [מספר פיבונאצ'י](src/algorithms/math/fibonacci) - גרסאות קלאסיות וסגורות
   * ‏`B` [גורמים ראשוניים](src/algorithms/math/prime-factors) - מציאת גורמים ראשוניים וספירתם באמצעות משפט הארדי-רמנוג'אן
   * ‏`B` [בדיקת ראשוניות](src/algorithms/math/primality-test) (שיטת החלוקה הניסיונית)
   * ‏`B` [אלגוריתם אוקלידס](src/algorithms/math/euclidean-algorithm) - חישוב המחלק המשותף הגדול ביותר (GCD)
-  * ‏`B` [המכפיל המשותף הקטן ביותר](src/algorithms/math/least-common-multiple) (LCM)
-  * ‏`B` [נפה של ארטוסתנס](src/algorithms/math/sieve-of-eratosthenes) - מציאת כל המספרים הראשוניים עד לגבול כלשהו
-  * ‏`B` [האם חזקה של שתיים](src/algorithms/math/is-power-of-two) - בדיקה אם מספר הוא חזקה של שתיים (אלגוריתמים נאיביים וביטיים)
+  * ‏`B` [הכפולה המשותפת הקטנה ביותר](src/algorithms/math/least-common-multiple) (LCM)
+  * ‏`B` [הנפה של ארטוסתנס](src/algorithms/math/sieve-of-eratosthenes) - מציאת כל המספרים הראשוניים עד לגבול כלשהו
+  * ‏`B` [האם חזקה של שתיים](src/algorithms/math/is-power-of-two) - בדיקה אם מספר הוא חזקה של שתיים (אלגוריתמים נאיביים ופתרונות באמצעות פעולות על ביטים)
   * ‏`B` [משולש פסקל](src/algorithms/math/pascal-triangle)
   * ‏`B` [מספר מרוכב](src/algorithms/math/complex-number) - מספרים מרוכבים ופעולות בסיסיות עליהם
   * ‏`B` [רדיאן ומעלות](src/algorithms/math/radian) - המרה מרדיאנים למעלות ובחזרה
-  * ‏`B` [חזקה מהירה](src/algorithms/math/fast-powering)
+  * ‏`B` [העלאה מהירה בחזקה](src/algorithms/math/fast-powering)
   * ‏`B` [שיטת הורנר](src/algorithms/math/horner-method) - הערכת פולינום
   * ‏`B` [מטריצות](src/algorithms/math/matrix) - מטריצות ופעולות בסיסיות על מטריצות (כפל, טרנספוזיציה וכו')
   * ‏`B` [מרחק אוקלידי](src/algorithms/math/euclidean-distance) - מרחק בין שתי נקודות/וקטורים/מטריצות
@@ -86,23 +86,23 @@ _קרא זאת בשפות אחרות:_
   * ‏`A` [התמרת פורייה הבדידה](src/algorithms/math/fourier-transform) - פירוק פונקציה של זמן (אות) לתדרים המרכיבים אותה
 * **קבוצות**
   * ‏`B` [מכפלה קרטזית](src/algorithms/sets/cartesian-product) - מכפלה של מספר קבוצות
-  * ‏`B` [ערבוב פישר-ייטס](src/algorithms/sets/fisher-yates) - תמורה אקראית של רצף סופי
-  * ‏`A` [קבוצת חזקה](src/algorithms/sets/power-set) - כל תתי הקבוצות של קבוצה (פתרונות ביטיים, מעקב לאחור וקסקדה)
+  * ‏`B` [ערבוב פישר-ייטס](src/algorithms/sets/fisher-yates) - תמורה אקראית של סדרה סופית
+  * ‏`A` [קבוצת חזקה](src/algorithms/sets/power-set) - כל תתי הקבוצות של קבוצה (פתרונות ביטיים, מעקב לאחור ופתרון מדורג (cascading))
   * ‏`A` [תמורות](src/algorithms/sets/permutations) (עם ובלי חזרות)
   * ‏`A` [צירופים](src/algorithms/sets/combinations) (עם ובלי חזרות)
-  * ‏`A` [תת-רצף משותף ארוך ביותר](src/algorithms/sets/longest-common-subsequence) (LCS)
-  * ‏`A` [תת-רצף עולה ארוך ביותר](src/algorithms/sets/longest-increasing-subsequence)
-  * ‏`A` [על-רצף משותף קצר ביותר](src/algorithms/sets/shortest-common-supersequence) (SCS)
+  * ‏`A` [תת-סדרה משותפת ארוכה ביותר](src/algorithms/sets/longest-common-subsequence) (LCS)
+  * ‏`A` [תת-סדרה עולה ארוכה ביותר](src/algorithms/sets/longest-increasing-subsequence)
+  * ‏`A` [על-סדרה משותפת קצרה ביותר](src/algorithms/sets/shortest-common-supersequence) (SCS)
   * ‏`A` [בעיית התרמיל](src/algorithms/sets/knapsack-problem) - "0/1" ו"לא מוגבל"
-  * ‏`A` [תת-מערך מקסימלי](src/algorithms/sets/maximum-subarray) - "כוח ברוטלי" ו"תכנות דינמי" (Kadane) גרסאות
+  * ‏`A` [תת-מערך מקסימלי](src/algorithms/sets/maximum-subarray) - גרסאות "כוח גס" ו"תכנות דינמי" (Kadane)
   * ‏`A` [סכום צירוף](src/algorithms/sets/combination-sum) - מציאת כל הצירופים שיוצרים סכום ספציפי
 * **מחרוזות**
   * ‏`B` [מרחק המינג](src/algorithms/string/hamming-distance) - מספר העמדות שבהן הסמלים שונים
   * ‏`B` [פלינדרום](src/algorithms/string/palindrome) - בדיקה אם המחרוזת זהה בקריאה לאחור
-  * ‏`A` [מרחק לוונשטיין](src/algorithms/string/levenshtein-distance) - מרחק העריכה המינימלי בין שתי רצפים
+  * ‏`A` [מרחק לוונשטיין](src/algorithms/string/levenshtein-distance) - מרחק העריכה המינימלי בין שתי סדרות
   * ‏`A` [אלגוריתם קנות'-מוריס-פראט](src/algorithms/string/knuth-morris-pratt) (אלגוריתם KMP) - חיפוש תת-מחרוזת (התאמת תבנית)
   * ‏`A` [אלגוריתם Z](src/algorithms/string/z-algorithm) - חיפוש תת-מחרוזת (התאמת תבנית)
-  * ‏`A` [אלגוריתם רבין קארפ](src/algorithms/string/rabin-karp) - חיפוש תת-מחרוזת
+  * ‏`A` [אלגוריתם רבין-קארפ](src/algorithms/string/rabin-karp) - חיפוש תת-מחרוזת
   * ‏`A` [תת-מחרוזת משותפת ארוכה ביותר](src/algorithms/string/longest-common-substring)
   * ‏`A` [התאמת ביטוי רגולרי](src/algorithms/string/regular-expression-matching)
 * **חיפושים**
@@ -117,7 +117,7 @@ _קרא זאת בשפות אחרות:_
   * ‏`B` [מיון ערימה](src/algorithms/sorting/heap-sort)
   * ‏`B` [מיון מיזוג](src/algorithms/sorting/merge-sort)
   * ‏`B` [מיון מהיר](src/algorithms/sorting/quick-sort) - יישומים במקום ולא במקום
-  * ‏`B` [מיון צדפות](src/algorithms/sorting/shell-sort)
+  * ‏`B` [מיון של](src/algorithms/sorting/shell-sort) (Shell)
   * ‏`B` [מיון ספירה](src/algorithms/sorting/counting-sort)
   * ‏`B` [מיון בסיס](src/algorithms/sorting/radix-sort)
   * ‏`B` [מיון דלי](src/algorithms/sorting/bucket-sort)
@@ -134,7 +134,7 @@ _קרא זאת בשפות אחרות:_
   * ‏`A` [אלגוריתם דייקסטרה](src/algorithms/graph/dijkstra) - מציאת המסלולים הקצרים ביותר לכל קודקודי הגרף מקודקוד יחיד
   * ‏`A` [אלגוריתם בלמן-פורד](src/algorithms/graph/bellman-ford) - מציאת המסלולים הקצרים ביותר לכל קודקודי הגרף מקודקוד יחיד
   * ‏`A` [אלגוריתם פלויד-וורשל](src/algorithms/graph/floyd-warshall) - מציאת המסלולים הקצרים ביותר בין כל זוגות הקודקודים
-  * ‏`A` [זיהוי מעגל](src/algorithms/graph/detect-cycle) - עבור גרפים מכוונים ולא מכוונים (גרסאות מבוססות DFS וקבוצה מופרדת)
+  * ‏`A` [זיהוי מעגל](src/algorithms/graph/detect-cycle) - עבור גרפים מכוונים ולא מכוונים (גרסאות מבוססות DFS ואיחוד קבוצות זרות)
   * ‏`A` [אלגוריתם פרים](src/algorithms/graph/prim) - מציאת עץ פורש מינימלי (MST) עבור גרף לא מכוון משוקלל
   * ‏`A` [מיון טופולוגי](src/algorithms/graph/topological-sorting) - שיטת DFS
   * ‏`A` [נקודות חיתוך](src/algorithms/graph/articulation-points) - אלגוריתם טרג'ן (מבוסס DFS)
@@ -149,13 +149,13 @@ _קרא זאת בשפות אחרות:_
   * ‏`B` [צופן קיסר](src/algorithms/cryptography/caesar-cipher) - צופן החלפה פשוט
   * ‏`B` [צופן היל](src/algorithms/cryptography/hill-cipher) - צופן החלפה המבוסס על אלגברה לינארית
 * **למידת מכונה**
-  * ‏`B` [‏NanoNeuron](https://github.com/trekhleb/nano-neuron) - ‏7 פונקציות JS פשוטות שמדגימות כיצד מכונות יכולות ללמוד באמת (תפוצה קדימה/אחורה)
+  * ‏`B` [‏NanoNeuron](https://github.com/trekhleb/nano-neuron) - ‏7 פונקציות JS פשוטות שמדגימות כיצד מכונות יכולות ללמוד באמת (forward/backward propagation)
   * ‏`B` [‏k-NN](src/algorithms/ml/knn) - אלגוריתם סיווג k-השכנים הקרובים ביותר
   * ‏`B` [‏k-Means](src/algorithms/ml/k-means) - אלגוריתם אשכול k-Means
 * **עיבוד תמונה**
   * ‏`B` [‏Seam Carving](src/algorithms/image-processing/seam-carving) - אלגוריתם שינוי גודל תמונה מודע תוכן
 * **סטטיסטיקה**
-  * ‏`B` [משקל אקראי](src/algorithms/statistics/weighted-random) - בחירת פריט אקראי מהרשימה על בסיס משקלי הפריטים
+  * ‏`B` [בחירה אקראית לפי משקלות](src/algorithms/statistics/weighted-random) - בחירת פריט אקראי מהרשימה על בסיס משקלי הפריטים
 * **אלגוריתמים אבולוציוניים**
   * ‏`A` [אלגוריתם גנטי](https://github.com/trekhleb/self-parking-car-evolution) - דוגמה לאופן שבו ניתן ליישם אלגוריתם גנטי לאימון מכוניות בחניה עצמית
 * **לא מסווג**
@@ -163,9 +163,9 @@ _קרא זאת בשפות אחרות:_
   * ‏`B` [סיבוב מטריצה ריבועית](src/algorithms/uncategorized/square-matrix-rotation) - אלגוריתם במקום
   * ‏`B` [משחק הקפיצות](src/algorithms/uncategorized/jump-game) - דוגמאות למעקב לאחור, תכנות דינמי (מלמעלה למטה + מלמטה למעלה) וחמדני
   * ‏`B` [מסלולים ייחודיים](src/algorithms/uncategorized/unique-paths) - דוגמאות למעקב לאחור, תכנות דינמי ומבוססות על משולש פסקל
-  * ‏`B` [מדרגות גשם](src/algorithms/uncategorized/rain-terraces) - בעיית לכידת מי גשם (גרסאות תכנות דינמי וכוח ברוטלי)
+  * ‏`B` [מדרגות גשם](src/algorithms/uncategorized/rain-terraces) - בעיית לכידת מי גשם (גרסאות תכנות דינמי וכוח גס)
   * ‏`B` [מדרגות רקורסיביות](src/algorithms/uncategorized/recursive-staircase) - ספירת מספר הדרכים להגיע לראש (4 פתרונות)
-  * ‏`B` [הזמן הטוב ביותר לקנות ולמכור מניות](src/algorithms/uncategorized/best-time-to-buy-sell-stocks) - דוגמאות לחלוקה וכיבוש ומעבר אחד
+  * ‏`B` [הזמן הטוב ביותר לקנות ולמכור מניות](src/algorithms/uncategorized/best-time-to-buy-sell-stocks) - דוגמאות להפרד ומשול ומעבר אחד
   * ‏`A` [בעיית N-המלכות](src/algorithms/uncategorized/n-queens)
   * ‏`A` [סיור הפרש](src/algorithms/uncategorized/knight-tour)
 
@@ -173,7 +173,7 @@ _קרא זאת בשפות אחרות:_
 
 פרדיגמה אלגוריתמית היא שיטה או גישה כללית המונחת בבסיס התכנון של מחלקת אלגוריתמים. זוהי הפשטה גבוהה יותר מהמושג של אלגוריתם, בדיוק כפי שאלגוריתם הוא הפשטה גבוהה יותר מתוכנית מחשב.
 
-* **כוח ברוטלי** - בודק את כל האפשרויות ובוחר את הפתרון הטוב ביותר
+* **כוח גס** - בודק את כל האפשרויות ובוחר את הפתרון הטוב ביותר
   * ‏`B` [חיפוש לינארי](src/algorithms/search/linear-search)
   * ‏`B` [מדרגות גשם](src/algorithms/uncategorized/rain-terraces) - בעיית לכידת מי גשם
   * ‏`B` [מדרגות רקורסיביות](src/algorithms/uncategorized/recursive-staircase) - ספירת מספר הדרכים להגיע לראש
@@ -186,7 +186,7 @@ _קרא זאת בשפות אחרות:_
   * ‏`A` [אלגוריתם דייקסטרה](src/algorithms/graph/dijkstra) - מציאת המסלולים הקצרים ביותר לכל קודקודי הגרף
   * ‏`A` [אלגוריתם פרים](src/algorithms/graph/prim) - מציאת עץ פורש מינימלי (MST) עבור גרף לא מכוון משוקלל
   * ‏`A` [אלגוריתם קרוסקל](src/algorithms/graph/kruskal) - מציאת עץ פורש מינימלי (MST) עבור גרף לא מכוון משוקלל
-* **חלוקה וכיבוש** - מחלק את הבעיה לחלקים קטנים יותר ואז פותר חלקים אלה
+* **הפרד ומשול** - מחלק את הבעיה לחלקים קטנים יותר ואז פותר חלקים אלה
   * ‏`B` [חיפוש בינארי](src/algorithms/search/binary-search)
   * ‏`B` [מגדלי האנוי](src/algorithms/uncategorized/hanoi-tower)
   * ‏`B` [משולש פסקל](src/algorithms/math/pascal-triangle)
@@ -197,8 +197,8 @@ _קרא זאת בשפות אחרות:_
   * ‏`B` [חיפוש לעומק בגרף](src/algorithms/graph/depth-first-search) (DFS)
   * ‏`B` [מטריצות](src/algorithms/math/matrix) - יצירה ומעבר על מטריצות בצורות שונות
   * ‏`B` [משחק הקפיצות](src/algorithms/uncategorized/jump-game)
-  * ‏`B` [חזקה מהירה](src/algorithms/math/fast-powering)
-  * ‏`B` [הזמן הטוב ביותר לקנות ולמכור מניות](src/algorithms/uncategorized/best-time-to-buy-sell-stocks) - דוגמאות לחלוקה וכיבוש ומעבר אחד
+  * ‏`B` [העלאה מהירה בחזקה](src/algorithms/math/fast-powering)
+  * ‏`B` [הזמן הטוב ביותר לקנות ולמכור מניות](src/algorithms/uncategorized/best-time-to-buy-sell-stocks) - דוגמאות להפרד ומשול ומעבר אחד
   * ‏`A` [תמורות](src/algorithms/sets/permutations) (עם ובלי חזרות)
   * ‏`A` [צירופים](src/algorithms/sets/combinations) (עם ובלי חזרות)
   * ‏`A` [תת-מערך מקסימלי](src/algorithms/sets/maximum-subarray)
@@ -209,18 +209,18 @@ _קרא זאת בשפות אחרות:_
   * ‏`B` [מדרגות גשם](src/algorithms/uncategorized/rain-terraces) - בעיית לכידת מי גשם
   * ‏`B` [מדרגות רקורסיביות](src/algorithms/uncategorized/recursive-staircase) - ספירת מספר הדרכים להגיע לראש
   * ‏`B` [‏Seam Carving](src/algorithms/image-processing/seam-carving) - אלגוריתם שינוי גודל תמונה מודע תוכן
-  * ‏`A` [מרחק לוונשטיין](src/algorithms/string/levenshtein-distance) - מרחק העריכה המינימלי בין שתי רצפים
-  * ‏`A` [תת-רצף משותף ארוך ביותר](src/algorithms/sets/longest-common-subsequence) (LCS)
+  * ‏`A` [מרחק לוונשטיין](src/algorithms/string/levenshtein-distance) - מרחק העריכה המינימלי בין שתי סדרות
+  * ‏`A` [תת-סדרה משותפת ארוכה ביותר](src/algorithms/sets/longest-common-subsequence) (LCS)
   * ‏`A` [תת-מחרוזת משותפת ארוכה ביותר](src/algorithms/string/longest-common-substring)
-  * ‏`A` [תת-רצף עולה ארוך ביותר](src/algorithms/sets/longest-increasing-subsequence)
-  * ‏`A` [על-רצף משותף קצר ביותר](src/algorithms/sets/shortest-common-supersequence)
+  * ‏`A` [תת-סדרה עולה ארוכה ביותר](src/algorithms/sets/longest-increasing-subsequence)
+  * ‏`A` [על-סדרה משותפת קצרה ביותר](src/algorithms/sets/shortest-common-supersequence)
   * ‏`A` [בעיית התרמיל 0/1](src/algorithms/sets/knapsack-problem)
   * ‏`A` [חלוקת מספר שלם](src/algorithms/math/integer-partition)
   * ‏`A` [תת-מערך מקסימלי](src/algorithms/sets/maximum-subarray)
   * ‏`A` [אלגוריתם בלמן-פורד](src/algorithms/graph/bellman-ford) - מציאת המסלולים הקצרים ביותר לכל קודקודי הגרף
   * ‏`A` [אלגוריתם פלויד-וורשל](src/algorithms/graph/floyd-warshall) - מציאת המסלולים הקצרים ביותר בין כל זוגות הקודקודים
   * ‏`A` [התאמת ביטוי רגולרי](src/algorithms/string/regular-expression-matching)
-* **מעקב לאחור** - בדומה לכוח ברוטלי, מנסה לייצר את כל הפתרונות האפשריים, אך בכל פעם שאתה מייצר פתרון הבא אתה בודק אם הוא עומד בכל התנאים, ורק אז ממשיך לייצר פתרונות הבאים. אחרת, חוזר אחורה, והולך בנתיב אחר של מציאת פתרון. בדרך כלל מעבר DFS של מרחב המצבים משמש.
+* **מעקב לאחור** - בדומה לכוח גס, מנסה לייצר את כל הפתרונות האפשריים, אך בכל פעם שאתה מייצר פתרון הבא אתה בודק אם הוא עומד בכל התנאים, ורק אז ממשיך לייצר פתרונות הבאים. אחרת, חוזר אחורה, והולך בנתיב אחר של מציאת פתרון. בדרך כלל משתמשים במעבר DFS על מרחב המצבים.
   * ‏`B` [משחק הקפיצות](src/algorithms/uncategorized/jump-game)
   * ‏`B` [מסלולים ייחודיים](src/algorithms/uncategorized/unique-paths)
   * ‏`B` [קבוצת חזקה](src/algorithms/sets/power-set) - כל תתי הקבוצות של קבוצה
@@ -228,7 +228,7 @@ _קרא זאת בשפות אחרות:_
   * ‏`A` [בעיית N-המלכות](src/algorithms/uncategorized/n-queens)
   * ‏`A` [סיור הפרש](src/algorithms/uncategorized/knight-tour)
   * ‏`A` [סכום צירוף](src/algorithms/sets/combination-sum) - מציאת כל הצירופים שיוצרים סכום ספציפי
-* **סניף וחסום** - זוכר את הפתרון בעלות הנמוכה ביותר שנמצא בכל שלב של החיפוש המעקב לאחור, ומשתמש בעלות של הפתרון בעלות הנמוכה ביותר שנמצא עד כה כגבול תחתון על העלות של פתרון בעלות מינימלית לבעיה, על מנת לפסול פתרונות חלקיים עם עלויות גדולות יותר מהפתרון בעלות הנמוכה ביותר שנמצא עד כה. בדרך כלל מעבר BFS בשילוב עם מעבר DFS של עץ מרחב המצבים משמש.
+* **‏Branch & Bound** - זוכר את הפתרון בעלות הנמוכה ביותר שנמצא בכל שלב של החיפוש במעקב לאחור, ומשתמש בעלות של הפתרון בעלות הנמוכה ביותר שנמצא עד כה כגבול תחתון על העלות של פתרון בעלות מינימלית לבעיה, על מנת לפסול פתרונות חלקיים עם עלויות גדולות יותר מהפתרון בעלות הנמוכה ביותר שנמצא עד כה. בדרך כלל מעבר BFS בשילוב עם מעבר DFS של עץ מרחב המצבים משמש.
 
 ## כיצד להשתמש במאגר זה
 
@@ -269,12 +269,12 @@ npm i
 
 בנוסף, ודא שאתה משתמש בגרסת Node נכונה (`>=16`). אם אתה משתמש ב-[nvm](https://github.com/nvm-sh/nvm) לניהול גרסאות Node, תוכל להריץ `nvm use` מתיקיית השורש של הפרויקט והגרסה הנכונה תיבחר.
 
-**שטח משחקים**
+**מגרש משחקים**
 
 אתה יכול לשחק עם מבני נתונים ואלגוריתמים בקובץ `./src/playground/playground.js` ולכתוב
 בדיקות עבורו ב-`./src/playground/__test__/playground.test.js`.
 
-לאחר מכן פשוט הרץ את הפקודה הבאה כדי לבדוק אם קוד שטח המשחקים שלך עובד כמצופה:
+לאחר מכן פשוט הרץ את הפקודה הבאה כדי לבדוק אם קוד מגרש המשחקים שלך עובד כמצופה:
 
 ```
 npm test -- 'playground'
@@ -287,18 +287,20 @@ npm test -- 'playground'
 - [▶ מבני נתונים ואלגוריתמים ב-YouTube](https://www.youtube.com/playlist?list=PLLXdhg_r2hKA7DPDsunoDZ-Z769jWn4R8)
 - [✍🏻 סקיצות של מבני נתונים](https://okso.app/showcase/data-structures)
 
-### סימון ה-O הגדול
+### סימון ה-Big O
 
-סימון *ה-O הגדול* משמש לסיווג אלגוריתמים לפי כיצד זמן הריצה או דרישות המרחב שלהם גדלים ככל שגודל הקלט גדל.
-בתרשים שלהלן תוכל למצוא את הסדרים הנפוצים ביותר של צמיחת אלגוריתמים המצוינים בסימון ה-O הגדול.
+סימון ה-**Big O** משמש לסיווג אלגוריתמים לפי קצב הגידול של זמן הריצה או גודל הזיכרון שלהם ככל שגודל הקלט גדל.
+בתרשים שלהלן תוכל למצוא את סדרי הגודל הנפוצים ביותר בקצב הגידול של אלגוריתמים המצוינים בסימון ה-Big O.
 
-![גרפי ה-O הגדול](./assets/big-o-graph.png)
+![גרפי ה-Big O](./assets/big-o-graph.png)
 
 מקור: [Big O Cheat Sheet](http://bigocheatsheet.com/).
 
-להלן רשימה של כמה מסימוני ה-O הגדול הנפוצים ביותר והשוואות הביצועים שלהם מול גדלים שונים של נתוני קלט.
+להלן רשימה של כמה מסימוני ה-Big O הנפוצים ביותר והשוואות הביצועים שלהם מול גדלים שונים של נתוני קלט.
 
-| סימון ה-O הגדול | חישובים ל-10 אלמנטים | חישובים ל-100 אלמנטים | חישובים ל-1000 אלמנטים |
+<div dir="rtl">
+
+| סימון ה-Big O | חישובים ל-10 אלמנטים | חישובים ל-100 אלמנטים | חישובים ל-1000 אלמנטים |
 | ---------------- | --------------------- | ---------------------- | ----------------------- |
 | **O(1)**         | 1                     | 1                      | 1                       |
 | **O(log N)**     | 3                     | 6                      | 9                       |
@@ -308,7 +310,11 @@ npm test -- 'playground'
 | **O(2^N)**       | 1024                  | 1.26e+29               | 1.07e+301               |
 | **O(N!)**        | 3628800               | 9.3e+157               | 4.02e+2567              |
 
-### מורכבות פעולות מבני נתונים
+</div>
+
+### סיבוכיות פעולות מבני נתונים
+
+<div dir="rtl">
 
 | מבנה נתונים          | גישה    | חיפוש   | הכנסה   | מחיקה   | הערות  |
 | --------------------- | :-----: | :-----: | :-----: | :-----: | :------ |
@@ -323,7 +329,11 @@ npm test -- 'playground'
 | **עץ AVL**            | log(n)  | log(n)  | log(n)  | log(n)  |         |
 | **מסנן בלום**         | -       | 1       | 1       | -       | תוצאות חיוביות שגויות אפשריות בעת חיפוש |
 
-### מורכבות אלגוריתמי מיון מערכים
+</div>
+
+### סיבוכיות אלגוריתמי מיון מערכים
+
+<div dir="rtl">
 
 | שם                  | הטוב ביותר        | ממוצע               | הגרוע ביותר         | זיכרון  | יציב    | הערות  |
 | ------------------- | :----------------: | :-----------------: | :------------------: | :-----: | :-----: | :------ |
@@ -333,9 +343,11 @@ npm test -- 'playground'
 | **מיון ערימה**      | n&nbsp;log(n)      | n&nbsp;log(n)       | n&nbsp;log(n)        | 1       | לא      |         |
 | **מיון מיזוג**      | n&nbsp;log(n)      | n&nbsp;log(n)       | n&nbsp;log(n)        | n       | כן      |         |
 | **מיון מהיר**       | n&nbsp;log(n)      | n&nbsp;log(n)       | n<sup>2</sup>        | log(n)  | לא      | מיון מהיר בדרך כלל מבוצע במקום עם O(log(n)) שטח מחסנית |
-| **מיון צדפות**      | n&nbsp;log(n)      | תלוי ברצף הפער      | n&nbsp;(log(n))<sup>2</sup>  | 1         | לא      |         |
+| **מיון של** (Shell) | n&nbsp;log(n)      | תלוי ברצף הפער      | n&nbsp;(log(n))<sup>2</sup>  | 1         | לא      |         |
 | **מיון ספירה**      | n + r              | n + r               | n + r                | n + r   | כן      | r - המספר הגדול ביותר במערך |
 | **מיון בסיס**       | n * k              | n * k               | n * k                | n + k   | כן      | k - אורך המפתח הארוך ביותר |
+
+</div>
 
 ## תומכי הפרויקט
 
