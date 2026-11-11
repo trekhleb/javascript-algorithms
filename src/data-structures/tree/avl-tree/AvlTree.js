@@ -24,6 +24,9 @@ export default class AvlTree extends BinarySearchTree {
     // Do standard BST removal.
     super.remove(value);
 
+    // Refresh cached heights after the BST value-copy removal path.
+    this.root.refreshHeight();
+
     // Balance the tree starting from the root node.
     this.balance(this.root);
   }

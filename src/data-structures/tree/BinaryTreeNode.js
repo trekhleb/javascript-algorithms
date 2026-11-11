@@ -10,6 +10,7 @@ export default class BinaryTreeNode {
     this.right = null;
     this.parent = null;
     this.value = value;
+    this.heightValue = 0;
 
     // Any node related meta information may be stored here.
     this.meta = new HashTable();
@@ -26,7 +27,7 @@ export default class BinaryTreeNode {
       return 0;
     }
 
-    return this.left.height + 1;
+    return this.left.heightValue + 1;
   }
 
   /**
@@ -37,14 +38,14 @@ export default class BinaryTreeNode {
       return 0;
     }
 
-    return this.right.height + 1;
+    return this.right.heightValue + 1;
   }
 
   /**
    * @return {number}
    */
   get height() {
-    return Math.max(this.leftHeight, this.rightHeight);
+    return this.heightValue;
   }
 
   /**
@@ -100,8 +101,8 @@ export default class BinaryTreeNode {
    * @return {BinaryTreeNode}
    */
   setLeft(node) {
-    // Reset parent for left node since it is going to be detached.
-    if (this.left) {
+    // Preserve the new parent if a rotation already moved this child.
+    if (this.left && this.left.parent === this) {
       this.left.parent = null;
     }
 
@@ -113,6 +114,8 @@ export default class BinaryTreeNode {
       this.left.parent = this;
     }
 
+    this.updateHeight();
+
     return this;
   }
 
@@ -121,8 +124,8 @@ export default class BinaryTreeNode {
    * @return {BinaryTreeNode}
    */
   setRight(node) {
-    // Reset parent for right node since it is going to be detached.
-    if (this.right) {
+    // Preserve the new parent if a rotation already moved this child.
+    if (this.right && this.right.parent === this) {
       this.right.parent = null;
     }
 
@@ -134,6 +137,51 @@ export default class BinaryTreeNode {
       this.right.parent = this;
     }
 
+    this.updateHeight();
+
+    return this;
+  }
+
+  /**
+   * Update this node's cached height and propagate the change to its ancestors.
+   *
+   * @return {BinaryTreeNode}
+   */
+  updateHeight() {
+    let currentNode = this;
+    const updatedNodes = new Set();
+
+    while (currentNode && !updatedNodes.has(currentNode)) {
+      updatedNodes.add(currentNode);
+
+      const newHeight = Math.max(currentNode.leftHeight, currentNode.rightHeight);
+      if (currentNode.heightValue === newHeight) {
+        break;
+      }
+
+      currentNode.heightValue = newHeight;
+      currentNode = currentNode.parent;
+    }
+
+    return this;
+  }
+
+  /**
+   * Recalculate cached heights for this subtree from the leaves upward.
+   *
+   * @return {BinaryTreeNode}
+   */
+  refreshHeight() {
+    if (this.left) {
+      this.left.refreshHeight();
+    }
+
+    if (this.right) {
+      this.right.refreshHeight();
+    }
+
+    this.heightValue = Math.max(this.leftHeight, this.rightHeight);
+
     return this;
   }
 
@@ -143,12 +191,12 @@ export default class BinaryTreeNode {
    */
   removeChild(nodeToRemove) {
     if (this.left && this.nodeComparator.equal(this.left, nodeToRemove)) {
-      this.left = null;
+      this.setLeft(null);
       return true;
     }
 
     if (this.right && this.nodeComparator.equal(this.right, nodeToRemove)) {
-      this.right = null;
+      this.setRight(null);
       return true;
     }
 
@@ -166,12 +214,12 @@ export default class BinaryTreeNode {
     }
 
     if (this.left && this.nodeComparator.equal(this.left, nodeToReplace)) {
-      this.left = replacementNode;
+      this.setLeft(replacementNode);
       return true;
     }
 
     if (this.right && this.nodeComparator.equal(this.right, nodeToReplace)) {
-      this.right = replacementNode;
+      this.setRight(replacementNode);
       return true;
     }
 

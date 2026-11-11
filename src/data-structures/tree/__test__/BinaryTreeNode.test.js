@@ -62,12 +62,15 @@ describe('BinaryTreeNode', () => {
       .setRight(rightNode);
 
     expect(rootNode.traverseInOrder()).toEqual([1, 2, 3]);
+    expect(rootNode.height).toBe(1);
 
     expect(rootNode.removeChild(rootNode.left)).toBe(true);
     expect(rootNode.traverseInOrder()).toEqual([2, 3]);
+    expect(rootNode.height).toBe(1);
 
     expect(rootNode.removeChild(rootNode.right)).toBe(true);
     expect(rootNode.traverseInOrder()).toEqual([2]);
+    expect(rootNode.height).toBe(0);
 
     expect(rootNode.removeChild(rootNode.right)).toBe(false);
     expect(rootNode.traverseInOrder()).toEqual([2]);
