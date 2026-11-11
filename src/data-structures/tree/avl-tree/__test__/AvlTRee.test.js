@@ -1,6 +1,16 @@
 import AvlTree from '../AvlTree';
 
 describe('AvlTree', () => {
+  it.each([
+    ['left', 1],
+    ['right', -1],
+  ])('should update height after inserting into a rotated %s subtree', (side, sign) => {
+    const tree = new AvlTree();
+    [1, 24, 7, 28, 71, 8, 88, 74, 19].forEach((value) => tree.insert(sign * value));
+
+    expect(tree.root[side].height).toBe(2);
+  });
+
   it('should do simple left-left rotation', () => {
     const tree = new AvlTree();
 

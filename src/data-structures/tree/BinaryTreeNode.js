@@ -101,8 +101,8 @@ export default class BinaryTreeNode {
    * @return {BinaryTreeNode}
    */
   setLeft(node) {
-    // Reset parent for left node since it is going to be detached.
-    if (this.left) {
+    // Preserve the new parent if a rotation already moved this child.
+    if (this.left && this.left.parent === this) {
       this.left.parent = null;
     }
 
@@ -124,8 +124,8 @@ export default class BinaryTreeNode {
    * @return {BinaryTreeNode}
    */
   setRight(node) {
-    // Reset parent for right node since it is going to be detached.
-    if (this.right) {
+    // Preserve the new parent if a rotation already moved this child.
+    if (this.right && this.right.parent === this) {
       this.right.parent = null;
     }
 
