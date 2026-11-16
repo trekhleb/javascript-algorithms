@@ -1,7 +1,6 @@
 import { createRequire } from 'module';
 
-const requireFromEslint = createRequire(require.resolve('eslint'));
-const minimatch = requireFromEslint('minimatch');
+const minimatch = createRequire(require.resolve('eslint/package.json'))('minimatch');
 
 describe('minimatch security regression', () => {
   const pattern = `${Array(13).fill('**/a').join('/')}/b`;
@@ -23,7 +22,8 @@ describe('minimatch security regression', () => {
   it('should preserve default hidden-path exclusion', () => {
     expect(minimatch('x/.hidden/b', '**/b')).toBe(false);
     expect(minimatch('x/.hidden/b', '**/b', { dot: true })).toBe(true);
-const minimatch = createRequire(require.resolve('eslint/package.json'))('minimatch');
+  });
+});
 
 describe('minimatch dependency', () => {
   it('preserves ordinary glob matching', () => {
