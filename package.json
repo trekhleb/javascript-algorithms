@@ -38,6 +38,7 @@
     "@babel/cli": "^7.27.0",
     "@babel/preset-env": "^7.29.5",
     "@types/jest": "^30.0.0",
+    "deepmerge": "^4.3.1",
     "eslint": "^8.57.1",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.32.0",
@@ -49,6 +50,8 @@
   },
   "overrides": {
     "minimatch@^3.0.0": "3.1.4",
+    "glob@^10": "14.0.0",
+    "minimatch@>=9": "11.0.1",
     "minimatch@3": "3.1.4",
     "@istanbuljs/load-nyc-config": {
       "js-yaml": "^3.15.1"
