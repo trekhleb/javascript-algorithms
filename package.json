@@ -49,6 +49,7 @@
     "pngjs": "^7.0.0"
   },
   "overrides": {
+    "minimatch@^3.0.0": "3.1.4",
     "glob@^10": "14.0.0",
     "minimatch@>=9": "11.0.1",
     "minimatch@3": "3.1.4",
