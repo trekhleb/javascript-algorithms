@@ -48,6 +48,7 @@
     "pngjs": "^7.0.0"
   },
   "overrides": {
+    "minimatch@^3.0.0": "3.1.4",
     "@istanbuljs/load-nyc-config": {
       "js-yaml": "^3.15.1"
     }
