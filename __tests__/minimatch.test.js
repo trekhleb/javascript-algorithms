@@ -8,7 +8,12 @@ describe('minimatch security regression', () => {
   const path = Array(30).fill('a').join('/');
 
   it('should reject a path with multiple non-adjacent globstars and a mismatched suffix', () => {
-    expect(minimatch(path, pattern)).toBe(false);
+    const start = process.hrtime.bigint();
+    const result = minimatch(path, pattern);
+    const elapsedMs = Number(process.hrtime.bigint() - start) / 1e6;
+
+    expect(result).toBe(false);
+    expect(elapsedMs).toBeLessThan(1000);
   });
 
   it('should preserve matching with multiple non-adjacent globstars', () => {
