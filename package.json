@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.27.0",
-    "@babel/preset-env": "^7.29.0",
+    "@babel/preset-env": "^7.29.5",
     "@types/jest": "^30.0.0",
     "eslint": "^8.57.1",
     "eslint-config-airbnb": "^19.0.4",
@@ -50,7 +50,8 @@
   "overrides": {
     "@istanbuljs/load-nyc-config": {
       "js-yaml": "^3.15.1"
-    }
+    },
+    "@babel/plugin-transform-modules-systemjs": "7.29.4"
   },
   "engines": {
     "node": ">=22.0.0",
