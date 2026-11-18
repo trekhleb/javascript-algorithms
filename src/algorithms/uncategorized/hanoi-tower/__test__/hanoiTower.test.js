@@ -59,4 +59,27 @@ describe('hanoiTower', () => {
 
     expect(moveCallback).toHaveBeenCalledTimes((2 ** numberOfDiscs) - 1);
   });
+  it('should solve tower of hanoi puzzle with 0 discs', () => {
+    const moveCallback = jest.fn();
+
+    hanoiTower({
+      numberOfDiscs: 0,
+      moveCallback,
+    });
+
+    expect(moveCallback).not.toHaveBeenCalled();
+  });
+
+  it('should solve tower of hanoi puzzle with negative number of discs', () => {
+    const moveCallback = jest.fn();
+
+    expect(() => {
+      hanoiTower({
+        numberOfDiscs: -3,
+        moveCallback,
+      });
+    }).not.toThrow();
+
+    expect(moveCallback).not.toHaveBeenCalled();
+  });
 });
