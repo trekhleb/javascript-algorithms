@@ -69,6 +69,13 @@ export default function hanoiTower({
   // that might contain elements (discs). Each disc is represented as a number.
   // Larger discs have bigger number equivalent.
 
+  // If there are no discs to move then the puzzle is already solved.
+  // This also guards the recursion from infinitely calling itself
+  // in case if numberOfDiscs is zero or negative.
+  if (numberOfDiscs <= 0) {
+    return;
+  }
+
   // Let's create the discs and put them to the fromPole.
   for (let discSize = numberOfDiscs; discSize > 0; discSize -= 1) {
     fromPole.push(discSize);
