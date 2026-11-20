@@ -15,4 +15,13 @@ describe('leastCommonMultiple', () => {
     expect(leastCommonMultiple(-7, -9)).toBe(63);
     expect(leastCommonMultiple(-7, 9)).toBe(63);
   });
+
+  it('should avoid rounding an intermediate product for safe integer inputs', () => {
+    const multiple = Number.MAX_SAFE_INTEGER - 1;
+
+    expect(leastCommonMultiple(multiple, 3)).toBe(multiple);
+    expect(leastCommonMultiple(3, multiple)).toBe(multiple);
+    expect(leastCommonMultiple(-multiple, 3)).toBe(multiple);
+    expect(leastCommonMultiple(multiple, -3)).toBe(multiple);
+  });
 });
