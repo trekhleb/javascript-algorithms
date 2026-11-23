@@ -1,6 +1,30 @@
 import LRUCache from '../LRUCache';
 
 describe('LRUCache', () => {
+  it.each(['__proto__', 'constructor', 'hasOwnProperty', 'toString'])(
+    'should handle prototype-named key %s through updates and eviction',
+    (key) => {
+      const cache = new LRUCache(2);
+      expect(cache.get(key)).toBeUndefined();
+
+      cache.set(key, 'original');
+      cache.set('second', 2);
+      expect(cache.get(key)).toBe('original');
+      cache.set('third', 3);
+      expect(cache.get('second')).toBeUndefined();
+      expect(cache.get(key)).toBe('original');
+
+      cache.set(key, 'updated');
+      expect(cache.get(key)).toBe('updated');
+      expect(cache.size).toBe(2);
+
+      cache.set('fourth', 4);
+      cache.set('fifth', 5);
+      expect(cache.get(key)).toBeUndefined();
+      expect(cache.size).toBe(2);
+    },
+  );
+
   it('should set and get values to and from the cache', () => {
     const cache = new LRUCache(100);
     expect(cache.get('key-1')).toBeUndefined();
