@@ -187,6 +187,17 @@ describe('DoublyLinkedList', () => {
     expect(linkedList.find({ value: 5 })).toBeNull();
   });
 
+  it('should distinguish an undefined value from an omitted search value', () => {
+    const linkedList = new DoublyLinkedList();
+    linkedList.append('before').append(undefined).append('after');
+
+    expect(linkedList.find({ value: undefined })).toBe(linkedList.head.next);
+    expect(linkedList.find({ callback: () => false })).toBeNull();
+    expect(linkedList.find({})).toBeNull();
+    expect(new DoublyLinkedList().find({ value: undefined })).toBeNull();
+    expect(new DoublyLinkedList().append('other').find({ value: undefined })).toBeNull();
+  });
+
   it('should find node by callback', () => {
     const linkedList = new DoublyLinkedList();
 

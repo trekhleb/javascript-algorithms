@@ -126,7 +126,9 @@ export default class DoublyLinkedList {
    * @param {function} [findParams.callback]
    * @return {DoublyLinkedListNode}
    */
-  find({ value = undefined, callback = undefined }) {
+  find(findParams) {
+    const { value, callback } = findParams;
+    const hasValue = 'value' in findParams;
     if (!this.head) {
       return null;
     }
@@ -140,7 +142,7 @@ export default class DoublyLinkedList {
       }
 
       // If value is specified then try to compare by value..
-      if (value !== undefined && this.compare.equal(currentNode.value, value)) {
+      if (hasValue && this.compare.equal(currentNode.value, value)) {
         return currentNode;
       }
 
