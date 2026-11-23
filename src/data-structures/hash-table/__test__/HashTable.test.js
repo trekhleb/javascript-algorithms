@@ -87,6 +87,32 @@ describe('HashTable', () => {
     expect(hashTable.has('x')).toBe(false);
   });
 
+  it('should track prototype-named keys through updates and deletion', () => {
+    const hashTable = new HashTable(1);
+    const keys = ['__proto__', 'constructor', 'hasOwnProperty', 'toString'];
+
+    keys.forEach((key) => {
+      expect(hashTable.has(key)).toBe(false);
+      hashTable.set(key, 'original');
+      expect(hashTable.has(key)).toBe(true);
+      expect(hashTable.get(key)).toBe('original');
+      hashTable.set(key, 'updated');
+      expect(hashTable.get(key)).toBe('updated');
+    });
+
+    expect(hashTable.getKeys()).toEqual(keys);
+    expect(hashTable.getValues()).toEqual(keys.map(() => 'updated'));
+
+    keys.forEach((key) => {
+      hashTable.delete(key);
+      expect(hashTable.has(key)).toBe(false);
+      expect(hashTable.get(key)).toBeUndefined();
+    });
+
+    expect(hashTable.getKeys()).toEqual([]);
+    expect(hashTable.getValues()).toEqual([]);
+  });
+
   it('should get all the values', () => {
     const hashTable = new HashTable(3);
 

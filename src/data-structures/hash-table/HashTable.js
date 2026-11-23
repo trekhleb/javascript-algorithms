@@ -15,7 +15,7 @@ export default class HashTable {
     this.buckets = Array(hashTableSize).fill(null).map(() => new LinkedList());
 
     // Just to keep track of all actual keys in a fast way.
-    this.keys = {};
+    this.keys = Object.create(null);
   }
 
   /**
