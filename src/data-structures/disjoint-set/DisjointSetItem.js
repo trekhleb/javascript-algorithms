@@ -8,7 +8,8 @@ export default class DisjointSetItem {
     this.keyCallback = keyCallback;
     /** @var {DisjointSetItem} this.parent */
     this.parent = null;
-    this.children = {};
+    // Store __proto__ as a child key instead of changing the registry's prototype.
+    this.children = Object.create(null);
   }
 
   /**

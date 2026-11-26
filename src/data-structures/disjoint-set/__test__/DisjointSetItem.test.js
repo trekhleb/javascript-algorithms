@@ -1,6 +1,34 @@
 import DisjointSetItem from '../DisjointSetItem';
 
 describe('DisjointSetItem', () => {
+  it.each(['__proto__', 'constructor', 'toString', 'hasOwnProperty', 'valueOf'])(
+    'should include a prototype-named child %s in children and rank',
+    (key) => {
+      const root = new DisjointSetItem('root');
+      const child = new DisjointSetItem(key);
+      const grandchild = new DisjointSetItem('grandchild');
+      child.addChild(grandchild);
+      root.addChild(child);
+
+      expect(root.getChildren()).toEqual([child]);
+      expect(root.getRank()).toBe(2);
+      expect(child.getRoot()).toBe(root);
+      expect(grandchild.getRoot()).toBe(root);
+    },
+  );
+
+  it('should retain children whose custom key is __proto__', () => {
+    const keyCallback = (value) => value.key;
+    const root = new DisjointSetItem({ key: 'root' }, keyCallback);
+    const child = new DisjointSetItem({ key: '__proto__' }, keyCallback);
+
+    child.setParent(root);
+
+    expect(root.getChildren()).toEqual([child]);
+    expect(root.getRank()).toBe(1);
+    expect(child.getRoot()).toBe(root);
+  });
+
   it('should do basic manipulation with disjoint set item', () => {
     const itemA = new DisjointSetItem('A');
     const itemB = new DisjointSetItem('B');
