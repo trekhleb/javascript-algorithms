@@ -1,6 +1,51 @@
 import DisjointSet from '../DisjointSet';
 
 describe('DisjointSet', () => {
+  const prototypeKeys = ['__proto__', 'constructor', 'toString', 'hasOwnProperty', 'valueOf'];
+
+  it.each(prototypeKeys)('should treat an absent prototype-named key %s as missing', (key) => {
+    const disjointSet = new DisjointSet();
+
+    expect(disjointSet.find(key)).toBeNull();
+    expect(() => disjointSet.union(key, 'other')).toThrow('One or two values are not in sets');
+    expect(() => disjointSet.inSameSet(key, 'other')).toThrow('One or two values are not in sets');
+  });
+
+  it.each(prototypeKeys)('should register and merge a prototype-named root %s', (key) => {
+    const disjointSet = new DisjointSet();
+    disjointSet.makeSet(key).makeSet('other');
+
+    expect(disjointSet.find(key)).toBe(key);
+    expect(disjointSet.inSameSet(key, 'other')).toBe(false);
+
+    disjointSet.union(key, 'other');
+
+    expect(disjointSet.find('other')).toBe(key);
+    expect(disjointSet.inSameSet(key, 'other')).toBe(true);
+  });
+
+  it.each(prototypeKeys)('should preserve membership when re-adding merged key %s', (key) => {
+    const disjointSet = new DisjointSet();
+    disjointSet.makeSet('root').makeSet(key).union('root', key);
+    disjointSet.makeSet(key);
+
+    expect(disjointSet.find(key)).toBe('root');
+    expect(disjointSet.inSameSet('root', key)).toBe(true);
+  });
+
+  it.each(prototypeKeys)('should support custom key extractors returning %s', (key) => {
+    const keyCallback = (value) => value.key;
+    const disjointSet = new DisjointSet(keyCallback);
+    const item = { key };
+    const other = { key: 'other' };
+
+    expect(disjointSet.find(item)).toBeNull();
+    disjointSet.makeSet(item).makeSet(other).union(other, item);
+
+    expect(disjointSet.find({ key })).toBe('other');
+    expect(disjointSet.inSameSet(item, other)).toBe(true);
+  });
+
   it('should throw error when trying to union and check not existing sets', () => {
     function mergeNotExistingSets() {
       const disjointSet = new DisjointSet();

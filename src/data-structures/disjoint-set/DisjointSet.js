@@ -6,7 +6,8 @@ export default class DisjointSet {
    */
   constructor(keyCallback) {
     this.keyCallback = keyCallback;
-    this.items = {};
+    // Item keys must not collide with inherited Object properties.
+    this.items = Object.create(null);
   }
 
   /**
